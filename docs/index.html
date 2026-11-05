@@ -31,6 +31,10 @@
         </div>
       </div>
       <div class="top-actions">
+        <button id="pick" class="btn" type="button" title="Swipe to pick the cards you want (P)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm5 13.5 3.6-3.6a2.2 2.2 0 0 0-3.1-3.1l-.5.5-.5-.5a2.2 2.2 0 0 0-3.1 3.1z"/></svg>
+          <span>Pick</span>
+        </button>
         <button id="study" class="btn primary" type="button" title="Study one card at a time (S)">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           <span>Study</span>
@@ -69,6 +73,7 @@
           <label class="sel"><span>Status</span>
             <select id="review">
               <option value="">All cards</option>
+              <option value="picked">♥ My picks</option>
               <option value="todo">Not reviewed</option>
               <option value="again">Review again</option>
               <option value="got">Got it</option>
@@ -94,7 +99,7 @@
   </header>
 
   <main id="grid" class="wrap grid"></main>
-  <p class="wrap hint muted">Tip: click a card to flip it · press <kbd>S</kbd> for study mode · <kbd>/</kbd> to search</p>
+  <p class="wrap hint muted">Tip: click a card to flip it · <kbd>P</kbd> to swipe-pick cards · <kbd>S</kbd> for study mode · <kbd>/</kbd> to search</p>
 
   <!-- Study mode -->
   <div id="studyView" class="study" hidden role="dialog" aria-modal="true" aria-label="Study mode">
@@ -110,6 +115,21 @@
       <button id="next" class="btn" type="button" aria-label="Next card">Next →</button>
     </div>
     <p class="muted study-help">Space / tap to flip · ← → to move · swipe on phone</p>
+  </div>
+
+  <!-- Pick mode: swipe right to keep, left to skip -->
+  <div id="pickView" class="study pick" hidden role="dialog" aria-modal="true" aria-label="Pick cards">
+    <div class="study-top">
+      <span id="pickPos" class="muted"></span>
+      <button id="pickClose" class="btn icon" type="button" aria-label="Close (Esc)">✕</button>
+    </div>
+    <div id="pickStage" class="pick-stage"></div>
+    <div id="pickNav" class="pick-nav">
+      <button id="pickSkip" class="round skip" type="button" aria-label="Skip (left arrow)" title="Skip (←)">✕</button>
+      <button id="pickUndo" class="round undo" type="button" aria-label="Undo (Z)" title="Undo (Z)">↶</button>
+      <button id="pickKeep" class="round keep" type="button" aria-label="Keep (right arrow)" title="Keep (→)">♥</button>
+    </div>
+    <p class="muted study-help">Swipe or drag: right = keep, left = skip · tap to peek at the back · ← → keys</p>
   </div>
 
   <script src="app.js"></script>

@@ -14,6 +14,7 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
 };
 let progress = store.get("progress", {});
+let picks = store.get("picks", {});          // id -> "keep" | "skip"
 const state = { cat: "", time: "all", q: "", minImp: 1, review: "", sort: "top" };
 Object.assign(state, store.get("filters", {}), { q: "" });
 
@@ -87,13 +88,16 @@ function syncControls() {
 }
 
 // ---------- filter + render ----------
-function filtered() {
+function filtered(opts = {}) {
+  const review = opts.ignorePicked && state.review === "picked" ? "" : state.review;
   const q = state.q.trim().toLowerCase();
   const day = 86400 * 1000;
   return cards
     .filter((c) => !state.cat || c._cat === state.cat)
     .filter((c) => (c.importance || 1) >= state.minImp)
-    .filter((c) => !state.review || (state.review === "todo" ? !progress[c.id] : progress[c.id] === state.review))
+    .filter((c) => !review ||
+      (review === "picked" ? picks[c.id] === "keep"
+        : review === "todo" ? !progress[c.id] : progress[c.id] === review))
     .filter((c) => state.time === "all" ||
       (state.time === "new" ? isNew(c) : now - ts(c.added) < (state.time === "today" ? day : 7 * day)))
     .filter((c) => !q || q.split(/\s+/).every((w) => c._text.includes(w)))
@@ -113,6 +117,7 @@ function cardHTML(c) {
         <div class="meta">
           <span class="cat">${esc(catName(c._cat))}</span>
           ${isNew(c) ? `<span class="new">NEW</span>` : ""}
+          ${picks[c.id] === "keep" ? `<span class="picked-heart" title="In your picks">♥</span>` : ""}
           <span class="stars" title="Importance ${c.importance || 1}/5">${stars(c.importance)}</span>
         </div>
         <h3>${esc(c.headline)}</h3>
@@ -149,6 +154,8 @@ function render() {
 
 function emptyHTML() {
   if (!cards.length) return `<div class="empty"><b>No cards yet</b>The scraper runs every 6 hours. Check back soon.</div>`;
+  if (state.review === "picked" && !Object.values(picks).includes("keep"))
+    return `<div class="empty"><b>No picks yet</b>Press <b>Pick</b> (or <kbd>P</kbd>) and swipe right on the cards you want.</div>`;
   const why = state.time === "new" ? "Nothing new since your last visit." : "No cards match these filters.";
   return `<div class="empty"><b>${why}</b><button type="button" class="btn" id="reset">Clear filters</button></div>`;
 }
@@ -290,6 +297,17 @@ $("studyStage").addEventListener("touchend", (e) => {
 // ---------- keyboard ----------
 document.addEventListener("keydown", (e) => {
   const typing = /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement?.tagName || "");
+  if (!$("pickView").hidden) {
+    if (e.key === "Escape") closePick();
+    else if (e.key === "ArrowRight") decide(1);
+    else if (e.key === "ArrowLeft") decide(-1);
+    else if (e.key.toLowerCase() === "z" || e.key === "Backspace") { e.preventDefault(); undo(); }
+    else if (e.key === " " || e.key === "Enter") {
+      if (document.activeElement?.closest?.(".pick-nav, .study-top, .actions, .pick-done")) return;
+      e.preventDefault(); topCard()?.classList.toggle("flipped");
+    }
+    return;
+  }
   if (!$("studyView").hidden) {
     if (e.key === "Escape") closeStudy();
     else if (e.key === "ArrowRight") step(1);
@@ -305,6 +323,135 @@ document.addEventListener("keydown", (e) => {
   if (typing) { if (e.key === "Escape") document.activeElement.blur(); return; }
   if (e.key === "/") { e.preventDefault(); $("search").focus(); }
   else if (e.key.toLowerCase() === "s" && !e.ctrlKey && !e.metaKey) openStudy();
+  else if (e.key.toLowerCase() === "p" && !e.ctrlKey && !e.metaKey) openPick();
 });
+
+// ---------- pick mode: swipe right = keep, left = skip ----------
+let pdeck = [], pi = 0, phist = [];
+const topCard = () => $("pickStage").querySelector(".card.top");
+
+function openPick() {
+  if (!$("studyView").hidden) return;
+  pdeck = filtered({ ignorePicked: true }).filter((c) => !picks[c.id]);
+  pi = 0; phist = [];
+  $("pickView").hidden = false;
+  document.body.classList.add("studying");
+  renderPick();
+}
+function closePick() {
+  $("pickView").hidden = true;
+  document.body.classList.remove("studying");
+  render();
+  $("pick").focus();
+}
+const keptCount = () => Object.values(picks).filter((v) => v === "keep").length;
+
+function renderPick() {
+  const stage = $("pickStage");
+  $("pickUndo").disabled = !phist.length;
+  if (pi >= pdeck.length) {
+    const n = keptCount();
+    const pool = filtered({ ignorePicked: true }).length;
+    $("pickPos").textContent = `♥ ${n} kept`;
+    $("pickSkip").disabled = $("pickKeep").disabled = true;
+    stage.innerHTML = `<div class="pick-done">
+      <div class="big">${n ? "🎉" : "🗂️"}</div>
+      <h3>${pdeck.length ? "All done!" : "You've already sorted these"}</h3>
+      <p class="muted">${n ? `You've kept <b>${n}</b> card${n > 1 ? "s" : ""} to study.` : "You haven't kept any cards yet."}
+        ${pool ? `(${pool} card${pool > 1 ? "s" : ""} match your current filters.)` : ""}</p>
+      <div class="row">
+        ${n ? `<button type="button" class="btn primary" data-do="study">▶ Study my picks</button>
+               <button type="button" class="btn" data-do="show">See my picks</button>` : ""}
+        <button type="button" class="btn" data-do="restart">↺ Sort again</button>
+      </div></div>`;
+    stage.querySelector(".pick-done .btn")?.focus();
+    return;
+  }
+  $("pickSkip").disabled = $("pickKeep").disabled = false;
+  $("pickPos").textContent = `${pi + 1} of ${pdeck.length} · ♥ ${keptCount()} kept`;
+  const layers = pdeck.slice(pi, pi + 3);
+  stage.innerHTML = layers.map((c, i) => cardHTML(c)
+      .replace('class="card', `class="card ${["top", "under", "under2"][i]}`)
+      .replace('<div class="inner">', i === 0
+        ? '<span class="stamp keep">KEEP</span><span class="stamp skip">SKIP</span><div class="inner">'
+        : '<div class="inner">'))
+    .reverse().join("");          // top card last so it sits on top
+  const el = topCard();
+  el.setAttribute("aria-label", el.getAttribute("aria-label").replace("Press Enter to flip.", "Right arrow keeps, left arrow skips."));
+  el.focus({ preventScroll: true });
+}
+
+function decide(dir) {
+  const el = topCard();
+  if (!el || el.dataset.gone) return;
+  el.dataset.gone = "1";
+  const c = pdeck[pi];
+  picks[c.id] = dir > 0 ? "keep" : "skip";
+  store.set("picks", picks);
+  phist.push(c.id);
+  el.style.transform = `translateX(${dir * 140}%) rotate(${dir * 24}deg)`;
+  el.style.opacity = "0";
+  el.querySelector(`.stamp.${dir > 0 ? "keep" : "skip"}`).style.opacity = "1";
+  setTimeout(() => { pi++; renderPick(); }, 260);
+}
+function undo() {
+  if (!phist.length) return;
+  delete picks[phist.pop()];
+  store.set("picks", picks);
+  pi = Math.max(0, pi - 1);
+  renderPick();
+}
+
+// drag / swipe (mouse and touch via pointer events)
+let drag = null;
+$("pickStage").addEventListener("pointerdown", (e) => {
+  const el = e.target.closest(".card.top");
+  if (!el || el.dataset.gone || e.target.closest("a, button") || e.button > 0) return;
+  drag = { el, x: e.clientX, y: e.clientY, dx: 0, dy: 0 };
+  el.classList.add("dragging");
+  el.setPointerCapture(e.pointerId);
+});
+$("pickStage").addEventListener("pointermove", (e) => {
+  if (!drag) return;
+  drag.dx = e.clientX - drag.x; drag.dy = e.clientY - drag.y;
+  drag.el.style.transform = `translate(${drag.dx}px, ${drag.dy * 0.25}px) rotate(${drag.dx / 16}deg)`;
+  const k = Math.min(1, Math.abs(drag.dx) / 110);
+  drag.el.querySelector(".stamp.keep").style.opacity = drag.dx > 0 ? k : 0;
+  drag.el.querySelector(".stamp.skip").style.opacity = drag.dx < 0 ? k : 0;
+});
+function endDrag() {
+  if (!drag) return;
+  const { el, dx, dy } = drag; drag = null;
+  el.classList.remove("dragging");
+  if (Math.abs(dx) > 110) return decide(dx > 0 ? 1 : -1);
+  el.style.transform = "";
+  el.querySelectorAll(".stamp").forEach((s) => (s.style.opacity = 0));
+  if (Math.abs(dx) < 6 && Math.abs(dy) < 6) el.classList.toggle("flipped");   // a tap flips
+}
+$("pickStage").addEventListener("pointerup", endDrag);
+$("pickStage").addEventListener("pointercancel", endDrag);
+
+$("pickStage").addEventListener("click", (e) => {
+  const act = e.target.closest("[data-do]");
+  if (act) {
+    const what = act.dataset.do;
+    if (what === "restart") {
+      filtered({ ignorePicked: true }).forEach((c) => delete picks[c.id]);
+      store.set("picks", picks);
+      return openPick();
+    }
+    state.review = "picked";
+    closePick(); syncControls(); render();
+    if (what === "study") openStudy();
+    return;
+  }
+  const btn = e.target.closest("button[data-mark]");
+  if (btn) { const card = btn.closest(".card"); applyMarkClass(card, mark(card.dataset.id, btn.dataset.mark)); }
+});
+$("pick").addEventListener("click", openPick);
+$("pickClose").addEventListener("click", closePick);
+$("pickKeep").addEventListener("click", () => decide(1));
+$("pickSkip").addEventListener("click", () => decide(-1));
+$("pickUndo").addEventListener("click", undo);
 
 load();

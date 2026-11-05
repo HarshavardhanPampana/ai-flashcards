@@ -300,8 +300,8 @@ body.studying { overflow: hidden; }
 @media (max-width: 640px) {
   .top { padding-top: 14px; }
   h1 { font-size: 1.15rem; }
-  .btn.primary span { display: none; }
-  .btn.primary { width: 38px; padding: 0; }
+  .top-actions .btn.primary span { display: none; }
+  .top-actions .btn.primary { width: 38px; padding: 0; }
   .filters { flex-direction: column; align-items: stretch; }
   .seg { display: flex; }
   .seg button { flex: 1; padding: 0 6px; }
@@ -317,4 +317,46 @@ body.studying { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Pick mode (swipe deck) ---------- */
+.pick-stage { position: relative; flex: 1; width: 100%; max-width: 440px; margin: 12px 0 44px; min-height: 0; }
+.pick-stage .card {
+  position: absolute; inset: 0; height: auto; animation: none;
+  touch-action: none; user-select: none; -webkit-user-select: none;
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .35s;
+}
+.pick-stage .card.under { transform: translateY(18px) scale(.94); opacity: .7; pointer-events: none; }
+.pick-stage .card.under2 { transform: translateY(36px) scale(.88); opacity: .35; pointer-events: none; }
+.pick-stage .card.dragging { transition: none; cursor: grabbing; }
+.pick-stage .card h3 { font-size: 1.3rem; }
+.pick-stage .tldr { font-size: 15.5px; -webkit-line-clamp: 9; }
+.stamp {
+  position: absolute; top: 26px; z-index: 3; padding: 4px 12px; border-radius: 10px;
+  font-size: 22px; font-weight: 800; letter-spacing: .08em; border: 3px solid currentColor;
+  opacity: 0; pointer-events: none; background: var(--surface);
+}
+.stamp.keep { left: 20px; color: var(--good); transform: rotate(-12deg); }
+.stamp.skip { right: 20px; color: var(--warn); transform: rotate(12deg); }
+.pick-nav { display: flex; align-items: center; gap: 18px; }
+.round {
+  width: 60px; height: 60px; border-radius: 50%; cursor: pointer; font-size: 24px; font-weight: 700;
+  border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow);
+  transition: transform .12s, box-shadow .2s;
+}
+.round:hover { transform: scale(1.06); box-shadow: var(--shadow-hover); }
+.round:active { transform: scale(.95); }
+.round.keep { color: #e5484d; }
+.round.skip { color: var(--muted); }
+.round.undo { width: 46px; height: 46px; font-size: 19px; color: var(--accent); }
+.round:disabled { opacity: .35; cursor: default; transform: none; }
+.pick-done { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 10px; padding: 16px; }
+.pick-done .big { font-size: 46px; line-height: 1; }
+.pick-done h3 { margin: 0; font-size: 1.35rem; }
+.pick-done .row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
+.picked-heart { color: #e5484d; font-size: 14px; line-height: 1; }
+@media (max-width: 640px) {
+  .btn#pick span { display: none; }
+  .btn#pick { width: 38px; padding: 0; }
+  .pick-stage { margin: 10px 0; }
 }

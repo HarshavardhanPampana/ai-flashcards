@@ -54,6 +54,8 @@ as a backup. Check your real limits in each provider's console and lower `MAX_CA
 - Color-coded category chips, a time filter (All / New since your last visit / Today / This week),
   importance, review status and sort
 - Search across headlines, summaries, companies and tags (press `/`)
+- **Pick mode** (press `P`): swipe through cards like a deck. Right (or →) keeps a card, left (or ←) skips it,
+  Z undoes, and a tap peeks at the back. Then "Study my picks", or filter the grid by **♥ My picks**.
 - **Study mode** (press `S`): one card at a time. Space flips, ← → move, 1 = Got it, 2 = Review again,
   swipe on a phone. Cards marked "Review again" come first.
 - Light/dark toggle, and it can be added to a phone home screen
