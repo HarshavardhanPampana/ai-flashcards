@@ -60,3 +60,7 @@ as a backup. Check your real limits in each provider's console and lower `MAX_CA
   swipe on a phone. Cards marked "Review again" come first.
 - Light/dark toggle, and it can be added to a phone home screen
 - Progress ("Got it" / "Review again"), filters and theme are saved per browser in localStorage
+
+When you change `docs/style.css` or `docs/app.js`, bump the `?v=` number on their links in
+`docs/index.html`. GitHub Pages lets browsers cache files for 10 minutes, so without the bump a returning
+visitor can get the new page with the old script.
