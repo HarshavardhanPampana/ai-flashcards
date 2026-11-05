@@ -21,7 +21,7 @@ CARDS = Path("docs/cards.json")
 MAX_CARDS = int(os.environ.get("MAX_CARDS_PER_RUN", 40))
 KEEP_DAYS = 30
 MAX_FAILS_IN_A_ROW = 3
-SLEEP_BETWEEN_CALLS = float(os.environ.get("SLEEP_BETWEEN_CALLS", 5))  # tune to requests/minute
+SLEEP_BETWEEN_CALLS = float(os.environ.get("SLEEP_BETWEEN_CALLS", 0))  # extra pause; providers pace themselves
 
 
 def safe(fn, *a):
@@ -85,8 +85,8 @@ def main():
                 streak.append(it["id"])
                 if len(streak) >= MAX_FAILS_IN_A_ROW:
                     # likely a config problem (key/model/quota): stop, and leave these unseen
-                    print(f"[abort] {len(streak)} LLM failures in a row - check GEMINI_API_KEY, "
-                          "LLM_MODEL and your free-tier quota")
+                    print(f"[abort] {len(streak)} LLM failures in a row - check your API keys "
+                          "(GROQ_API_KEY / GEMINI_API_KEY) and free-tier quotas")
                     streak, aborted = [], True
                     break
             time.sleep(SLEEP_BETWEEN_CALLS)
