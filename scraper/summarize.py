@@ -54,13 +54,62 @@ def _parse_json(text):
     return json.loads(m.group(0) if m else text)
 
 
+class FatalLLMError(Exception):
+    """Config problem (bad key, unknown model): retrying won't help."""
+
+
+_gemini_model = None
+_SKIP = ("image", "tts", "audio", "live", "embedding", "vision", "thinking-exp", "computer")
+
+
+def _pick_gemini_model():
+    """Use LLM_MODEL if the API has it; otherwise pick the best available Flash model.
+    Model names change often, so this avoids 404s when one is retired."""
+    global _gemini_model
+    if _gemini_model:
+        return _gemini_model
+    wanted = (os.environ.get("LLM_MODEL") or "").strip().removeprefix("models/")
+    try:
+        names = [m.name.removeprefix("models/") for m in _gemini_client().models.list()
+                 if "generateContent" in (m.supported_actions or [])]
+    except Exception as e:
+        print(f"[gemini] could not list models ({str(e)[:100]}); using {wanted or 'gemini-flash-latest'}")
+        _gemini_model = wanted or "gemini-flash-latest"
+        return _gemini_model
+    if wanted in names:
+        _gemini_model = wanted
+    else:
+        flash = [n for n in names if "flash" in n and not any(s in n for s in _SKIP)]
+        if "gemini-flash-latest" in flash:
+            _gemini_model = "gemini-flash-latest"
+        elif flash:
+            def rank(n):
+                v = re.search(r"gemini-(\d+)(?:\.(\d+))?", n)
+                ver = (int(v.group(1)), int(v.group(2) or 0)) if v else (0, 0)
+                return ("preview" not in n and "exp" not in n, "lite" not in n, ver, -len(n))
+            _gemini_model = max(flash, key=rank)
+        else:
+            raise FatalLLMError(f"no Gemini Flash model available; models seen: {names[:10]}")
+        if wanted:
+            print(f"[gemini] LLM_MODEL={wanted!r} not available")
+    print(f"[gemini] using model {_gemini_model}")
+    return _gemini_model
+
+
 def _call_gemini(prompt):
+    from google.genai import errors
     client = _gemini_client()
-    model = os.environ.get("LLM_MODEL") or "gemini-2.5-flash"
-    resp = client.models.generate_content(
-        model=model, contents=prompt,
-        config={"response_mime_type": "application/json", "temperature": 0.2})
+    try:
+        resp = client.models.generate_content(
+            model=_pick_gemini_model(), contents=prompt,
+            config={"response_mime_type": "application/json", "temperature": 0.2})
+    except errors.ClientError as e:
+        if e.code in (400, 401, 403, 404):
+            raise FatalLLMError(f"Gemini {e.code}: {str(e)[:200]}") from e
+        raise
     return _parse_json(resp.text)
+
+
 
 
 def _call_groq(prompt):
@@ -109,8 +158,14 @@ def summarize(item, retries=3):
                 card.update({"id": item["id"], "url": item["url"],
                              "source": item["source"], "date": item["published"]})
                 return card
+            except FatalLLMError as e:
+                print(f"[{backend.__name__} error] {item['title'][:50]} -> {e}")
+                break                       # retrying won't help; try the next backend
             except Exception as e:
-                wait = 10 * (attempt + 1)
+                if attempt == retries - 1:
+                    print(f"[{backend.__name__} failed] {item['title'][:50]} -> {str(e)[:120]}")
+                    break
+                wait = 10 * (attempt + 1)   # mostly 429 rate limits: back off
                 print(f"[{backend.__name__} retry {attempt+1}] {item['title'][:50]} -> "
                       f"{str(e)[:120]}; sleeping {wait}s")
                 time.sleep(wait)

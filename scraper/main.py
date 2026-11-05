@@ -20,6 +20,7 @@ from .summarize import summarize, basic_card, llm_available
 CARDS = Path("docs/cards.json")
 MAX_CARDS = int(os.environ.get("MAX_CARDS_PER_RUN", 40))
 KEEP_DAYS = 30
+MAX_FAILS_IN_A_ROW = 3
 SLEEP_BETWEEN_CALLS = float(os.environ.get("SLEEP_BETWEEN_CALLS", 5))  # tune to requests/minute
 
 
@@ -67,7 +68,7 @@ def main():
     picked = top_n(fresh, args.max)
     print(f"collected={len(items)} fresh={len(fresh)} summarizing={len(picked)}")
 
-    new_cards = []
+    new_cards, streak, aborted = [], [], False
     for i, it in enumerate(picked, 1):
         if use_llm:
             if len(it["text"]) < 200 and it["source"] == "Hacker News":
@@ -76,7 +77,18 @@ def main():
                 except Exception:
                     pass
             card = summarize(it)
-            seen.append(it["id"])          # mark seen after attempting, so failures don't loop
+            if card:
+                # mark seen after attempting, so one-off failures don't loop forever
+                seen.extend(streak + [it["id"]])
+                streak = []
+            else:
+                streak.append(it["id"])
+                if len(streak) >= MAX_FAILS_IN_A_ROW:
+                    # likely a config problem (key/model/quota): stop, and leave these unseen
+                    print(f"[abort] {len(streak)} LLM failures in a row - check GEMINI_API_KEY, "
+                          "LLM_MODEL and your free-tier quota")
+                    streak, aborted = [], True
+                    break
             time.sleep(SLEEP_BETWEEN_CALLS)
         else:
             card = basic_card(it)
@@ -92,8 +104,10 @@ def main():
     cards = [c for c in merged if c.get("added", "") >= cutoff]
     CARDS.write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
     if use_llm:
-        save_seen(seen)
+        save_seen(seen + streak)
     print(f"added {len(new_cards)} cards, total {len(cards)}")
+    if aborted and not new_cards:
+        raise SystemExit(1)   # make the Actions run show red
 
 
 if __name__ == "__main__":
