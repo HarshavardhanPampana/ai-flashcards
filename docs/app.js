@@ -144,10 +144,27 @@ function cardHTML(c) {
   </div>`;
 }
 
-function render() {
+// Draw cards a page at a time so the page stays fast with hundreds of cards
+const PAGE = 60;
+let shown = PAGE;
+
+function moreHTML() {
+  const left = view.length - shown;
+  return left > 0
+    ? `<div class="more"><button type="button" class="btn" id="more">Show ${Math.min(PAGE, left)} more · ${left} left</button></div>`
+    : "";
+}
+function updateCount() {
+  const filteredOut = view.length !== cards.length;
+  $("count").textContent = !cards.length ? ""
+    : `Showing ${Math.min(shown, view.length)} of ${view.length}${filteredOut ? " matching" : ""} cards`
+      + (filteredOut ? ` (${cards.length} total)` : "");
+}
+function render(keepPage = false) {
   view = filtered();
-  $("count").textContent = cards.length ? `Showing ${view.length} of ${cards.length} cards` : "";
-  $("grid").innerHTML = view.length ? view.map(cardHTML).join("") : emptyHTML();
+  if (!keepPage) shown = PAGE;
+  $("grid").innerHTML = view.length ? view.slice(0, shown).map(cardHTML).join("") + moreHTML() : emptyHTML();
+  updateCount();
   updateProgress();
   store.set("filters", { cat: state.cat, time: state.time, minImp: state.minImp, review: state.review, sort: state.sort });
 }
@@ -188,12 +205,19 @@ $("grid").addEventListener("click", (e) => {
     Object.assign(state, { cat: "", time: "all", q: "", minImp: 1, review: "" });
     $("search").value = ""; buildChips(); syncControls(); render(); return;
   }
+  if (e.target.closest("#more")) {      // append the next page without redrawing the rest
+    const from = shown; shown += PAGE;
+    e.target.closest(".more").remove();
+    $("grid").insertAdjacentHTML("beforeend", view.slice(from, shown).map(cardHTML).join("") + moreHTML());
+    updateCount();
+    return;
+  }
   const card = e.target.closest(".card");
   if (!card || card.classList.contains("skel") || e.target.closest("a")) return;
   const btn = e.target.closest("button[data-mark]");
   if (btn) {
     applyMarkClass(card, mark(card.dataset.id, btn.dataset.mark));
-    if (state.review) setTimeout(render, 250);   // card may no longer match the status filter
+    if (state.review) setTimeout(() => render(true), 250);   // card may no longer match the status filter
     return;
   }
   card.classList.toggle("flipped");

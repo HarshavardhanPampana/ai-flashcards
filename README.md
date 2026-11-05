@@ -27,7 +27,8 @@ copy .env.example .env            # then add your Groq key (console.groq.com) an
 
 Environment variables: `GROQ_API_KEY`, `GEMINI_API_KEY` (at least one), `GROQ_MODEL` / `LLM_MODEL` (optional:
 force a model; blank = auto-pick from what your key can use), `LLM_ORDER` (default `groq,gemini`),
-`MAX_CARDS_PER_RUN` (default 40).
+`MAX_CARDS_PER_RUN` (default 40). The site keeps the newest 1,000 cards from the last 14 days
+(`KEEP_DAYS` and `MAX_CARDS_TOTAL` in `scraper/main.py`).
 
 How the LLM step copes with free tiers: each provider paces itself to its per-minute limit, moves to its
 next model when one is overloaded or out of quota (each model has its own free quota), and is switched off

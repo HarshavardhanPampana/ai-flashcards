@@ -19,7 +19,8 @@ from .summarize import summarize, basic_card, llm_available
 
 CARDS = Path("docs/cards.json")
 MAX_CARDS = int(os.environ.get("MAX_CARDS_PER_RUN", 40))
-KEEP_DAYS = 30
+KEEP_DAYS = 14
+MAX_CARDS_TOTAL = 1000   # keeps cards.json small and the site fast
 MAX_FAILS_IN_A_ROW = 3
 SLEEP_BETWEEN_CALLS = float(os.environ.get("SLEEP_BETWEEN_CALLS", 0))  # extra pause; providers pace themselves
 
@@ -102,6 +103,8 @@ def main():
     # real LLM cards replace any earlier --no-llm placeholder with the same id
     merged = new_cards + [c for c in old if c["id"] not in new_ids]
     cards = [c for c in merged if c.get("added", "") >= cutoff]
+    cards.sort(key=lambda c: c.get("added", ""), reverse=True)
+    cards = cards[:MAX_CARDS_TOTAL]
     CARDS.write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
     if use_llm:
         save_seen(seen + streak)
