@@ -33,7 +33,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           GROQ_MODEL: ${{ vars.GROQ_MODEL }}
           MAX_CARDS_PER_RUN: "40"
-        run: python -m scraper.main
+        run: python -u -m scraper.main   # -u: show log lines live
 
       - name: Commit changes
         run: |
