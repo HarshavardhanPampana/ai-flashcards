@@ -26,9 +26,9 @@ def make_item(title, url, source, published, text, category, extra=None):
     }
 
 
-def _parse_feed(url):
+def _parse_feed(url, timeout=20):
     # Fetch with requests (timeout + UA), then let feedparser parse the bytes.
-    r = requests.get(url, headers=HEADERS, timeout=20)
+    r = requests.get(url, headers=HEADERS, timeout=timeout)
     r.raise_for_status()
     return feedparser.parse(r.content)
 
@@ -44,7 +44,7 @@ def fetch_arxiv(categories, n=60):
     q = "+OR+".join(f"cat:{c}" for c in categories)
     url = ("https://export.arxiv.org/api/query?search_query=" + q +
            f"&sortBy=submittedDate&sortOrder=descending&max_results={n}")
-    feed = _parse_feed(url)
+    feed = _parse_feed(url, timeout=60)   # arXiv API is often slow
     return [make_item(e.title, e.link, "arXiv", e.get("published"), e.get("summary"), "paper")
             for e in feed.entries]
 
