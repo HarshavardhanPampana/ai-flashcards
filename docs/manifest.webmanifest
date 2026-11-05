@@ -1,0 +1,13 @@
+{
+  "name": "AI News Flashcards",
+  "short_name": "AI Cards",
+  "description": "Self-updating flashcards of the latest AI research, model releases and industry news.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0e1116",
+  "theme_color": "#4f5bd5",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

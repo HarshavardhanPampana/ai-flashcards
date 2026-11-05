@@ -50,5 +50,11 @@ requests/day per model) covers this. Gemini's free tier can be as low as 20 requ
 as a backup. Check your real limits in each provider's console and lower `MAX_CARDS_PER_RUN` if needed.
 
 ## Site features
-Click a card to flip it. You can filter by category, importance and review status, and search the
-text. "Got it" / "Review again" progress is saved in your browser's localStorage.
+- Click a card to flip it: the front has the headline and TL;DR, the back has key points and why it matters
+- Color-coded category chips, a time filter (All / New since your last visit / Today / This week),
+  importance, review status and sort
+- Search across headlines, summaries, companies and tags (press `/`)
+- **Study mode** (press `S`): one card at a time. Space flips, ← → move, 1 = Got it, 2 = Review again,
+  swipe on a phone. Cards marked "Review again" come first.
+- Light/dark toggle, and it can be added to a phone home screen
+- Progress ("Got it" / "Review again"), filters and theme are saved per browser in localStorage
