@@ -99,8 +99,9 @@ class Provider:
 
 class Groq(Provider):
     name, env_key, env_model = "groq", "GROQ_API_KEY", "GROQ_MODEL"
-    min_interval = 2.5          # free tier is ~30 requests/minute
-    fallback_models = ["llama-3.3-70b-versatile"]
+    # free tier: 30 requests/min but only ~8K tokens/min per model; a card is ~1.5K tokens
+    min_interval = 12.0
+    fallback_models = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
     _skip = ("whisper", "tts", "guard", "embed", "playai", "distil", "compound", "orpheus", "vision")
 
     def _client(self):
@@ -127,10 +128,11 @@ class Groq(Provider):
     def call(self, model, prompt):
         import groq
         try:
+            extra = {"reasoning_effort": "low"} if "gpt-oss" in model else {}   # fewer thinking tokens
             r = self._client().chat.completions.create(
                 model=model, temperature=0.2,
                 response_format={"type": "json_object"},
-                messages=[{"role": "user", "content": prompt}])
+                messages=[{"role": "user", "content": prompt}], **extra)
         except (groq.AuthenticationError, groq.PermissionDeniedError) as e:
             raise FatalLLMError(f"groq key rejected: {str(e)[:120]}") from e
         except groq.NotFoundError as e:
@@ -230,7 +232,7 @@ def _clean(card):
 def summarize(item, retries=2):
     short = len(item["text"]) < 200
     prompt = PROMPT.format(source=item["source"], title=item["title"],
-                           text=item["text"][:3000] or "(none)",
+                           text=item["text"][:2500] or "(none)",
                            title_only_note=TITLE_ONLY_NOTE if short else "")
     title = item["title"][:50]
     for p in _active():
