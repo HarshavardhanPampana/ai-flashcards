@@ -25,14 +25,14 @@ copy .env.example .env            # then put your Gemini key (from Google AI Stu
 | `python -m scraper.main --no-llm` | Plain cards without an LLM, for testing the site. Doesn't mark items as seen; real runs replace these cards |
 | `python -m http.server 8000 --directory docs` | Preview the site at http://localhost:8000 |
 
-Environment variables: `GEMINI_API_KEY`, `LLM_MODEL` (current free Gemini Flash model), `GROQ_API_KEY`,
+Environment variables: `GEMINI_API_KEY`, `LLM_MODEL` (optional; blank = auto-pick an available Gemini Flash model), `GROQ_API_KEY`,
 `GROQ_MODEL` (optional fallback), `MAX_CARDS_PER_RUN` (default 40), `SLEEP_BETWEEN_CALLS` (default 5 s).
 
 ## Deploy
 1. Create a **public** GitHub repo `ai-flashcards` and push this folder to `main`.
 2. Settings → Secrets and variables → Actions:
    - Secret `GEMINI_API_KEY` (and optionally `GROQ_API_KEY`)
-   - Variable `LLM_MODEL` (and optionally `GROQ_MODEL`)
+   - Optional variable `LLM_MODEL` to force a specific model (otherwise one is picked automatically)
 3. Settings → Pages → Deploy from a branch → `main` / `/docs`.
 4. Actions → update-flashcards → **Run workflow** to test it. After that it runs every 6 hours.
 
