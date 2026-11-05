@@ -1,1 +1,1061 @@
-[]
+[
+ {
+  "headline": "Axion 1.0: Open Agent Foundation Models, Simplified",
+  "tldr": "Axion 1.0 is an open agent foundation model trained in three simple stages—two lightweight supervised fine‑tuning steps and reinforcement learning—delivering strong agentic performance while releasing full weights, data, and code.",
+  "key_points": [
+   "Trained in only three stages: two SFT phases and RL",
+   "No mid‑training, DPO, or on‑policy distillation required",
+   "Open release of model weights, data construction, prompts, and training code",
+   "Achieves competitive results on agentic benchmarks"
+  ],
+  "why_it_matters": "Provides a fully reproducible, open‑source pathway for building powerful agentic AI, lowering barriers for research and enabling community‑driven advancement of open agent intelligence.",
+  "category": "model_release",
+  "companies": [],
+  "tags": [
+   "agentic",
+   "open_source",
+   "reinforcement_learning",
+   "foundation_model"
+  ],
+  "importance": 4,
+  "id": "b727f10c64045ca2",
+  "url": "https://huggingface.co/papers/2611.03233",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-05T04:42:32.423640+00:00"
+ },
+ {
+  "headline": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+  "tldr": "LoCo learns when a reasoning model should stop thinking, cutting chain‑of‑thought length by up to ~45% for math and ~36% for code while keeping or improving accuracy.",
+  "key_points": [
+   "Detects overthinking states from model traces and freezes reasoning prefixes",
+   "Regenerates shorter verified continuations and trains with DPO on preference pairs",
+   "Reduces completion length 41.7%‑45.4% on math benchmarks and 23.4%‑36.3% on code benchmarks",
+   "Maintains or improves accuracy and achieves best AUC on code tasks",
+   "Code and model will be open‑sourced on GitHub"
+  ],
+  "why_it_matters": "Reduces inference cost of large reasoning models, making them more efficient for real‑world deployment without sacrificing performance, and demonstrates cross‑domain applicability from math to code generation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reasoning compression",
+   "local preference learning",
+   "math",
+   "code generation"
+  ],
+  "importance": 3,
+  "id": "c183e075f0bc71b6",
+  "url": "https://huggingface.co/papers/2611.04814",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-05T04:42:43.792696+00:00"
+ },
+ {
+  "headline": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+  "tldr": "DreamX repurposes a pretrained video diffusion model to learn compact, embodiment‑invariant latent actions, achieving state‑of‑the‑art results on LARY‑Bench and enabling zero‑shot cross‑embodiment video transfer.",
+  "key_points": [
+   "Extracts latent actions by compressing each video frame 300× (1,200→4 tokens)",
+   "Creates a shared action space that works across humans, robots, environments, and parameterizations",
+   "Achieves SOTA on LARY‑Bench and supports any‑to‑any and zero‑shot action transfer",
+   "Enables policy learning in a compact latent space, lowering computational cost"
+  ],
+  "why_it_matters": "Provides a universal, low‑dimensional action representation that decouples dynamics from visual appearance, facilitating transfer learning across embodiments and reducing compute for video‑diffusion‑based policies.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video diffusion",
+   "latent actions",
+   "cross-embodiment",
+   "zero-shot"
+  ],
+  "importance": 4,
+  "id": "807d8e9928dea350",
+  "url": "https://huggingface.co/papers/2611.05377",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-05T04:42:55.891355+00:00"
+ },
+ {
+  "headline": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+  "tldr": "The paper introduces Route Anything, a framework for dynamically routing tasks to specialized AI models and policies, showing that learned routers can improve performance and efficiency across diverse benchmarks.",
+  "key_points": [
+   "Presents a theoretical foundation for optimal model/policy routing under quality‑cost trade‑offs",
+   "Evaluates routing on 25 benchmarks covering language, vision, speech, coding, and robotics",
+   "Oracle routing beats the best fixed model by 5.4 points; learned routers improve by up to 2.1 points while using 24% less policy time",
+   "Achieves an average 8.82× efficiency gain over a reference model"
+  ],
+  "why_it_matters": "Effective routing enables heterogeneous AI ecosystems to deliver higher performance with lower computational cost, a critical step toward scalable artificial general intelligence.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "routing",
+   "AGI",
+   "model orchestration",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "63973ddb0548aa82",
+  "url": "https://huggingface.co/papers/2611.05275",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-05T04:43:07.912624+00:00"
+ },
+ {
+  "headline": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+  "tldr": "The paper introduces Embodied Agent Arena to evaluate ten frontier vision‑language models on robot generalist tasks, finding closed‑weight models outperform open‑weight ones, especially in planning and manipulation.",
+  "key_points": [
+   "Embodied Agent Arena tests VLM agents across geometry, spatial reasoning, affordance, task planning, and manipulation using 1,000 cases.",
+   "Closed‑weight VLMs lead in all five domains, while open‑weight VLMs show weaker planning and manipulation performance.",
+   "Errors often stem from hidden geometric distortions and misidentifying actionable regions, causing subgoal loss or premature task termination.",
+   "Additional computation (code repair, self‑review) does not consistently fix failures and can sometimes reverse correct actions."
+  ],
+  "why_it_matters": "Understanding the limits of current VLM agents for embodied robotics highlights gaps in planning and manipulation, guiding future research toward more reliable robot generalists.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "VLM",
+   "robot_generalist",
+   "embodied_ai",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "4dcce518c56d2780",
+  "url": "https://huggingface.co/papers/2610.00854",
+  "source": "HF Daily Papers",
+  "date": "2026-10-22T20:00:00.000Z",
+  "added": "2026-11-05T04:43:19.749532+00:00"
+ },
+ {
+  "headline": "Words Caught in the Heart: Simulating Person-Specific Expression for Self-Opaque Clients in Psychotherapy",
+  "tldr": "Pandora is a new LLM-based framework that simulates psychotherapy clients by explicitly planning expression, achieving higher expression similarity and lower AI-like judgments than prior baselines.",
+  "key_points": [
+   "Models psychological and relational states that update with therapist interventions.",
+   "Separates expression planning from language generation using client-specific utterance patterns.",
+   "Outperforms five baselines on 115 cases across four counseling datasets.",
+   "Reduces AI-like perception from 43.3–67.2% to 7.2% in evaluator study."
+  ],
+  "why_it_matters": "Improving the realism of client simulators can enhance training for therapists and research on therapeutic techniques, ensuring simulated clients reflect individual expression rather than generic, AI-like responses.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "psychotherapy",
+   "client simulation",
+   "language model",
+   "expression planning"
+  ],
+  "importance": 3,
+  "id": "83de50efad5d5595",
+  "url": "https://huggingface.co/papers/2611.00617",
+  "source": "HF Daily Papers",
+  "date": "2026-10-30T20:00:00.000Z",
+  "added": "2026-11-05T04:43:31.850483+00:00"
+ },
+ {
+  "headline": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
+  "tldr": "Introduces YANAMI, a 400K multi-turn multimodal dialogue dataset and benchmark to evaluate models' ability to track and realize evolving dialogue states.",
+  "key_points": [
+   "Contains 400K dialogues, >2M images, and 2.6M turns across four scenarios",
+   "Provides YANAMI-Bench with 400 dialogues for systematic evaluation",
+   "Fine-tuning BAGEL on YANAMI-400K improves editing, generation, and stateful interaction performance",
+   "Current unified multimodal models still struggle with maintaining and visualizing evolving states"
+  ],
+  "why_it_matters": "Enables rigorous training and assessment of multimodal models on stateful, multi-turn interactions, a gap in existing benchmarks, driving progress toward more coherent visual dialogue systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "dataset",
+   "dialogue",
+   "stateful"
+  ],
+  "importance": 3,
+  "id": "61aa1110a2ecdbb7",
+  "url": "https://huggingface.co/papers/2611.05280",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-05T04:43:55.944338+00:00"
+ },
+ {
+  "headline": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
+  "tldr": "An automated pipeline converts raw videos into high-quality instruction data, creating the 100K-sample VidUEU-100K dataset that boosts multimodal model performance across tasks.",
+  "key_points": [
+   "Four-stage pipeline filters low-quality shots, extracts keyframes and multimodal signals, and synthesizes instruction samples",
+   "Agent can iteratively adjust data distribution based on downstream training results",
+   "VidUEU-100K contains 100,000 diverse training samples spanning multiple domains and tasks",
+   "Fine‑tuning baseline models on VidUEU-100K yields consistent performance gains on benchmark suites"
+  ],
+  "why_it_matters": "It tackles the bottleneck of scarce, costly multimodal instruction data by leveraging abundant video content, enabling more effective training of multimodal AI systems and accelerating research in video‑based understanding and editing.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "data_curation",
+   "video",
+   "dataset"
+  ],
+  "importance": 3,
+  "id": "49c4f78acfc1d008",
+  "url": "https://huggingface.co/papers/2611.04418",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-05T04:44:08.146951+00:00"
+ },
+ {
+  "headline": "EvoTeam: Multi-Agent Collaboration via Evolving Teams",
+  "tldr": "EvoTeam introduces a framework that evolves team organization, interaction rules, and individual agent skills jointly, improving multi-agent system collaboration across heterogeneous tasks.",
+  "key_points": [
+   "Joint evolution of team structure, interaction rules, and agent skills",
+   "Maintains a reusable library of teams for context‑specific collaboration",
+   "Allows individual skills to be shared across different team configurations",
+   "Demonstrated effectiveness on four benchmark tasks"
+  ],
+  "why_it_matters": "Better coordination among specialized LLM agents can solve more complex problems, and EvoTeam's approach reduces the need for manual prompt or skill tuning by evolving collaboration itself.",
+  "category": "paper",
+  "companies": [
+   "DEEP-JLU"
+  ],
+  "tags": [
+   "multi-agent",
+   "evolution",
+   "collaboration",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "916bde684bf426b1",
+  "url": "https://huggingface.co/papers/2610.39813",
+  "source": "HF Daily Papers",
+  "date": "2026-10-29T20:00:00.000Z",
+  "added": "2026-11-05T04:44:19.811316+00:00"
+ },
+ {
+  "headline": "Dory1.0-4B: A Looped Normalized-GPT",
+  "tldr": "A 4‑billion‑parameter looped language model with elastic depth that can adapt compute budget at inference and outperforms larger models on coding, agentic, and long‑context benchmarks.",
+  "key_points": [
+   "Single checkpoint supports variable inference loops, giving flexible compute budgets.",
+   "Pre‑trained on 6 trillion tokens; context length extended to 256K tokens.",
+   "Looping improves accuracy and token efficiency, achieving 1.3‑2.5× fewer output tokens on agentic tasks.",
+   "Outperforms larger models (Qwen3.5‑9B, Gemma 4 12B, Gemma 4 26B‑A4B) across 12 benchmarks with two or more loops.",
+   "Open‑sourced quantized checkpoints in BF16, MXFP8, NVFP4, and GGUF formats."
+  ],
+  "why_it_matters": "Demonstrates that looped, elastic‑depth architectures can deliver higher performance and token efficiency than larger static models, enabling cost‑effective deployment for long‑context and coding applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "looped model",
+   "elastic depth",
+   "token efficiency",
+   "long-context"
+  ],
+  "importance": 3,
+  "id": "b8fc016e940e5e7e",
+  "url": "https://huggingface.co/papers/2611.03998",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-05T04:44:32.203343+00:00"
+ },
+ {
+  "headline": "Kimi K3.1 Pro model weights are out",
+  "tldr": "Moonshot AI released open-weight Kimi K3.1 Pro, a 3‑trillion‑parameter multimodal model with a 1‑million‑token context window and new sparse attention layers.",
+  "key_points": [
+   "Open‑weight 3T‑class model released",
+   "First K3.1 series model with Gated DeepSeek Sparse Attention for long‑context efficiency",
+   "1 million token context improves coding, 3D, finance, and factual tasks",
+   "API compatible with OpenAI/Anthropic formats and supports multiple inference engines"
+  ],
+  "why_it_matters": "Providing open weights and a massive context window lets developers and researchers build advanced multimodal applications and experiment with long‑context reasoning without proprietary restrictions.",
+  "category": "model_release",
+  "companies": [
+   "Moonshot AI"
+  ],
+  "tags": [
+   "multimodal",
+   "open_weights",
+   "long_context",
+   "AI_models"
+  ],
+  "importance": 3,
+  "id": "7838c87736f9082f",
+  "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+  "source": "Hacker News",
+  "date": "2026-11-04T15:30:30Z",
+  "added": "2026-11-05T04:44:43.971460+00:00"
+ },
+ {
+  "headline": "Progress on provable inference for large language models",
+  "tldr": "New advances reported in making inference for LLMs provably correct.",
+  "key_points": [
+   "Research shows improved provable inference techniques",
+   "Focus on large language model architectures",
+   "Potential for more reliable AI predictions"
+  ],
+  "why_it_matters": "Provable inference can increase trust and safety in AI systems by ensuring predictable behavior of large language models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "large language models",
+   "provable inference",
+   "research"
+  ],
+  "importance": 2,
+  "id": "d94c9f77ddafc83a",
+  "url": "https://www.anthropic.com/research/provable-inference",
+  "source": "Hacker News",
+  "date": "2026-11-04T17:17:46Z",
+  "added": "2026-11-05T04:44:55.695135+00:00"
+ },
+ {
+  "headline": "Retell uses OpenAI models to help power 100M monthly calls",
+  "tldr": "Retell leverages OpenAI's GPT-6 Astra and Codex to power a voice agent handling 100 million calls per month and achieve a $1.6 M annual revenue run rate per employee.",
+  "key_points": [
+   "Retell uses OpenAI models for its voice agent",
+   "Handles 100 M monthly calls",
+   "GPT‑6 Astra tops Retell’s benchmark",
+   "Codex contributes to $1.6 M ARR per employee"
+  ],
+  "why_it_matters": "Demonstrates the scalability and revenue potential of integrating advanced OpenAI models into high‑volume voice AI services.",
+  "category": "product",
+  "companies": [
+   "Retell",
+   "OpenAI"
+  ],
+  "tags": [
+   "voice AI",
+   "revenue",
+   "benchmark",
+   "GPT-6"
+  ],
+  "importance": 2,
+  "id": "d42fb1eb3362412f",
+  "url": "https://openai.com/index/retell-ai",
+  "source": "OpenAI",
+  "date": "Tue, 27 Oct 2026 15:00:00 GMT",
+  "added": "2026-11-05T04:45:07.857903+00:00"
+ },
+ {
+  "headline": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+  "tldr": "Ricursive Intelligence released Ripple-65B Preview, a 65‑billion‑parameter model that sets new U.S. open‑weight state‑of‑the‑art performance on agentic coding benchmarks while costing only $32 M to train.",
+  "key_points": [
+   "Trained on 12 trillion tokens with up to 1 M context length",
+   "Achieves 80.52 on TerminalBench 2.1, beating larger models like Reflection Beam 501B",
+   "Cost $32 M to develop, about one‑tenth the expense of prior open‑weight SOTA",
+   "Available via Hugging Face, Together AI, GMI Cloud, and OpenRouter"
+  ],
+  "why_it_matters": "Demonstrates that high‑performing, open‑weight LLMs for specialized coding tasks can be built far more cost‑effectively, potentially lowering barriers for AI hardware and software co‑design.",
+  "category": "model_release",
+  "companies": [
+   "Ricursive Intelligence",
+   "Hugging Face",
+   "Together AI",
+   "GMI Cloud",
+   "OpenRouter"
+  ],
+  "tags": [
+   "agentic coding",
+   "open-weight",
+   "efficiency",
+   "benchmark"
+  ],
+  "importance": 4,
+  "id": "0f35e299c97c927a",
+  "url": "https://www.ricursive.com/ripple",
+  "source": "Hacker News",
+  "date": "2026-11-04T18:53:29Z",
+  "added": "2026-11-05T04:45:19.997682+00:00"
+ },
+ {
+  "headline": "Ask HN: What's your current AI agentic setup?",
+  "tldr": "A Hacker News thread asking users to share which AI subscriptions, models, coding tools, orchestration frameworks, and agent platforms they currently use and why.",
+  "key_points": [
+   "Users list paid AI subscriptions (e.g., Claude, ChatGPT/Codex, Cursor) and tier choices.",
+   "Discussion of alternative model access via pay‑as‑you‑go APIs, OpenRouter, or self‑hosted models.",
+   "Exploration of coding harnesses and IDE integrations such as OpenCode, Pi, Aider, Muse Code, or custom tools.",
+   "Mention of agent orchestration or swarm tools like Munder Difflin, Gas Town, Ruflo.",
+   "Survey of broader agent platforms (OpenClaw, Hermes Agent, Grok bot, Dots, Muse) and their use cases."
+  ],
+  "why_it_matters": "Captures a real‑time snapshot of how developers and AI enthusiasts are building their AI‑augmented workflows, revealing trends in subscription models, tooling preferences, and emerging orchestration platforms.",
+  "category": "other",
+  "companies": [
+   "Anthropic",
+   "OpenAI",
+   "Cursor",
+   "OpenRouter"
+  ],
+  "tags": [
+   "AI subscriptions",
+   "agent platforms",
+   "developer tools",
+   "workflow"
+  ],
+  "importance": 2,
+  "id": "793baf0e54548bea",
+  "url": "https://news.ycombinator.com/item?id=50366117",
+  "source": "Hacker News",
+  "date": "2026-11-04T14:37:22Z",
+  "added": "2026-11-05T04:45:32.010938+00:00"
+ },
+ {
+  "headline": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+  "tldr": "DevRev uses OpenAI's GPT-6.1 Sol to power its Computer and Operator services, offering balanced reasoning, speed, and cost for enterprise self‑service.",
+  "key_points": [
+   "GPT-6.1 Sol powers DevRev's Computer and Operator",
+   "Provides autonomous self‑service for enterprises",
+   "Balances reasoning quality, response speed, and cost"
+  ],
+  "why_it_matters": "Enables enterprises to automate support tasks efficiently, reducing human workload and operational expenses while maintaining high‑quality responses.",
+  "category": "product",
+  "companies": [
+   "DevRev",
+   "OpenAI"
+  ],
+  "tags": [
+   "GPT-6.1",
+   "autonomous",
+   "enterprise",
+   "self-service"
+  ],
+  "importance": 2,
+  "id": "bf25be8f87794d7d",
+  "url": "https://openai.com/index/devrev-enterprise-self-service",
+  "source": "OpenAI",
+  "date": "Wed, 04 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-05T04:45:43.994953+00:00"
+ },
+ {
+  "headline": "How we detect frontier model misalignment",
+  "tldr": "OpenAI uses layered monitoring to spot misalignment and unauthorized agent behavior early.",
+  "key_points": [
+   "Layered monitoring system",
+   "Detects frontier model misalignment",
+   "Identifies unauthorized agent behavior",
+   "Enables responders to intervene before escalation"
+  ],
+  "why_it_matters": "Early detection of misalignment helps prevent harmful outcomes from advanced AI systems, protecting users and maintaining trust.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "misalignment",
+   "monitoring",
+   "AI safety",
+   "frontier models"
+  ],
+  "importance": 2,
+  "id": "d28967fce9c692cd",
+  "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+  "source": "OpenAI",
+  "date": "Thu, 29 Oct 2026 09:00:00 GMT",
+  "added": "2026-11-05T04:45:55.694502+00:00"
+ },
+ {
+  "headline": "Gemini 4 Carbon: Our next frontier model",
+  "tldr": "Google DeepMind announces the upcoming Gemini 4 Carbon model as its next major AI advancement",
+  "key_points": [
+   "Gemini 4 Carbon announced",
+   "Positioned as next frontier model",
+   "Developed by Google DeepMind"
+  ],
+  "why_it_matters": "Signals a new generation of AI models from DeepMind, indicating continued progress in large‑scale model capabilities",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "AI",
+   "model",
+   "frontier"
+  ],
+  "importance": 2,
+  "id": "b0da25ea6c1a2967",
+  "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+  "source": "Google DeepMind",
+  "date": "Wed, 28 Oct 2026 17:00:58 +0000",
+  "added": "2026-11-05T04:46:07.483947+00:00"
+ },
+ {
+  "headline": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+  "tldr": "Google DeepMind releases EmbeddingGemma 2, an open and lightweight multimodal embedding model.",
+  "key_points": [
+   "Open-source release",
+   "Lightweight architecture",
+   "Multimodal embedding capabilities",
+   "Version 2 of EmbeddingGemma"
+  ],
+  "why_it_matters": "Provides researchers and developers with a freely available, efficient model for multimodal embeddings, lowering barriers to experimentation and deployment.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "embedding",
+   "multimodal",
+   "open-source",
+   "lightweight"
+  ],
+  "importance": 2,
+  "id": "4dd290070848fb61",
+  "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+  "source": "Google DeepMind",
+  "date": "Tue, 06 Oct 2026 19:57:04 +0000",
+  "added": "2026-11-05T04:46:19.768792+00:00"
+ },
+ {
+  "headline": "Basically no one is using AI agents for their DoorDash orders",
+  "tldr": "AI agents have seen little adoption for automating DoorDash food orders.",
+  "key_points": [
+   "AI agents are being considered for DoorDash ordering",
+   "Actual usage remains minimal",
+   "No significant impact on DoorDash business yet"
+  ],
+  "why_it_matters": "Understanding the adoption gap helps gauge realistic expectations for AI-driven automation in consumer services and informs future investment decisions.",
+  "category": "other",
+  "companies": [
+   "DoorDash"
+  ],
+  "tags": [
+   "AI",
+   "agents",
+   "delivery"
+  ],
+  "importance": 2,
+  "id": "538ea1326a6a8ff9",
+  "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
+  "source": "Hacker News",
+  "date": "2026-11-02T15:48:45Z",
+  "added": "2026-11-05T04:46:31.599874+00:00"
+ },
+ {
+  "headline": "Daybreak Red is now available in AWS GovCloud (US-East)",
+  "tldr": "OpenAI's Daybreak Red, featuring GPT-5.6 Cyber, is offered via Amazon Bedrock in AWS GovCloud for authorized cybersecurity customers.",
+  "key_points": [
+   "Daybreak Red includes GPT-5.6 Cyber",
+   "Available in AWS GovCloud (US-East)",
+   "Delivered through Amazon Bedrock",
+   "For approved cybersecurity work"
+  ],
+  "why_it_matters": "Provides U.S. government and regulated entities access to advanced AI-driven cybersecurity tools within a compliant cloud environment.",
+  "category": "product",
+  "companies": [
+   "OpenAI",
+   "Amazon",
+   "AWS"
+  ],
+  "tags": [
+   "GPT-5.6",
+   "Cybersecurity",
+   "GovCloud",
+   "Bedrock"
+  ],
+  "importance": 2,
+  "id": "75679f5aa60bfcf8",
+  "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+  "source": "OpenAI",
+  "date": "Wed, 04 Nov 2026 07:00:00 GMT",
+  "added": "2026-11-05T04:46:43.692253+00:00"
+ },
+ {
+  "headline": "LifeVal",
+  "tldr": "OpenAI introduces LifeVal, a benchmark that evaluates how effectively AI assists with everyday tasks like childcare, finances, and government paperwork.",
+  "key_points": [
+   "LifeVal is a new benchmark for AI assistance",
+   "Measures performance on everyday tasks",
+   "Includes childcare, financial management, and government paperwork",
+   "Helps gauge real‑world impact of AI tools"
+  ],
+  "why_it_matters": "Provides a standardized way to assess AI's practical usefulness in daily life, guiding development toward more helpful and trustworthy systems.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "benchmark",
+   "AI assistance",
+   "evaluation",
+   "real-world impact"
+  ],
+  "importance": 2,
+  "id": "ed4b58253682640f",
+  "url": "https://openai.com/index/lifeval",
+  "source": "OpenAI",
+  "date": "Mon, 02 Nov 2026 09:00:00 GMT",
+  "added": "2026-11-05T04:46:55.855279+00:00"
+ },
+ {
+  "headline": "An updated Model Spec for more capable and beneficial AI",
+  "tldr": "OpenAI releases an updated Model Spec defining five core values to steer AI toward sound judgment, human agency, and faithfulness to human intent.",
+  "key_points": [
+   "OpenAI publishes an updated Model Spec",
+   "Spec outlines five core values",
+   "Focus on sound judgment, human agency, and faithfulness"
+  ],
+  "why_it_matters": "Establishing clear values helps ensure future AI systems act responsibly and align with human intentions, reducing risk as capabilities grow.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "model_spec",
+   "AI_ethics",
+   "values",
+   "capability"
+  ],
+  "importance": 2,
+  "id": "7bf0065ceb1646f5",
+  "url": "https://openai.com/index/updated-model-spec",
+  "source": "OpenAI",
+  "date": "Thu, 29 Oct 2026 17:00:00 GMT",
+  "added": "2026-11-05T04:47:07.763712+00:00"
+ },
+ {
+  "headline": "Genie 4: A new generation of world simulation",
+  "tldr": "DeepMind introduces Genie 4, a world model delivering unprecedented realism in real-time simulation.",
+  "key_points": [
+   "New world model",
+   "Unprecedented realism",
+   "Real-time simulation"
+  ],
+  "why_it_matters": "Advances the fidelity and speed of AI-driven simulations, enabling more accurate virtual environments for research and applications.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "world simulation",
+   "real-time",
+   "AI model"
+  ],
+  "importance": 2,
+  "id": "d17d13a0006a776d",
+  "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+  "source": "Google DeepMind",
+  "date": "Tue, 27 Oct 2026 16:01:38 +0000",
+  "added": "2026-11-05T04:47:19.646601+00:00"
+ },
+ {
+  "headline": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+  "tldr": "Google DeepMind partners with Singapore's GovTech to create an on-device Gemma model that detects scams in private chats without sending data to the cloud.",
+  "key_points": [
+   "Collaboration between Google DeepMind and Singapore Government",
+   "Fine‑tuned AI model for scam detection",
+   "Uses lightweight on‑device Gemma models",
+   "Intercepts conversational scams in private chats",
+   "Zero cloud data egress"
+  ],
+  "why_it_matters": "Demonstrates a privacy‑preserving approach to AI‑driven security, showing how on‑device models can protect users from scams without compromising data sovereignty.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind",
+   "GovTech Singapore"
+  ],
+  "tags": [
+   "scam detection",
+   "on-device AI",
+   "privacy",
+   "collaboration"
+  ],
+  "importance": 2,
+  "id": "58e4191fcfe4b88c",
+  "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+  "source": "Google DeepMind",
+  "date": "Wed, 14 Oct 2026 02:00:14 +0000",
+  "added": "2026-11-05T04:47:31.734097+00:00"
+ },
+ {
+  "headline": "Developing Gemini 4 Argon responsibly and safely",
+  "tldr": "Google DeepMind announces responsible and safe development of Gemini 4 Argon",
+  "key_points": [
+   "Gemini 4 Argon development",
+   "Focus on responsibility",
+   "Emphasis on safety"
+  ],
+  "why_it_matters": "Ensures advanced AI models are built with safety and ethical safeguards, reducing risk of misuse or harmful outcomes",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini4",
+   "AI safety",
+   "responsible AI"
+  ],
+  "importance": 2,
+  "id": "471508c04c304cbd",
+  "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+  "source": "Google DeepMind",
+  "date": "Tue, 13 Oct 2026 19:43:07 +0000",
+  "added": "2026-11-05T04:47:43.785747+00:00"
+ },
+ {
+  "headline": "Gemini 4 Argon for Robotics",
+  "tldr": "DeepMind announces the Gemini 4 Argon model aimed at robotics applications.",
+  "key_points": [
+   "Gemini 4 Argon model released",
+   "Targeted for robotics use cases",
+   "Developed by Google DeepMind"
+  ],
+  "why_it_matters": "Brings advanced AI capabilities to robotics, potentially improving autonomy and performance in robotic systems.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "Robotics",
+   "AI",
+   "Model"
+  ],
+  "importance": 2,
+  "id": "884ebf3c3978ea46",
+  "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+  "source": "Google DeepMind",
+  "date": "Tue, 13 Oct 2026 16:01:58 +0000",
+  "added": "2026-11-05T04:47:55.731671+00:00"
+ },
+ {
+  "headline": "Gemini 4 Argon: Built to solve your hardest problems",
+  "tldr": "DeepMind announces Gemini 4 Argon, a new AI model aimed at tackling complex challenges.",
+  "key_points": [
+   "Gemini 4 Argon is a new AI model",
+   "Designed to solve hardest problems",
+   "Developed by DeepMind"
+  ],
+  "why_it_matters": "Introducing a model focused on solving complex problems could advance AI capabilities in research, industry, and critical applications.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "AI",
+   "problem_solving"
+  ],
+  "importance": 2,
+  "id": "f174716114a9131e",
+  "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+  "source": "Google DeepMind",
+  "date": "Tue, 13 Oct 2026 16:01:52 +0000",
+  "added": "2026-11-05T04:48:07.586594+00:00"
+ },
+ {
+  "headline": "Gemini 4 Argon: our next era of frontier intelligence",
+  "tldr": "Google DeepMind announces Gemini 4 Argon as the next step in advanced AI capabilities.",
+  "key_points": [
+   "Gemini 4 Argon is the new model name",
+   "Positioned as a new era of frontier intelligence",
+   "Announced by Google DeepMind"
+  ],
+  "why_it_matters": "Signals a major progression in DeepMind's AI roadmap, indicating upcoming enhancements in capability and potential applications.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "AI",
+   "Gemini",
+   "frontier_intelligence"
+  ],
+  "importance": 2,
+  "id": "15e70ee5e4a75a6c",
+  "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+  "source": "Google DeepMind",
+  "date": "Wed, 30 Sep 2026 20:01:45 +0000",
+  "added": "2026-11-05T04:48:19.715341+00:00"
+ },
+ {
+  "headline": "Introducing Gemini 3.8 Live with Live Avatar",
+  "tldr": "Google DeepMind launches Gemini 3.8 Live featuring a live avatar",
+  "key_points": [
+   "Gemini 3.8 Live released",
+   "Includes a live avatar capability",
+   "Announced by Google DeepMind"
+  ],
+  "why_it_matters": "Adds real‑time visual interaction to the Gemini model, expanding how users can engage with AI",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "Live",
+   "Avatar",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "e7107d9a76d915c4",
+  "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+  "source": "Google DeepMind",
+  "date": "Thu, 24 Sep 2026 16:20:39 +0000",
+  "added": "2026-11-05T04:48:31.596974+00:00"
+ },
+ {
+  "headline": "Gemini 3.8 text-to-speech says hello",
+  "tldr": "Google DeepMind announced Gemini 3.8 with a new text‑to‑speech feature that greets users",
+  "key_points": [
+   "Gemini 3.8 version released",
+   "Adds text‑to‑speech capability",
+   "Model greets with \"hello\""
+  ],
+  "why_it_matters": "Introduces conversational voice output to the Gemini series, expanding interaction modes for AI applications",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "text-to-speech",
+   "AI model"
+  ],
+  "importance": 2,
+  "id": "be2314c62992cc2b",
+  "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+  "source": "Google DeepMind",
+  "date": "Wed, 23 Sep 2026 15:25:14 +0000",
+  "added": "2026-11-05T04:48:43.635321+00:00"
+ },
+ {
+  "headline": "OpenAI to acquire Pierre Computer Company, Inc.",
+  "tldr": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
+  "key_points": [
+   "OpenAI announces acquisition of Pierre Computer Company, Inc.",
+   "Acquisition aims to broaden Codex’s code‑related capabilities",
+   "Focus on tools for building, understanding, and reviewing code"
+  ],
+  "why_it_matters": "The deal strengthens OpenAI’s Codex platform, enhancing its ability to assist developers with code creation and analysis, potentially increasing its competitiveness in AI‑assisted programming tools.",
+  "category": "acquisition",
+  "companies": [
+   "OpenAI",
+   "Pierre Computer Company, Inc."
+  ],
+  "tags": [
+   "acquisition",
+   "code",
+   "Codex",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "3a06f84c0f51a102",
+  "url": "https://openai.com/index/openai-to-acquire-pierre",
+  "source": "OpenAI",
+  "date": "Wed, 04 Nov 2026 14:30:00 GMT",
+  "added": "2026-11-05T04:48:55.739864+00:00"
+ },
+ {
+  "headline": "A thousand fewer paths to root",
+  "tldr": "OpenAI built an autonomous pipeline that discovered, validated, and generated patches for 948 local privilege‑escalation bugs in the Linux kernel.",
+  "key_points": [
+   "Autonomous pipeline created by OpenAI",
+   "Found 948 local privilege‑escalation vulnerabilities",
+   "Generated patches for the Linux kernel",
+   "Validated each vulnerability automatically"
+  ],
+  "why_it_matters": "Reducing kernel privilege‑escalation bugs strengthens system security and demonstrates AI’s capability to automate large‑scale vulnerability remediation.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "security",
+   "linux",
+   "kernel",
+   "vulnerabilities"
+  ],
+  "importance": 2,
+  "id": "a4f4c423c5426033",
+  "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+  "source": "OpenAI",
+  "date": "Wed, 04 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-05T04:49:07.895652+00:00"
+ },
+ {
+  "headline": "Introducing Images 2.6",
+  "tldr": "OpenAI releases Images 2.6 with faster generation, GIF support, precise editing, and new API controls for ChatGPT, Codex, and the API.",
+  "key_points": [
+   "Faster image generation",
+   "GIF creation capability",
+   "More precise image editing",
+   "New API controls across ChatGPT, Codex, and the API"
+  ],
+  "why_it_matters": "Enhances visual content creation and interactivity for developers and users, expanding the utility of OpenAI's image models.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "image generation",
+   "GIF",
+   "API",
+   "ChatGPT"
+  ],
+  "importance": 2,
+  "id": "0a437d67f2effbc5",
+  "url": "https://openai.com/index/introducing-images-2-6",
+  "source": "OpenAI",
+  "date": "Wed, 04 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-05T04:49:19.570568+00:00"
+ },
+ {
+  "headline": "Accelerating engineering for the physical world",
+  "tldr": "ChatGPT and Codex are being used to speed up CAD, PCB design, simulation, and other engineering workflows.",
+  "key_points": [
+   "ChatGPT assists engineers in physical‑world design tasks",
+   "Codex helps automate CAD and PCB design processes",
+   "AI accelerates simulation and related engineering workflows"
+  ],
+  "why_it_matters": "AI tools can reduce development time and cost for hardware engineers, making product design faster and more efficient.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI",
+   "engineering",
+   "CAD",
+   "simulation"
+  ],
+  "importance": 2,
+  "id": "26c6032e1d267765",
+  "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+  "source": "OpenAI",
+  "date": "Tue, 03 Nov 2026 12:00:00 GMT",
+  "added": "2026-11-05T04:49:31.515375+00:00"
+ },
+ {
+  "headline": "3 ways to prep for your next big race with Search",
+  "tldr": "Google shows three ways to use Search to get ready for a big race",
+  "key_points": [
+   "Use Search to find training tips",
+   "Use Search to locate race routes",
+   "Use Search to track progress"
+  ],
+  "why_it_matters": "Helps athletes quickly gather information and plan their preparation using a familiar tool",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "search",
+   "racing",
+   "preparation"
+  ],
+  "importance": 2,
+  "id": "1852061b5cf6950b",
+  "url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+  "source": "Google AI",
+  "date": "Thu, 10 Sep 2026 16:00:00 +0000",
+  "added": "2026-11-05T04:49:43.919544+00:00"
+ },
+ {
+  "headline": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+  "tldr": "NVIDIA introduces new RTX Spark thin‑and‑light Windows laptops from multiple OEMs, featuring a combined Blackwell RTX GPU and Grace CPU superchip with up to 128 GB unified memory.",
+  "key_points": [
+   "RTX Spark laptops now offered by ASUS, Dell, HP, Lenovo, Microsoft, and MSI",
+   "Each system uses a single superchip that integrates a Blackwell RTX GPU and a Grace CPU",
+   "Supports up to 128 GB of unified memory for high‑performance workloads",
+   "Includes new AI agent tools and optimized game titles",
+   "Targets developers, creators, and gamers seeking thin, lightweight performance"
+  ],
+  "why_it_matters": "The integration of GPU and CPU on one superchip delivers unprecedented performance in a portable form factor, enabling AI‑enhanced workflows and gaming on thin laptops and signaling a shift toward unified memory architectures in consumer hardware.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "ASUS",
+   "Dell",
+   "HP",
+   "Lenovo",
+   "Microsoft",
+   "MSI"
+  ],
+  "tags": [
+   "RTX Spark",
+   "Blackwell",
+   "Grace",
+   "laptops"
+  ],
+  "importance": 3,
+  "id": "2952348be6c4a620",
+  "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+  "source": "NVIDIA",
+  "date": "Wed, 28 Oct 2026 15:00:46 +0000",
+  "added": "2026-11-05T04:49:55.849828+00:00"
+ },
+ {
+  "headline": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+  "tldr": "Meta released Muse Spark Open, an open-weight frontier multimodal mixture-of-experts model.",
+  "key_points": [
+   "Open-weight model released",
+   "Frontier multimodal capabilities",
+   "Mixture-of-experts architecture",
+   "Developed by Meta"
+  ],
+  "why_it_matters": "Provides researchers and developers with an accessible, high-performance multimodal model, advancing open AI research and enabling broader experimentation.",
+  "category": "model_release",
+  "companies": [
+   "Meta",
+   "Hugging Face"
+  ],
+  "tags": [
+   "multimodal",
+   "mixture-of-experts",
+   "open-weight",
+   "model"
+  ],
+  "importance": 2,
+  "id": "9d251ac6836a600d",
+  "url": "https://huggingface.co/blog/meta-muse-spark-open",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 15 Oct 2026 00:00:00 GMT",
+  "added": "2026-11-05T04:50:19.633945+00:00"
+ },
+ {
+  "headline": "The latest AI news we announced in October 2026",
+  "tldr": "Google AI’s roundup of AI announcements made in October 2026",
+  "key_points": [
+   "Compilation of October 2026 AI announcements",
+   "Includes multiple AI updates",
+   "Presented by Google AI"
+  ],
+  "why_it_matters": "Provides a concise overview of Google’s recent AI developments for stakeholders and enthusiasts",
+  "category": "other",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI",
+   "October2026",
+   "news"
+  ],
+  "importance": 2,
+  "id": "b810030289ed799f",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+  "source": "Google AI",
+  "date": "Mon, 02 Nov 2026 17:45:00 +0000",
+  "added": "2026-11-05T04:50:31.661876+00:00"
+ },
+ {
+  "headline": "Our newest AI Quest: Mapping the human brain",
+  "tldr": "Google AI announces a new initiative to map the human brain using artificial intelligence.",
+  "key_points": [
+   "Launch of a new AI Quest project",
+   "Focus on mapping the human brain",
+   "Initiated by Google AI"
+  ],
+  "why_it_matters": "Understanding the brain could accelerate advances in neuroscience, AI modeling, and medical research.",
+  "category": "other",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI",
+   "neuroscience",
+   "brain mapping",
+   "research"
+  ],
+  "importance": 2,
+  "id": "be77c96c39b4ea3e",
+  "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+  "source": "Google AI",
+  "date": "Mon, 26 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-05T04:50:43.671940+00:00"
+ }
+]
