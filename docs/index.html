@@ -2,30 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>AI News Flashcards</title>
+  <meta name="description" content="Self-updating flashcards of the latest AI research, model releases and industry news.">
+  <meta name="theme-color" content="#f5f6fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AI Cards">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // apply saved theme before paint (no flash)
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
 </head>
 <body>
-  <header>
-    <h1>AI News Flashcards</h1>
-    <div class="controls">
-      <input id="search" type="search" placeholder="Search..." aria-label="Search cards">
-      <select id="category" aria-label="Category"><option value="">All categories</option></select>
-      <select id="importance" aria-label="Minimum importance">
-        <option value="1">All importance</option>
-        <option value="3">3+</option><option value="4">4+</option><option value="5">5 only</option>
-      </select>
-      <select id="review" aria-label="Review status">
-        <option value="">All cards</option>
-        <option value="todo">Not reviewed</option>
-        <option value="again">Review again</option>
-        <option value="got">Got it</option>
-      </select>
+  <header class="top">
+    <div class="wrap top-row">
+      <div class="brand">
+        <img src="icon.svg" alt="" width="34" height="34">
+        <div>
+          <h1>AI News Flashcards</h1>
+          <p id="updated" class="muted">Loading…</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="study" class="btn primary" type="button" title="Study one card at a time (S)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <span>Study</span>
+        </button>
+        <button id="theme" class="btn icon" type="button" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+      </div>
     </div>
-    <p id="count"></p>
+
+    <div class="wrap">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke-width="2"/><path d="m20 20-4-4" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="search" type="search" placeholder="Search headlines, companies, tags…  ( / )" aria-label="Search cards" autocomplete="off">
+      </label>
+
+      <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+
+      <div class="filters">
+        <div class="seg" role="group" aria-label="Time range" id="time">
+          <button type="button" data-v="all" class="on">All</button>
+          <button type="button" data-v="new">New</button>
+          <button type="button" data-v="today">Today</button>
+          <button type="button" data-v="week">This week</button>
+        </div>
+        <div class="selects">
+          <label class="sel"><span>Importance</span>
+            <select id="importance">
+              <option value="1">Any</option>
+              <option value="3">★3+</option>
+              <option value="4">★4+</option>
+              <option value="5">★5</option>
+            </select>
+          </label>
+          <label class="sel"><span>Status</span>
+            <select id="review">
+              <option value="">All cards</option>
+              <option value="todo">Not reviewed</option>
+              <option value="again">Review again</option>
+              <option value="got">Got it</option>
+            </select>
+          </label>
+          <label class="sel"><span>Sort</span>
+            <select id="sort">
+              <option value="top">Top first</option>
+              <option value="new">Newest first</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <p id="count" class="muted" aria-live="polite"></p>
+        <div class="progress" title="Cards you've marked “Got it”">
+          <div class="bar"><span id="bar"></span></div>
+          <span id="progress" class="muted"></span>
+        </div>
+      </div>
+    </div>
   </header>
-  <main id="grid"></main>
+
+  <main id="grid" class="wrap grid"></main>
+  <p class="wrap hint muted">Tip: click a card to flip it · press <kbd>S</kbd> for study mode · <kbd>/</kbd> to search</p>
+
+  <!-- Study mode -->
+  <div id="studyView" class="study" hidden role="dialog" aria-modal="true" aria-label="Study mode">
+    <div class="study-top">
+      <span id="studyPos" class="muted"></span>
+      <button id="studyClose" class="btn icon" type="button" aria-label="Close study mode (Esc)">✕</button>
+    </div>
+    <div id="studyStage" class="study-stage"></div>
+    <div class="study-nav">
+      <button id="prev" class="btn" type="button" aria-label="Previous card">← Prev</button>
+      <button id="again" class="btn warn" type="button">Review again <kbd>2</kbd></button>
+      <button id="got" class="btn good" type="button">Got it <kbd>1</kbd></button>
+      <button id="next" class="btn" type="button" aria-label="Next card">Next →</button>
+    </div>
+    <p class="muted study-help">Space / tap to flip · ← → to move · swipe on phone</p>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
