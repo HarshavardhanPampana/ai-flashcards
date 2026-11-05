@@ -18,7 +18,14 @@ Return ONLY a JSON object with keys:
 headline, tldr, key_points (3-5 short strings), why_it_matters,
 category (one of: model_release, paper, product, funding, acquisition,
 policy, hardware, open_source, other), companies (list), tags (list, max 4),
-importance (integer 1-5; 5 = major industry event, 1 = minor).
+importance (integer 1-5), judged against the whole AI industry, not just this source:
+  5 = landmark: a new flagship model generation from a top lab, a $1B+ deal, or a major law passed
+  4 = significant: a notable model or product launch from a major company, a big open-weight
+      release, $100M+ funding, an important policy step, or a widely relevant state-of-the-art result
+  3 = noteworthy: a solid research result, a useful new tool or feature, mid-size funding
+  2 = minor: an incremental paper, a small update, a niche tool, a discussion or opinion post
+  1 = barely AI news: customer stories, hiring, events, marketing
+  Use the full range; most items should be 2-4.
 Use only facts present in the input. Do not invent numbers.
 {title_only_note}
 SOURCE: {source}

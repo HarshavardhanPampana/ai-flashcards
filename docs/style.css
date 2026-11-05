@@ -360,3 +360,7 @@ body.studying { overflow: hidden; }
   .btn#pick { width: 38px; padding: 0; }
   .pick-stage { margin: 10px 0; }
 }
+
+/* "Show more" button under the grid */
+.more { grid-column: 1 / -1; display: flex; justify-content: center; padding: 6px 0 4px; }
+.more .btn { height: 44px; padding: 0 22px; }
