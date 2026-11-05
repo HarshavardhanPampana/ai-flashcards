@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI News Flashcards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI News Flashcards</h1>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search..." aria-label="Search cards">
+      <select id="category" aria-label="Category"><option value="">All categories</option></select>
+      <select id="importance" aria-label="Minimum importance">
+        <option value="1">All importance</option>
+        <option value="3">3+</option><option value="4">4+</option><option value="5">5 only</option>
+      </select>
+      <select id="review" aria-label="Review status">
+        <option value="">All cards</option>
+        <option value="todo">Not reviewed</option>
+        <option value="again">Review again</option>
+        <option value="got">Got it</option>
+      </select>
+    </div>
+    <p id="count"></p>
+  </header>
+  <main id="grid"></main>
+  <script src="app.js"></script>
+</body>
+</html>
