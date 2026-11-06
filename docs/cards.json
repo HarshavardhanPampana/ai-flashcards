@@ -1,5 +1,1065 @@
 [
  {
+  "headline": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
+  "tldr": "NVIDIA showcases how cities can use physical and agentic AI—like digital twins and vision agents—to turn massive sensor data into actionable insights for planning, maintenance, and public services.",
+  "key_points": [
+   "Physical AI creates digital twins for infrastructure planning.",
+   "Agentic AI provides vision and service agents for real‑time city operations.",
+   "Integrates data from cameras, sensors, and operational systems at scale.",
+   "Aims to help local governments turn raw data into actionable decisions."
+  ],
+  "why_it_matters": "Turning city‑wide sensor data into actionable intelligence can improve urban planning, reduce maintenance costs, and enhance public services, accelerating the adoption of AI‑driven smart city solutions.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AI",
+   "smart_cities",
+   "digital_twins",
+   "agentic_AI"
+  ],
+  "importance": 3,
+  "id": "928e7584e6cd5965",
+  "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+  "source": "NVIDIA",
+  "date": "Tue, 03 Nov 2026 07:00:12 +0000",
+  "added": "2026-11-06T19:37:25.678072+00:00"
+ },
+ {
+  "headline": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
+  "tldr": "NVIDIA explains how AI tools are helping semiconductor manufacturers model process changes, predict material interactions, and trace defects, speeding up fab operations amid rising chip demand and tighter margins.",
+  "key_points": [
+   "AI models simulate process changes to predict outcomes before costly silicon runs.",
+   "Machine learning identifies material interactions and root‑cause defect mapping.",
+   "Engineers can iterate faster, reducing cycle time and improving yield.",
+   "Rising demand for advanced chips makes AI‑driven fab optimization critical."
+  ],
+  "why_it_matters": "Accelerating fab decision‑making improves yield and reduces time‑to‑market for advanced chips, addressing supply pressures and cost challenges in the semiconductor industry.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "semiconductor",
+   "AI",
+   "fab",
+   "process_optimization"
+  ],
+  "importance": 3,
+  "id": "c90cd6cc0c02e350",
+  "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
+  "source": "NVIDIA",
+  "date": "Tue, 03 Nov 2026 16:00:45 +0000",
+  "added": "2026-11-06T19:37:13.324943+00:00"
+ },
+ {
+  "headline": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
+  "tldr": "NVIDIA senior engineer Chris Alexiuk advocates loudly for open‑source large language models, working to make them practical for developers.",
+  "key_points": [
+   "Alexiuk promotes open‑source AI and encourages public advocacy.",
+   "He focuses on turning open LLMs into usable tools for developers.",
+   "His work at NVIDIA bridges research and production‑ready open models.",
+   "Open models can lower entry barriers and accelerate AI adoption."
+  ],
+  "why_it_matters": "Making open LLMs practical expands access to advanced AI, fostering innovation, competition, and broader developer participation beyond proprietary ecosystems.",
+  "category": "open_source",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "open-source",
+   "LLM",
+   "AI accessibility",
+   "NVIDIA"
+  ],
+  "importance": 3,
+  "id": "9b11b10a55dd48c7",
+  "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
+  "source": "NVIDIA",
+  "date": "Thu, 05 Nov 2026 16:00:05 +0000",
+  "added": "2026-11-06T19:37:01.397848+00:00"
+ },
+ {
+  "headline": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+  "tldr": "Developers are using frontier AI models integrated with NVIDIA Omniverse libraries to automate asset assembly, physics setup, and rendering, speeding up the creation of simulation applications.",
+  "key_points": [
+   "AI agents assist in assembling assets and configuring physics within Omniverse.",
+   "Frontier AI models enable natural language or high-level instruction control of simulations.",
+   "The workflow reduces manual effort, allowing faster scenario exploration and design iteration.",
+   "Integration showcases NVIDIA's push to embed generative AI into its simulation platform."
+  ],
+  "why_it_matters": "Embedding advanced AI agents into Omniverse streamlines simulation development, making complex virtual testing more accessible and accelerating innovation in engineering, robotics, and digital twins.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "Omniverse",
+   "AI agents",
+   "simulation",
+   "frontier AI"
+  ],
+  "importance": 3,
+  "id": "baf7193e75c14529",
+  "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+  "source": "NVIDIA",
+  "date": "Thu, 05 Nov 2026 17:00:35 +0000",
+  "added": "2026-11-06T19:36:49.140252+00:00"
+ },
+ {
+  "headline": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
+  "tldr": "NVIDIA open‑sourced its Aerial wireless software, adding to a suite of tools like Sionna that let researchers simulate, train AI models, and test real‑world 6G wireless systems.",
+  "key_points": [
+   "Aerial wireless software released as open source a year ago",
+   "Part of a broader NVIDIA open‑source toolkit for 6G development",
+   "Enables simulation, AI training, and over‑the‑air experiments",
+   "Facilitates collaboration and reproducibility among researchers"
+  ],
+  "why_it_matters": "Open‑source tools lower barriers for academia and industry to prototype and validate 6G technologies, accelerating innovation and standardization of future wireless networks.",
+  "category": "open_source",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "6G",
+   "wireless",
+   "open_source",
+   "simulation"
+  ],
+  "importance": 3,
+  "id": "215687ca939d14a6",
+  "url": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/",
+  "source": "NVIDIA",
+  "date": "Fri, 06 Nov 2026 16:00:35 +0000",
+  "added": "2026-11-06T19:36:37.138000+00:00"
+ },
+ {
+  "headline": "Simulating student learning for better AI tutoring",
+  "tldr": "Microsoft Research introduces StudentSim, a system that simulates how students interact with AI tutors to evaluate and improve tutoring tools across subjects.",
+  "key_points": [
+   "StudentSim models student behavior for AI tutoring evaluation",
+   "Enables testing of tutoring tools before real learner deployment",
+   "Applicable to subjects such as chess, writing, and mathematics",
+   "Provides feedback loops to enhance tutor performance"
+  ],
+  "why_it_matters": "By simulating learner interactions, developers can identify and fix weaknesses in AI tutors early, leading to more effective educational tools and better learning outcomes.",
+  "category": "paper",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "AI tutoring",
+   "simulation",
+   "education",
+   "research"
+  ],
+  "importance": 3,
+  "id": "5d83dba89b9f02b7",
+  "url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+  "source": "Microsoft Research",
+  "date": "Mon, 12 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-06T19:36:25.305759+00:00"
+ },
+ {
+  "headline": "Proof-based general-purpose computing with Magnetar",
+  "tldr": "Microsoft Research introduces Magnetar, a system that enables zero‑knowledge proofs for general‑purpose code, offering speed improvements and quantum‑resistant security.",
+  "key_points": [
+   "Supports standard programming languages for zero‑knowledge proof generation",
+   "Delivers major speed gains over prior proof systems",
+   "Provides quantum‑resistant cryptographic security",
+   "Aims to make proof‑based verification mainstream"
+  ],
+  "why_it_matters": "Allows developers to verify computation results without re‑executing workloads or exposing data, enhancing privacy, security, and efficiency for cloud and edge applications.",
+  "category": "paper",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "zero-knowledge proofs",
+   "general-purpose computing",
+   "quantum-resistant",
+   "Magnetar"
+  ],
+  "importance": 3,
+  "id": "4069e5410c3e249e",
+  "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+  "source": "Microsoft Research",
+  "date": "Thu, 15 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-06T19:36:13.256790+00:00"
+ },
+ {
+  "headline": "Called to serve: Tech, research, and positive impact",
+  "tldr": "Microsoft Research Lab Director Chris White discusses how his team tackles real‑world problems such as wartime data analysis and tools to fight human trafficking.",
+  "key_points": [
+   "Focus on research with tangible societal benefits",
+   "Developed new methods for analyzing wartime data",
+   "Created tools aimed at combating human trafficking",
+   "Insights into motivations and influences behind the work"
+  ],
+  "why_it_matters": "Demonstrates how AI research can be directed toward pressing humanitarian challenges, showing the potential for technology to aid security and social justice efforts.",
+  "category": "other",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "research",
+   "social impact",
+   "data analysis",
+   "human trafficking"
+  ],
+  "importance": 2,
+  "id": "c84a57a97fd6c729",
+  "url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+  "source": "Microsoft Research",
+  "date": "Tue, 20 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-06T19:36:01.474697+00:00"
+ },
+ {
+  "headline": "Solving a 31-year-old grand challenge in mathematics – the KLS conjecture",
+  "tldr": "Microsoft Research has proved the long‑standing Kannan–Lovász–Simonovits (KLS) conjecture, removing a key theoretical barrier to understanding the efficiency of randomized algorithms in high‑dimensional spaces.",
+  "key_points": [
+   "The KLS conjecture, posed in 1995, concerned the difficulty of computation in high‑dimensional geometry.",
+   "New research provides a proof, resolving the 31‑year‑old open problem.",
+   "The result clarifies the performance limits of many randomized algorithms used across science and computing.",
+   "Implications span optimization, sampling, and machine‑learning theory."
+  ],
+  "why_it_matters": "Proving the KLS conjecture gives a solid foundation for analyzing and improving randomized algorithms, which are core to modern AI, data science, and scientific computing, potentially leading to more efficient methods and deeper theoretical insights.",
+  "category": "paper",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "KLS conjecture",
+   "high-dimensional geometry",
+   "randomized algorithms",
+   "theory"
+  ],
+  "importance": 4,
+  "id": "2ed826e28d2308dd",
+  "url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+  "source": "Microsoft Research",
+  "date": "Wed, 21 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-06T19:35:49.266430+00:00"
+ },
+ {
+  "headline": "Flint-interactive: A language for creating interactive data visualizations",
+  "tldr": "Flint-interactive provides a language that lets AI agents build interactive visualizations with clickable charts, filters, highlights, and exploratory capabilities.",
+  "key_points": [
+   "Enables AI agents to generate interactive charts",
+   "Supports clicking, filtering, and highlighting data",
+   "Allows exploration beyond the author’s original view",
+   "Introduced by Microsoft Research as a new visualization language"
+  ],
+  "why_it_matters": "Giving AI agents a dedicated language for interactive visualizations can streamline data analysis workflows, make insights more accessible, and expand the capabilities of AI-driven analytics tools.",
+  "category": "product",
+  "companies": [
+   "Microsoft Research"
+  ],
+  "tags": [
+   "visualization",
+   "AI agents",
+   "interactive",
+   "language"
+  ],
+  "importance": 3,
+  "id": "ef05d9c57c787739",
+  "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+  "source": "Microsoft Research",
+  "date": "Thu, 22 Oct 2026 16:00:00 +0000",
+  "added": "2026-11-06T19:35:37.162900+00:00"
+ },
+ {
+  "headline": "Microsoft Research Focus – Edition #97",
+  "tldr": "Microsoft Research shares recent advances, including challenges for coding agents, AI usage at work, and extended-range weather forecasting.",
+  "key_points": [
+   "Analysis of challenges facing AI coding assistants",
+   "Study of how employees interact with AI tools in the workplace",
+   "Progress on AI models for extended-range weather forecasting",
+   "Highlights of cutting‑edge research across Microsoft labs"
+  ],
+  "why_it_matters": "Understanding these research directions helps gauge Microsoft's influence on AI productivity tools, enterprise adoption, and scientific forecasting, shaping future AI capabilities and industry standards.",
+  "category": "other",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "AI research",
+   "coding agents",
+   "enterprise AI",
+   "weather forecasting"
+  ],
+  "importance": 2,
+  "id": "9e5c9d9f241b709e",
+  "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+  "source": "Microsoft Research",
+  "date": "Thu, 29 Oct 2026 19:19:16 +0000",
+  "added": "2026-11-06T19:35:25.005912+00:00"
+ },
+ {
+  "headline": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+  "tldr": "Microsoft outlines how it moves from synthetic test data to evaluating Copilot on real enterprise workloads while protecting sensitive information.",
+  "key_points": [
+   "Synthetic data is used to simulate complex enterprise environments for initial testing.",
+   "Real-world evaluations are conducted with strict privacy safeguards.",
+   "The approach aims to boost confidence in Copilot's performance for enterprise customers.",
+   "Insights guide future improvements and deployment strategies."
+  ],
+  "why_it_matters": "Ensuring reliable, privacy‑preserving evaluation of AI assistants like Copilot is crucial for enterprise adoption and trust.",
+  "category": "other",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "Copilot",
+   "enterprise",
+   "evaluation",
+   "synthetic data"
+  ],
+  "importance": 2,
+  "id": "fd4521a185997cbc",
+  "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+  "source": "Microsoft Research",
+  "date": "Fri, 30 Oct 2026 13:05:28 +0000",
+  "added": "2026-11-06T19:35:13.074218+00:00"
+ },
+ {
+  "headline": "Learn the rules: The hacker mindset",
+  "tldr": "Microsoft Research manager Mike Walker shares insights from his career in hacker culture, cybersecurity, and AI, emphasizing trust, teamwork, curiosity, and rule‑following for solving tough problems.",
+  "key_points": [
+   "Trust and teamwork are essential for effective problem solving.",
+   "Curiosity, judgment, and agility drive innovation in AI and security.",
+   "Understanding and respecting the underlying rules enables creative hacking.",
+   "Leadership benefits from a hacker‑mindset approach."
+  ],
+  "why_it_matters": "The article distills practical lessons from a seasoned technologist that can guide engineers, researchers, and leaders in building secure, innovative AI systems and fostering collaborative cultures.",
+  "category": "other",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "cybersecurity",
+   "AI",
+   "leadership",
+   "culture"
+  ],
+  "importance": 2,
+  "id": "7edcdb24a88ec718",
+  "url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+  "source": "Microsoft Research",
+  "date": "Tue, 03 Nov 2026 17:14:38 +0000",
+  "added": "2026-11-06T19:35:01.016686+00:00"
+ },
+ {
+  "headline": "Muse has a voice mode now",
+  "tldr": "Meta adds real‑time voice conversation capability to its Muse AI agent on iOS.",
+  "key_points": [
+   "Voice mode lets users talk to Muse in real time",
+   "Feature announced by CEO Mark Zuckerberg",
+   "Initially rolled out on the iOS app",
+   "Avatar displays while you converse"
+  ],
+  "why_it_matters": "Enables more natural, hands‑free interaction with Meta's AI assistant, expanding the utility of conversational agents and signaling Meta's push into voice‑first AI experiences.",
+  "category": "product",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "voice AI",
+   "conversation",
+   "Muse",
+   "iOS"
+  ],
+  "importance": 3,
+  "id": "c6134d61030c25d1",
+  "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+  "source": "The Verge AI",
+  "date": "2026-11-05T14:03:04-05:00",
+  "added": "2026-11-06T19:34:49.046922+00:00"
+ },
+ {
+  "headline": "Airbnb is working on an AI travel agent",
+  "tldr": "Airbnb will roll out an AI travel‑agent in the first half of 2027 to help users plan and book trips, announced in its Q3 2026 earnings letter.",
+  "key_points": [
+   "AI agent slated for launch H1 2027",
+   "Will assist with travel planning and booking, beyond simple tasks",
+   "Announced in Airbnb's Q3 2026 shareholder letter",
+   "Targets to streamline end‑to‑end travel experience"
+  ],
+  "why_it_matters": "An AI‑driven travel assistant could reshape how consumers discover and book trips, putting pressure on traditional travel platforms and setting a new standard for personalized travel services.",
+  "category": "product",
+  "companies": [
+   "Airbnb"
+  ],
+  "tags": [
+   "travel",
+   "AI_agent",
+   "booking"
+  ],
+  "importance": 3,
+  "id": "cc48f8093c5bb103",
+  "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
+  "source": "The Verge AI",
+  "date": "2026-11-05T19:06:12-05:00",
+  "added": "2026-11-06T19:34:37.411250+00:00"
+ },
+ {
+  "headline": "Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks",
+  "tldr": "The paper introduces Multimodal-SEA, a benchmark of 608 tasks simulating multimodal social engineering attacks on personal AI agents, and shows that current multimodal models are vulnerable, with attack success rates up to 34.5%.",
+  "key_points": [
+   "608 expert-designed tasks covering 14 domains and 152 attack scenarios",
+   "Benchmarks multimodal content (text, images, etc.) in both Chinese and English contexts",
+   "Evaluated seven popular multimodal models, all showing significant vulnerability",
+   "Attack success rises from 19.9% to 29.2% when multimodal content is added",
+   "Stronger safety instructions lower success rates but do not improve detection of deceptive content"
+  ],
+  "why_it_matters": "As personal AI agents become more integrated into daily workflows, understanding and mitigating multimodal social engineering threats is critical to prevent fraud, data leakage, and unauthorized actions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "security",
+   "multimodal",
+   "social_engineering",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "27ebc284a758f6de",
+  "url": "https://arxiv.org/abs/2611.08281v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:46:31Z",
+  "added": "2026-11-06T19:34:25.420507+00:00"
+ },
+ {
+  "headline": "AutoCompress: Automated Hardware-Guided Model Compression",
+  "tldr": "AutoCompress introduces a hardware-aware pruning framework that directly optimizes LLMs for latency, throughput, and memory constraints, outperforming prior methods on multiple GPUs and compressing Nemotron 3.5 Super by 38% while retaining 95% performance.",
+  "key_points": [
+   "Integrates hardware latency, throughput, and memory constraints into differentiable architecture search.",
+   "Produces heterogeneous, per-layer compressed models guided by serving-engine cost models.",
+   "Improves accuracy over Minitron by up to 6.57 points on RTX 5070 and compresses Nemotron 3.5 Super from 120B to 74B parameters.",
+   "Validated on long-context coding, datacenter batch serving, and latency-sensitive in-game interaction."
+  ],
+  "why_it_matters": "Enables practical deployment of large language models on diverse hardware by ensuring performance constraints are met without sacrificing accuracy, reducing compute costs and expanding real-time AI applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "pruning",
+   "model compression",
+   "hardware-aware",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "a7ddc93f98013410",
+  "url": "https://arxiv.org/abs/2611.08290v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:53:48Z",
+  "added": "2026-11-06T19:34:13.209087+00:00"
+ },
+ {
+  "headline": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
+  "tldr": "StrataFlux recovers accuracy lost to low-bit quantization by streaming higher-precision data from host RAM/SSD, keeping memory and speed benefits.",
+  "key_points": [
+   "2‑bit Llama‑3.1‑8B weights improve perplexity from 9.46 to 8.40 with 95.4% throughput.",
+   "2‑bit weights + KV raise Qwen3‑8B accuracy from 11% to 47.1% without extra GPU memory.",
+   "Selective precision streaming overlaps data transfer with computation, halving GPU memory use vs. 4‑bit AWQ.",
+   "Works on dedicated GPUs and unified‑memory platforms, leveraging host RAM/SSD for extra precision."
+  ],
+  "why_it_matters": "Enables higher accuracy for ultra‑low‑bit LLM inference without extra GPU memory, making large models more accessible on commodity hardware.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantization",
+   "LLM inference",
+   "memory hierarchy",
+   "performance"
+  ],
+  "importance": 3,
+  "id": "4cdff62529780d9e",
+  "url": "https://arxiv.org/abs/2611.08363v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:42:06Z",
+  "added": "2026-11-06T19:34:01.057821+00:00"
+ },
+ {
+  "headline": "Advice on transitioning from industry to academia",
+  "tldr": "A researcher with a PhD in LLM efficiency and RL asks how to build an academic profile for tenure‑track positions at top US schools after working at a FAANG company.",
+  "key_points": [
+   "PhD from a mid‑tier school with papers at top ML/NLP conferences",
+   "Research focus on LLM efficiency, meta‑learning, and bandits, outside advisor's expertise",
+   "Lacks grant‑writing and funding experience",
+   "Currently employed at a FAANG firm but wants to return to academia",
+   "Seeks guidance on profile building and feasibility of tenure‑track at top 150 US schools"
+  ],
+  "why_it_matters": "Understanding the challenges of moving from industry to academia helps institutions and individuals address talent flow, mentorship needs, and the development of diverse research programs in AI.",
+  "category": "other",
+  "companies": [
+   "FAANG"
+  ],
+  "tags": [
+   "career",
+   "academia",
+   "AI research",
+   "LLM efficiency"
+  ],
+  "importance": 2,
+  "id": "be817dcf184ddfa1",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xol3vf/industry_to_academia_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-05T15:11:22+00:00",
+  "added": "2026-11-06T19:33:49.410497+00:00"
+ },
+ {
+  "headline": "DialFork: a benchmark for procedural hallucination in conversational agents",
+  "tldr": "Idiap Research Institute and Logitech released DialFork, the first benchmark measuring procedural hallucination—when LLM agents deviate from prescribed conversational steps despite correct tool use.",
+  "key_points": [
+   "Defines procedural hallucination as a third axis of LLM failure alongside factual accuracy and tool use.",
+   "Provides 36k+ simulated dialogues across 24 tasks and 12 domains with annotated drift points.",
+   "Three evaluation tasks: detecting drift turn, measuring drift distance in dialogues, and computing procedural distance between sets.",
+   "Includes human and LLM-judged annotations to calibrate drift detection."
+  ],
+  "why_it_matters": "Procedural hallucination can cause agents to abandon intended workflows, leading to confusing or unsafe interactions; the benchmark enables systematic detection and mitigation of this overlooked failure mode.",
+  "category": "paper",
+  "companies": [
+   "Idiap Research Institute",
+   "Logitech"
+  ],
+  "tags": [
+   "benchmark",
+   "procedural hallucination",
+   "conversational agents",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "0264040d1053a583",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xofjrn/dialfork_a_benchmark_for_procedural_hallucination/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-05T10:44:15+00:00",
+  "added": "2026-11-06T19:33:37.400138+00:00"
+ },
+ {
+  "headline": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system",
+  "tldr": "Box integrates Nvidia’s Nemotron model into a retrieval system that answers queries four times faster, with 20% fewer errors and 90% fewer tokens.",
+  "key_points": [
+   "Box adopts Nvidia's Nemotron for content retrieval",
+   "Agent-first architecture improves response speed 4x",
+   "Reduces errors by 20% and token usage by 90%"
+  ],
+  "why_it_matters": "The integration showcases how enterprise software can leverage advanced LLMs to deliver faster, more accurate, and cost‑effective search experiences, highlighting the growing importance of agent‑first AI in productivity tools.",
+  "category": "product",
+  "companies": [
+   "Box",
+   "Nvidia"
+  ],
+  "tags": [
+   "content-retrieval",
+   "agent-first",
+   "Nemotron",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "d51f62aa0d3ca8ee",
+  "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-06T19:33:25.154010+00:00"
+ },
+ {
+  "headline": "Claude can now analyze your spending with its new Personal Finance tool",
+  "tldr": "Anthropic adds a Personal Finance feature to Claude, letting users link bank and card accounts via Plaid and query their finances.",
+  "key_points": [
+   "Claude now supports Personal Finance analysis",
+   "Users can connect bank and card accounts through Plaid",
+   "Allows natural language queries about spending and budgets"
+  ],
+  "why_it_matters": "Integrating financial data into a conversational AI expands Claude's utility beyond chat, offering users a convenient way to understand and manage their money without separate budgeting apps.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "personal finance",
+   "AI assistant",
+   "Plaid",
+   "banking"
+  ],
+  "importance": 2,
+  "id": "b0e121b3a461c115",
+  "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 18:00:00 +0000",
+  "added": "2026-11-06T19:33:12.961336+00:00"
+ },
+ {
+  "headline": "OpenAI released a new cybersecurity model. Is that enough?",
+  "tldr": "OpenAI launched a cybersecurity-focused AI model amid growing scrutiny of AI labs' role in protecting digital infrastructure.",
+  "key_points": [
+   "OpenAI unveils a new cybersecurity model",
+   "AI labs face increased scrutiny over digital safety",
+   "Debate on whether the model is sufficient protection"
+  ],
+  "why_it_matters": "The release highlights the AI industry's responsibility to safeguard critical systems and raises questions about the effectiveness of AI-driven security solutions.",
+  "category": "model_release",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "cybersecurity",
+   "AI safety",
+   "digital infrastructure"
+  ],
+  "importance": 2,
+  "id": "8f7798ef97e41335",
+  "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 19:06:12 +0000",
+  "added": "2026-11-06T19:33:01.055874+00:00"
+ },
+ {
+  "headline": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+  "tldr": "Airbnb will introduce an AI-powered travel assistant to help users plan trips, compare options, manage bookings, and get on‑stay support by mid‑2027.",
+  "key_points": [
+   "AI agent to assist travelers from planning to post‑stay support",
+   "Features include itinerary planning, option comparison, and booking management",
+   "Target launch timeframe: first half of 2027"
+  ],
+  "why_it_matters": "Integrating AI into the travel booking experience could streamline trip planning, improve personalization, and set a new standard for hospitality platforms.",
+  "category": "product",
+  "companies": [
+   "Airbnb"
+  ],
+  "tags": [
+   "travel",
+   "AI agent",
+   "booking",
+   "hospitality"
+  ],
+  "importance": 2,
+  "id": "01af2f668adeb82b",
+  "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 22:40:55 +0000",
+  "added": "2026-11-06T19:32:48.991226+00:00"
+ },
+ {
+  "headline": "Underdog shows off a 32MB speech model in new demo",
+  "tldr": "Underdog demoed a tiny 32 MB model that can generate speech and music.",
+  "key_points": [
+   "Model size is only 32 MB",
+   "Generates both speech and music",
+   "Demonstrated in a new demo",
+   "Highlights efficiency of small models"
+  ],
+  "why_it_matters": "Shows that high‑quality audio generation can be achieved with extremely compact models, enabling deployment on low‑resource devices and reducing compute costs.",
+  "category": "model_release",
+  "companies": [
+   "Underdog"
+  ],
+  "tags": [
+   "speech",
+   "music",
+   "small model",
+   "demo"
+  ],
+  "importance": 2,
+  "id": "fbf575ba8ccde9fe",
+  "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 13:02:16 +0000",
+  "added": "2026-11-06T19:32:36.970516+00:00"
+ },
+ {
+  "headline": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+  "tldr": "Meta launches Spaces, a fresh interface for interacting with Muse AI assistants.",
+  "key_points": [
+   "Spaces is a new collaboration feature",
+   "Designed for Muse agents",
+   "Offers a different interaction mode"
+  ],
+  "why_it_matters": "Provides users with an enhanced way to work with Meta's AI assistants, potentially increasing engagement and utility of Muse agents.",
+  "category": "product",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "collaboration",
+   "AI assistants",
+   "Muse",
+   "Meta"
+  ],
+  "importance": 2,
+  "id": "46e88a02e03424f2",
+  "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 18:44:20 +0000",
+  "added": "2026-11-06T19:32:24.928669+00:00"
+ },
+ {
+  "headline": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+  "tldr": "OpenAI teams up with security firm Hacktron to audit its systems, test third‑party integrations, and boost defenses for frontier AI.",
+  "key_points": [
+   "Collaboration with Hacktron for vulnerability discovery",
+   "Testing of connections to third‑party services",
+   "Strengthening defenses around frontier AI models"
+  ],
+  "why_it_matters": "Proactive security testing helps prevent breaches and ensures safe deployment of advanced AI technologies, protecting users and maintaining trust.",
+  "category": "other",
+  "companies": [
+   "OpenAI",
+   "Hacktron"
+  ],
+  "tags": [
+   "security",
+   "vulnerability",
+   "partnership",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "bc8f9eac19663ff6",
+  "url": "https://openai.com/index/partnering-with-hacktron",
+  "source": "OpenAI",
+  "date": "Fri, 06 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-06T19:32:14.673632+00:00"
+ },
+ {
+  "headline": "OpenAI Introduces BioBasicsBench: 100-Task Benchmark for AI Agents in Wet‑Lab Science",
+  "tldr": "OpenAI releases BioBasicsBench, a benchmark of 100 tasks that evaluates how AI agents interpret raw experimental data and perform everyday wet‑lab procedures.",
+  "key_points": [
+   "100 diverse wet‑lab science tasks",
+   "Measures AI agents' ability to read raw data",
+   "Focuses on everyday experimental workflows",
+   "Provides a standardized evaluation suite"
+  ],
+  "why_it_matters": "A dedicated benchmark for wet‑lab science helps gauge AI readiness for real‑world laboratory assistance, guiding future model improvements and fostering trust in AI‑driven scientific research.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "benchmark",
+   "wet-lab",
+   "AI agents",
+   "bioinformatics"
+  ],
+  "importance": 2,
+  "id": "cfd4354afa14004f",
+  "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+  "source": "OpenAI",
+  "date": "Fri, 06 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-06T19:32:01.334830+00:00"
+ },
+ {
+  "headline": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
+  "tldr": "Rune is an open‑source, GPU‑accelerated UI toolkit written in Rust that works across desktop OSes and the web, with headless rendering for testing.",
+  "key_points": [
+   "Cross‑platform UI library (macOS, Windows, Linux, web) built in Rust",
+   "GPU‑rendered with its own renderer, text layout, and spring‑based layout system",
+   "Supports headless mode to render PNGs and inspect element trees programmatically",
+   "Pre‑release, MIT‑licensed, and does not accept external pull requests"
+  ],
+  "why_it_matters": "Provides developers a high‑performance, Rust‑native alternative to existing UI frameworks, enabling fast, GPU‑driven interfaces and automated testing via headless rendering.",
+  "category": "open_source",
+  "companies": [
+   "Anomaly"
+  ],
+  "tags": [
+   "rust",
+   "ui",
+   "gpu",
+   "cross_platform"
+  ],
+  "importance": 2,
+  "id": "8e64409f361732f4",
+  "url": "https://github.com/anomalyco/rune",
+  "source": "Hacker News",
+  "date": "2026-11-06T16:31:32Z",
+  "added": "2026-11-06T19:31:49.241984+00:00"
+ },
+ {
+  "headline": "Blender's UI and Runtime: Much Faster Than GPUI",
+  "tldr": "BUI is a decoupled, GPU‑accelerated UI library derived from Blender’s own interface, offering bindings for Python, Rust, JavaScript, C/C++ and Dear ImGui with high performance and low memory use.",
+  "key_points": [
+   "Standalone UI library built on Blender's widget code and interaction rules",
+   "Supports multiple languages and frameworks (Python, Rust, JS/React, C, C++)",
+   "Runs on CPU or GPU, redraws only changed elements, and is battery‑efficient",
+   "Open source documentation and Discord community for developers"
+  ],
+  "why_it_matters": "Provides developers with a fast, efficient UI toolkit that brings Blender’s renowned responsiveness to any application, lowering the barrier to building high‑performance interfaces across languages.",
+  "category": "product",
+  "companies": [
+   "Blender"
+  ],
+  "tags": [
+   "UI",
+   "GPU",
+   "multi-language",
+   "open_source"
+  ],
+  "importance": 2,
+  "id": "3a41e347243261e3",
+  "url": "https://github.com/ppmpreetham/BUI",
+  "source": "Hacker News",
+  "date": "2026-11-06T07:40:35Z",
+  "added": "2026-11-06T19:31:37.417550+00:00"
+ },
+ {
+  "headline": "EDGAR: Efficient Diffusion-Driven Gaussian Avatar Refinement via Synthetic Failure",
+  "tldr": "EDGAR introduces a conditional diffusion framework that refines Gaussian head avatars, removing artifacts while preserving identity, and uses a Mixture-of-Experts model trained on a hybrid real‑synthetic dataset.",
+  "key_points": [
+   "Conditional diffusion model corrects blurring, stretching, and temporal instability in Gaussian avatars.",
+   "Trained on EDGAR-SET, a hybrid triplet dataset of real and synthetic failure cases.",
+   "Mixture‑of‑Experts architecture handles diverse degradation types and severity levels.",
+   "Refined multi‑view renderings serve as pseudo‑targets to improve the underlying Gaussian avatar without per‑frame processing.",
+   "Shows perceptual and reconstruction improvements across multiple avatar reconstruction methods."
+  ],
+  "why_it_matters": "Improving the visual fidelity and stability of Gaussian avatars enables more realistic and reliable virtual humans for AR/VR, gaming, and telepresence, advancing the practical deployment of efficient avatar technologies.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "gaussian_splatting",
+   "diffusion",
+   "avatar",
+   "graphics"
+  ],
+  "importance": 3,
+  "id": "24fa94964eda5559",
+  "url": "https://huggingface.co/papers/2611.07909",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-06T19:31:25.265216+00:00"
+ },
+ {
+  "headline": "Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization",
+  "tldr": "The paper introduces KernelSeek, a question-driven LLM agent that improves CUDA kernels without operator-specific knowledge, outperforming prior autonomous agents on FlashAttention benchmarks.",
+  "key_points": [
+   "KernelSeek uses short, timely questions to guide the agent rather than feeding it more data.",
+   "Achieves 1.13x speedup over FlashAttention-3 and up to 1.46x over FlashAttention-4 on Hopper and Blackwell GPUs.",
+   "Outperforms a tool‑rich autonomous baseline that plateaued at 0.50x speedup after 133 steps.",
+   "Released kernels, harness, question bank, and full execution traces for reproducibility.",
+   "Demonstrates that directed questioning can replace extensive tool‑rich pipelines in kernel optimization."
+  ],
+  "why_it_matters": "Shows a new, more efficient paradigm for using LLM agents in low‑level performance engineering, reducing compute cost and improving scalability of kernel optimization, which can accelerate AI model inference.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "kernel_optimization",
+   "LLM_agents",
+   "CUDA",
+   "FlashAttention"
+  ],
+  "importance": 3,
+  "id": "78931b98c3fc9b50",
+  "url": "https://huggingface.co/papers/2611.03517",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-06T19:31:13.256130+00:00"
+ },
+ {
+  "headline": "Why Pay for Long Reasoning When Rewrite Do Trick? Causal Effects of Reasoning History Compaction on Future Generation and Agent Cost",
+  "tldr": "Compacting earlier reasoning traces into concise state records can shorten future reasoning steps and cut token costs for open-weight language models without retraining.",
+  "key_points": [
+   "Long reasoning improves problem solving but is token‑expensive.",
+   "Rewriting prior reasoning into compact state records reduces verbosity in subsequent generations.",
+   "Experiments show shorter future reasoning and lower spending in software‑agent tasks, with quality depending on model and compressor.",
+   "The approach works across multiple open-weight models without additional training."
+  ],
+  "why_it_matters": "Token efficiency directly lowers inference costs for large language models, making advanced reasoning more affordable for developers and enabling broader deployment of AI agents.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reasoning",
+   "efficiency",
+   "language models",
+   "token cost"
+  ],
+  "importance": 3,
+  "id": "a71ad05a17187e1a",
+  "url": "https://huggingface.co/papers/2611.03852",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-06T19:31:01.194006+00:00"
+ },
+ {
+  "headline": "VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents",
+  "tldr": "A new benchmark suite of 204 human‑written visual search tasks reveals that current multimodal agents solve only about a quarter of long‑horizon visual search problems, highlighting gaps in visual context management.",
+  "key_points": [
+   "Introduces VisSearch-Bench with 204 tasks across 7 domains and 25 subdomains.",
+   "Measures both overall task accuracy and a Process Score for intermediate steps.",
+   "Best of 16 evaluated multimodal models solves just 26.47% of tasks.",
+   "Emphasizes the difficulty of linking visual evidence with textual search results."
+  ],
+  "why_it_matters": "The benchmark exposes critical weaknesses in how multimodal agents integrate visual information over multiple search steps, guiding future research toward better visual context management and more reliable AI assistants.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "visual search",
+   "benchmark",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "74ab6ee9c39359c1",
+  "url": "https://huggingface.co/papers/2611.04894",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-06T19:30:49.300577+00:00"
+ },
+ {
+  "headline": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+  "tldr": "Introduces PLatour, an open‑source framework for PACT that links frozen large and small language models via trainable linear bridges, achieving strong generation performance while exposing limits of true cross‑model communication.",
+  "key_points": [
+   "PACT combines large model prompts with small model generation to cut inference cost.",
+   "PLatour uses zero‑initialized linear bridges trained with task rewards and supports hybrid‑attention architectures.",
+   "Outperforms open‑source baselines on generation, math, and coding benchmarks using a smaller sender model.",
+   "Controlled studies reveal gains can stem from uninformative signals or receiver‑only training.",
+   "PACT-Check metric proposed to measure genuine communication benefit."
+  ],
+  "why_it_matters": "Provides a practical, parameter‑efficient way to leverage powerful models without full inference cost, and offers tools to rigorously assess whether cross‑model communication truly adds value—crucial for scalable AI deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "prefill-to-autoregressive",
+   "model collaboration",
+   "efficient inference",
+   "open-source"
+  ],
+  "importance": 3,
+  "id": "fd76263fb26ed374",
+  "url": "https://huggingface.co/papers/2611.06976",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T08:33:47.000Z",
+  "added": "2026-11-06T19:30:37.214256+00:00"
+ },
+ {
+  "headline": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+  "tldr": "TailSteer is a final-stage training framework that adds preservation corrections near the end of the diffusion trajectory, dramatically reducing visual drift in multi‑turn image editing while keeping base‑model quality.",
+  "key_points": [
+   "Addresses cumulative visual drift in repeated image edits",
+   "Applies corrections only at the trajectory tail to preserve early denoising dynamics",
+   "Learns from on‑policy rollouts without needing curated edit pairs",
+   "Shows strong drift reduction across FLUX, SenseNova, and Qwen models",
+   "Maintains performance on standard text‑to‑image and single‑turn editing benchmarks"
+  ],
+  "why_it_matters": "Multi‑turn image editing is essential for interactive AI art tools, but drift degrades output quality over successive edits. TailSteer enables stable, long‑horizon editing with existing foundation models, expanding practical applications without retraining from scratch.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multi-turn editing",
+   "diffusion",
+   "drift mitigation",
+   "model robustness"
+  ],
+  "importance": 3,
+  "id": "0bc660c4267421b7",
+  "url": "https://huggingface.co/papers/2611.06741",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-06T19:30:25.457131+00:00"
+ },
+ {
+  "headline": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+  "tldr": "Introduces TB-MathModel, a new benchmark that provides agentic, verifiable, terminal-style evaluation of full mathematical modeling problems using real contest data.",
+  "key_points": [
+   "Covers 18 real CUMCM/MCM problems (2023‑2025) with full statements and attachments in a containerized terminal",
+   "Scoring uses direction-aware one-sided scoring and two-layer feasibility verification via Lean 4 invariants",
+   "Multi‑reference evaluation against panels of outstanding papers; best multimodal entry achieves 64.58% O‑Eval",
+   "Open‑source implementation available on GitHub"
+  ],
+  "why_it_matters": "Provides the first reproducible, machine‑checkable metric for long‑horizon mathematical modeling competence, enabling fair comparison of AI agents on complex, real‑world problem solving.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "mathematical_modeling",
+   "evaluation",
+   "open_source"
+  ],
+  "importance": 3,
+  "id": "6d0b2e187b198916",
+  "url": "https://huggingface.co/papers/2611.08237",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T11:18:35.000Z",
+  "added": "2026-11-06T19:30:13.301692+00:00"
+ },
+ {
+  "headline": "EvoMemState: Evolving Memory State for Personal Agents",
+  "tldr": "Introduces a state-centric memory framework for LLM agents that adds relational and reasoning states to improve long‑term personalized assistance.",
+  "key_points": [
+   "Adds Relational States to capture validity and relationships among persistent facts.",
+   "Uses reinforcement‑learning policy to generate request‑specific Reasoning State.",
+   "Combines facts, relational, and reasoning states for better retrieval and response accuracy.",
+   "Shows consistent gains on long‑term dialogue and memory‑use benchmarks."
+  ],
+  "why_it_matters": "Enables personal AI agents to maintain coherent, context‑aware memories over time, improving the quality of continuous, personalized assistance.",
+  "category": "paper",
+  "companies": [
+   "XMU Deep Learning Institute"
+  ],
+  "tags": [
+   "memory",
+   "personal agents",
+   "reinforcement learning",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "433e27d52748d6a2",
+  "url": "https://huggingface.co/papers/2611.03743",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-06T19:30:01.055850+00:00"
+ },
+ {
+  "headline": "SLA: Scaling Spatial-Language-Action Model via Continual Pre-training",
+  "tldr": "SLA introduces a spatial-language-action model that continuously pre-trains on diverse robot datasets, aligning visual embeddings with 3D spatial representations while preserving the original VLA inference architecture.",
+  "key_points": [
+   "Jointly optimizes action prediction and spatial alignment using a frozen 3D perception teacher.",
+   "Aggregates visual embeddings from multiple VLA layers via feature-dependent gates for heterogeneous data.",
+   "Leverages partial depth and calibration data alongside RGB, using probabilistic state dropout to avoid overfitting.",
+   "All auxiliary components are training-only, enabling reuse of existing VLA weights at inference."
+  ],
+  "why_it_matters": "Enabling transferable spatial understanding in robot foundations can improve manipulation reliability across varied embodiments and tasks, reducing the need for task‑specific spatial supervision.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robotics",
+   "spatial",
+   "continual_learning",
+   "vision-language-action"
+  ],
+  "importance": 3,
+  "id": "e7b124c3848d0c94",
+  "url": "https://huggingface.co/papers/2611.08373",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-06T19:29:49.187672+00:00"
+ },
+ {
+  "headline": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+  "tldr": "DPDM introduces a frozen conditional predictor paired with a language model encoder to let agents learn from deployment evidence without updating model weights, boosting accuracy across diverse decision‑making benchmarks.",
+  "key_points": [
+   "Uses a frozen LimiX-2 predictor and Qwen3.5-27B as semantic encoder.",
+   "Improves mean accuracy from 78.80% to 84.92% on 50 benchmarks.",
+   "Achieves large gains on ToolPRMBench (34.26% and 28.87% absolute).",
+   "Allows experience‑based inference without fine‑tuning either model."
+  ],
+  "why_it_matters": "Shows that pretrained conditional predictors can be shared across tasks, enabling agents to continuously improve decisions from real‑world evidence while keeping core models static, a step toward more adaptable and efficient AI systems.",
+  "category": "paper",
+  "companies": [
+   "Qwen",
+   "LimiX"
+  ],
+  "tags": [
+   "decision-making",
+   "conditional prediction",
+   "agents",
+   "benchmark performance"
+  ],
+  "importance": 3,
+  "id": "2f0e9ff8493ffaf4",
+  "url": "https://huggingface.co/papers/2611.02075",
+  "source": "HF Daily Papers",
+  "date": "2026-10-31T20:00:00.000Z",
+  "added": "2026-11-06T19:29:37.646353+00:00"
+ },
+ {
   "headline": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
   "tldr": "Palo Alto Networks is negotiating a $500 million acquisition of AI security startup Clutch.",
   "key_points": [
