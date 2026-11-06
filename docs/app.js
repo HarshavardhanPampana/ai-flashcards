@@ -220,13 +220,18 @@ $("grid").addEventListener("click", (e) => {
     if (state.review) setTimeout(() => render(true), 250);   // card may no longer match the status filter
     return;
   }
-  card.classList.toggle("flipped");
+  flipOnly(card);
 });
 $("grid").addEventListener("keydown", (e) => {
   if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("card")) {
-    e.preventDefault(); e.target.classList.toggle("flipped");
+    e.preventDefault(); flipOnly(e.target);
   }
 });
+// Only one card is flipped at a time: flipping a card turns any other flipped card back to its front
+function flipOnly(card) {
+  $("grid").querySelectorAll(".card.flipped").forEach((c) => { if (c !== card) c.classList.remove("flipped"); });
+  card.classList.toggle("flipped");
+}
 
 // ---------- events: controls ----------
 $("chips").addEventListener("click", (e) => {
