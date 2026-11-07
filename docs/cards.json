@@ -1,5 +1,1062 @@
 [
  {
+  "headline": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
+  "tldr": "Adding label-wording augmentation to a 307M multilingual cross‑encoder improves accuracy on ordinary and borrowed words but not on abbreviations or opaque codes.",
+  "key_points": [
+   "Augmented release consistently outperforms the baseline on vocabularies of ordinary, borrowed, and slang words (up to +0.24 accuracy).",
+   "No measurable gain on abbreviations or opaque codes; performance stays at or below chance.",
+   "Risk‑coverage improves in most cases, but confidence errors increase for jargon and slang with many candidates.",
+   "Four evaluation hazards identified when comparing model releases.",
+   "Two unseen datasets showed divergent accuracy changes (-8.4 and +5.6 points)."
+  ],
+  "why_it_matters": "Understanding how label wording affects typed‑decision models helps developers design more robust multilingual systems, especially when label vocabularies cannot be controlled at inference time.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "label_augmentation",
+   "multilingual",
+   "cross_encoder",
+   "evaluation"
+  ],
+  "importance": 2,
+  "id": "6c96bd0950d1ceae",
+  "url": "https://arxiv.org/abs/2611.08439v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:31:24Z",
+  "added": "2026-11-07T06:16:22.943644+00:00"
+ },
+ {
+  "headline": "Ant Ling introduces Ling-3.2-flash: 560B/25B native multimodal MoE with 1M context",
+  "tldr": "Ant Ling released Ling-3.2-flash, a multimodal mixture-of-experts model with 560 B total parameters, 25 B active parameters, and a 1 M‑token context window, supporting text, image, and video inputs.",
+  "key_points": [
+   "560 B total parameters, 25 B active per inference",
+   "1 M‑token context window, the longest publicly noted context",
+   "Native multimodal support for text, image, and video",
+   "OpenAI‑ and Anthropic‑compatible APIs, plus PDF‑to‑code and 3D reconstruction demos"
+  ],
+  "why_it_matters": "The massive context length and multimodal MoE architecture push the limits of what single‑model APIs can handle, enabling new applications like long‑form document analysis, video understanding, and complex multi‑agent workflows, and set a new benchmark for open‑compatible large models.",
+  "category": "model_release",
+  "companies": [
+   "Ant Ling"
+  ],
+  "tags": [
+   "multimodal",
+   "MoE",
+   "large‑language‑model",
+   "long‑context"
+  ],
+  "importance": 4,
+  "id": "233670713f384464",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpye7g/ant_ling_introduces_ling32flash_560b25b_native/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T05:21:18+00:00",
+  "added": "2026-11-07T06:16:10.938918+00:00"
+ },
+ {
+  "headline": "Higgs Realtime Duplex: 45B MoE full‑duplex model that listens, watches, talks, thinks, calls tools and delegates in real time",
+  "tldr": "Boson AI released a 45‑billion‑parameter mixture‑of‑experts model that processes audio, video, and text simultaneously, enabling continuous conversation, background tool use, and zero‑shot voice/face customization.",
+  "key_points": [
+   "Full‑duplex streaming of audio, video, and text in 160 ms chunks (~2.6K tokens/min)",
+   "Background thinking and tool calls run concurrently, with delegation to larger backend model",
+   "Zero‑shot voice and face generation from a short reference clip and image, no fine‑tuning",
+   "Trained on ~2 trillion multimodal tokens using Boson AI’s H100 Megatron cluster"
+  ],
+  "why_it_matters": "Real‑time multimodal interaction removes the turn‑based bottleneck of most conversational agents, allowing more natural dialogue, faster tool integration, and lower latency for applications like virtual assistants and interactive agents.",
+  "category": "model_release",
+  "companies": [
+   "Boson AI"
+  ],
+  "tags": [
+   "multimodal",
+   "real-time",
+   "duplex",
+   "tool-use"
+  ],
+  "importance": 4,
+  "id": "2e1a9d360f4f9d6b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpn5pv/higgs_realtime_duplex_a_45b_moe_fullduplex_model/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T20:23:53+00:00",
+  "added": "2026-11-07T06:15:59.102930+00:00"
+ },
+ {
+  "headline": "OpenAI president Greg Brockman says company could be IPO ready in 2027",
+  "tldr": "OpenAI's president says the firm may be prepared for an initial public offering by 2027 as it expands its enterprise business.",
+  "key_points": [
+   "Greg Brockman announced potential IPO readiness for 2027.",
+   "OpenAI is gaining traction in the enterprise market.",
+   "Competitor Anthropic has already made significant enterprise inroads.",
+   "The statement was made at a Wall Street Journal tech conference."
+  ],
+  "why_it_matters": "An IPO would give OpenAI broader access to capital, increase market transparency, and could reshape the competitive dynamics of the AI industry, especially against rivals like Anthropic.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "IPO",
+   "enterprise",
+   "competition",
+   "2027"
+  ],
+  "importance": 3,
+  "id": "bf7e9a38adde5887",
+  "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 18:02:27 +0000",
+  "added": "2026-11-07T06:15:46.866526+00:00"
+ },
+ {
+  "headline": "Meta warns that election backlash against data centers could make AI expansion harder",
+  "tldr": "Meta says political opposition to data centers may hinder future AI investments.",
+  "key_points": [
+   "Communities are pushing back against large data center projects.",
+   "Meta warns this could limit AI infrastructure growth.",
+   "Political backlash may affect AI investment decisions."
+  ],
+  "why_it_matters": "AI development relies on massive compute resources; resistance to data center construction could slow progress and increase costs for companies like Meta.",
+  "category": "policy",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "data centers",
+   "AI infrastructure",
+   "political opposition"
+  ],
+  "importance": 2,
+  "id": "ea881b03ae961dac",
+  "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 05 Nov 2026 19:12:39 +0000",
+  "added": "2026-11-07T06:15:34.672900+00:00"
+ },
+ {
+  "headline": "Physicl raises $10M to make the digital world real enough for robots",
+  "tldr": "Physicl secured $10 million to develop a pipeline that bridges the sim‑to‑real gap for robotics, leveraging technology originally built for online product visualization.",
+  "key_points": [
+   "Physicl raised $10 M in funding",
+   "Focus on closing the sim‑to‑real gap",
+   "Uses a pipeline from online goods marketing",
+   "Aims to make digital environments usable by robots"
+  ],
+  "why_it_matters": "Reducing the sim‑to‑real gap can accelerate robot deployment by allowing developers to train and test robots in realistic digital twins, lowering costs and speeding up innovation in automation and manufacturing.",
+  "category": "funding",
+  "companies": [
+   "Physicl"
+  ],
+  "tags": [
+   "sim-to-real",
+   "robotics",
+   "funding",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "f3bfec28682f8e7d",
+  "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 13:00:00 +0000",
+  "added": "2026-11-07T06:15:22.958126+00:00"
+ },
+ {
+  "headline": "After blocking Muse, Amazon now lets users text Alexa to help them shop",
+  "tldr": "Amazon is adding a text‑based Alexa feature that assists users with shopping, rolling out to millions soon.",
+  "key_points": [
+   "Amazon introduces texting capability for Alexa",
+   "Feature focuses on shopping assistance",
+   "Rollout to millions of users in coming weeks",
+   "Follows previous block of Muse service"
+  ],
+  "why_it_matters": "Enabling text interaction expands Alexa’s accessibility and could increase e‑commerce engagement, positioning Amazon’s voice assistant as a more versatile shopping tool.",
+  "category": "product",
+  "companies": [
+   "Amazon"
+  ],
+  "tags": [
+   "shopping",
+   "voice_assistant",
+   "text_interface",
+   "e-commerce"
+  ],
+  "importance": 2,
+  "id": "ab4846bbc512d790",
+  "url": "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 14:10:00 +0000",
+  "added": "2026-11-07T06:15:10.708389+00:00"
+ },
+ {
+  "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+  "tldr": "AI usage keeps rising, but overall spending has plateaued, with major spenders cutting prices and tightening budgets, raising doubts about continued hypergrowth as Anthropic approaches an IPO.",
+  "key_points": [
+   "AI usage continues to climb despite spending slowdown",
+   "Large AI spenders are implementing price cuts and tighter cost controls",
+   "Investor expectations of relentless AI hypergrowth are being questioned",
+   "Anthropic is nearing an initial public offering amid the spending pause"
+  ],
+  "why_it_matters": "The slowdown in AI spending could signal a shift from rapid expansion to more sustainable, cost‑focused growth, affecting valuations, funding strategies, and the broader market outlook for AI companies like Anthropic.",
+  "category": "funding",
+  "companies": [
+   "Anthropic",
+   "Ramp"
+  ],
+  "tags": [
+   "AI spending",
+   "IPO",
+   "cost control",
+   "investment"
+  ],
+  "importance": 2,
+  "id": "d275be2a1267c8e7",
+  "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 15:54:47 +0000",
+  "added": "2026-11-07T06:14:58.846387+00:00"
+ },
+ {
+  "headline": "After the midterms, is the AI industry in for a rough two years?",
+  "tldr": "Democratic victories in the U.S. midterms led to widespread voter approval of ballot measures restricting data center development, signaling potential regulatory headwinds for the AI industry.",
+  "key_points": [
+   "41 data‑center‑related ballot measures were on the November 2022 ballot; 40 passed with stricter development rules.",
+   "The measures target new construction, zoning, and environmental standards that could limit AI‑heavy data center expansion.",
+   "Democratic control of Congress may translate these voter preferences into federal or state legislation affecting AI infrastructure.",
+   "Industry leaders warn that tighter restrictions could increase costs and slow AI model training and deployment."
+  ],
+  "why_it_matters": "AI models rely on massive compute resources housed in data centers; tighter zoning and environmental rules could raise capital costs, delay projects, and reshape the competitive landscape for AI firms in the U.S.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "AI",
+   "data centers",
+   "regulation",
+   "politics"
+  ],
+  "importance": 3,
+  "id": "ead671d25881cf90",
+  "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 17:23:52 +0000",
+  "added": "2026-11-07T06:14:47.027074+00:00"
+ },
+ {
+  "headline": "How a Blue Wave midterm might reshape the AI industry",
+  "tldr": "Democrats' midterm wins could lead to stricter data‑center regulations, affecting AI compute capacity and industry growth.",
+  "key_points": [
+   "Democrats secured historic victories in the U.S. midterms.",
+   "41 ballot measures on data‑center development were voted on; all but one favored more restrictions.",
+   "Stricter data‑center rules could limit AI training infrastructure and increase costs.",
+   "The outcome may push AI firms to seek greener, more efficient compute solutions."
+  ],
+  "why_it_matters": "AI models rely heavily on large data centers for training and inference; policy changes that restrict data‑center expansion could reshape where and how AI workloads are run, influencing competition, costs, and the pace of innovation.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "data centers",
+   "AI compute",
+   "regulation",
+   "midterms"
+  ],
+  "importance": 3,
+  "id": "860444638104df4b",
+  "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 18:00:00 +0000",
+  "added": "2026-11-07T06:14:34.863942+00:00"
+ },
+ {
+  "headline": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+  "tldr": "Security researchers discovered many servers exposing the Artex penetration‑testing AI tool, making it openly accessible online.",
+  "key_points": [
+   "Hundreds of servers were found hosting the Artex AI hacking tool",
+   "The servers were publicly accessible on the internet",
+   "Anyone could download and use the penetration‑testing tool"
+  ],
+  "why_it_matters": "Open exposure of a powerful hacking tool lowers the barrier for malicious actors, increasing cybersecurity risks for organizations worldwide.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "security",
+   "AI",
+   "penetration testing",
+   "exposure"
+  ],
+  "importance": 2,
+  "id": "4758b3e084074531",
+  "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 18:44:38 +0000",
+  "added": "2026-11-07T06:14:22.636238+00:00"
+ },
+ {
+  "headline": "Crusoe sells troubled Wyoming data center project to Google",
+  "tldr": "Crusoe transfers its problematic Wyoming AI data center project to Google.",
+  "key_points": [
+   "Crusoe sells Wyoming data center",
+   "Project described as troubled",
+   "Google becomes new owner",
+   "Highlights AI data‑center challenges"
+  ],
+  "why_it_matters": "Shows the financial and operational risks of building large‑scale AI infrastructure and signals Google's continued expansion in AI compute capacity.",
+  "category": "acquisition",
+  "companies": [
+   "Crusoe",
+   "Google"
+  ],
+  "tags": [
+   "data_center",
+   "AI_infrastructure",
+   "acquisition",
+   "Wyoming"
+  ],
+  "importance": 2,
+  "id": "36231604b2886429",
+  "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 07 Nov 2026 01:40:28 +0000",
+  "added": "2026-11-07T06:14:10.744621+00:00"
+ },
+ {
+  "headline": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+  "tldr": "Hugging Face releases two open-source models—AnySpeechRecognizer and AnyDecisionModel—tailored for speech recognition and decision-making on Apple devices.",
+  "key_points": [
+   "Open-source speech recognizer for Apple platforms",
+   "Open-source decision model for Apple platforms",
+   "Both models are provided by Hugging Face",
+   "Targeted at developers building on iOS/macOS"
+  ],
+  "why_it_matters": "Provides developers with ready-to-use, open models that simplify building AI-powered speech and decision features on Apple devices, fostering broader adoption and community contributions.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "speech",
+   "decision",
+   "Apple",
+   "open_models"
+  ],
+  "importance": 2,
+  "id": "85d975255b4f9d00",
+  "url": "https://huggingface.co/blog/anydecisionmodel",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 29 Oct 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:13:58.900282+00:00"
+ },
+ {
+  "headline": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+  "tldr": "Mistral's Large 4 model, nicknamed Le Chonk, is now hosted on the Hugging Face platform.",
+  "key_points": [
+   "Mistral Large 4 model released",
+   "Model nicknamed \"Le Chonk\"",
+   "Now available on Hugging Face",
+   "Accessible for inference and fine‑tuning"
+  ],
+  "why_it_matters": "Brings a powerful new large language model to a widely used AI hub, lowering the barrier for developers to experiment with state‑of‑the‑art capabilities.",
+  "category": "model_release",
+  "companies": [
+   "Mistral",
+   "Hugging Face"
+  ],
+  "tags": [
+   "large language model",
+   "Mistral",
+   "Hugging Face",
+   "model hosting"
+  ],
+  "importance": 2,
+  "id": "a1765f446c5b64b5",
+  "url": "https://huggingface.co/blog/mistral-large4",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 29 Oct 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:13:47.276910+00:00"
+ },
+ {
+  "headline": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+  "tldr": "Hugging Face launches Project ProtoStar to equip publicly funded scientific research with AI tools.",
+  "key_points": [
+   "Project ProtoStar announced",
+   "Targets publicly funded science",
+   "Aims to make research AI-ready",
+   "Initiative led by Hugging Face"
+  ],
+  "why_it_matters": "Enabling AI integration in publicly funded research can accelerate discovery, improve reproducibility, and democratize access to advanced tools across the scientific community.",
+  "category": "other",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "AI-ready",
+   "public science",
+   "research",
+   "project"
+  ],
+  "importance": 2,
+  "id": "e1c742c1d925baf7",
+  "url": "https://huggingface.co/blog/announcing-project-protostar",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 29 Oct 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:13:34.847404+00:00"
+ },
+ {
+  "headline": "Granite Switch 4.1.1 — Update models like you update software",
+  "tldr": "Hugging Face announces Granite Switch 4.1.1, enabling seamless model updates akin to software versioning.",
+  "key_points": [
+   "Introduces versioned model updates",
+   "Simplifies deployment and maintenance",
+   "Targets easier integration for developers"
+  ],
+  "why_it_matters": "Versioned model updates reduce friction in AI deployment, allowing teams to keep models current without extensive re‑engineering, which can accelerate product cycles and improve reliability.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "Granite",
+   "model_update",
+   "software",
+   "AI_deployment"
+  ],
+  "importance": 2,
+  "id": "f3538b6fb36f4f58",
+  "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 29 Oct 2026 13:37:07 GMT",
+  "added": "2026-11-07T06:13:22.725165+00:00"
+ },
+ {
+  "headline": "CWE-bench v2: More coverage, quality, and transparency",
+  "tldr": "Hugging Face releases CWE-bench version 2 with expanded coverage, higher quality, and greater transparency.",
+  "key_points": [
+   "Expanded benchmark coverage",
+   "Improved evaluation quality",
+   "Enhanced transparency of metrics",
+   "Second major version release"
+  ],
+  "why_it_matters": "Provides researchers and developers with a more comprehensive and reliable tool for evaluating model robustness, fostering better model development and comparison.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "benchmark",
+   "evaluation",
+   "NLP",
+   "open_source"
+  ],
+  "importance": 2,
+  "id": "20954e3ac0ff87f7",
+  "url": "https://huggingface.co/blog/cwe-bench",
+  "source": "Hugging Face Blog",
+  "date": "Tue, 03 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:13:10.937519+00:00"
+ },
+ {
+  "headline": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+  "tldr": "Hugging Face releases Dharma Field Extractor, a tool that parses any document and returns its structured data as JSON.",
+  "key_points": [
+   "Accepts any document format as input",
+   "Extracts structured fields automatically",
+   "Outputs results in JSON",
+   "Designed for easy integration into pipelines"
+  ],
+  "why_it_matters": "Provides a universal, ready‑to‑use solution for turning unstructured documents into machine‑readable data, speeding up data preparation for AI applications.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "document processing",
+   "json",
+   "field extraction",
+   "automation"
+  ],
+  "importance": 2,
+  "id": "5afc49da7bd40515",
+  "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+  "source": "Hugging Face Blog",
+  "date": "Wed, 04 Nov 2026 17:50:10 GMT",
+  "added": "2026-11-07T06:12:58.928632+00:00"
+ },
+ {
+  "headline": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+  "tldr": "Hugging Face introduces Phonon TTS, an on-device speech synthesis system that achieves top benchmark performance.",
+  "key_points": [
+   "Phonon TTS is a new on-device text‑to‑speech model",
+   "Delivers high‑quality speech generation",
+   "Outperforms existing benchmarks"
+  ],
+  "why_it_matters": "",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "speech",
+   "TTS",
+   "on-device",
+   "benchmarks"
+  ],
+  "importance": 2,
+  "id": "89209ab642b10e25",
+  "url": "https://huggingface.co/blog/phonon-tts",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 05 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:12:46.869336+00:00"
+ },
+ {
+  "headline": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+  "tldr": "NVIDIA releases open-source Cosmos 3 models aimed at powering interactive world simulations.",
+  "key_points": [
+   "NVIDIA unveils Cosmos 3 model suite",
+   "Models are released openly",
+   "Targeted at interactive world simulation",
+   "Supports developers building virtual environments"
+  ],
+  "why_it_matters": "Open access to advanced simulation models lowers barriers for developers to create realistic, interactive virtual worlds, accelerating research and applications in gaming, training, and digital twins.",
+  "category": "open_source",
+  "companies": [
+   "NVIDIA",
+   "Hugging Face"
+  ],
+  "tags": [
+   "simulation",
+   "open_models",
+   "NVIDIA",
+   "cosmos3"
+  ],
+  "importance": 2,
+  "id": "e8690f74b67f5698",
+  "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 05 Nov 2026 19:35:16 GMT",
+  "added": "2026-11-07T06:12:35.111958+00:00"
+ },
+ {
+  "headline": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+  "tldr": "The Open ASR Leaderboard now includes speech datasets for Egyptian and Nigerian English.",
+  "key_points": [
+   "New language variants added",
+   "Focus on African English dialects",
+   "Expands benchmark coverage"
+  ],
+  "why_it_matters": "Including Egyptian and Nigerian English improves evaluation of speech models for under‑represented dialects, encouraging better multilingual ASR development.",
+  "category": "other",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "ASR",
+   "benchmark",
+   "multilingual",
+   "speech"
+  ],
+  "importance": 2,
+  "id": "82196d4ece0a644e",
+  "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 06 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-07T06:12:22.781352+00:00"
+ },
+ {
+  "headline": "ToyBlocks: A controlled world for robot learning and evaluation",
+  "tldr": "Hugging Face introduces ToyBlocks, a simulated environment designed to train and assess robot learning algorithms.",
+  "key_points": [
+   "Provides a sandbox for robot manipulation tasks",
+   "Enables reproducible evaluation of learning methods",
+   "Openly available for the research community"
+  ],
+  "why_it_matters": "A standardized, controllable simulation helps accelerate robot learning research by offering consistent benchmarks and reducing reliance on costly physical setups.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "robotics",
+   "simulation",
+   "machine_learning",
+   "benchmark"
+  ],
+  "importance": 2,
+  "id": "be1ba71e55b7f125",
+  "url": "https://huggingface.co/blog/allenai/toyblocks",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 06 Nov 2026 14:00:48 GMT",
+  "added": "2026-11-07T06:12:10.718482+00:00"
+ },
+ {
+  "headline": "How Companies Are Using NVIDIA DSX to Break the Power Bottleneck",
+  "tldr": "Companies are adopting NVIDIA's DSX AI Factory Platform to integrate grid planning, simulation, and operation, addressing power as the biggest infrastructure bottleneck.",
+  "key_points": [
+   "DSX unifies substation and data‑center management into a single AI‑driven system.",
+   "The platform enables real‑time simulation and optimization of power flow.",
+   "Adoption is driven by the growing $300 B power bottleneck in global infrastructure.",
+   "NVIDIA provides the hardware and software stack to run DSX at scale."
+  ],
+  "why_it_matters": "By merging grid and AI‑factory operations, DSX can improve energy efficiency, reduce outages, and accelerate the deployment of AI workloads that depend on reliable power.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AI_factory",
+   "power_grid",
+   "infrastructure",
+   "simulation"
+  ],
+  "importance": 3,
+  "id": "761a1716cf64c177",
+  "url": "https://blogs.nvidia.com/blog/dsx-power/",
+  "source": "NVIDIA",
+  "date": "Thu, 22 Oct 2026 05:00:25 +0000",
+  "added": "2026-11-07T06:11:58.950415+00:00"
+ },
+ {
+  "headline": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+  "tldr": "NVIDIA launched Minerva, an AIOps platform that aggregates telemetry from infrastructure and AI workloads and uses specialized AI models to provide early problem detection and actionable insights for AI factories.",
+  "key_points": [
+   "Minerva integrates telemetry from both hardware and AI workloads.",
+   "Purpose-built AI models analyze data to surface issues proactively.",
+   "Aims to improve productivity and reliability of large‑scale AI operations.",
+   "Targets complex \"AI factories\" where monitoring is especially challenging."
+  ],
+  "why_it_matters": "As AI models grow in size and deployment complexity, managing the underlying infrastructure becomes critical; Minerva offers a unified observability solution that can reduce downtime and operational costs for enterprises running extensive AI workloads.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AIOps",
+   "observability",
+   "AI infrastructure",
+   "MLOps"
+  ],
+  "importance": 3,
+  "id": "06769efcf6f4425c",
+  "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/",
+  "source": "NVIDIA",
+  "date": "Thu, 22 Oct 2026 15:00:02 +0000",
+  "added": "2026-11-07T06:11:47.029801+00:00"
+ },
+ {
+  "headline": "Kazakhstan Expands Compute for Its AI Future",
+  "tldr": "Kazakhstan is moving from AI infrastructure planning to deployment, boosting its accelerated computing capacity during a visit by NVIDIA CEO Jensen Huang.",
+  "key_points": [
+   "National AI ecosystem shifting to active deployment across the full stack",
+   "Increased supply of accelerated computing hardware announced",
+   "Visit by NVIDIA founder and CEO Jensen Huang highlights partnership",
+   "Focus on both models and applications alongside infrastructure"
+  ],
+  "why_it_matters": "Expanding compute resources positions Kazakhstan to develop homegrown AI solutions, attract investment, and participate more competitively in the global AI landscape.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AI_compute",
+   "Kazakhstan",
+   "accelerated_hardware",
+   "government"
+  ],
+  "importance": 3,
+  "id": "b21a97b1b273636b",
+  "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/",
+  "source": "NVIDIA",
+  "date": "Fri, 23 Oct 2026 02:00:13 +0000",
+  "added": "2026-11-07T06:11:34.952044+00:00"
+ },
+ {
+  "headline": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+  "tldr": "AI tools are helping researchers process massive biomedical data faster, accelerating discoveries that could improve outcomes for the 57 million people worldwide living with dementia.",
+  "key_points": [
+   "Researchers face data overload and a shortage of experts to synthesize findings.",
+   "AI accelerates data analysis, enabling quicker hypothesis testing and drug target identification.",
+   "The Consortium for Biomedical Research and AI leverages NVIDIA’s hardware and software to scale workloads.",
+   "Faster discovery cycles aim to keep pace with the rapid progression of dementia."
+  ],
+  "why_it_matters": "Speeding up biomedical research can lead to earlier diagnostics, more effective treatments, and ultimately better quality of life for millions affected by dementia.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "dementia",
+   "AI",
+   "biomedical research",
+   "discovery"
+  ],
+  "importance": 3,
+  "id": "df8156dd70629cce",
+  "url": "https://blogs.nvidia.com/blog/open-source-ai-tools-cbrain-dementia/",
+  "source": "NVIDIA",
+  "date": "Tue, 27 Oct 2026 15:00:20 +0000",
+  "added": "2026-11-07T06:11:22.963237+00:00"
+ },
+ {
+  "headline": "Slice Into GFN Thursday: ‘Phantom Blade Zero’ Launches on GeForce NOW",
+  "tldr": "S‑GAME’s Phantom Blade Zero game is now available on NVIDIA’s GeForce NOW cloud gaming service.",
+  "key_points": [
+   "Phantom Blade Zero launches on GeForce NOW on Halloween week",
+   "Game blends martial arts and punk fantasy",
+   "Adds to NVIDIA’s growing library of cloud‑gaming titles",
+   "Upcoming addition: World of Warcraft: Forever arriving later in the week"
+  ],
+  "why_it_matters": "Expands NVIDIA’s GeForce NOW catalog, showcasing the platform’s ability to deliver new, genre‑mixing titles instantly to gamers without local hardware constraints.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "S‑GAME"
+  ],
+  "tags": [
+   "cloud gaming",
+   "Phantom Blade Zero",
+   "GeForce NOW",
+   "game launch"
+  ],
+  "importance": 2,
+  "id": "f52687297c33fd6b",
+  "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-phantom-blade-zero/",
+  "source": "NVIDIA",
+  "date": "Thu, 29 Oct 2026 13:00:16 +0000",
+  "added": "2026-11-07T06:11:11.356444+00:00"
+ },
+ {
+  "headline": "Things That Go Beep in the Night: Agentic AI Joins the Search for Extraterrestrial Signals",
+  "tldr": "NVIDIA highlights the use of AI agents to analyze data for extraterrestrial intelligence, marking a new AI-driven approach to SETI.",
+  "key_points": [
+   "AI agents are being deployed to scan and interpret radio signals for potential extraterrestrial origins.",
+   "The initiative leverages NVIDIA's hardware and software stack to process massive datasets efficiently.",
+   "This represents a shift from traditional human‑centric analysis to autonomous AI‑driven discovery in SETI.",
+   "Collaboration between AI researchers and astronomers aims to accelerate the search for intelligent life."
+  ],
+  "why_it_matters": "Applying agentic AI to SETI could dramatically increase the speed and scale of signal analysis, potentially leading to the first detection of extraterrestrial intelligence and showcasing AI's capability in frontier scientific research.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "SETI",
+   "agentic AI",
+   "signal analysis",
+   "extraterrestrial"
+  ],
+  "importance": 3,
+  "id": "4a4bcbde667c128c",
+  "url": "https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals/",
+  "source": "NVIDIA",
+  "date": "Fri, 30 Oct 2026 15:00:10 +0000",
+  "added": "2026-11-07T06:10:59.085216+00:00"
+ },
+ {
+  "headline": "OpenAI valued at $1.25 trillion after $11 B funding round",
+  "tldr": "OpenAI’s latest financing lifts its valuation to $1.25 trillion, marking it as one of the world’s most valuable companies.",
+  "key_points": [
+   "New funding round raised $11 billion for OpenAI",
+   "Company valuation jumps to $1.25 trillion",
+   "Follows March round that valued OpenAI at $852 billion",
+   "Rival AI startup Anthropic is approaching an IPO"
+  ],
+  "why_it_matters": "The trillion‑dollar valuation underscores the massive economic scale of generative AI and signals strong investor confidence, potentially shaping future competition, talent acquisition, and regulatory focus in the industry.",
+  "category": "funding",
+  "companies": [
+   "OpenAI",
+   "Anthropic"
+  ],
+  "tags": [
+   "valuation",
+   "funding",
+   "AI",
+   "startup"
+  ],
+  "importance": 5,
+  "id": "6813d62fd92533cd",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+  "source": "The Verge AI",
+  "date": "2026-11-06T18:46:18-05:00",
+  "added": "2026-11-07T06:10:46.932393+00:00"
+ },
+ {
+  "headline": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+  "tldr": "OpenAI is raising $11 B in a new funding round, pushing its valuation to $1.25 T.",
+  "key_points": [
+   "Funding round of $11 billion announced",
+   "Valuation reaches $1.25 trillion",
+   "Round not yet closed, expected in coming weeks"
+  ],
+  "why_it_matters": "The massive capital injection underscores investor confidence in OpenAI’s AI platform and gives the company resources to expand research, product development, and cloud infrastructure, influencing the competitive landscape of AI services.",
+  "category": "funding",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "fundraising",
+   "valuation",
+   "investment"
+  ],
+  "importance": 2,
+  "id": "314bd089789a0995",
+  "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 06 Nov 2026 22:53:46 +0000",
+  "added": "2026-11-07T06:10:34.824635+00:00"
+ },
+ {
+  "headline": "Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention",
+  "tldr": "A new Multi-layer Indexer (MLI) technique lets consecutive layers share token selections, removing indexer bottlenecks and speeding up long-context decoding for DeepSeek-V3.2 and GLM-5 without retraining.",
+  "key_points": [
+   "MLI lets each layer attend the token selection of the previous layer, enabling concurrent indexer and attention execution.",
+   "No new weights or retraining required; works within existing SGLang decode graph.",
+   "Provides up to 14.5% faster decoding for DeepSeek-V3.2 and 9.8% for GLM-5 at 1/2 retention, with larger gains at higher context lengths.",
+   "Combines with IndexCache to further reduce indexer scans while preserving accuracy within a few percentage points."
+  ],
+  "why_it_matters": "Long-context inference is a major cost driver for large language models; MLI reduces decode latency without model changes, making high‑token‑count applications (e.g., document analysis, code generation) more practical and cost‑effective.",
+  "category": "paper",
+  "companies": [
+   "DeepSeek",
+   "GLM"
+  ],
+  "tags": [
+   "sparse attention",
+   "long-context",
+   "inference optimization",
+   "multi-layer indexer"
+  ],
+  "importance": 3,
+  "id": "bd2c65ed7f88583d",
+  "url": "https://huggingface.co/papers/2611.03768",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-07T06:10:23.126281+00:00"
+ },
+ {
+  "headline": "LiveFoley: Dynamic Real-Time Video-to-Audio Generation for Immersive Interactive Worlds",
+  "tldr": "LiveFoley introduces a streaming causal autoregressive diffusion system that achieves near‑offline audio quality and precise audio‑visual alignment with imperceptible latency.",
+  "key_points": [
+   "Trailing Sliding Window converts non‑causal encoders into streaming modules without retraining.",
+   "Unified Varhop Framework lets developers trade latency for compute across diverse scenarios.",
+   "History LocDiT adds past context; Future‑Warmup LocDiT uses an approximate future condition to boost quality.",
+   "Matches offline models in alignment and outperforms existing streaming V2A systems in quality."
+  ],
+  "why_it_matters": "Real‑time video‑to‑audio generation is critical for VR, gaming, and interactive media; LiveFoley narrows the gap between offline quality and streaming constraints, enabling more immersive experiences.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video-to-audio",
+   "diffusion",
+   "real-time",
+   "immersive"
+  ],
+  "importance": 3,
+  "id": "e45e24d46395129f",
+  "url": "https://huggingface.co/papers/2611.05988",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T00:35:42.000Z",
+  "added": "2026-11-07T06:10:10.866136+00:00"
+ },
+ {
+  "headline": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+  "tldr": "Muir improves linear-attention models by using low‑rank sensitivity‑allocated gating and a matched‑filter readout, achieving lower perplexity and faster training than GDN‑2 and Transformers.",
+  "key_points": [
+   "Combines all gates into a low‑rank projection and adds a matched‑filter readout gate.",
+   "Reduces perplexity by 1.8‑2.0% vs GDN‑2 and 2.5‑3.6% vs Transformers across 166M‑1.34B models.",
+   "Speeds up training 1.2× to reach 100B‑token validation loss and 2.7× faster than Transformers at 32K context.",
+   "Maintains near‑100% passkey retrieval up to 1M tokens and extrapolates 2,560× to 10M‑token streams."
+  ],
+  "why_it_matters": "Efficient linear‑attention architectures like Muir enable training and inference on much longer sequences with lower compute, opening the door to larger context language models without the memory and speed bottlenecks of traditional Transformers.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "linear attention",
+   "gating",
+   "efficiency",
+   "language models"
+  ],
+  "importance": 3,
+  "id": "ec797be30e1660c4",
+  "url": "https://huggingface.co/papers/2611.08376",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T12:53:49.000Z",
+  "added": "2026-11-07T06:09:59.199404+00:00"
+ },
+ {
+  "headline": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+  "tldr": "Coca-Cola compresses tool observations into latent tokens, cutting LLM agent token usage by up to 89% and speeding runtime while improving performance.",
+  "key_points": [
+   "Introduces Coca-Cola, a continuous latent context compression model for LLM agents",
+   "Action-Preserving Training aligns agent behavior with full and compressed observations",
+   "Reduces token consumption by 70.01%-89.24% and runtime by 24.45%-55.97% on web-search QA benchmarks",
+   "Improves task performance across four QA benchmarks and two model families"
+  ],
+  "why_it_matters": "Efficient context handling enables more capable and faster LLM agents, lowering compute costs and expanding the feasibility of multi-step tool use in real-world applications.",
+  "category": "paper",
+  "companies": [
+   "Tsinghua University"
+  ],
+  "tags": [
+   "latent compression",
+   "LLM agents",
+   "efficiency",
+   "action-preserving training"
+  ],
+  "importance": 3,
+  "id": "df6c520de2e5d719",
+  "url": "https://huggingface.co/papers/2611.06500",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-07T06:09:46.750232+00:00"
+ },
+ {
+  "headline": "Koopman Generative Operators for Efficient Probabilistic Time-Series Forecasting",
+  "tldr": "The Koopman Generative Operator (KGO) achieves state-of-the-art probabilistic time-series forecasting with single-step generation, cutting inference time by 25× while winning most benchmark scores.",
+  "key_points": [
+   "KGO combines Koopman Patch Embedding, Koopman Flow Matching, and an Adaptive Uncertainty Gate.",
+   "Single-step generation uses a closed-form matrix exponential, avoiding iterative sampling.",
+   "Sets new accuracy records on 13/17 CRPS and 16/17 NMAE ProbTS benchmarks.",
+   "Reduces inference latency by at least 25× compared to diffusion/flow‑matching models."
+  ],
+  "why_it_matters": "Fast, accurate probabilistic forecasts are critical for finance, energy, and logistics; KGO’s efficiency makes high‑quality uncertainty modeling practical for real‑time deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "probabilistic forecasting",
+   "Koopman theory",
+   "flow matching",
+   "time-series"
+  ],
+  "importance": 3,
+  "id": "84815873e50dd0be",
+  "url": "https://huggingface.co/papers/2611.04760",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T07:08:37.000Z",
+  "added": "2026-11-07T06:09:34.783599+00:00"
+ },
+ {
+  "headline": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+  "tldr": "SwarmEvolve uses hundreds of low‑cost AI agents that reason in latent space and share KV caches, dramatically speeding up LLM‑guided evolutionary program search for math and scientific computing problems.",
+  "key_points": [
+   "Agents operate in latent space, avoiding costly text generation each round.",
+   "A novelty filter selects distinct hidden‑state vectors, and a summarizer agent merges KV caches for natural crossover.",
+   "Achieves best scores on 21 benchmark problems in 3–8 minutes versus ~60 minutes for prior state‑of‑the‑art methods.",
+   "Works with Qwen‑3 8B, improving on solutions previously found by AlphaEvolve."
+  ],
+  "why_it_matters": "By cutting inference time and compute cost, SwarmEvolve makes large‑scale LLM‑guided program synthesis practical for scientific discovery, opening faster, cheaper routes to solving complex mathematical and computational challenges.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "evolutionary search",
+   "latent agents",
+   "AI optimization",
+   "scientific computing"
+  ],
+  "importance": 3,
+  "id": "ba9e58c71961dcd3",
+  "url": "https://huggingface.co/papers/2611.08483",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-07T06:09:23.092872+00:00"
+ },
+ {
+  "headline": "StepX-OPD: Rethinking Multi-Teacher On-Policy Distillation in Diffusion Models",
+  "tldr": "StepX-OPD merges full-step capability distillation and few-step sampling into a single stage, letting a student model learn all capabilities while being supervised on its own rollout states, achieving better performance with fewer GPU hours.",
+  "key_points": [
+   "Combines multi-teacher on-policy distillation and step distillation into one unified training stage.",
+   "Student model is supervised on the states it actually visits, improving efficiency and quality.",
+   "Adds a velocity regression term for low-noise rollout parts to address KL weight mismatch.",
+   "Reduces unintended text rendering in images and improves instruction following, image quality, and human preference.",
+   "Achieves highest normalized average scores among four-step methods on SD3.5-Medium and FLUX.1-dev, with ~37% less GPU time than sequential approaches."
+  ],
+  "why_it_matters": "Efficiently training high-quality, few-step diffusion models is crucial for deploying text-to-image systems that can run quickly on limited hardware while maintaining capabilities like instruction following and human preference, lowering computational costs for both research and commercial use.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "diffusion",
+   "distillation",
+   "few-step sampling",
+   "multi-teacher"
+  ],
+  "importance": 3,
+  "id": "1b4fd614e67b3e77",
+  "url": "https://huggingface.co/papers/2611.04386",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-07T06:09:11.103279+00:00"
+ },
+ {
+  "headline": "Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents",
+  "tldr": "The paper introduces Hybrid Computer Use (HCU), a unified interface that lets AI agents combine programmatic, accessibility, and GUI interactions, boosting efficiency and success on OSWorld 2.0.",
+  "key_points": [
+   "HCU merges three interaction channels: code/CLI, accessibility (AX), and GUI.",
+   "AX tools provide compact observations and batch actions with diff reporting.",
+   "Agents using HCU achieve top Partial and Binary scores on OSWorld 2.0.",
+   "All evaluated models improve with HCU, showing better efficiency and task success."
+  ],
+  "why_it_matters": "By exposing semantic and programmatic capabilities alongside visual interaction, HCU enables more flexible and efficient AI agents, advancing the development of general-purpose computer-use systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "computer_use",
+   "agent_interface",
+   "HCU",
+   "OSWorld"
+  ],
+  "importance": 3,
+  "id": "510b6da414025d7b",
+  "url": "https://huggingface.co/papers/2610.41432",
+  "source": "HF Daily Papers",
+  "date": "2026-10-30T04:38:29.000Z",
+  "added": "2026-11-07T06:08:58.930933+00:00"
+ },
+ {
+  "headline": "Open-HumanScale: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models",
+  "tldr": "The paper introduces Open-HumanScale, an open 50,000‑hour egocentric video dataset and training recipe that yields world‑action models achieving state‑of‑the‑art robot manipulation performance, and releases all data, code, and checkpoints for reproducible scaling research.",
+  "key_points": [
+   "Open-HumanScale-50K: a curated 50k‑hour egocentric video corpus with hand‑motion and language annotations.",
+   "HumanWAM-Vanilla pretrained solely on human video reaches >92% success on simulated Clean2Clean tasks.",
+   "Joint human‑robot pretraining (HumanWAM-Goal) unlocks zero‑shot generalization, achieving 84.6% on Clean2Random and emergent in‑context learning on real robots.",
+   "Empirical log‑linear scaling law links pretraining hours to downstream robot success rates.",
+   "All data, pipelines, and model checkpoints are open‑sourced for reproducibility."
+  ],
+  "why_it_matters": "Provides the first large‑scale, openly available egocentric video resource and proven scaling recipe for embodied AI, enabling the community to accelerate robot manipulation research, validate scaling laws, and develop more generalizable robot policies without proprietary data.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "egocentric video",
+   "robot manipulation",
+   "scaling laws",
+   "open dataset"
+  ],
+  "importance": 4,
+  "id": "e29b9baa1b7f3346",
+  "url": "https://huggingface.co/papers/2611.06817",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-07T06:08:47.261537+00:00"
+ },
+ {
+  "headline": "Future Representation Distillation for Imagination-free World Action Models",
+  "tldr": "DreamFree uses a pretrained video diffusion model as a visual encoder to predict robot actions from a single observation, avoiding costly video generation and achieving real-time control.",
+  "key_points": [
+   "Repurposes a frozen video diffusion model as a predictive visual encoder via representation distillation.",
+   "Enables action prediction without generating future video frames, running at 11 Hz with a 14B backbone.",
+   "Outperforms state-of-the-art world action models on real and simulated robot tasks.",
+   "Learns new tasks from video demonstrations without needing action annotations, even across different robot embodiments."
+  ],
+  "why_it_matters": "By eliminating the need for iterative video synthesis, DreamFree dramatically reduces computational load while improving robot control performance, making advanced video‑based priors more practical for real‑time robotics and expanding the ability to learn from unannotated video data.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robot_control",
+   "video_diffusion",
+   "representation_distillation",
+   "real_time"
+  ],
+  "importance": 3,
+  "id": "947692b634d16f0c",
+  "url": "https://huggingface.co/papers/2611.04527",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-07T06:08:35.314271+00:00"
+ },
+ {
   "headline": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
   "tldr": "NVIDIA showcases how cities can use physical and agentic AI—like digital twins and vision agents—to turn massive sensor data into actionable insights for planning, maintenance, and public services.",
   "key_points": [
