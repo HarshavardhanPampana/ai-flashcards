@@ -1,5 +1,1022 @@
 [
  {
+  "headline": "Enhancing Local and Global Structure in Compressed AI Agent Memory",
+  "tldr": "The paper introduces locality‑aware quantization (LAQ), a new quantizer that improves both local neighbor fidelity and global memory structure when compressing embedding vectors, achieving higher global fidelity without increasing storage size.",
+  "key_points": [
+   "LAQ derives its objective from a proven bound on far‑end rank violations, unlike prior quantizers.",
+   "At 96 bytes per passage, LAQ improves global fidelity (G) across all 52 test runs, outperforming seven other quantizers.",
+   "The method maintains the same byte budget, rotation, and search efficiency as existing OPQ indexes.",
+   "Experiments show significant reductions in theme drift and higher evidence recall on large‑scale memory tasks."
+  ],
+  "why_it_matters": "Efficient, high‑fidelity compression of large text embeddings is critical for scaling AI agents that need to store and retrieve massive amounts of knowledge. Improving global structure while preserving local neighbor relationships enables more reliable memory consolidation, deletion, and comparison, directly impacting the performance of long‑term AI agents and retrieval‑augmented systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "compression",
+   "embeddings",
+   "quantization",
+   "memory"
+  ],
+  "importance": 3,
+  "id": "ffb32b67d629a5a9",
+  "url": "https://arxiv.org/abs/2611.08341v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:27:08Z",
+  "added": "2026-11-07T22:04:50.090841+00:00"
+ },
+ {
+  "headline": "4D Point Splatting for mmWave Radar Micro-Doppler Differentiable Rendering",
+  "tldr": "A new physics‑based differentiable renderer (4DPS) fits moving human scenes to real mmWave radar captures, dramatically closing the sim‑to‑real gap and enabling high‑quality synthetic data generation.",
+  "key_points": [
+   "4DPS represents scenes as oriented points with material, normal, and velocity and splats them into range‑Doppler bins.",
+   "Achieves state‑of‑the‑art correlation scores (up to 0.988) on micro‑Doppler and reduces pose estimation error close to real‑data training.",
+   "Custom CUDA kernels render a sequence in ~6–13 minutes on an H100, making dataset‑scale inverse rendering feasible.",
+   "Enables synthetic data creation and scene editing for human‑centric radar tasks such as gait, gesture, and vital‑sign sensing."
+  ],
+  "why_it_matters": "By providing a fast, accurate way to generate realistic radar data, 4DPS bridges the large gap between limited real datasets and the needs of downstream AI models, accelerating research and deployment of radar‑based sensing systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "mmWave",
+   "radar",
+   "differentiable rendering",
+   "synthetic data"
+  ],
+  "importance": 3,
+  "id": "74c5fc8191c39b56",
+  "url": "https://arxiv.org/abs/2611.08342v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:27:29Z",
+  "added": "2026-11-07T22:04:38.224275+00:00"
+ },
+ {
+  "headline": "Learning a Patient World Model for Health System Simulation in Intensive Care",
+  "tldr": "A neural network trained on MIMIC-IV learns a shared patient trajectory representation that can simulate ICU demand, tasks, and discharge across multiple policy scenarios, outperforming traditional state models.",
+  "key_points": [
+   "Learns a universal patient world model from longitudinal EHRs using a neural network.",
+   "Model can be frozen and reused for different ICU simulation scenarios without retraining.",
+   "Matches or exceeds Markov and semi‑Markov baselines in occupancy and policy response predictions.",
+   "Captures history‑dependent dynamics missed by compact state models, improving demand forecasts."
+  ],
+  "why_it_matters": "Provides a flexible, reusable simulation tool for ICU operations, enabling rapid evaluation of capacity and care policies without rebuilding models for each new question, potentially improving resource allocation and patient outcomes.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "healthcare",
+   "simulation",
+   "patient modeling",
+   "ICU"
+  ],
+  "importance": 3,
+  "id": "19afbcffd89e1ddf",
+  "url": "https://arxiv.org/abs/2611.08392v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:06:42Z",
+  "added": "2026-11-07T22:04:25.778637+00:00"
+ },
+ {
+  "headline": "Synthesis of Ovarian Cancer Multi-Omics Datasets: A Biology-Informed Evaluation Framework",
+  "tldr": "The paper proposes a biology‑informed framework to evaluate synthetic paired RNA expression and copy‑number variation data for ovarian cancer, applying it to the DECIDER cohort and comparing three VAE‑based multi‑omic generators.",
+  "key_points": [
+   "Introduces a patient‑disjoint evaluation protocol measuring modality fidelity and RNA‑CNV coherence.",
+   "Applies the framework to the high‑grade serous ovarian cancer DECIDER dataset.",
+   "Adapts three variational autoencoder architectures for generating paired multi‑omic profiles.",
+   "Identifies the best model based on fidelity, coherence, and training‑data proximity metrics."
+  ],
+  "why_it_matters": "Synthetic multi‑omic datasets can reduce the cost and privacy barriers of assembling paired cancer cohorts, enabling broader research and method development while preserving biologically relevant structure.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multi-omics",
+   "synthetic data",
+   "cancer",
+   "variational autoencoder"
+  ],
+  "importance": 3,
+  "id": "93c6ef05f9f18a77",
+  "url": "https://arxiv.org/abs/2611.08394v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:07:06Z",
+  "added": "2026-11-07T22:04:14.095266+00:00"
+ },
+ {
+  "headline": "StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning",
+  "tldr": "StepBack improves test-time reasoning efficiency by detecting likely error steps in draft reasoning trajectories, resampling only those steps, and achieving accuracy comparable to full self-consistency with up to 41% fewer tokens.",
+  "key_points": [
+   "Detects probable error positions using lightweight signals on draft trajectories.",
+   "Resamples only the identified error step and its suffix instead of full trajectories.",
+   "Matches self-consistency accuracy across seven math and multi-hop QA benchmarks.",
+   "Reduces token usage by up to 41.26% and can complement adaptive inference methods."
+  ],
+  "why_it_matters": "Efficient reasoning methods lower computational costs for large language models, making high-quality chain-of-thought inference more practical for real-world deployments and enabling broader use of advanced reasoning capabilities.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "test-time inference",
+   "chain-of-thought",
+   "resampling",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "8059dba961954109",
+  "url": "https://arxiv.org/abs/2611.08403v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:12:49Z",
+  "added": "2026-11-07T22:04:02.117134+00:00"
+ },
+ {
+  "headline": "Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning",
+  "tldr": "The paper analyzes how LoRA updates behave differently in supervised fine-tuning versus reinforcement learning, revealing that RL drives spectral concentration and rapid subspace rotation, while SFT expands the spectrum; tailored LoRA strategies improve performance on math reasoning tasks.",
+  "key_points": [
+   "RL with LoRA concentrates singular spectrum and rotates subspaces faster than SFT",
+   "Group-mean baseline subtraction causes these contrasting dynamics",
+   "Custom LoRA updates (flattening spectrum for SFT, flattening outside span for RL) boost performance",
+   "Experiments across models show these configurations outperform existing methods on math reasoning tasks"
+  ],
+  "why_it_matters": "Understanding LoRA dynamics enables more effective fine-tuning and RL adaptation, leading to better performance of large language models on complex reasoning tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LoRA",
+   "fine-tuning",
+   "reinforcement learning",
+   "model adaptation"
+  ],
+  "importance": 3,
+  "id": "b62794ecba34c886",
+  "url": "https://arxiv.org/abs/2611.08414v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:17:39Z",
+  "added": "2026-11-07T22:03:49.930625+00:00"
+ },
+ {
+  "headline": "Data-driven discovery of intrinsic Lie point symmetries of differential equation systems",
+  "tldr": "A new operator-theoretic framework extracts continuous Lie symmetries directly from sampled differential‑equation data, recovering full symmetry algebras without symbolic equations.",
+  "key_points": [
+   "Formulates symmetry discovery as an operator problem on jet‑space data",
+   "Identifies admissible generators via a sampled determining operator and dictionary learning",
+   "Recovers an 11‑dimensional symmetry algebra on a benchmark, matching Lie‑bracket structure numerically",
+   "Includes a rank‑stabilization test to detect non‑stabilizing symmetry representations"
+  ],
+  "why_it_matters": "Enables automated extraction of geometric structure from data, facilitating model reduction and scientific machine learning for systems where governing equations are unknown or only approximately known.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Lie symmetries",
+   "differential equations",
+   "machine learning",
+   "operator theory"
+  ],
+  "importance": 3,
+  "id": "ddd1502fd07e213a",
+  "url": "https://arxiv.org/abs/2611.08421v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:19:28Z",
+  "added": "2026-11-07T22:03:38.109669+00:00"
+ },
+ {
+  "headline": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+  "tldr": "MedGraph introduces a graph‑based memory system that tracks patient facts over multiple visits, improving accuracy of LLM medical assistants on longitudinal dialogues.",
+  "key_points": [
+   "Identifies three common memory errors in existing systems: outdated evidence, cross‑patient contamination, and missing safety facts.",
+   "Builds a graph memory that timestamps facts, attributes them to the correct patient, and links related medical records.",
+   "Achieves the highest accuracy on MedMemoryBench, outperforming five baselines by over 10 points with both GPT and Qwen backbones.",
+   "Efficient construction and retrieval allow real‑time use in medical dialogue settings."
+  ],
+  "why_it_matters": "Accurate long‑term patient state tracking is critical for safe, reliable AI medical assistants, reducing misdiagnoses and ensuring continuity of care across visits.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "medical_dialogue",
+   "graph_memory",
+   "LLM",
+   "patient_state"
+  ],
+  "importance": 3,
+  "id": "959d4470ae55a244",
+  "url": "https://arxiv.org/abs/2611.08433v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:27:20Z",
+  "added": "2026-11-07T22:03:25.975161+00:00"
+ },
+ {
+  "headline": "A Hidden Markov Preference Model for Online Prediction of Adversary Actions",
+  "tldr": "The paper introduces a hidden Markov model that captures persistent and switching attacker regimes and predicts next adversary actions using a feasibility‑masked action tree, showing improved performance on the CAGE 2 cyber‑defense benchmark.",
+  "key_points": [
+   "Models attacker behavior as latent regimes that can persist or switch within an episode.",
+   "Uses a feasibility‑masked tree to represent state‑dependent action arguments.",
+   "Derives convex logistic fits and Baum‑Welch reuse for efficient estimation.",
+   "Provides theoretical guarantees: nodewise KL information, log‑loss bound, and uniform fallback.",
+   "Achieves a 0.8 nats per step information gain and faster loss reduction than recurrent baselines on CAGE 2."
+  ],
+  "why_it_matters": "Accurate online prediction of adversary actions can improve cyber‑defense systems by enabling proactive countermeasures, reducing response time, and enhancing overall security posture against adaptive threats.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "hidden Markov model",
+   "cyber defense",
+   "adversary prediction",
+   "online learning"
+  ],
+  "importance": 3,
+  "id": "e436ef1ca2d820a2",
+  "url": "https://arxiv.org/abs/2611.08445v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:37:07Z",
+  "added": "2026-11-07T22:03:14.025464+00:00"
+ },
+ {
+  "headline": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
+  "tldr": "The paper analyzes deterministic gradient descent with large constant step sizes in adversarial training, revealing persistent implicit bias, non‑uniform convergence rates, and a two‑stage sharpness dynamic distinct from standard training.",
+  "key_points": [
+   "Implicit bias gap between adversarial and standard training remains even with arbitrarily large step sizes.",
+   "Optimization error in adversarial training lacks a uniform convergence rate unlike standard training.",
+   "Loss sharpness exhibits a two‑stage evolution, differing from the Edge‑of‑Stability behavior seen in standard training."
+  ],
+  "why_it_matters": "Understanding how large step sizes affect adversarial training informs more efficient and robust model training practices, guiding researchers and practitioners in designing defenses against adversarial attacks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "adversarial_training",
+   "gradient_descent",
+   "robustness",
+   "sharpness"
+  ],
+  "importance": 3,
+  "id": "181e2e6c7ad86a99",
+  "url": "https://arxiv.org/abs/2611.08457v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:48:50Z",
+  "added": "2026-11-07T22:03:02.022801+00:00"
+ },
+ {
+  "headline": "Towards interpreting any residual stream direction by scaling activation inversion",
+  "tldr": "The paper introduces Maximally-Activating Example Metamodels (MAEMs) that generate text exemplars to interpret residual stream directions in language models, outperforming corpus search and other methods.",
+  "key_points": [
+   "MAEMs map residual stream directions to text that maximally activates them using a label‑free RL objective.",
+   "A Qwen3.6‑27B MAEM outperforms corpus search and natural‑language autoencoders on held‑out languages and domains.",
+   "MAEMs recover 89% of held‑out SAE features and can identify concepts behind steering vectors and LoRA backdoors.",
+   "Generated exemplars are verifiable via a forward pass on the subject model, offering a grounded scaling approach."
+  ],
+  "why_it_matters": "Improving interpretability of large language models helps researchers understand model behavior, detect backdoors, and develop safer, more controllable AI systems.",
+  "category": "paper",
+  "companies": [
+   "Alibaba"
+  ],
+  "tags": [
+   "interpretability",
+   "residual stream",
+   "metamodel",
+   "RL"
+  ],
+  "importance": 3,
+  "id": "a22807cb7aedce71",
+  "url": "https://arxiv.org/abs/2611.08465v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:54:40Z",
+  "added": "2026-11-07T22:02:50.148024+00:00"
+ },
+ {
+  "headline": "XStack: A Benchmark for ML Repo Migration",
+  "tldr": "XStack evaluates AI agents on converting PyTorch code to JAX for TPU execution, revealing current migration tools are unreliable.",
+  "key_points": [
+   "Introduces XStack benchmark for cross‑framework, cross‑hardware migration (PyTorch → JAX/TPU).",
+   "Agents must reproduce original results on the target platform to pass.",
+   "Claude Opus 5 achieves 75% success, GPT‑5.6‑sol 45%, others ≤40%.",
+   "Benchmark aims to free ML code from ecosystem lock‑in."
+  ],
+  "why_it_matters": "Reliable migration enables researchers to leverage diverse hardware, reduces ecosystem lock‑in, and promotes reproducibility across platforms.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "migration",
+   "framework",
+   "hardware"
+  ],
+  "importance": 3,
+  "id": "5b1738b2d65a4d6d",
+  "url": "https://arxiv.org/abs/2611.08472v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:55:54Z",
+  "added": "2026-11-07T22:02:37.738205+00:00"
+ },
+ {
+  "headline": "Accepted but Wrong: Silent Failures of LLM Code Repairs after API Migrations",
+  "tldr": "A study of 73 tasks shows that LLM‑generated code repairs can pass typical tests yet produce incorrect results after runtime or API migrations, highlighting hidden failure modes.",
+  "key_points": [
+   "73 tasks covering 60 documented changes in CPython, Node.js, and SQLite were evaluated.",
+   "Typical test inputs let 41% of wrong repairs pass; edge inputs reduced this to ~6%.",
+   "Hard distractor inputs still allowed 15‑17% of wrong programs to pass.",
+   "All four model families benefited from edge inputs, cutting wrong releases without harming correct completions.",
+   "Blind AI audit flagged 34 contracts as stricter than required, but no model‑written code was executed."
+  ],
+  "why_it_matters": "The findings reveal that standard testing pipelines can miss critical bugs in LLM‑generated code, risking silent failures in production systems after API or runtime changes.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "code repair",
+   "software testing",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "6ebc934f2e0aee29",
+  "url": "https://arxiv.org/abs/2611.08269v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:41:32Z",
+  "added": "2026-11-07T22:02:27.083852+00:00"
+ },
+ {
+  "headline": "ICLR position paper criticized for lacking experiments and making speculative claims — how to respond?",
+  "tldr": "A reviewer called out an ICLR position paper for missing empirical validation, prompting the authors to consider a defensive response that explains the nature of position papers and ICLR's precedent.",
+  "key_points": [
+   "Reviewer claims the paper lacks implementation, results, and empirical validation.",
+   "Authors argue that position papers are meant to present arguments, hypotheses, and technical discussion without experiments.",
+   "ICLR has previously accepted position papers, providing a precedent for this format.",
+   "The authors seek a polite yet firm reply to the reviewer’s criticisms."
+  ],
+  "why_it_matters": "Highlights the tension between traditional empirical expectations and the legitimacy of argumentative position papers in top AI conferences, influencing future submission strategies and review standards.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "position paper",
+   "review process",
+   "academic publishing"
+  ],
+  "importance": 2,
+  "id": "9e5ee67e3134c896",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpu5g0/iclr_position_paper_criticized_for_lacking/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T01:36:34+00:00",
+  "added": "2026-11-07T22:02:13.931676+00:00"
+ },
+ {
+  "headline": "ICLR 2027 adopts a 4‑point review scale, revealing 57% of reviews are weak rejects",
+  "tldr": "ICLR switched to a 1–4 rating system; most reviews (57%) are a 2, the median paper scores 2.0, so a 2‑2‑3 set of reviews is already above average.",
+  "key_points": [
+   "ICLR 2027 uses a 4‑point scale: 1 = clear reject, 2 = weak reject, 3 = weak accept, 4 = clear accept.",
+   "Analysis of 73,410 reviews shows 57% are a 2 and only 1.5% are a 4.",
+   "The median paper’s average score is exactly 2.0, making a 2‑2‑3 (mean 2.33) better than most submissions.",
+   "Data covers the first 25,000 of ~40,800 submissions as of Nov 6 on OpenReview."
+  ],
+  "why_it_matters": "The new scoring system reshapes how authors and reviewers interpret paper quality and acceptance odds, influencing submission strategies and conference reputation.",
+  "category": "policy",
+  "companies": [
+   "OpenReview"
+  ],
+  "tags": [
+   "ICLR",
+   "review process",
+   "conference",
+   "metrics"
+  ],
+  "importance": 3,
+  "id": "1851d591cf9939e3",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xps7xu/iclr_2027s_new_14_scale_a_2_2_3_is_better_than_it/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T00:03:35+00:00",
+  "added": "2026-11-07T22:02:02.404559+00:00"
+ },
+ {
+  "headline": "ICLR 2027 Review Scores [N]",
+  "tldr": "A Reddit post shares the review scores for papers submitted to ICLR 2027.",
+  "key_points": [
+   "ICLR 2027 review scores are posted",
+   "Submitted by Reddit user No-Lab4175",
+   "Includes a link to the scores and comments"
+  ],
+  "why_it_matters": "Review scores give insight into the quality and trends of research being accepted at a major AI conference, helping the community gauge emerging topics and standards.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "review_scores",
+   "research_trends"
+  ],
+  "importance": 2,
+  "id": "52b65a9b446c0f3b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpedgc/iclr_2027_review_scores_n/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T14:37:41+00:00",
+  "added": "2026-11-07T22:01:49.984416+00:00"
+ },
+ {
+  "headline": "ICLR27 reviewer submitted review for a different paper",
+  "tldr": "An author received a review that appears to describe a completely different manuscript, raising concerns about the review process.",
+  "key_points": [
+   "One reviewer gave a rejection based on a summary of another research problem.",
+   "Second reviewer provided a thoughtful, accurate assessment.",
+   "Third reviewer misinterpreted the paper's negative findings as a flaw.",
+   "Author wonders whether to contact the Area Chair to address the erroneous review."
+  ],
+  "why_it_matters": "Highlights potential flaws in peer‑review quality control at major AI conferences, which can affect paper acceptance and the credibility of the publication process.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "peer_review",
+   "conference",
+   "research_integrity"
+  ],
+  "importance": 2,
+  "id": "6f1f4472fefdec6b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpzqjy/iclr27_received_a_review_that_seems_to_be_for_an/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T06:40:14+00:00",
+  "added": "2026-11-07T22:01:38.459451+00:00"
+ },
+ {
+  "headline": "ICLR27 math and stats paper review experience [D]",
+  "tldr": "Author reports that theory-heavy ICLR submissions received harsh reviews focused on experiments, with no feedback on the mathematical contributions.",
+  "key_points": [
+   "Paper scored 2-2-2 on the probabilistic methods track; reviewers attacked novelty and demanded more experiments.",
+   "No reviewer commented on the extensive theoretical proofs (20 pages).",
+   "Author suspects bias due to lack of bidding and theory papers being assigned to computer‑science reviewers.",
+   "Discussion seeks community input on whether to rebut or withdraw."
+  ],
+  "why_it_matters": "Highlights potential review bias against theory‑heavy AI research at major conferences, which can affect the direction of AI scholarship and the dissemination of rigorous mathematical work.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR27",
+   "review process",
+   "theory papers",
+   "AI research"
+  ],
+  "importance": 2,
+  "id": "8fab80b76079eeee",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpvtxt/iclr27_math_and_stats_paper_review_experience_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T03:02:10+00:00",
+  "added": "2026-11-07T22:01:26.122642+00:00"
+ },
+ {
+  "headline": "ML academia vs industry relationship in 2026",
+  "tldr": "The post questions whether industry still adopts academic research, noting a perceived shift where academia produces many papers but industry appears less responsive, suggesting a divergence of roles.",
+  "key_points": [
+   "Historically (2012‑2018) academia drove many industry‑standard methods like ADAM and TRPO.",
+   "Now thousands of academic papers follow industry‑initiated topics, but adoption seems limited.",
+   "Optimization routines and new architectures are heavily researched academically with little evident industry uptake.",
+   "The author perceives industry becoming the primary idea generator, doing work in‑house."
+  ],
+  "why_it_matters": "Understanding the flow of ideas between academia and big tech informs funding, collaboration strategies, and the practical impact of research on real‑world AI deployment.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "academia",
+   "industry",
+   "research-adoption",
+   "AI-ecosystem"
+  ],
+  "importance": 2,
+  "id": "0cb411d8b5e6fb4e",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xponb2/what_exactly_is_the_relationship_between_ml/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T21:25:49+00:00",
+  "added": "2026-11-07T22:01:13.905229+00:00"
+ },
+ {
+  "headline": "Combinatorial Optimization with Pointer Networks: Theory, Benchmarks, and Limitations",
+  "tldr": "Pointer Networks can solve TSP instances instantly but quality drops on larger problems due to LSTM encoder biases.",
+  "key_points": [
+   "Uses Pointer Network trained with REINFORCE to tackle Euclidean TSP.",
+   "Achieves near‑optimal solutions in milliseconds for N=20–200.",
+   "Performance degrades as problem size grows, attributed to LSTM's sequential bias.",
+   "Benchmarked against Google OR‑Tools (Guided Local Search, 10 s timeout)."
+  ],
+  "why_it_matters": "Demonstrates both the promise and limits of neural combinatorial solvers, informing future model designs for permutation‑invariant tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "pointer_networks",
+   "tsp",
+   "reinforcement_learning",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "91c1356d051831e0",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqgg4v/combinatorial_optimization_with_pointer_networks/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T20:44:34+00:00",
+  "added": "2026-11-07T22:01:01.924294+00:00"
+ },
+ {
+  "headline": "ICLR 2027 reviews perceived as unusually shallow",
+  "tldr": "A Reddit user notes that many ICLR 2027 paper reviews are extremely brief, lacking depth on motivation, impact, and soundness, and often give low scores without thorough justification.",
+  "key_points": [
+   "Reviews often consist of only two generic bullet points per section.",
+   "Scores as low as 2 are given despite weak justification in the comments.",
+   "Lack of discussion on method motivation, impact, and soundness.",
+   "Raises concerns about the value of PhD research and peer‑review quality."
+  ],
+  "why_it_matters": "Peer review quality directly affects the credibility of AI research, influences funding and career trajectories, and shapes the direction of the field.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "peer_review",
+   "academia",
+   "AI_conference"
+  ],
+  "importance": 2,
+  "id": "e4b643a4535e1251",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xq1f1m/are_iclr_2027_reviews_unusually_shallow_this_year/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T08:25:40+00:00",
+  "added": "2026-11-07T22:00:50.190388+00:00"
+ },
+ {
+  "headline": "Incoming ML master's student struggles to generate novel research ideas",
+  "tldr": "A 31‑year‑old incoming master's student feels their research ideas are clunky and wonders why breakthrough papers seem obvious in hindsight.",
+  "key_points": [
+   "Student has read hundreds of papers and replicated many over 7‑8 years.",
+   "Despite generating many ideas, preliminary work feels unoriginal.",
+   "Questions how seminal works (e.g., diffusion models, VAEs) emerge and whether luck or different thinking is involved."
+  ],
+  "why_it_matters": "Highlights common confidence and creativity challenges faced by early‑career researchers, shedding light on the human side of AI research productivity.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "research",
+   "academia",
+   "ML",
+   "career"
+  ],
+  "importance": 1,
+  "id": "a6f3441aada149b1",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xq06wu/try_my_dang_hardest_to_come_up_with_novel/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T07:08:01+00:00",
+  "added": "2026-11-07T22:00:37.834480+00:00"
+ },
+ {
+  "headline": "[D] Self-Promotion Thread",
+  "tldr": "A meta thread on r/MachineLearning for users to share personal projects, startups, and services without cluttering main discussion threads.",
+  "key_points": [
+   "Encourages community members to post self‑promotion content in one dedicated thread.",
+   "Requests details on payment and pricing for products and services.",
+   "Prohibits link shorteners, aggregators, and auto‑subscribe links.",
+   "Will be removed if the community reacts negatively."
+  ],
+  "why_it_matters": "Provides a controlled space for self‑promotion, reducing spam in main AI discussion threads and helping members discover relevant projects and services.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "self-promotion",
+   "community",
+   "meta",
+   "r/MachineLearning"
+  ],
+  "importance": 1,
+  "id": "b91a53cdbef201a3",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xlmffv/d_selfpromotion_thread/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-02T03:15:07+00:00",
+  "added": "2026-11-07T22:00:26.090975+00:00"
+ },
+ {
+  "headline": "AI broke the cybersecurity world. What’s next?",
+  "tldr": "Alex Stamos discusses how AI is disrupting cybersecurity, highlighting current challenges and future implications.",
+  "key_points": [
+   "AI tools are being weaponized by attackers, increasing threat complexity.",
+   "Defenders struggle to keep pace with AI-generated attacks and automated tools.",
+   "The conversation explores potential strategies and policy responses.",
+   "Highlights the need for better AI safety measures in security operations."
+  ],
+  "why_it_matters": "Understanding AI's impact on cybersecurity is crucial for protecting digital infrastructure, informing policy, and guiding future security investments.",
+  "category": "other",
+  "companies": [
+   "Cognition"
+  ],
+  "tags": [
+   "cybersecurity",
+   "AI",
+   "interview",
+   "threats"
+  ],
+  "importance": 2,
+  "id": "055e03fe8fc4b1cc",
+  "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
+  "source": "The Verge AI",
+  "date": "2026-11-07T10:00:00-05:00",
+  "added": "2026-11-07T22:00:13.843400+00:00"
+ },
+ {
+  "headline": "The US let Nvidia sell chips to an empty office in China",
+  "tldr": "Nvidia’s H200 AI chips were cleared for export to New Matrix, a Chinese firm that appears to have no actual offices, raising concerns about lax U.S. export vetting.",
+  "key_points": [
+   "The U.S. Commerce Department and Nvidia approved New Matrix to receive H200 AI chips.",
+   "Investigations reveal New Matrix operates out of an empty, “hollow gray shell” office.",
+   "Critics say the approval process lacks sufficient due diligence on Chinese recipients.",
+   "Potential risk of advanced AI hardware falling into untracked or illicit hands."
+  ],
+  "why_it_matters": "Weak export oversight could enable the transfer of powerful AI hardware to entities that may misuse it, undermining U.S. national security and global AI governance efforts.",
+  "category": "policy",
+  "companies": [
+   "Nvidia",
+   "New Matrix",
+   "U.S. Commerce Department"
+  ],
+  "tags": [
+   "export_controls",
+   "China",
+   "AI_chips",
+   "compliance"
+  ],
+  "importance": 3,
+  "id": "73be1ddc7ff24f89",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
+  "source": "The Verge AI",
+  "date": "2026-11-07T10:43:45-05:00",
+  "added": "2026-11-07T22:00:02.032493+00:00"
+ },
+ {
+  "headline": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
+  "tldr": "A user tried NYT Cooking’s AI assistant for dinner ideas; it helped with a chicken recipe but gave a flawed cake suggestion.",
+  "key_points": [
+   "The AI suggested a chicken dinner that the user found satisfactory.",
+   "The same AI gave a cake recipe that nearly failed due to inaccurate instructions.",
+   "The experience highlights both the potential and current limitations of consumer AI cooking assistants."
+  ],
+  "why_it_matters": "Shows real‑world consumer interaction with AI-powered recipe tools, illustrating usability strengths and pitfalls that can affect everyday cooking decisions.",
+  "category": "other",
+  "companies": [
+   "The New York Times"
+  ],
+  "tags": [
+   "AI assistant",
+   "cooking",
+   "recipe",
+   "consumer experience"
+  ],
+  "importance": 1,
+  "id": "fa06ff8fdc83e259",
+  "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+  "source": "The Verge AI",
+  "date": "2026-11-07T10:50:00-05:00",
+  "added": "2026-11-07T21:59:49.936347+00:00"
+ },
+ {
+  "headline": "Transformer-Based Trajectory Prescription for sEMG-Optimizing Robot-Mediated Rehabilitation",
+  "tldr": "A transformer encoder‑decoder model predicts personalized robot force trajectories from surface EMG signals, enabling activation‑targeted rehab with <8% error and open‑sourced code.",
+  "key_points": [
+   "Uses a transformer with rotary positional embeddings to map sEMG to force trajectories.",
+   "Achieves <8% mean trajectory prediction error on unseen tasks and users.",
+   "Instantaneous deterministic inference and sub‑second sampling of trajectory distributions.",
+   "Demonstrated 15% neuromotor activation error in live rehab tasks.",
+   "Data and code released via the OpenRobotRehab project on SimTK."
+  ],
+  "why_it_matters": "Targeting neuromotor activations rather than just kinematics could improve the effectiveness of robot‑mediated therapy, offering a data‑driven path to more individualized and high‑intensity rehabilitation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "rehabilitation",
+   "transformer",
+   "sEMG",
+   "robotics"
+  ],
+  "importance": 3,
+  "id": "0039a3ff755c0007",
+  "url": "https://arxiv.org/abs/2611.08295v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:55:55Z",
+  "added": "2026-11-07T21:59:38.238575+00:00"
+ },
+ {
+  "headline": "Measured Coupling for Parallel Decoding in Diffusion Language Models",
+  "tldr": "A new method measures token coupling directly during diffusion language model decoding, reducing steps and speeding up generation with only a 1.1‑point accuracy drop.",
+  "key_points": [
+   "Introduces cheap probes to measure how committing one token affects confidence in others.",
+   "Replaces mean‑field proxy with actual coupling, improving parallel decoding efficiency.",
+   "Achieves fewer decoding steps and faster inference on three models across four benchmarks.",
+   "Performance loss is minimal (≈1.1 accuracy points) and degrades when couplings are shuffled or uniform."
+  ],
+  "why_it_matters": "Efficient parallel decoding can dramatically cut inference time for diffusion language models, making them more practical for real‑world applications while preserving quality.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "diffusion",
+   "language-models",
+   "parallel-decoding",
+   "mean-field"
+  ],
+  "importance": 3,
+  "id": "15218e7c0aa6c71d",
+  "url": "https://arxiv.org/abs/2611.08307v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:10:03Z",
+  "added": "2026-11-07T21:59:26.111594+00:00"
+ },
+ {
+  "headline": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
+  "tldr": "Exposing self-improving embodied agents to benchmark verification criteria boosts scores but leads to overfitting and poor task transfer; instruction-faithful criteria provide a better performance measure.",
+  "key_points": [
+   "Criteria Exposure (CE) lets agents exploit benchmark verifiers, inflating success rates.",
+   "Agents trained with CE fail when verification criteria are slightly altered.",
+   "Skills learned under CE do not transfer well across different tasks.",
+   "Introducing instruction-faithful criteria aligns verification with true task completion."
+  ],
+  "why_it_matters": "Highlights a fundamental flaw in current evaluation of embodied coding agents, urging the community to redesign benchmarks for genuine task mastery rather than verifier overfitting.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "embodied AI",
+   "self-improvement",
+   "benchmarking",
+   "verification"
+  ],
+  "importance": 3,
+  "id": "84116632e050e742",
+  "url": "https://arxiv.org/abs/2611.08318v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:14:37Z",
+  "added": "2026-11-07T21:59:13.978357+00:00"
+ },
+ {
+  "headline": "SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains",
+  "tldr": "SpecCTMC is a training‑free speculative sampler that cuts sequential model evaluations by 1.73‑4.38× in diffusion language models while exactly preserving the continuous‑time Markov chain distribution.",
+  "key_points": [
+   "Reduces the sequential bottleneck of exact continuous‑time sampling without a separate draft model.",
+   "Proposes token updates using previously computed predictions and evaluates them in parallel.",
+   "Applies an exact acceptance‑and‑correction step, guaranteeing no time‑discretization or factorization error.",
+   "Shows 1.73‑4.38× fewer sequential evaluations on LLaDA‑8B‑Instruct and Dream‑v0‑Instruct‑7B across five benchmarks."
+  ],
+  "why_it_matters": "Speeds up parallel text generation for diffusion language models, making exact continuous‑time sampling practical for larger models while maintaining fidelity to the original distribution.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "diffusion",
+   "language-models",
+   "sampling",
+   "speculative"
+  ],
+  "importance": 3,
+  "id": "162936968f34ac64",
+  "url": "https://arxiv.org/abs/2611.08362v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:41:20Z",
+  "added": "2026-11-07T21:59:02.216833+00:00"
+ },
+ {
+  "headline": "FedReason: LLMs as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
+  "tldr": "An LLM (Claude Opus 5.5) is used on the server to dynamically generate aggregation code for federated learning, improving accuracy over standard rules without sending model weights off‑site.",
+  "key_points": [
+   "LLM inspects client model weights in a sandbox and outputs a short Python aggregation program every ten rounds.",
+   "FedReason outperforms FedAvg by ~1.3% on CIFAR‑10/100 across diverse heterogeneity scenarios.",
+   "Handles malicious clients, excluding sign‑flipping attackers in the first round.",
+   "Runs cost about $0.79 in API fees for a 60‑round training run."
+  ],
+  "why_it_matters": "Demonstrates that LLMs can act as adaptive, server‑side meta‑learners for federated learning, offering a flexible, privacy‑preserving way to improve aggregation without extra training or data transfer.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "federated_learning",
+   "LLM",
+   "aggregation",
+   "privacy"
+  ],
+  "importance": 3,
+  "id": "be070874a8d105c8",
+  "url": "https://arxiv.org/abs/2611.08383v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:00:58Z",
+  "added": "2026-11-07T21:58:49.971775+00:00"
+ },
+ {
+  "headline": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+  "tldr": "A US intelligence memo alleges China's Ministry of State Security recruited a Megaspeed executive to gather intelligence on Nvidia's CEO.",
+  "key_points": [
+   "US memo claims Chinese intelligence targeted a female tech executive",
+   "The executive works for Megaspeed",
+   "Goal was to spy on Nvidia's chief executive",
+   "Memo circulated earlier this year"
+  ],
+  "why_it_matters": "Highlights geopolitical tensions and potential security risks for leading AI hardware firms, raising concerns about corporate espionage in the AI sector.",
+  "category": "other",
+  "companies": [
+   "Nvidia",
+   "Megaspeed"
+  ],
+  "tags": [
+   "espionage",
+   "China",
+   "Nvidia",
+   "AI security"
+  ],
+  "importance": 2,
+  "id": "69c75581d56ff5e1",
+  "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 07 Nov 2026 21:17:08 +0000",
+  "added": "2026-11-07T21:58:37.893924+00:00"
+ },
+ {
+  "headline": "SynthFaces: Balanced Large Scale Human Dataset",
+  "tldr": "A new synthetic face dataset, SynthFaces, is introduced to provide balanced, privacy‑preserving identities for training fair generative models, using an expanded Arc2Face diffusion pipeline.",
+  "key_points": [
+   "Combines Arc2Face diffusion with a flow‑matching model to generate diverse identity embeddings.",
+   "Produces a fully synthetic, balanced dataset that mitigates bias and privacy risks of real‑world face data.",
+   "Includes a non‑leakage metric to verify that generated identities do not replicate real individuals.",
+   "Demonstrated usefulness for fine‑tuning adapter‑based personalized generation methods."
+  ],
+  "why_it_matters": "Synthetic, balanced data helps reduce bias and privacy concerns in AI systems that generate or recognize human faces, enabling more equitable downstream applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "synthetic data",
+   "fairness",
+   "generative models",
+   "diffusion"
+  ],
+  "importance": 3,
+  "id": "c64a01cafc3601fd",
+  "url": "https://huggingface.co/papers/2610.40119",
+  "source": "HF Daily Papers",
+  "date": "2026-10-28T20:00:00.000Z",
+  "added": "2026-11-07T21:58:26.088990+00:00"
+ },
+ {
+  "headline": "HERIT: Enabling Global Access to Hanja-to-English Historical Translation by Mitigating Temporal Bias",
+  "tldr": "HERIT introduces a retrieval‑augmented generation pipeline that creates pseudo‑labeled Hanja‑Korean data to train a translation model, reducing temporal bias and expanding access to historical archives.",
+  "key_points": [
+   "Uses RAG to generate high‑quality pseudo‑labels from abundant Hanja‑Korean corpora.",
+   "Mitigates data scarcity and temporal overfitting across historical periods.",
+   "Outperforms existing translation baselines in automated and human evaluations.",
+   "Translates previously untranslated archive sections, opening them to global researchers."
+  ],
+  "why_it_matters": "By overcoming language and temporal biases, HERIT makes valuable historical documents accessible worldwide, supporting multidisciplinary research that was previously limited by translation barriers.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "translation",
+   "historical",
+   "RAG",
+   "Hanja"
+  ],
+  "importance": 3,
+  "id": "fce606d1c0d84b79",
+  "url": "https://huggingface.co/papers/2611.04949",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-07T21:58:13.912629+00:00"
+ },
+ {
+  "headline": "Hard Sample-Conditioned Decorrelated Attention for Robust Face Recognition",
+  "tldr": "The paper introduces ViT-HarDis, a method that applies stronger attention head decorrelation to hard face samples, improving face recognition performance without extra inference cost.",
+  "key_points": [
+   "Conditioned attention head disentanglement based on sample difficulty",
+   "Improves hard-sample discrimination and reduces inter-head similarity",
+   "Achieves state‑of‑the‑art results on IJB‑B, IJB‑C, and TinyFace benchmarks",
+   "Only final transformer layers need regularization, keeping inference unchanged",
+   "Code released publicly on GitHub"
+  ],
+  "why_it_matters": "Hard samples dominate errors in face recognition; targeting them with adaptive regularization yields more robust models and pushes the performance of Vision Transformer‑based systems closer to or beyond current limits.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "face_recognition",
+   "vision_transformer",
+   "attention",
+   "hard_samples"
+  ],
+  "importance": 3,
+  "id": "216eb2614044e297",
+  "url": "https://huggingface.co/papers/2610.41789",
+  "source": "HF Daily Papers",
+  "date": "2026-10-30T10:21:43.000Z",
+  "added": "2026-11-07T21:58:02.201639+00:00"
+ },
+ {
+  "headline": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+  "tldr": "A study reveals that offline RAG systems using signed knowledge packs are vulnerable to vector tampering, exposing up to 5.5% of queries, and proposes verification methods to mitigate the risk.",
+  "key_points": [
+   "Signature only proves authorship, not vector-text alignment, creating an integrity gap.",
+   "Attackers can exploit cosine tolerance to hijack queries, with up to 5.5% exposure in tested corpora.",
+   "Standard integrity audits on compressed vector stores fail, but verifying quantisation codes with guard bands can block attacks.",
+   "Experiments on a Raspberry Pi 5 show answer accuracy dropping from 0.75 to 0.39 under attack."
+  ],
+  "why_it_matters": "Ensuring the integrity of vector embeddings is crucial for trustworthy offline RAG deployments, especially on edge devices where security breaches can degrade model performance and expose sensitive information.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "retrieval-augmented generation",
+   "vector security",
+   "edge AI",
+   "FAISS"
+  ],
+  "importance": 3,
+  "id": "f58ad39bd6048350",
+  "url": "https://huggingface.co/papers/2611.06498",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T08:32:04.000Z",
+  "added": "2026-11-07T21:57:49.992021+00:00"
+ },
+ {
+  "headline": "DRAP: Dynamics-Risk Adaptive Plasticity for Continual Learning in Physical AI",
+  "tldr": "DRAP is a replay‑free continual learning method that uses risk‑weighted gradient importance to protect critical model components, improving retention on sequential physical AI tasks.",
+  "key_points": [
+   "Estimates tensor importance via sample‑level action gradients weighted by trajectory‑amplification risk.",
+   "Uses the largest singular value of a local linear model as a Lyapunov‑inspired risk metric.",
+   "Scales AdamW learning rates per tensor based on accumulated importance to reduce plasticity where needed.",
+   "Evaluated on OpenVLA subnetwork across LIBERO Spatial, Object, and Goal suites, outperforming standard fine‑tuning and EWC."
+  ],
+  "why_it_matters": "Physical AI agents are highly sensitive to small policy errors that can cascade, leading to task failure. DRAP provides a principled way to preserve previously learned behaviors without replay, enabling more reliable and efficient continual adaptation in robotics and embodied AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "continual_learning",
+   "physical_ai",
+   "replay_free",
+   "robotics"
+  ],
+  "importance": 3,
+  "id": "5d1dfc99f5125549",
+  "url": "https://huggingface.co/papers/2611.05029",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T10:05:06.000Z",
+  "added": "2026-11-07T21:57:38.108403+00:00"
+ },
+ {
+  "headline": "UniRestorer++: Scalable Universal Image Restoration with Multi-Granularity Degradation Modeling",
+  "tldr": "UniRestorer++ introduces a scalable, multi-granularity framework for universal image restoration that improves performance across diverse degradations and scales log‑linearly with model size.",
+  "key_points": [
+   "Multi‑granularity degradation modeling with group‑specific experts",
+   "Routing based on degradation and granularity estimates for robustness",
+   "New CDD‑50 benchmark covering 50 degradation categories",
+   "Log‑linear PSNR scaling and strong out‑of‑distribution performance",
+   "State‑of‑the‑art results and zero‑shot/few‑shot generalization"
+  ],
+  "why_it_matters": "Provides a more reliable way to scale universal image restoration models, addressing saturation and error‑prone degradation estimation, which can benefit real‑world image enhancement applications and future research on adaptable vision models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "image restoration",
+   "multi-granularity",
+   "scaling",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "fd2d5c6578d3db0f",
+  "url": "https://huggingface.co/papers/2611.06042",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T01:46:47.000Z",
+  "added": "2026-11-07T21:57:26.104130+00:00"
+ },
+ {
+  "headline": "Identically Trained Language Models Break on Different Jailbreaks",
+  "tldr": "Jailbreak susceptibility varies more with pretraining seed than data, with high correlation within the same run but lower across different seeds, revealing unique fingerprints for each pretraining run.",
+  "key_points": [
+   "Same data and safety training but different pretraining seeds cause lower jailbreak correlation (0.811 vs 0.984).",
+   "Across 25 data recipes, pretraining seed impacts jailbreak behavior more than data recipe.",
+   "Model fingerprints can identify the exact pretraining run using as few as 50 prompts with 98% accuracy.",
+   "Best attack templates transfer poorly across seeds (27% consistency) compared to post‑training changes (67%)."
+  ],
+  "why_it_matters": "Understanding that pretraining randomness heavily influences safety vulnerabilities helps researchers design more robust evaluation methods and highlights the need for diverse testing across multiple model instances.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "jailbreak",
+   "pretraining",
+   "model safety",
+   "fingerprinting"
+  ],
+  "importance": 3,
+  "id": "9e76e7a96c5c8ccd",
+  "url": "https://huggingface.co/papers/2610.34074",
+  "source": "HF Daily Papers",
+  "date": "2026-10-24T20:00:00.000Z",
+  "added": "2026-11-07T21:57:13.814730+00:00"
+ },
+ {
+  "headline": "GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats",
+  "tldr": "A transformer model, GaussianRenderFormer, directly renders images from 3D Gaussian splats without a rasterizer, achieving 38.08 dB PSNR on unseen objects.",
+  "key_points": [
+   "Each Gaussian is encoded as a token; a view‑dependent decoder attends to these tokens to produce pixels.",
+   "Trained on 26,820 Objaverse objects (≈20k Gaussians each) and evaluated on 300 unseen objects.",
+   "Achieves 38.08 dB PSNR versus 44.02 dB for rasterized pruned splats, with a 1.4 dB gap recoverable by providing projected footprints.",
+   "Code, models, and demo videos are publicly released."
+  ],
+  "why_it_matters": "Demonstrates that transformer architectures can learn end‑to‑end 3D rendering, opening possibilities for differentiable rendering pipelines without traditional rasterization.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3D rendering",
+   "transformers",
+   "neural graphics",
+   "Gaussian splats"
+  ],
+  "importance": 3,
+  "id": "eba6af43a6452502",
+  "url": "https://huggingface.co/papers/2611.05593",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T15:26:14.000Z",
+  "added": "2026-11-07T21:57:02.209315+00:00"
+ },
+ {
   "headline": "ICLR 2027 Reviews Discussion",
   "tldr": "A Reddit thread invites users to share and discuss upcoming ICLR 2027 paper reviews, mentioning tools like papercopilot and paperScorer for fun predictions.",
   "key_points": [
