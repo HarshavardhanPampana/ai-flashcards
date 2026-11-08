@@ -1,5 +1,293 @@
 [
  {
+  "headline": "NeurIPS 2026 Camera-Ready Deadline Extended? [D]",
+  "tldr": "A user asks if the NeurIPS 2026 camera‑ready submission deadline has been extended beyond the expected November 6 date.",
+  "key_points": [
+   "NeurIPS 2026 camera‑ready deadline was thought to be Nov 6",
+   "User can still edit paper on OpenReview",
+   "Uncertainty whether the deadline was officially extended"
+  ],
+  "why_it_matters": "Deadlines affect researchers' ability to finalize and submit their work, influencing the conference schedule and the timely dissemination of new AI research.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "NeurIPS",
+   "deadline",
+   "OpenReview"
+  ],
+  "importance": 2,
+  "id": "00ba43ef1edbe894",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqk48t/neurips_2026_cameraready_deadline_extended_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T23:34:19+00:00",
+  "added": "2026-11-08T22:16:15.456938+00:00"
+ },
+ {
+  "headline": "Continual retention across 6 streams [R]",
+  "tldr": "A Reddit post discussing a method for continual retention across six data streams, implemented in R.",
+  "key_points": [
+   "Focus on continual retention techniques",
+   "Applies to six separate data streams",
+   "Implemented using the R programming language"
+  ],
+  "why_it_matters": "Understanding how to maintain knowledge over multiple streams is useful for developing robust continual learning systems.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "continual_learning",
+   "retention",
+   "R"
+  ],
+  "importance": 1,
+  "id": "bf5bbc99042745d7",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xr9d9y/continual_retention_across_6_streams_r/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T21:16:07+00:00",
+  "added": "2026-11-08T22:16:03.393376+00:00"
+ },
+ {
+  "headline": "Elvis and Eminem rights holders are suing Suno",
+  "tldr": "Rights holders of Elvis Presley's music and Eminem's publisher have filed lawsuits against AI music startup Suno, alleging illegal generation of music and lyrics that copy the artists.",
+  "key_points": [
+   "Lawsuits claim Suno's AI mimics Elvis and Eminem without permission",
+   "Plaintiffs allege violation of copyright and Tennessee's right‑of‑publicity laws",
+   "Case could set precedent for AI‑generated music and copyright enforcement"
+  ],
+  "why_it_matters": "The outcome may define legal boundaries for AI‑generated content, impacting how music AI companies train models and how artists protect their works.",
+  "category": "policy",
+  "companies": [
+   "Suno",
+   "Elvis Presley Estate",
+   "Eminem's publisher"
+  ],
+  "tags": [
+   "copyright",
+   "AI music",
+   "lawsuit",
+   "intellectual property"
+  ],
+  "importance": 3,
+  "id": "ae06ecf7187204d4",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+  "source": "The Verge AI",
+  "date": "2026-11-08T12:23:19-05:00",
+  "added": "2026-11-08T22:15:51.795519+00:00"
+ },
+ {
+  "headline": "Drex Max v1.1 Achieves SOTA and Pareto Frontier for Multimodal Decision Models",
+  "tldr": "Nace AI released Drex Max v1.1, an open‑weight decision model with state‑of‑the‑art performance, a 256k context window, and 8× lower cost, plus a training playbook and Mac‑compatible inference engine.",
+  "key_points": [
+   "Drex Max v1.1 reaches SOTA and Pareto‑optimal performance for decision models",
+   "Open weights are on Hugging Face; v1.1 weights to be released soon",
+   "256k context window, 8× cheaper than competing models, runs on Mac via Kapitsa engine",
+   "Full training playbook published in the paper “Towards Foundation Decision Models: Drex”"
+  ],
+  "why_it_matters": "Provides a highly efficient, open‑source foundation decision model that lowers inference cost and expands accessibility (e.g., Mac support), potentially accelerating research and deployment of large‑scale decision systems.",
+  "category": "model_release",
+  "companies": [
+   "Nace AI"
+  ],
+  "tags": [
+   "decision_models",
+   "open_weights",
+   "multimodal",
+   "inference_efficiency"
+  ],
+  "importance": 3,
+  "id": "6043d6208d32fc45",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xr4hkm/artificial_analysis_multimodal_decision_model/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T17:54:43+00:00",
+  "added": "2026-11-08T22:15:39.599858+00:00"
+ },
+ {
+  "headline": "I merged attention and MLP processing into a single gated Transformer block. GAP [R]",
+  "tldr": "A Reddit user introduced GAP (Gated Attention Projection), a Transformer variant that merges attention and MLP layers into one gated block, achieving ~20% fewer parameters and ~20% faster CPU training with torch.compile, though it trails standard Transformers in final accuracy.",
+  "key_points": [
+   "GAP combines attention and feed‑forward sublayers into a single gated block",
+   "Uses ~20% fewer parameters than a standard Transformer (up to 34% in smaller configs)",
+   "torch.compile speeds up GAP training by ~19.9% on a CPU benchmark",
+   "Accuracy is slightly lower than a conventional Transformer on WikiText‑103",
+   "Code and benchmarks are publicly available on GitHub"
+  ],
+  "why_it_matters": "If the gated design can be refined, it may offer a more parameter‑efficient and faster alternative to classic Transformers, which is valuable for deploying large language models on limited hardware.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "transformer",
+   "gated",
+   "efficiency",
+   "architecture"
+  ],
+  "importance": 2,
+  "id": "9e83e09edfa7fb33",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xr47tw/i_merged_attention_and_mlp_processing_into_a/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T17:43:26+00:00",
+  "added": "2026-11-08T22:15:27.977560+00:00"
+ },
+ {
+  "headline": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+  "tldr": "Nvidia announced an internal investigation after CEO Jensen Huang disclosed an affair that may involve a Chinese spy.",
+  "key_points": [
+   "Nvidia initiates an internal probe",
+   "CEO Jensen Huang admitted to an affair",
+   "Potential link to a Chinese intelligence operative"
+  ],
+  "why_it_matters": "Leadership integrity and potential espionage risks can affect company reputation, investor confidence, and national security considerations.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "security",
+   "investigation"
+  ],
+  "importance": 2,
+  "id": "bc55171edc52873b",
+  "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+  "source": "TechCrunch AI",
+  "date": "Sun, 08 Nov 2026 21:00:11 +0000",
+  "added": "2026-11-08T22:15:15.503342+00:00"
+ },
+ {
+  "headline": "Apple is racing to make Siri more agentic",
+  "tldr": "Apple is accelerating Siri's AI development to create a powerful agent that can rival OpenAI's Dots and Meta's Muse.",
+  "key_points": [
+   "CEO John Ternus is pressuring AI chief Craig Federighi to speed up Siri's roadmap",
+   "Apple aims to deliver a more capable, agentic Siri AI",
+   "The goal is to compete directly with OpenAI's Dots and Meta's Muse",
+   "Federighi has already produced a functional Siri AI version on a very short timeline"
+  ],
+  "why_it_matters": "A stronger, more autonomous Siri could shift the balance in the consumer AI assistant market, influencing user experience, ecosystem lock‑in, and the broader competition among tech giants in AI.",
+  "category": "product",
+  "companies": [
+   "Apple"
+  ],
+  "tags": [
+   "Siri",
+   "AI assistant",
+   "competition",
+   "agentic AI"
+  ],
+  "importance": 3,
+  "id": "53044e44b3aab431",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+  "source": "The Verge AI",
+  "date": "2026-11-08T14:18:19-05:00",
+  "added": "2026-11-08T22:15:04.007825+00:00"
+ },
+ {
+  "headline": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
+  "tldr": "Dux is an open-source desktop environment for Wayland that includes a file manager and theming support.",
+  "key_points": [
+   "Free and open-source",
+   "Runs on Wayland",
+   "Includes built‑in file manager",
+   "Supports theming"
+  ],
+  "why_it_matters": "",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "Wayland",
+   "desktop",
+   "open-source",
+   "Linux"
+  ],
+  "importance": 2,
+  "id": "ddea982e4231abd2",
+  "url": "https://duxlabs.dev/",
+  "source": "Hacker News",
+  "date": "2026-11-08T19:08:51Z",
+  "added": "2026-11-08T22:14:51.506269+00:00"
+ },
+ {
+  "headline": "Agent memory needs its OpenTelemetry moment",
+  "tldr": "Agent tools each use proprietary memory formats, preventing interoperability; a shared specification like OpenTelemetry could unify them.",
+  "key_points": [
+   "Current agent memory implementations use incompatible schemas.",
+   "OpenTelemetry unified observability data formats after merging OpenTracing and OpenCensus.",
+   "A community-driven standard for agent memory could enable tool interoperability.",
+   "Linux Foundation's Agentic AI Foundation hosts related specs (MCP, AGENTS.md).",
+   "Open-source project LoreKit proposes one possible memory format."
+  ],
+  "why_it_matters": "Standardizing agent memory would let AI tools share context, reduce duplication, and accelerate development of more capable, composable agents.",
+  "category": "other",
+  "companies": [
+   "Dash0",
+   "Linux Foundation"
+  ],
+  "tags": [
+   "agent-memory",
+   "standardization",
+   "observability",
+   "open-source"
+  ],
+  "importance": 3,
+  "id": "76aa428f83cc15ef",
+  "url": "https://www.lorekit.io/blog/open-agent-memory-format",
+  "source": "Hacker News",
+  "date": "2026-11-08T08:40:23Z",
+  "added": "2026-11-08T22:14:39.576632+00:00"
+ },
+ {
+  "headline": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+  "tldr": "Goldman Sachs has removed Anthropic's Claude Code AI tool from use by its banking and trading staff.",
+  "key_points": [
+   "Goldman Sachs stops using Claude Code",
+   "Affects bankers and traders",
+   "Internal AI tool removal"
+  ],
+  "why_it_matters": "Shows a major financial institution retreating from a high‑profile AI assistant, highlighting risk, compliance, or performance concerns that could influence other firms' AI adoption decisions.",
+  "category": "product",
+  "companies": [
+   "Goldman Sachs",
+   "Anthropic"
+  ],
+  "tags": [
+   "Claude",
+   "Anthropic",
+   "Goldman Sachs",
+   "AI tools"
+  ],
+  "importance": 2,
+  "id": "a78801b830361293",
+  "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+  "source": "Hacker News",
+  "date": "2026-11-08T18:16:07Z",
+  "added": "2026-11-08T22:14:27.665259+00:00"
+ },
+ {
+  "headline": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+  "tldr": "Llama-modchip adds kernel patches, quantization tools, and runtime support to run massive 284B DeepSeek-V4-Flash and 30B MoE models entirely in system RAM on CPUs, eliminating the need for GPUs.",
+  "key_points": [
+   "Runs 284B DeepSeek-V4-Flash on a 64 GB CPU‑only system (≈59 GiB RAM, 44.4 tokens/s).",
+   "Supports sparse Mixture‑of‑Experts models with configurable top‑K routing for speed‑quality trade‑offs.",
+   "Provides pre‑compiled binaries and a web UI for easy deployment on x86_64 and ARM64 CPUs.",
+   "Includes detailed hardware optimization guides and benchmark leaderboard for community contributions."
+  ],
+  "why_it_matters": "Enables researchers and developers to experiment with state‑of‑the‑art large language models without costly GPU hardware, broadening access and fostering innovation in CPU‑centric AI deployments.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face",
+   "DeepSeek"
+  ],
+  "tags": [
+   "cpu inference",
+   "moe",
+   "quantization",
+   "llama.cpp"
+  ],
+  "importance": 3,
+  "id": "5e9d3fd0e59ccb77",
+  "url": "https://github.com/synchopate/llama-modchip",
+  "source": "Hacker News",
+  "date": "2026-11-08T10:22:04Z",
+  "added": "2026-11-08T22:14:16.306343+00:00"
+ },
+ {
   "headline": "Scaling Neural Motor Decoding via Decoupled Behavioral Pretraining",
   "tldr": "The BEEMO framework shows that adding unpaired behavioral data to neural decoding models improves performance and transferability, offering a cheaper way to scale motor decoding without large paired neural datasets.",
   "key_points": [
