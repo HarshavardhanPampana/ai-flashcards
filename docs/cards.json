@@ -1,5 +1,1013 @@
 [
  {
+  "headline": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
+  "tldr": "A new method enables safe RL to scale to massive parallel training by reconstructing episode-level safety costs from short rollouts, preserving performance while cutting wall‑clock time.",
+  "key_points": [
+   "Analyzes bias from staggered environment resets in short‑horizon parallel rollouts.",
+   "Introduces a phase‑aggregated cost estimator to recover full‑episode safety metrics.",
+   "Incorporates uncertainty and distribution mismatch into a constraint‑tightening framework.",
+   "Demonstrates comparable safety performance to serial baselines with much faster training."
+  ],
+  "why_it_matters": "Safe RL is critical for deploying AI systems in real‑world settings where safety constraints must be respected; scaling it efficiently opens the door to larger, more complex applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "safe reinforcement learning",
+   "parallel training",
+   "cost estimation",
+   "AI safety"
+  ],
+  "importance": 3,
+  "id": "f501b39eead61415",
+  "url": "https://arxiv.org/abs/2611.08273v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:43:57Z",
+  "added": "2026-11-08T06:21:04.557509+00:00"
+ },
+ {
+  "headline": "Aligning Policy Encoders with a Shape Teacher",
+  "tldr": "A training-time method uses pretrained 3D shape features to align image‑based policy encoders, yielding faster convergence and higher success on robotic manipulation tasks without needing depth sensors at deployment.",
+  "key_points": [
+   "Uses Point‑MAE 3D shape features as a teacher for image‑based policy encoders.",
+   "Improves policy convergence speed by 4.7×–5.6× on LIBERO benchmarks.",
+   "Retains purely image‑based inputs at deployment, avoiding extra sensing.",
+   "Produces image representations more structured around object shape and parts."
+  ],
+  "why_it_matters": "Enables more efficient and robust robot learning by infusing 3D geometric knowledge into image‑only policies, reducing hardware complexity while boosting performance on manipulation tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robotics",
+   "3D representation",
+   "policy learning",
+   "image-based"
+  ],
+  "importance": 3,
+  "id": "b55d333ae101fe6c",
+  "url": "https://arxiv.org/abs/2611.08275v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:44:24Z",
+  "added": "2026-11-08T06:20:52.807898+00:00"
+ },
+ {
+  "headline": "Dynamic Optimistic Constrained OCO with Memory via Delay Equivalence",
+  "tldr": "Introduces an optimistic algorithm for online convex optimization with memory and time‑varying constraints, achieving adaptive dynamic regret and reduced constraint violation using predictions.",
+  "key_points": [
+   "First algorithm to handle COCO-M with predictions, adapting to non‑stationarity and prediction accuracy",
+   "Reduces memory to delay, treating state‑dependent gradients as delayed feedback",
+   "Achieves O(1) regret with perfect predictions and sublinear constraint violation (O(√T) or O(log T))",
+   "Lifts prior restrictive assumptions such as functional separability"
+  ],
+  "why_it_matters": "Advances theoretical foundations for stateful online learning and non‑stochastic control, enabling more efficient algorithms in settings with budget constraints and delayed feedback.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "online_convex_optimization",
+   "memory_to_delay",
+   "optimistic_algorithms",
+   "constraint_violation"
+  ],
+  "importance": 3,
+  "id": "869f1c39dfa00113",
+  "url": "https://arxiv.org/abs/2611.08302v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:05:45Z",
+  "added": "2026-11-08T06:20:40.708230+00:00"
+ },
+ {
+  "headline": "First-Token Attraction in Mamba Dynamics",
+  "tldr": "The paper introduces an analytical framework for deep Mamba models, showing that the first token exerts a privileged attracting influence on subsequent tokens, leading to token clustering and attention-sink behavior.",
+  "key_points": [
+   "Mamba dynamics use full matrix-valued interaction coefficients, unlike scalar attention weights.",
+   "A high-dimensional invariant box and exit-time argument recover effective sign-definiteness.",
+   "The first token's direction attracts later tokens, causing clustering that intensifies with depth.",
+   "Findings extend to state-space models, causal attention, and classic time-series models.",
+   "Experiments on Falcon-Mamba-7B confirm increasing first-token concentration in deeper layers."
+  ],
+  "why_it_matters": "Understanding token attraction in Mamba architectures reveals fundamental differences from attention mechanisms, guiding better model design, debugging, and potential improvements in sequence modeling performance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Mamba",
+   "token dynamics",
+   "sequence models",
+   "deep learning"
+  ],
+  "importance": 3,
+  "id": "08ba5e43aa7a9794",
+  "url": "https://arxiv.org/abs/2611.08303v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:06:17Z",
+  "added": "2026-11-08T06:20:28.858964+00:00"
+ },
+ {
+  "headline": "RM-VLM: From Natural-Language Task Descriptions to Vision-Grounded Reward Machines",
+  "tldr": "A new framework uses LLMs to generate reward machines from natural language and VLMs to ground propositions in visual observations, improving RL performance on non‑Markovian tasks.",
+  "key_points": [
+   "LLM creates reward machine (RM) from plain‑text task description",
+   "Vision‑language model (VLM) serves as labeling function for visual inputs",
+   "VLM‑based value estimator provides dense rewards for RM transitions",
+   "Outperforms prior VLM‑based reward methods on grid‑world, manipulation, and 3D collection tasks"
+  ],
+  "why_it_matters": "It removes the need for hand‑crafted labeling functions, enabling scalable, vision‑grounded reinforcement learning on complex, temporally extended tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "reward_machines",
+   "vision_language_models",
+   "large_language_models"
+  ],
+  "importance": 3,
+  "id": "349418f5841db7d1",
+  "url": "https://arxiv.org/abs/2611.08308v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:10:10Z",
+  "added": "2026-11-08T06:20:16.739090+00:00"
+ },
+ {
+  "headline": "Multitask Learning with Syntax Augmentation Boosts Sentiment Polarity Classification",
+  "tldr": "Contrastive-MTL integrates syntactic knowledge during training, outperforming baseline sentiment models on 10 of 11 multilingual datasets while being up to 9× faster at inference.",
+  "key_points": [
+   "Two MTL strategies: Standard-MTL (explicit parsing) and Contrastive-MTL (implicit syntax via contrastive loss).",
+   "Contrastive-MTL beats syntax‑naive baselines on 10/11 datasets and outperforms rule‑based pipelines while eliminating runtime parsing.",
+   "Evaluated on 11 datasets across 7 languages using four sequence‑labeling encodings.",
+   "Achieves 1.5–9× speedup at evaluation compared to external parsers."
+  ],
+  "why_it_matters": "Shows that implicit syntactic supervision can replace costly parsing at inference, enabling faster, more accurate multilingual sentiment analysis—a key step for scalable NLP applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "sentiment-analysis",
+   "multitask-learning",
+   "syntax-augmentation",
+   "multilingual"
+  ],
+  "importance": 3,
+  "id": "e060e16e46b21f22",
+  "url": "https://arxiv.org/abs/2611.08323v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:19:09Z",
+  "added": "2026-11-08T06:20:05.074965+00:00"
+ },
+ {
+  "headline": "Cultural Adaptation within Repeated Social Interactions",
+  "tldr": "The paper shows that large language models can continuously learn cultural norms through repeated social interactions, using memory mechanisms to adapt across languages and settings.",
+  "key_points": [
+   "Memory mechanisms enable longitudinal learning in LLMs",
+   "Adaptation transfers to new social contexts",
+   "Multilingual norm assimilation demonstrated in five languages"
+  ],
+  "why_it_matters": "Understanding and improving cultural competence of LLMs is crucial for safe, inclusive deployment in diverse communities, reducing bias and enhancing user experience.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "cultural_adaptation",
+   "LLM",
+   "social_interaction",
+   "multilingual"
+  ],
+  "importance": 3,
+  "id": "8461c3c1145090f4",
+  "url": "https://arxiv.org/abs/2611.08334v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:23:30Z",
+  "added": "2026-11-08T06:19:52.617301+00:00"
+ },
+ {
+  "headline": "USB Gym: A Gymnasium Testbed for Closed-Loop Ultrasound View Matching",
+  "tldr": "A new simulation testbed (USB Gym) evaluates combined published methods for guiding ultrasound probes, showing current approaches still fall far short of optimal positioning.",
+  "key_points": [
+   "USB Gym simulates ultrasound from public CT scans with organ texture rendering.",
+   "The guide integrates 20 published methods across segmentation, control, and reward slots.",
+   "Only an SSIM-based reward modestly improved performance, achieving 13.7 mm error vs. 1.5 mm oracle.",
+   "Combined methods still leave the probe far from target view, highlighting research gaps.",
+   "The testbed is open for adding new methods but has not been tested on real hardware."
+  ],
+  "why_it_matters": "Provides a standardized platform to benchmark and accelerate research on closed-loop ultrasound guidance, a critical step toward reliable AI-assisted medical imaging.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "ultrasound",
+   "simulation",
+   "reinforcement_learning",
+   "medical_imaging"
+  ],
+  "importance": 2,
+  "id": "df15e1707c11c44c",
+  "url": "https://arxiv.org/abs/2611.08352v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:34:53Z",
+  "added": "2026-11-08T06:19:40.833434+00:00"
+ },
+ {
+  "headline": "Unifying Central Flow, Rod Flow, and the Edge Coupling",
+  "tldr": "The paper shows that central flow and rod flow, two continuous-time models for gradient descent at the edge of stability, are derived from a unified edge coupling functional, and extends these flows to momentum methods like heavy ball and Adam.",
+  "key_points": [
+   "Edge coupling functional links central flow and rod flow as coarse-grainings at different time scales.",
+   "Rod flow captures the fastest time scale; central flow captures both fast and intermediate scales.",
+   "Derived analogous flows for momentum optimizers (heavy ball, Adam) and validated on neural networks.",
+   "Flows accurately track discrete gradient descent iterates across stable and edge-of-stability regimes."
+  ],
+  "why_it_matters": "Understanding and modeling the dynamics of gradient descent near the edge of stability helps improve optimizer design and training stability for deep neural networks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "gradient_descent",
+   "edge_of_stability",
+   "continuous_time",
+   "optimization"
+  ],
+  "importance": 3,
+  "id": "adba25baec917849",
+  "url": "https://arxiv.org/abs/2611.08358v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:37:58Z",
+  "added": "2026-11-08T06:19:28.781287+00:00"
+ },
+ {
+  "headline": "SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing",
+  "tldr": "SHORE combines learned stability predictions with on‑policy RL to pack 3D boxes faster and achieve higher space utilization, outperforming prior state‑of‑the‑art methods.",
+  "key_points": [
+   "Learns a stability probability for each placement using a 3D U‑Net trained on executed and simulated outcomes.",
+   "Integrates stability predictions into a discrete on‑policy actor‑critic, improving learning speed and utilization.",
+   "Achieves 73% space utilization in 0.4M steps vs. 1M steps without stability modeling; 0.734 vs. 0.588 on a 60‑box benchmark.",
+   "Demonstrated on a real robot with no extra search or simulation overhead."
+  ],
+  "why_it_matters": "Efficient, stable online bin packing is critical for logistics and manufacturing; SHORE shows that stability‑aware RL can significantly boost throughput while handling real‑world uncertainty.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "bin_packing",
+   "robotics",
+   "stability"
+  ],
+  "importance": 3,
+  "id": "66cee90f74968573",
+  "url": "https://arxiv.org/abs/2611.08364v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:42:31Z",
+  "added": "2026-11-08T06:19:16.923768+00:00"
+ },
+ {
+  "headline": "VisionSIM: Beyond Idealized Sensors - A Multi-Modal Simulator for Robot Perception",
+  "tldr": "VisionSIM is a physically grounded simulator that models raw measurements for cameras, event, SPAD, iToF/dToF, and thermal sensors, exposing realistic failure modes for robot perception research.",
+  "key_points": [
+   "Models raw physical measurement processes for diverse sensor modalities",
+   "Reproduces modality-specific failure modes such as LiDAR pileup, iToF phase wrapping, event camera refractory drops, and thermal emission history",
+   "Provides fine-grained control over sensor parameters for cross-modality comparison",
+   "Releases a large indoor dataset with synchronized raw measurements and rich ground‑truth annotations"
+  ],
+  "why_it_matters": "Accurate simulation of heterogeneous sensors enables researchers to develop and evaluate perception algorithms under realistic conditions, reducing the gap between simulation and real‑world deployment and accelerating progress in robotic perception.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "simulation",
+   "robotics",
+   "perception",
+   "multimodal"
+  ],
+  "importance": 3,
+  "id": "3bfa9ef44bb37e9c",
+  "url": "https://arxiv.org/abs/2611.08368v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:48:00Z",
+  "added": "2026-11-08T06:19:04.826438+00:00"
+ },
+ {
+  "headline": "MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation",
+  "tldr": "MOMASPLAT uses 3D Gaussian splatting and foundation models to synthesize full manipulation trajectories from unseen robot base poses, boosting mobile manipulation success rates.",
+  "key_points": [
+   "Synthesizes novel-view demonstrations including dynamic object interactions",
+   "Separately reconstructs static scene and manipulated object using multiview data",
+   "Combines 3D Gaussian splatting, foundation models, and kinematics retargeting",
+   "Doubles success rate over strongest baseline on real-world MoMa tasks"
+  ],
+  "why_it_matters": "Improves robustness of visuomotor policies to viewpoint changes, reducing costly data collection and enabling more reliable mobile manipulation in real-world environments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "mobile_manipulation",
+   "novel_view_synthesis",
+   "3D_gaussian_splatting",
+   "robotics"
+  ],
+  "importance": 3,
+  "id": "138e98fd0d20f007",
+  "url": "https://arxiv.org/abs/2611.08372v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:50:35Z",
+  "added": "2026-11-08T06:18:52.606080+00:00"
+ },
+ {
+  "headline": "GraphMuon: A Graph-Aware Optimizer Boosts GNN Training Speed",
+  "tldr": "GraphMuon adapts matrix-aware updates to the covariance of graph‑propagated features, cutting validation‑loss time‑to‑target by 1.3‑2.4× versus AdamW on large OGB benchmarks.",
+  "key_points": [
+   "Introduces GraphMuon, a graph‑metric extension of the Muon optimizer for GNNs.",
+   "Mitigates update amplification caused by graph‑propagated representations.",
+   "Delivers 1.32×‑2.42× faster validation‑loss convergence on three OGB datasets.",
+   "Improves time‑to‑target in 13 of 15 dataset‑architecture settings while keeping accuracy competitive.",
+   "Code released publicly on GitHub."
+  ],
+  "why_it_matters": "Efficient training of GNNs is critical for scaling graph AI to real‑world problems; a optimizer that speeds convergence without sacrificing performance can reduce compute costs and accelerate research and deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "graph neural networks",
+   "optimizers",
+   "machine learning",
+   "open source"
+  ],
+  "importance": 3,
+  "id": "a542b66df001bc09",
+  "url": "https://arxiv.org/abs/2611.08379v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:56:33Z",
+  "added": "2026-11-08T06:18:40.985786+00:00"
+ },
+ {
+  "headline": "Hybrid Machine Learning Framework Improves Imbalanced Landing-Phase Safety Event Prediction",
+  "tldr": "A hybrid LSTM autoencoder and XGBoost model achieves >0.90 macro recall for rare landing-phase safety events using NASA flight data.",
+  "key_points": [
+   "LSTM autoencoder learns normal approach behavior and provides reconstruction-error features",
+   "Features fused with statistical flight-history data and fed to class-weighted XGBoost",
+   "Evaluated on 53,750 NASA DASHlink approach windows across three airports",
+   "Mean macro recall >0.90 with strong class-balanced detection",
+   "Local specialization helps at data‑rich airports; pooled training benefits data‑sparse sites"
+  ],
+  "why_it_matters": "Accurate detection of rare landing‑phase safety events can guide proactive interventions, improve flight‑data monitoring, and enhance overall aviation safety, especially under highly imbalanced data conditions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "flight safety",
+   "imbalanced data",
+   "LSTM",
+   "XGBoost"
+  ],
+  "importance": 3,
+  "id": "83acb46db1b6c178",
+  "url": "https://arxiv.org/abs/2611.08386v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:04:26Z",
+  "added": "2026-11-08T06:18:28.845886+00:00"
+ },
+ {
+  "headline": "Social Humanoid: Hierarchical System for Socially Responsive Human-Humanoid Interaction",
+  "tldr": "A new hierarchical framework enables a 29-DoF Unitree G1 robot to generate and execute whole-body motions that respond to and anticipate human partners, backed by a 260‑hour HHI benchmark.",
+  "key_points": [
+   "High‑level policy uses tokenized shared representation for joint human‑humanoid motion modeling.",
+   "Low‑level whole‑body tracking controller executes generated motions on the Unitree G1 robot.",
+   "Two‑phase adaptive retargeting preserves contact dynamics and body scale across partners.",
+   "Benchmark created from five motion‑capture datasets totaling 260 hours of interactions.",
+   "Demonstrated coordinated, human‑aligned behavior in both simulation and real‑world tests."
+  ],
+  "why_it_matters": "Enables robots to act as collaborative partners rather than isolated agents, advancing socially aware robotics for assistive, industrial, and entertainment applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "humanoid",
+   "human‑robot interaction",
+   "whole‑body motion",
+   "adaptive retargeting"
+  ],
+  "importance": 3,
+  "id": "0c050a581d0d31fe",
+  "url": "https://arxiv.org/abs/2611.08407v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:14:06Z",
+  "added": "2026-11-08T06:18:16.994403+00:00"
+ },
+ {
+  "headline": "Conformal Prediction for Time-Dependent PDEs",
+  "tldr": "The paper analyzes why conformal prediction can fail for time-dependent PDE surrogates and proposes weighted conformal methods to regain finite-sample coverage over long horizons.",
+  "key_points": [
+   "Distributional singularity at nearby times makes exact coverage impossible in continuous settings.",
+   "In discretized models, total variation distance saturates exponentially with grid resolution, limiting spatial discretization.",
+   "Weighted conformal prediction can provide finite-sample coverage guarantees over growing time horizons.",
+   "Implications for safety‑critical applications like flood forecasting and financial risk management."
+  ],
+  "why_it_matters": "Reliable uncertainty quantification for time‑dependent physical systems is essential for safety‑critical decisions; this work clarifies fundamental limits and offers practical remedies.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "conformal_prediction",
+   "PDE",
+   "uncertainty_quantification",
+   "machine_learning"
+  ],
+  "importance": 3,
+  "id": "0de1e287f6deaed8",
+  "url": "https://arxiv.org/abs/2611.08409v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:15:42Z",
+  "added": "2026-11-08T06:18:04.765530+00:00"
+ },
+ {
+  "headline": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
+  "tldr": "The paper introduces ProofTrace, a graph‑based framework that identifies statistical signatures of AI‑generated mathematical proofs and can reliably distinguish them from human‑written papers, even after AI re‑wording.",
+  "key_points": [
+   "Constructed five cohorts of 8,281 papers covering human, AI‑reworded, and AI‑generated proofs.",
+   "ProofTrace extracts graph‑based features (GIPS) revealing fewer external citations and higher reliance on intermediate results in AI‑generated proofs.",
+   "The method reliably detects AI involvement, outperforming text‑only detectors that degrade with re‑wording."
+  ],
+  "why_it_matters": "As AI tools become common in mathematical research, reliable detection of AI‑assisted proofs is crucial for transparency, attribution, and maintaining trust in scholarly communication.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI4Math",
+   "proof detection",
+   "generative AI",
+   "arXiv"
+  ],
+  "importance": 3,
+  "id": "4a6b08df2fe76909",
+  "url": "https://arxiv.org/abs/2611.08412v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:17:18Z",
+  "added": "2026-11-08T06:17:52.861144+00:00"
+ },
+ {
+  "headline": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",
+  "tldr": "The paper introduces VLA‑Tug, a lightweight latent probe that detects failures early in Vision‑Language‑Action models, offering calibrated false‑alarm and missed‑detection bounds and predicting failure modes to improve real‑time task success.",
+  "key_points": [
+   "VLA‑Tug monitors latent layers of VLA backbones with minimal overhead for edge deployment.",
+   "Improves early failure detection by up to 30% at matched false‑positive rates versus strong baselines.",
+   "Maintains valid detection bounds in up to 86% of runs under unseen task shifts, compared to ≤21% for baselines.",
+   "Predicts failure mode, boosting top‑3 accuracy on unseen tasks by up to 44% over a majority baseline.",
+   "Release of a 3,180‑episode annotated manipulation dataset for future latent failure detection research."
+  ],
+  "why_it_matters": "Reliable failure detection is crucial for deploying embodied AI systems safely in real‑world environments, where undetected errors can cause equipment damage or safety hazards. VLA‑Tug provides a practical, low‑cost monitoring solution that enhances robustness and enables corrective actions during operation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language",
+   "failure detection",
+   "embodied AI",
+   "latent probing"
+  ],
+  "importance": 3,
+  "id": "5dce3e19e4daaa42",
+  "url": "https://arxiv.org/abs/2611.08425v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:21:07Z",
+  "added": "2026-11-08T06:17:41.053884+00:00"
+ },
+ {
+  "headline": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+  "tldr": "A comprehensive survey of mechanistic interpretability methods, their role in AI safety, and a proposed framework for evaluating such work.",
+  "key_points": [
+   "Defines mechanistic interpretability concepts (features, polysemanticity, circuits).",
+   "Reviews methods for feature extraction, circuit discovery, causal verification, and training-data attribution.",
+   "Proposes a unified evaluation framework and outlines six research orientations.",
+   "Discusses how mechanistic insights can aid safety tasks like knowledge editing, steering, and monitoring."
+  ],
+  "why_it_matters": "Understanding the internal workings of neural networks is crucial for building reliable safety measures, enabling better control, prediction, and mitigation of harmful behaviors in increasingly powerful AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "interpretability",
+   "AI safety",
+   "mechanistic",
+   "research survey"
+  ],
+  "importance": 3,
+  "id": "3b623e3c625ade34",
+  "url": "https://arxiv.org/abs/2611.08438v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:30:54Z",
+  "added": "2026-11-08T06:17:28.584845+00:00"
+ },
+ {
+  "headline": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+  "tldr": "ReproBridge introduces a standardized artifact design and workflow that boosts ML experiment reproduction success from 76.4% to 92.6% while cutting downstream API costs.",
+  "key_points": [
+   "Standardized artifact includes refined code, environment setup, launchers, and guide.",
+   "ReproBridge-Bench offers 1,029 tasks from 387 experiments across 36 papers.",
+   "Refined artifacts raise mean reproduction success to >90% for four models.",
+   "API spending drops by ~20% and success-rate variance narrows dramatically.",
+   "Ablation shows code and environment components are most critical."
+  ],
+  "why_it_matters": "Improving reproducibility accelerates trustworthy AI research, reduces wasted compute resources, and provides a clear benchmark for future reproducibility tools.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reproducibility",
+   "ML tooling",
+   "benchmark",
+   "automation"
+  ],
+  "importance": 3,
+  "id": "6d7cd387b9498c15",
+  "url": "https://arxiv.org/abs/2611.08452v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:45:36Z",
+  "added": "2026-11-08T06:17:16.604440+00:00"
+ },
+ {
+  "headline": "On-policy Distillation (OPD) vs. GRPO: Compute Efficiency Analysis",
+  "tldr": "OPD generally lags behind GRPO in FLOP efficiency, but when using the student’s own GRPO checkpoint as teacher, OPD can achieve the same accuracy with up to 50× fewer FLOPs, and multi‑teacher OPD can cut total compute by over 40% across domains.",
+  "key_points": [
+   "OPD with external teacher is less FLOP‑efficient than GRPO and can inflate response length.",
+   "Using the student’s own GRPO checkpoint as teacher lets OPD match accuracy with ~50× fewer distillation FLOPs.",
+   "Multi‑teacher OPD consolidates domain‑specific GRPO experts, costing only 5–8% of specialist training FLOPs.",
+   "Combined specialist training + distillation saves 42% total FLOPs for a 2‑domain mix."
+  ],
+  "why_it_matters": "Shows how strategic teacher selection and multi‑teacher distillation can dramatically reduce training compute, informing cost‑effective model development and deployment strategies.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "on-policy distillation",
+   "GRPO",
+   "compute efficiency",
+   "multi-teacher"
+  ],
+  "importance": 3,
+  "id": "092e4f7d82d531bc",
+  "url": "https://arxiv.org/abs/2611.08453v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:47:05Z",
+  "added": "2026-11-08T06:17:04.715959+00:00"
+ },
+ {
+  "headline": "Finite Experiments Can Certify Integrated Information in Stochastic Networks",
+  "tldr": "The paper shows when integrated information (Φ) can be identified, measured, and certified from limited, noisy experiments, revealing both possibilities and limits in small stochastic networks.",
+  "key_points": [
+   "Identifiability of Φ is proven for 4‑ and 5‑unit stochastic networks with known ground truth.",
+   "Even networks with identical input‑output behavior can be distinguished with 4‑53 trials via internal recordings.",
+   "Partial observation imposes precision floors (0.30‑1.02 bits) that cannot be reduced by larger sample sizes.",
+   "Φ exhibits sharp edges: tiny mechanism changes can cause 25‑100% shifts, and ~1% of near‑perfect surrogate models misreport Φ by >20%."
+  ],
+  "why_it_matters": "Understanding the limits of measuring integrated information informs AI interpretability, auditing, and consciousness assessments, highlighting when mechanistic claims are reliable or vulnerable to hidden uncertainties.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "integrated_information",
+   "interpretability",
+   "causal_inference",
+   "AI_auditing"
+  ],
+  "importance": 3,
+  "id": "79391932843481ba",
+  "url": "https://arxiv.org/abs/2611.08469v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:55:31Z",
+  "added": "2026-11-08T06:16:52.736602+00:00"
+ },
+ {
+  "headline": "Scientist World: Executable Research Environments for AI-Scientists",
+  "tldr": "A new platform turns 1,000 research papers into runnable environments, letting AI-Scientists benchmark against human results and improve their research capabilities.",
+  "key_points": [
+   "Transforms each paper into an executable baseline environment",
+   "Releases 1,000 verified research worlds for AI-Scientist evaluation",
+   "AI-Scientists outperform human authors 74% of the time in these tests",
+   "Small model gains 158% performance boost to match frontier models"
+  ],
+  "why_it_matters": "Provides a standardized, runnable benchmark for AI-driven scientific discovery, accelerating AI-Scientist development and enabling measurable progress against human research.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "AI-Scientist",
+   "research automation",
+   "executable papers",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "731cb5af224f8f57",
+  "url": "https://arxiv.org/abs/2611.08478v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:58:17Z",
+  "added": "2026-11-08T06:16:40.581791+00:00"
+ },
+ {
+  "headline": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+  "tldr": "User embeddings can be decomposed into sparse, interpretable behavioral modes using sparse dictionary learning, enabling post‑hoc interpretability and zero‑shot audience queries.",
+  "key_points": [
+   "Proposes that dense user embeddings are sparse superpositions of understandable behavioral modes.",
+   "Sparse autoencoders reliably recover these modes, outperforming classical sparse baselines on synthetic and real data.",
+   "Recovered modes can be automatically labeled in natural language, allowing zero‑shot audience retrieval without text‑trained models.",
+   "The approach is model‑agnostic and requires no changes to existing embedding pipelines."
+  ],
+  "why_it_matters": "Improves transparency and control in recommendation and personalization systems, helping engineers diagnose, audit, and query user representations without retraining models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "user_embeddings",
+   "interpretability",
+   "sparse_autoencoders",
+   "recommendation"
+  ],
+  "importance": 3,
+  "id": "8b4d884faceb643e",
+  "url": "https://arxiv.org/abs/2611.08487v1",
+  "source": "arXiv",
+  "date": "2026-11-05T18:59:42Z",
+  "added": "2026-11-08T06:16:28.707811+00:00"
+ },
+ {
+  "headline": "How do you build visibility through open source contributions?",
+  "tldr": "A MSc CS student asks how to gain credibility in AI/ML by contributing to established open‑source projects, especially in 3D computer vision, and seeks advice on challenges and finding impactful projects.",
+  "key_points": [
+   "Contributing to well‑known open‑source projects is seen as a stronger signal than solo repos.",
+   "New contributors face challenges locating projects where their work will be noticed.",
+   "Advice is sought on strategies for visibility, especially for 3D CV and applied AI fields."
+  ],
+  "why_it_matters": "Understanding how emerging researchers can effectively showcase their skills helps grow the open‑source ecosystem and ensures talent is recognized, which benefits both individuals and the broader AI community.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "open_source",
+   "visibility",
+   "career",
+   "3D_vision"
+  ],
+  "importance": 1,
+  "id": "3ab0be9dcea10b84",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xp90lz/how_do_you_build_visibility_through_open_source/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T09:55:15+00:00",
+  "added": "2026-11-08T06:16:16.653710+00:00"
+ },
+ {
+  "headline": "Looking to connect with people working on Embodied AI, Humanoid Robotics & Cognitive Architectures",
+  "tldr": "A Reddit user seeks collaborators and discussion partners in embodied AI, humanoid robotics, and cognitive architecture research.",
+  "key_points": [
+   "Focus on embodied AI systems and humanoid robots",
+   "Interest in robot foundation models, VLMs, VLAs, world models, and RL",
+   "Open invitation for networking, idea exchange, and potential collaborations"
+  ],
+  "why_it_matters": "Building connections across these interdisciplinary fields can accelerate progress toward more capable and adaptable robotic agents, bridging gaps between AI research and physical embodiment.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "embodied_ai",
+   "robotics",
+   "cognitive_architecture",
+   "humanoid"
+  ],
+  "importance": 2,
+  "id": "996a93771b48b024",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpp7z5/looking_to_connect_with_people_working_on/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T21:49:56+00:00",
+  "added": "2026-11-08T06:16:04.635280+00:00"
+ },
+ {
+  "headline": "Can I become an ML/AI Engineer with a BS Mathematics and Data Science degree instead of Computer Science?",
+  "tldr": "A student with a BS in Mathematics & Data Science asks if the degree is sufficient for an ML/AI engineering career and what extra CS fundamentals might be needed.",
+  "key_points": [
+   "Degree covers calculus, linear algebra, statistics, Python, OOP, ML, DL, and data science basics.",
+   "Employers may prioritize practical ML projects and portfolio over the specific degree title.",
+   "Supplementary CS topics like algorithms, data structures, systems design, and software engineering are valuable.",
+   "A master's in AI or CS can boost credentials but is not strictly required if you build strong hands‑on experience."
+  ],
+  "why_it_matters": "Clarifies the viability of non‑CS academic paths for entering the fast‑growing AI/ML job market, guiding students and hiring practices.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "career",
+   "education",
+   "machine-learning",
+   "data-science"
+  ],
+  "importance": 2,
+  "id": "d9d8db68b7ff07f7",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqcl2h/can_i_become_an_mlai_engineer_with_a_bs/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T17:59:30+00:00",
+  "added": "2026-11-08T06:15:52.807702+00:00"
+ },
+ {
+  "headline": "ICLR27 reviewer flags paper as too similar to author's prior workshop version",
+  "tldr": "A reviewer at ICLR noted that a submitted paper is essentially the same as the author's earlier workshop/arXiv version, despite a new title and method name.",
+  "key_points": [
+   "Author revised and renamed a previously workshop‑presented work for ICLR submission.",
+   "Reviewer identified the new submission as closely matching the earlier version.",
+   "The reviewer requests a direct comparison, raising concerns about anonymity and novelty.",
+   "The author reports low scores and limited chances of acceptance."
+  ],
+  "why_it_matters": "Highlights challenges in maintaining anonymity and demonstrating novelty when re‑submitting substantially revised work to top conferences, a common issue for researchers navigating the peer‑review process.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "peer_review",
+   "ICLR",
+   "paper_submission",
+   "research_ethics"
+  ],
+  "importance": 2,
+  "id": "a30825e60538f546",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpf4t6/iclr27_reviewer_says_my_paper_is_too_close_to_the/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T15:09:18+00:00",
+  "added": "2026-11-08T06:15:40.888585+00:00"
+ },
+ {
+  "headline": "ICLR 2027 Reviews are out [D]",
+  "tldr": "The review scores for papers submitted to ICLR 2027 have been released.",
+  "key_points": [
+   "ICLR 2027 review results are publicly available",
+   "Scores include 3/3/2 for a submission by user mr_carlduke",
+   "Community can discuss the outcomes via comments"
+  ],
+  "why_it_matters": "Review transparency helps researchers gauge the conference's standards and informs future submissions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "ICLR2027",
+   "reviews"
+  ],
+  "importance": 2,
+  "id": "6da5478bf2b14783",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpc9sh/iclr_2027_reviews_are_out_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-06T13:03:09+00:00",
+  "added": "2026-11-08T06:15:28.730869+00:00"
+ },
+ {
+  "headline": "ICLR 2027 Rebuttal response discussion on r/MachineLearning",
+  "tldr": "A Reddit user shares their progress on a rebuttal for an ICLR 2027 paper, asking others about their status and revisions.",
+  "key_points": [
+   "User reports scores of 3/3/2 and is drafting a rebuttal to improve the average rating.",
+   "They are revising the paper and adding new measurements as requested by reviewers.",
+   "The post seeks community input on rebuttal strategies and readability concerns."
+  ],
+  "why_it_matters": "Rebuttal and revision processes are a core part of academic peer review, influencing the quality and acceptance of AI research.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR2027",
+   "rebuttal",
+   "paper_revision"
+  ],
+  "importance": 1,
+  "id": "7f39a054c74c10b6",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqqryx/iclr_2027_rebuttal_response_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T05:27:25+00:00",
+  "added": "2026-11-08T06:15:16.821476+00:00"
+ },
+ {
+  "headline": "LeanContext Benchmark Introduces Disentangled Mathematical and Environment Contexts for Whole-Proof Generation",
+  "tldr": "LeanContext provides 129,826 Lean proof generation tasks, showing that including mathematical context during training improves model performance, boosting Pass@32 by up to 1.70% for LLaDA and Llama.",
+  "key_points": [
+   "Benchmark of 129,826 whole-proof generation problems in Lean.",
+   "Separates Mathematical Context (MC) from Environment Context (EC) for analysis.",
+   "Models trained with MC outperform alternatives, improving Pass@32 by 1.40% (LLaDA) and 1.70% (Llama).",
+   "Selection experiment runs without target proofs, keeping checkpoints and budgets constant."
+  ],
+  "why_it_matters": "Understanding how different types of context affect neural theorem proving helps build more efficient and accurate AI proof assistants, advancing formal verification and automated mathematics.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "theorem_proving",
+   "benchmark",
+   "Lean",
+   "AI_models"
+  ],
+  "importance": 3,
+  "id": "5aa76bc961fc6477",
+  "url": "https://arxiv.org/abs/2611.08277v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:44:59Z",
+  "added": "2026-11-08T06:15:04.624342+00:00"
+ },
+ {
+  "headline": "Generative Model of Contextual Integrity Explores Appropriate vs. Inappropriate Information Sharing",
+  "tldr": "Researchers built a generative model using large language models to simulate conversations and study how contextual norms affect information disclosure and refusal.",
+  "key_points": [
+   "Simulated dialogues between two LLM actors, one holding private data and the other requesting it.",
+   "Disclosures follow contextual norms: information is shared with rightful recipients but also sometimes leaked to unauthorized parties.",
+   "The model varies outcomes based on situation, decision logic, disposition, and the underlying language model.",
+   "Provides a framework to analyze how privacy norms evolve through conversational interaction."
+  ],
+  "why_it_matters": "Understanding how AI systems handle privacy-sensitive information under different contextual norms helps design safer conversational agents and informs policy on data sharing.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "contextual integrity",
+   "privacy",
+   "large language models",
+   "information sharing"
+  ],
+  "importance": 3,
+  "id": "7ad560881df80978",
+  "url": "https://arxiv.org/abs/2611.08284v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:48:31Z",
+  "added": "2026-11-08T06:14:52.891269+00:00"
+ },
+ {
+  "headline": "LLM-Assisted Label Noise Correction Boosts EEG Sleep Stage Classification",
+  "tldr": "Using LLaMA 3.1 to flag low‑confidence EEG epochs during training improves TinySleepNet accuracy from 81.8% to 84.6% on Sleep‑EDF.",
+  "key_points": [
+   "TinySleepNet trained first, then low‑confidence epochs sent to LLaMA 3.1 with spectral features and context",
+   "LLM judges epochs against AASM guidelines, labeling them RELIABLE or SUSPICIOUS",
+   "Suspicious epochs are removed and TinySleepNet retrained on cleaned data",
+   "Accuracy rises to 84.6% and Macro F1 to 77.4%, especially better REM detection",
+   "Inference model remains lightweight (1.3 M parameters) for real‑time wearables"
+  ],
+  "why_it_matters": "Improving label quality with an LLM yields measurable gains in clinical sleep monitoring without increasing inference cost, demonstrating a practical way to combine LLM reasoning with lightweight signal models.",
+  "category": "paper",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "sleep",
+   "EEG",
+   "LLM",
+   "label_noise"
+  ],
+  "importance": 3,
+  "id": "2c82ad78a3640b46",
+  "url": "https://arxiv.org/abs/2611.08311v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:12:05Z",
+  "added": "2026-11-08T06:14:40.863503+00:00"
+ },
+ {
+  "headline": "Interpretable many-body interaction laws for collective motion from few trajectories",
+  "tldr": "The paper introduces directional atomic cluster expansion (dACE), an equivariant model that accurately learns interpretable many-body interaction laws in collective motion from limited data, outperforming existing neural approaches.",
+  "key_points": [
+   "dACE adapts the atomic cluster expansion to self‑propelled agents, providing a systematic, equivariant expansion of acceleration into 1‑, 2‑, 3‑body terms plus a self term.",
+   "On simulated 2D/3D collectives, dACE recovers interaction laws body order by order with far less data than the competing SocialNet model.",
+   "Applied to real zebrafish and golden shiner data, dACE yields more consistent and interpretable interaction laws, revealing a 3‑body term that counteracts pairwise response in dense neighborhoods.",
+   "The study shows that standard next‑step prediction metrics mainly capture self‑propulsion and noise, proposing more robust error measures for learning interactions."
+  ],
+  "why_it_matters": "Understanding many‑body interaction rules in animal groups enables better modeling of collective behavior, informs the design of swarm robotics, and provides a transparent alternative to black‑box neural models, advancing both biology and AI research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "collective motion",
+   "machine learning",
+   "interaction modeling",
+   "biology"
+  ],
+  "importance": 3,
+  "id": "f0d714fbea6d31d2",
+  "url": "https://arxiv.org/abs/2611.08314v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:12:40Z",
+  "added": "2026-11-08T06:14:28.960878+00:00"
+ },
+ {
+  "headline": "Discovering Learning Rules that Shape Others",
+  "tldr": "The paper introduces DUOS, a meta-learned update rule that enables an agent in general-sum games to shape opponents without accessing their parameters, achieving top performance in benchmarks.",
+  "key_points": [
+   "DUOS meta-trains an update rule using only the agent's own experience.",
+   "First method to discover opponent-shaping rules for general-sum games without opponent information.",
+   "Outperforms prior methods, ranking 1st in normalized mean score and self‑play tournaments.",
+   "Builds on meta‑learning successes like DiscoRL in single‑agent RL."
+  ],
+  "why_it_matters": "It demonstrates that effective opponent shaping can be achieved without invasive access to opponents, broadening applicability of meta‑learned update rules to competitive multi‑agent environments and potentially improving cooperation and safety in AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "meta-learning",
+   "opponent-shaping",
+   "reinforcement-learning",
+   "general-sum-games"
+  ],
+  "importance": 3,
+  "id": "deed6a32c40e0b60",
+  "url": "https://arxiv.org/abs/2611.08335v1",
+  "source": "arXiv",
+  "date": "2026-11-05T17:23:34Z",
+  "added": "2026-11-08T06:14:16.797341+00:00"
+ },
+ {
+  "headline": "GRFNet: Open‑source PyTorch model for multichannel EEG time‑series classification",
+  "tldr": "A new lightweight PyTorch architecture (GRFNet) for EEG classification builds on ROCKET with random frozen convolutions and learnable spatial filters, released as open source.",
+  "key_points": [
+   "Uses random, untrained convolutional kernels (ROCKET‑style) plus learnable spatial filters initialized from electrode layout",
+   "Model is tiny (3,847 parameters) and works with any input length or sampling rate",
+   "Author will benchmark against EEGNet and ShallowConvNet on PhysioNet EEGMMIDB (109 subjects) with subject‑independent splits"
+  ],
+  "why_it_matters": "Provides a highly efficient, adaptable baseline for EEG decoding that can be easily extended and compared, encouraging reproducible research and faster experimentation in brain‑computer interface studies.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "EEG",
+   "time-series",
+   "PyTorch",
+   "open-source"
+  ],
+  "importance": 2,
+  "id": "dca9973e5de9f736",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqqj67/grfnet_pytorch_model_for_multichannel_timeseries/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T05:13:11+00:00",
+  "added": "2026-11-08T06:14:04.771923+00:00"
+ },
+ {
+  "headline": "Advice needed regarding classical ML conference submission",
+  "tldr": "A researcher wonders if classical ML topics like SVM and logistic regression are still welcome at top conferences after their paper was rejected as a \"done and dusted\" topic.",
+  "key_points": [
+   "The author has original findings in classical ML (SVM, logistic regression).",
+   "Reviewers acknowledged innovation but asked for more experiments.",
+   "Area Chair rejected the paper, claiming the topic is exhausted.",
+   "ACL showed more openness, inviting resubmission with revisions.",
+   "Question raised about the viability of classical ML at top venues versus deep learning/LLM work."
+  ],
+  "why_it_matters": "Highlights a perceived shift in top AI conferences toward deep learning and large language models, potentially marginalizing classical ML research and affecting publication strategies for researchers in that space.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "classical-ml",
+   "conference-submission",
+   "research-publication",
+   "AI-trends"
+  ],
+  "importance": 1,
+  "id": "40fe50c026dc2a63",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqqrof/advice_needed_regarding_classical_ml_conference/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T05:26:57+00:00",
+  "added": "2026-11-08T06:13:52.666836+00:00"
+ },
+ {
+  "headline": "After the midterms, things are looking rocky for Elon Musk and data centers",
+  "tldr": "The recent U.S. midterm elections create uncertainty for Elon Musk's ventures and the data center industry.",
+  "key_points": [
+   "Midterm results may affect regulatory and policy environment for Musk's companies.",
+   "Data center operators could face new political or economic headwinds.",
+   "Overall outlook for both Musk's projects and data center sector appears uncertain."
+  ],
+  "why_it_matters": "Political shifts can influence tech policy, funding, and infrastructure decisions that impact major players like Musk and the broader data center market.",
+  "category": "policy",
+  "companies": [
+   "Elon Musk"
+  ],
+  "tags": [
+   "midterms",
+   "data centers",
+   "regulation"
+  ],
+  "importance": 2,
+  "id": "ed263cbbe1a45523",
+  "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 07 Nov 2026 22:07:22 +0000",
+  "added": "2026-11-08T06:13:40.839500+00:00"
+ },
+ {
+  "headline": "Goodbye Claude, Hello Pi",
+  "tldr": "A long-time Claude Code user abandons the tool for Pi due to workflow frustrations and limited IDE integration.",
+  "key_points": [
+   "User cites issues with Claude Code's AGENTS.md support and single-session IDE connection.",
+   "Claude Code's VSCode extension has broken slash commands and lacks custom status line support.",
+   "The author switches to Pi, hoping for a smoother coding assistant experience."
+  ],
+  "why_it_matters": "Highlights user pain points in AI coding assistants, signaling potential churn for Anthropic's Claude Code and interest in emerging alternatives like Pi.",
+  "category": "product",
+  "companies": [
+   "Anthropic",
+   "Pi"
+  ],
+  "tags": [
+   "Claude",
+   "Pi",
+   "coding-assistant",
+   "VSCode"
+  ],
+  "importance": 2,
+  "id": "e66f4eeac8f3ba07",
+  "url": "https://caleb.software/posts/claude-to-pi.html",
+  "source": "Hacker News",
+  "date": "2026-11-08T03:11:48Z",
+  "added": "2026-11-08T06:13:28.813438+00:00"
+ },
+ {
+  "headline": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+  "tldr": "A bug in Anthropic's Claude Code feature leaked passwords across over a thousand public GitHub repositories.",
+  "key_points": [
+   "The \"Don't Ask Again\" setting unintentionally returned stored credentials.",
+   "1,122 public GitHub files were found containing exposed passwords.",
+   "Anthropic has been notified and is working on a fix."
+  ],
+  "why_it_matters": "Exposing credentials in public code can lead to large-scale security breaches, highlighting the need for rigorous testing of AI code assistants.",
+  "category": "other",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "security",
+   "GitHub",
+   "passwords",
+   "AI-assistant"
+  ],
+  "importance": 2,
+  "id": "5186d80b7eef5626",
+  "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+  "source": "Hacker News",
+  "date": "2026-11-07T20:45:32Z",
+  "added": "2026-11-08T06:13:17.194555+00:00"
+ },
+ {
   "headline": "Enhancing Local and Global Structure in Compressed AI Agent Memory",
   "tldr": "The paper introduces locality‑aware quantization (LAQ), a new quantizer that improves both local neighbor fidelity and global memory structure when compressing embedding vectors, achieving higher global fidelity without increasing storage size.",
   "key_points": [
