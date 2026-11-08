@@ -1,5 +1,243 @@
 [
  {
+  "headline": "Scaling Neural Motor Decoding via Decoupled Behavioral Pretraining",
+  "tldr": "The BEEMO framework shows that adding unpaired behavioral data to neural decoding models improves performance and transferability, offering a cheaper way to scale motor decoding without large paired neural datasets.",
+  "key_points": [
+   "BEEMO combines paired neural-behavioral recordings with unpaired behavioral data via cross‑attention.",
+   "Unpaired behavioral pretraining alone matches performance of models pretrained on much larger neural datasets.",
+   "Incorporating even small amounts of target‑task behavioral data further boosts decoding accuracy.",
+   "The approach enhances cross‑subject and cross‑task generalization for intracortical motor decoding."
+  ],
+  "why_it_matters": "Neural decoding for brain‑computer interfaces typically requires costly, invasive recordings. By leveraging abundant behavioral data, BEEMO reduces data collection costs and accelerates the development of more generalizable motor decoding models, potentially speeding up clinical BCI applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "neural decoding",
+   "motor cortex",
+   "behavioral pretraining",
+   "brain-computer interface"
+  ],
+  "importance": 3,
+  "id": "17deee47f0880670",
+  "url": "https://arxiv.org/abs/2611.08263v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:37:10Z",
+  "added": "2026-11-08T13:38:53.337143+00:00"
+ },
+ {
+  "headline": "DART: Domain-Agnostic Residual Transfer for Generalist Anomaly Detection",
+  "tldr": "DART is a plug‑in framework that disentangles anomaly‑relevant and domain‑specific residuals, improving generalist anomaly detection across unseen domains.",
+  "key_points": [
+   "Introduces a Residual Disentanglement Module to separate anomaly cues from domain noise.",
+   "Uses Cross‑Domain Meta‑Training to make the disentanglement effective across source domains.",
+   "Architecture‑agnostic and can be added to existing GAD pipelines.",
+   "Shows consistent performance gains on MVTec AD, VisA, and BraTS datasets, especially under strong domain shifts."
+  ],
+  "why_it_matters": "Improving cross‑domain anomaly detection enables reliable defect spotting in real‑world settings where data distribution varies, reducing false alarms and expanding the applicability of GAD systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "anomaly_detection",
+   "domain_adaptation",
+   "computer_vision",
+   "meta_learning"
+  ],
+  "importance": 3,
+  "id": "9fe1be388269a301",
+  "url": "https://arxiv.org/abs/2611.08271v1",
+  "source": "arXiv",
+  "date": "2026-11-05T16:43:20Z",
+  "added": "2026-11-08T13:38:41.482363+00:00"
+ },
+ {
+  "headline": "3321 ICLR, should I rebuttal? [R]",
+  "tldr": "The author questions a reviewer’s harsh feedback on their paper’s abstract and definitions, noting that other reviewers understood the work and wonders why this reviewer struggled.",
+  "key_points": [
+   "One reviewer criticized the abstract and definitions as unclear.",
+   "The other three reviewers understood and approved the paper.",
+   "The author is considering whether to submit a rebuttal.",
+   "The post reflects frustration with inconsistent peer review."
+  ],
+  "why_it_matters": "Highlights challenges in the academic peer‑review process, especially at high‑profile conferences like ICLR, where reviewer disagreements can affect paper acceptance and the dissemination of new research.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "peer_review",
+   "ICLR",
+   "rebuttal",
+   "academic_conference"
+  ],
+  "importance": 2,
+  "id": "e91e758a7d783608",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqrv2a/3321_iclr_should_i_rebuttal_r/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T06:34:04+00:00",
+  "added": "2026-11-08T13:38:29.206546+00:00"
+ },
+ {
+  "headline": "Pre-registered replication of \"Dreaming neural networks\" (Hopfield unlearning, Fachechi et al. 2019) submitted to ReScience C",
+  "tldr": "A single‑researcher re‑implemented the Hopfield dreaming (Hebbian‑unlearning) model, ran pre‑registered experiments on 1,000‑node networks, and found dreaming at t=10 boosts empirical capacity by ~3.9×, adding a control to isolate the effect.",
+  "key_points": [
+   "Re‑implementation of the Hopfield dreaming kernel J(t)=J(1+t)(1+tJ)⁻¹ in NumPy",
+   "Pre‑registered design with 10 seeds per condition, N=1,000",
+   "Dreaming at t=10 multiplies capacity by 3.86 (3.79–3.93); 9.06 on correlated patterns",
+   "Added a uniform‑shrink control to differentiate dreaming from simple coupling shrinkage",
+   "Submitted to ReScience C; code and data publicly available on GitHub and Software Heritage"
+  ],
+  "why_it_matters": "Provides an independent, reproducible verification of a influential Hopfield network learning mechanism, clarifies the role of dreaming versus simple weight scaling, and offers open resources for further research on associative memory models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "replication",
+   "Hopfield",
+   "neural networks",
+   "reproducibility"
+  ],
+  "importance": 2,
+  "id": "deaef4951372d7a9",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqw77i/r_preregistered_replication_of_dreaming_neural/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T11:20:10+00:00",
+  "added": "2026-11-08T13:38:17.535590+00:00"
+ },
+ {
+  "headline": "NeurIPS partners with SlidesLive for mandatory talk recordings",
+  "tldr": "NeurIPS requires presenters to use SlidesLive's recording service for their talks, raising questions about mandatory use and alternatives like AI‑generated videos.",
+  "key_points": [
+   "SlidesLive is the official recording partner for NeurIPS talks.",
+   "Presenters receive instructions to submit recordings through SlidesLive.",
+   "The requirement was not mentioned in earlier official NeurIPS communications.",
+   "Some presenters wonder if they can replace the service with AI‑generated videos."
+  ],
+  "why_it_matters": "Mandating a specific recording service impacts how researchers share their work, influences data ownership, and may set precedents for future conference logistics and AI‑generated content policies.",
+  "category": "policy",
+  "companies": [
+   "SlidesLive",
+   "NeurIPS"
+  ],
+  "tags": [
+   "recording",
+   "conference",
+   "AI‑generated video",
+   "policy"
+  ],
+  "importance": 2,
+  "id": "8e77446b8d2bba66",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqw2n9/neurips_slideslive_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T11:12:05+00:00",
+  "added": "2026-11-08T13:38:05.292758+00:00"
+ },
+ {
+  "headline": "Continual learning on 4 days of real news: Apertus-8B retains 90.7% accuracy vs 26.7% for LoRA",
+  "tldr": "Apertus-8B (Swiss AI) was updated nightly with real news and retained ~90% accuracy on day‑1 questions after four nights, while a LoRA baseline fell to ~27%, showing strong continual learning capability.",
+  "key_points": [
+   "Apertus-8B trained nightly on real news retains 90.7% accuracy on day‑1 queries after four nights",
+   "LoRA baseline drops to 26.7% accuracy on the same task",
+   "GSM8K performance stays roughly unchanged (≈69%) for the base model, LoRA falls to 4.4%",
+   "Dataset and benchmark released on Hugging Face for reproducibility"
+  ],
+  "why_it_matters": "Demonstrates that large language models can effectively incorporate new information incrementally without catastrophic forgetting, a key step toward truly up‑to‑date AI assistants.",
+  "category": "paper",
+  "companies": [
+   "Swiss AI"
+  ],
+  "tags": [
+   "continual_learning",
+   "apertus-8b",
+   "benchmark",
+   "huggingface"
+  ],
+  "importance": 3,
+  "id": "8b39073d26a0cd59",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xq748x/continual_learning_on_4_days_of_real_news_an_8b/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-07T14:03:52+00:00",
+  "added": "2026-11-08T13:37:53.268622+00:00"
+ },
+ {
+  "headline": "Locally trained VLA model with minimal attention based vision encoder",
+  "tldr": "A hobbyist shares a locally trained vision-language agent using a large recurrent state matrix and minimal attention, reporting training details and early performance.",
+  "key_points": [
+   "Model uses a 768x768 recurrent state matrix with per‑cell LSTM‑like gates",
+   "Total parameters: ~25.6M, half dedicated to a 49k‑token vocabulary decoder",
+   "Trained on ~200M tokens (out of a 600M token dataset) for ~150k steps",
+   "Achieved cross‑entropy loss around 4.5, plateauing after initial training",
+   "Includes visualizations of attention and state matrix in a demo video"
+  ],
+  "why_it_matters": "Demonstrates a low‑resource, locally run vision‑language architecture that explores massive recurrent state representations, offering insights for researchers interested in alternative to transformer‑based models and the impact of data quality on training.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "vision-language",
+   "attention",
+   "RNN",
+   "local_training"
+  ],
+  "importance": 2,
+  "id": "19691db265915409",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqrtcz/locally_trained_vla_model_with_minimal_attention/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T06:31:08+00:00",
+  "added": "2026-11-08T13:37:41.390719+00:00"
+ },
+ {
+  "headline": "Diffusion Models Generating Neural Network Weights – A Community POC",
+  "tldr": "A Reddit user demonstrates a proof‑of‑concept where a diffusion model is trained to generate neural network weights, enabling AI‑generated AI models for tasks like drawing or simple games.",
+  "key_points": [
+   "Concept: train diffusion models to output weight tensors instead of image pixels.",
+   "POC implementation released on GitHub (vagrillo/nngen) using Z.ai's GLM model.",
+   "Preliminary results show a small network capable of generating simple behaviors (e.g., drawing a man, Pong‑style game).",
+   "No existing papers found; the author seeks community collaboration."
+  ],
+  "why_it_matters": "If successful, this approach could automate the creation of specialized neural networks, lowering the barrier to custom model design and accelerating rapid prototyping of AI‑driven applications.",
+  "category": "paper",
+  "companies": [
+   "Z.ai"
+  ],
+  "tags": [
+   "diffusion",
+   "model_generation",
+   "weights",
+   "open_source"
+  ],
+  "importance": 2,
+  "id": "cfe1676c9df9d148",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqsl8d/what_if_diffusion_models_generates_neural_network/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T07:20:37+00:00",
+  "added": "2026-11-08T13:37:29.174019+00:00"
+ },
+ {
+  "headline": "Playable diffusion world model of Pokémon Red with System 1/2 agent harness",
+  "tldr": "A 16.7M‑parameter diffusion model learns to predict Pokémon Red frames and, combined with a dual‑system planner/executor agent, can autonomously play the game and earn the first gym badge.",
+  "key_points": [
+   "Diffusion U‑Net predicts next frame from last 4 screens; 16.7M params, 72×80 greyscale.",
+   "System 2 planner reads RAM, sets goals, and can query a local LLM; System 1 executor runs ten 1.58M‑param walking policies trained entirely in imagination.",
+   "Upsampler (0.72M) and colorizer (1.91M) convert greyscale output to watchable color frames.",
+   "Training required 50 GPU‑hours on a single RTX 4090; the agent achieved 30/30 gym‑badge runs in the real game.",
+   "Battle sequences remain a challenge, often ending early in the dreamed world."
+  ],
+  "why_it_matters": "Demonstrates that diffusion‑based world models can be combined with hierarchical agents to perform complex, long‑term gameplay without real‑world data, opening new avenues for sample‑efficient RL and AI‑driven game testing.",
+  "category": "other",
+  "companies": [
+   "Krafton",
+   "NVIDIA"
+  ],
+  "tags": [
+   "diffusion",
+   "world-model",
+   "reinforcement-learning",
+   "gaming"
+  ],
+  "importance": 3,
+  "id": "f1ed884ad405fe85",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqt0pk/i_trained_a_playable_diffusion_world_model_of/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-08T07:48:52+00:00",
+  "added": "2026-11-08T13:37:17.896440+00:00"
+ },
+ {
   "headline": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
   "tldr": "A new method enables safe RL to scale to massive parallel training by reconstructing episode-level safety costs from short rollouts, preserving performance while cutting wall‑clock time.",
   "key_points": [
