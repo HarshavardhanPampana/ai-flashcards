@@ -1,5 +1,1048 @@
 [
  {
+  "headline": "Grasp-TAGS: Task-Aware Grasp Selection via Critic Distillation for Prehensile Loco-Manipulation",
+  "tldr": "A new framework, Grasp-TAGS, uses a distilled critic to rank grasps before contact, boosting large-object rearrangement success from ~80% to ~90% in mobile manipulation tasks.",
+  "key_points": [
+   "Trains a PPO policy across multiple initial grasps and distills its critic into a lightweight grasp utility network.",
+   "Selects grasps based on predicted downstream utility, improving success rates by 9.97 percentage points.",
+   "Reduces final orientation errors for various objects in loco-manipulation scenarios."
+  ],
+  "why_it_matters": "Effective grasp selection is critical for mobile manipulators in service robotics and warehouse automation, where suboptimal grasps can cause task failure and inefficiency.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robotics",
+   "manipulation",
+   "reinforcement_learning"
+  ],
+  "importance": 2,
+  "id": "f4e16ceb961bd90a",
+  "url": "https://arxiv.org/abs/2611.09864v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:44:33Z",
+  "added": "2026-11-09T06:54:53.694168+00:00"
+ },
+ {
+  "headline": "FlowMoP: Stochastic Multi-Person Motion Prediction",
+  "tldr": "Introduces a conditional flow matching framework that generates diverse, interaction-aware future motions for multiple people, achieving state‑of‑the‑art results on several benchmarks.",
+  "key_points": [
+   "Uses conditional flow matching to produce a full predictive distribution for multi‑person motion.",
+   "B‑spline reparameterization compresses state space and enforces temporal smoothness.",
+   "Dual‑stream transformer conditions each agent on neighbor motion for social awareness.",
+   "Sets new state‑of‑the‑art on CMU‑Mocap (UMPM), 3DPW, and establishes baseline on WorldPose soccer dataset."
+  ],
+  "why_it_matters": "Provides a more realistic, stochastic approach to multi‑person motion forecasting, improving safety and planning for robotics, AR/VR, and autonomous systems that must anticipate diverse human behaviors.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "motion prediction",
+   "stochastic modeling",
+   "transformer",
+   "computer vision"
+  ],
+  "importance": 3,
+  "id": "2d56eca662384629",
+  "url": "https://arxiv.org/abs/2611.09882v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:56:41Z",
+  "added": "2026-11-09T06:54:41.871201+00:00"
+ },
+ {
+  "headline": "Generalist AI models outperform specialist policies in robot manipulation",
+  "tldr": "The paper introduces Agentic Manipulation Policies (AMPs) that let a generalist AI directly control robots, achieving state‑of‑the‑art zero‑shot success on RoboLab‑120 and CaP‑Gym, far surpassing specialist vision‑language‑action and world‑action models.",
+  "key_points": [
+   "AMP1 runs unchanged on single‑arm, bimanual, and mobile manipulators.",
+   "Zero‑shot success on RoboLab‑120: 85.6% vs. 49.2% (VLA) and 42.9% (WAM).",
+   "Agent develops its own grasping, pushing, and tool‑use strategies without demonstrations.",
+   "Adding a persistent memory store reduces failure rates by 4.6× on bimanual tasks."
+  ],
+  "why_it_matters": "Demonstrates that a single generalist model can reliably handle diverse robot tasks without task‑specific training, paving the way for more adaptable, cost‑effective robotic systems in industry and research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robot manipulation",
+   "generalist AI",
+   "zero-shot",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "c16f1fc2a5e46deb",
+  "url": "https://arxiv.org/abs/2611.09892v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:59:34Z",
+  "added": "2026-11-09T06:54:30.002529+00:00"
+ },
+ {
+  "headline": "How Much Conversation History Does an AI Agent Need?",
+  "tldr": "Study of how varying conversational context size affects token usage and benchmark performance across 1,100 BEAM questions, revealing diminishing returns with larger passage budgets and differing retention abilities of Qwen vs. Mistral.",
+  "key_points": [
+   "Mean scores improve as passage budget (token budget) increases, but gains diminish at higher budgets.",
+   "Qwen retains full conversational state better for direct requirements, but struggles with answers needing earlier context; Mistral performs poorly across conditions.",
+   "Pooled abstention scores can rise when passage budget shrinks, indicating trade‑offs between context length and confidence.",
+   "Experiments highlight the need to balance evidence retention with token efficiency when selecting memory budgets."
+  ],
+  "why_it_matters": "Understanding optimal context length helps developers design more efficient AI agents, reducing token costs while maintaining answer quality, which is crucial for scalable deployment of conversational systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "conversation_memory",
+   "token_efficiency",
+   "benchmarking",
+   "AI_agents"
+  ],
+  "importance": 3,
+  "id": "5672d087ddcfe9f1",
+  "url": "https://arxiv.org/abs/2611.09662v1",
+  "source": "arXiv",
+  "date": "2026-11-06T16:09:04Z",
+  "added": "2026-11-09T06:54:17.479966+00:00"
+ },
+ {
+  "headline": "MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory",
+  "tldr": "Introduces MemoryDojo, a benchmark that measures how malicious instructions can be stored and later retrieved by LLM agents' memory systems, showing all tested memories are vulnerable to poisoning.",
+  "key_points": [
+   "Memory systems improve long‑horizon LLM agent performance but create a new attack surface.",
+   "MemoryDojo provides 155 multi‑session trajectories across four domains and supports five memory architectures.",
+   "All evaluated memory systems are susceptible to poisoning, with varying downstream impact.",
+   "A memory‑aware poison optimization method boosts attack effectiveness, highlighting architectural differences."
+  ],
+  "why_it_matters": "Understanding and mitigating memory poisoning is crucial for safe deployment of LLM agents that rely on persistent memory, preventing malicious behavior from propagating across sessions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "agent memory",
+   "security",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "732ebdb28f2b662e",
+  "url": "https://arxiv.org/abs/2611.09721v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:00:09Z",
+  "added": "2026-11-09T06:54:06.624766+00:00"
+ },
+ {
+  "headline": "One Run Is Not Enough: A Monte Carlo Protocol for Evaluating LLM Reliability on Data Science Tasks",
+  "tldr": "The paper introduces DS-QA, a 100‑question benchmark for data‑science tasks, and uses 100 Monte Carlo runs to show that LLM responses vary widely, especially on medium/hard visualisation and supervised‑learning problems.",
+  "key_points": [
+   "DS-QA benchmark covers 100 questions from UK university courses across 16 datasets and three difficulty levels.",
+   "Three‑layer evaluation framework: response properties, coarse‑grained metrics, and task‑specific metrics.",
+   "Monte Carlo testing (100 runs) on OpenAI models reveals high variability in accuracy and code executability.",
+   "Verbosity analysis shows a linear relationship between word and token verbosity ratios."
+  ],
+  "why_it_matters": "Understanding LLM consistency is crucial for deploying them in data‑science pipelines where reproducible, reliable code and analysis are required; the study highlights that single‑run evaluations can be misleading.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "reliability",
+   "data_science",
+   "benchmark",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "fa83e90df197c135",
+  "url": "https://arxiv.org/abs/2611.09729v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:06:21Z",
+  "added": "2026-11-09T06:53:53.676420+00:00"
+ },
+ {
+  "headline": "A Tight Hierarchy for Chain of Thought",
+  "tldr": "The paper proves a hierarchy theorem showing that more chain-of-thought reasoning steps give transformers strictly greater computational power.",
+  "key_points": [
+   "Establishes first hierarchy theorem for CoT-augmented transformers.",
+   "Shows CoT(r) ⊂neq CoT(r^{1+ε}) for any reasonable resource bound r(n) ≥ n.",
+   "Uses simulations between CoT transformers and Turing machines and a padding technique.",
+   "Demonstrates CoT steps as a fundamental computational resource."
+  ],
+  "why_it_matters": "It provides a theoretical foundation for why increasing reasoning steps in language models can lead to genuine gains in problem‑solving ability, guiding future model design and evaluation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "chain-of-thought",
+   "transformers",
+   "complexity-theory"
+  ],
+  "importance": 3,
+  "id": "0d3075517aa6d1e1",
+  "url": "https://arxiv.org/abs/2611.09759v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:24:46Z",
+  "added": "2026-11-09T06:53:41.507430+00:00"
+ },
+ {
+  "headline": "Language as Trait, Politeness as Strategy: Controlled Tests of Linguistic Effects in LLM Social-Deduction Agents",
+  "tldr": "A study using the LURK Werewolf framework finds that varying language complexity or politeness in LLM agents does not significantly affect trust, voting, or actions of other agents.",
+  "key_points": [
+   "30 games and 4,335 replays were analyzed with controlled language variations.",
+   "Neither linguistic range nor politeness strategy impacted trust or decision outcomes after statistical correction.",
+   "The largest uncorrected effect was a ~4% shift in votes when language range deviated from neutral.",
+   "In natural gameplay, 88% of face‑threatening speech is bald on‑record regardless of role."
+  ],
+  "why_it_matters": "Understanding how language style influences LLM interactions informs the design of more reliable multi‑agent systems and clarifies limits of social manipulation via phrasing.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "social_deduction",
+   "linguistics",
+   "trust"
+  ],
+  "importance": 2,
+  "id": "510ac8371a351545",
+  "url": "https://arxiv.org/abs/2611.09768v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:31:01Z",
+  "added": "2026-11-09T06:53:29.628749+00:00"
+ },
+ {
+  "headline": "Generative Latent Priors for Interpreting and Steering Protein Language Models",
+  "tldr": "A diffusion‑based Generative Latent Prior (GLP) learns the activation distribution of frozen protein language models (ESM‑2) without structural assumptions, serving both as a probe for protein representations and as an editing prior, with mixed success across model scales.",
+  "key_points": [
+   "GLP learns a diffusion model over frozen ESM‑2 activations, avoiding explicit structural assumptions.",
+   "Single GLP meta‑neurons outperform InterPLM SAE features on discrete Swiss‑Prot concepts and on continuous properties at the 8M scale.",
+   "As an editing prior, GLP enables effective DiffMean steering of biochemical properties but degrades structural plausibility after multiple decoding rounds.",
+   "The method’s limitations stem from rewriting coverage and decoder issues rather than the prior itself.",
+   "Trained GLP models are publicly released on Hugging Face."
+  ],
+  "why_it_matters": "Provides a new, assumption‑free way to interpret and manipulate protein language models, potentially accelerating protein design and functional annotation while highlighting challenges in maintaining structural realism during model‑guided editing.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face",
+   "HPAI-BSC"
+  ],
+  "tags": [
+   "protein-language-models",
+   "diffusion",
+   "interpretability",
+   "bioinformatics"
+  ],
+  "importance": 3,
+  "id": "11bcbf2050288209",
+  "url": "https://arxiv.org/abs/2611.09818v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:06:39Z",
+  "added": "2026-11-09T06:53:18.265407+00:00"
+ },
+ {
+  "headline": "Ensemble Methodology for Reference-Free Confidence Estimation in LLM-based Code Summarization",
+  "tldr": "The paper proposes using inter‑model agreement and a LLM‑as‑judge to estimate the correctness of automatically generated COBOL code summaries without human references.",
+  "key_points": [
+   "Generates multiple summaries from diverse LLMs for the same COBOL code.",
+   "A dedicated LLM evaluator compares summary pairs and produces structured judgments.",
+   "Aggregates judgments with a calibrated rule that rewards agreement and penalizes corroborated contradictions.",
+   "Provides a reference‑free confidence metric for code summarization tasks."
+  ],
+  "why_it_matters": "Enables reliable assessment of LLM‑generated code documentation in legacy languages like COBOL, where human‑written references are scarce, improving trust and safety in automated software maintenance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "code_summarization",
+   "LLM_evaluation",
+   "reference_free",
+   "COBOL"
+  ],
+  "importance": 3,
+  "id": "1aa627f4fd4eb383",
+  "url": "https://arxiv.org/abs/2611.09846v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:29:48Z",
+  "added": "2026-11-09T06:53:05.440526+00:00"
+ },
+ {
+  "headline": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision Large Reasoning Models",
+  "tldr": "CodeQuant2 introduces a clustering‑based LUT quantization framework that mitigates activation outliers and adapts codebook sizes per layer, improving accuracy and speed for low‑precision large reasoning models.",
+  "key_points": [
+   "Identifies early‑step activation fluctuations as a cause of quantization errors in reasoning models.",
+   "Uses rotation, scaling, and clustering to handle outliers and non‑uniform weight distributions.",
+   "Adapts codebook sizes per layer based on quantization difficulty.",
+   "Improves calibration sample selection to match decoding statistics.",
+   "Achieves up to 2.85× speedup over BF16 with higher reasoning benchmark accuracy."
+  ],
+  "why_it_matters": "Low‑precision quantization is essential for deploying large reasoning models efficiently; CodeQuant2’s techniques reduce inference cost while preserving performance, enabling broader use of advanced reasoning AI.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantization",
+   "low-precision",
+   "reasoning-models",
+   "LUT"
+  ],
+  "importance": 3,
+  "id": "788793853b606764",
+  "url": "https://arxiv.org/abs/2611.09868v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:48:04Z",
+  "added": "2026-11-09T06:52:54.170369+00:00"
+ },
+ {
+  "headline": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+  "tldr": "A method to cache LLM reasoning traces as CPU-executable agents, achieving similar performance to top models while being 16‑291× cheaper.",
+  "key_points": [
+   "Introduces Agentic Reasoning Caches (ARCs) built from LLM reasoning traces",
+   "ARCs run on CPU, are fully explainable, and can be continually trained",
+   "Matches frontier LLM performance on tough math and science tasks",
+   "Robust to input perturbations and 16‑291× cheaper to invoke"
+  ],
+  "why_it_matters": "It reduces the computational cost of using large language models for repetitive reasoning tasks, making advanced AI capabilities more accessible and environmentally friendly.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reasoning",
+   "caching",
+   "CPU",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "13c0dab5dca874bc",
+  "url": "https://arxiv.org/abs/2611.09891v1",
+  "source": "arXiv",
+  "date": "2026-11-06T18:58:50Z",
+  "added": "2026-11-09T06:52:42.111280+00:00"
+ },
+ {
+  "headline": "Sketchpad: certified exact arithmetic with a small vision-language model",
+  "tldr": "A 0.8B Qwen3.5 model with a low‑rank adapter and a bounded‑view runtime is formally proven (in Lean) to perform exact long‑hand arithmetic of any length, achieving 100% success on large test sets in a web‑browser deployment.",
+  "key_points": [
+   "Exactness becomes a finite, checkable property when each step sees only a bounded view of external memory.",
+   "Formal proof in Lean guarantees correctness for all input lengths if the model passes a finite set of 2,446 view tests.",
+   "The system handles signed addition, subtraction, multiplication, division, square roots, GCD, and symbolic polynomial operations.",
+   "Runs on a laptop GPU in a browser, outperforming ten other models on benchmark arithmetic tasks."
+  ],
+  "why_it_matters": "Provides the first formally verified, end‑to‑end exact arithmetic capability in a vision‑language model, bridging neural inference with provable correctness and enabling reliable AI‑assisted computation for scientific and engineering tasks.",
+  "category": "paper",
+  "companies": [
+   "Alibaba"
+  ],
+  "tags": [
+   "exact arithmetic",
+   "vision-language",
+   "formal verification",
+   "Lean"
+  ],
+  "importance": 3,
+  "id": "ecbdc11f1f79aa12",
+  "url": "https://huggingface.co/papers/2611.04434",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T02:25:42.000Z",
+  "added": "2026-11-09T06:52:29.856557+00:00"
+ },
+ {
+  "headline": "OmniLatent: Unified Latent for 3D Part Modeling",
+  "tldr": "OmniLatent introduces a shared latent space that simultaneously generates geometry, deformation, texture, and part IDs from a single image, enabling one‑pass, part‑aware 3D asset creation and interactive editing.",
+  "key_points": [
+   "Learns a unified latent space encoding geometry, deformation, appearance, and binary part IDs.",
+   "Generates full 3D assets with part segmentation from a single input image in one pass.",
+   "Includes extensions for point‑prompt based segmentation and amodal part completion.",
+   "Demonstrates precise, semantically meaningful part boundaries and supports interactive editing."
+  ],
+  "why_it_matters": "By removing the need for separate segmentation steps, OmniLatent streamlines 3D asset pipelines, reduces reliance on extensive part annotations, and enables more intuitive, interactive editing of 3D models, which can accelerate content creation for games, AR/VR, and design.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3D modeling",
+   "part segmentation",
+   "latent representation",
+   "interactive editing"
+  ],
+  "importance": 3,
+  "id": "9edd68eb056236e4",
+  "url": "https://huggingface.co/papers/2611.09055",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-09T06:52:17.708937+00:00"
+ },
+ {
+  "headline": "\"PRISM\" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval",
+  "tldr": "A study of 564,861 AI arXiv papers finds that cross‑topic name collisions are rising rapidly, hurting retrieval accuracy, and proposes evaluation methods to quantify and mitigate the ambiguity.",
+  "key_points": [
+   "Cross‑topic name collisions grew 4.33× from 2020‑2022 to 2026, far outpacing within‑topic growth.",
+   "Title‑only BM25 misses 25.7 pp of correctly identified papers; adding abstracts reduces the gap to 6.9 pp.",
+   "A listwise language‑model ranking reaches 89.2 % accuracy when using query and candidate titles.",
+   "Fixed word‑frequency analysis shows the surge occurs in intermediate‑frequency vocabularies shared across fields.",
+   "The authors release a portable evaluation collection for future research on scientific retrieval."
+  ],
+  "why_it_matters": "Increasing name ambiguity hampers literature search, citation tracking, and AI research assistants, potentially slowing scientific progress and leading to mis‑attribution of work.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "information_retrieval",
+   "name_collision",
+   "arXiv",
+   "AI"
+  ],
+  "importance": 3,
+  "id": "33d220b3a97b50aa",
+  "url": "https://huggingface.co/papers/2611.01362",
+  "source": "HF Daily Papers",
+  "date": "2026-10-31T20:00:08.000Z",
+  "added": "2026-11-09T06:52:05.645431+00:00"
+ },
+ {
+  "headline": "PREEN: Exemplar-Based Color Style Transfer with Smartphone Editor Presets",
+  "tldr": "PREEN predicts interpretable editor presets for color style transfer, using a teacher model and CLIP‑conditioned regression, achieving state‑of‑the‑art fidelity with sub‑second on‑device speed.",
+  "key_points": [
+   "Regresses directly onto 29 deterministic image‑editor parameters instead of generating raster images.",
+   "Supervision via a style‑transfer teacher that creates pseudo‑presets for training.",
+   "Combines CLIP‑conditioned pretraining with LoRA fine‑tuning and a CIELAB loss.",
+   "Provides a single strength knob for continuous default‑to‑vivid adjustments in one forward pass.",
+   "Outperforms baselines on the PST50 benchmark in both pixel and perceptual metrics."
+  ],
+  "why_it_matters": "Enables fast, on‑device color styling that is both interpretable and editable, bridging the gap between AI‑driven style transfer and traditional photo‑editing workflows.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "color style transfer",
+   "editor presets",
+   "CLIP",
+   "LoRA"
+  ],
+  "importance": 2,
+  "id": "1a4cf3cefec67deb",
+  "url": "https://huggingface.co/papers/2610.36896",
+  "source": "HF Daily Papers",
+  "date": "2026-10-26T20:00:00.000Z",
+  "added": "2026-11-09T06:51:53.488964+00:00"
+ },
+ {
+  "headline": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+  "tldr": "Introduces GSNorm to canonicalize scene-level Gaussian spacing, improving feed-forward 3DGS performance across varied scales and viewpoints.",
+  "key_points": [
+   "Existing 3DGS methods normalize radial distance but ignore spacing variability.",
+   "GSNorm provides a robust scene-level statistic for consistent Gaussian prediction.",
+   "A new benchmark evaluates performance across datasets, sparsity, and extrapolated views.",
+   "SplatAnything achieves state-of-the-art results, especially under large scale and viewpoint changes."
+  ],
+  "why_it_matters": "Consistent Gaussian spacing reduces supervision ambiguity, enabling more reliable 3D scene reconstruction for applications like AR/VR and robotics.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3DGS",
+   "Gaussian",
+   "normalization",
+   "computer_vision"
+  ],
+  "importance": 3,
+  "id": "63e56a7ba71b4d95",
+  "url": "https://huggingface.co/papers/2611.08264",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T11:37:29.000Z",
+  "added": "2026-11-09T06:51:41.592719+00:00"
+ },
+ {
+  "headline": "MLSys 2027 reviewer assignments pending",
+  "tldr": "A reciprocal reviewer for MLSys 2027 reports not yet receiving paper assignments and asks the community for updates.",
+  "key_points": [
+   "Reviewer signed up for MLSys 2027 reciprocal review program",
+   "No paper assignments have been received yet",
+   "Seeks information on when assignments will be released"
+  ],
+  "why_it_matters": "Timely reviewer assignments are crucial for the conference's review process and overall schedule; delays can impact paper decisions and the event timeline.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "MLSys",
+   "review process"
+  ],
+  "importance": 1,
+  "id": "70e928050182360b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrj2ld/have_mlsys_2027_reviewers_received_their_paper/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T05:09:22+00:00",
+  "added": "2026-11-09T06:51:30.025756+00:00"
+ },
+ {
+  "headline": "Amazon applied science intern interview next week - EU based",
+  "tldr": "A Reddit user secured an interview for a PhD applied science intern role at Amazon in Europe and seeks advice on preparing for the technical interview, especially the coding portion.",
+  "key_points": [
+   "User has multiple interview rounds scheduled for an Amazon applied science internship.",
+   "Confident in machine learning concepts but lacks recent coding interview practice.",
+   "Requests guidance on whether to cancel or prepare for the interview."
+  ],
+  "why_it_matters": "Highlights the challenges candidates face when transitioning from research to industry roles, especially in technical interview preparation for major tech companies.",
+  "category": "other",
+  "companies": [
+   "Amazon"
+  ],
+  "tags": [
+   "internship",
+   "interview-prep",
+   "applied-science",
+   "coding"
+  ],
+  "importance": 1,
+  "id": "1e0af14d82e753d0",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrkiaw/amazon_applied_science_intern_interview_next_week/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T06:31:34+00:00",
+  "added": "2026-11-09T06:51:17.417611+00:00"
+ },
+ {
+  "headline": "LoRA-conditioned model skips the first line of its output when the caption is short",
+  "tldr": "A short caption causes a LoRA‑fine‑tuned Qwen‑3 0.6B model to omit the required root line in generated LEGO text, likely due to conditioning length mismatch.",
+  "key_points": [
+   "Model fine‑tuned with LoRA adapters on BrickNet data expects longer captions.",
+   "With captions ~4 tokens, the first generated token is \"b\" instead of the required \"a\".",
+   "Longer captions (~18+ tokens) produce correct output; short captions fail consistently.",
+   "Possible causes include adapter merging in bf16 and insufficient short‑caption training data."
+  ],
+  "why_it_matters": "Understanding this failure helps improve low‑resource fine‑tuning and prompt design for adapter‑based models, ensuring reliable generation for tasks with variable input lengths.",
+  "category": "other",
+  "companies": [
+   "Alibaba"
+  ],
+  "tags": [
+   "LoRA",
+   "fine-tuning",
+   "Qwen3",
+   "caption-length"
+  ],
+  "importance": 2,
+  "id": "9c0e64d7e2817e18",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrdn7p/loraconditioned_model_skips_the_first_line_of_its/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T00:30:07+00:00",
+  "added": "2026-11-09T06:51:05.604130+00:00"
+ },
+ {
+  "headline": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50”",
+  "tldr": "Nvidia’s board is probing CEO Jensen Huang’s ties to a suspected Chinese spy, and experts say his future is uncertain.",
+  "key_points": [
+   "Nvidia board launches investigation into Huang’s relationship with alleged Chinese spy",
+   "Yale professor Jeffrey Sonnenfeld says the odds of Huang staying as CEO are roughly 50‑50",
+   "Potential leadership shake‑up at Nvidia amid national‑security concerns"
+  ],
+  "why_it_matters": "Nvidia is a cornerstone of the AI hardware ecosystem; any change in its leadership could affect product roadmaps, market confidence, and geopolitical scrutiny of AI supply chains.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "board",
+   "espionage",
+   "CEO"
+  ],
+  "importance": 2,
+  "id": "fdfdfd60876dfdbc",
+  "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 05:26:29 +0000",
+  "added": "2026-11-09T06:50:53.794146+00:00"
+ },
+ {
+  "headline": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+  "tldr": "NVIDIA and South Korea’s Ministry of Science and ICT are broadening a partnership that spans AI chips, data‑center infrastructure, talent development, startups, models, agents and security, and opens Korean NPU/XPU firms to the NVLink Fusion ecosystem.",
+  "key_points": [
+   "Collaboration covers AI semiconductors, data‑center hardware, and talent pipelines.",
+   "Korean NPU and XPU companies can join NVIDIA’s NVLink Fusion ecosystem.",
+   "Joint focus on AI models, agents, and security for a sovereign AI stack.",
+   "Supports Korean AI startups and workforce development."
+  ],
+  "why_it_matters": "The deal strengthens South Korea’s sovereign AI capabilities while expanding NVIDIA’s ecosystem, positioning both parties competitively in the global AI hardware race and fostering a secure, locally controlled AI infrastructure.",
+  "category": "policy",
+  "companies": [
+   "NVIDIA",
+   "Korea Ministry of Science and ICT"
+  ],
+  "tags": [
+   "AI hardware",
+   "Sovereign AI",
+   "Korea",
+   "Collaboration"
+  ],
+  "importance": 3,
+  "id": "22dc4f77b8e2cd3f",
+  "url": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 05:00:04 +0000",
+  "added": "2026-11-09T06:50:41.740414+00:00"
+ },
+ {
+  "headline": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+  "tldr": "Hyundai Motor Group and AIM Intelligence are adopting NVIDIA's NemoClaw blueprints and OpenShell runtime to build secure, open-model AI agents for enterprise productivity.",
+  "key_points": [
+   "Hyundai Motor Group explores NVIDIA NemoClaw blueprints for agentic AI.",
+   "AIM Intelligence integrates its Starfort platform with NVIDIA OpenShell.",
+   "Focus on secure, open-model AI agents for employee productivity and workflows.",
+   "Highlights Korea’s growing AI ecosystem and collaboration with NVIDIA."
+  ],
+  "why_it_matters": "Secure, open-model AI agents can boost enterprise efficiency while addressing safety concerns, positioning Korea as a key player in the global AI agent market.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "Hyundai Motor Group",
+   "AIM Intelligence"
+  ],
+  "tags": [
+   "AI agents",
+   "security",
+   "enterprise",
+   "open models"
+  ],
+  "importance": 3,
+  "id": "741e635ddb789d7c",
+  "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 05:00:39 +0000",
+  "added": "2026-11-09T06:50:29.536524+00:00"
+ },
+ {
+  "headline": "Korea Advances Physical AI Across Industries With NVIDIA",
+  "tldr": "NVIDIA is partnering with Korean industry leaders to apply accelerated computing, AI, and simulation to sectors like semiconductor manufacturing, robotics, and autonomous vehicles, moving physical AI from R&D to production.",
+  "key_points": [
+   "Accelerated computing and AI are being deployed in Korean semiconductor, robotics, and autonomous vehicle industries.",
+   "NVIDIA's tools enable large‑scale simulation and physical AI workflows for real‑world production.",
+   "Samsung is among the companies leveraging NVIDIA tech for semiconductor engineering.",
+   "The initiative showcases Korea’s manufacturing and engineering strengths in the global AI ecosystem."
+  ],
+  "why_it_matters": "Demonstrates how AI‑driven simulation can accelerate product development and manufacturing at scale, positioning Korea as a leader in physical AI adoption and boosting competitiveness of its key industries.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "Samsung"
+  ],
+  "tags": [
+   "physical AI",
+   "manufacturing",
+   "simulation",
+   "Korea"
+  ],
+  "importance": 3,
+  "id": "dc742b2cbd8fb92b",
+  "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 05:00:40 +0000",
+  "added": "2026-11-09T06:50:17.629175+00:00"
+ },
+ {
+  "headline": "Nvidia launches internal investigation into CEO Jensen Huang's relationship with Chinese government AI executive",
+  "tldr": "Nvidia announced a board‑led probe into CEO Jensen Huang’s alleged affair with Alice Huang, an AI executive tied to the Chinese government, and Huang sent a memo to staff acknowledging the situation.",
+  "key_points": [
+   "Board of Directors has opened an investigation into Jensen Huang’s personal relationship with Alice Huang.",
+   "Alice Huang is identified as an AI executive and agent of the Chinese government.",
+   "Jensen Huang sent an internal memo to Nvidia employees confirming the affair and the investigation.",
+   "The probe could have implications for corporate governance and national‑security compliance."
+  ],
+  "why_it_matters": "The investigation raises concerns about potential conflicts of interest, data security, and compliance with U.S. export controls, which could affect Nvidia’s reputation and its role in the AI hardware market.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "governance",
+   "investigation",
+   "leadership",
+   "security"
+  ],
+  "importance": 3,
+  "id": "67abd93f196f854c",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+  "source": "The Verge AI",
+  "date": "2026-11-08T17:54:50-05:00",
+  "added": "2026-11-09T06:50:05.479957+00:00"
+ },
+ {
+  "headline": "Diffusion-free Score Matching for Exact Conditional Sampling",
+  "tldr": "DISCO introduces a diffusion-free score matching method that learns a single perturbed-data score, enabling exact conditional sampling and competitive sample quality versus diffusion models.",
+  "key_points": [
+   "Learns only one score function instead of time-indexed scores",
+   "Provides exact conditional scores for arbitrary conditioning",
+   "Matches state-of-the-art diffusion models in sample quality",
+   "Improves fidelity to the true data distribution",
+   "Enables principled probabilistic reasoning with score-based models"
+  ],
+  "why_it_matters": "Allows reliable conditional generation with score-based models, overcoming a major limitation of diffusion approaches and expanding their use in tasks requiring precise inference.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "score-based models",
+   "conditional sampling",
+   "diffusion-free",
+   "generative modeling"
+  ],
+  "importance": 3,
+  "id": "48b3eb8dfbab1b20",
+  "url": "https://arxiv.org/abs/2611.09758v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:24:30Z",
+  "added": "2026-11-09T06:49:53.602199+00:00"
+ },
+ {
+  "headline": "Test-Time Compute Scales Better with Parallel Agent Teams",
+  "tldr": "Introducing parallel agent teams, a method that samples many small cooperating agent groups during inference, achieving better performance than both best-of-N sampling and large single teams across multiple long-horizon tasks.",
+  "key_points": [
+   "Parallel agent teams sample many small teams in parallel and select the best team's output.",
+   "On 12 long-horizon tasks, teams of ten agents outperformed both parallel agents and a single team of 100 agents.",
+   "At equal cost, parallel teams matched or exceeded a frontier model on half the tasks.",
+   "Statistical analysis shows the approach balances high mean performance with variance gains."
+  ],
+  "why_it_matters": "The technique provides a more efficient way to leverage test-time compute, improving inference quality without proportional cost increases, which is valuable for deploying large language models in resource-constrained settings.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "test-time compute",
+   "parallel agents",
+   "scaling",
+   "inference"
+  ],
+  "importance": 3,
+  "id": "12c0de22977034e9",
+  "url": "https://arxiv.org/abs/2611.09798v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:53:07Z",
+  "added": "2026-11-09T06:49:41.700459+00:00"
+ },
+ {
+  "headline": "When Instruction Files Go Stale: Documentation Debt and Hidden Cost in Coding Agents",
+  "tldr": "The study shows that stale repository instruction files cause hidden overhead for LLM coding agents, leading to extra tool calls and unrepaired documentation debt despite unchanged task success.",
+  "key_points": [
+   "Stale instruction files act as documentation debt, adding hidden cost to each agent session.",
+   "Claude Sonnet 5.5 incurred ~2 extra tool calls per run when using outdated test commands.",
+   "Agents often follow stale guidance even when correct information exists elsewhere.",
+   "Correcting or removing stale instructions eliminates unnecessary operations, but agents do not repair the files themselves.",
+   "Task success metrics alone miss the performance impact of documentation debt."
+  ],
+  "why_it_matters": "Understanding and measuring documentation debt is crucial for reliable deployment of LLM coding agents, as hidden inefficiencies can increase runtime costs and obscure true agent performance.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "documentation_debt",
+   "coding_agents",
+   "LLM",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "c56582717cc5e2b2",
+  "url": "https://arxiv.org/abs/2611.09802v1",
+  "source": "arXiv",
+  "date": "2026-11-06T17:54:01Z",
+  "added": "2026-11-09T06:49:30.018005+00:00"
+ },
+ {
+  "headline": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
+  "tldr": "NVIDIA released Dynamo-optimized deployment recipes for several top Korean open models, enabling efficient multi‑GPU scaling and production‑ready serving.",
+  "key_points": [
+   "Dynamo recipes support A.X K2 (SK Telecom), K-EXAONE 2.0 (LG AI Research), Solar Open 2 (Upstage), and Motif‑3 (Motif Technologies).",
+   "Designed for models that exceed a single GPU’s memory, facilitating automatic model partitioning and request routing.",
+   "Aims to streamline production deployment of large open‑source models in Korean AI ecosystems.",
+   "Leverages NVIDIA’s Dynamo framework to improve performance and scalability across multiple GPUs."
+  ],
+  "why_it_matters": "As open‑source models grow larger, efficient multi‑GPU deployment becomes critical for real‑world applications; NVIDIA’s recipes lower the engineering barrier, accelerating adoption of advanced AI in Korea and beyond.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "SK Telecom",
+   "LG AI Research",
+   "Upstage",
+   "Motif Technologies"
+  ],
+  "tags": [
+   "deployment",
+   "open models",
+   "multi-GPU",
+   "Korea"
+  ],
+  "importance": 3,
+  "id": "e18a5f64b586f52b",
+  "url": "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 05:00:00 +0000",
+  "added": "2026-11-09T06:49:17.842809+00:00"
+ },
+ {
+  "headline": "OneTrans-GSR: A Generative Slate Ranking Paradigm Unifying Reranking and Mix-Ranking with One Autoregressive Transformer",
+  "tldr": "A single decoder‑only model (OneTrans‑GSR) replaces hand‑crafted reranking and mix‑ranking pipelines, generating heterogeneous recommendation slates end‑to‑end, boosting GMV, advertiser value, and repurchase rates while cutting latency.",
+  "key_points": [
+   "Unifies reranking and mix‑ranking into one learned policy using a decoder‑only transformer.",
+   "Reinforcement learning with a reward model optimizes slate‑level and long‑term objectives.",
+   "Online A/B tests show +2.6% GMV, +2.0% advertiser value, +2.0% repurchase rate, and 13% latency reduction.",
+   "Scalable: performance improves with more compute and reward‑model capacity."
+  ],
+  "why_it_matters": "Demonstrates that learned, end‑to‑end slate generation can outperform traditional rule‑based systems in large‑scale industrial recommender platforms, opening a path for continuous algorithmic gains through compute scaling.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "recommender_systems",
+   "slate_ranking",
+   "reinforcement_learning",
+   "industry"
+  ],
+  "importance": 3,
+  "id": "69e187be962251a8",
+  "url": "https://huggingface.co/papers/2611.04720",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T19:00:00.000Z",
+  "added": "2026-11-09T06:49:05.896480+00:00"
+ },
+ {
+  "headline": "Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds",
+  "tldr": "A new unified benchmark, Frontier3DBench, evaluates coding agents on 145 tasks spanning object, scene, and interactive world creation, revealing strengths of GPT‑6.1‑sol and GPT‑6‑astra and highlighting challenges in reference fidelity and coordinated activity.",
+  "key_points": [
+   "Frontier3DBench covers 145 tasks across 9 categories for 3D creation.",
+   "GPT‑6.1‑sol tops object and scene tasks with a 66.02/100 overall score.",
+   "GPT‑6‑astra excels at interactive open‑world construction.",
+   "Agents perform better on text‑driven generation than on precise reference reconstruction.",
+   "Coordinated, stateful activities remain a major bottleneck."
+  ],
+  "why_it_matters": "Provides the first comprehensive evaluation of coding agents for 3D content creation, guiding future research toward improving geometry fidelity and multi‑step interactive capabilities, which are crucial for scalable virtual world generation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3D creation",
+   "coding agents",
+   "benchmark",
+   "AI evaluation"
+  ],
+  "importance": 3,
+  "id": "aed758446796be7b",
+  "url": "https://huggingface.co/papers/2611.09017",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-09T06:48:53.874048+00:00"
+ },
+ {
+  "headline": "AgentBaton: Efficient Model Collaboration in Agentic Tasks",
+  "tldr": "A lightweight detector, AgentBaton, learns optimal handoff points between capable and efficient language models, cutting API costs by ~66% while maintaining or improving accuracy on long‑horizon tasks.",
+  "key_points": [
+   "Capable‑to‑efficient model handoffs preserve accuracy and drastically lower cost.",
+   "AgentBaton detects handoff moments using simple recurring patterns in task progress.",
+   "Across 11 model pairs, API costs drop 65.9% on average with up to 8.8 pp accuracy gain.",
+   "The approach extends the accuracy‑cost Pareto frontier for reasoning‑effort settings."
+  ],
+  "why_it_matters": "It shows a practical way to combine high‑performing and low‑cost models, enabling cheaper deployment of sophisticated agentic applications without sacrificing performance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "agentic tasks",
+   "model collaboration",
+   "cost reduction",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "46563ddec3e801a1",
+  "url": "https://huggingface.co/papers/2610.35959",
+  "source": "HF Daily Papers",
+  "date": "2026-10-24T20:00:00.000Z",
+  "added": "2026-11-09T06:48:41.885071+00:00"
+ },
+ {
+  "headline": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+  "tldr": "Confucius4‑R2T2 is a post‑trained streaming speech‑recognition model that guarantees stable prefixes—never revising earlier tokens—while keeping accuracy and latency close to its full‑context predecessor.",
+  "key_points": [
+   "Introduces the Longest Stable Prefix (LSP) concept to convert full‑context ASR models into stable‑prefix streaming models without architectural changes.",
+   "Derived by post‑training Qwen3‑ASR‑1.7B on 1,500 h of Chinese and English audio, freezing the encoder and projector.",
+   "Achieves near‑full‑context transcription quality with low emission lag and stable output, useful for translators and voice agents.",
+   "Model weights and code are open‑sourced on Hugging Face and GitHub."
+  ],
+  "why_it_matters": "Stable‑prefix streaming ASR eliminates the need for downstream systems to handle token revisions, reducing wasted computation and errors in real‑time applications such as live translation and voice assistants.",
+  "category": "model_release",
+  "companies": [
+   "NetEase",
+   "Youdao"
+  ],
+  "tags": [
+   "streaming ASR",
+   "stable prefix",
+   "multilingual",
+   "open source"
+  ],
+  "importance": 3,
+  "id": "30978d0bf99ee6a5",
+  "url": "https://huggingface.co/papers/2611.06043",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T01:46:50.000Z",
+  "added": "2026-11-09T06:48:29.820920+00:00"
+ },
+ {
+  "headline": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+  "tldr": "The FinDendro benchmark shows that large language models often misreport their temporal knowledge, making self‑reported cutoffs unreliable for financial backtesting.",
+  "key_points": [
+   "FinDendro contains 2,226 dated U.S. facts (1999‑2026) for testing model knowledge.",
+   "Frontier models under‑state what they know; GPT‑5 knows 76% of facts but only claims 38%.",
+   "Declared past dates remove self‑reported knowledge claims without hurting accuracy.",
+   "Self‑reports, instructions, and cutoffs cannot guarantee leak‑free backtests.",
+   "The benchmark helps select safe backtest periods based on demonstrated factual knowledge."
+  ],
+  "why_it_matters": "Accurate temporal knowledge assessment is crucial for reliable financial backtesting of LLMs, preventing data leakage and ensuring trustworthy model‑driven investment decisions.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "temporal knowledge",
+   "benchmark",
+   "finance",
+   "LLM evaluation"
+  ],
+  "importance": 3,
+  "id": "2c6bc4052a8fe064",
+  "url": "https://huggingface.co/papers/2611.06808",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-09T06:48:17.631815+00:00"
+ },
+ {
+  "headline": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+  "tldr": "Video-Coder introduces a code‑driven agent that writes and runs code to build 3D scenes, providing structure and motion cues for downstream video generators, achieving notable performance gains on benchmark suites.",
+  "key_points": [
+   "First code‑driven video generation agent that creates dynamic 3D scenes as a scaffold for video synthesis.",
+   "Two curated datasets (Video‑Coder‑SFT‑6k and Video‑Coder‑RL‑2k) and a unified interactive environment (Video‑Coder Harness) for training and inference.",
+   "Hybrid reinforcement learning with execution‑based and video‑based rewards, plus an annealing strategy to shift focus to video quality.",
+   "Significant benchmark improvements: +7 Minimax‑H3 on PhyGenBench and +24 on VBench‑2.0."
+  ],
+  "why_it_matters": "By coupling code generation with video synthesis, the approach offers a new way to enforce spatial structure and coherent motion, addressing key limitations of current video generators and opening avenues for more controllable, high‑quality video creation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "agentic coding",
+   "reinforcement learning",
+   "3D rendering"
+  ],
+  "importance": 3,
+  "id": "454d9c2a2a67c556",
+  "url": "https://huggingface.co/papers/2611.09894",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-09T06:48:05.642626+00:00"
+ },
+ {
+  "headline": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+  "tldr": "BenchUp is a free, open-source 3D modeling app for woodworking and furniture design that runs in browsers and on desktop via Rust and WebGPU.",
+  "key_points": [
+   "Runs in a desktop browser with hardware acceleration (WebGPU/WebGL2) or as native Windows/macOS/Linux apps",
+   "Built with Rust for performance and safety",
+   "Supports SketchUp import and OBJ export, with exact measurements, push/pull, groups, components, and tags",
+   "Autosave locally, no account or cloud storage required"
+  ],
+  "why_it_matters": "Provides a lightweight, privacy‑focused alternative to SketchUp, lowering barriers for hobbyists and makers to create precise 3D designs without proprietary software.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "3D modeling",
+   "Rust",
+   "WebGPU",
+   "open-source"
+  ],
+  "importance": 2,
+  "id": "79cd6977cdf16835",
+  "url": "https://ketchup3d.github.io/app/",
+  "source": "Hacker News",
+  "date": "2026-11-08T22:35:35Z",
+  "added": "2026-11-09T06:47:53.591236+00:00"
+ },
+ {
+  "headline": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+  "tldr": "Weight-Space Programming (WSP) can boost model performance with tiny parameter edits, shows some cross-task gains, but editing remains inconsistent and hard to validate.",
+  "key_points": [
+   "Localized edits of as few as 1,023 parameters improve accuracy up to 29.45 points on benchmarks like MATH-500.",
+   "Edited checkpoints transfer modestly to other tasks (e.g., +3.03 GPQA Diamond, +12.18 IFEval).",
+   "Editing success varies widely; many trajectories revert to original weights when improvements cannot be verified."
+  ],
+  "why_it_matters": "Demonstrates a promising alternative to gradient‑based fine‑tuning that could enable fast, low‑resource model adaptation, but also highlights reliability challenges that must be solved before practical deployment.",
+  "category": "paper",
+  "companies": [
+   "Qwen"
+  ],
+  "tags": [
+   "weight-space programming",
+   "model editing",
+   "localization",
+   "generalization"
+  ],
+  "importance": 3,
+  "id": "a5222095df47cd50",
+  "url": "https://huggingface.co/papers/2611.09382",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-09T06:47:41.646371+00:00"
+ },
+ {
+  "headline": "EvoWorld: Towards Out-of-Sight World Evolution in Generative Video Models",
+  "tldr": "EvoWorld introduces a framework that combines a vision‑language model with a segment‑autoregressive video renderer to reason about and generate causally consistent world evolution beyond the visible frame.",
+  "key_points": [
+   "Defines the Out-of-Sight Causal Evolution problem for generative video.",
+   "Proposes a brain‑renderer architecture where a VLM maintains world state and reasons about event consequences.",
+   "Provides EvoWorld-Data and EvoWorld-Bench for training and evaluation.",
+   "Shows substantial improvements in event‑conditioned causal evolution while preserving visual quality."
+  ],
+  "why_it_matters": "Bridging the gap between visual fidelity and logical world reasoning enables generative video systems to produce more realistic, interactive simulations, opening doors for advanced virtual environments, training simulators, and AI‑driven storytelling.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "generative video",
+   "causal reasoning",
+   "world simulation",
+   "vision-language model"
+  ],
+  "importance": 3,
+  "id": "b56e74146021bd51",
+  "url": "https://huggingface.co/papers/2611.06748",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T11:26:45.000Z",
+  "added": "2026-11-09T06:47:29.534547+00:00"
+ },
+ {
+  "headline": "Beneath the Surface: What We Overlook When We Talk About Agent Evolution",
+  "tldr": "The study analyzes how agent harness evolution can achieve recursive self-improvement without weight updates, revealing trade‑offs between reliability gains, task coverage loss, and deployment cost, and introduces EvoAudit for better performance.",
+  "key_points": [
+   "Evolved agents improve benchmark reliability but often lose previously covered tasks.",
+   "Reliability gains typically increase deployment cost.",
+   "The highest‑scoring agent does not always produce the largest mean improvement.",
+   "Transferability varies: general‑task coverage drops while coding‑task coverage can rise with specific harnesses.",
+   "EvoAudit applies diagnostics to refine agent revisions, achieving top performance."
+  ],
+  "why_it_matters": "Understanding the limits and trade‑offs of agent evolution informs the design of more reliable, cost‑effective AI systems and highlights the need for preservation‑aware evaluation methods.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "agent evolution",
+   "recursive self-improvement",
+   "evaluation",
+   "reliability"
+  ],
+  "importance": 3,
+  "id": "24d330b2cb55df3f",
+  "url": "https://huggingface.co/papers/2611.07624",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-09T06:47:17.550181+00:00"
+ },
+ {
+  "headline": "The Last Mile to the Real World: Agent-Native Primitives as Reusable Building Blocks for Solving Real-World Tasks",
+  "tldr": "A new framework called HEELO uses agent-native primitives to boost performance on real‑world benchmarks, raising task completion rates and reducing time and cost.",
+  "key_points": [
+   "HEELO composes reusable primitives that embed resident LLMs to apply resources in context.",
+   "Benchmarks improve: Terminal‑Bench 4.0 from 37.3% to 55.5%, ToolBench from 55.8% to 75.1%, GAIA‑Text‑103 from 45.6% to 58.3%.",
+   "On 46 real‑world tasks, GPT‑6.1 Sol and Claude Opus see 2× higher completion rates and 1.5× lower cost when using HEELO.",
+   "Eight primitive families are instantiated, each targeting a specific task type."
+  ],
+  "why_it_matters": "Bridging the \"last mile\" gap enables frontier language models to reliably execute end‑to‑end real‑world tasks, making them more practical for deployment in production systems and reducing reliance on bespoke harness engineering.",
+  "category": "paper",
+  "companies": [
+   "OpenAI",
+   "Anthropic"
+  ],
+  "tags": [
+   "agent",
+   "primitives",
+   "benchmarks",
+   "harness"
+  ],
+  "importance": 3,
+  "id": "621ff925e8eedb58",
+  "url": "https://huggingface.co/papers/2611.07461",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-09T06:47:06.090068+00:00"
+ },
+ {
   "headline": "NeurIPS 2026 Camera-Ready Deadline Extended? [D]",
   "tldr": "A user asks if the NeurIPS 2026 camera‑ready submission deadline has been extended beyond the expected November 6 date.",
   "key_points": [
