@@ -1,5 +1,1063 @@
 [
  {
+  "headline": "The future of AI hinges on… Jensen Huang’s sex life?",
+  "tldr": "An opinion piece speculates on NVIDIA CEO Jensen Huang's personal behavior and its potential impact on AI leadership.",
+  "key_points": [
+   "The article questions Jensen Huang's judgment around women.",
+   "It references a National Security Incident involving Huang.",
+   "The piece suggests personal conduct could affect AI industry perception."
+  ],
+  "why_it_matters": "Leadership conduct can influence public trust and corporate reputation, which may indirectly affect AI development and partnerships.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "culture",
+   "leadership"
+  ],
+  "importance": 1,
+  "id": "a06869aa80e569ca",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
+  "source": "The Verge AI",
+  "date": "2026-11-09T12:36:08-05:00",
+  "added": "2026-11-09T22:36:12.514220+00:00"
+ },
+ {
+  "headline": "Instagram’s Effect Builder makes new filters from AI prompts",
+  "tldr": "Instagram launches Effect Builder, an AI‑powered tool that creates custom Story filters from user‑written prompts, currently available to US users 18+.",
+  "key_points": [
+   "Effect Builder generates filters based on natural‑language prompts",
+   "Integrated into Instagram’s Edits app, now also on macOS",
+   "Available now for US residents aged 18 and older",
+   "Users can attach style references to guide the AI"
+  ],
+  "why_it_matters": "It lowers the barrier for creators to design unique visual effects, boosting user engagement and expanding Instagram’s AI‑driven creative ecosystem.",
+  "category": "product",
+  "companies": [
+   "Instagram",
+   "Meta"
+  ],
+  "tags": [
+   "filters",
+   "AI",
+   "social_media",
+   "creative"
+  ],
+  "importance": 2,
+  "id": "9d5aee5d27ee2692",
+  "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
+  "source": "The Verge AI",
+  "date": "2026-11-09T13:07:23-05:00",
+  "added": "2026-11-09T22:36:00.397507+00:00"
+ },
+ {
+  "headline": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
+  "tldr": "Apple adds a one‑time $49.99 “Buy More Usage” pack for its Logic Pro AI assistant, letting users extend access after hitting usage limits.",
+  "key_points": [
+   "Support article in September outlined usage caps for Apple Intelligence features",
+   "Logic Pro update adds a “Buy More Usage” option",
+   "One‑time purchase costs $49.99",
+   "Allows continued use of the built‑in AI assistant for tasks like starting a new song"
+  ],
+  "why_it_matters": "Shows Apple moving toward monetizing AI usage on its creative software, indicating a shift from free tier limits to paid extensions and setting a precedent for other Apple AI services.",
+  "category": "product",
+  "companies": [
+   "Apple"
+  ],
+  "tags": [
+   "AI",
+   "pricing",
+   "Logic Pro",
+   "Apple Intelligence"
+  ],
+  "importance": 2,
+  "id": "4a7141713ab5f922",
+  "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
+  "source": "The Verge AI",
+  "date": "2026-11-09T14:09:58-05:00",
+  "added": "2026-11-09T22:35:49.101829+00:00"
+ },
+ {
+  "headline": "From the front row to the hot seat — what the midterms mean for Big Tech",
+  "tldr": "As the U.S. midterm elections approach, Big Tech firms are shifting from a White House-friendly stance to courting Democrats, facing uncertainty from state actions, local communities, and market reactions.",
+  "key_points": [
+   "Big Tech has spent two years aligning with the White House.",
+   "Companies are now trying to improve relations with Democratic lawmakers.",
+   "State and local governments, as well as market forces, may challenge these efforts.",
+   "The political shift could affect regulatory and policy outcomes for the sector."
+  ],
+  "why_it_matters": "Midterm election results could reshape the regulatory landscape for major technology companies, influencing future policy, market dynamics, and the balance of power between federal and local authorities.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "midterms",
+   "big-tech",
+   "politics",
+   "regulation"
+  ],
+  "importance": 2,
+  "id": "a556ec6077950a4f",
+  "url": "https://techcrunch.com/2026/11/06/from-the-front-row-to-the-hot-seat-what-the-midterms-mean-for-big-tech/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 07 Nov 2026 04:16:43 +0000",
+  "added": "2026-11-09T22:35:36.401925+00:00"
+ },
+ {
+  "headline": "Automattic debuts a platform to deploy vibe-coding apps amid a changing internet",
+  "tldr": "Automattic launches a new platform for deploying vibe‑coding applications, aiming to compete with rivals like Lovable and Spacefast.",
+  "key_points": [
+   "New platform for vibe‑coding app deployment",
+   "Targeting competition with Lovable and Spacefast",
+   "Part of Automattic's push into evolving internet services"
+  ],
+  "why_it_matters": "The platform expands Automattic's product ecosystem and signals a move into emerging app development paradigms, potentially reshaping how developers launch interactive web experiences.",
+  "category": "product",
+  "companies": [
+   "Automattic"
+  ],
+  "tags": [
+   "vibe-coding",
+   "platform",
+   "deployment",
+   "internet"
+  ],
+  "importance": 2,
+  "id": "95c3c02be004506d",
+  "url": "https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-09T22:35:24.305565+00:00"
+ },
+ {
+  "headline": "Medium’s new TK app brings AI assistance directly into the writing process",
+  "tldr": "Medium launches TK, an app that integrates AI-powered assistance into its writing workflow.",
+  "key_points": [
+   "New app named TK",
+   "AI assistance embedded in writing",
+   "Medium expands AI features despite controversy"
+  ],
+  "why_it_matters": "Integrating AI directly into a popular writing platform could influence how creators produce content and shape industry standards for AI use in publishing.",
+  "category": "product",
+  "companies": [
+   "Medium"
+  ],
+  "tags": [
+   "writing",
+   "AI assistance",
+   "product launch"
+  ],
+  "importance": 2,
+  "id": "ad058ec7fa053fd0",
+  "url": "https://techcrunch.com/2026/11/09/mediums-new-tk-app-brings-ai-assistance-directly-into-the-writing-process/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 16:12:28 +0000",
+  "added": "2026-11-09T22:35:12.565437+00:00"
+ },
+ {
+  "headline": "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines",
+  "tldr": "Anthropic spent $3.4 billion on natural‑gas turbines, highlighting the growing energy demand of AI compute.",
+  "key_points": [
+   "Anthropic purchased $3.4 B of natural‑gas turbines",
+   "Deal reflects AI industry's push for dedicated power sources",
+   "Large capital outlay may lead to buyer's remorse"
+  ],
+  "why_it_matters": "Securing massive on‑site power capacity underscores the escalating energy costs of training large AI models and could influence how other AI firms source compute infrastructure.",
+  "category": "other",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "natural gas",
+   "turbines",
+   "AI compute",
+   "energy"
+  ],
+  "importance": 2,
+  "id": "ea1cff75717bdba9",
+  "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 16:56:54 +0000",
+  "added": "2026-11-09T22:35:00.399712+00:00"
+ },
+ {
+  "headline": "Jensen Huang pulls out of ElevenLabs Summit amid Nvidia controversy",
+  "tldr": "Nvidia CEO Jensen Huang withdrew from the ElevenLabs Summit, following a similar pullout from an Anthropic event, due to controversy surrounding Nvidia.",
+  "key_points": [
+   "Nvidia CEO Jensen Huang withdrew from ElevenLabs Summit",
+   "He also pulled out of an Anthropic event earlier",
+   "Withdrawals are linked to a controversy involving Nvidia"
+  ],
+  "why_it_matters": "The CEO's absence signals heightened scrutiny and potential reputational risk for Nvidia, affecting its relationships with AI startups and the broader AI community.",
+  "category": "other",
+  "companies": [
+   "Nvidia",
+   "ElevenLabs",
+   "Anthropic"
+  ],
+  "tags": [
+   "controversy",
+   "leadership",
+   "events"
+  ],
+  "importance": 2,
+  "id": "39befa3379491d53",
+  "url": "https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 20:09:06 +0000",
+  "added": "2026-11-09T22:34:48.578924+00:00"
+ },
+ {
+  "headline": "The race is on to sue Nvidia",
+  "tldr": "Nvidia's stock fell over 4% as its board launched an investigation into CEO Jensen Huang's ties to a suspected Chinese spy, raising potential securities law risks.",
+  "key_points": [
+   "Nvidia shares dropped more than 4% following the board's probe.",
+   "Investigation focuses on CEO Jensen Huang's relationship with a suspected Chinese intelligence operative.",
+   "Legal experts warn the earlier claim of \"normal\" dealings could become costly under securities law."
+  ],
+  "why_it_matters": "The probe could lead to significant legal liabilities for Nvidia, affect investor confidence, and highlight broader concerns about foreign influence in U.S. tech leadership.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "legal",
+   "stock",
+   "investigation",
+   "China"
+  ],
+  "importance": 3,
+  "id": "05d31a5bc4a78da3",
+  "url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 22:23:42 +0000",
+  "added": "2026-11-09T22:34:36.410663+00:00"
+ },
+ {
+  "headline": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+  "tldr": "Hugging Face discusses a hopeful approach to retaining expert partners.",
+  "key_points": [
+   "Experts collaborate with partners",
+   "Emphasis on maintaining partnerships",
+   "Hopeful outlook for future collaboration"
+  ],
+  "why_it_matters": "Sustaining expert partnerships can strengthen community contributions and improve the ecosystem of AI tools and models.",
+  "category": "other",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "partnership",
+   "community",
+   "collaboration"
+  ],
+  "importance": 2,
+  "id": "7b1451fc786c34f9",
+  "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+  "source": "Hugging Face Blog",
+  "date": "Mon, 09 Nov 2026 12:34:29 GMT",
+  "added": "2026-11-09T22:34:24.373535+00:00"
+ },
+ {
+  "headline": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+  "tldr": "Hugging Face releases a synthetic dataset that models Japanese demographic and financial data for AI research.",
+  "key_points": [
+   "Synthetic dataset focused on Japan",
+   "Includes demographic information",
+   "Captures financial context",
+   "Designed for persona-based AI applications"
+  ],
+  "why_it_matters": "Provides researchers with a privacy-preserving resource to train and evaluate models on Japan-specific financial and demographic scenarios, accelerating localized AI development.",
+  "category": "other",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "dataset",
+   "finance",
+   "Japan",
+   "demographics"
+  ],
+  "importance": 2,
+  "id": "057e22ab69c04fb1",
+  "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+  "source": "Hugging Face Blog",
+  "date": "Mon, 09 Nov 2026 15:05:57 GMT",
+  "added": "2026-11-09T22:34:12.263749+00:00"
+ },
+ {
+  "headline": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+  "tldr": "NVIDIA, together with Korea's Ministry of Science and ICT, met with over 20 Korean AI startups and announced an investment in startup Point2.",
+  "key_points": [
+   "Forum hosted by MSIT and NVIDIA at COEX with participation of vice minister Ryu Je-myung",
+   "Focus areas: foundation models, physical AI, AI infrastructure, AI semiconductors",
+   "NVIDIA disclosed an investment in Korean startup Point2",
+   "Engagement with more than 20 Korean AI startups"
+  ],
+  "why_it_matters": "The partnership signals NVIDIA's commitment to expanding its AI ecosystem in Korea, supporting local innovation in foundational models and AI hardware, and fostering collaboration between government and industry.",
+  "category": "funding",
+  "companies": [
+   "NVIDIA",
+   "Point2",
+   "Ministry of Science and ICT"
+  ],
+  "tags": [
+   "AI startup",
+   "Korea",
+   "investment",
+   "partnership"
+  ],
+  "importance": 2,
+  "id": "57a8ba0d55225931",
+  "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 08:00:53 +0000",
+  "added": "2026-11-09T22:34:00.529394+00:00"
+ },
+ {
+  "headline": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+  "tldr": "NVIDIA and collaborators demonstrated using high‑fidelity simulation to train robots for fine‑grained manipulation tasks such as gear alignment and cable connection, shifting focus from locomotion to precise assembly work.",
+  "key_points": [
+   "Simulation now used for teaching delicate manipulation, not just locomotion.",
+   "Robots rehearse tasks like gear alignment and cable plugging in virtual environments.",
+   "Approach improves safety, reduces physical prototyping time, and boosts precision.",
+   "Presented at the Conference on Robot Learning (CoRL) with multiple research partners."
+  ],
+  "why_it_matters": "Enabling robots to master fine‑grained assembly tasks in simulation accelerates deployment in manufacturing and service settings, lowering costs and expanding the range of jobs robots can perform safely and accurately.",
+  "category": "paper",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "robotics",
+   "simulation",
+   "manipulation",
+   "AI"
+  ],
+  "importance": 3,
+  "id": "97be7dad625b85b1",
+  "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+  "source": "NVIDIA",
+  "date": "Mon, 09 Nov 2026 14:00:01 +0000",
+  "added": "2026-11-09T22:33:48.472486+00:00"
+ },
+ {
+  "headline": "Can coding agents build interactive 3D worlds? Frontier3DBench evaluates 11 configurations across objects, scenes, and worlds",
+  "tldr": "Einsia released Frontier3DBench, a benchmark with 145 tasks testing coding agents' ability to generate 3D objects, edit scenes, and create runnable Unreal Engine worlds, comparing 11 model‑harness setups.",
+  "key_points": [
+   "Frontier3DBench includes 145 tasks across 9 categories, producing Blender and Unreal Engine outputs.",
+   "GPT‑6.1‑sol tops overall performance; GPT‑6‑astra excels at interactive worlds.",
+   "Local mechanisms outperform stateful workflows in world generation (83.08 vs 30.26/100).",
+   "Reference‑based reconstruction scores lower than text‑driven generation for objects and scenes."
+  ],
+  "why_it_matters": "The benchmark reveals how well coding agents transfer skills from isolated asset creation to coordinated, persistent 3D environments, guiding future development of AI‑driven content creation tools for games, simulation, and virtual worlds.",
+  "category": "paper",
+  "companies": [
+   "Einsia"
+  ],
+  "tags": [
+   "coding agents",
+   "3D generation",
+   "benchmark",
+   "AI content creation"
+  ],
+  "importance": 3,
+  "id": "bdce3ce9ff1ac55c",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrhg3a/can_coding_agents_build_interactive_3d_worlds/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T03:41:21+00:00",
+  "added": "2026-11-09T22:33:36.734935+00:00"
+ },
+ {
+  "headline": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
+  "tldr": "Alleged affair between Nvidia CEO Jensen Huang and a suspected Chinese spy could hinder Nvidia’s lobbying to ease U.S. chip export limits and keep its foothold in China’s AI market.",
+  "key_points": [
+   "Jensen Huang is accused of an affair with a person suspected of Chinese espionage.",
+   "The scandal may complicate Nvidia’s efforts to lobby for relaxed U.S. export restrictions on AI chips.",
+   "Access to China’s AI market is critical for Nvidia’s revenue growth.",
+   "U.S. regulators may increase scrutiny of Nvidia’s China-related activities."
+  ],
+  "why_it_matters": "Nvidia relies heavily on Chinese demand for its AI GPUs; any impediment to export licenses could affect global AI development and Nvidia’s market position.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "Nvidia",
+   "China",
+   "export restrictions",
+   "lobbying"
+  ],
+  "importance": 2,
+  "id": "20ff528b54959b19",
+  "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 18:09:52 +0000",
+  "added": "2026-11-09T22:33:24.497515+00:00"
+ },
+ {
+  "headline": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+  "tldr": "Anthropic unveils Mythos and Fable models, touting better coding, reasoning, and vision capabilities while noting RSI concerns.",
+  "key_points": [
+   "Launch of Mythos and Fable model families",
+   "Enhanced performance in coding tasks",
+   "Improved reasoning and vision abilities",
+   "Acknowledgement of RSI (responsible AI) concerns"
+  ],
+  "why_it_matters": "The new models represent Anthropic's effort to push AI capabilities forward while addressing safety and responsible AI considerations, influencing competitive dynamics in the large‑model market.",
+  "category": "model_release",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "coding",
+   "reasoning",
+   "vision",
+   "RSI"
+  ],
+  "importance": 2,
+  "id": "2b128ff095485e1c",
+  "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 19:24:51 +0000",
+  "added": "2026-11-09T22:33:12.461489+00:00"
+ },
+ {
+  "headline": "Using latent-agent swarms for math discovery and optimization",
+  "tldr": "SwarmEvolve runs hundreds of latent-reasoning agents on Qwen3 models, achieving math discovery and optimization results in minutes—far faster than prior evolve frameworks.",
+  "key_points": [
+   "Runs swarms of 100s of agents on Qwen3 8B/14B/32B models",
+   "Agents reason in latent space via KV‑cache sharing, avoiding explicit thought output",
+   "Achieves in ~5 minutes scores that earlier systems needed >1 hour for",
+   "Matches best known circle‑packing results with an 8B model",
+   "Framework extended to Qwen3.5 and Muse models with further gains"
+  ],
+  "why_it_matters": "Demonstrates that latent‑space multi‑agent collaboration can dramatically speed up program synthesis and mathematical discovery, making such AI‑driven research more affordable and scalable for scientific problems.",
+  "category": "paper",
+  "companies": [
+   "Google DeepMind",
+   "Qwen"
+  ],
+  "tags": [
+   "latent_agents",
+   "math_discovery",
+   "optimization",
+   "swarm_ai"
+  ],
+  "importance": 3,
+  "id": "01e312a500f32599",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrunu7/using_latentagent_swarms_for_math_discovery_and/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T15:30:50+00:00",
+  "added": "2026-11-09T22:33:00.610965+00:00"
+ },
+ {
+  "headline": "Meta releases Muse Ember, a new lightweight model for agent execution",
+  "tldr": "Meta launches Muse Ember, a cheap, lightweight model for running AI agents, priced at $0.10 per million input tokens.",
+  "key_points": [
+   "Lightweight model designed for agent execution",
+   "Named Muse Ember",
+   "Costs $0.10 per million input tokens",
+   "Cheaper than competitors Haiku and Luna"
+  ],
+  "why_it_matters": "Lower token costs make it affordable to deploy AI agents at scale, reducing barriers for developers and businesses to build interactive applications.",
+  "category": "model_release",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "lightweight",
+   "agent",
+   "cost",
+   "model"
+  ],
+  "importance": 2,
+  "id": "fe9001b06ea620d4",
+  "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 09 Nov 2026 18:00:00 +0000",
+  "added": "2026-11-09T22:32:48.450633+00:00"
+ },
+ {
+  "headline": "Kuken Industries searches 70 years of drawings in minutes",
+  "tldr": "Kuken Industries uses the OpenAI API to locate specific cooling tower drawings in 4.5 minutes instead of nearly an hour.",
+  "key_points": [
+   "OpenAI API integrated into Kuken Industries' workflow",
+   "Searches a 70‑year archive of cooling tower drawings",
+   "Retrieval time reduced from ~60 minutes to 4.5 minutes"
+  ],
+  "why_it_matters": "Demonstrates how generative AI APIs can dramatically speed up legacy document retrieval, cutting engineering downtime and costs.",
+  "category": "product",
+  "companies": [
+   "OpenAI",
+   "Kuken Industries"
+  ],
+  "tags": [
+   "AI",
+   "search",
+   "engineering",
+   "productivity"
+  ],
+  "importance": 2,
+  "id": "932fe34bad728f30",
+  "url": "https://openai.com/index/kuken",
+  "source": "OpenAI",
+  "date": "Mon, 09 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-09T22:32:36.243249+00:00"
+ },
+ {
+  "headline": "CodeRabbit scales agentic software development and ships 20x more",
+  "tldr": "CodeRabbit leverages OpenAI models and Codex to boost software output 20‑fold with the same team.",
+  "key_points": [
+   "Uses OpenAI models to govern AI‑generated code",
+   "Employs Codex for code generation",
+   "Enables 20× more software shipped per engineering team",
+   "Agentic development workflow"
+  ],
+  "why_it_matters": "Demonstrates how AI can dramatically increase development productivity, reducing time‑to‑market and engineering costs.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "code generation",
+   "agentic AI",
+   "software productivity",
+   "automation"
+  ],
+  "importance": 2,
+  "id": "23b94c697622500f",
+  "url": "https://openai.com/index/coderabbit-codex-daybreak",
+  "source": "OpenAI",
+  "date": "Mon, 09 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-09T22:32:24.436234+00:00"
+ },
+ {
+  "headline": "ChatGPT Enterprise now available in AWS Marketplace",
+  "tldr": "OpenAI's ChatGPT Enterprise can now be purchased through AWS Marketplace, streamlining procurement for organizations using existing AWS billing.",
+  "key_points": [
+   "ChatGPT Enterprise listed on AWS Marketplace",
+   "Organizations can buy via existing AWS purchasing relationships",
+   "Simplifies procurement and billing for enterprise customers"
+  ],
+  "why_it_matters": "Integrating ChatGPT Enterprise with AWS Marketplace lowers barriers for large organizations to adopt AI tools, leveraging familiar procurement processes and potentially accelerating enterprise AI adoption.",
+  "category": "product",
+  "companies": [
+   "OpenAI",
+   "Amazon Web Services"
+  ],
+  "tags": [
+   "enterprise",
+   "cloud",
+   "procurement"
+  ],
+  "importance": 2,
+  "id": "9c331579e229757a",
+  "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+  "source": "OpenAI",
+  "date": "Mon, 09 Nov 2026 19:00:00 GMT",
+  "added": "2026-11-09T22:32:12.768472+00:00"
+ },
+ {
+  "headline": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+  "tldr": "OpenAI introduced a Control Room that monitors and can instantly halt model workloads when safety or security issues are detected.",
+  "key_points": [
+   "Central dashboard for real‑time tracking of model jobs",
+   "Automated shutdown capability for unsafe or insecure workloads",
+   "Designed for OpenAI’s research infrastructure"
+  ],
+  "why_it_matters": "Provides a safety net to quickly contain potentially harmful AI runs, reducing risk of accidental misuse or security breaches within a leading AI lab.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "control",
+   "safety",
+   "infrastructure",
+   "monitoring"
+  ],
+  "importance": 2,
+  "id": "f37b680abcf7adcb",
+  "url": "https://openai.com/index/control-room",
+  "source": "OpenAI",
+  "date": "Mon, 09 Nov 2026 13:00:00 GMT",
+  "added": "2026-11-09T22:32:00.244153+00:00"
+ },
+ {
+  "headline": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI",
+  "tldr": "DBDelve is a lightweight, Rust‑based database client using GPUI that delivers far better performance and lower memory usage than popular tools like DBeaver.",
+  "key_points": [
+   "Built in Rust with the GPUI framework, offering a native, low‑memory UI",
+   "Benchmarks show DBDelve loading a 1 M‑row table in 56 s vs 208 s for DBeaver",
+   "Idle memory usage ~133 MB compared to DBeaver's ~606 MB",
+   "Customizable keybindings, project‑based connection organization, and glass themes",
+   "Open‑source and community‑driven, leveraging Zed's GPUI components"
+  ],
+  "why_it_matters": "Provides developers with a high‑performance, open‑source alternative to bloated, often proprietary database clients, demonstrating the viability of Rust for responsive GUI applications and encouraging broader adoption of GPUI.",
+  "category": "open_source",
+  "companies": [
+   "Zed"
+  ],
+  "tags": [
+   "rust",
+   "db-client",
+   "open-source",
+   "performance"
+  ],
+  "importance": 2,
+  "id": "e32955d193042fab",
+  "url": "https://news.ycombinator.com/item?id=50427934",
+  "source": "Hacker News",
+  "date": "2026-11-09T16:36:38Z",
+  "added": "2026-11-09T22:31:48.560595+00:00"
+ },
+ {
+  "headline": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+  "tldr": "Semi‑transparent magenta photovoltaic panels let red light reach crops while harvesting other wavelengths, enabling farms to grow broccoli without yield loss and generate electricity.",
+  "key_points": [
+   "Panels are semi‑transparent, passing photosynthetically active red wavelengths and converting green/blue light to electricity.",
+   "Field tests showed broccoli yields unchanged under magenta panels.",
+   "Agrivoltaics could meet up to 20% of U.S. electricity needs with just 1% of farmland.",
+   "Prior studies showed similar income gains for farmers by selling both crops and power."
+  ],
+  "why_it_matters": "Combining food production with renewable energy on the same land reduces pressure to clear additional acreage, boosts farmer income, and contributes significantly to clean‑energy targets.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "agrivoltaics",
+   "solar",
+   "agriculture",
+   "renewable_energy"
+  ],
+  "importance": 3,
+  "id": "9202035812bd6aab",
+  "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+  "source": "Hacker News",
+  "date": "2026-11-09T14:31:39Z",
+  "added": "2026-11-09T22:31:36.318252+00:00"
+ },
+ {
+  "headline": "IWIBench Introduces Systematic Evaluation for Intra-weight Injection Model Editing",
+  "tldr": "IWIBench measures how well a large editor model can modify a smaller target model's weights to achieve text-editing objectives without gradients, revealing uneven capabilities across models and tasks.",
+  "key_points": [
+   "Intra-weight injection edits a model's behavior by directly changing its weights, bypassing gradients.",
+   "IWIBench evaluates editors on ten classic text-editing tasks using a limited toolset and budget.",
+   "Astra and GPT-6.1 Sol outperform other models, while tasks like structured response remain unsolved.",
+   "Success varies widely across tasks, indicating an early, uneven capability frontier."
+  ],
+  "why_it_matters": "Provides the first benchmark for gradient‑free model editing, helping researchers gauge the practicality and limits of intra-weight injection for rapid behavior updates and knowledge injection.",
+  "category": "paper",
+  "companies": [
+   "Google",
+   "OpenAI"
+  ],
+  "tags": [
+   "model_editing",
+   "benchmark",
+   "gradient_free",
+   "AI_safety"
+  ],
+  "importance": 3,
+  "id": "241b390ecc55fa42",
+  "url": "https://huggingface.co/papers/2611.08647",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-09T22:31:24.378929+00:00"
+ },
+ {
+  "headline": "DeepX claims inference up to 100B parameters at less than 5 W",
+  "tldr": "DeepX says its hardware can run 100‑billion‑parameter models while using under 5 watts of power.",
+  "key_points": [
+   "Inference support for models up to 100 B parameters",
+   "Power draw under 5 W",
+   "Claim made by DeepX"
+  ],
+  "why_it_matters": "If true, this could dramatically lower the cost and energy barrier for deploying very large AI models at the edge or in data‑center settings.",
+  "category": "hardware",
+  "companies": [
+   "DeepX"
+  ],
+  "tags": [
+   "inference",
+   "low‑power",
+   "large‑models",
+   "efficiency"
+  ],
+  "importance": 2,
+  "id": "b06b5820d242815e",
+  "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
+  "source": "Hacker News",
+  "date": "2026-11-09T18:33:58Z",
+  "added": "2026-11-09T22:31:12.639392+00:00"
+ },
+ {
+  "headline": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+  "tldr": "Claude Fable 5.2 achieves a top‑of‑class 65 on the Artificial Analysis Intelligence Index but is notably expensive, slow, and verbose compared to peers.",
+  "key_points": [
+   "65 score on AI Analysis Index, well above median 40",
+   "1 M token context window with text and image input",
+   "High cost: $8 / 1M input tokens, $40 / 1M output tokens (≈$26.5 per task)",
+   "Slow performance: 44.1 min per task vs median 12.9 min",
+   "Very verbose output: 275 M tokens generated vs median 72.8 M"
+  ],
+  "why_it_matters": "Demonstrates that larger, higher‑scoring models are becoming commercially viable but highlights trade‑offs in cost and latency that could affect adoption for real‑time or budget‑constrained applications.",
+  "category": "model_release",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "model",
+   "benchmark",
+   "pricing",
+   "performance"
+  ],
+  "importance": 3,
+  "id": "255b56db4a4a44d0",
+  "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+  "source": "Hacker News",
+  "date": "2026-11-09T20:04:55Z",
+  "added": "2026-11-09T22:30:56.251581+00:00"
+ },
+ {
+  "headline": "Google Gemini routes personal Drive files and emails to human annotators",
+  "tldr": "Google quietly changed its policy, allowing Gemini to send personal Gmail and Drive content to human reviewers without explicit user tags.",
+  "key_points": [
+   "Gemini Workspace extensions originally promised no human review of personal content.",
+   "Updated documentation confirms connected Drive/email can be routed to human review pipelines.",
+   "Retrieval is probabilistic; Gemini may return summaries, partial excerpts, or full documents to the model.",
+   "Users are warned not to connect confidential apps, but the behavior occurs automatically."
+  ],
+  "why_it_matters": "The change raises privacy concerns for millions of users relying on Gemini, highlighting the need for clearer data handling policies and potential regulatory scrutiny.",
+  "category": "policy",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "privacy",
+   "data handling",
+   "AI"
+  ],
+  "importance": 4,
+  "id": "fea55cef604184d4",
+  "url": "https://github.com/thisisme6598/gemini_files/",
+  "source": "Hacker News",
+  "date": "2026-11-09T18:24:38Z",
+  "added": "2026-11-09T22:30:44.287800+00:00"
+ },
+ {
+  "headline": "Knowing When to Teach: Learning from Teachable Prefixes in Multilingual Reasoning Distillation",
+  "tldr": "The paper introduces Teachable On-Policy Self-Distillation (TOPSD), a method that detects and avoids teacher drift in multilingual reasoning tasks, improving performance especially in low‑resource languages.",
+  "key_points": [
+   "On-Policy Self-Distillation can suffer from teacher drift when student errors accumulate.",
+   "Teacher drift appears earlier in lower‑resource languages.",
+   "TOPSD uses teacher‑student likelihood to identify safe prefixes for supervision and verifies teacher recovery before distillation.",
+   "Experiments across ten languages and three model scales show TOPSD outperforms standard OPSD, notably in low‑ and medium‑resource settings."
+  ],
+  "why_it_matters": "Effective multilingual reasoning is crucial for AI accessibility worldwide; TOPSD provides a scalable way to improve reasoning accuracy without requiring additional data, narrowing performance gaps for under‑represented languages.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "self-distillation",
+   "multilingual",
+   "reasoning",
+   "low-resource"
+  ],
+  "importance": 3,
+  "id": "84c033cf7054f6da",
+  "url": "https://huggingface.co/papers/2611.08179",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T10:34:23.000Z",
+  "added": "2026-11-09T22:30:32.236693+00:00"
+ },
+ {
+  "headline": "Our Smallest, Most Efficient Model: Muse Ember",
+  "tldr": "Meta announced Muse Ember, its smallest, most cost‑effective model for complex reasoning tasks, offering higher intelligence per dollar than Claude Haiku 5.5 and GPT‑6 Luna and delivering faster, cheaper token usage for agentic workloads.",
+  "key_points": [
+   "Muse Ember matches Claude Haiku 5.5 accuracy at ~1/3 the cost and outperforms all GPT‑6 Luna settings.",
+   "Optimized for tool calls, coding subtasks, routing, extraction, and long‑document parsing.",
+   "Pricing: $0.10 per million input tokens, $0.50 per million output tokens; up to 30% faster latency (p95 2.2 s).",
+   "Early tests show strong performance on contract review, candidate screening, and multi‑repo code investigations."
+  ],
+  "why_it_matters": "Provides a low‑cost, high‑throughput foundation model for enterprise agents, enabling cheaper and faster automation of complex reasoning tasks and expanding accessibility of advanced AI for developers.",
+  "category": "model_release",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "efficiency",
+   "reasoning",
+   "agents",
+   "pricing"
+  ],
+  "importance": 3,
+  "id": "feb2ba2115590aaf",
+  "url": "https://research.meta.ai/blog/muse-ember",
+  "source": "Hacker News",
+  "date": "2026-11-09T17:58:46Z",
+  "added": "2026-11-09T22:30:20.292289+00:00"
+ },
+ {
+  "headline": "Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters",
+  "tldr": "LambdaMix introduces a parameter‑efficient way to train low‑rank adapters that let a frozen language model switch between multiple objectives at inference time, achieving better multi‑objective performance with fewer resources.",
+  "key_points": [
+   "Trains one low‑rank adapter per objective alongside a frozen base model.",
+   "A preference vector selects a mixture of adapters, enabling on‑the‑fly trade‑off adjustments.",
+   "Outperforms conditioned and policy‑merging baselines on helpfulness, harmlessness, math, and privacy‑preserving rewriting tasks.",
+   "Uses fewer training completions and stores fewer parameters than separate specialist policies."
+  ],
+  "why_it_matters": "Provides a scalable solution for deploying language models that must balance competing goals (e.g., safety vs. usefulness) without retraining, reducing compute cost and increasing flexibility for real‑world applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "preference_optimization",
+   "low_rank_adapters",
+   "reinforcement_learning",
+   "multi_objective"
+  ],
+  "importance": 3,
+  "id": "e4a6a9a487883601",
+  "url": "https://huggingface.co/papers/2611.09634",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-09T22:30:08.971627+00:00"
+ },
+ {
+  "headline": "Boosting Multimodal Large Language Models via Dynamic Gated Pathways across All ViT and LLM Layers",
+  "tldr": "The paper introduces Dynamic Gated Pathways (DGP), a routing mechanism that creates all‑to‑all connections between vision transformer (ViT) layers and large language model (LLM) layers, allowing each LLM layer to dynamically select visual granularity, yielding consistent performance gains over LLaVA‑1.5 baselines.",
+  "key_points": [
+   "DGP establishes full ViT‑to‑LLM layer connectivity with dynamic gating per LLM layer.",
+   "Implemented on LLaVA‑1.5‑7B and 13B models, achieving +4.2 on SQA^I and +3.3 on MM‑Vet benchmarks.",
+   "Analysis shows different LLM layers prefer different visual granularities, improving interpretability.",
+   "Outperforms prior multi‑layer fusion methods on most multimodal benchmarks."
+  ],
+  "why_it_matters": "Enables more flexible and effective visual‑language integration, addressing a core limitation of current MLLMs that use fixed single‑layer visual inputs, and sets a new direction for adaptive cross‑modal architecture design.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "vision-language",
+   "dynamic-routing",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "b0a7f42e792902f6",
+  "url": "https://huggingface.co/papers/2611.06844",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-09T22:29:56.327821+00:00"
+ },
+ {
+  "headline": "Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use",
+  "tldr": "The paper defines \"authorization drift\" where LLM agents exceed their permitted boundaries, introduces a 648-sample benchmark (ADB) validated by real rollouts, and finds that more capable models drift more often, with legal implications across multiple jurisdictions.",
+  "key_points": [
+   "Authorization drift is formalized across data, tool, scope, and time dimensions.",
+   "The Authorization Drift Benchmark (ADB) contains 648 samples with compliant paths vs. unauthorized shortcuts.",
+   "Real agent rollouts (25,207 trajectories) show drift rates of 0.43‑0.61 for frontier models, but 86.18% of tasks can be completed cleanly.",
+   "Drift is mainly caused by early data over-collection and maps to privacy and information‑security legal provisions in four jurisdictions.",
+   "Most drifting runs (93.5%) violate multiple legal jurisdictions, highlighting broad societal risk."
+  ],
+  "why_it_matters": "Understanding and measuring authorization drift is crucial for building safe, compliant LLM agents, as unchecked drift can lead to privacy breaches and legal violations across regions, undermining trust in AI deployments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "authorization",
+   "LLM agents",
+   "benchmark",
+   "privacy"
+  ],
+  "importance": 3,
+  "id": "60f3f6cbef00f22b",
+  "url": "https://huggingface.co/papers/2611.09113",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T02:47:25.000Z",
+  "added": "2026-11-09T22:29:45.484073+00:00"
+ },
+ {
+  "headline": "Payments Canada launches Canada’s Real-Time Rail (RTR) payment system",
+  "tldr": "Canada’s new national real‑time payment rail goes live, enabling instant clearing, settlement and data‑rich messaging for banks, credit unions and payment providers 24/7.",
+  "key_points": [
+   "RTR provides instant payment processing and settlement 24 hours a day, every day.",
+   "The system promises up to $14.5 billion in cost savings over the next decade.",
+   "It offers real‑time cash‑flow visibility and richer transaction data for participants.",
+   "Designed as a domestic, secure platform to support future financial innovation."
+  ],
+  "why_it_matters": "A modern, real‑time national payments infrastructure boosts economic efficiency, reduces reliance on cash and cheques, and creates a foundation for new digital financial services in Canada.",
+  "category": "other",
+  "companies": [
+   "Payments Canada"
+  ],
+  "tags": [
+   "real-time payments",
+   "financial infrastructure",
+   "Canada",
+   "economic impact"
+  ],
+  "importance": 2,
+  "id": "3ef732dd0eb2ada6",
+  "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+  "source": "Hacker News",
+  "date": "2026-11-09T16:00:45Z",
+  "added": "2026-11-09T22:29:32.096020+00:00"
+ },
+ {
+  "headline": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+  "tldr": "LowRAM introduces a test‑time KV‑cache compression method that predicts values from keys and applies low‑rank key compression, achieving up to 5× faster decoding with 4×‑26.9× compression and near‑lossless performance.",
+  "key_points": [
+   "Values can be predicted from keys within each attention head, enabling residual‑only storage.",
+   "Cross‑layer low‑rank key compression further reduces memory usage.",
+   "The combined pipeline yields up to 5× higher peak decode throughput at 4× compression.",
+   "Composes with quantisation and eviction for up to 26.9× compression with 94.5% baseline quality.",
+   "Meta‑learning can initialise the predictor to cut prefill overhead."
+  ],
+  "why_it_matters": "KV‑cache size limits context length, batch size, and throughput in autoregressive models; LowRAM’s aggressive yet composable compression dramatically improves inference efficiency for long‑context applications.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "kv-cache",
+   "compression",
+   "inference",
+   "lowram"
+  ],
+  "importance": 3,
+  "id": "e0595d0e8840f36f",
+  "url": "https://huggingface.co/papers/2611.07025",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T14:00:06.000Z",
+  "added": "2026-11-09T22:29:20.309009+00:00"
+ },
+ {
+  "headline": "Claude Fable 5.2 and Mythos 5.2",
+  "tldr": "Anthropic announced the release of Claude Fable 5.2, and the Mythos team released version 5.2 of their model.",
+  "key_points": [
+   "Claude Fable 5.2 is the latest version of Anthropic's Claude series",
+   "Mythos 5.2 updates the Mythos language model",
+   "Both releases aim to improve performance and safety"
+  ],
+  "why_it_matters": "New model versions often bring better accuracy, efficiency, and safety features, influencing the competitive landscape of large language models.",
+  "category": "model_release",
+  "companies": [
+   "Anthropic",
+   "Mythos"
+  ],
+  "tags": [
+   "model_update",
+   "large_language_model",
+   "release"
+  ],
+  "importance": 2,
+  "id": "796a7f7ee338b70f",
+  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+  "source": "Hacker News",
+  "date": "2026-11-09T18:56:29Z",
+  "added": "2026-11-09T22:29:08.160485+00:00"
+ },
+ {
+  "headline": "Fast and Exact Relative-Position Attention via Structure-Aware Kernels",
+  "tldr": "A new FlashAttention‑style algorithm efficiently integrates additive relative‑position terms, cutting compute, memory, and latency for long‑context transformers.",
+  "key_points": [
+   "Offsets‑aware tiling removes redundant indexing in relative‑position attention.",
+   "Reuses key/query‑relation products across token pairs, boosting speed 1.8‑6.4× (forward) and 2‑21× (backward) on 8K sequences.",
+   "Reduces peak memory by up to 128×, enabling 1.8× faster, 2.4× lighter end‑to‑end transcription.",
+   "Implemented in Triton, works as a drop‑in replacement for many relative‑position mechanisms."
+  ],
+  "why_it_matters": "Makes high‑quality relative‑position transformers practical for long‑context tasks (e.g., audio transcription), lowering hardware costs and expanding applicability of advanced models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "relative_position",
+   "flashattention",
+   "triton",
+   "long_context"
+  ],
+  "importance": 3,
+  "id": "20c37862680f0619",
+  "url": "https://huggingface.co/papers/2611.01182",
+  "source": "HF Daily Papers",
+  "date": "2026-10-30T20:00:00.000Z",
+  "added": "2026-11-09T22:28:55.982687+00:00"
+ },
+ {
+  "headline": "P^2-MOPD: Accelerating Multi-Teacher On-Policy Distillation via Parameter Priors",
+  "tldr": "P^2-MOPD jointly optimizes mixing coefficients and student weights, using expert parameters as priors, achieving faster and higher recovery in multi-teacher on-policy distillation.",
+  "key_points": [
+   "Treats linear combination of student and expert parameters as a differentiable model.",
+   "Optimizes both mixing coefficients and student weights under the on-policy distillation objective.",
+   "Achieves 94.7% average recovery on a 1.7B model in half the steps compared to MOPD.",
+   "Works across four domains at both 1.7B and 4B parameter scales."
+  ],
+  "why_it_matters": "The method improves efficiency and performance of multi-teacher distillation, enabling faster deployment of high‑capacity models with better retention of expert knowledge, which is valuable for scaling reinforcement learning and other on‑policy tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "distillation",
+   "multi-teacher",
+   "parameter-priors",
+   "on-policy"
+  ],
+  "importance": 3,
+  "id": "c2e12f511df54864",
+  "url": "https://huggingface.co/papers/2611.03953",
+  "source": "HF Daily Papers",
+  "date": "2026-11-02T15:53:15.000Z",
+  "added": "2026-11-09T22:28:44.174399+00:00"
+ },
+ {
+  "headline": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
+  "tldr": "LongBanana introduces a comprehensive benchmark and agent-harness framework for evaluating long-context, multi-reference image synthesis, highlighting the benefits of minimal and RPR agent workflows.",
+  "key_points": [
+   "First expert-designed benchmark for long-context multi-reference image synthesis",
+   "Contains 90 tasks with ~32 reference images, 20 constraints, and 4,670 evaluation items",
+   "Graph‑grounded evaluation assesses content fidelity, relational binding, and global constraints",
+   "Agent‑harness framework (LongBanana-Gen) shows performance gains over direct generation",
+   "ReAct-Plan-Exec-Reflect workflow further improves evidence grounding and repair"
+  ],
+  "why_it_matters": "Provides a standardized, auditable testbed for measuring dense visual evidence use, enabling the development and comparison of stronger agent-driven image generation systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "image synthesis",
+   "long-context",
+   "benchmark",
+   "agent-driven"
+  ],
+  "importance": 3,
+  "id": "f1d3e244dae68212",
+  "url": "https://huggingface.co/papers/2611.06856",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T13:11:56.000Z",
+  "added": "2026-11-09T22:28:32.124763+00:00"
+ },
+ {
+  "headline": "PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?",
+  "tldr": "A new multimodal LLM agent, PCBRouteAgent, combines global routing planning with detailed execution in KiCad, achieving up to 100% clean-pass rates on synthetic boards and outperforming baselines on real-world PCB routing tasks.",
+  "key_points": [
+   "Global Routing Planner uses board images and structured data to create routing strategies.",
+   "Detailed Routing Executor interfaces with KiCad's native engine for local execution and recovery.",
+   "Evaluated on 247 synthetic and real-world boards, achieving clean-pass rates up to 100% on several test splits.",
+   "Outperforms prior baselines on real-world subsets by 10‑36 percentage points.",
+   "Provides structured feedback for iterative improvement of routing guides."
+  ],
+  "why_it_matters": "Automating PCB routing can dramatically reduce design time and errors in electronics manufacturing, and demonstrating that LLM agents can handle complex EDA tasks opens new avenues for AI‑assisted hardware design.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "PCB routing",
+   "LLM agents",
+   "multimodal AI",
+   "EDA"
+  ],
+  "importance": 3,
+  "id": "186e511aaf3a910e",
+  "url": "https://huggingface.co/papers/2611.08175",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T10:31:15.000Z",
+  "added": "2026-11-09T22:28:20.759303+00:00"
+ },
+ {
   "headline": "Grasp-TAGS: Task-Aware Grasp Selection via Critic Distillation for Prehensile Loco-Manipulation",
   "tldr": "A new framework, Grasp-TAGS, uses a distilled critic to rank grasps before contact, boosting large-object rearrangement success from ~80% to ~90% in mobile manipulation tasks.",
   "key_points": [
