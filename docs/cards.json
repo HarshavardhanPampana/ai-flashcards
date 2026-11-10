@@ -1,5 +1,1065 @@
 [
  {
+  "headline": "Large Language Models as a Universal Searcher for Open-World Automated Machine Learning",
+  "tldr": "The paper introduces NCode, an LLM‑based AutoML framework that jointly optimizes model architecture, hyperparameters, and data ratios across tasks and modalities without task‑specific fine‑tuning, achieving state‑of‑the‑art results on several benchmarks.",
+  "key_points": [
+   "NCode encodes diverse AutoML choices into discrete sequences, turning optimization into a ranking problem.",
+   "Trained on a single vision task, the LLM searcher generalizes to image classification, segmentation, speaker verification, and text‑to‑image tasks.",
+   "Achieves SOTA performance on a billion‑parameter Diffusion Transformer with 896 GPU‑days and a GenEval score of 0.91.",
+   "Uses reinforcement‑learning‑based chain‑of‑thought reasoning to interpret the searcher's decision‑making process."
+  ],
+  "why_it_matters": "A universal LLM‑driven AutoML system could dramatically reduce the manual effort and expertise required to build high‑performing models, enabling faster, more scalable development across domains and modalities.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AutoML",
+   "LLM",
+   "optimization",
+   "multimodal"
+  ],
+  "importance": 3,
+  "id": "3b217ee2de6056db",
+  "url": "https://arxiv.org/abs/2611.12791v1",
+  "source": "arXiv",
+  "date": "2026-11-09T17:58:38Z",
+  "added": "2026-11-10T19:57:16.911706+00:00"
+ },
+ {
+  "headline": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+  "tldr": "Adobe adds AI agents and a prototype builder to its creative suite, expanding AI-powered design capabilities.",
+  "key_points": [
+   "AI agents integrated into Photoshop",
+   "AI agents integrated into Premiere",
+   "New creative tools launched in Firefly",
+   "Prototype builder tool added to Firefly"
+  ],
+  "why_it_matters": "Embedding AI agents across Adobe's flagship creative apps and introducing a prototype builder in Firefly strengthens Adobe's AI offering, challenges competitors like Figma, and gives creators more automated design assistance.",
+  "category": "product",
+  "companies": [
+   "Adobe"
+  ],
+  "tags": [
+   "AI agents",
+   "creative tools",
+   "Firefly"
+  ],
+  "importance": 2,
+  "id": "d10ce5761f29e021",
+  "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 14:05:10 +0000",
+  "added": "2026-11-10T19:57:04.247090+00:00"
+ },
+ {
+  "headline": "Nvidia CEO Jensen Huang’s affair with alleged Chinese spy: a timeline",
+  "tldr": "Alleged affair between Nvidia CEO and a Chinese spy raises national security concerns amid US‑China AI race.",
+  "key_points": [
+   "Jensen Huang linked to alleged Chinese spy",
+   "Timeline of the alleged affair released",
+   "Potential impact on US‑China AI competition"
+  ],
+  "why_it_matters": "The alleged relationship could expose sensitive AI strategy information, affecting national security and the competitive balance in advanced AI infrastructure development between the United States and China.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "security",
+   "China",
+   "US"
+  ],
+  "importance": 2,
+  "id": "940b8a321b942013",
+  "url": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 17:04:19 +0000",
+  "added": "2026-11-10T19:56:52.278988+00:00"
+ },
+ {
+  "headline": "OpenAI rolls out new business profiles, making ChatGPT just a little bit more like Google",
+  "tldr": "OpenAI adds business profile features to ChatGPT to improve consumer discovery and help businesses be found.",
+  "key_points": [
+   "New business profile feature for ChatGPT",
+   "Aims to turn ChatGPT into a consumer discovery engine",
+   "Provides tools for businesses to showcase information",
+   "Brings functionality similar to Google search listings"
+  ],
+  "why_it_matters": "Enhancing ChatGPT with business profiles could shift how users discover products and services, giving OpenAI a foothold in the search‑like space and offering businesses a new channel for visibility.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "ChatGPT",
+   "business profiles",
+   "consumer discovery",
+   "search"
+  ],
+  "importance": 2,
+  "id": "ccdccf818b30a0e0",
+  "url": "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 18:49:52 +0000",
+  "added": "2026-11-10T19:56:40.290475+00:00"
+ },
+ {
+  "headline": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+  "tldr": "Oura is buying Counsel Health for $625 million, shortly after shelving its planned $2.2 billion IPO.",
+  "key_points": [
+   "Oura agrees to acquire Counsel Health for $625 M",
+   "Counsel Health specializes in AI‑driven primary care",
+   "Deal follows Oura’s indefinite postponement of its $2.2 B IPO",
+   "Acquisition expands Oura’s footprint in health‑tech and AI services"
+  ],
+  "why_it_matters": "The purchase signals growing consolidation in AI‑powered healthcare, giving Oura a direct entry into primary‑care services and strengthening its AI portfolio while reflecting market pressure on IPOs.",
+  "category": "acquisition",
+  "companies": [
+   "Oura",
+   "Counsel Health"
+  ],
+  "tags": [
+   "acquisition",
+   "healthtech",
+   "AI",
+   "funding"
+  ],
+  "importance": 2,
+  "id": "fe6d70a1808af088",
+  "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 19:23:34 +0000",
+  "added": "2026-11-10T19:56:28.349499+00:00"
+ },
+ {
+  "headline": "Decision Models in Hugging Face",
+  "tldr": "Hugging Face introduces decision models for AI workflows.",
+  "key_points": [
+   "New decision model offering",
+   "Integrated into Hugging Face platform",
+   "Aims to streamline model selection"
+  ],
+  "why_it_matters": "Provides developers with tools to choose and manage AI models more efficiently, improving productivity and deployment quality.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "decision models",
+   "huggingface",
+   "AI tools"
+  ],
+  "importance": 2,
+  "id": "3229de0d919212c3",
+  "url": "https://huggingface.co/blog/decision",
+  "source": "Hugging Face Blog",
+  "date": "Tue, 10 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-10T19:56:16.004306+00:00"
+ },
+ {
+  "headline": "Pay for Hugging Face Hub with your Google Cloud Account",
+  "tldr": "Hugging Face now lets users charge Hub usage via their Google Cloud billing accounts.",
+  "key_points": [
+   "Google Cloud billing integration",
+   "Simplifies payment for Hub services",
+   "Available to Hugging Face users",
+   "No separate credit card needed"
+  ],
+  "why_it_matters": "Linking Hub payments to Google Cloud streamlines billing for developers who already use GCP, reducing friction and encouraging broader adoption of Hugging Face services.",
+  "category": "product",
+  "companies": [
+   "Hugging Face",
+   "Google Cloud"
+  ],
+  "tags": [
+   "payment",
+   "cloud",
+   "hub",
+   "integration"
+  ],
+  "importance": 2,
+  "id": "724fae9251483a53",
+  "url": "https://huggingface.co/blog/hub-gcp-marketplace",
+  "source": "Hugging Face Blog",
+  "date": "Tue, 10 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-10T19:56:04.105824+00:00"
+ },
+ {
+  "headline": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+  "tldr": "NVIDIA announced a donation to the OpenShell project and unveiled new AI infrastructure tools to strengthen Kubernetes for AI workloads.",
+  "key_points": [
+   "Donated resources to the OpenShell open‑source project.",
+   "Introduced AI‑focused extensions for Kubernetes to handle large‑scale AI factories.",
+   "Announced support and contributions at KubeCon + CloudNativeCon.",
+   "Aims to improve scalability and reliability of AI workloads on cloud‑native platforms."
+  ],
+  "why_it_matters": "Enhancing Kubernetes for AI workloads accelerates development and deployment of AI models across many organizations, and the open‑source donation fosters community collaboration and faster innovation in AI infrastructure.",
+  "category": "open_source",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "Kubernetes",
+   "AI infrastructure",
+   "open source",
+   "cloud-native"
+  ],
+  "importance": 3,
+  "id": "b4eac762a15ace07",
+  "url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
+  "source": "NVIDIA",
+  "date": "Tue, 10 Nov 2026 16:00:03 +0000",
+  "added": "2026-11-10T19:55:52.861658+00:00"
+ },
+ {
+  "headline": "Hands-on with Ring’s new AI drone camera for your home",
+  "tldr": "Ring is shipping its first indoor AI drone camera, the Ring Drone Cam, on Jan 27 2027 for $249.99.",
+  "key_points": [
+   "First flying indoor drone camera from Ring",
+   "AI-powered home security features",
+   "Shipping Jan 27 2027 at $249.99",
+   "Announced six years after initial reveal"
+  ],
+  "why_it_matters": "Adds mobility to home surveillance, showing how AI and robotics are entering consumer security markets.",
+  "category": "product",
+  "companies": [
+   "Ring"
+  ],
+  "tags": [
+   "drone",
+   "home_security",
+   "AI",
+   "consumer"
+  ],
+  "importance": 2,
+  "id": "707c973eeceba790",
+  "url": "https://www.theverge.com/tech/1030601/ring-drone-cam-hands-on-price-release-date-ai-pilot",
+  "source": "The Verge AI",
+  "date": "2026-11-10T08:30:00-05:00",
+  "added": "2026-11-10T19:55:40.732702+00:00"
+ },
+ {
+  "headline": "eBay appears to have shut the door on third-party AI agents",
+  "tldr": "eBay has blocked AI agents, including Meta's Muse, from browsing its platform, halting their ability to curate product listings.",
+  "key_points": [
+   "eBay blocked third‑party AI agents from accessing its site",
+   "Meta's Muse agent was specifically affected",
+   "Agents can no longer browse or curate eBay listings for users",
+   "The move highlights growing platform restrictions on AI agents"
+  ],
+  "why_it_matters": "Restricting AI agents limits their ability to aggregate commerce data and provide shopping assistance, impacting the development of AI‑driven e‑commerce tools and competition among AI service providers.",
+  "category": "policy",
+  "companies": [
+   "eBay",
+   "Meta"
+  ],
+  "tags": [
+   "AI agents",
+   "browsing",
+   "e-commerce",
+   "platform policy"
+  ],
+  "importance": 2,
+  "id": "3e50515c6d1fc8cc",
+  "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
+  "source": "The Verge AI",
+  "date": "2026-11-10T11:20:30-05:00",
+  "added": "2026-11-10T19:55:28.337950+00:00"
+ },
+ {
+  "headline": "Anthropic has its own AI-powered office suite now",
+  "tldr": "Anthropic launched an AI‑driven office suite, extending its enterprise‑focused tools beyond Claude Code into a full productivity platform.",
+  "key_points": [
+   "Anthropic expands from coding assistants to a complete office suite.",
+   "The suite leverages Anthropic's Claude models for writing, spreadsheets, and presentations.",
+   "Targets corporate clients seeking AI‑enhanced productivity tools.",
+   "Follows earlier hype around Claude Code and mirrors moves by OpenAI and Meta."
+  ],
+  "why_it_matters": "Brings Anthropic's safety‑focused AI to everyday business workflows, increasing competition in the AI productivity market and giving enterprises another option beyond existing AI office tools.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "AI productivity",
+   "office suite",
+   "Claude",
+   "enterprise"
+  ],
+  "importance": 3,
+  "id": "ec3f910d2a185a91",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+  "source": "The Verge AI",
+  "date": "2026-11-10T12:30:00-05:00",
+  "added": "2026-11-10T19:55:16.283444+00:00"
+ },
+ {
+  "headline": "Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot",
+  "tldr": "Ring expands into robotics with a consumer home‑security drone and a rolling robot for business patrols.",
+  "key_points": [
+   "Introduces a home security drone",
+   "Launches a rolling robot for enterprise security",
+   "Marks Ring's entry into robotics",
+   "Targets both residential and business markets"
+  ],
+  "why_it_matters": "The products broaden Ring's portfolio beyond video doorbells, showing how consumer security brands are moving into autonomous hardware for broader protection use cases.",
+  "category": "product",
+  "companies": [
+   "Ring",
+   "Amazon"
+  ],
+  "tags": [
+   "home security",
+   "drone",
+   "robotics",
+   "enterprise"
+  ],
+  "importance": 2,
+  "id": "c5e9e08f64384a91",
+  "url": "https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 13:30:00 +0000",
+  "added": "2026-11-10T19:55:04.054459+00:00"
+ },
+ {
+  "headline": "After challenging Google’s Android with Cyanogen, its co-founder takes aim at Windows for AI era",
+  "tldr": "Kora, a free-to-use OS, will launch as an AI‑focused alternative to Windows.",
+  "key_points": [
+   "Kora aims to replace Windows for AI‑heavy users",
+   "The OS will be free to use",
+   "Founded by the co‑creator of Cyanogen"
+  ],
+  "why_it_matters": "If successful, Kora could provide a low‑cost, AI‑optimized platform, challenging Windows' dominance in the emerging AI‑driven computing market.",
+  "category": "product",
+  "companies": [
+   "Kora"
+  ],
+  "tags": [
+   "operating_system",
+   "AI_models",
+   "Windows_alternative"
+  ],
+  "importance": 2,
+  "id": "5cd056a31d5df370",
+  "url": "https://techcrunch.com/2026/11/10/after-challenging-googles-android-with-cyanogen-its-co-founder-takes-aim-at-windows-for-ai-era/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-10T19:54:51.903591+00:00"
+ },
+ {
+  "headline": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
+  "tldr": "Meta expands its Muse AI assistant to smartwatches, enabling voice calls, texting, and dictation on Apple Watch and Android Wear OS devices.",
+  "key_points": [
+   "Muse AI assistant now available on Apple Watch",
+   "Supports Android Wear OS devices as well",
+   "Interaction via voice calls, text messages, and dictation"
+  ],
+  "why_it_matters": "Bringing an AI assistant to wearables broadens user access to conversational AI on-the-go, signaling Meta's push to integrate its AI services across everyday hardware platforms.",
+  "category": "product",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "AI assistant",
+   "wearables",
+   "smartwatch",
+   "voice interaction"
+  ],
+  "importance": 2,
+  "id": "05045298619b51c5",
+  "url": "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 15:29:30 +0000",
+  "added": "2026-11-10T19:54:40.065367+00:00"
+ },
+ {
+  "headline": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
+  "tldr": "Anthropic introduced Claude Meetings, an AI assistant that drafts meeting plans, creates timelines, answers chat questions, and pulls data from work apps in real time.",
+  "key_points": [
+   "Claude auto‑generates meeting agendas and action items",
+   "Maps timelines on a virtual whiteboard during discussions",
+   "Answers questions in the meeting chat",
+   "Integrates with connected work apps to fetch data like past figures"
+  ],
+  "why_it_matters": "It streamlines meeting productivity by turning conversation into structured plans and tasks, reducing manual note‑taking and accelerating decision‑making in enterprises.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "meeting AI",
+   "productivity",
+   "Claude",
+   "workflow"
+  ],
+  "importance": 4,
+  "id": "fd8e1c638d2dc1c1",
+  "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 17:30:00 +0000",
+  "added": "2026-11-10T19:54:28.411508+00:00"
+ },
+ {
+  "headline": "PSI is trying to make a business out of AI-driven scientific discovery",
+  "tldr": "PSI leverages an unreleased Anthropic model to solve a long‑standing quantum computing problem, aiming to commercialize AI‑powered research.",
+  "key_points": [
+   "PSI uses an unreleased Anthropic model",
+   "Answers a fundamental quantum computing question",
+   "Goal is to build a business around AI‑driven scientific discovery"
+  ],
+  "why_it_matters": "Demonstrates how advanced language models can accelerate breakthroughs in hard scientific domains, potentially creating new revenue streams and reshaping research funding models.",
+  "category": "product",
+  "companies": [
+   "PSI",
+   "Anthropic"
+  ],
+  "tags": [
+   "AI-driven discovery",
+   "quantum computing",
+   "scientific research"
+  ],
+  "importance": 2,
+  "id": "2800935556d85c08",
+  "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 19:03:52 +0000",
+  "added": "2026-11-10T19:54:16.863450+00:00"
+ },
+ {
+  "headline": "SWE-Pair: a coding-agent benchmark where every task is two real bugs to fix at once, with results from four models",
+  "tldr": "A new benchmark of 161 dual‑bug fixing tasks shows DeepSeek V4.1 Flash solves 90% of them at ~6¢ per task, outperforming GPT‑6 Luna which solves 78% at ~23¢.",
+  "key_points": [
+   "161 tasks drawn from 69 real Python projects, each requiring fixing two bugs simultaneously.",
+   "DeepSeek V4.1 Flash achieves 90% success at medium effort, costing about 6 cents per solved task.",
+   "GPT‑6 Luna reaches 78% success at maximum effort, costing roughly 23 cents per task.",
+   "Increasing reasoning effort does not improve performance; higher effort costs more.",
+   "Benchmark and dataset are publicly available on Hugging Face and Evaligo."
+  ],
+  "why_it_matters": "Provides a realistic, cost‑aware evaluation of coding agents on multi‑bug fixes, highlighting efficiency trade‑offs and setting a new standard for measuring practical programming assistance.",
+  "category": "paper",
+  "companies": [
+   "DeepSeek",
+   "OpenAI"
+  ],
+  "tags": [
+   "benchmark",
+   "coding-agent",
+   "Python",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "cdbf8c75a0559d25",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xsuqem/swepair_a_codingagent_benchmark_where_every_task/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-10T18:33:04+00:00",
+  "added": "2026-11-10T19:54:04.585067+00:00"
+ },
+ {
+  "headline": "Google broadens its AI hardware portfolio with two new specialized chips",
+  "tldr": "Google adds two new TPUs for confidential model training and higher memory capacity.",
+  "key_points": [
+   "Two new specialized Tensor Processing Units (TPUs) announced",
+   "Designed for confidential model training",
+   "Offers increased memory capacity for larger models"
+  ],
+  "why_it_matters": "Expanding TPU capabilities helps protect proprietary data during training and enables larger AI models, strengthening Google's hardware ecosystem and competitive edge in AI infrastructure.",
+  "category": "hardware",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "TPU",
+   "AI hardware",
+   "confidential training",
+   "memory capacity"
+  ],
+  "importance": 2,
+  "id": "5ef445c1e85d847f",
+  "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 10 Nov 2026 15:54:08 +0000",
+  "added": "2026-11-10T19:53:52.151593+00:00"
+ },
+ {
+  "headline": "Google Cloud launches Gemini for healthcare",
+  "tldr": "Google Cloud introduces Gemini, a platform to unify clinical data and automate workflows, aiming to cut administrative burnout in healthcare.",
+  "key_points": [
+   "Unify clinical data across systems",
+   "Automate healthcare workflows",
+   "Reduce administrative burnout"
+  ],
+  "why_it_matters": "Streamlining data and automating routine tasks can improve efficiency and clinician satisfaction, addressing a major pain point in healthcare operations.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "healthcare",
+   "cloud",
+   "automation",
+   "clinical-data"
+  ],
+  "importance": 2,
+  "id": "155d33cae7267931",
+  "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+  "source": "Google AI",
+  "date": "Tue, 10 Nov 2026 13:00:00 +0000",
+  "added": "2026-11-10T19:53:40.068589+00:00"
+ },
+ {
+  "headline": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+  "tldr": "Google and Adobe are integrating Adobe’s creative and productivity features, like PDF editing in Drive and Adobe AI in Gemini, into Google apps.",
+  "key_points": [
+   "Edit PDFs directly within Google Drive",
+   "Access Adobe AI capabilities through Gemini",
+   "Tightened integration of Adobe creative tools with Google Workspace"
+  ],
+  "why_it_matters": "The partnership blends Adobe’s industry‑standard creative suite with Google’s ubiquitous productivity platform, making advanced editing and AI features more accessible to everyday users and streamlining workflows across both ecosystems.",
+  "category": "product",
+  "companies": [
+   "Google",
+   "Adobe"
+  ],
+  "tags": [
+   "integration",
+   "productivity",
+   "AI",
+   "partnership"
+  ],
+  "importance": 2,
+  "id": "c5fffc8a0cbdc3d4",
+  "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+  "source": "Google AI",
+  "date": "Tue, 10 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-10T19:53:28.050995+00:00"
+ },
+ {
+  "headline": "Gemini Intelligence: New features, on more devices",
+  "tldr": "Google expands Gemini AI with new capabilities and broader device availability.",
+  "key_points": [
+   "Introduces new features for Gemini Intelligence",
+   "Rollout to additional devices",
+   "Enhances user interaction via voice"
+  ],
+  "why_it_matters": "Extending Gemini's functionality and device reach strengthens Google's AI ecosystem and makes advanced AI tools more accessible to consumers.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "AI",
+   "features",
+   "devices"
+  ],
+  "importance": 2,
+  "id": "ac5a661efbfd509d",
+  "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+  "source": "Google AI",
+  "date": "Tue, 10 Nov 2026 19:00:00 +0000",
+  "added": "2026-11-10T19:53:18.332735+00:00"
+ },
+ {
+  "headline": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+  "tldr": "AlphaProof Code agents generated three million lines of Lean proofs to verify Signal’s core encryption.",
+  "key_points": [
+   "AlphaProof Code creates extensive formal proofs in Lean",
+   "Three million lines of proofs were produced",
+   "Used to verify the core encryption of Signal"
+  ],
+  "why_it_matters": "Demonstrates large‑scale automated formal verification, boosting confidence in critical security software like Signal.",
+  "category": "product",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "formal verification",
+   "Lean",
+   "encryption",
+   "Signal"
+  ],
+  "importance": 2,
+  "id": "428ac4b42c0b5f39",
+  "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+  "source": "Google DeepMind",
+  "date": "Tue, 10 Nov 2026 12:02:28 +0000",
+  "added": "2026-11-10T19:53:04.061365+00:00"
+ },
+ {
+  "headline": "Work at the Frontier: AI’s effect on freelance work",
+  "tldr": "OpenAI and Upwork research shows AI is reshaping freelance demand, skill mixes, budgets, and hours.",
+  "key_points": [
+   "Shifting demand for freelance work",
+   "Emergence of new skill combinations",
+   "Larger budgets for AI‑related projects",
+   "More hours allocated to AI work"
+  ],
+  "why_it_matters": "Understanding how AI changes the gig economy helps freelancers, platforms, and policymakers adapt to evolving labor needs and investment trends.",
+  "category": "paper",
+  "companies": [
+   "OpenAI",
+   "Upwork"
+  ],
+  "tags": [
+   "freelance",
+   "AI impact",
+   "labor market",
+   "gig economy"
+  ],
+  "importance": 2,
+  "id": "3588ceed41552e46",
+  "url": "https://openai.com/index/ai-effect-on-freelance-work",
+  "source": "OpenAI",
+  "date": "Tue, 10 Nov 2026 07:00:00 GMT",
+  "added": "2026-11-10T19:52:52.702092+00:00"
+ },
+ {
+  "headline": "Closing the AI guidance gap in education",
+  "tldr": "ThinkYoung research and OpenAI’s EMEA education partnerships offer guidance for teachers, AI literacy, and independent learning.",
+  "key_points": [
+   "New ThinkYoung research on AI in education",
+   "Insights from OpenAI’s EMEA education partnerships",
+   "Strategies for supporting teachers",
+   "Promoting AI literacy and independent learning"
+  ],
+  "why_it_matters": "Bridging the AI guidance gap helps educators integrate AI responsibly, improving student outcomes and preparing learners for an AI‑driven future.",
+  "category": "policy",
+  "companies": [
+   "OpenAI",
+   "ThinkYoung"
+  ],
+  "tags": [
+   "education",
+   "AI literacy",
+   "teachers",
+   "partnerships"
+  ],
+  "importance": 2,
+  "id": "01a8528fa117926a",
+  "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+  "source": "OpenAI",
+  "date": "Tue, 10 Nov 2026 09:00:00 GMT",
+  "added": "2026-11-10T19:52:40.154367+00:00"
+ },
+ {
+  "headline": "Introducing Businesses in ChatGPT",
+  "tldr": "ChatGPT now lets businesses manage their info, see how they appear, and convert interest into actions.",
+  "key_points": [
+   "Manage business information within ChatGPT",
+   "Get insights on business visibility",
+   "Turn interest into actionable steps"
+  ],
+  "why_it_matters": "Provides businesses with a native AI interface to monitor and act on their online presence, potentially streamlining marketing and customer engagement.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "business",
+   "chatgpt",
+   "product",
+   "insights"
+  ],
+  "importance": 2,
+  "id": "5ca4dc7b6d88cb31",
+  "url": "https://openai.com/index/introducing-businesses-chatgpt",
+  "source": "OpenAI",
+  "date": "Tue, 10 Nov 2026 10:00:00 GMT",
+  "added": "2026-11-10T19:52:28.013820+00:00"
+ },
+ {
+  "headline": "Helping caregivers use AI in everyday life",
+  "tldr": "OpenAI Academy launches free, hands‑on ChatGPT workshops for caregivers in five U.S. cities to teach practical AI skills.",
+  "key_points": [
+   "Free workshops offered by OpenAI Academy",
+   "Targeted at caregivers in five U.S. cities",
+   "Focus on practical, everyday use of ChatGPT",
+   "Hands‑on, skill‑building format"
+  ],
+  "why_it_matters": "Equipping caregivers with AI tools can improve daily efficiency, support, and decision‑making, expanding AI adoption beyond tech‑savvy users to essential service providers.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "caregivers",
+   "AI education",
+   "ChatGPT",
+   "workshops"
+  ],
+  "importance": 2,
+  "id": "46ecb159c1535b09",
+  "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+  "source": "OpenAI",
+  "date": "Tue, 10 Nov 2026 12:00:00 GMT",
+  "added": "2026-11-10T19:52:16.171281+00:00"
+ },
+ {
+  "headline": "Google releases Gemini 4 Carbon with agent ‘swarm’ feature",
+  "tldr": "Google launches Gemini 4 Carbon, its strongest AI model yet, now available to the public with a new multi‑agent ‘swarm’ capability.",
+  "key_points": [
+   "Gemini 4 Carbon rolled out to all users after a limited beta for cybersecurity defenders.",
+   "Google claims it outperforms top competitors from Anthropic and OpenAI.",
+   "Introduces an agent‑based ‘swarm’ feature for coordinated task execution.",
+   "Positioned as the most powerful model in Google's Gemini lineup."
+  ],
+  "why_it_matters": "The release showcases Google's push to lead in large‑model performance and introduces multi‑agent AI coordination, a step toward more autonomous and versatile AI assistants.",
+  "category": "model_release",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "AI model",
+   "agent swarm",
+   "cybersecurity"
+  ],
+  "importance": 4,
+  "id": "a14681e2ddce1255",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+  "source": "The Verge AI",
+  "date": "2026-11-10T11:00:00-05:00",
+  "added": "2026-11-10T19:52:04.502319+00:00"
+ },
+ {
+  "headline": "Gemini 4 Carbon is now available",
+  "tldr": "Google DeepMind releases Gemini 4 Carbon model.",
+  "key_points": [
+   "Gemini 4 Carbon model launched",
+   "Available to users now",
+   "Continuation of Gemini series"
+  ],
+  "why_it_matters": "Adds the latest iteration to DeepMind's Gemini lineup, offering potential performance improvements and new capabilities for developers and researchers.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "AI model",
+   "release"
+  ],
+  "importance": 2,
+  "id": "0b2e1c02de474f20",
+  "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+  "source": "Google DeepMind",
+  "date": "Tue, 10 Nov 2026 16:03:47 +0000",
+  "added": "2026-11-10T19:51:51.894551+00:00"
+ },
+ {
+  "headline": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+  "tldr": "Google DeepMind's Gemini Robotics 2.5 vision-language-action model improves robot dexterity, reliability, and safety.",
+  "key_points": [
+   "Introduces Gemini Robotics 2.5, a vision-language-action model",
+   "Enhances real-world robot dexterity",
+   "Improves reliability and safety of robotic actions"
+  ],
+  "why_it_matters": "Advances in general-purpose robotic dexterity bring AI closer to practical, safe deployment in diverse real-world tasks.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "robotics",
+   "dexterity",
+   "vision-language",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "a98763b80c842ad2",
+  "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+  "source": "Google DeepMind",
+  "date": "Mon, 09 Nov 2026 19:51:47 +0000",
+  "added": "2026-11-10T19:51:40.080397+00:00"
+ },
+ {
+  "headline": "Blender 5.3 released with Gaussian Splat support",
+  "tldr": "Blender 5.3 adds native 3D Gaussian Splats import, processing, and rendering, plus new Dispersion support and DLSS 4.5 denoising.",
+  "key_points": [
+   "Native import of Gaussian Splats (PLY, SPZ, glTF) as point clouds",
+   "Render Gaussian Splats in EEVEE, Cycles, and Workbench with emissive or relightable shaders",
+   "Principled BSDF now supports Dispersion and roughness anisotropy for glass and diamonds",
+   "Integrates NVIDIA DLSS 4.5 Ray Reconstruction as a denoiser for faster, cleaner renders",
+   "Optimizations for NVIDIA RTX Spark devices on Windows 11"
+  ],
+  "why_it_matters": "Enables artists to work directly with photorealistic point‑cloud representations and improves rendering speed and quality, expanding Blender's capabilities for visual effects and real‑time workflows.",
+  "category": "product",
+  "companies": [
+   "Blender Foundation",
+   "NVIDIA"
+  ],
+  "tags": [
+   "gaussian splats",
+   "rendering",
+   "DLSS",
+   "dispersion"
+  ],
+  "importance": 3,
+  "id": "ec3dea3256c7ac91",
+  "url": "https://www.blender.org/download/releases/5-3/",
+  "source": "Hacker News",
+  "date": "2026-11-10T16:15:43Z",
+  "added": "2026-11-10T19:51:28.210470+00:00"
+ },
+ {
+  "headline": "Spatial Harness: Grounding Spatial Reasoning in Executable World States with Physics Engines",
+  "tldr": "Spatial Harness adds an explicit physics‑engine based world state to vision‑language models, dramatically improving their spatial reasoning accuracy on benchmarks.",
+  "key_points": [
+   "Uses a Perceiver to extract scene constraints and place objects/cameras in a shared coordinate frame.",
+   "Instantiates the scene in a physics engine, allowing the model to execute viewpoint changes and obtain measurements.",
+   "Boosts Qwen3.5-27B accuracy on MindCube from 52.70% to 71.14%, and reaches 98.25% when given ground‑truth poses.",
+   "Evaluated on multiple benchmarks (MindCube, SAT, MMSI‑Bench, SpatialRGPT‑Bench) with open‑ and closed‑weight VLMs.",
+   "Code released publicly on GitHub."
+  ],
+  "why_it_matters": "Explicit world modeling with physics feedback addresses fundamental limits of implicit reasoning in VLMs, leading to far more reliable spatial understanding—crucial for robotics, AR/VR, and any AI system that must interact with the physical world.",
+  "category": "paper",
+  "companies": [
+   "tmlr-group"
+  ],
+  "tags": [
+   "spatial reasoning",
+   "physics engine",
+   "vision-language model",
+   "grounding"
+  ],
+  "importance": 3,
+  "id": "7801fc486d937210",
+  "url": "https://huggingface.co/papers/2611.11344",
+  "source": "HF Daily Papers",
+  "date": "2026-11-07T19:00:00.000Z",
+  "added": "2026-11-10T19:51:16.298996+00:00"
+ },
+ {
+  "headline": "LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation",
+  "tldr": "A finetuned LLM called LCM-Promo predicts promotion response, boosting conversion by 1% and cutting promotion costs by 6% in an A/B test.",
+  "key_points": [
+   "Task‑specific Large Commerce Model trained on transactional data",
+   "Predicts user intent and promotion response via monotonic conversion‑threshold probabilities",
+   "Conditioned on session context such as day and delivery shift",
+   "A/B test shows +1% conversion and -6% promotion cost vs. baseline"
+  ],
+  "why_it_matters": "Demonstrates how LLMs can be directly applied to commerce operations, improving marketing efficiency and ROI with modest but measurable gains.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "uplift model",
+   "promotion allocation",
+   "LLM",
+   "e-commerce"
+  ],
+  "importance": 3,
+  "id": "bb6e43a274f023c8",
+  "url": "https://huggingface.co/papers/2610.37570",
+  "source": "HF Daily Papers",
+  "date": "2026-10-27T13:15:15.000Z",
+  "added": "2026-11-10T19:51:04.210457+00:00"
+ },
+ {
+  "headline": "Training Vision Transformers to Focus: Emergence of Spatial Attention Head Specialization",
+  "tldr": "The paper introduces two visual focusing loss functions that guide Vision Transformers' attention heads to specialize spatially, boosting interpretability and performance on tasks like zero‑shot image segmentation.",
+  "key_points": [
+   "Self‑supervised Vision Transformers (e.g., DINO) lack explicit focusing during training.",
+   "Two new visual focusing loss functions align attention heads with specific image regions.",
+   "Results show increased spatial selectivity, head diversity, and better dense‑prediction performance.",
+   "Improved interpretability of attention maps without needing annotations."
+  ],
+  "why_it_matters": "Enhancing spatial attention in self‑supervised Vision Transformers makes models more interpretable and effective for dense vision tasks, reducing reliance on labeled data and advancing zero‑shot segmentation capabilities.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision_transformer",
+   "self_supervised",
+   "attention",
+   "segmentation"
+  ],
+  "importance": 3,
+  "id": "0d8ae89421ecf591",
+  "url": "https://huggingface.co/papers/2611.11890",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-10T19:50:52.346450+00:00"
+ },
+ {
+  "headline": "Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation",
+  "tldr": "Auriga is a task‑agnostic agent harness that closes most of the planning‑execution gap in zero‑shot robot manipulation, achieving state‑of‑the‑art success rates on RoboDojo and RoboCasa365 without task‑specific training.",
+  "key_points": [
+   "Closes 68.3% of the planning‑execution gap for GPT‑6 Astra, raising success from 22.5% to 76.2% in zero‑shot settings.",
+   "Uses explicit task belief, tool calls or generated Python programs, and a calibrated dual‑arm control harness.",
+   "Ranks first on the RoboDojo leaderboard (57.7% success, 64.0 score) and outperforms VLA‑assisted agents on RoboCasa365 (73.2% success).",
+   "Provides safety checks: visual trajectory preview, tolerance monitoring, and automatic recovery on divergence."
+  ],
+  "why_it_matters": "Demonstrates that a lightweight, task‑agnostic harness can dramatically improve zero‑shot embodied manipulation, reducing the need for costly task‑specific data collection and bringing more reliable robot autonomy to real‑world applications.",
+  "category": "paper",
+  "companies": [
+   "Stelledge"
+  ],
+  "tags": [
+   "embodied AI",
+   "zero-shot",
+   "robotics",
+   "task-agnostic"
+  ],
+  "importance": 4,
+  "id": "2c043c78fc0b066e",
+  "url": "https://huggingface.co/papers/2611.01112",
+  "source": "HF Daily Papers",
+  "date": "2026-10-30T20:00:00.000Z",
+  "added": "2026-11-10T19:50:40.378871+00:00"
+ },
+ {
+  "headline": "InstantHMR: Real-Time Human Mesh Recovery on Your Phone",
+  "tldr": "Open‑source single‑image 3D human mesh regressors run on mobile NPUs at 5.5 ms per person with competitive accuracy, outperforming prior mobile methods.",
+  "key_points": [
+   "Runs on Samsung Galaxy S23 NPU in 5.5 ms, 0.98 ms on RTX 4070 GPU",
+   "Achieves 40.0 mm PA‑MPJPE on 3DPW, comparable to state‑of‑the‑art",
+   "Trained on public SAM 3D Body dataset using Momentum Human Rig model",
+   "Evaluated against 11 SOTA methods under a unified protocol",
+   "Code and models released open‑source"
+  ],
+  "why_it_matters": "Enables real‑time 3D human pose and shape estimation on consumer devices, opening up AR/VR, robotics, and health applications without cloud reliance.",
+  "category": "paper",
+  "companies": [
+   "Naturalpad-studio"
+  ],
+  "tags": [
+   "human mesh",
+   "mobile AI",
+   "3D vision",
+   "real-time"
+  ],
+  "importance": 3,
+  "id": "310ea2b1a575df76",
+  "url": "https://huggingface.co/papers/2611.09195",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T04:17:27.000Z",
+  "added": "2026-11-10T19:50:28.423170+00:00"
+ },
+ {
+  "headline": "Longtail-SWE: High-Quality SWE Tasks for Underrepresented Languages",
+  "tldr": "A new benchmark, Longtail-SWE, provides 202 repository‑level software engineering tasks across 13 under‑represented programming languages, with a solver‑judge‑repair pipeline and evaluation of multiple AI models.",
+  "key_points": [
+   "Covers 13 languages rarely represented in existing SWE benchmarks (e.g., Clojure, Haskell, Swift).",
+   "Benchmark built via a solver‑judge‑repair pipeline to ensure valid tests and clear task descriptions.",
+   "Evaluates nine model configurations, including frontier models, reporting performance, consistency, and resource usage.",
+   "All benchmark data, environments, tooling, and agent trajectories are publicly released."
+  ],
+  "why_it_matters": "Expands AI‑assisted software engineering evaluation to diverse language ecosystems, enabling research on model generalization and fostering tool development for languages that lack large‑scale datasets.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "software_engineering",
+   "benchmark",
+   "underrepresented_languages",
+   "AI_models"
+  ],
+  "importance": 3,
+  "id": "f263b1765461653f",
+  "url": "https://huggingface.co/papers/2611.10304",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T18:04:32.000Z",
+  "added": "2026-11-10T19:50:16.085999+00:00"
+ },
+ {
+  "headline": "How Much Training-Inference Mismatch Can On-Policy Distillation Tolerate?",
+  "tldr": "The paper studies how much quantization and other mismatches between rollout inference and training affect on‑policy distillation (OPD) of language models, finding OPD tolerates substantial mismatch and proposing a lightweight admission check and FP8 recipes to improve efficiency.",
+  "key_points": [
+   "OPD can handle significant quantization‑induced mismatch without major quality loss, but degrades beyond a certain budget.",
+   "Weight staleness and injected noise affect generation prefixes and cannot be fully corrected per token.",
+   "A lightweight admission check screens rollout configurations against a calibrated mismatch budget.",
+   "Model‑specific FP8 recipes double KV‑cache capacity and speed up training by ~1.6× compared to BF16."
+  ],
+  "why_it_matters": "Understanding and managing training‑inference mismatch enables cheaper and faster on‑policy distillation, making large‑scale language model fine‑tuning more accessible and efficient for research and deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "on-policy distillation",
+   "quantization",
+   "training-inference mismatch",
+   "FP8"
+  ],
+  "importance": 3,
+  "id": "bea657bfbf690999",
+  "url": "https://huggingface.co/papers/2611.11450",
+  "source": "HF Daily Papers",
+  "date": "2026-11-07T19:00:00.000Z",
+  "added": "2026-11-10T19:50:04.860587+00:00"
+ },
+ {
+  "headline": "InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure",
+  "tldr": "InfraRSI is an agentic system that automates training optimizations for large language models, achieving up to 2.75× speedup and raising MFU from 17.4% to 30% by using a five‑stage workflow and cross‑hardware experience banking.",
+  "key_points": [
+   "Five‑stage workflow: lock scope, profile baseline, co‑optimize launch knobs and code patches, verify, and audit changes.",
+   "Builds global execution‑time and memory models across trials, pricing per‑setting memory costs.",
+   "Transfers learned optimizations across GPUs and clusters, enabling a two‑level recursive self‑improvement loop.",
+   "Demonstrated up to 2.75× speedup and MFU improvement to 30% on dense and MoE LLM workloads."
+  ],
+  "why_it_matters": "Improving training efficiency directly reduces the compute cost and environmental impact of scaling foundation models, making larger and more capable AI systems more accessible.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "recursive self-improvement",
+   "training optimization",
+   "LLM infrastructure",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "65231d34f801937d",
+  "url": "https://huggingface.co/papers/2611.11558",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T13:59:37.000Z",
+  "added": "2026-11-10T19:49:52.364713+00:00"
+ },
+ {
+  "headline": "Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning",
+  "tldr": "Reframe introduces a two-stage post‑training framework that aligns observation states and repairs tool actions, improving visual agent performance on RL benchmarks.",
+  "key_points": [
+   "Ground-Drop-GRPO trains specialists with evidence‑aware rewards and random removal of visual input to force reliance on tool‑returned observations.",
+   "Observation‑Gated‑MOPD replaces poor tool actions mid‑rollout with canonical ones and resumes distillation from the corrected observation.",
+   "Both stages work together without needing a task‑specific supervised fine‑tuning cold start.",
+   "Experiments on 14 image and video benchmarks show Reframe outperforms Mix‑RL and vanilla MOPD.",
+   "Ablations confirm GD‑GRPO boosts observation dependence and tool gain versus outcome‑based GRPO."
+  ],
+  "why_it_matters": "Aligning observation states and repairing tool actions addresses key weaknesses in agentic RL for visual tasks, enabling more reliable tool use and better downstream performance without extensive task‑specific fine‑tuning.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "distillation",
+   "visual_reasoning",
+   "agentic_ai"
+  ],
+  "importance": 3,
+  "id": "fcc02b9fa5cbb70a",
+  "url": "https://huggingface.co/papers/2611.12886",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-10T19:49:40.344729+00:00"
+ },
+ {
+  "headline": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+  "tldr": "The paper introduces LingBot-Touch, a tactile foundation model that unifies representations across different sensor types and can be plugged into various robotic policy models, improving dexterous manipulation performance.",
+  "key_points": [
+   "Creates a unified tactile representation for piezoresistive, magnetic, and visuotactile sensors.",
+   "Tactile tokens are plug‑and‑play for diverse policy architectures, including diffusion and vision‑language‑action models.",
+   "Demonstrates significant gains in complex manipulation tasks on both simulation and real robots with low computational overhead."
+  ],
+  "why_it_matters": "A sensor‑agnostic tactile model enables robots to leverage diverse tactile data, accelerating progress toward more capable and adaptable embodied AI systems for real‑world manipulation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "tactile",
+   "dexterous_manipulation",
+   "foundation_model",
+   "robotics"
+  ],
+  "importance": 3,
+  "id": "123cc8899327bdaa",
+  "url": "https://huggingface.co/papers/2611.12806",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-10T19:49:28.552433+00:00"
+ },
+ {
   "headline": "ODE Policy: Robot Learning via Action Dynamics, Not Actions",
   "tldr": "A new robot learning method uses neural ODEs to model action dynamics, yielding smoother, faster, and more successful policies across diverse tasks.",
   "key_points": [
