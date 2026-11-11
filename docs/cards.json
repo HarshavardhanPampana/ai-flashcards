@@ -1,5 +1,1056 @@
 [
  {
+  "headline": "Learning to Act with World Models by Valuing What Comes Next",
+  "tldr": "WM-PPO combines world models with PPO critics to predict future observations and value them, boosting success rates on ALFWorld and ScienceWorld tasks.",
+  "key_points": [
+   "World model predicts next observation for each sampled action, even if not executed",
+   "Critic evaluates predicted successors, providing auxiliary advantages for the policy",
+   "Shared gating mechanism weights policy and value channels based on prediction reliability",
+   "WM-PPO improves success from 63.5% to 87.5% on ALFWorld and 39.3% to 52.9% on ScienceWorld"
+  ],
+  "why_it_matters": "Demonstrates a practical way to leverage learned environment dynamics for better decision‑making in sparse‑reward tasks, advancing model‑based reinforcement learning without extra supervision.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "world-models",
+   "reinforcement-learning",
+   "PPO",
+   "sparse-reward"
+  ],
+  "importance": 3,
+  "id": "1afb938042b80dca",
+  "url": "https://huggingface.co/papers/2611.12200",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T05:59:19.000Z",
+  "added": "2026-11-11T19:49:38.780863+00:00"
+ },
+ {
+  "headline": "From Tool State to Scientific Action: Auditing Decision Provenance in Biomedical Research Agents",
+  "tldr": "The paper introduces BioAgent-DF to audit how biomedical AI agents cite evidence and make decisions, showing that restoring execution state can recover correct outcomes even when hidden numerical faults occur.",
+  "key_points": [
+   "BioAgent-DF separates evidence citation from verdicts by saving and restoring reference values.",
+   "Qwen3.5-4B and Gemma 3 4B IT exhibit repeatable citation changes across SciFact batches.",
+   "Restoring execution state fixes silent numerical faults in hERG cardiac‑safety assay allocation, while file replacement does not.",
+   "A streaming arithmetic check reduces verification time by 42.4% compared to FP64 implementation."
+  ],
+  "why_it_matters": "Ensuring reproducibility and safety of AI‑driven biomedical research requires tracking both the evidence used and the final answer; this work demonstrates practical methods to audit and correct hidden errors, improving trust in AI‑assisted decision making.",
+  "category": "paper",
+  "companies": [
+   "Alibaba",
+   "Meta"
+  ],
+  "tags": [
+   "audit",
+   "biomedical",
+   "LLM",
+   "decision provenance"
+  ],
+  "importance": 3,
+  "id": "1d6fa56e5d5946d3",
+  "url": "https://huggingface.co/papers/2611.01527",
+  "source": "HF Daily Papers",
+  "date": "2026-10-31T23:58:26.000Z",
+  "added": "2026-11-11T19:49:27.092261+00:00"
+ },
+ {
+  "headline": "SWAM: Scaling World Action Models with Cross-Modal Alignment",
+  "tldr": "A new study introduces SWAM, a world action model that jointly predicts video and actions from language, showing improved generalization by carefully balancing language‑video and action supervision across large video datasets.",
+  "key_points": [
+   "Curated ~47,000 h of diverse video data (general, egocentric, UMI, robot demos) for training.",
+   "Systematic analysis of language‑video vs. language‑video‑action supervision and their impact on model performance.",
+   "Mixing egocentric videos with UMI demonstrations boosts control generalization under a fixed budget.",
+   "Final model reaches 88.10% success on easy tasks and 61.56% on hard tasks, outperforming baselines by ~17% on real‑world tasks.",
+   "Data, code, and model weights are released publicly."
+  ],
+  "why_it_matters": "Demonstrates how to scale multimodal action models without losing language‑video alignment, paving the way for more capable robots that can understand and follow natural language instructions in diverse real‑world settings.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "world-action-models",
+   "cross-modal",
+   "robotics",
+   "multimodal-learning"
+  ],
+  "importance": 3,
+  "id": "aeed2eb95f955eb6",
+  "url": "https://huggingface.co/papers/2611.12870",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-11T19:49:14.828430+00:00"
+ },
+ {
+  "headline": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
+  "tldr": "Sable provides a single‑GPU proof system that can verify bit‑exact token generation of large quantized transformers, proving 64‑layer Qwen2.5‑32B in under 2 minutes per 4k tokens.",
+  "key_points": [
+   "Uses integer‑quantized transformer (no floating‑point) and a sumcheck‑based argument system.",
+   "Prover runs on one NVIDIA RTX PRO 6000 GPU, proving Qwen2.5‑32B (64 layers) in 92.5 s for 4,096 tokens.",
+   "Proof cost is ~41‑50× serving time (~$0.06 per 4k‑token request) and verifier checks in 19‑56 s on a CPU core.",
+   "Accuracy loss is minimal: 86.3% token match to BF16 model, <2 pts drop on MMLU and GSM8K."
+  ],
+  "why_it_matters": "Enables verifiable, bit‑exact inference for open‑weight LLMs, opening paths for trustworthy AI services, compliance, and secure model deployment without sacrificing much performance.",
+  "category": "paper",
+  "companies": [
+   "MoonMath AI"
+  ],
+  "tags": [
+   "verifiable inference",
+   "sumcheck",
+   "LLM",
+   "quantization"
+  ],
+  "importance": 3,
+  "id": "a67f0667189e15a3",
+  "url": "https://huggingface.co/papers/2611.14083",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-11T19:49:02.927022+00:00"
+ },
+ {
+  "headline": "Gatekeeping rules for ICML2027? [D]",
+  "tldr": "A Reddit user asks whether ICML will impose submission limits like ICLR's 20-per-author rule and seeks alternatives for submitting papers.",
+  "key_points": [
+   "ICLR currently caps authors at 20 submissions per year.",
+   "The user experienced a borderline NeurIPS rejection and a worsened ICLR resubmission.",
+   "Concern that similar limits at ICML could restrict large research groups.",
+   "Looking for other venues beyond ICLR, ICML, and NeurIPS."
+  ],
+  "why_it_matters": "Submission caps affect how researchers, especially those in large groups, can disseminate work, influencing the pace and diversity of AI research.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "conference",
+   "submission",
+   "ICML",
+   "ICLR"
+  ],
+  "importance": 1,
+  "id": "f7ffde89ec5c7a92",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xrp483/gatekeeping_rules_for_icml2027_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-09T11:18:21+00:00",
+  "added": "2026-11-11T19:48:51.215297+00:00"
+ },
+ {
+  "headline": "AI ‘slop’ is a social judgement",
+  "tldr": "A new paper argues that AI slop is not a property of the content itself but a social judgement made when a community deems certain AI‑generated content unwanted, and suggests it can be measured and governed.",
+  "key_points": [
+   "AI slop is defined as a community‑based social judgement, not an intrinsic content flaw.",
+   "The paper proposes metrics to quantify slop and frameworks for governance.",
+   "Understanding slop as a social construct enables better moderation policies for AI‑generated media."
+  ],
+  "why_it_matters": "Framing AI slop as a social judgement shifts focus from technical fixes to community standards, informing more effective content moderation, policy design, and responsible AI deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AI ethics",
+   "content moderation",
+   "social judgement"
+  ],
+  "importance": 3,
+  "id": "dff6bc2a58d8656c",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtour7/ai_slop_is_a_social_judgement_r/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T18:03:18+00:00",
+  "added": "2026-11-11T19:48:39.862954+00:00"
+ },
+ {
+  "headline": "Discussion on the prolific ML research output from China and its publishing ecosystem",
+  "tldr": "A Reddit user questions how Chinese ML researchers produce 100‑200 papers per student, often with large co‑author lists, and wonders if there is an insular publishing/network system that encourages reciprocal citations and rapid acceptance.",
+  "key_points": [
+   "Chinese ML researchers reportedly publish 100‑200 papers per student, sometimes a paper per week.",
+   "Many papers have dozens to hundreds of co‑authors, focusing on LLM/multi‑modal experiments rather than novel theory.",
+   "Accepted papers appear in top conferences (ICLR, AAAI) despite concerns about quality and potential AI‑generated artifacts.",
+   "Speculation about an insular Chinese academic hiring and publishing network that may facilitate reciprocal citations and nepotism."
+  ],
+  "why_it_matters": "Understanding the dynamics of large‑scale research output and potential systemic biases is crucial for evaluating the credibility of scientific literature and ensuring fair global competition in AI development.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "china",
+   "ml_research",
+   "publishing",
+   "ethics"
+  ],
+  "importance": 2,
+  "id": "7eb24bfb2a2709ac",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xteym8/can_we_talk_about_the_ml_research_coming_from/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T11:02:38+00:00",
+  "added": "2026-11-11T19:48:27.001886+00:00"
+ },
+ {
+  "headline": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+  "tldr": "Adobe unveiled experimental AI tools that turn images into navigable 3D scenes, let users converse with AI‑generated characters, and simplify photo editing with copy‑paste actions.",
+  "key_points": [
+   "Convert 2D photos into explorable 3D environments",
+   "Create and interview AI‑driven characters via natural language",
+   "New copy‑paste workflow streamlines complex photo edits",
+   "Demonstrated at Adobe MAX as part of the company’s AI research showcase"
+  ],
+  "why_it_matters": "These capabilities showcase how generative AI can reshape creative workflows, making immersive content creation and interactive storytelling more accessible to designers without specialized 3D skills.",
+  "category": "product",
+  "companies": [
+   "Adobe"
+  ],
+  "tags": [
+   "image editing",
+   "3D",
+   "generative AI",
+   "creative tools"
+  ],
+  "importance": 3,
+  "id": "450a9863af999dab",
+  "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+  "source": "The Verge AI",
+  "date": "2026-11-11T09:00:00-05:00",
+  "added": "2026-11-11T19:48:15.232828+00:00"
+ },
+ {
+  "headline": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
+  "tldr": "Google unveiled Tabletop, an experimental AI platform that creates personalized collaborative hubs for families and friends by generating interactive tools from simple descriptions.",
+  "key_points": [
+   "Tabletop generates custom collaboration spaces similar to Asana or Monday.",
+   "Users can create interactive tools by describing their needs in natural language.",
+   "The platform is experimental and focuses on personal, not enterprise, use cases.",
+   "Built-in AI automates layout and functionality, reducing manual setup."
+  ],
+  "why_it_matters": "Tabletop showcases how generative AI can simplify the creation of tailored productivity tools, potentially expanding AI‑driven customization beyond workplaces to everyday personal coordination.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI",
+   "collaboration",
+   "productivity",
+   "experimental"
+  ],
+  "importance": 2,
+  "id": "2d8f602ac5a8eead",
+  "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
+  "source": "The Verge AI",
+  "date": "2026-11-11T11:00:00-05:00",
+  "added": "2026-11-11T19:48:03.129356+00:00"
+ },
+ {
+  "headline": "WorkflowArena Shows Stronger Models May Not Make Better Coordinators for Mixed-Agent Teams",
+  "tldr": "In the new WorkflowArena benchmark, Opus 5.5’s static workflows boosted executor performance, while GPT‑6 Astra’s workflows hurt it, indicating that a model’s raw strength doesn’t guarantee effective coordination.",
+  "key_points": [
+   "Opus 5.5’s workflows added +6.41 points to four executor models on 32 tasks.",
+   "GPT‑6 Astra’s workflows reduced executor scores by -2.53 points despite being stronger overall.",
+   "WorkflowArena evaluates 145 long‑horizon tasks across eight domains, focusing on delegation quality.",
+   "Results suggest coordinator selection should consider organizational ability, not just task performance."
+  ],
+  "why_it_matters": "Choosing the right coordinator is crucial for building effective mixed‑model AI teams; mis‑selection can degrade overall system performance despite using a top‑tier model.",
+  "category": "paper",
+  "companies": [
+   "Einsia"
+  ],
+  "tags": [
+   "benchmark",
+   "multi‑agent",
+   "coordination",
+   "workflow"
+  ],
+  "importance": 3,
+  "id": "bb49d97cfac91c11",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xt9hbe/would_you_pick_your_strongest_model_to_coordinate/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T05:25:43+00:00",
+  "added": "2026-11-11T19:47:50.664264+00:00"
+ },
+ {
+  "headline": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
+  "tldr": "Governance experts say Nvidia's current situation is unprecedented.",
+  "key_points": [
+   "Nvidia facing a major corporate crisis",
+   "Experts highlight unusual governance challenges",
+   "Industry observers watch the unfolding events"
+  ],
+  "why_it_matters": "The crisis could affect Nvidia's strategic direction, investor confidence, and set precedents for governance practices in the AI hardware sector.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "governance",
+   "corporate",
+   "crisis",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "a390f90d4604de89",
+  "url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 07:30:51 +0000",
+  "added": "2026-11-11T19:47:38.648694+00:00"
+ },
+ {
+  "headline": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
+  "tldr": "Plurai proposes applying end‑to‑end self‑driving techniques to improve AI agents operating in uncertain environments.",
+  "key_points": [
+   "Uses self‑driving car methodology for AI agents",
+   "Treats agents as probabilistic systems",
+   "Aims to boost reliability in unpredictable settings"
+  ],
+  "why_it_matters": "Adapting proven autonomous‑vehicle training methods could make AI agents more robust and trustworthy for real‑world applications.",
+  "category": "product",
+  "companies": [
+   "Plurai"
+  ],
+  "tags": [
+   "AI agents",
+   "self-driving",
+   "probabilistic models",
+   "automation"
+  ],
+  "importance": 2,
+  "id": "7c021a2e6c5bb952",
+  "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-11T19:47:26.852285+00:00"
+ },
+ {
+  "headline": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
+  "tldr": "OpenAI's quarterly revenue hit $10 billion, up ~50% from $6.7 billion in Q2.",
+  "key_points": [
+   "Quarterly revenue exceeds $10 billion",
+   "Represents ~50% growth YoY",
+   "Previous quarter revenue was $6.7 billion"
+  ],
+  "why_it_matters": "",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "revenue",
+   "finance",
+   "AI",
+   "growth"
+  ],
+  "importance": 2,
+  "id": "29f521837a1e4833",
+  "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 16:14:44 +0000",
+  "added": "2026-11-11T19:47:14.833515+00:00"
+ },
+ {
+  "headline": "Is Jensen Huang’s bad behavior more commonplace than it seems?",
+  "tldr": "An industry insider claims senior AI leaders are aware of and tacitly condone Jensen Huang’s misconduct.",
+  "key_points": [
+   "Senior AI industry figures reportedly know about Jensen Huang’s bad behavior",
+   "These figures are said to be effectively condoning it",
+   "Comment comes from an investment intel consultant"
+  ],
+  "why_it_matters": "If senior leaders tolerate misconduct, it can foster a toxic culture and undermine ethical standards across the AI sector.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "ethics",
+   "industry culture"
+  ],
+  "importance": 2,
+  "id": "32bc3a2f6211a8fe",
+  "url": "https://techcrunch.com/2026/11/11/is-jensen-huangs-bad-behavior-more-commonplace-than-it-seems/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 16:16:07 +0000",
+  "added": "2026-11-11T19:47:02.782140+00:00"
+ },
+ {
+  "headline": "Congress to call Jensen Huang in to answer for alleged Chinese spy affair",
+  "tldr": "House Republicans have summoned Nvidia CEO Jensen Huang for a closed‑door briefing on his alleged ties to a Chinese spy.",
+  "key_points": [
+   "Nvidia CEO Jensen Huang requested to appear before Congress",
+   "Briefing is scheduled by House Republicans",
+   "Focus on alleged Chinese espionage connection",
+   "Deadline to respond is end of day Wednesday"
+  ],
+  "why_it_matters": "The hearing could impact Nvidia's reputation and raise broader concerns about foreign influence in U.S. tech leadership.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "congress",
+   "nvidia",
+   "espionage",
+   "hearing"
+  ],
+  "importance": 2,
+  "id": "90a2e60457e0b47e",
+  "url": "https://techcrunch.com/2026/11/11/congress-to-call-jensen-huang-in-to-answer-for-alleged-chinese-spy-affair/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 19:22:22 +0000",
+  "added": "2026-11-11T19:46:50.862966+00:00"
+ },
+ {
+  "headline": "With $720M round, Britain’s Fractile gets a leg up in the race for AI chips",
+  "tldr": "Fractule raised $720 million, boosting its position in the AI chip market.",
+  "key_points": [
+   "Fractule secured a $720 M funding round",
+   "Funding strengthens its AI chip development",
+   "Positions Fractule among top‑funded chip players",
+   "Highlights UK’s role in AI hardware race"
+  ],
+  "why_it_matters": "Large capital enables Fractule to accelerate design and production of purpose‑built AI chips, intensifying competition with established hardware firms and advancing the UK's AI ecosystem.",
+  "category": "funding",
+  "companies": [
+   "Fractule"
+  ],
+  "tags": [
+   "AI chips",
+   "funding",
+   "UK",
+   "hardware"
+  ],
+  "importance": 2,
+  "id": "019cc9ec163bf853",
+  "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 19:34:55 +0000",
+  "added": "2026-11-11T19:46:39.304261+00:00"
+ },
+ {
+  "headline": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+  "tldr": "Introduces a training technique that accounts for token pooling in multi-vector embeddings.",
+  "key_points": [
+   "Token pooling-aware training method",
+   "Optimizes multi-vector embedding models",
+   "Improves representation quality",
+   "Targets efficient downstream tasks"
+  ],
+  "why_it_matters": "Enhances the performance of embedding models used in search, recommendation, and semantic retrieval, leading to more accurate and efficient AI applications.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "token pooling",
+   "multi-vector",
+   "embedding",
+   "training"
+  ],
+  "importance": 2,
+  "id": "d2296a64c0dc3b89",
+  "url": "https://huggingface.co/blog/token-pooling",
+  "source": "Hugging Face Blog",
+  "date": "Wed, 11 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-11T19:46:26.799894+00:00"
+ },
+ {
+  "headline": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
+  "tldr": "DeepMind unveiled AlphaGenome 2, an AI model that maps DNA variations to cellular effects, improving understanding of disease mechanisms and aiding treatment discovery.",
+  "key_points": [
+   "AlphaGenome 2 predicts how genetic mutations impact specific cell types",
+   "Provides higher-resolution insight into disease pathways than previous models",
+   "Built by Google DeepMind, extending the original AlphaGenome architecture",
+   "Aims to accelerate drug target identification and precision medicine research"
+  ],
+  "why_it_matters": "Understanding the cellular consequences of DNA changes is crucial for pinpointing disease causes and developing targeted therapies, potentially speeding up biomedical breakthroughs.",
+  "category": "model_release",
+  "companies": [
+   "Google",
+   "DeepMind"
+  ],
+  "tags": [
+   "AI",
+   "genomics",
+   "disease",
+   "model"
+  ],
+  "importance": 4,
+  "id": "a86af765ffafecba",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+  "source": "The Verge AI",
+  "date": "2026-11-11T10:00:00-05:00",
+  "added": "2026-11-11T19:46:16.495194+00:00"
+ },
+ {
+  "headline": "REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding",
+  "tldr": "The paper introduces REAL, a training loss that directly optimizes the expected acceptance length in speculative decoding, yielding faster LLM inference without changing model architecture.",
+  "key_points": [
+   "Speculative decoding speeds up LLM inference by verifying multiple draft tokens at once.",
+   "Existing training objectives are only surrogates for the true expected acceptance length (EAL).",
+   "REAL provides an unbiased EAL estimator with variance reduction via Rao-Blackwellization.",
+   "Experiments show REAL outperforms prior methods (WTV, VSD, DBLast, LK) on a Qwen3.6-35B target across many tasks.",
+   "Implementation is available as open-source code."
+  ],
+  "why_it_matters": "Improving the training objective for speculative decoding directly enhances inference speed for large language models, making them more cost‑effective and responsive in real‑world applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "speculative decoding",
+   "LLM",
+   "training loss",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "82cd39ee09ab0120",
+  "url": "https://arxiv.org/abs/2611.14399v1",
+  "source": "arXiv",
+  "date": "2026-11-10T17:45:12Z",
+  "added": "2026-11-11T19:46:03.216272+00:00"
+ },
+ {
+  "headline": "Bayesian inverse problems and epidemic-threshold uncertainty for a heterogeneous SIS reaction-diffusion model",
+  "tldr": "The paper develops Bayesian methods to infer epidemic thresholds in a spatial SIS model, showing how early prevalence data can estimate the critical transmission‑recovery balance despite uncertain parameters.",
+  "key_points": [
+   "Early prevalence informs the threshold through the difference between transmission and recovery rates and infected diffusivity.",
+   "Proves global weak well‑posedness and quantitative parameter stability for the heterogeneous SIS reaction‑diffusion system.",
+   "Establishes Bayesian well‑posedness and derives O(ε) convergence of posterior distributions in Hellinger distance.",
+   "Provides spectral bounds linking the principal eigenvalue to persistence/extinction conditions.",
+   "Numerical experiments validate threshold inference and convergence results."
+  ],
+  "why_it_matters": "Accurate early‑stage inference of epidemic thresholds can guide public‑health interventions before full outbreaks unfold, especially in spatially heterogeneous settings where parameter uncertainty is high.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "epidemiology",
+   "Bayesian inference",
+   "SIS model",
+   "reaction-diffusion"
+  ],
+  "importance": 2,
+  "id": "d18d94a1c320cb27",
+  "url": "https://arxiv.org/abs/2611.14468v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:32:19Z",
+  "added": "2026-11-11T19:45:50.978002+00:00"
+ },
+ {
+  "headline": "FERN: Cross-Benchmark Table Retrieval for Text-to-SQL with Frozen Retrievers and Learned Ranking",
+  "tldr": "FERN combines three frozen retrievers and a LightGBM ranker to achieve competitive table retrieval recall on Text-to-SQL benchmarks, matching or surpassing RASL without using generative LLMs.",
+  "key_points": [
+   "Fuses three frozen retrievers to generate 100 candidate tables per query.",
+   "Uses up to 120 handcrafted features and a LightGBM ranker trained on BIRD data.",
+   "Achieves 95.6% complete@5 on Spider, matching RASL's recall with fewer tables.",
+   "Runs in 208 ms per question on a single A100 GPU, no external model calls.",
+   "Performance varies across benchmarks, excelling on Spider and BIRD with evidence."
+  ],
+  "why_it_matters": "Demonstrates that non‑generative, feature‑engineered retrieval can rival large LLM‑based systems, offering faster, cheaper, and more reproducible table retrieval for Text-to‑SQL applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "table-retrieval",
+   "text-to-sql",
+   "lightgbm",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "6bde40ef116e44fb",
+  "url": "https://arxiv.org/abs/2611.14477v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:39:49Z",
+  "added": "2026-11-11T19:45:39.293146+00:00"
+ },
+ {
+  "headline": "Databricks’ new AI agent tells CEO Ali Ghodsi the unvarnished truth",
+  "tldr": "Databricks introduced an updated Genie AI agent that surfaces internal issues directly to CEO Ali Ghodsi, helping him stay informed without needing employees to report problems.",
+  "key_points": [
+   "Genie agent revised to provide candid feedback to leadership",
+   "Helps CEO monitor problems without relying on employee confessions",
+   "Aims to improve internal transparency at a 12,000‑employee company",
+   "Demonstrates Databricks' focus on AI‑driven internal tooling"
+  ],
+  "why_it_matters": "By using an AI agent for honest internal reporting, Databricks can address issues faster, enhance operational efficiency, and showcase how AI can augment executive decision‑making in large tech firms.",
+  "category": "product",
+  "companies": [
+   "Databricks"
+  ],
+  "tags": [
+   "AI agent",
+   "internal tools",
+   "transparency",
+   "Genie"
+  ],
+  "importance": 2,
+  "id": "7d4c517a6890da29",
+  "url": "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 15:00:00 +0000",
+  "added": "2026-11-11T19:45:26.946701+00:00"
+ },
+ {
+  "headline": "Experience the art and legacy of Dr. Esther Mahlangu",
+  "tldr": "A showcase of Dr. Esther Mahlangu's artistic legacy alongside a portrait of Dr. Nontobeko Ntombela, a senior lecturer at the University of the Witwatersrand.",
+  "key_points": [
+   "Celebrates the art and legacy of Dr. Esther Mahlangu",
+   "Features a portrait of Dr. Nontobeko Ntombela",
+   "Highlights Dr. Ntombela's role at Wits School of Arts"
+  ],
+  "why_it_matters": "",
+  "category": "other",
+  "companies": [
+   "Google AI"
+  ],
+  "tags": [
+   "art",
+   "culture",
+   "education"
+  ],
+  "importance": 1,
+  "id": "7e65614cc89aac7b",
+  "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+  "source": "Google AI",
+  "date": "Wed, 11 Nov 2026 09:00:00 +0000",
+  "added": "2026-11-11T19:45:15.025426+00:00"
+ },
+ {
+  "headline": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together",
+  "tldr": "Google Labs launches Tabletop, a collaborative workspace tool for building itineraries, polls, and brackets, now open for waitlist sign‑ups.",
+  "key_points": [
+   "Tabletop is a new Google Labs experiment for group collaboration",
+   "Users can create interactive itineraries, polls, and brackets",
+   "The service is currently in waitlist mode"
+  ],
+  "why_it_matters": "Provides a flexible, web‑based platform for teams to coordinate activities and make decisions together, expanding Google's suite of productivity tools.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "collaboration",
+   "product",
+   "labs"
+  ],
+  "importance": 2,
+  "id": "97adab01dbf7344a",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+  "source": "Google AI",
+  "date": "Wed, 11 Nov 2026 16:00:00 +0000",
+  "added": "2026-11-11T19:45:02.682810+00:00"
+ },
+ {
+  "headline": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+  "tldr": "DeepMind's AlphaGenome 2 predicts how DNA sequences and variants affect specific human cell types and disease.",
+  "key_points": [
+   "Predicts impact of DNA sequences on cell-type specific function",
+   "Analyzes genetic variants for disease relevance",
+   "Builds on AlphaGenome framework to improve disease understanding"
+  ],
+  "why_it_matters": "Accurate prediction of DNA‑variant effects can accelerate disease research, guide therapeutic development, and enhance personalized medicine.",
+  "category": "paper",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "genetics",
+   "DNA",
+   "disease",
+   "prediction"
+  ],
+  "importance": 2,
+  "id": "5b916f1bea878c9c",
+  "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+  "source": "Google DeepMind",
+  "date": "Wed, 11 Nov 2026 15:00:15 +0000",
+  "added": "2026-11-11T19:44:50.880458+00:00"
+ },
+ {
+  "headline": "Singapore Airlines elevates travel & work with OpenAI technology",
+  "tldr": "Singapore Airlines integrates OpenAI models via API to boost customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+  "key_points": [
+   "Uses OpenAI API for customer support automation",
+   "Enhances travel discovery features with AI",
+   "Improves employee productivity tools",
+   "Kris chatbot CSAT scores doubled"
+  ],
+  "why_it_matters": "Demonstrates how enterprise airlines can leverage generative AI to improve service quality and operational efficiency, signaling broader adoption of AI in travel industry workflows.",
+  "category": "product",
+  "companies": [
+   "Singapore Airlines",
+   "OpenAI"
+  ],
+  "tags": [
+   "AI",
+   "airline",
+   "customer support",
+   "productivity"
+  ],
+  "importance": 2,
+  "id": "4e3e5904c85ae763",
+  "url": "https://openai.com/index/singapore-airlines-travel-work",
+  "source": "OpenAI",
+  "date": "Tue, 10 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-11T19:44:39.161297+00:00"
+ },
+ {
+  "headline": "JioStar’s chief architect on AI discovery at 500M-user scale",
+  "tldr": "JioStar’s Vijay Seshadri shares lessons on evaluating, guarding, and deploying AI for half a billion users.",
+  "key_points": [
+   "AI discovery at 500M-user scale",
+   "Insights on evaluation methods",
+   "Implementing guardrails for safety",
+   "Taking AI models into production"
+  ],
+  "why_it_matters": "Understanding how to safely and effectively deploy AI at massive user scales helps other companies avoid pitfalls and improves reliability of large‑scale AI services.",
+  "category": "other",
+  "companies": [
+   "JioStar"
+  ],
+  "tags": [
+   "AI",
+   "scale",
+   "evaluation",
+   "guardrails"
+  ],
+  "importance": 2,
+  "id": "8c999d6885d24711",
+  "url": "https://openai.com/index/jiostar-vijay-seshadri",
+  "source": "OpenAI",
+  "date": "Wed, 11 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-11T19:44:26.789773+00:00"
+ },
+ {
+  "headline": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+  "tldr": "Google launches the Gemini Decisions API, enabling rapid, calibrated multimodal decision-making using the Gemini Decision model.",
+  "key_points": [
+   "Introduces Gemini Decisions API for developers",
+   "Provides fast, calibrated multimodal decision capabilities",
+   "Powered by the Gemini Decision model"
+  ],
+  "why_it_matters": "The API makes advanced multimodal decision-making accessible via a simple interface, accelerating AI integration in applications that require quick, reliable judgments across text, images, and other data types.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "multimodal",
+   "API",
+   "decision"
+  ],
+  "importance": 2,
+  "id": "8e4104a923ec61a4",
+  "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+  "source": "Google AI",
+  "date": "Wed, 11 Nov 2026 18:00:00 +0000",
+  "added": "2026-11-11T19:44:17.289254+00:00"
+ },
+ {
+  "headline": "Atuin Threads: All your agent sessions on every machine",
+  "tldr": "Atuin introduces Threads, a searchable, encrypted sync layer that lets users view and resume AI agent sessions across multiple devices.",
+  "key_points": [
+   "Syncs any append‑only log, enabling cross‑machine search of Claude, Codex, and other agent sessions",
+   "End‑to‑end encryption ensures the provider cannot read user data",
+   "Allows users to resume or fork an agent session on a different machine or platform",
+   "Built on Atuin 18.24 with a generic sync engine for future AI tools"
+  ],
+  "why_it_matters": "Developers increasingly rely on AI coding assistants; having a unified, searchable history improves productivity, debugging, and reproducibility across environments.",
+  "category": "product",
+  "companies": [
+   "Atuin"
+  ],
+  "tags": [
+   "AI agents",
+   "session sync",
+   "developer tools",
+   "privacy"
+  ],
+  "importance": 2,
+  "id": "dadb501df1849a4d",
+  "url": "https://blog.atuin.sh/threads-agent-sessions/",
+  "source": "Hacker News",
+  "date": "2026-11-11T14:10:46Z",
+  "added": "2026-11-11T19:44:03.189299+00:00"
+ },
+ {
+  "headline": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+  "tldr": "A team of 48 AI agents analyzed public NASA lidar data of the Maya region, identified a previously unregistered pyramid site within 72 hours, and prompted an official response from the Mexican government.",
+  "key_points": [
+   "48 autonomous agents processed ~1,200 km² of lidar imagery without a dedicated classifier.",
+   "Agents identified structures resembling pyramids, platforms, and plazas in the jungle.",
+   "The discovery was reported to Mexican authorities within three days, later found to have been previously mapped in a 2025 study.",
+   "The workflow leveraged publicly available lidar data, avoiding costly field surveys."
+  ],
+  "why_it_matters": "Demonstrates how large‑scale, coordinated AI agents can rapidly mine open geospatial data for archaeological insights, potentially accelerating heritage discovery and reducing reliance on expensive fieldwork.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "lidar",
+   "archaeology",
+   "AI agents",
+   "geospatial"
+  ],
+  "importance": 3,
+  "id": "e3c1f66505445103",
+  "url": "https://pietromiotti.com/latest/maya-site/?maya",
+  "source": "Hacker News",
+  "date": "2026-11-11T12:05:22Z",
+  "added": "2026-11-11T19:43:50.757885+00:00"
+ },
+ {
+  "headline": "Embodied First Exam",
+  "tldr": "A new evaluation framework, the Embodied First Exam, benchmarks coding agents on 1,156 robotics tasks across 47 robots, revealing current agents achieve only 34% success on core tasks.",
+  "key_points": [
+   "Introduces a unified, agent-native evaluation suite for coding agents in robotics.",
+   "Covers 1,156 tasks in 35 suites, including spatial puzzles, dexterous manipulation, and multi-robot interaction.",
+   "Provides three evaluation settings: Standard, Realtime, and Privileged.",
+   "GPT-6 Astra in Codex reaches 34% success on 456 core tasks in the Standard setting.",
+   "Analyzes failure stages to guide future improvements."
+  ],
+  "why_it_matters": "Provides the first comprehensive benchmark for coding agents to assess their ability to control real-world robots, highlighting current limitations and guiding research toward more capable autonomous robotic systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robotics",
+   "coding agents",
+   "benchmark",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "1444e722ae2d0e03",
+  "url": "https://huggingface.co/papers/2611.12177",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-11T19:43:39.099736+00:00"
+ },
+ {
+  "headline": "LEASH: Stay Safe in Agentic Robotics",
+  "tldr": "A new benchmark, RoboRisk, evaluates safety of foundation models in robotics across five risk categories, revealing high harm rates, and introduces LEASH, a safety harness that reduces harm while preserving performance.",
+  "key_points": [
+   "RoboRisk benchmark includes 92 simulated and 13 physical tasks covering five safety categories",
+   "Six state-of-the-art foundation models (GPT-6 series, Claude Opus 5.5, Gemini 4 Argon, Grok 4.7) show high harm rates",
+   "LEASH safety harness adds task, action, and commit gates using a decision model to mitigate risks",
+   "LEASH reduces harm across all models with minimal impact on task success and overhead"
+  ],
+  "why_it_matters": "Ensuring safety in agentic robotics is crucial for advancing toward artificial general intelligence without causing real-world harm, and LEASH provides a practical framework to mitigate risks in deploying powerful foundation models on robots.",
+  "category": "paper",
+  "companies": [
+   "OpenAI",
+   "Anthropic",
+   "Google",
+   "AI21",
+   "Dream",
+   "PokeBot"
+  ],
+  "tags": [
+   "robotics",
+   "safety",
+   "foundation-models",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "dff7936eff415745",
+  "url": "https://huggingface.co/papers/2611.14115",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-11T19:43:27.216552+00:00"
+ },
+ {
+  "headline": "Test-Time Scaling for Diffusion Language Models with Frequency-Aware Remasking",
+  "tldr": "A two-stage test-time scaling method improves diffusion language model performance by using a fast base sampler for easy queries and frequency-aware remasking for hard ones, boosting accuracy on math and coding benchmarks.",
+  "key_points": [
+   "Introduces adaptive allocation of compute and decoding strategies for diffusion language models.",
+   "Frequency-aware remasking tracks token prediction changes and commits frequently changing tokens.",
+   "Achieves up to 3.73% accuracy gain on LLaDA-8B-Instruct and 7.33% on Dream-7B-Instruct for MATH-500.",
+   "Improves coverage on HumanEval by up to 11.39% for LLaDA and 10.98% for Dream.",
+   "Recovers solutions for 3.75%–18.75% of previously unsolved examples after 100 samples."
+  ],
+  "why_it_matters": "Enhances the reliability and reasoning ability of diffusion-based language models, making them more effective for complex tasks like mathematics and code generation without requiring additional training.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "diffusion",
+   "language-models",
+   "test-time-scaling",
+   "remasking"
+  ],
+  "importance": 3,
+  "id": "d4042e8f213226e2",
+  "url": "https://huggingface.co/papers/2611.10486",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T19:00:00.000Z",
+  "added": "2026-11-11T19:43:15.045573+00:00"
+ },
+ {
+  "headline": "Micius-Flash: Lightweight Agentic Intelligence for Engineering",
+  "tldr": "A new 27B-parameter open-source model, Micius-Flash, combines multimodal input, deep reasoning, and a 256K-token context window to assist semiconductor and hardware engineering tasks, outperforming same-size baselines on code and agent benchmarks.",
+  "key_points": [
+   "27B-parameter model with multimodal input and 256K-token context window",
+   "Trained via a knowledge-tree-driven pipeline and Multi-Teacher On-Policy Distillation",
+   "Achieves 64.2% on hardware code benchmarks and 62.4% on semiconductor agent benchmark",
+   "Integrated with EDA tools, KiCad, and execution environments for PCB and chip design automation",
+   "Released as open-source to foster agentic AI for science and engineering"
+  ],
+  "why_it_matters": "Micius-Flash demonstrates that relatively lightweight models can perform sophisticated engineering tasks, bridging the gap between AI research and practical hardware design workflows, and its open-source release could accelerate tool development across the semiconductor industry.",
+  "category": "model_release",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "engineering",
+   "agentic",
+   "open_source"
+  ],
+  "importance": 3,
+  "id": "2229db3291695b8e",
+  "url": "https://huggingface.co/papers/2611.10015",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-11T19:43:03.059865+00:00"
+ },
+ {
+  "headline": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+  "tldr": "FINCOSMOS introduces a benchmark where financial language agents must autonomously gather web data, backtest with a cutoff, and satisfy hidden user strategies, revealing major shortcomings in current agents.",
+  "key_points": [
+   "Simulated user provides hidden strategy via compositional grammar, revealed only on request",
+   "Agents must acquire data from the web, perform point‑in‑time backtests, and produce verifiable results",
+   "No benchmark reference answer; grading uses program checks and 15 veto criteria",
+   "Four coding agents and a tool‑less model failed all 150 sessions, with 54‑64% of required details omitted",
+   "Feedback‑driven agent with persistent memory eventually solved all ten tasks"
+  ],
+  "why_it_matters": "It exposes critical reliability gaps in AI financial agents by testing them in realistic, open‑world conditions, guiding future research toward safer, more trustworthy tools for high‑stakes domains.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "financial AI",
+   "agent evaluation",
+   "open-world benchmark",
+   "trustworthiness"
+  ],
+  "importance": 3,
+  "id": "d4ac2aaa0e49f221",
+  "url": "https://huggingface.co/papers/2611.07464",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-11T19:42:50.955146+00:00"
+ },
+ {
+  "headline": "Few-Step Streaming Video Generation via Condition Shifting",
+  "tldr": "The paper introduces APEX, a method that removes the need for a separate fake-score network in few-step streaming video generation by using condition shifting, achieving better instruction fulfillment and visual aesthetics while reducing GPU memory and iteration time.",
+  "key_points": [
+   "Condition shifting replaces the independent fake-score network, simplifying training.",
+   "APEX outperforms S2-Avatar on instruction fulfillment (+30% net preference) and visual aesthetics.",
+   "Reduces peak GPU memory usage by 4.4% and iteration time by 9.2% compared to DMD.",
+   "Evaluated on 180‑second videos with human studies and the StreamAV‑Bench benchmark."
+  ],
+  "why_it_matters": "Improving efficiency and quality of streaming video generation makes advanced generative models more practical for real‑time applications, lowering hardware costs and expanding potential use cases such as interactive media and virtual assistants.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "streaming",
+   "few-step sampling",
+   "condition shifting"
+  ],
+  "importance": 3,
+  "id": "07b8c2ffe2835e61",
+  "url": "https://huggingface.co/papers/2611.14033",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-11T19:42:38.982259+00:00"
+ },
+ {
+  "headline": "WaveGen: Truly End-to-End Waveform Generation via Internal Spectral Trajectory Learning",
+  "tldr": "WaveGen introduces a diffusion‑based, fully end‑to‑end text‑to‑waveform TTS model that learns spectral and waveform trajectories jointly, removing the need for external modules and achieving state‑of‑the‑art results.",
+  "key_points": [
+   "End‑to‑end diffusion model learns internal spectral trajectory and waveform simultaneously.",
+   "Eliminates external components such as duration predictors, neural codecs, and pre‑trained text embeddings.",
+   "Scales from 0.1B to 0.6B parameters and attains WER 1.47 and SIM 0.75 on benchmark datasets.",
+   "Open‑source code and checkpoints released for reproducibility."
+  ],
+  "why_it_matters": "By removing the reliance on multiple separate modules, WaveGen simplifies TTS pipelines, reduces latency, and demonstrates that fully end‑to‑end diffusion models can match or exceed current state‑of‑the‑art performance, opening new directions for efficient speech synthesis research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "text-to-speech",
+   "diffusion",
+   "end-to-end",
+   "audio"
+  ],
+  "importance": 3,
+  "id": "e002325be7cdd97a",
+  "url": "https://huggingface.co/papers/2611.12527",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T10:02:29.000Z",
+  "added": "2026-11-11T19:42:26.864287+00:00"
+ },
+ {
+  "headline": "MACaQ: Fast, Model Agnostic Calibrated Quantization for Low-Precision Weights and Activations",
+  "tldr": "MACaQ introduces a fast, layer‑local post‑training quantization method (MXFP4 W4A4) that avoids cross‑layer dependencies, adds only ~2.3% overhead, and dramatically speeds up quantization of large models.",
+  "key_points": [
+   "Treats each linear layer independently with per‑channel scaling and block‑Hadamard transforms",
+   "Flip‑Refinement uses Hessian‑aware coordinate descent to improve quantization quality",
+   "Achieves lower perplexity than DuQuant++ and MR‑GPTQ, matching their best results on Llama‑3‑8B in 1/11 the time",
+   "Quantizes a 122B‑parameter diffusion model in 64 minutes using only 32.5 GB GPU RAM"
+  ],
+  "why_it_matters": "Efficient low‑precision quantization enables deployment of very large language and diffusion models on limited hardware, reducing memory and compute costs while preserving accuracy, which is critical for scaling AI services.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantization",
+   "post-training",
+   "low-precision",
+   "model scaling"
+  ],
+  "importance": 3,
+  "id": "fd33d39819aea138",
+  "url": "https://huggingface.co/papers/2611.10649",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T19:00:00.000Z",
+  "added": "2026-11-11T19:42:14.913263+00:00"
+ },
+ {
+  "headline": "The Surprising Effectiveness of Deleting Weights in LLM Post-Training",
+  "tldr": "Zeroing less than 0.05% of an LLM's weights (Deletion Tuning) matches full fine‑tuning across RL, supervised, and distillation regimes, with a tiny mask and less forgetting.",
+  "key_points": [
+   "Deletion Tuning learns a binary mask over transformer gate projections, affecting <0.05% of weights.",
+   "Matches full fine‑tuning performance on reinforcement learning, supervised fine‑tuning, and on‑policy distillation.",
+   "Mask checkpoint is hundreds‑to‑thousands times smaller than full‑model checkpoints.",
+   "Retains prior‑task accuracy better than FFT, LoRA, and random sparse fine‑tuning.",
+   "Geometric analysis shows Deletion Tuning closely mirrors full fine‑tuning in stable rank, spectrum drift, and weight overlap."
+  ],
+  "why_it_matters": "Shows that minimal, targeted weight deletions can replace costly full fine‑tuning, enabling far more efficient model adaptation and continual learning with reduced forgetting.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "deletion_tuning",
+   "LLM",
+   "fine_tuning",
+   "continual_learning"
+  ],
+  "importance": 3,
+  "id": "1315a76dbbc3ac6f",
+  "url": "https://huggingface.co/papers/2611.10866",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T19:00:00.000Z",
+  "added": "2026-11-11T19:42:02.966195+00:00"
+ },
+ {
+  "headline": "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+  "tldr": "WikiTrace links each learned lesson to its original task trajectory, letting LLM agents verify and correct memories, which improves performance and reduces degradation across several benchmarks.",
+  "key_points": [
+   "External memory can cause LLM agents to follow incorrect lessons, leading to performance drops.",
+   "WikiTrace stores lessons with linked summaries and raw trajectories for verification.",
+   "Agents can descend through links to retrieve missing details or resolve conflicts before acting.",
+   "Evaluated on five agentic benchmarks, WikiTrace outperforms prior memory methods.",
+   "Code released publicly for reproducibility."
+  ],
+  "why_it_matters": "Ensuring reliable memory retrieval is crucial for deploying LLM agents in real-world tasks where mistakes from faulty recall can be costly; WikiTrace offers a systematic way to mitigate such errors.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM agents",
+   "memory",
+   "evidence-linked",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "0f451c0d900eb830",
+  "url": "https://huggingface.co/papers/2611.14320",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-11T19:41:51.240066+00:00"
+ },
+ {
   "headline": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
   "tldr": "A new benchmark, EarthRecord, evaluates multimodal agents on raw, multi‑sensor satellite data spanning 40 years, testing their ability to perform land‑change analysis directly from pixels.",
   "key_points": [
