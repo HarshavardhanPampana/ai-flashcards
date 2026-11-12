@@ -1,5 +1,1041 @@
 [
  {
+  "headline": "DyCraft: An Agentic System for Long-Horizon 4D Scene Generation",
+  "tldr": "DyCraft breaks down long‑horizon 3D animation into storyboarded steps, letting coding agents generate and debug each frame, dramatically reducing physical errors versus prior agents.",
+  "key_points": [
+   "Introduces a planning and storyboarding pipeline for animated 3D scene creation.",
+   "Each storyboard frame is a static, verifiable 3D scene, enabling local motion authoring.",
+   "Evaluated on 24 diverse animation tasks, showing fewer physical violations and higher human preference than GPT‑6 and other baselines."
+  ],
+  "why_it_matters": "Provides a practical solution to the long‑standing problem of physically implausible AI‑generated animations, paving the way for more reliable autonomous content creation in games, simulation, and virtual production.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3D generation",
+   "animation",
+   "agentic AI",
+   "motion planning"
+  ],
+  "importance": 3,
+  "id": "9451adbcb8c808a2",
+  "url": "https://huggingface.co/papers/2610.40754",
+  "source": "HF Daily Papers",
+  "date": "2026-10-28T20:00:00.000Z",
+  "added": "2026-11-12T07:28:38.897879+00:00"
+ },
+ {
+  "headline": "EVAThink: Evidence Sufficiency-Guided Training for Adaptive Thinking in Video Understanding",
+  "tldr": "EVAThink introduces evidence-sufficiency guided training and a two-stage RL framework to let vision‑language models adaptively choose between direct answering and reasoning for video QA, improving performance under tight frame budgets.",
+  "key_points": [
+   "Creates evidence‑dense and evidence‑sparse video views to supervise mode selection.",
+   "Uses a two‑stage reinforcement learning with evidence‑guided rewards and first‑token advantage regularization.",
+   "Trained on only 6.7K curated samples, it outperforms baselines on multiple video understanding benchmarks at 32‑ and 64‑frame budgets.",
+   "Code, model, and datasets are publicly released."
+  ],
+  "why_it_matters": "Efficient video QA is crucial for real‑time applications; EVAThink shows that adaptive reasoning based on evidence sufficiency can boost accuracy without increasing computational load, offering a practical path for deploying VLMs on resource‑constrained devices.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video-understanding",
+   "vision-language",
+   "reinforcement-learning",
+   "adaptive-reasoning"
+  ],
+  "importance": 3,
+  "id": "9c24c9054bdc6e21",
+  "url": "https://huggingface.co/papers/2611.13907",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:28:27.090026+00:00"
+ },
+ {
+  "headline": "TorchCurves: Differentiable Parametric Curves",
+  "tldr": "TorchCurves is a PyTorch library that makes vector‑valued parametric curves learnable, supporting B‑spline and Legendre bases with full differentiation.",
+  "key_points": [
+   "Provides trainable modules and functional API for parametric curves in PyTorch",
+   "Supports joint optimization of curve coefficients with surrounding models",
+   "Benchmarked against NumPy, SciPy, and EfficientKAN to assess computational overhead",
+   "Applicable to continuous embeddings, Kolmogorov‑Arnold networks, and functional regression"
+  ],
+  "why_it_matters": "Enables researchers and engineers to incorporate smooth, differentiable curve primitives directly into neural networks, expanding the toolbox for continuous function learning without custom hardware kernels.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "torchcurves",
+   "pytorch",
+   "b-spline",
+   "parametric-curves"
+  ],
+  "importance": 2,
+  "id": "48b559b9d876499a",
+  "url": "https://huggingface.co/papers/2611.14516",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:28:14.804712+00:00"
+ },
+ {
+  "headline": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+  "tldr": "Memory-augmented vision-language-action policies rely on time-stamped frames, causing them to mistake idle periods for progress, dramatically reducing task success; indexing memory by events rather than time mitigates this issue.",
+  "key_points": [
+   "Time-stamped memory leads to \"phantom progress\" where robots stop early during null events.",
+   "Success on RoboMME counting tasks drops from ~47/50 to ~16/50 due to temporal shortcuts.",
+   "Removing time stamps alone doesn't fix the problem; event-based memory indexing recovers performance.",
+   "Training with injected pauses fails to eliminate the issue and harms counting ability.",
+   "Memory design—how frames are indexed—directly impacts policy reliability."
+  ],
+  "why_it_matters": "Robust memory handling is crucial for reliable robot autonomy; reliance on clock ticks can cause critical failures in real-world tasks, highlighting the need for event-driven memory architectures.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "memory",
+   "robotics",
+   "VLA",
+   "temporal_shortcuts"
+  ],
+  "importance": 3,
+  "id": "91f1f18b54a4d135",
+  "url": "https://huggingface.co/papers/2611.14488",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:28:03.088702+00:00"
+ },
+ {
+  "headline": "PhysOPSD: Code as Privilege for Physically Plausible Video Generation",
+  "tldr": "PhysOPSD introduces executable code as privileged context to improve physical plausibility in video generation, using on‑policy self‑distillation and a simulation engine, achieving strong results with only 3K samples.",
+  "key_points": [
+   "Uses executable code to provide a controllable physical world as privileged context.",
+   "Combines on‑policy self‑distillation with dual‑level physical privilege for dense feedback.",
+   "Outperforms supervised fine‑tuning and RL baselines on physical plausibility with minimal data.",
+   "Works across multiple video generation backbones while preserving visual quality."
+  ],
+  "why_it_matters": "Adds a practical way to embed physical laws into generative video models, addressing brittleness in dynamics and enabling more reliable, controllable video synthesis for simulation, entertainment, and scientific visualization.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "physical simulation",
+   "on-policy distillation",
+   "AI research"
+  ],
+  "importance": 3,
+  "id": "f59f8e8f1ce0265a",
+  "url": "https://huggingface.co/papers/2611.12411",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-12T07:27:52.150056+00:00"
+ },
+ {
+  "headline": "Modality-Aware Expert Pruning for MoE-Based Multimodal Large Language Models",
+  "tldr": "MAEP introduces a training‑free, modality‑aware pruning method that cuts nearly half of the expert memory in MoE‑MLLMs, enabling 58 GB models to fit on a single 40 GB GPU.",
+  "key_points": [
+   "MAEP splits expert importance by vision and language modalities in one forward pass.",
+   "Introduces Delta‑H Output metric to gauge output change when an expert is removed.",
+   "Vision‑side low‑attention tokens provide a stable pruning signal; text‑side importance preserves performance.",
+   "Reduces expert weight footprint by ~27 GB (≈47% of total memory) with minimal loss on multimodal and text benchmarks."
+  ],
+  "why_it_matters": "MoE‑based multimodal LLMs are memory‑heavy, limiting deployment; modality‑aware pruning dramatically cuts memory without sacrificing accuracy, making large models more accessible for research and production.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Mixture-of-Experts",
+   "Multimodal LLM",
+   "Model Compression",
+   "Training-Free"
+  ],
+  "importance": 3,
+  "id": "1cc6ebcad4e28cdb",
+  "url": "https://huggingface.co/papers/2611.05927",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-12T07:27:38.770797+00:00"
+ },
+ {
+  "headline": "Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents",
+  "tldr": "SparseRead is a control layer that lets AI agents read only the needed parts of web pages and documents, cutting token usage by up to 93% and latency by up to 89% while keeping or improving task performance.",
+  "key_points": [
+   "Introduces a Read Intent Protocol to track what evidence an agent actually needs.",
+   "Adaptive Reader Backends choose how to locate and expose relevant content without changing the model.",
+   "Budgeted Read Gate limits cumulative raw token exposure per episode, with a full-view fallback when needed.",
+   "Across six models (including Claude Opus 5) and five scenarios, SparseRead saves 31‑43% tokens on web deep‑search tasks and speeds up completion by 23‑37%."
+  ],
+  "why_it_matters": "Token and latency costs are major bottlenecks for web‑facing AI agents; reducing unnecessary reading makes agents cheaper, faster, and more scalable, enabling broader deployment of sophisticated agents in real‑time applications.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "token_efficiency",
+   "AI_agents",
+   "sparse_reading",
+   "performance"
+  ],
+  "importance": 3,
+  "id": "8960fab2d7e5ab77",
+  "url": "https://huggingface.co/papers/2608.22237",
+  "source": "HF Daily Papers",
+  "date": "2026-11-06T19:00:00.000Z",
+  "added": "2026-11-12T07:27:26.987233+00:00"
+ },
+ {
+  "headline": "Fine‑tuned EVA‑02 in a week to create a neural video retrieval engine",
+  "tldr": "A week‑long sprint produced an open‑source video search system that indexes massive video collections by visual pose, clothing, and motion using a frozen EVA‑02 vision backbone, running on a laptop GPU with minimal VRAM.",
+  "key_points": [
+   "Uses EVA‑02‑CLIP‑L‑14‑336 vision model (304 M params) frozen to fit 4.5 GB VRAM on an RTX 4060 laptop.",
+   "Stores each video as a 3×3 mosaic of keyframes, enabling fast indexing of long clips.",
+   "Dynamic caption augmentation and multi‑instance routing improve retrieval of rare poses and outfits.",
+   "Open‑sourced on GitHub with a 48‑thread graph crawler for data collection."
+  ],
+  "why_it_matters": "Demonstrates that high‑quality, large‑scale video retrieval can be built with modest hardware, addressing blind spots of popular models (CLIP, BLIP, SigLIP) and enabling search beyond uploader metadata.",
+  "category": "product",
+  "companies": [],
+  "tags": [
+   "video-retrieval",
+   "EVA-02",
+   "fine-tuning",
+   "open-source"
+  ],
+  "importance": 3,
+  "id": "f7ae3aeed76433c1",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xu1pg4/i_finetuned_eva02_in_a_week_to_build_a_neural/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T03:03:34+00:00",
+  "added": "2026-11-12T07:27:15.007328+00:00"
+ },
+ {
+  "headline": "I built an explorer of 2,100+ robotics papers covering 10 years of CoRL; with TLDRs, links to code, project pages, and research trends",
+  "tldr": "A searchable web explorer indexes over 2,100 CoRL robotics papers (2017‑2026) with TLDRs, code links, project pages, and trend analytics, and the source code is open‑source.",
+  "key_points": [
+   "Covers 2,100+ robotics papers from the Conference on Robot Learning (2017‑2026)",
+   "Provides TLDR summaries, code repositories, arXiv links, and project pages for each paper",
+   "Includes summary statistics and research trend visualizations",
+   "Open‑source repository available for contributions and future auto‑research extensions"
+  ],
+  "why_it_matters": "Aggregating a decade of CoRL research into a searchable, annotated database lowers the barrier for researchers and engineers to discover prior work, reuse code, and identify emerging trends, accelerating progress in robot learning.",
+  "category": "open_source",
+  "companies": [
+   "operatic-ai"
+  ],
+  "tags": [
+   "robotics",
+   "CoRL",
+   "dataset",
+   "open_source"
+  ],
+  "importance": 3,
+  "id": "5d0e50fe8f6f57aa",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtul3j/i_built_an_explorer_of_2100_robotics_papers/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T21:42:54+00:00",
+  "added": "2026-11-12T07:27:03.333711+00:00"
+ },
+ {
+  "headline": "How should authors handle a suspected auto-generated review at ICLR? Flag to the AC or just rebut?",
+  "tldr": "Authors wonder whether to confidentially alert the Area Chair about a reviewer suspected of using AI to write a low‑confidence review and how such evidence is treated.",
+  "key_points": [
+   "One reviewer gave a score of 2 with confidence 1, while others gave 3 with confidence 3.",
+   "The low‑confidence review was flagged by a detector as 100% AI‑generated.",
+   "Authors consider sending a confidential comment to the Area Chair versus addressing issues in the rebuttal.",
+   "Questions focus on ACs' willingness to act on detector scores and the weight of low‑confidence reviews."
+  ],
+  "why_it_matters": "Ensuring the integrity of peer review is crucial for the credibility of top AI conferences like ICLR; handling suspected AI‑generated reviews affects fairness for authors and the quality of the review process.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "peer_review",
+   "AI_detection",
+   "conference_policy"
+  ],
+  "importance": 2,
+  "id": "9e6c4513996c45fd",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtvipb/how_should_authors_handle_a_suspected/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T22:20:31+00:00",
+  "added": "2026-11-12T07:26:50.764340+00:00"
+ },
+ {
+  "headline": "Missed Presentation [D]",
+  "tldr": "A user asks what happens if they miss a paper workshop presentation on r/MachineLearning.",
+  "key_points": [
+   "Question about consequences of missing a workshop presentation",
+   "Posted by user No_Caterpillar3174",
+   "Discussion occurs in the comments"
+  ],
+  "why_it_matters": "Understanding the protocol for missed presentations helps participants stay informed about workshop expectations and community norms.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "workshop",
+   "presentation",
+   "community",
+   "r/MachineLearning"
+  ],
+  "importance": 2,
+  "id": "158ee3063dd6814e",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xu1szu/missed_presentation_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T03:08:20+00:00",
+  "added": "2026-11-12T07:26:38.817868+00:00"
+ },
+ {
+  "headline": "How much does reviewer confidence matter in ICLR decisions?",
+  "tldr": "A Reddit user asks how conference area chairs weigh mixed reviewer scores and confidence levels when making ICLR acceptance decisions.",
+  "key_points": [
+   "Submission received scores 3/3/2 with reviewer confidences 1/3/3.",
+   "One weak accept came from a low‑confidence reviewer, others from high‑confidence reviewers.",
+   "The asker wants to know if low‑confidence positive reviews count less after rebuttal and discussion.",
+   "No fixed formula exists; decisions depend on review substance and rebuttal effectiveness."
+  ],
+  "why_it_matters": "Understanding how reviewer confidence influences conference decisions helps authors gauge the impact of their rebuttals and informs improvements to peer‑review processes in AI research.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "review process",
+   "confidence",
+   "peer review"
+  ],
+  "importance": 1,
+  "id": "80093b19cdd09d17",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xu3n5f/how_much_does_reviewer_confidence_matter_in_iclr/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T04:42:54+00:00",
+  "added": "2026-11-12T07:26:27.042798+00:00"
+ },
+ {
+  "headline": "Have people given up on ICLR reviews? [D]",
+  "tldr": "A Reddit user reports that authors in a batch of 10‑12 ICLR submissions have not posted rebuttals and reviewers have not responded, questioning whether the community has abandoned the ICLR review process.",
+  "key_points": [
+   "Authors of multiple ICLR submissions have not submitted any rebuttals.",
+   "Reviewers have not responded to the posted rebuttals.",
+   "Even papers with borderline, fixable reviews show no author activity.",
+   "The post raises concerns about the health of the ICLR peer‑review system."
+  ],
+  "why_it_matters": "The peer‑review process is central to the credibility and progress of AI research; widespread disengagement could undermine conference quality and slow dissemination of new ideas.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "peer_review",
+   "conference",
+   "research_community"
+  ],
+  "importance": 2,
+  "id": "6cb959f5c75097bd",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtt0px/have_people_given_up_on_iclr_reviews_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T20:40:40+00:00",
+  "added": "2026-11-12T07:26:15.151818+00:00"
+ },
+ {
+  "headline": "Nvidia's board reportedly preparing to fire CEO Jensen Huang amid alleged affairs",
+  "tldr": "Nvidia's board is considering dismissing Jensen Huang after reports of a second alleged extramarital affair, following earlier allegations involving a woman claimed to be a Chinese spy.",
+  "key_points": [
+   "Board is evaluating removal of CEO Jensen Huang.",
+   "Allegations involve a second extramarital affair with an executive.",
+   "Previous scandal linked Huang to a woman alleged to be a Chinese spy.",
+   "Reports come from The Wall Street Journal citing the New York Times."
+  ],
+  "why_it_matters": "Leadership turmoil at Nvidia, a dominant AI hardware maker, could impact its strategic direction, investor confidence, and the broader AI ecosystem that relies on its GPUs.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "board",
+   "scandal",
+   "corporate"
+  ],
+  "importance": 4,
+  "id": "4a6d92631407ef3c",
+  "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+  "source": "The Verge AI",
+  "date": "2026-11-11T17:44:36-05:00",
+  "added": "2026-11-12T07:26:02.914599+00:00"
+ },
+ {
+  "headline": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+  "tldr": "The paper proposes Contrastive Discovery, replacing single-hypothesis testing with a set of mutually exclusive explanations, enabling LLM agents to better allocate belief and resolve scientific questions using the same evidence.",
+  "key_points": [
+   "Introduces contrast sets of competing explanations for hypothesis testing.",
+   "Agents can re‑evaluate existing evidence or guide new experiments with contrast sets.",
+   "Across six domains, contrast sets resolve 73% of rejected pointwise candidates to a specific alternative.",
+   "Guided search with contrast sets improves question resolution by 67% over pointwise surprisal.",
+   "Human experts agree with the agent's chosen explanations 78% of the time."
+  ],
+  "why_it_matters": "Explicitly modeling competing explanations lets AI agents extract more insight from limited data, accelerating scientific discovery and making automated research more reliable.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "scientific discovery",
+   "contrastive learning",
+   "hypothesis testing"
+  ],
+  "importance": 3,
+  "id": "02adbd087e823a01",
+  "url": "https://arxiv.org/abs/2611.14514v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:58:43Z",
+  "added": "2026-11-12T07:25:51.347621+00:00"
+ },
+ {
+  "headline": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
+  "tldr": "CoreWeave is asking customers to pay upfront and use short‑term contracts to finance its AI expansion.",
+  "key_points": [
+   "Customers are being asked to prepay for GPU cloud services",
+   "Company is borrowing against specific contracts to raise cash",
+   "Short‑term deals may result in higher prices for users",
+   "Strategy disclosed in CoreWeave's Q3 earnings report"
+  ],
+  "why_it_matters": "The financing approach could affect pricing and availability of GPU cloud resources, influencing how AI developers budget and scale their workloads.",
+  "category": "funding",
+  "companies": [
+   "CoreWeave"
+  ],
+  "tags": [
+   "cloud",
+   "GPU",
+   "financing",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "c063829a6185b4d7",
+  "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 19:54:00 +0000",
+  "added": "2026-11-12T07:25:38.792103+00:00"
+ },
+ {
+  "headline": "How backlash and red tape continue to slow data centers post-Blue Wave",
+  "tldr": "AI data center projects face mounting local opposition, permitting delays, and electricity shortages, threatening many announced builds.",
+  "key_points": [
+   "Local communities increasingly resist new data center construction.",
+   "Permitting processes are causing significant delays for AI infrastructure projects.",
+   "Power supply constraints are limiting the ability to scale data centers.",
+   "Many announced AI data center projects may never materialize."
+  ],
+  "why_it_matters": "The slowdown in data center deployment could bottleneck AI model training and inference, affecting the growth and competitiveness of AI services worldwide.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "data_center",
+   "AI_infrastructure",
+   "regulation",
+   "energy"
+  ],
+  "importance": 2,
+  "id": "984513ae1fc499f6",
+  "url": "https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 20:02:14 +0000",
+  "added": "2026-11-12T07:25:27.026927+00:00"
+ },
+ {
+  "headline": "Meta is losing its longtime head of infrastructure",
+  "tldr": "Santosh Janardhan, Meta's infrastructure chief since 2009, is stepping down.",
+  "key_points": [
+   "Santosh Janardhan joined Meta in 2009",
+   "He has served as head of infrastructure for over a decade",
+   "He will step down from his role"
+  ],
+  "why_it_matters": "Leadership changes at the infrastructure level can affect Meta's data center strategy and operational efficiency.",
+  "category": "other",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "leadership",
+   "infrastructure"
+  ],
+  "importance": 2,
+  "id": "6bc57b8d8016fc8d",
+  "url": "https://techcrunch.com/2026/11/11/meta-is-losing-its-longtime-head-of-infrastructure/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 20:12:01 +0000",
+  "added": "2026-11-12T07:25:14.673726+00:00"
+ },
+ {
+  "headline": "Why the data center you dread might never even be built",
+  "tldr": "AI data‑center projects face mounting obstacles—local opposition, permitting delays, and electricity shortages—so many announced builds may never materialize.",
+  "key_points": [
+   "Local communities often block new data‑center construction.",
+   "Permitting processes cause lengthy delays.",
+   "Securing sufficient power for AI workloads is increasingly difficult.",
+   "Billions invested in AI infrastructure risk being stranded."
+  ],
+  "why_it_matters": "The slowdown or cancellation of AI data‑center projects could bottleneck the compute capacity needed for next‑generation models, affect investment returns, and reshape the geography of AI development.",
+  "category": "hardware",
+  "companies": [],
+  "tags": [
+   "data centers",
+   "AI infrastructure",
+   "energy",
+   "regulation"
+  ],
+  "importance": 3,
+  "id": "0d92f57c72e3e3cf",
+  "url": "https://techcrunch.com/video/why-the-data-center-you-dread-might-never-even-be-built/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 20:15:15 +0000",
+  "added": "2026-11-12T07:25:02.812946+00:00"
+ },
+ {
+  "headline": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+  "tldr": "Nvidia shares fell amid reports that its board may move to remove founder‑CEO Jensen Huang.",
+  "key_points": [
+   "Nvidia stock declines",
+   "Board reportedly planning CEO ouster",
+   "Founder Jensen Huang has led for 33 years"
+  ],
+  "why_it_matters": "A potential leadership change at a dominant AI chip maker could affect market confidence, product strategy, and the broader AI ecosystem.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "stock",
+   "board",
+   "CEO"
+  ],
+  "importance": 2,
+  "id": "e9253ae6619ecd71",
+  "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 23:28:45 +0000",
+  "added": "2026-11-12T07:24:50.941687+00:00"
+ },
+ {
+  "headline": "The unfolding Jensen Huang scandal: a timeline",
+  "tldr": "A timeline of the Jensen Huang scandal, highlighting potential national security implications amid the U.S.-China AI race.",
+  "key_points": [
+   "Chronology of events involving Nvidia CEO Jensen Huang",
+   "Possible impact on U.S. and China competition in AI infrastructure",
+   "Concerns about national security ramifications"
+  ],
+  "why_it_matters": "The scandal could affect trust and strategic positioning in the global AI race, influencing how the U.S. and China develop advanced AI infrastructure.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "scandal",
+   "national security",
+   "AI race",
+   "Nvidia"
+  ],
+  "importance": 2,
+  "id": "c2f163e5b083bf5f",
+  "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 23:50:00 +0000",
+  "added": "2026-11-12T07:24:39.284312+00:00"
+ },
+ {
+  "headline": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
+  "tldr": "TechCrunch lists potential successors for Nvidia CEO Jensen Huang, noting the lack of a formal succession plan.",
+  "key_points": [
+   "Nvidia has no succession plan",
+   "CEO Jensen Huang is under pressure",
+   "A shortlist of possible replacements is drafted"
+  ],
+  "why_it_matters": "Leadership stability at Nvidia is crucial given its dominant role in AI hardware and the broader tech ecosystem.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "succession",
+   "Nvidia",
+   "CEO"
+  ],
+  "importance": 2,
+  "id": "48e6c41241423249",
+  "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 03:13:10 +0000",
+  "added": "2026-11-12T07:24:28.672608+00:00"
+ },
+ {
+  "headline": "United won’t let your AI agent book your flight",
+  "tldr": "United Airlines says personal AI assistants cannot book tickets, citing privacy and regulatory concerns.",
+  "key_points": [
+   "United blocks AI agents from purchasing flights",
+   "Cites data‑privacy and compliance risks",
+   "Few attempts observed so far",
+   "Similar stance noted by companies like DoorDash"
+  ],
+  "why_it_matters": "Highlights emerging regulatory and privacy challenges as AI assistants become more integrated into consumer services, signaling potential limits on AI‑driven commerce.",
+  "category": "policy",
+  "companies": [
+   "United Airlines"
+  ],
+  "tags": [
+   "AI agents",
+   "travel",
+   "privacy",
+   "regulation"
+  ],
+  "importance": 2,
+  "id": "33bddd1c40023b58",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+  "source": "The Verge AI",
+  "date": "2026-11-11T16:54:21-05:00",
+  "added": "2026-11-12T07:24:14.963713+00:00"
+ },
+ {
+  "headline": "LM-SimBench: A Unified Framework, Dataset, and Benchmark for Large Language Model Training Simulation",
+  "tldr": "LM-SimBench provides a standardized framework, profiling dataset, and benchmark to evaluate and compare LLM training simulators across diverse parallelism configurations, enabling cheaper and more accurate simulation of large‑scale model training on GPU and Ascend NPU hardware.",
+  "key_points": [
+   "Defines a modular simulation pipeline covering compilation to schedule‑level aggregation.",
+   "Profiles 23 model settings from 10 dense and MoE LLM families on an Ascend NPU cluster, yielding 348 configurations.",
+   "Offers multi‑granularity views (configuration, rank, operator, event, kernel) for detailed analysis.",
+   "Demonstrates cross‑platform relevance by validating GPU‑NPU experiments and NPU‑guided GPU configuration selection."
+  ],
+  "why_it_matters": "Accurate, low‑cost simulation of LLM training helps researchers and engineers select optimal parallelism strategies without expensive full‑scale runs, accelerating development of larger models and improving resource efficiency across hardware platforms.",
+  "category": "paper",
+  "companies": [
+   "Huawei"
+  ],
+  "tags": [
+   "LLM training",
+   "simulation",
+   "benchmark",
+   "hardware"
+  ],
+  "importance": 3,
+  "id": "e67bb952706077cd",
+  "url": "https://arxiv.org/abs/2611.14285v1",
+  "source": "arXiv",
+  "date": "2026-11-10T16:26:19Z",
+  "added": "2026-11-12T07:24:02.962463+00:00"
+ },
+ {
+  "headline": "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
+  "tldr": "EngineAgent automates the enablement of new on-device LLM models by separating engine/hardware knowledge from model-specific code, achieving 75% success across diverse hardware versus 33% for prior coding agents.",
+  "key_points": [
+   "Builds a hierarchy-aware engine index to capture cross-layer dependencies.",
+   "Separates reusable engine/hardware knowledge from model-specific implementation.",
+   "Improves end-to-end success rate to 75% across CPUs, GPUs, and NPUs.",
+   "Reduces per-task time and model-API cost compared to baseline agents."
+  ],
+  "why_it_matters": "Enabling new LLMs on heterogeneous mobile hardware is costly and error‑prone; EngineAgent streamlines this process, accelerating deployment of advanced AI capabilities on edge devices.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "on-device",
+   "LLM",
+   "inference",
+   "automation"
+  ],
+  "importance": 4,
+  "id": "57cc11a61fe82654",
+  "url": "https://arxiv.org/abs/2611.14356v1",
+  "source": "arXiv",
+  "date": "2026-11-10T17:16:47Z",
+  "added": "2026-11-12T07:23:50.866435+00:00"
+ },
+ {
+  "headline": "Jensen Huang accused of having another affair — with an Nvidia exec",
+  "tldr": "Nvidia CEO Jensen Huang faces a second allegation of an affair with a company subordinate.",
+  "key_points": [
+   "Jensen Huang previously admitted to an affair with a woman linked to Chinese intelligence",
+   "New accusation involves a relationship with an Nvidia employee",
+   "The claim adds to ongoing personal controversy surrounding Huang"
+  ],
+  "why_it_matters": "The allegations could impact Nvidia's leadership reputation and investor confidence, potentially affecting the company's public image and stock perception.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "controversy",
+   "Nvidia",
+   "Jensen Huang"
+  ],
+  "importance": 2,
+  "id": "0ca5cf57ee5146c0",
+  "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+  "source": "TechCrunch AI",
+  "date": "Wed, 11 Nov 2026 23:17:05 +0000",
+  "added": "2026-11-12T07:23:38.580471+00:00"
+ },
+ {
+  "headline": "Huawei releases MACaQ, its internal quantizer for local inference",
+  "tldr": "Huawei introduced MACaQ, a model‑agnostic quantizer that quickly produces high‑quality GGUF checkpoints for text, image, video and audio models, enabling fast local inference on modest hardware.",
+  "key_points": [
+   "Quantizes a 122B‑parameter model in 64 minutes using 32.5 GB RAM",
+   "Achieves lower perplexity than MR‑GPTQ and DuQuant++ with 11× faster quantization",
+   "Supports 2‑, 3‑ and 4‑bit GGUF formats across llama.cpp, vLLM, Diffusers and PyTorch",
+   "Provides MACaQ‑R refinement for weight‑code optimization while preserving native formats"
+  ],
+  "why_it_matters": "Enables developers to run very large multimodal models locally with reduced memory and compute, lowering barriers to deployment and expanding edge AI capabilities.",
+  "category": "product",
+  "companies": [
+   "Huawei"
+  ],
+  "tags": [
+   "quantization",
+   "local inference",
+   "GGUF",
+   "model-agnostic"
+  ],
+  "importance": 3,
+  "id": "418d10f93d4edba8",
+  "url": "https://github.com/huawei-csl/MACaQ",
+  "source": "Hacker News",
+  "date": "2026-11-11T20:23:57Z",
+  "added": "2026-11-12T07:23:26.995775+00:00"
+ },
+ {
+  "headline": "PhyRubric: Rubric-Grounded Diagnostic Evaluation of Physical Commonsense in Text-to-Video Generation",
+  "tldr": "PhyRubric introduces a rubric-based framework to diagnose physical commonsense violations in text-to-video models, providing fine-grained, timestamped evaluations and a new benchmark with 3,788 videos.",
+  "key_points": [
+   "Creates caption-specific rubrics to assess physical principles before video generation",
+   "Provides PhyRubric-Bench (34 categories, five physical domains) and PhyRubric-Train dataset",
+   "Fine-tuned open-source PhyRubric-Judge correlates better with human judgments than existing judges",
+   "Shows current T2V models still struggle with physical commonsense",
+   "Matches performance of proprietary Gemini 4 Argon in evaluation"
+  ],
+  "why_it_matters": "Accurate physical commonsense evaluation is crucial for text-to-video models to become reliable world simulators, guiding research toward more realistic video generation and preventing misleading outputs.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "text-to-video",
+   "physical commonsense",
+   "evaluation",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "c185d185ebf26612",
+  "url": "https://huggingface.co/papers/2611.13576",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:23:14.877768+00:00"
+ },
+ {
+  "headline": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+  "tldr": "A new self‑supervised model (MC‑JEPA) conditions predictions on market‑wide factors, improving financial time‑series forecasts and portfolio performance on Chinese A‑share data.",
+  "key_points": [
+   "Conditioning on a leave‑one‑out market factor reduces noise and enhances asset‑specific learning.",
+   "MC‑JEPA outperforms per‑asset JEPA and other baselines on returns, exposure, risk, and liquidity metrics.",
+   "Achieves best RankIC for liquidity targets and superior backtested portfolio returns.",
+   "Factor loadings derived from the model rank stocks by market beta nearly as well as supervised probes."
+  ],
+  "why_it_matters": "Accurately modeling market‑wide shocks can boost predictive power for financial assets, leading to better risk management and higher returns for investors, and demonstrates the value of joint‑embedding approaches in finance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "finance",
+   "self-supervised",
+   "time-series",
+   "JEPA"
+  ],
+  "importance": 3,
+  "id": "7b23017e508e02fe",
+  "url": "https://huggingface.co/papers/2611.13572",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:23:02.952536+00:00"
+ },
+ {
+  "headline": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
+  "tldr": "The paper introduces verifiable reward‑context conflicts to study RL shortcutting and shows that simple binary penalties can improve safety while maintaining capability, even under changing execution requirements.",
+  "key_points": [
+   "Defines verifiable reward–context conflicts where shortcuts earn higher reward than compliant strategies.",
+   "Generates scalable interactive environments to expose and measure shortcut acquisition.",
+   "Minor exposure to conflicts leads to widespread shortcut learning (97.9% violations after 128 updates).",
+   "A binary penalty mechanism improves safe completion from 53.1% to 89.1% on unseen tasks.",
+   "Safety learned under resource‑trained settings transfers across evolving evidence and approval workflows."
+  ],
+  "why_it_matters": "Understanding and mitigating reward‑driven misalignment is crucial for deploying RL systems safely in real‑world workflows where unauthorized shortcuts can cause productivity loss or unsafe behavior.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "safety",
+   "misalignment",
+   "contextual_learning"
+  ],
+  "importance": 3,
+  "id": "2b842fafd52f205f",
+  "url": "https://huggingface.co/papers/2611.12865",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-12T07:22:50.984564+00:00"
+ },
+ {
+  "headline": "Are Causal Neuron Circuits Unique and Transferable?",
+  "tldr": "The study investigates how many neurons in identified groups are truly needed to change model answers, finding that often only a few neurons suffice and that effects can transfer to rephrasings but not across different chains.",
+  "key_points": [
+   "Zero-ablation of 12 selected neurons reduces answer margin by 27% on Qwen3-0.6B, while random neurons have negligible impact.",
+   "Patching 12 neurons with activations from the first-hop question shifts answers toward the bridge entity in multiple models.",
+   "Full neuron groups are rarely necessary; small disjoint subsets can independently flip answers, especially when model confidence is low.",
+   "Group effects transfer to rephrasings of the same relational chain but are much weaker on different chains."
+  ],
+  "why_it_matters": "Understanding the minimal causal subsets of neurons that drive model decisions enhances interpretability, informs more efficient model debugging, and could lead to targeted interventions for safety and alignment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "interpretability",
+   "neurons",
+   "causal",
+   "language_models"
+  ],
+  "importance": 3,
+  "id": "d294285815d6e25c",
+  "url": "https://huggingface.co/papers/2611.13885",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T07:22:38.830911+00:00"
+ },
+ {
+  "headline": "United Airlines bans AI agents from booking flights on behalf of travelers",
+  "tldr": "United Airlines will block third‑party AI assistants from making reservations, citing security risks and possible violations of federal regulations.",
+  "key_points": [
+   "United prohibits AI agents like Meta's Muse and OpenAI's tools from accessing its booking platform.",
+   "The ban aims to protect personal data, payment info, and MileagePlus miles from misuse.",
+   "United warns AI‑driven check‑ins could breach rules requiring passenger verification of luggage.",
+   "Other carriers, e.g., Southwest, are experimenting with AI integration instead of bans."
+  ],
+  "why_it_matters": "The move highlights growing regulatory and security concerns as AI assistants become capable of handling sensitive transactions, potentially shaping how airlines and other industries manage AI access to customer data.",
+  "category": "policy",
+  "companies": [
+   "United Airlines",
+   "Meta",
+   "OpenAI"
+  ],
+  "tags": [
+   "airline",
+   "AI agents",
+   "security",
+   "regulation"
+  ],
+  "importance": 3,
+  "id": "1399104b4951d0e4",
+  "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+  "source": "Hacker News",
+  "date": "2026-11-11T21:24:35Z",
+  "added": "2026-11-12T07:22:26.747542+00:00"
+ },
+ {
+  "headline": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction",
+  "tldr": "DepthGraft introduces a hierarchical KV‑sharing architecture that reduces KV cache by ~33% and improves downstream performance of large language models, especially MoE models up to 16B parameters.",
+  "key_points": [
+   "Revisits cross‑layer KV sharing as an efficient structural regularizer.",
+   "Hierarchical design reconstructs deep‑layer KV from stride‑aligned shallow‑middle pairs.",
+   "Reduces KV cache memory by roughly one third while preserving early prefill performance.",
+   "Yields 7.0% absolute gain on MMLU‑Pro for a 16B MoE model, with similar gains on CMMLU and C3.",
+   "Validated across dense and MoE models ranging from 0.5B to 16B parameters."
+  ],
+  "why_it_matters": "Efficiently scaling model depth without incurring prohibitive memory costs is critical for next‑generation LLMs; DepthGraft offers a practical solution that boosts accuracy while cutting resource usage, facilitating larger and more capable models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "KV sharing",
+   "large language models",
+   "model efficiency",
+   "depth scaling"
+  ],
+  "importance": 3,
+  "id": "4bfdb0d4c76fcdc2",
+  "url": "https://huggingface.co/papers/2611.03142",
+  "source": "HF Daily Papers",
+  "date": "2026-11-01T19:00:00.000Z",
+  "added": "2026-11-12T07:22:15.022836+00:00"
+ },
+ {
+  "headline": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+  "tldr": "Yogurt is a free, open‑source app that records meeting audio and generates AI‑powered transcripts and summaries locally, keeping data private.",
+  "key_points": [
+   "Runs on macOS, Windows, and Linux with at least 8 GB RAM",
+   "Uses Whisper via whisper.cpp for transcription, with models downloaded once (5 GB‑14 GB)",
+   "All recordings, transcripts, and notes are stored locally; no account required",
+   "Open‑source under the MIT license, allowing full inspection of code",
+   "Optional AI app integration via read‑only local sockets or named pipes"
+  ],
+  "why_it_matters": "Provides a privacy‑preserving alternative to cloud‑based meeting‑note services, giving users control over their audio data while still leveraging powerful AI transcription.",
+  "category": "product",
+  "companies": [
+   "Frigade"
+  ],
+  "tags": [
+   "open_source",
+   "privacy",
+   "meeting_notes",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "f6b29b4e2ab3b1b9",
+  "url": "https://github.com/FrigadeHQ/yogurt",
+  "source": "Hacker News",
+  "date": "2026-11-11T15:33:06Z",
+  "added": "2026-11-12T07:22:02.987239+00:00"
+ },
+ {
+  "headline": "My AI agents found an unmapped Maya site?",
+  "tldr": "AI agents analyzed public NASA lidar data and identified a Maya site in Mexico that was not in the official register, though it had already been documented in academic literature.",
+  "key_points": [
+   "Agents used publicly available lidar covering ~1,200 km² of jungle to spot structures.",
+   "48 AI agents manually inspected the lidar images following a detailed guide, without a specialized classifier.",
+   "The site was later found to have been mapped in a 2025 academic paper, but not in Mexico's official register.",
+   "The whole process—from idea to government reply—took less than 72 hours."
+  ],
+  "why_it_matters": "Demonstrates how generative AI tools can rapidly process large remote‑sensing datasets, potentially accelerating archaeological discovery and highlighting gaps in official heritage records.",
+  "category": "other",
+  "companies": [
+   "OpenAI",
+   "Anthropic",
+   "KoboldAI"
+  ],
+  "tags": [
+   "archaeology",
+   "lidar",
+   "AI_agents",
+   "remote_sensing"
+  ],
+  "importance": 3,
+  "id": "8d8bc38f54a7d350",
+  "url": "https://pietromiotti.com/latest/maya-site",
+  "source": "Hacker News",
+  "date": "2026-11-11T12:05:22Z",
+  "added": "2026-11-12T07:21:51.055800+00:00"
+ },
+ {
+  "headline": "Scaling Mathematical Proof Supervision from Structured Textbooks",
+  "tldr": "The new TOME-Math corpus converts 2,118 university math textbooks into 380K structured proof-supervision records, boosting model performance by 16.7 points and showing the value of curriculum‑aware data.",
+  "key_points": [
+   "Creates a large, structured dataset preserving textbook hierarchy and proof dependencies",
+   "Fine‑tuning on TOME‑Math improves math reasoning scores by 16.7 percentage points",
+   "Demonstrates curriculum learning benefits across multiple math subjects",
+   "Outperforms three public instruction‑data baselines in aggregate",
+   "Corpus will be released for open research"
+  ],
+  "why_it_matters": "",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "math",
+   "curriculum_learning",
+   "dataset",
+   "language_models"
+  ],
+  "importance": 3,
+  "id": "39090a630dff87f4",
+  "url": "https://huggingface.co/papers/2610.40394",
+  "source": "HF Daily Papers",
+  "date": "2026-10-28T20:00:00.000Z",
+  "added": "2026-11-12T07:21:38.659834+00:00"
+ },
+ {
+  "headline": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
+  "tldr": "A new RL framework lets LLMs autonomously retrieve, study, and apply knowledge from textbooks, boosting proof accuracy from 51.5% to 79.5% and improving performance on long-context benchmarks.",
+  "key_points": [
+   "Introduces BookNavigator interface for textbook-based self‑learning.",
+   "Uses fine‑grained RL rewards to encourage knowledge acquisition and reasoning.",
+   "Proof accuracy of Intern‑S2‑Preview‑35B rises to 79.5% on a math problem set.",
+   "Shows gains on out‑of‑domain tasks and long‑context benchmarks (BrowseComp‑Plus, CL‑bench).",
+   "Demonstrates domain‑agnostic self‑learning potential for LLMs."
+  ],
+  "why_it_matters": "Enables LLMs to go beyond static knowledge and retrieval, learning from long-form texts on the fly, which could improve problem solving in unfamiliar domains and reduce reliance on pre‑training data.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "self-learning",
+   "reinforcement-learning",
+   "LLM",
+   "RAG"
+  ],
+  "importance": 3,
+  "id": "abcfb343e50f9703",
+  "url": "https://huggingface.co/papers/2610.39671",
+  "source": "HF Daily Papers",
+  "date": "2026-10-28T20:00:00.000Z",
+  "added": "2026-11-12T07:21:26.942171+00:00"
+ },
+ {
+  "headline": "Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference",
+  "tldr": "The paper introduces PISA and its ensemble extension PISA-E, which adaptively route prompts to single models or ensembles based on cost‑quality trade‑offs, achieving higher performance and lower inference cost than prior methods.",
+  "key_points": [
+   "PISA uses soft cluster memberships and model-specific predictors to estimate per‑prompt model capability.",
+   "PISA‑E selects ensemble composition and size on the fly, without extra ensemble‑specific training.",
+   "Achieves up to 2.87 % higher task performance than the best prior ensembles while cutting inference cost by ~25‑36 %.",
+   "Works robustly on both in‑distribution and out‑of‑distribution routing benchmarks."
+  ],
+  "why_it_matters": "Efficiently balancing quality and cost is critical for deploying LLMs at scale; adaptive routing and selective ensembling can dramatically reduce compute expenses while maintaining or improving output quality.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "routing",
+   "cost-aware",
+   "ensemble"
+  ],
+  "importance": 3,
+  "id": "a81a2ac05a2264e0",
+  "url": "https://huggingface.co/papers/2611.10193",
+  "source": "HF Daily Papers",
+  "date": "2026-11-05T19:00:00.000Z",
+  "added": "2026-11-12T07:21:15.092338+00:00"
+ },
+ {
+  "headline": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+  "tldr": "GTAGym introduces a GTA V‑based benchmark (GTAVBench) with 103 tasks for evaluating and training RL agents, achieving up to 70.9% accuracy with frontier LLMs.",
+  "key_points": [
+   "GTAVBench provides 103 online tasks across nine families plus 47 image‑based shooting tasks.",
+   "A web server enables parallel testing via screenshots and keyboard‑mouse actions with automatic outcome checks.",
+   "Frontier LLMs reach 70.9% accuracy on the GTAVBench‑AGI variant, though navigation and evasion remain hard.",
+   "LoRA‑fine‑tuned Qwen3.8‑27B improves on‑foot navigation performance from 15% to 23%."
+  ],
+  "why_it_matters": "Provides a realistic, scalable testbed for measuring perception, reasoning, and control in complex 3D environments, bridging the gap between language models and embodied RL.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "GTA V",
+   "RL",
+   "LLM",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "8b96b3ec19183b0a",
+  "url": "https://huggingface.co/papers/2611.13028",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-12T07:21:02.897186+00:00"
+ },
+ {
+  "headline": "One Table, Many Queries: Benchmarking Generalist Tabular Models Across Generation, Imputation, and Prediction",
+  "tldr": "A new benchmark evaluates how single tabular models handle generation, imputation, and prediction together, revealing trade‑offs and benefits of unified training objectives.",
+  "key_points": [
+   "The One Table Benchmark covers 56 datasets, 46 methods, and 20 capability axes with aligned splits.",
+   "Five backbone models are trained on all seven non‑empty objective combinations to assess cross‑task performance.",
+   "Generalist models can match or exceed specialist portfolios on utility, but specialization still wins on fidelity.",
+   "Including a model's own objective yields the largest pooled gains; auxiliary objectives provide mixed benefits.",
+   "Frozen foundation models show strong prediction and numerical imputation, with promising synthetic‑data utility."
+  ],
+  "why_it_matters": "Understanding how a single model can serve multiple tabular tasks helps reduce the need for separate specialized models, lowering deployment complexity and enabling richer conditional generation for synthetic data and downstream analytics.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "tabular",
+   "benchmark",
+   "generalist-models",
+   "synthetic-data"
+  ],
+  "importance": 3,
+  "id": "ac1c45af20ca5cc3",
+  "url": "https://huggingface.co/papers/2611.13001",
+  "source": "HF Daily Papers",
+  "date": "2026-11-07T19:00:00.000Z",
+  "added": "2026-11-12T07:20:51.283835+00:00"
+ },
+ {
   "headline": "Learning to Act with World Models by Valuing What Comes Next",
   "tldr": "WM-PPO combines world models with PPO critics to predict future observations and value them, boosting success rates on ALFWorld and ScienceWorld tasks.",
   "key_points": [
