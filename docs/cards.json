@@ -1,5 +1,1068 @@
 [
  {
+  "headline": "Jensen Huang is out. What did China want from him?",
+  "tldr": "Nvidia CEO Jensen Huang resigned amid allegations of an affair with a suspected Chinese spy, prompting an emergency update to coverage.",
+  "key_points": [
+   "Jensen Huang stepped down as Nvidia CEO.",
+   "Resignation follows allegations involving a Chinese intelligence operative.",
+   "Nvidia issued an urgent editorial update before publishing the episode.",
+   "The scandal raises concerns about corporate espionage in the AI sector."
+  ],
+  "why_it_matters": "Nvidia is a cornerstone of AI hardware; leadership turmoil and potential espionage could affect its strategic direction, investor confidence, and the broader AI supply chain.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "resignation",
+   "scandal",
+   "China",
+   "leadership"
+  ],
+  "importance": 3,
+  "id": "1d250e9233fe0f75",
+  "url": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
+  "source": "The Verge AI",
+  "date": "2026-11-12T11:30:00-05:00",
+  "added": "2026-11-12T20:10:23.876653+00:00"
+ },
+ {
+  "headline": "More game developers are starting to use generative AI",
+  "tldr": "40% of surveyed game developers now use generative AI in their jobs, up from 36% last year, according to the GDC Festival of Gaming survey.",
+  "key_points": [
+   "40% adoption rate among developers",
+   "Increase from 36% in the previous year",
+   "Data from GDC Festival of Gaming annual survey",
+   "Higher usage among studios integrating AI into pipelines"
+  ],
+  "why_it_matters": "Highlights growing integration of generative AI in the gaming industry, signaling potential shifts in development workflows, creativity, and cost structures.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "generative AI",
+   "gaming",
+   "industry adoption",
+   "GDC survey"
+  ],
+  "importance": 2,
+  "id": "4213b9afeff9a7e6",
+  "url": "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs",
+  "source": "The Verge AI",
+  "date": "2026-11-12T12:00:00-05:00",
+  "added": "2026-11-12T20:10:11.999896+00:00"
+ },
+ {
+  "headline": "The Jensen Huang scandal is hardly over",
+  "tldr": "Nvidia CEO Jensen Huang faces a second affair scandal, raising concerns about leadership stability at the AI hardware giant.",
+  "key_points": [
+   "Jensen Huang is the only CEO Nvidia has ever had and has no succession plan.",
+   "A second affair involving Huang has emerged, intensifying scrutiny.",
+   "His central role in the AI industry makes the scandal potentially impactful for Nvidia's future."
+  ],
+  "why_it_matters": "Nvidia's dominance in AI hardware means any leadership turmoil could affect product roadmaps, investor confidence, and the broader AI ecosystem.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "scandal",
+   "CEO",
+   "AI industry"
+  ],
+  "importance": 2,
+  "id": "96892311de09e14b",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+  "source": "The Verge AI",
+  "date": "2026-11-12T12:44:33-05:00",
+  "added": "2026-11-12T20:10:00.266951+00:00"
+ },
+ {
+  "headline": "Oh, Palantir is ‘progressive’ now, is it?",
+  "tldr": "Alex Karp attempts a political pivot to the left after recent elections, prompting skepticism.",
+  "key_points": [
+   "Palantir CEO Alex Karp publicly claims the company is now progressive.",
+   "The statement follows a recent election cycle that was unfavorable for right‑leaning figures.",
+   "The author questions the sincerity and impact of the pivot."
+  ],
+  "why_it_matters": "A high‑profile tech CEO's political positioning can influence public perception of the company and affect its relationships with customers and regulators.",
+  "category": "policy",
+  "companies": [
+   "Palantir"
+  ],
+  "tags": [
+   "politics",
+   "public relations",
+   "leadership"
+  ],
+  "importance": 2,
+  "id": "d545fdc617b9aefd",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video",
+  "source": "The Verge AI",
+  "date": "2026-11-12T13:06:54-05:00",
+  "added": "2026-11-12T20:09:47.806399+00:00"
+ },
+ {
+  "headline": "No, AI agents did not discover a previously unknown Maya site",
+  "tldr": "Google researcher claimed AI agents found a new Maya site, but the location had already been documented in a journal, highlighting limits of AI in archaeological discovery.",
+  "key_points": [
+   "Pietro Miotti used AI agents to search for undocumented Maya sites in Mexico.",
+   "The purported site had been published in an academic journal the previous year.",
+   "Archaeologists criticized the claim as a misrepresentation of AI capabilities.",
+   "The incident raises concerns about over‑reliance on AI for scholarly research."
+  ],
+  "why_it_matters": "It shows that AI tools can produce misleading results when not properly validated, emphasizing the need for rigorous human oversight in scientific investigations.",
+  "category": "other",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI agents",
+   "archaeology",
+   "misinformation",
+   "research validation"
+  ],
+  "importance": 2,
+  "id": "3b869b1138e3a082",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+  "source": "The Verge AI",
+  "date": "2026-11-12T14:42:40-05:00",
+  "added": "2026-11-12T20:09:35.743112+00:00"
+ },
+ {
+  "headline": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+  "tldr": "TimeSeek introduces a unified time‑series foundation model that adaptively handles multi‑domain data and multiple tasks (forecasting, anomaly detection, classification) via a multi‑domain feature extractor and collaborative multi‑task training, achieving state‑of‑the‑art results and efficient inference.",
+  "key_points": [
+   "Novel Multi‑Domain Feature Extractor captures temporal dependencies and channel correlations with progressive multi‑scale and adaptive slot modeling.",
+   "Multi‑task collaborative training leverages task specificity and commonality, enabling unified pre‑training for forecasting, anomaly detection, and classification.",
+   "Demonstrates SOTA performance in few‑shot and zero‑shot scenarios across diverse domains with favorable inference efficiency."
+  ],
+  "why_it_matters": "Provides a more versatile and efficient foundation model for time‑series analytics, reducing the need for separate models per task or domain and advancing practical deployment in industries such as finance, healthcare, and IoT.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "time-series",
+   "foundation-model",
+   "multi-task",
+   "multi-domain"
+  ],
+  "importance": 3,
+  "id": "bf4795b49f9e1b1f",
+  "url": "https://arxiv.org/abs/2611.14491v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:49:26Z",
+  "added": "2026-11-12T20:09:24.098379+00:00"
+ },
+ {
+  "headline": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+  "tldr": "The paper compares three evaluation frameworks for LLM-based analytics agents—trace‑based, text‑only with red‑team, and deterministic heuristics—finding trace‑based methods give the best precision‑recall, while combining functional and security evaluations uncovers novel failures.",
+  "key_points": [
+   "97% of configurations meet stability thresholds across agents.",
+   "Trace‑based evaluation achieves F1=0.90, outperforming text‑only which has 5× more false alarms.",
+   "Adversarial red‑team testing discovers 24 novel failures missed by functional tests.",
+   "Functional and security evaluations are complementary for robust agent assessment.",
+   "Recommendation: use trace‑based evaluation for functionality and red‑team for security."
+  ],
+  "why_it_matters": "Reliable evaluation of LLM analytics agents is critical for enterprise deployments, where undetected errors can lead to costly business decisions or security breaches. The study shows how evaluation design impacts detection quality and highlights the need for combined functional and adversarial testing.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "evaluation",
+   "analytics",
+   "LLM",
+   "enterprise"
+  ],
+  "importance": 3,
+  "id": "0981c8b4a698fb94",
+  "url": "https://arxiv.org/abs/2611.14493v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:50:06Z",
+  "added": "2026-11-12T20:09:12.006402+00:00"
+ },
+ {
+  "headline": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+  "tldr": "Bonbon, a 1.6B‑parameter foundation model trained on 3.2 trillion protein‑ligand tokens, shows zero‑shot functional, residue‑level, and bond‑level predictions for molecular interactions, achieving state‑of‑the‑art binding affinity results and a 61.5% hit rate in wet‑lab tests.",
+  "key_points": [
+   "Trained on ~3.2 trillion paired protein‑ligand sequences without structural data.",
+   "Zero‑shot emergent abilities: mechanism of action, binding site localization, and covalent vs non‑covalent discrimination.",
+   "Sharp performance jump at the largest 1.6 B‑parameter scale, beyond smooth loss scaling.",
+   "State‑of‑the‑art binding/affinity prediction at 100,000× speed over co‑folding methods.",
+   "Prospective wet‑lab validation: 61.5% hit rate on de novo compounds across nine disease targets."
+  ],
+  "why_it_matters": "Demonstrates that large‑scale, unsupervised training can yield actionable biological insights without task‑specific data, opening fast, cost‑effective routes for drug discovery and highlighting limits of traditional scaling laws.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "foundation model",
+   "molecular interactions",
+   "zero-shot",
+   "drug discovery"
+  ],
+  "importance": 4,
+  "id": "2af7f9f574054cee",
+  "url": "https://arxiv.org/abs/2611.14504v1",
+  "source": "arXiv",
+  "date": "2026-11-10T18:53:01Z",
+  "added": "2026-11-12T20:09:00.601813+00:00"
+ },
+ {
+  "headline": "Building DiffusionEngine: A Modern, Modular DDPM Framework in PyTorch (Open Source)",
+  "tldr": "A new open‑source PyTorch library, DiffusionEngine, aims to unify modern diffusion model research into a modular, extensible framework and is seeking contributors.",
+  "key_points": [
+   "Provides a unified pipeline for DDPM, diffusion algorithms, sampling methods, and training strategies.",
+   "Already includes several diffusion implementations and is actively expanding.",
+   "Open to contributions for algorithm implementation, architecture improvements, benchmarking, and more.",
+   "Hosted on GitHub (https://github.com/Himanshu7921/DiffusionEngine)."
+  ],
+  "why_it_matters": "A shared, modular codebase can accelerate diffusion research, reduce duplicated effort, and lower the barrier for newcomers to experiment with state‑of‑the‑art generative models.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "diffusion",
+   "PyTorch",
+   "generative_models",
+   "open_source"
+  ],
+  "importance": 2,
+  "id": "f7ba22bb3457e1b4",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtjkbu/open_source_building_diffusionengine_a_modern/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T14:45:39+00:00",
+  "added": "2026-11-12T20:08:47.852393+00:00"
+ },
+ {
+  "headline": "mlxVS: cuVS-style GPU nearest-neighbor search (NN-Descent, CAGRA) on Apple Silicon with MLX",
+  "tldr": "An open‑source library (mlxVS) brings NVIDIA cuVS GPU nearest‑neighbor algorithms to Apple Silicon via MLX, delivering competitive speed and recall on benchmarks like SIFT1M.",
+  "key_points": [
+   "mlxVS implements exact k‑NN, k‑means, NN‑Descent graphs and CAGRA on Apple M‑series GPUs.",
+   "Benchmarks on a MacBook Pro M3 Pro show up to 10× faster build times and higher recall than CPU‑only hnswlib.",
+   "The library is Apache‑2.0 licensed, usable from Python (NumPy) or C++, and supports large datasets via memory‑mapped files."
+  ],
+  "why_it_matters": "Bringing high‑performance GPU nearest‑neighbor search to Apple Silicon expands the hardware options for large‑scale similarity search, enabling faster AI workloads on widely available Macs without needing NVIDIA GPUs.",
+  "category": "open_source",
+  "companies": [
+   "Apple",
+   "MLX"
+  ],
+  "tags": [
+   "nearest_neighbor",
+   "GPU",
+   "Apple_Silicon",
+   "open_source"
+  ],
+  "importance": 2,
+  "id": "81aaef83e3df553b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtt5tx/mlxvs_cuvsstyle_gpu_nearestneighbor_search/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T20:46:12+00:00",
+  "added": "2026-11-12T20:08:35.950144+00:00"
+ },
+ {
+  "headline": "Arc Tagger: Streaming Text Tagger for Real-Time Voice Agent Interaction",
+  "tldr": "A small 11M‑parameter model that tags intent, entities, and safety risks word‑by‑word as speech is streamed, enabling mid‑sentence reactions for voice assistants.",
+  "key_points": [
+   "Runs on CPU, English only, processing up to 4096 prior words",
+   "Tags intent, dialog act, entities, numbers, PII, profanity, toxicity, safety risks",
+   "Can check up to 1,000 pre‑loaded list items per session",
+   "Open‑source under CC BY‑NC 4.0, with C library and CLI",
+   "Demo shows mid‑sentence scam detection and dynamic intent changes"
+  ],
+  "why_it_matters": "Real‑time tagging reduces latency and token waste in conversational AI, improving safety and user experience for voice assistants, call‑center monitoring, and trust‑and‑safety pipelines.",
+  "category": "product",
+  "companies": [
+   "WhissleAI"
+  ],
+  "tags": [
+   "streaming",
+   "real-time",
+   "voice-assistants",
+   "safety"
+  ],
+  "importance": 2,
+  "id": "eca76258ed36088b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xu548q/i_built_a_small_streaming_text_tagger_that_reads/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T06:04:53+00:00",
+  "added": "2026-11-12T20:08:23.827217+00:00"
+ },
+ {
+  "headline": "Trump floats Apple chairman Tim Cook as Jensen Huang’s successor",
+  "tldr": "President Trump suggests Tim Cook could replace Jensen Huang as Nvidia CEO.",
+  "key_points": [
+   "Trump posted on Truth Social about Nvidia leadership",
+   "Names Apple chairman Tim Cook as potential successor",
+   "References current Nvidia CEO Jensen Huang"
+  ],
+  "why_it_matters": "Highlights political figures commenting on high‑profile AI hardware leadership, indicating the perceived importance of Nvidia in the AI ecosystem.",
+  "category": "other",
+  "companies": [
+   "Apple",
+   "Nvidia"
+  ],
+  "tags": [
+   "politics",
+   "leadership",
+   "AI",
+   "speculation"
+  ],
+  "importance": 2,
+  "id": "a5ee897642690514",
+  "url": "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 16:12:44 +0000",
+  "added": "2026-11-12T20:08:11.579411+00:00"
+ },
+ {
+  "headline": "Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry",
+  "tldr": "The removal of Nvidia CEO Jensen Huang may harm AI progress due to his influential role in steering the sector.",
+  "key_points": [
+   "Jensen Huang was a key influencer in AI development.",
+   "His ouster could disrupt Nvidia's strategic direction.",
+   "Potential slowdown in AI hardware and software initiatives.",
+   "Industry may lose a strong advocate for AI advancement."
+  ],
+  "why_it_matters": "Nvidia is a central player in AI hardware; leadership changes can affect supply, innovation pace, and ecosystem stability.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "AI industry",
+   "Nvidia",
+   "impact"
+  ],
+  "importance": 2,
+  "id": "0ff22abf6100bfe9",
+  "url": "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 16:32:33 +0000",
+  "added": "2026-11-12T20:07:59.691801+00:00"
+ },
+ {
+  "headline": "Jensen Huang agrees to testify before Congress",
+  "tldr": "Nvidia founder Jensen Huang will appear before Congress after being ousted amid allegations of an affair with a suspected Chinese spy.",
+  "key_points": [
+   "Jensen Huang consents to congressional testimony",
+   "He was removed as CEO following reports of an alleged affair",
+   "The affair involves a woman suspected of spying for China",
+   "Senior lawmakers threatened to subpoena him"
+  ],
+  "why_it_matters": "The testimony could reveal potential national security concerns and corporate governance issues within a leading AI hardware company.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "testimony",
+   "Congress",
+   "Nvidia",
+   "leadership"
+  ],
+  "importance": 2,
+  "id": "0fd7ae7044e59d7b",
+  "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 16:36:37 +0000",
+  "added": "2026-11-12T20:07:47.609039+00:00"
+ },
+ {
+  "headline": "Phota Labs uses AI to turn everyday photos into professional-looking shots",
+  "tldr": "Phota Labs launches an AI-powered service that automatically edits everyday photos into professional-quality images, simplifying photo enhancement for consumers.",
+  "key_points": [
+   "AI automates photo editing",
+   "Targets everyday users, not just pros",
+   "Aims to replace manual editing tools"
+  ],
+  "why_it_matters": "Democratizes high-quality photo editing, reducing the skill barrier and time needed for consumers to improve their images, potentially shifting market demand toward AI-driven creative tools.",
+  "category": "product",
+  "companies": [
+   "Phota Labs"
+  ],
+  "tags": [
+   "AI",
+   "photo editing",
+   "automation",
+   "consumer"
+  ],
+  "importance": 2,
+  "id": "d0b6d30c7ec6bdd8",
+  "url": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 17:00:00 +0000",
+  "added": "2026-11-12T20:07:36.170758+00:00"
+ },
+ {
+  "headline": "SoftBank’s billion-dollar loss may have put a cap on AI’s natural gas ambitions",
+  "tldr": "SoftBank lost over $3 B on pre‑ordering natural‑gas turbines for AI data centers, signaling potential limits on AI‑driven gas demand.",
+  "key_points": [
+   "SoftBank incurred a $3 B loss",
+   "Loss stems from pre‑ordered natural‑gas turbines",
+   "Turbines were intended to power AI data centers",
+   "Loss may curb AI‑related natural‑gas demand"
+  ],
+  "why_it_matters": "The setback highlights financial risks of scaling AI infrastructure with fossil‑fuel power, potentially influencing future energy sourcing decisions for data centers.",
+  "category": "other",
+  "companies": [
+   "SoftBank"
+  ],
+  "tags": [
+   "AI",
+   "energy",
+   "data centers",
+   "natural gas"
+  ],
+  "importance": 2,
+  "id": "ddf7a6c150d0e1d1",
+  "url": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 17:00:52 +0000",
+  "added": "2026-11-12T20:07:23.733769+00:00"
+ },
+ {
+  "headline": "United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
+  "tldr": "United Airlines will not permit customers to use AI agents for flight bookings or reservation management due to security concerns.",
+  "key_points": [
+   "United Airlines bans AI agents for booking flights",
+   "Cites cybersecurity risks as the reason",
+   "Applies to all customer interactions with reservations"
+  ],
+  "why_it_matters": "The decision highlights growing concerns about AI misuse in critical services and may influence other travel companies to adopt similar restrictions.",
+  "category": "policy",
+  "companies": [
+   "United Airlines"
+  ],
+  "tags": [
+   "cybersecurity",
+   "AI agents",
+   "travel",
+   "booking"
+  ],
+  "importance": 2,
+  "id": "f5707a3468d9b42e",
+  "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 17:17:58 +0000",
+  "added": "2026-11-12T20:07:11.725966+00:00"
+ },
+ {
+  "headline": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit",
+  "tldr": "Hugging Face's CEO reaffirms commitment to open‑source AI following Nvidia CEO Jensen Huang’s departure, amid speculation over Nvidia’s $12.9 B acquisition.",
+  "key_points": [
+   "Hugging Face leadership emphasizes open‑source AI mission",
+   "Statement made after Nvidia CEO Jensen Huang left the company",
+   "Raises questions about Nvidia’s $12.9 B acquisition impact on the ecosystem"
+  ],
+  "why_it_matters": "The stance highlights tension between large‑scale corporate acquisitions and the open‑source AI community, affecting future collaboration and innovation.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face",
+   "Nvidia"
+  ],
+  "tags": [
+   "open source",
+   "AI",
+   "acquisition",
+   "leadership"
+  ],
+  "importance": 2,
+  "id": "deea79b353aff377",
+  "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 17:36:40 +0000",
+  "added": "2026-11-12T20:06:59.629491+00:00"
+ },
+ {
+  "headline": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+  "tldr": "Nvidia CEO Jensen Huang’s resignation raises doubts about the company’s future commitment to open‑source AI, including its Hugging Face acquisition and open‑weight model strategy.",
+  "key_points": [
+   "Jensen Huang resigns as Nvidia CEO, creating leadership uncertainty.",
+   "Nvidia’s recent moves—acquiring Hugging Face and releasing open‑weight models—have positioned it as an open‑source advocate.",
+   "The leadership change could affect Nvidia’s stance on open‑source AI and its opposition to restrictive AI policies.",
+   "Stakeholders are watching to see if Nvidia will maintain its open‑source initiatives under new leadership."
+  ],
+  "why_it_matters": "Nvidia is a dominant hardware provider for AI; its support for open‑source models influences the accessibility and development speed of AI research and industry adoption. A shift could reshape the open‑source ecosystem and affect competitors and developers.",
+  "category": "open_source",
+  "companies": [
+   "Nvidia",
+   "Hugging Face"
+  ],
+  "tags": [
+   "open source",
+   "leadership",
+   "AI policy",
+   "Nvidia"
+  ],
+  "importance": 3,
+  "id": "baccdaa9b5505527",
+  "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 18:39:23 +0000",
+  "added": "2026-11-12T20:06:47.904883+00:00"
+ },
+ {
+  "headline": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+  "tldr": "A comprehensive tutorial on fine‑tuning models that generate 3D content.",
+  "key_points": [
+   "Step‑by‑step fine‑tuning procedures",
+   "Best practices for 3D model adaptation",
+   "Tips for improving generation quality",
+   "Examples and code snippets"
+  ],
+  "why_it_matters": "Fine‑tuning enables developers to customize powerful 3D generation models for specific applications, accelerating innovation in gaming, AR/VR, and design.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "fine-tuning",
+   "3D generation",
+   "guide",
+   "models"
+  ],
+  "importance": 2,
+  "id": "56dac742ff29ffe2",
+  "url": "https://huggingface.co/blog/3d-lora-finetuning",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 12 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-12T20:06:35.711111+00:00"
+ },
+ {
+  "headline": "A New Dawn in the Cloud: ‘Warhammer 40,000: Dawn of War IV’ Is Coming to GeForce NOW",
+  "tldr": "Warhammer 40,000: Dawn of War IV will launch on NVIDIA’s GeForce NOW cloud gaming service, with DLSS 5 also rolling out to other titles.",
+  "key_points": [
+   "Warhammer 40,000: Dawn of War IV added to GeForce NOW library.",
+   "Players can stream the game on any supported device via cloud.",
+   "NVIDIA announces DLSS 5 support for War Thunder and Where Winds Meet.",
+   "Continued expansion of NVIDIA’s cloud gaming ecosystem."
+  ],
+  "why_it_matters": "Expands the catalog of high‑profile titles on GeForce NOW, showcasing NVIDIA’s push to make premium PC games accessible through cloud streaming and highlighting the rollout of its next‑gen DLSS 5 up‑scaling technology.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "cloud_gaming",
+   "warhammer",
+   "dlss5",
+   "gaming"
+  ],
+  "importance": 2,
+  "id": "42899cb2010af537",
+  "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/",
+  "source": "NVIDIA",
+  "date": "Thu, 12 Nov 2026 14:00:59 +0000",
+  "added": "2026-11-12T20:06:23.910763+00:00"
+ },
+ {
+  "headline": "AI chatbots are recommending fake retail websites, study finds",
+  "tldr": "A study by IP‑protection firm Podqi shows that popular AI chatbots like ChatGPT, Gemini, and Perplexity can direct shoppers to fraudulent retail sites when asked product‑search questions.",
+  "key_points": [
+   "ChatGPT, Gemini, and Perplexity were tested with shopping queries.",
+   "All three models sometimes suggested impostor or risky websites.",
+   "The findings highlight security risks in using AI for product research.",
+   "Podqi’s study was shared exclusively with The Verge."
+  ],
+  "why_it_matters": "Consumers may be exposed to scams or phishing attacks when relying on AI assistants for shopping, underscoring the need for better safety controls and verification mechanisms in AI systems.",
+  "category": "other",
+  "companies": [
+   "OpenAI",
+   "Google",
+   "Perplexity AI",
+   "Podqi"
+  ],
+  "tags": [
+   "AI chatbots",
+   "e‑commerce",
+   "security",
+   "study"
+  ],
+  "importance": 2,
+  "id": "32933935200c2839",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+  "source": "The Verge AI",
+  "date": "2026-11-12T12:00:00-05:00",
+  "added": "2026-11-12T20:06:12.273188+00:00"
+ },
+ {
+  "headline": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
+  "tldr": "Nectar introduced an AI-powered agent that streamlines influencer marketing by finding creators, handling outreach, managing partnerships, and tracking campaign performance.",
+  "key_points": [
+   "AI agent automates discovery of creators for brand campaigns",
+   "Handles outreach and partnership management",
+   "Tracks and reports campaign results"
+  ],
+  "why_it_matters": "Automating influencer marketing reduces manual effort, speeds up campaign execution, and improves measurement, helping brands scale creator collaborations more efficiently.",
+  "category": "product",
+  "companies": [
+   "Nectar"
+  ],
+  "tags": [
+   "influencer marketing",
+   "AI automation",
+   "creator discovery"
+  ],
+  "importance": 2,
+  "id": "f7effce2db920f5c",
+  "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 19:11:00 +0000",
+  "added": "2026-11-12T20:05:59.537925+00:00"
+ },
+ {
+  "headline": "Google’s latest Search upgrade promises better answers to your most complicated questions",
+  "tldr": "Google's Search AI Mode, powered by Gemini 4 Hydrogen, improves handling of complex queries with richer visual answers and relevant links.",
+  "key_points": [
+   "AI Mode now uses Gemini 4 Hydrogen",
+   "Better understanding of complex queries",
+   "Richer visual responses and relevant link surfacing"
+  ],
+  "why_it_matters": "Enhances user experience on the dominant search platform, showcasing Google's push to integrate advanced generative AI into everyday tools.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "search",
+   "Gemini",
+   "AI_Mode"
+  ],
+  "importance": 2,
+  "id": "ce9a468b53e9785d",
+  "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 19:27:45 +0000",
+  "added": "2026-11-12T20:05:47.419367+00:00"
+ },
+ {
+  "headline": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+  "tldr": "Hugging Face adds the LLMON markup language to its Granite 4.1 3B and 8B models.",
+  "key_points": [
+   "LLMON is a new LLM-native markup language",
+   "Integrated into Granite 4.1 models",
+   "Available for both 3B and 8B parameter versions"
+  ],
+  "why_it_matters": "Provides a standardized way for large language models to understand and generate structured markup, improving downstream applications that need precise formatting or data extraction.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "LLM",
+   "markup",
+   "Granite",
+   "release"
+  ],
+  "importance": 2,
+  "id": "a88bddb17214a029",
+  "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+  "source": "Hugging Face Blog",
+  "date": "Thu, 12 Nov 2026 19:07:35 GMT",
+  "added": "2026-11-12T20:05:35.936190+00:00"
+ },
+ {
+  "headline": "Supporting research on AI and children’s safety",
+  "tldr": "OpenAI pledges $2 million to fund research on AI safety for children, creating tools to assess risks and opportunities.",
+  "key_points": [
+   "OpenAI commits $2 million to AI‑children safety research",
+   "Funding supports development of shared measurement tools",
+   "Focus on identifying risks and opportunities for young users"
+  ],
+  "why_it_matters": "Ensuring AI systems are safe for children is crucial as they become major users of digital technologies; dedicated research can guide responsible design and policy.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI safety",
+   "children",
+   "research funding",
+   "risk assessment"
+  ],
+  "importance": 2,
+  "id": "b06379671ede1f62",
+  "url": "https://openai.com/index/children-first-declaration",
+  "source": "OpenAI",
+  "date": "Thu, 12 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-12T20:05:24.096445+00:00"
+ },
+ {
+  "headline": "Holiday Extras is rethinking what it can build with Codex",
+  "tldr": "Holiday Extras leverages OpenAI's Codex to transform customer expertise into improved applications, boosting booking conversion and opening new growth avenues.",
+  "key_points": [
+   "Holiday Extras uses Codex",
+   "Transforms expertise into better apps",
+   "Achieves higher booking conversion",
+   "Enables new growth possibilities"
+  ],
+  "why_it_matters": "Demonstrates how Codex can be applied to real‑world commerce, showing tangible business impact and encouraging broader adoption of AI‑assisted development.",
+  "category": "product",
+  "companies": [
+   "Holiday Extras",
+   "OpenAI"
+  ],
+  "tags": [
+   "Codex",
+   "AI applications",
+   "booking conversion",
+   "growth"
+  ],
+  "importance": 2,
+  "id": "0990939c7d6ea9f7",
+  "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+  "source": "OpenAI",
+  "date": "Thu, 12 Nov 2026 09:30:00 GMT",
+  "added": "2026-11-12T20:05:11.850983+00:00"
+ },
+ {
+  "headline": "Libreagi – Save OSS Models",
+  "tldr": "LibreAGI is a private BitTorrent tracker that archives open‑source AI models to ensure they survive even if original hosts disappear.",
+  "key_points": [
+   "Members seed copies of at-risk OSS models via BitTorrent.",
+   "Supports all formats (safetensors, GGUF, ONNX) under permissive licenses.",
+   "Public catalog with hashes and source commits enables reconstruction.",
+   "Credit system rewards users for preserving larger, older models."
+  ],
+  "why_it_matters": "Preserving open‑source models prevents loss of valuable research assets and ensures continued community access, fostering reproducibility and innovation.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "model_preservation",
+   "open_source",
+   "bittorrent",
+   "community"
+  ],
+  "importance": 2,
+  "id": "22c8ae7ff3bead66",
+  "url": "https://libreagi.com/",
+  "source": "Hacker News",
+  "date": "2026-11-12T14:11:58Z",
+  "added": "2026-11-12T20:04:59.785521+00:00"
+ },
+ {
+  "headline": "Bits or permutations? Spending a fixed inference budget on weight precision or on option-order averaging in small local language models",
+  "tldr": "The study compares using lower‑precision weights versus averaging multiple answer‑option orderings to improve inference under a fixed compute budget, finding that 6‑bit quantization plus up to four orderings gives the best trade‑off for small local LLMs.",
+  "key_points": [
+   "6‑bit quantization matches fp16 accuracy on Qwen3‑0.6B/1.7B, while 4‑bit hurts performance.",
+   "Averaging four cyclic answer‑option orders recovers up to +12.6 points at 4‑bit precision.",
+   "Cost‑matched analysis shows extra order passes beat extra bits only when weights are ≥6 bits.",
+   "The decision rule: use 6‑bit weights and spend remaining budget on up to four inference passes."
+  ],
+  "why_it_matters": "Provides practical guidance for deploying small local LLMs on limited hardware, showing that modest precision (6‑bit) combined with cheap inference tricks can outperform aggressive quantization, informing both developers and researchers on efficient budget allocation.",
+  "category": "paper",
+  "companies": [
+   "Qwen",
+   "Alibaba"
+  ],
+  "tags": [
+   "quantization",
+   "inference optimization",
+   "local LLMs",
+   "budget allocation"
+  ],
+  "importance": 2,
+  "id": "8e6d58f621b0c35f",
+  "url": "https://huggingface.co/papers/2611.14413",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:04:47.970379+00:00"
+ },
+ {
+  "headline": "I'm making LLMs work on small and old devices",
+  "tldr": "A project demonstrates running 260 K‑to‑16 B‑parameter LLMs on low‑end devices like a Xiaomi TV box and a 2013 iPad Air using custom kernels, memory‑efficient streaming, and weight‑lookup tricks.",
+  "key_points": [
+   "Runs models from 260 K to 16 B parameters on devices with ~1 GB RAM.",
+   "Custom 1‑bit lookup‑table kernels and streaming engine enable CPU‑only inference.",
+   "Achieves up to 24 tokens/s on a 13‑year‑old tablet and 6.5 tokens/s on a TV box.",
+   "Tech is hardware‑agnostic: works on any ARM CPU with NEON or dot‑product support."
+  ],
+  "why_it_matters": "Shows that powerful language models can be deployed on inexpensive, legacy hardware, broadening AI accessibility, reducing cloud dependence, and enabling edge applications in low‑resource environments.",
+  "category": "other",
+  "companies": [
+   "Xiaomi",
+   "Apple"
+  ],
+  "tags": [
+   "edge-computing",
+   "LLM",
+   "optimization",
+   "hardware"
+  ],
+  "importance": 3,
+  "id": "6edaf29caa3e204c",
+  "url": "https://github.com/hyperionaidev/smolmaxxing/",
+  "source": "Hacker News",
+  "date": "2026-11-12T15:23:10Z",
+  "added": "2026-11-12T20:04:36.455263+00:00"
+ },
+ {
+  "headline": "CogBattery: Human-Referenced Evaluation of Cognitive Task Behavior and Structure in Language Models",
+  "tldr": "CogBattery benchmarks 54 open-weight language models on 13 human cognitive tasks, revealing that models often mimic human effect directions but differ in error patterns and confidence reporting.",
+  "key_points": [
+   "Evaluates 54 open-weight models across 13 cognitive paradigms with human reference data.",
+   "Models show higher false alarm rates and poorer confidence calibration than humans.",
+   "Performance correlates with model scale but larger models aren't consistently more human-like.",
+   "Cognitive groupings of models do not predict performance better than random groupings.",
+   "Provides a detailed benchmark for future model evaluation against human cognition."
+  ],
+  "why_it_matters": "The benchmark highlights gaps between apparent human-like behavior and underlying error patterns, guiding more robust model development and evaluation beyond surface-level performance metrics.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "evaluation",
+   "cognitive",
+   "language-models",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "754081fbaab5143d",
+  "url": "https://huggingface.co/papers/2607.24999",
+  "source": "HF Daily Papers",
+  "date": "2026-10-29T20:00:00.000Z",
+  "added": "2026-11-12T20:04:23.820696+00:00"
+ },
+ {
+  "headline": "PolyRoute: A Twelve-Language and Code-Mixed Benchmark for Typed-Decision Routing, with Baselines and a Leaderboard",
+  "tldr": "PolyRoute introduces a multilingual benchmark for typed-decision routing across 12 languages and code-mixed text, provides training data, labels, and a leaderboard showing strong performance of multilingual models.",
+  "key_points": [
+   "Contains 322 native-language messages in 12 languages plus 156 code-mixed examples.",
+   "Provides 967 optional native training rows and a three-way routing decision protocol.",
+   "Leaderboard of 13 systems: best fine-tuned model reaches 96.6% accuracy; multilingual checkpoint 77.3%; TF‑IDF baseline 91.9%.",
+   "Labels generated by Qwen3.8-27B and validated by gemma4-31b with 97.2% agreement."
+  ],
+  "why_it_matters": "A standardized, multilingual benchmark enables consistent evaluation of routing models beyond English, fostering development of more globally applicable decision‑making LLMs and highlighting gaps in code‑mixed language handling.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multilingual",
+   "benchmark",
+   "routing",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "f2fe8a85237ca291",
+  "url": "https://huggingface.co/papers/2611.13843",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:04:11.836981+00:00"
+ },
+ {
+  "headline": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+  "tldr": "CARTBench introduces a curated benchmark with real‑world shopping dialogues and rubric‑based criteria to evaluate LLM shopping assistants, revealing a gap between model understanding and high‑quality purchase advice.",
+  "key_points": [
+   "Curates 1,603 product records across 17 retail domains with timestamped multi‑turn dialogues.",
+   "Develops case‑specific rubrics (Core, Excellence, Safety) based on Ideal Response Principles.",
+   "Evaluates 7 commercial API models and open‑weight models; only 3 exceed 90% on Core, none exceed 45% on Excellence.",
+   "Identifies common failures in product evidence provision and handling changing requirements.",
+   "Benchmark data and code are publicly released on GitHub."
+  ],
+  "why_it_matters": "Provides the first large‑scale, rubric‑driven benchmark for assessing LLMs in real‑world shopping scenarios, highlighting critical shortcomings that must be addressed before such assistants can be trusted for reliable purchase recommendations.",
+  "category": "paper",
+  "companies": [
+   "OpenAI",
+   "Anthropic"
+  ],
+  "tags": [
+   "evaluation",
+   "shopping",
+   "LLM",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "3bc338e256eb7dfd",
+  "url": "https://huggingface.co/papers/2611.05862",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-12T20:03:59.921773+00:00"
+ },
+ {
+  "headline": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+  "tldr": "The paper investigates cross‑modal representation alignment, confirming the Platonic Representation Hypothesis holds for newer language models with clean captions, and shows unimodal models can sometimes align better than explicitly trained vision‑language models, though still lag behind same‑modality models.",
+  "key_points": [
+   "Analyzes where alignment appears across layers and dimensions of unimodal models.",
+   "Finds PRH alignment persists in newer language models given clean, informative captions.",
+   "Introduces unimodal and multimodal baselines, showing unimodal models can exceed explicitly aligned vision‑language models but not same‑modality models."
+  ],
+  "why_it_matters": "Understanding when and how representation alignment emerges informs the design of more efficient multimodal systems and clarifies limits of cross‑modal transfer without explicit joint training.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "alignment",
+   "representation",
+   "multimodal",
+   "language-models"
+  ],
+  "importance": 3,
+  "id": "dfaba42a98d72ad5",
+  "url": "https://huggingface.co/papers/2611.12869",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T13:53:57.000Z",
+  "added": "2026-11-12T20:03:47.805438+00:00"
+ },
+ {
+  "headline": "FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control",
+  "tldr": "Introduces FAME-QP, a CUDA‑based solver that speeds up dense QP problems for real‑time MPC while keeping accuracy.",
+  "key_points": [
+   "GPU‑accelerated solver for dense quadratic programs in linear MPC",
+   "Uses constraint‑dependent operator representations and CUDA graphs for low latency",
+   "Automatic configuration selection via device calibration and problem timing",
+   "Benchmarks show lower latency than existing GPU solvers on humanoid and quadrotor tasks"
+  ],
+  "why_it_matters": "Real‑time model predictive control is critical for robotics and autonomous systems; faster, accurate QP solving on GPUs enables more responsive and complex control loops.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quadratic programming",
+   "model predictive control",
+   "GPU",
+   "real-time"
+  ],
+  "importance": 3,
+  "id": "f117462278f8cc42",
+  "url": "https://huggingface.co/papers/2611.13766",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:03:35.933600+00:00"
+ },
+ {
+  "headline": "Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model",
+  "tldr": "The paper proposes dynamically increasing weight precision during decoding only when the low‑precision output is uncertain, achieving similar accuracy to full‑precision decoding while reading fewer weight bytes.",
+  "key_points": [
+   "Store weights at 8‑bit but decode with top 4 bits, escalating to 8‑bit only on high‑entropy steps.",
+   "On Qwen3‑0.6B/GSM8K, a 15% escalation budget captures 78% of low‑pass flips (AUC 0.93).",
+   "Entropy‑based gating yields 62.7% accuracy at 0.87× the weight‑byte cost of full‑precision decoding.",
+   "Statistical tests show no significant difference from always‑high or always‑low precision runs.",
+   "Method approaches zero KL divergence at comparable byte budgets."
+  ],
+  "why_it_matters": "Dynamic precision allocation can reduce memory bandwidth and compute for on‑device language models, enabling more efficient inference on resource‑constrained hardware without sacrificing much accuracy.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantization",
+   "dynamic precision",
+   "efficient inference",
+   "language models"
+  ],
+  "importance": 3,
+  "id": "1ce295a98dabb07b",
+  "url": "https://huggingface.co/papers/2611.14418",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:03:23.763345+00:00"
+ },
+ {
+  "headline": "Google Introduces Gemini 4 Hydrogen",
+  "tldr": "Google launches Gemini 4 Hydrogen, a fast, efficient AI model for everyday coding and agentic workflows, priced per token and integrated with Orchestrator for multi‑model collaboration.",
+  "key_points": [
+   "Hydrogen targets rapid execution for coding, testing, and verification tasks.",
+   "Offers a 1 M‑token context window at $1.50 per million input tokens and $7.50 per million output tokens.",
+   "Integrated with Orchestrator to dynamically switch between Hydrogen, Carbon, and Argon within a session.",
+   "Achieves higher AI Index scores than Argon and completes tasks faster than comparable models.",
+   "Available across Google AI Studio, Gemini API, Gemini for Business, the Gemini app, Google Search, and paid AI Pro/Ultra tiers."
+  ],
+  "why_it_matters": "Hydrogen provides a high‑throughput, cost‑effective model for developers, enabling faster software development cycles and more efficient multi‑model workflows, which could accelerate AI‑assisted programming adoption industry‑wide.",
+  "category": "model_release",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI model",
+   "coding assistance",
+   "multi‑model orchestration",
+   "pricing"
+  ],
+  "importance": 4,
+  "id": "ec9fd4077cce6753",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+  "source": "Hacker News",
+  "date": "2026-11-12T18:01:48Z",
+  "added": "2026-11-12T20:03:12.599667+00:00"
+ },
+ {
+  "headline": "Mixed Signals: Weight-Space Programming for EEG and ECG",
+  "tldr": "A language model can read and edit neural network weights to train biosignal classifiers (EEG/ECG) without gradient descent, using far fewer subjects and outperforming classic pipelines.",
+  "key_points": [
+   "Weight-space programming lets LMs edit model weights directly, enabling reasoning-based training.",
+   "Applied to EEG/ECG models, a LM matched gradient‑descent performance with 6× fewer subjects.",
+   "Claude Opus 5.5‑generated networks outperformed traditional hand‑crafted EEG pipelines on the same data.",
+   "Limitations include difficulty improving already‑trained models and recognizing tasks from weights alone.",
+   "Potential for small edge‑device models, but further research needed before practical use."
+  ],
+  "why_it_matters": "Demonstrates a new way to train lightweight biosignal models with minimal data, which could accelerate development of wearable health devices and reduce reliance on large labeled datasets.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "weight-space programming",
+   "EEG",
+   "ECG",
+   "language models"
+  ],
+  "importance": 3,
+  "id": "55c0706707b770f5",
+  "url": "https://huggingface.co/papers/2611.13758",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:02:59.733887+00:00"
+ },
+ {
+  "headline": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+  "tldr": "Evolving Infra is a new serving framework that dynamically allocates compute and manages KV caches for agentic LLM workloads, cutting latency up to 4.1× and P95 TTFT up to 14× versus NVIDIA's Dynamo.",
+  "key_points": [
+   "Decouples compute allocation from KV cache management for flexible prefill/decode switching",
+   "Online planner matches PD split to real‑time workload composition",
+   "Agent‑aware KV manager uses context signals to guide cache eviction and transfer",
+   "Demonstrated up to 4.1× lower mean latency and 14× lower P95 TTFT on GLM‑5.2 and Kimi K2.6",
+   "Runs on up to 256 GB300 GPUs"
+  ],
+  "why_it_matters": "Agentic applications drive a large share of LLM inference demand; improving serving efficiency reduces hardware costs and speeds up interactive AI services, enabling more responsive and scalable deployments.",
+  "category": "product",
+  "companies": [
+   "NVIDIA",
+   "Zhipu AI",
+   "Moonshot AI"
+  ],
+  "tags": [
+   "LLM serving",
+   "agent workloads",
+   "KV cache",
+   "latency"
+  ],
+  "importance": 3,
+  "id": "21ea6ecaa220dba4",
+  "url": "https://huggingface.co/papers/2611.12304",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-12T20:02:48.178814+00:00"
+ },
+ {
+  "headline": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+  "tldr": "SteerDistill improves low‑bit quantized LLM agents by using a full‑precision teacher in a closed‑loop to correct failures, achieving near‑full‑precision performance with less training cost.",
+  "key_points": [
+   "Quantized agents often miss task requirements, leading to divergent behaviors.",
+   "SteerDistill uses teacher‑guided, iterative feedback to correct failed responses during rollouts.",
+   "The method trains the student to internalize corrections, enabling unassisted inference.",
+   "Achieves 1.67–2.18 point gains over strong quantized baselines at W4A16, within 1 point of BF16.",
+   "Reduces training GPU hours by 67% compared to QeRL on τ²‑Bench."
+  ],
+  "why_it_matters": "Efficient low‑bit quantization makes LLM agents cheaper to run, but quality drops have limited adoption; SteerDistill bridges that gap, enabling cost‑effective deployment of capable agents.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantization",
+   "LLM agents",
+   "distillation",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "51fa12b3ef7c507b",
+  "url": "https://huggingface.co/papers/2611.13410",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-12T20:02:36.568187+00:00"
+ },
+ {
   "headline": "DyCraft: An Agentic System for Long-Horizon 4D Scene Generation",
   "tldr": "DyCraft breaks down long‑horizon 3D animation into storyboarded steps, letting coding agents generate and debug each frame, dramatically reducing physical errors versus prior agents.",
   "key_points": [
