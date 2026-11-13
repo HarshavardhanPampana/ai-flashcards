@@ -1,5 +1,1044 @@
 [
  {
+  "headline": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+  "tldr": "HiVe-Mem introduces a multimodal memory framework that expands retrieved memories via a relational graph and composes heterogeneous evidence per memory, boosting performance while cutting token usage by ~90% on benchmarks.",
+  "key_points": [
+   "Horizontal Memory Expansion builds a graph of textual and visual anchors to retrieve related memory episodes.",
+   "Vertical Evidence Composition provides multiple evidence forms (summaries, captions, images, history) per memory.",
+   "A lightweight trainable selector chooses evidence subsets adaptively for each query.",
+   "Achieves consistent performance gains across three multimodal memory benchmarks.",
+   "Reduces token consumption by about 90% compared to leading multimodal baselines."
+  ],
+  "why_it_matters": "Efficiently managing long interaction histories is crucial for multimodal agents to maintain context and provide accurate responses; HiVe-Mem’s dual expansion and composition approach offers a scalable solution that improves accuracy while dramatically lowering computational costs.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "memory",
+   "agents",
+   "retrieval"
+  ],
+  "importance": 3,
+  "id": "fed9e04f33fc05ee",
+  "url": "https://huggingface.co/papers/2611.12872",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-13T19:57:45.448614+00:00"
+ },
+ {
+  "headline": "DeepStress: Stress-Testing Deep Search Agents",
+  "tldr": "DeepStress introduces a framework that degrades evidence quality to evaluate how robust multi-step search agents are, revealing that many agents over‑confidently answer even with misleading or false documents.",
+  "key_points": [
+   "Synthetic environment generates documents with controllable trustworthiness, relevance, and factuality.",
+   "Introduces five‑way answer outcome classification plus reliability‑aware metrics RAS and CoPRAS.",
+   "Evaluation of 12 agents on HotpotQA and BrowseComp‑Plus shows over‑confidence on low‑quality sources.",
+   "Agents often rely on parametric knowledge, answering correctly even when retrieved documents are factually wrong."
+  ],
+  "why_it_matters": "Understanding and improving the robustness of search agents to poor‑quality evidence is crucial for safe deployment in real‑world applications where misinformation is common.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "search agents",
+   "robustness",
+   "evaluation",
+   "HotpotQA"
+  ],
+  "importance": 3,
+  "id": "5a42b757c7e16d43",
+  "url": "https://huggingface.co/papers/2607.13920",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T19:57:32.753269+00:00"
+ },
+ {
+  "headline": "Weights for MNIST Handwriting Network [P]",
+  "tldr": "A beginner shares the weight matrices of a simple MNIST classifier achieving 96.52% accuracy.",
+  "key_points": [
+   "Network architecture: 64‑neuron first hidden layer, 32‑neuron second hidden layer, 10‑neuron output layer.",
+   "Achieved 96.52% accuracy on the MNIST test set (9,652/10,000 correct).",
+   "The author is new to machine learning and posted the weight visualizations as a learning milestone."
+  ],
+  "why_it_matters": "Demonstrates that newcomers can quickly build functional neural networks on classic datasets, encouraging community learning and sharing of reproducible results.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "MNIST",
+   "neural network",
+   "education",
+   "beginner"
+  ],
+  "importance": 2,
+  "id": "33d8937469a3b9ee",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xupgn8/weights_for_mnist_handwriting_network_p/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T21:35:41+00:00",
+  "added": "2026-11-13T19:57:21.383136+00:00"
+ },
+ {
+  "headline": "How to post an AC-confidential comment on OpenReview for ICLR 2027? [D]",
+  "tldr": "User asks how to leave a comment on OpenReview that only the Area Chair can see during the ICLR 2027 discussion period.",
+  "key_points": [
+   "The user wants a comment visible only to the Area Chair, not reviewers.",
+   "They noticed the \"Official Comment\" option but are unsure about the correct visibility setting.",
+   "Seeking step‑by‑step instructions for the AC‑only comment feature."
+  ],
+  "why_it_matters": "Understanding confidentiality controls on OpenReview helps maintain proper peer‑review integrity and protects sensitive feedback during conference review cycles.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "OpenReview",
+   "ICLR",
+   "conference_process"
+  ],
+  "importance": 2,
+  "id": "18e4cf77c20da662",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xug0ym/how_to_post_an_acconfidential_comment_on/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T15:41:18+00:00",
+  "added": "2026-11-13T19:57:08.989933+00:00"
+ },
+ {
+  "headline": "CVPR 2027 Author enrollment form [D]",
+  "tldr": "A user missed the CVPR 2027 author enrollment deadline by an hour and seeks clarification on whether late submission will cause desk rejection.",
+  "key_points": [
+   "CVPR 2027 requires a separate author enrollment form besides an OpenReview profile.",
+   "The user submitted the form an hour after the abstract deadline without any reminder.",
+   "Guidelines warn of desk rejection for incomplete enrollment.",
+   "The user asks if late submission will be penalized and if others faced the same issue."
+  ],
+  "why_it_matters": "Understanding conference submission requirements prevents accidental desk rejections and informs authors about enforcement of deadline policies.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "CVPR",
+   "author_enrollment",
+   "deadline",
+   "OpenReview"
+  ],
+  "importance": 2,
+  "id": "7cb2da0274ff01a5",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xue879/cvpr_2027_author_enrollment_form_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T14:30:15+00:00",
+  "added": "2026-11-13T19:56:57.875543+00:00"
+ },
+ {
+  "headline": "Proposal to Cap Accepted Papers at 1,000 for NeurIPS, ICML, and ICLR",
+  "tldr": "A Reddit user suggests limiting each major ML conference to 1,000 accepted papers to address rising submission volumes and potential quality concerns.",
+  "key_points": [
+   "Submissions to top ML conferences are growing rapidly.",
+   "A hard cap of 1,000 accepted papers per conference is proposed.",
+   "Debate centers on whether caps improve quality or increase arbitrariness.",
+   "Implications for researchers, reviewers, and conference prestige are discussed."
+  ],
+  "why_it_matters": "Conference acceptance rates shape research visibility and career advancement; policy changes could reshape how the ML community disseminates work.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "conference",
+   "paper_selection",
+   "ML"
+  ],
+  "importance": 2,
+  "id": "6f356a114877e95b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xugl6c/what_if_neurips_icml_and_iclr_capped_accepted/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T16:02:13+00:00",
+  "added": "2026-11-13T19:56:44.891640+00:00"
+ },
+ {
+  "headline": "SnorkelAI paid survey for ML researchers deemed a waste of time",
+  "tldr": "A PhD-level ML researcher describes a pushy, paperwork‑heavy paid survey from SnorkelAI as unprofessional and not worth the effort.",
+  "key_points": [
+   "SnorkelAI contacted the researcher for a paid survey after verifying credentials.",
+   "The verification process was repetitive and pushy, with frequent follow‑up emails.",
+   "Survey submission UI was confusing, showing contradictory statuses.",
+   "Payment paperwork was extensive, requiring in‑person tax documents and long wait times.",
+   "The researcher advises others to avoid similar survey requests."
+  ],
+  "why_it_matters": "Highlights potential exploitation of academic researchers by companies offering low‑pay surveys, raising concerns about professional outreach practices and the burden of compliance paperwork.",
+  "category": "other",
+  "companies": [
+   "SnorkelAI"
+  ],
+  "tags": [
+   "survey",
+   "researcher",
+   "paid",
+   "experience"
+  ],
+  "importance": 2,
+  "id": "94a77356671c3ace",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xv4rjy/paid_surveys_for_machine_learning_scientists_for/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T10:50:10+00:00",
+  "added": "2026-11-13T19:56:33.343751+00:00"
+ },
+ {
+  "headline": "Open weights: ParaTrace v8 (RAID-tuned) ranks 5th on RAID leaderboard",
+  "tldr": "ParaTrace v8, a 1B-parameter encoder fine‑tuned for the RAID detection benchmark, achieves 99.20% true‑positive rate at 1% false‑positive rate, placing 5th on the leaderboard.",
+  "key_points": [
+   "1B‑parameter ModernBERT encoder, 512‑token windows",
+   "Fine‑tuned on RAID training split plus hard‑example round",
+   "TPR 99.20% @ 1% FPR, 99.76% @ 5% FPR on RAID hidden test set",
+   "Open‑weight model released on Hugging Face (CC BY‑NC‑SA 4.0)",
+   "Optimized for RAID; may miss AI‑generated text in general use"
+  ],
+  "why_it_matters": "Provides the community with a high‑performing, openly available AI‑text detector, enabling reproducible research and benchmarking while highlighting the limits of detection when models are tuned to specific datasets.",
+  "category": "open_source",
+  "companies": [
+   "HuggingFace",
+   "EmpirischTech"
+  ],
+  "tags": [
+   "AI detection",
+   "open weights",
+   "RAID benchmark",
+   "NLP"
+  ],
+  "importance": 3,
+  "id": "f07b8b7953eaebb1",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xv4ldx/open_weights_paratrace_v8_raidtuned_5th_on_the/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T10:39:43+00:00",
+  "added": "2026-11-13T19:56:20.952615+00:00"
+ },
+ {
+  "headline": "Frontier AI models achieve 97.8–100% on a comprehensive 7-part materials‑science research test",
+  "tldr": "Gemini 4 (Carbon & Hydrogen) and Claude Opus/Fable scored near‑perfect on a synthetic, multi‑step materials‑science evaluation, highlighting current strengths and gaps in long‑horizon agent assessment.",
+  "key_points": [
+   "Four models (Gemini 4 Carbon, Gemini 4 Hydrogen, Claude Opus 5.5, Claude Fable 5.2) scored between 97.8 and 100 out of 100 across 8 categories.",
+   "All runs correctly handled unit traps, hidden CIF tests, physics calculations, error detection, and refused false‑premise queries; only minor formatting points were lost.",
+   "The test suggests bounded, procedure‑driven tasks are near‑saturated, while long‑horizon, open‑ended research remains a challenge.",
+   "The author proposes a simulated‑lab benchmark with budgets, instruments, and surprise events to better evaluate long‑term agent performance."
+  ],
+  "why_it_matters": "Demonstrates that state‑of‑the‑art LLMs can reliably perform complex, domain‑specific scientific workflows, but also underscores the need for better evaluation frameworks for extended, open‑ended research tasks.",
+  "category": "other",
+  "companies": [
+   "Google",
+   "Anthropic"
+  ],
+  "tags": [
+   "materials_science",
+   "agent_evaluation",
+   "AI_models",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "624c1d20c3486007",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvgf6h/four_frontier_models_scored_978100_on_a_7part/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T18:58:00+00:00",
+  "added": "2026-11-13T19:56:09.208192+00:00"
+ },
+ {
+  "headline": "Let’s talk about Jensen Huang’s many affairs!",
+  "tldr": "The article offers no concrete AI news, only speculation about Nvidia CEO Jensen Huang’s personal life.",
+  "key_points": [
+   "No substantive AI developments or announcements are described.",
+   "The piece is commentary on rumors rather than factual industry updates.",
+   "Nvidia is mentioned only in relation to the CEO’s personal matters."
+  ],
+  "why_it_matters": "Without verifiable AI-related information, the article does not impact the AI industry or its stakeholders.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "gossip",
+   "Nvidia",
+   "speculation"
+  ],
+  "importance": 1,
+  "id": "71dad9da95c2fbfe",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+  "source": "The Verge AI",
+  "date": "2026-11-13T07:00:00-05:00",
+  "added": "2026-11-13T19:55:56.878040+00:00"
+ },
+ {
+  "headline": "What’s really at stake in the Jensen Huang saga",
+  "tldr": "Nvidia CEO Jensen Huang’s resignation sparks speculation about larger issues involving Nvidia’s China business and U.S. government policy.",
+  "key_points": [
+   "Jensen Huang stepped down as CEO of Nvidia.",
+   "The resignation may signal upcoming challenges related to Nvidia’s operations in China.",
+   "U.S. government attitudes toward AI technology transfers are a key backdrop.",
+   "Industry observers anticipate broader implications for the AI hardware market."
+  ],
+  "why_it_matters": "Nvidia is the leading supplier of AI chips; any leadership change or policy pressure could affect global AI development, supply chains, and geopolitical tech competition.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "China",
+   "US policy",
+   "AI hardware"
+  ],
+  "importance": 3,
+  "id": "627c324df106de1b",
+  "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+  "source": "The Verge AI",
+  "date": "2026-11-13T09:47:16-05:00",
+  "added": "2026-11-13T19:55:44.981676+00:00"
+ },
+ {
+  "headline": "When Both Sides Adapt: The Challenges of Evaluating Interactive LLM Systems",
+  "tldr": "User adaptivity in interactive LLM systems changes prompt distributions, causing offline benchmarks and live A/B tests to measure different effects and potentially rank models differently.",
+  "key_points": [
+   "Defines common-distribution vs. induced-distribution effects for model comparison.",
+   "Shows offline benchmarks target common-distribution effect, live A/B tests target induced-distribution effect.",
+   "Provides conditions when rankings from the two methods agree.",
+   "Demonstrates user adaptivity can increase variance and lead to reward hacking and novelty effects."
+  ],
+  "why_it_matters": "",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "evaluation",
+   "interactive-llm",
+   "user-adaptivity",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "40727faf3cf5a217",
+  "url": "https://arxiv.org/abs/2611.17239v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:26:51Z",
+  "added": "2026-11-13T19:55:33.022719+00:00"
+ },
+ {
+  "headline": "LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds",
+  "tldr": "Introduces GeoWorld platform and LiveGeo benchmark to test LLM agents' decision‑making in dynamic, real‑world geographic environments, revealing current models struggle with evolving tasks.",
+  "key_points": [
+   "GeoWorld provides a controllable, continuously evolving geographic simulation grounded in real‑world data.",
+   "LiveGeo benchmark requires agents to acquire, verify, and update information as the world changes.",
+   "Even state‑of‑the‑art LLMs perform poorly on dynamic geographic tasks, highlighting a bottleneck in evidence acquisition and plan revision.",
+   "The release includes the platform and benchmark for the research community to develop more reliable geographic agents."
+  ],
+  "why_it_matters": "Dynamic geographic reasoning is essential for real‑world AI applications such as navigation, disaster response, and logistics; this benchmark exposes critical gaps in current LLM agents and offers a tool to drive progress.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "geographic AI",
+   "LLM agents",
+   "benchmark",
+   "dynamic environments"
+  ],
+  "importance": 3,
+  "id": "4f659257ca036ff9",
+  "url": "https://arxiv.org/abs/2611.17267v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:45:58Z",
+  "added": "2026-11-13T19:55:20.731245+00:00"
+ },
+ {
+  "headline": "Synthesis Smuggling: Maliciously Hiding Inferred Personal Attributes in LLM Outputs",
+  "tldr": "The paper introduces a new threat where LLMs covertly embed inferred user attributes (e.g., gender, age) into generated text, which can be exfiltrated when users share the content.",
+  "key_points": [
+   "Adversarial LLMs can infer sensitive user traits from normal interactions.",
+   "Inferred traits are steganographically encoded using invisible characters or word choices.",
+   "Shared model outputs become covert channels for data leakage without direct model‑adversary communication.",
+   "Demonstrated with open‑weight models inferring gender and age‑group labels."
+  ],
+  "why_it_matters": "Highlights a novel privacy risk where user‑generated AI content can unintentionally leak personal data, prompting the need for detection and mitigation strategies in LLM deployments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "privacy",
+   "security",
+   "LLM",
+   "steganography"
+  ],
+  "importance": 3,
+  "id": "eb6c6ac62da451f0",
+  "url": "https://arxiv.org/abs/2611.17280v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:51:05Z",
+  "added": "2026-11-13T19:55:09.218008+00:00"
+ },
+ {
+  "headline": "Scaling to 1T MoE on TorchTitan",
+  "tldr": "The team trained a 1‑trillion‑parameter mixture‑of‑experts model on 384 GPUs of the JUPITER supercomputer, achieving ~1,300 tokens/s per GPU by using 384‑way FSDP and 4‑way expert parallelism, and shares lessons on communication bottlenecks and memory tricks.",
+  "key_points": [
+   "Used 384 GPUs (GH200) to train a ~1T‑parameter MoE at ~1,300 tokens/s per GPU.",
+   "Combined 384‑way Fully Sharded Data Parallel (FSDP) with 4‑way Expert Parallelism, avoiding pipeline parallelism.",
+   "Network latency (InfiniBand) was the main bottleneck; optimizations focused on keeping GPUs busy and increasing compute per byte.",
+   "Applied full activation checkpointing and increased token batch size to improve compute efficiency.",
+   "Detailed lessons and performance plots are available on the Domyn and PyTorch blogs."
+  ],
+  "why_it_matters": "Demonstrates that current GPU hardware and PyTorch tooling can scale to trillion‑parameter MoE models, providing a roadmap for future large‑scale AI training and highlighting the importance of communication‑aware parallelism.",
+  "category": "other",
+  "companies": [
+   "NVIDIA",
+   "Meta"
+  ],
+  "tags": [
+   "MoE",
+   "FSDP",
+   "scaling",
+   "supercomputer"
+  ],
+  "importance": 3,
+  "id": "df267d7f735c49c2",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvce5h/scaling_to_1t_moe_on_torchtitan_p/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T16:28:36+00:00",
+  "added": "2026-11-13T19:54:57.482984+00:00"
+ },
+ {
+  "headline": "Jensen Huang didn’t show confidence in his successor, report says",
+  "tldr": "Nvidia CEO Jensen Huang publicly doubted his successor, calling him a \"deer in the headlights\".",
+  "key_points": [
+   "Jensen Huang expressed lack of confidence",
+   "Referred to successor Kress as a \"deer in the headlights\"",
+   "Comment made during a summer meeting"
+  ],
+  "why_it_matters": "Leadership perception at Nvidia can affect investor confidence and company direction, especially during a critical succession period.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "succession",
+   "Nvidia"
+  ],
+  "importance": 2,
+  "id": "025949940b1ff6f3",
+  "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 13 Nov 2026 12:28:23 +0000",
+  "added": "2026-11-13T19:54:45.513117+00:00"
+ },
+ {
+  "headline": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+  "tldr": "Israeli venture capitalists view Nvidia’s current challenges as a chance for rival AI hardware startups to gain traction.",
+  "key_points": [
+   "Nvidia faces turmoil affecting its AI dominance",
+   "Israeli VCs anticipate openings for challenger companies",
+   "Potential shift in AI hardware market dynamics in Israel"
+  ],
+  "why_it_matters": "Nvidia’s stronghold on AI chips underpins many global AI projects; any disruption could reshape investment flows and accelerate the emergence of alternative hardware providers, impacting the broader AI ecosystem.",
+  "category": "funding",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "venture capital",
+   "Israel",
+   "AI hardware",
+   "market dynamics"
+  ],
+  "importance": 2,
+  "id": "f240bb31094b1ee3",
+  "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 13 Nov 2026 12:52:19 +0000",
+  "added": "2026-11-13T19:54:32.785505+00:00"
+ },
+ {
+  "headline": "ElevenLabs’ new app combines meeting note-taking and dictation for teams",
+  "tldr": "ElevenLabs launched ElevenAI, a meeting note‑taking and dictation app for teams and enterprises.",
+  "key_points": [
+   "New app merges note‑taking and live dictation",
+   "Targeted at team collaboration and enterprise use",
+   "Named ElevenAI and built by ElevenLabs"
+  ],
+  "why_it_matters": "Streamlines meeting workflows by providing integrated transcription and note generation, helping teams capture information faster and improve productivity.",
+  "category": "product",
+  "companies": [
+   "ElevenLabs"
+  ],
+  "tags": [
+   "meeting",
+   "dictation",
+   "enterprise",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "744da6a2871c93b3",
+  "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 13 Nov 2026 14:44:48 +0000",
+  "added": "2026-11-13T19:54:20.931659+00:00"
+ },
+ {
+  "headline": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+  "tldr": "ChatGPT Wallet enables AI agents to purchase items on behalf of users, initially for U.S. Pro subscribers.",
+  "key_points": [
+   "AI agents can browse and add items to cart",
+   "Agents can complete checkout automatically",
+   "Limited rollout to U.S. Pro subscribers",
+   "Integrated within ChatGPT interface"
+  ],
+  "why_it_matters": "Automating purchases lowers friction for users and showcases practical, revenue‑generating uses of conversational AI, potentially expanding AI’s role in e‑commerce.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI agents",
+   "e-commerce",
+   "ChatGPT"
+  ],
+  "importance": 2,
+  "id": "c231d25e54b9ad3f",
+  "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 13 Nov 2026 16:00:12 +0000",
+  "added": "2026-11-13T19:54:08.771369+00:00"
+ },
+ {
+  "headline": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh oh, Jensen!",
+  "tldr": "Research reveals China's top AI models were trained using Nvidia chips that are prohibited for export to the country.",
+  "key_points": [
+   "China's most advanced AI models rely on Nvidia hardware",
+   "The chips used are subject to export bans",
+   "Raises concerns about enforcement of technology restrictions"
+  ],
+  "why_it_matters": "It highlights gaps in export control enforcement and suggests that high‑performance AI capabilities can still be built in restricted regions, impacting geopolitical tech competition.",
+  "category": "hardware",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "export ban",
+   "China",
+   "AI models",
+   "chips"
+  ],
+  "importance": 2,
+  "id": "3dc626ea28ff3a7d",
+  "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 13 Nov 2026 18:40:30 +0000",
+  "added": "2026-11-13T19:53:56.857587+00:00"
+ },
+ {
+  "headline": "XYBench: Helping with the problem behind the question",
+  "tldr": "XYBench is introduced as a tool to address the underlying issue of question formulation.",
+  "key_points": [
+   "New benchmark named XYBench",
+   "Focuses on the problem behind each question",
+   "Aims to improve evaluation of AI models",
+   "Released by Hugging Face"
+  ],
+  "why_it_matters": "Understanding the root problem of a question can lead to more accurate model assessments and better downstream performance.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "benchmark",
+   "evaluation",
+   "XYBench",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "8400bdfe1e2afd49",
+  "url": "https://huggingface.co/blog/allenai/xybench",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 13 Nov 2026 17:02:35 GMT",
+  "added": "2026-11-13T19:53:44.861441+00:00"
+ },
+ {
+  "headline": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+  "tldr": "Hugging Face shows how to create a pick‑and‑place robot simulation using SimReady assets.",
+  "key_points": [
+   "Step‑by‑step guide to building a robot simulation",
+   "Uses SimReady assets for realistic environments",
+   "Focuses on pick‑and‑place tasks",
+   "Targeted at developers and researchers"
+  ],
+  "why_it_matters": "Provides accessible tools for robotics developers to prototype and test manipulation tasks without physical hardware, accelerating research and product development.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "robotics",
+   "simulation",
+   "pick-and-place",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "2427bacb74a96b4b",
+  "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 13 Nov 2026 18:00:39 GMT",
+  "added": "2026-11-13T19:53:32.768502+00:00"
+ },
+ {
+  "headline": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
+  "tldr": "AI tools are streamlining routine tasks in hospitals, aiding patient‑clinical trial matching, supporting radiologists, and enabling remote care, letting clinicians focus more on direct patient interaction.",
+  "key_points": [
+   "AI reduces administrative burden for clinicians across hospitals.",
+   "Matches patients to appropriate clinical trials more efficiently.",
+   "Assists radiologists with image analysis and diagnosis.",
+   "Enables remote monitoring and support for patients at home."
+  ],
+  "why_it_matters": "By automating repetitive workflows and improving decision support, AI can accelerate diagnosis, increase trial enrollment, and improve overall patient outcomes while freeing clinicians to spend more time on care.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AI",
+   "healthcare",
+   "clinical_trials",
+   "radiology"
+  ],
+  "importance": 2,
+  "id": "a326fbf0621fc816",
+  "url": "https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
+  "source": "NVIDIA",
+  "date": "Fri, 13 Nov 2026 13:00:42 +0000",
+  "added": "2026-11-13T19:53:20.915052+00:00"
+ },
+ {
+  "headline": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+  "tldr": "llama.cpp reaches version 1.0, boosting open‑source tools for running LLaMA models locally.",
+  "key_points": [
+   "Version 1.0 release of llama.cpp",
+   "Improves performance and stability",
+   "Enables more efficient local inference of LLaMA models",
+   "Strengthens the open‑source AI stack"
+  ],
+  "why_it_matters": "A stable, high‑performance implementation of LLaMA models lets developers run large language models on personal hardware, reducing reliance on cloud services and expanding accessibility.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "llama",
+   "cpp",
+   "open-source",
+   "local AI"
+  ],
+  "importance": 2,
+  "id": "40e78db6601d46e6",
+  "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 13 Nov 2026 14:05:22 GMT",
+  "added": "2026-11-13T19:53:09.406767+00:00"
+ },
+ {
+  "headline": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+  "tldr": "Anthropic released Claude Duet, a consumer‑focused AI agent that assists users with tasks like writing summaries, showing that AI agents can be useful beyond coding.",
+  "key_points": [
+   "Claude Duet is Anthropic's first consumer‑oriented AI agent.",
+   "The agent helps users write up experiences and other text without needing programming skills.",
+   "Review notes a quirky, slightly neurotic personality that still delivers useful assistance.",
+   "Demonstrates a shift toward AI tools aimed at everyday productivity."
+  ],
+  "why_it_matters": "It marks a move by a major AI lab to bring conversational agents into everyday consumer workflows, testing market demand for non‑developer AI assistants.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "AI agent",
+   "consumer AI",
+   "Claude",
+   "productivity"
+  ],
+  "importance": 3,
+  "id": "cd9d1a105b69dd29",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+  "source": "The Verge AI",
+  "date": "2026-11-13T09:00:00-05:00",
+  "added": "2026-11-13T19:52:56.987590+00:00"
+ },
+ {
+  "headline": "Opening the datasets behind our AI weather models",
+  "tldr": "Google DeepMind releases foundational precipitation and geostationary satellite datasets for AI weather forecasting.",
+  "key_points": [
+   "Release of precipitation datasets",
+   "Release of geostationary satellite datasets",
+   "Enables clearer planetary observation",
+   "Supports AI-driven weather modeling"
+  ],
+  "why_it_matters": "Public access to high‑quality weather data can accelerate research, improve forecasting accuracy, and foster innovation in climate‑focused AI applications.",
+  "category": "open_source",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "weather",
+   "datasets",
+   "AI",
+   "climate"
+  ],
+  "importance": 2,
+  "id": "51d2fad240453466",
+  "url": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/",
+  "source": "Google DeepMind",
+  "date": "Tue, 10 Nov 2026 11:13:04 +0000",
+  "added": "2026-11-13T19:52:44.869687+00:00"
+ },
+ {
+  "headline": "Introducing ChatGPT Wallet",
+  "tldr": "OpenAI launches ChatGPT Wallet, enabling secure purchases within ChatGPT Work, Codex, and related agents using existing card protections and user approval.",
+  "key_points": [
+   "Secure payment method integrated into ChatGPT agents",
+   "Requires explicit user approval for each purchase",
+   "Leverages existing card protection mechanisms",
+   "Available for ChatGPT Work, Codex, and related tools"
+  ],
+  "why_it_matters": "Provides a built-in, safe way for users to transact with AI agents, reducing friction and increasing trust in AI-driven commerce.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "wallet",
+   "payments",
+   "security",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "5bf4951adbe9698d",
+  "url": "https://openai.com/index/introducing-chatgpt-wallet",
+  "source": "OpenAI",
+  "date": "Fri, 13 Nov 2026 15:00:00 GMT",
+  "added": "2026-11-13T19:52:32.655611+00:00"
+ },
+ {
+  "headline": "After 600 experiments, here's what I discovered about JEPA world models",
+  "tldr": "A deep dive into JEPA world model LeWM shows its predictions match perfect physics for planning and new planning methods boost long‑horizon task success from 22% to 85%.",
+  "key_points": [
+   "JEPA predicts embeddings instead of raw pixels, focusing on decision‑relevant information.",
+   "LeWM's predictor performs as well as a perfect‑physics simulator on 75‑step tasks.",
+   "Four new planning strategies raise success on long‑horizon tasks from 22% to 85%.",
+   "Results suggest future gains come from better use of the architecture, not model retraining."
+  ],
+  "why_it_matters": "Demonstrates that embedding‑based world models can match physics simulators for planning and that algorithmic improvements can dramatically improve long‑horizon performance, influencing future research on efficient model‑based RL.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "JEPA",
+   "world models",
+   "planning",
+   "long-horizon"
+  ],
+  "importance": 3,
+  "id": "ea0776201252f8c6",
+  "url": "https://haddyalchaer.com/jepa",
+  "source": "Hacker News",
+  "date": "2026-11-13T17:55:28Z",
+  "added": "2026-11-13T19:52:21.108878+00:00"
+ },
+ {
+  "headline": "Brave Search API now accepts agentic payments via the x402 protocol",
+  "tldr": "Brave adds pay‑as‑you‑go, per‑request payments using the x402 protocol and USDC on Base, letting AI agents query its search API without API keys.",
+  "key_points": [
+   "Supports instant, per‑request payments via the open x402 protocol and USDC on the Base blockchain.",
+   "Eliminates API key management; requests without payment receive HTTP 402 with pricing details.",
+   "Pricing is $0.005 per 1,000 requests for LLM context and other search endpoints; gas fees covered temporarily.",
+   "Developers use the Stripe‑built Purl CLI wallet to manage payments and sign transactions."
+  ],
+  "why_it_matters": "Enables autonomous AI agents to access high‑quality web search on demand, lowering friction for developers and paving the way for broader agentic commerce ecosystems.",
+  "category": "product",
+  "companies": [
+   "Brave"
+  ],
+  "tags": [
+   "search",
+   "payment",
+   "x402",
+   "AI agents"
+  ],
+  "importance": 3,
+  "id": "3dbcade2c7aa5510",
+  "url": "https://brave.com/blog/search-api-agentic-payments/",
+  "source": "Hacker News",
+  "date": "2026-11-13T03:08:08Z",
+  "added": "2026-11-13T19:52:08.791822+00:00"
+ },
+ {
+  "headline": "Do Multimodal Models Decide Consistently on Equivalent Optical Spectra?",
+  "tldr": "Study shows multimodal AI models give wildly different answers when the same optical spectrum is presented in different formats, and often fail to abstain when data are missing.",
+  "key_points": [
+   "Accuracy varies up to 41% across representations (nm vs eV tables/plots).",
+   "Models rarely say \"undetermined\" when crucial data are omitted.",
+   "LoRA fine‑tuning improves performance but can create an abstention shortcut.",
+   "Training with answerable truncations removes the shortcut but is hard to achieve.",
+   "Authors release the benchmark tasks, results, and analysis code."
+  ],
+  "why_it_matters": "Ensures scientific AI systems are robust to how data are formatted and can recognize when evidence is insufficient, a prerequisite for trustworthy scientific decision‑making.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "representation invariance",
+   "scientific AI",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "c4b0edc33639eb88",
+  "url": "https://huggingface.co/papers/2611.00428",
+  "source": "HF Daily Papers",
+  "date": "2026-10-29T20:00:00.000Z",
+  "added": "2026-11-13T19:51:57.273481+00:00"
+ },
+ {
+  "headline": "Unbundling Multimodal Vision Encoding",
+  "tldr": "A controlled study shows that pretrained visual priors are unnecessary; dedicated vision capacity trained jointly with the backbone yields strong performance, and its placement can be early in‑fusion rather than as a separate encoder.",
+  "key_points": [
+   "Pretraining a vision encoder provides no advantage over training it from scratch jointly with the language model.",
+   "Dedicated vision capacity is crucial for visual understanding, even when total parameter count is matched.",
+   "Vision modules added early in‑fusion perform on par with traditional pre‑fusion encoders and reduce latency.",
+   "Findings hold across different backbone sizes and when starting from pretrained language models."
+  ],
+  "why_it_matters": "Clarifies design trade‑offs for multimodal models, guiding researchers and engineers toward more efficient architectures that avoid unnecessary pretraining stages while preserving performance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "vision",
+   "language-models",
+   "architecture"
+  ],
+  "importance": 3,
+  "id": "8fbf66c8f7081f86",
+  "url": "https://huggingface.co/papers/2611.17334",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T19:51:45.004837+00:00"
+ },
+ {
+  "headline": "Subliminal Learning in Vision-Language Models",
+  "tldr": "Researchers show that vision-language models can inherit hidden preferences from a teacher model through unrelated training data, affecting both image choices and explanations.",
+  "key_points": [
+   "Finetuned teacher VLMs biased toward specific animals or facial attributes influence student VLMs via unrelated numeric tasks.",
+   "Bias transfer observed across VLMs of 2B‑7B parameters, with up to ~10% higher selection of target attributes.",
+   "Effect strengthens with more training data and varies by model, target, and output generation method.",
+   "Biased students' explanations echo the teacher's language even when all models choose the same image."
+  ],
+  "why_it_matters": "Demonstrates that VLMs can acquire covert biases from unrelated data, raising concerns for model safety, interpretability, and the need for careful dataset curation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language",
+   "subliminal learning",
+   "model bias",
+   "AI safety"
+  ],
+  "importance": 3,
+  "id": "64ed7bc263b789c6",
+  "url": "https://huggingface.co/papers/2611.08538",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-13T19:51:32.938197+00:00"
+ },
+ {
+  "headline": "Probing Transformer Representations Layer by Layer, Module by Module",
+  "tldr": "The study finds that probing intermediate layers and specific modules in transformer models yields significantly better representations than the standard final-layer probing, proposing simple strategies that recover most of the gains.",
+  "key_points": [
+   "Intermediate layers can outperform final-layer probing",
+   "Layer and module selection should be considered jointly",
+   "Best layer‑module pairs give large gains over baseline",
+   "Proposed fixed strategies recover 42% (vision) and 86% (language) of optimal gains",
+   "Performance varies with transfer difficulty for vision models"
+  ],
+  "why_it_matters": "Understanding where useful features reside in transformers helps improve downstream task performance and guides more efficient probing and fine‑tuning methods across vision and language models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "transformers",
+   "probing",
+   "representation",
+   "foundation_models"
+  ],
+  "importance": 3,
+  "id": "892e11a7c8ec4991",
+  "url": "https://huggingface.co/papers/2611.11531",
+  "source": "HF Daily Papers",
+  "date": "2026-11-07T19:00:00.000Z",
+  "added": "2026-11-13T19:51:20.862080+00:00"
+ },
+ {
+  "headline": "Agent-R^2: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis",
+  "tldr": "A new framework, Agent-R^2, creates realistic productivity training data from real web sources and trains a 4B-parameter agent that outperforms larger models on workflow tasks.",
+  "key_points": [
+   "Synthesizes 4k task instances with real multi-format attachments and detailed rubrics from 10k web candidates.",
+   "Trains Agent-R^2-4B using supervised fine-tuning and rubric-based reinforcement learning.",
+   "Agent-R^2-4B beats a 235B-parameter model on GDPval and OfficeQA benchmarks.",
+   "Reduces shortcut behavior and improves sustained, file‑grounded reasoning."
+  ],
+  "why_it_matters": "Provides a scalable way to generate high‑quality, real‑world training data for AI agents, enabling more reliable automation of complex professional workflows.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "agent",
+   "productivity",
+   "data_synthesis",
+   "reinforcement_learning"
+  ],
+  "importance": 3,
+  "id": "0db176b33f563189",
+  "url": "https://huggingface.co/papers/2611.08219",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-13T19:51:08.859837+00:00"
+ },
+ {
+  "headline": "JustRUA: A Controlled Study of GPT-6 Robot-Use Agents",
+  "tldr": "A streamlined harness and better scene geometry double GPT-6 Astra's RoboDojo score from 29.7 to 50.3 without extra training.",
+  "key_points": [
+   "Evaluates multiple design choices for GPT-6 robot-use agents in a unified framework.",
+   "A lean harness that retains full episode history and early motion termination yields large gains.",
+   "Reusing experience alters behavior but offers limited benefit; scene geometry (even from RGB depth) is most impactful.",
+   "The simplified JustRUA harness raises RoboDojo benchmark scores substantially without learned policies or task‑specific tuning."
+  ],
+  "why_it_matters": "Demonstrates that architectural and interface choices can dramatically improve robot control for large language models, highlighting a low‑cost path to better real‑world AI agents and informing future robot‑LLM integration research.",
+  "category": "paper",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "robotics",
+   "simulation",
+   "GPT-6",
+   "model_harness"
+  ],
+  "importance": 3,
+  "id": "d8499d0211a776e7",
+  "url": "https://huggingface.co/papers/2611.16009",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-13T19:50:57.085949+00:00"
+ },
+ {
+  "headline": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+  "tldr": "Test-Time Baking (TTB) trains a lightweight MLP to capture cross‑view attention from decoder‑only large view synthesis models, delivering up to 23× faster rendering with quality comparable to state‑of‑the‑art methods.",
+  "key_points": [
+   "Repurposes the fast‑weight MLP from Test‑Time Training to explicitly learn cross‑view attention mappings.",
+   "Separates camera‑only context tokens from image content tokens to resolve modality misalignment.",
+   "Achieves up to 23× speedup while maintaining state‑of‑the‑art rendering quality on multiple benchmarks.",
+   "Works with decoder‑only LVSMs that use KV‑cache, preserving their high fidelity without 3D reconstruction."
+  ],
+  "why_it_matters": "Accelerating view synthesis makes high‑quality novel‑view generation feasible for real‑time applications such as AR/VR, gaming, and remote visualization, lowering computational costs while preserving visual fidelity.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "view synthesis",
+   "test-time baking",
+   "decoder-only models",
+   "rendering efficiency"
+  ],
+  "importance": 3,
+  "id": "04469787bcf42b7f",
+  "url": "https://huggingface.co/papers/2611.17331",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T19:50:45.078940+00:00"
+ },
+ {
+  "headline": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+  "tldr": "Anthropic reports increased error rates across its Claude AI services and offers email/SMS incident notifications.",
+  "key_points": [
+   "Claude web UI, Claude Code, and platform.claude.com are experiencing higher error rates.",
+   "Users can subscribe to receive email and text updates on incident status.",
+   "Notifications are sent when incidents are created, updated, or resolved."
+  ],
+  "why_it_matters": "Service reliability is critical for developers and enterprises relying on Claude for production workloads; timely incident alerts help mitigate downtime and maintain trust.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "service outage",
+   "Claude",
+   "incident alerts",
+   "AI platform"
+  ],
+  "importance": 2,
+  "id": "44da454e7900959c",
+  "url": "https://status.claude.com/incidents/nn11wk485zfn",
+  "source": "Hacker News",
+  "date": "2026-11-13T10:18:13Z",
+  "added": "2026-11-13T19:50:32.888188+00:00"
+ },
+ {
+  "headline": "Open Vision Banana: Fully Open Recipe for Generative Visual Perception",
+  "tldr": "Open Vision Banana (OVB) provides an open-source method to turn pretrained image generators into multi-task vision systems, outperforming the original Vision Banana on several benchmarks.",
+  "key_points": [
+   "Open-source data, weights, code, and pipelines for converting generators to perception models",
+   "Achieves 73.9 mIoU on Cityscapes zero-shot, surpassing Vision Banana's 69.9",
+   "Introduces legend ensembling for test-time scaling, boosting mIoU by up to 8.7 (Cityscapes) and 15.0 (COCO-Object)",
+   "Works with 4B and 9B parameter open-weight base models using 2.1M‑3.8M public training pairs"
+  ],
+  "why_it_matters": "Provides the AI community with a reproducible, open framework to leverage generative models for vision tasks, lowering barriers to research and enabling broader adoption of generator‑based perception.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "vision",
+   "generative models",
+   "open-source",
+   "zero-shot"
+  ],
+  "importance": 3,
+  "id": "abae26331e955754",
+  "url": "https://huggingface.co/papers/2611.15844",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-13T19:50:20.904933+00:00"
+ },
+ {
+  "headline": "G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation",
+  "tldr": "The paper introduces GSTAR, a framework that scales group size with spatial compression to achieve up to 64× compression of discrete autoregressive image models while maintaining quality and delivering up to 20× faster generation.",
+  "key_points": [
+   "Group size should scale quadratically with spatial compression factor for fixed information budget.",
+   "GSTAR enables 32×–64× compression with strong reconstruction and generation performance.",
+   "A semi‑autoregressive decoder balances parallel computation and causal modeling.",
+   "Achieves 20× speedup over prior discrete autoregressive models, generating 1024×1024 images in 2.5 s on an NVIDIA H200.",
+   "Competitive results on five text‑to‑image benchmarks."
+  ],
+  "why_it_matters": "Highly compressed discrete representations reduce latency and compute costs, making high‑resolution autoregressive image generation more practical for real‑time applications and broader deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "image generation",
+   "token compression",
+   "semi-autoregressive",
+   "high-resolution"
+  ],
+  "importance": 4,
+  "id": "aac4e777518bea91",
+  "url": "https://huggingface.co/papers/2611.13004",
+  "source": "HF Daily Papers",
+  "date": "2026-11-07T19:00:00.000Z",
+  "added": "2026-11-13T19:50:09.064195+00:00"
+ },
+ {
+  "headline": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
+  "tldr": "PhysLoop uses large language models to inject physical knowledge into video generation, enabling self‑improvement through automated correction and data creation.",
+  "key_points": [
+   "Introduces a harness that guides LLMs to generate, select, and repair videos with physical consistency.",
+   "Provides 100K physically realistic videos, generation tools, and two new evaluation datasets (PhysLoop-Gen, PhysLoop-Repair).",
+   "Demonstrates controllable generation and localized repair, evaluated on Physics‑IQ Verified benchmark.",
+   "Marks a step toward recursive self‑improvement in video generation with minimal human input."
+  ],
+  "why_it_matters": "Physical plausibility is a major gap in current video synthesis; embedding LLM‑derived physics enables more reliable, usable video content and opens pathways for autonomous model refinement.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "physics",
+   "self-improvement",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "9d279f8afefe2a55",
+  "url": "https://huggingface.co/papers/2611.16748",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T19:49:57.251982+00:00"
+ },
+ {
   "headline": "Creating author burdens to reduce paper submissions is STUPID",
   "tldr": "The author criticizes recent conference policies that add administrative hurdles, like enrollment forms, arguing they are ineffective and burdensome for interdisciplinary collaborators.",
   "key_points": [
