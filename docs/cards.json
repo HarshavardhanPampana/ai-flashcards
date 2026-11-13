@@ -1,5 +1,1058 @@
 [
  {
+  "headline": "Creating author burdens to reduce paper submissions is STUPID",
+  "tldr": "The author criticizes recent conference policies that add administrative hurdles, like enrollment forms, arguing they are ineffective and burdensome for interdisciplinary collaborators.",
+  "key_points": [
+   "Conferences have introduced extra admin steps (author/reviewer sign‑up, reciprocal reviewing, CVPR enrollment form).",
+   "These measures aim to filter low‑quality papers but create extra work for authors, especially those from non‑ML fields.",
+   "Failure to complete forms can lead to desk rejection, adding stress without improving research quality."
+  ],
+  "why_it_matters": "Administrative barriers can discourage interdisciplinary research and increase friction in the peer‑review process, potentially limiting valuable contributions to the AI community.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "conference",
+   "submission",
+   "policy",
+   "ML"
+  ],
+  "importance": 2,
+  "id": "1d89c8f084c9ac32",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xul9u7/creating_author_burdens_to_reduce_paper/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T18:55:13+00:00",
+  "added": "2026-11-13T07:01:52.285612+00:00"
+ },
+ {
+  "headline": "UMAP 0.6 released with new initialization, optimizers, and faster performance",
+  "tldr": "UMAP 0.6 speeds up nearest‑neighbor search 4×, adds a recursive initialization and hard‑negative‑mining optimizers, delivering faster and higher‑quality embeddings on million‑scale datasets.",
+  "key_points": [
+   "4× faster neighbor search via improved PyNNDescent",
+   "Recursive initialization yields better starting layout and fewer epochs",
+   "New optimizers with hard‑negative mining improve fidelity and kNN recall",
+   "Embeds 3 M arXiv papers in under 5 minutes, far quicker than 0.5"
+  ],
+  "why_it_matters": "The upgrades make UMAP practical for massive datasets, enabling researchers and engineers to visualize and analyze large corpora quickly while preserving fine‑grained structure, which can accelerate downstream AI workflows.",
+  "category": "open_source",
+  "companies": [
+   "UMAP developers (Leland McInnes et al.)"
+  ],
+  "tags": [
+   "dimensionality_reduction",
+   "visualization",
+   "large_scale",
+   "open_source"
+  ],
+  "importance": 3,
+  "id": "3ce30bff4dd52c88",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xudaah/umap_06_new_initialization_new_optimizers_and/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T13:51:58+00:00",
+  "added": "2026-11-13T07:01:40.628674+00:00"
+ },
+ {
+  "headline": "Zero-cost curvature proxy predicts Euler step error for flow matching, but per-sample step control adds nothing over a static grid",
+  "tldr": "A curvature-based metric derived from consecutive velocity angles can predict Euler integration error in flow models, yet adaptive per-sample step control offers no advantage over a well-chosen static grid.",
+  "key_points": [
+   "The angle between consecutive velocity evaluations serves as a proxy for curvature and predicts Euler step error with high correlation (0.91‑0.92).",
+   "Noise in bf16 and CFG settings limits the usefulness of raw-angle controllers, causing them to collapse to minimal step sizes.",
+   "A static grid with density proportional to the mean angle rate outperforms adaptive controllers, reducing error by 30‑43% across various evaluation budgets.",
+   "Per-sample adaptive stepping provides no measurable gain over the static grid; oracle gains are within noise levels."
+  ],
+  "why_it_matters": "Understanding error dynamics in diffusion samplers can improve efficiency and quality of generative models without extra computational cost, guiding practitioners toward simpler static scheduling strategies.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "curvature",
+   "Euler integration",
+   "adaptive stepping",
+   "diffusion models"
+  ],
+  "importance": 2,
+  "id": "0e3a485cd92acf29",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xtq4vl/a_zerocost_curvature_proxy_predicts_euler_step/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-11T18:51:02+00:00",
+  "added": "2026-11-13T07:01:28.408566+00:00"
+ },
+ {
+  "headline": "How to get desk-rejected at NeurIPS/ICML/ICLR",
+  "tldr": "A Reddit user compiled a list of all reasons papers can be desk‑rejected at top ML conferences, noting new rules since 2023 about reviewer reciprocity, LLM use, conflicts, and OpenReview profiles.",
+  "key_points": [
+   "Compiled desk‑rejection criteria from NeurIPS, ICML, ICLR since 2013",
+   "New post‑2023 rules include reviewer reciprocity, LLM policy violations, false conflicts, and profile issues",
+   "ICML 2026 blog post discusses enforcement of LLM‑review policies",
+   "Raises community question on whether such rules should expand"
+  ],
+  "why_it_matters": "Understanding evolving submission policies helps researchers avoid automatic rejections and highlights the growing impact of ethics and LLM usage on conference peer review.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "conference",
+   "review",
+   "LLM",
+   "policy"
+  ],
+  "importance": 2,
+  "id": "6fefe1dc06395bd9",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xu08e7/how_to_get_deskrejected_at_neuripsicmliclr_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T01:51:47+00:00",
+  "added": "2026-11-13T07:01:17.233111+00:00"
+ },
+ {
+  "headline": "Gemma 3 builds a linearly decodable spatial map from text, but its answers never read it",
+  "tldr": "An independent preregistered study shows Gemma 3 can internally construct a spatial map from textual descriptions, yet it solves spatial queries using a separate 2‑D code mechanism rather than reading the map.",
+  "key_points": [
+   "Probes can extract object positions from Gemma 3 with R² = 0.74, even when multiple sentences are needed.",
+   "Erasing the internal map degrades performance no more than erasing random directions.",
+   "The model solves spatial tasks via a sentence‑level 2‑D code (DAS) achieving 72‑83% accuracy, acting like a switch rather than a coordinate system.",
+   "Reading answers from the unused map outperforms the model on chain questions (80% vs 73%)."
+  ],
+  "why_it_matters": "The findings reveal a disconnect between a model's latent spatial representation and its actual reasoning process, highlighting limits of current interpretability methods and suggesting new directions for improving spatial reasoning in LLMs.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "spatial reasoning",
+   "LLM evaluation",
+   "Gemma 3",
+   "interpretability"
+  ],
+  "importance": 3,
+  "id": "f43cae6358afc2aa",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xuqs9d/gemma_3_builds_a_linearly_decodable_spatial_map/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T22:29:05+00:00",
+  "added": "2026-11-13T07:01:04.823099+00:00"
+ },
+ {
+  "headline": "Feedback sought for Inkvec: improving amodal raster-to-vector tracing and node placement",
+  "tldr": "The maintainer of the open‑source Inkvec tracer wants advice on adding amodal infilling and more human‑like node placement, exploring small networks, diffusion‑based layer peeling, and learned artist conditioning.",
+  "key_points": [
+   "Inkvec currently uses MDL for node selection and only creates jigsaw pieces, lacking amodal infilling.",
+   "Median IoU for hidden shapes is 0.52 on 121 emojis, indicating room for improvement.",
+   "Proposed solutions include a small network predicting signed distance fields and leveraging diffusion‑based layer‑peeling methods.",
+   "Node placement may be improved with a 1‑D CNN over closed outlines, artist‑style conditioning, and TSDF‑based sub‑pixel accuracy."
+  ],
+  "why_it_matters": "Enhancing amodal inference and node efficiency would make Inkvec more accurate for logo/icon vectorization, benefiting designers and developers who rely on high‑quality SVG outputs from raster images.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "raster-to-vector",
+   "amodal",
+   "open_source",
+   "computer_vision"
+  ],
+  "importance": 2,
+  "id": "2fb54e522501939e",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xutg9v/i_need_feedback_on_this_architecture_for_amodal/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T00:25:55+00:00",
+  "added": "2026-11-13T07:00:52.276756+00:00"
+ },
+ {
+  "headline": "Meta's TRIBE v2 fails to recover retinotopy and tonotopy but captures motion selectivity",
+  "tldr": "An independent audit shows TRIBE v2 cannot reproduce classic retinotopic or tonotopic maps, though it accurately predicts motion-selective responses in MT+.",
+  "key_points": [
+   "TRIBE v2 predicts fMRI from video/audio/text but averages video features spatially, likely erasing position info.",
+   "Audit using standard mapping stimuli found no significant retinotopic (d=0.05) or tonotopic (ρ=-0.07) maps.",
+   "Motion selectivity was strong (d=4.31), correctly localized to MT+ with 52× enrichment over chance.",
+   "Apparent eccentricity effects were due to image-statistics confounds, not true positional coding."
+  ],
+  "why_it_matters": "Validates the limits of multimodal brain‑encoding models and highlights the need for rigorous testing of topographic representations before claiming neural fidelity.",
+  "category": "paper",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "brain",
+   "fMRI",
+   "multimodal",
+   "model_audit"
+  ],
+  "importance": 3,
+  "id": "6676ac56ffb0167a",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xuillf/does_metas_brainresponse_model_tribe_v2_actually/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-12T17:16:46+00:00",
+  "added": "2026-11-13T07:00:40.256256+00:00"
+ },
+ {
+  "headline": "Apple HomeView Smart Display Review",
+  "tldr": "Apple's first smart display, the $299 HomeView (tabletop and wall‑mounted), is evaluated for design, ecosystem integration, and performance.",
+  "key_points": [
+   "Price set at $299 with two form‑factors",
+   "Deep integration with iOS, HomeKit, and Siri",
+   "Supports AirPlay, FaceTime, and Apple services",
+   "Competes directly with Amazon Echo Show and Google Nest Hub"
+  ],
+  "why_it_matters": "Apple's entry into the smart‑display market expands the ecosystem for iOS users and intensifies competition with established players, potentially shifting consumer preferences and influencing future hardware standards.",
+  "category": "product",
+  "companies": [
+   "Apple"
+  ],
+  "tags": [
+   "smart home",
+   "display",
+   "Apple",
+   "IoT"
+  ],
+  "importance": 3,
+  "id": "39f4c129e4341242",
+  "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
+  "source": "The Verge AI",
+  "date": "2026-11-12T09:10:00-05:00",
+  "added": "2026-11-13T07:00:28.874956+00:00"
+ },
+ {
+  "headline": "Nvidia CEO Jensen Huang Resigns Amid Board Investigation",
+  "tldr": "Jensen Huang stepped down as Nvidia's CEO after the board opened an investigation into alleged extramarital affairs and a possible Chinese spy connection.",
+  "key_points": [
+   "Huang co-founded Nvidia in 1993 and served as CEO for over three decades.",
+   "Board investigation focused on multiple extramarital affairs with a direct report and alleged espionage ties.",
+   "Harvey Jones, the newly appointed chair of the board, announced the resignation.",
+   "The resignation marks the first leadership change at Nvidia since its founding."
+  ],
+  "why_it_matters": "Nvidia is a cornerstone of the AI hardware ecosystem; a sudden CEO change could affect product roadmaps, partnerships, and market confidence in AI infrastructure.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "resignation",
+   "board investigation",
+   "CEO"
+  ],
+  "importance": 4,
+  "id": "830958e6e6f7f875",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+  "source": "The Verge AI",
+  "date": "2026-11-12T10:48:12-05:00",
+  "added": "2026-11-13T07:00:16.607958+00:00"
+ },
+ {
+  "headline": "tamserve makes real-time video tracking 2x cheaper and up to 3.8x faster",
+  "tldr": "tamserve shares a single SAM‑2 style model across multiple cameras, cutting cost per camera by more than half and running up to 3.8× faster than Meta's code while keeping the same accuracy.",
+  "key_points": [
+   "Shares one model copy across cameras, preventing GPU memory overflow",
+   "Runs up to 3.8× faster than Meta's original implementation",
+   "Reduces daily cost per camera from $2.40 to $1.07 at 30 fps on an RTX 4090",
+   "Open‑source, works with SAM 2.1 and EdgeTAM, supports dynamic object addition"
+  ],
+  "why_it_matters": "Lowering compute cost and memory usage makes high‑quality SAM‑based video tracking feasible for larger deployments, enabling more widespread use in surveillance, robotics, and AR/VR applications.",
+  "category": "open_source",
+  "companies": [
+   "Meta",
+   "tamserve (by Chunkymunkey642069)"
+  ],
+  "tags": [
+   "video-tracking",
+   "SAM-2",
+   "GPU-optimization",
+   "open-source"
+  ],
+  "importance": 3,
+  "id": "48fe03def4cf151f",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xuvxke/i_built_tamserve_to_make_realtime_video_tracking/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T02:23:51+00:00",
+  "added": "2026-11-13T07:00:04.719274+00:00"
+ },
+ {
+  "headline": "How to make a Legora-style legal conflict detector tool using only NLI and encoder models",
+  "tldr": "A legal engineer at Isaacus built an open‑source tool that detects conflicts between legal documents using encoder‑based NLI models, avoiding costly generative APIs.",
+  "key_points": [
+   "Uses hierarchical clause extraction and vector embeddings for pairwise comparison.",
+   "Filters non‑provision text with a zero‑shot legal classifier and shortlists top‑3 similar clauses (cosine ≥ 0.5).",
+   "Reranks and classifies clause pairs with dedicated models, achieving full pipeline runtime under 20 seconds.",
+   "Avoids hallucinations and high API costs associated with large generative models like Claude or GPT."
+  ],
+  "why_it_matters": "Provides a scalable, cost‑effective alternative for detailed legal document review, enabling faster conflict detection without the reliability issues of generative AI.",
+  "category": "open_source",
+  "companies": [
+   "Isaacus"
+  ],
+  "tags": [
+   "legal AI",
+   "NLI",
+   "encoder models",
+   "open-source"
+  ],
+  "importance": 2,
+  "id": "ff4a0de4c71d541a",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xuzv6d/how_to_make_a_legorastyle_legal_conflict_detector/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-13T05:48:17+00:00",
+  "added": "2026-11-13T06:59:52.476760+00:00"
+ },
+ {
+  "headline": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
+  "tldr": "Nine Korean deep‑tech startups—including healthcare, fintech, energy, semiconductors, and AI firms—are competing for a place in Disrupt 2027’s Startup Battlefield 200, aiming to break into the U.S. market.",
+  "key_points": [
+   "Nine Korean startups are entered in the Disrupt 2027 Startup Battlefield 200 competition",
+   "They span deep‑tech areas such as healthcare, fintech, energy, semiconductors, and AI",
+   "All participants aim to expand into the United States"
+  ],
+  "why_it_matters": "The competition highlights Korea’s growing deep‑tech ecosystem and its ambition to enter the U.S. market, signaling increased global competition and potential cross‑border collaborations in AI and related sectors.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "startup",
+   "competition",
+   "Korea",
+   "deep tech"
+  ],
+  "importance": 2,
+  "id": "7ed9c1c82c2d456e",
+  "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 13:26:25 +0000",
+  "added": "2026-11-13T06:59:40.611307+00:00"
+ },
+ {
+  "headline": "Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts",
+  "tldr": "A recent cyberattack on Fireworks AI exposed chat transcripts of Notion users, marking the company's second breach in two months.",
+  "key_points": [
+   "Fireworks AI suffered a cyberattack",
+   "Hackers accessed Notion customers' chat transcripts",
+   "This is the second data breach for Fireworks AI within two months"
+  ],
+  "why_it_matters": "Repeated security failures raise concerns about data protection practices at AI service providers and could erode user trust in integrated AI tools.",
+  "category": "other",
+  "companies": [
+   "Fireworks AI",
+   "Notion"
+  ],
+  "tags": [
+   "breach",
+   "security",
+   "data_privacy"
+  ],
+  "importance": 2,
+  "id": "023d1c79ca20cb05",
+  "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 15:02:28 +0000",
+  "added": "2026-11-13T06:59:28.351002+00:00"
+ },
+ {
+  "headline": "Norwest pushes deeper into AI with new $4B fund",
+  "tldr": "Investment firm Norwest announced its largest-ever $4 billion fund dedicated to AI investments.",
+  "key_points": [
+   "Norwest launches a $4 billion AI-focused fund",
+   "Fund is the firm's largest to date",
+   "Aims to deepen Norwest's involvement in AI"
+  ],
+  "why_it_matters": "A $4 billion AI fund signals strong capital confidence in the sector and can accelerate growth for AI startups and technologies.",
+  "category": "funding",
+  "companies": [
+   "Norwest"
+  ],
+  "tags": [
+   "investment",
+   "AI",
+   "funding",
+   "venture"
+  ],
+  "importance": 2,
+  "id": "62c34abfa66e72c1",
+  "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 15:18:14 +0000",
+  "added": "2026-11-13T06:59:16.238564+00:00"
+ },
+ {
+  "headline": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
+  "tldr": "Nvidia CFO Colette Kress steps in as interim CEO after Jensen Huang departs amid scandal.",
+  "key_points": [
+   "Nvidia's longtime CEO Jensen Huang leaves the role.",
+   "CFO Colette Kress appointed as interim CEO.",
+   "Departure linked to an ongoing scandal."
+  ],
+  "why_it_matters": "A change at the top of Nvidia, a leading AI hardware maker, could affect its strategic direction, product roadmaps, and investor confidence during a critical period for the AI industry.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "interim CEO",
+   "scandal",
+   "CFO"
+  ],
+  "importance": 2,
+  "id": "15b0384fb53fdc16",
+  "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 15:37:29 +0000",
+  "added": "2026-11-13T06:59:04.145995+00:00"
+ },
+ {
+  "headline": "Jensen Huang was having a third affair, Reuters reports",
+  "tldr": "Reuters reports that Nvidia CEO Jensen Huang is alleged to have had a third affair with a current Nvidia employee.",
+  "key_points": [
+   "Report alleges a third affair involving Jensen Huang",
+   "The other party is identified as a Nvidia employee",
+   "Reuters is withholding the employee's name"
+  ],
+  "why_it_matters": "Leadership conduct can affect company reputation, employee morale, and investor confidence, especially for a high‑profile CEO like Huang.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "ethics",
+   "Nvidia",
+   "affair"
+  ],
+  "importance": 2,
+  "id": "e153c4dc0f7fcb29",
+  "url": "https://techcrunch.com/2026/11/12/jensen-huang-was-having-a-third-affair-reuters-reports/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 20:26:47 +0000",
+  "added": "2026-11-13T06:58:52.104109+00:00"
+ },
+ {
+  "headline": "Muse can now place calls to US businesses — if you pay",
+  "tldr": "Muse's AI service now offers outbound calling to U.S. businesses as a paid feature.",
+  "key_points": [
+   "AI-powered outbound calling capability added",
+   "Service limited to U.S. businesses",
+   "Feature requires payment"
+  ],
+  "why_it_matters": "",
+  "category": "product",
+  "companies": [
+   "Muse"
+  ],
+  "tags": [
+   "AI",
+   "outbound-calling",
+   "B2B",
+   "paid-feature"
+  ],
+  "importance": 2,
+  "id": "1a628d755dc37d52",
+  "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 22:22:28 +0000",
+  "added": "2026-11-13T06:58:40.323918+00:00"
+ },
+ {
+  "headline": "Scalable Conversational Assessment: Chat-Based Exams with a Two-Agent LLM Pipeline",
+  "tldr": "The paper introduces a two‑agent LLM system that conducts oral‑style, text‑based exams at scale, separating interview and evaluation roles to prevent answer leakage and improve grading reliability.",
+  "key_points": [
+   "Two‑agent architecture: an interviewer LLM interacts with the student while a hidden evaluator LLM guides questioning and scores via a rubric.",
+   "Tested on simulated student personas (ability levels, adversarial tactics) and deployed in a small AI‑literacy course.",
+   "Evaluation used fictional topics to avoid pre‑training knowledge leakage.",
+   "Identified needs for better follow‑up question generation and stricter crediting of student‑generated ideas."
+  ],
+  "why_it_matters": "Enables scalable, interactive oral assessments for education and certification, addressing the long‑standing challenge of grading reasoning and reducing cheating risk in automated exams.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "assessment",
+   "conversational AI",
+   "education",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "be68aa65930525e0",
+  "url": "https://arxiv.org/abs/2611.17220v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:16:37Z",
+  "added": "2026-11-13T06:58:28.702240+00:00"
+ },
+ {
+  "headline": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+  "tldr": "ArchSpace is a public platform that records, reviews, and references LLM architecture proposals, using scaling laws to predict large‑scale performance and helping the community evaluate and adopt new architectural ideas.",
+  "key_points": [
+   "Provides a structured repository for LLM architecture experiments and reasoning",
+   "Leverages scaling laws to forecast model loss at larger scales from small‑scale runs",
+   "Includes baseline references (e.g., Qwen3.5, OLMo3) and reusable training recipes",
+   "Enables community review and citation, turning validated ideas into new baselines"
+  ],
+  "why_it_matters": "By systematizing architecture research, ArchSpace reduces duplication, speeds up validation of novel designs, and broadens the pool of ideas that can influence the next generation of LLMs, addressing a major bottleneck in both industry and academia.",
+  "category": "open_source",
+  "companies": [
+   "DeepSeek",
+   "Qwen",
+   "Kimi"
+  ],
+  "tags": [
+   "LLM architecture",
+   "scaling laws",
+   "research platform"
+  ],
+  "importance": 3,
+  "id": "53a9ebad52ebe60f",
+  "url": "https://arxiv.org/abs/2611.17332v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:59:52Z",
+  "added": "2026-11-13T06:58:16.550100+00:00"
+ },
+ {
+  "headline": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+  "tldr": "Nebius aims to finance a $40 billion AI infrastructure expansion via customer prepayments and loans, despite concerns raised by delays at a Microsoft data center.",
+  "key_points": [
+   "Nebius plans a $40 billion AI infrastructure build‑out.",
+   "Funding will come from customer prepayments and loans.",
+   "Delays at a Microsoft data center have sparked financing model questions."
+  ],
+  "why_it_matters": "The scale of the investment highlights the massive capital needs for AI infrastructure, and the financing approach could set a precedent for how cloud providers fund rapid expansion.",
+  "category": "funding",
+  "companies": [
+   "Nebius",
+   "Microsoft"
+  ],
+  "tags": [
+   "AI infrastructure",
+   "financing",
+   "cloud expansion"
+  ],
+  "importance": 2,
+  "id": "412b4e746837e240",
+  "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 21:27:10 +0000",
+  "added": "2026-11-13T06:58:04.866985+00:00"
+ },
+ {
+  "headline": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+  "tldr": "U.S. lawmakers open a second congressional probe into Nvidia’s China sales and alleged ties to former President Trump.",
+  "key_points": [
+   "Democrats issue a formal letter accusing Nvidia CEO Jensen Huang of a scheme with Trump",
+   "Investigation focuses on Nvidia's sales to China",
+   "This is the second congressional inquiry since the spy‑affair allegations emerged"
+  ],
+  "why_it_matters": "The probe could lead to regulatory scrutiny of Nvidia's international business practices and political connections, impacting its market position and broader tech‑policy debates.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "investigation",
+   "China",
+   "politics",
+   "Congress"
+  ],
+  "importance": 2,
+  "id": "55d7d41513d8574a",
+  "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+  "source": "TechCrunch AI",
+  "date": "Thu, 12 Nov 2026 22:42:51 +0000",
+  "added": "2026-11-13T06:57:52.192252+00:00"
+ },
+ {
+  "headline": "Google’s new Gemini model is better at understanding complicated questions",
+  "tldr": "Google launched Gemini 4 Hydrogen, an upgraded model that handles multi‑part, typo‑laden, and highly specific queries more effectively, now live in Search and the Gemini app.",
+  "key_points": [
+   "Improved ability to parse and answer complex, multi‑part questions",
+   "Handles typographical errors and highly specific requests better",
+   "Decomposes queries to address each component separately",
+   "Available immediately in Google Search, the Gemini app, and all service tiers"
+  ],
+  "why_it_matters": "Enhanced comprehension boosts the usefulness of Google’s AI across its core products, improving user experience and keeping Google competitive in the generative‑AI race.",
+  "category": "model_release",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "search",
+   "AI model",
+   "natural language understanding"
+  ],
+  "importance": 4,
+  "id": "3403360ccc1df753",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+  "source": "The Verge AI",
+  "date": "2026-11-12T16:55:32-05:00",
+  "added": "2026-11-13T06:57:40.127323+00:00"
+ },
+ {
+  "headline": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+  "tldr": "Metal Sandbox is an open‑source infrastructure that isolates per‑agent workspaces and schedules GPU commands across multiple Apple Silicon Macs, achieving roughly 2× higher command throughput and reducing tool waiting time.",
+  "key_points": [
+   "Combines restricted file access, native command execution, and per‑command scheduling.",
+   "Parallel commands run concurrently; serial commands share a single slot per node.",
+   "Experiments on four Mac mini M4 nodes show 1.68×‑2.05× throughput gains and 18.8% lower waiting time.",
+   "Integrates with Harbor for task execution, verification, and rollout collection.",
+   "Open‑source implementation available on GitHub."
+  ],
+  "why_it_matters": "Improves utilization of Apple Silicon GPUs for on‑device inference and model development, enabling faster training/evaluation cycles and more efficient deployment of AI workloads on macOS devices.",
+  "category": "paper",
+  "companies": [
+   "Apple"
+  ],
+  "tags": [
+   "GPU",
+   "AppleSilicon",
+   "OnDeviceInference",
+   "Scheduling"
+  ],
+  "importance": 3,
+  "id": "fa4fc5149cb300a1",
+  "url": "https://arxiv.org/abs/2611.17294v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:54:42Z",
+  "added": "2026-11-13T06:57:28.603850+00:00"
+ },
+ {
+  "headline": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+  "tldr": "Google integrates the Gemini 4 Hydrogen model into Search, enhancing results with AI-powered cards.",
+  "key_points": [
+   "Gemini 4 Hydrogen model is now used in Google Search",
+   "Search UI shows rotating carousel of AI-generated cards",
+   "Examples demonstrate new AI-driven answer format"
+  ],
+  "why_it_matters": "Embedding a newer Gemini model directly into Search brings more advanced language understanding and richer answer presentations to billions of users, showcasing Google's push to blend generative AI with core products.",
+  "category": "model_release",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini 4",
+   "Search",
+   "AI",
+   "Upgrade"
+  ],
+  "importance": 2,
+  "id": "459a57b4750adf48",
+  "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+  "source": "Google AI",
+  "date": "Thu, 12 Nov 2026 18:00:00 +0000",
+  "added": "2026-11-13T06:57:16.119358+00:00"
+ },
+ {
+  "headline": "Gondola doubles revenue as its team builds more with Codex",
+  "tldr": "Gondola's revenue has doubled thanks to Codex boosting its lead engineer's output by 50% and ChatGPT streamlining daily tasks.",
+  "key_points": [
+   "Revenue doubled",
+   "Codex increased lead engineer output by 50%",
+   "ChatGPT simplifies daily work",
+   "Helps creatives get credit and get hired"
+  ],
+  "why_it_matters": "Shows how AI coding assistants can directly improve productivity and financial performance for creative platforms.",
+  "category": "product",
+  "companies": [
+   "OpenAI",
+   "Gondola"
+  ],
+  "tags": [
+   "revenue",
+   "Codex",
+   "productivity",
+   "hiring"
+  ],
+  "importance": 2,
+  "id": "90d79223706ea3ab",
+  "url": "https://openai.com/business/customer-stories/gondola",
+  "source": "OpenAI",
+  "date": "Thu, 12 Nov 2026 12:00:00 GMT",
+  "added": "2026-11-13T06:57:04.108682+00:00"
+ },
+ {
+  "headline": "Introducing Gemini 4 Hydrogen",
+  "tldr": "DeepMind announces the Gemini 4 Hydrogen model.",
+  "key_points": [
+   "New Gemini 4 Hydrogen model introduced",
+   "Continuation of the Gemini series",
+   "Announced by Google DeepMind"
+  ],
+  "why_it_matters": "Adds another iteration to DeepMind's Gemini line, indicating ongoing development in large language models.",
+  "category": "model_release",
+  "companies": [
+   "Google DeepMind"
+  ],
+  "tags": [
+   "Gemini",
+   "Hydrogen",
+   "AI model"
+  ],
+  "importance": 2,
+  "id": "4bad5afe01a19f79",
+  "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+  "source": "Google DeepMind",
+  "date": "Thu, 12 Nov 2026 18:00:50 +0000",
+  "added": "2026-11-13T06:56:52.012607+00:00"
+ },
+ {
+  "headline": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+  "tldr": "Amplitude uses OpenAI models in its Wave agent to quickly identify, build, and measure product changes within 1–2 days.",
+  "key_points": [
+   "Wave, a proactive product agent, suggests what to build",
+   "Coding agents help teams implement changes rapidly",
+   "Impact of changes is measured automatically",
+   "Built primarily on OpenAI models"
+  ],
+  "why_it_matters": "Demonstrates how generative AI can accelerate product development cycles, reducing time‑to‑market for feature updates.",
+  "category": "product",
+  "companies": [
+   "Amplitude",
+   "OpenAI"
+  ],
+  "tags": [
+   "productivity",
+   "AI agents",
+   "software development",
+   "automation"
+  ],
+  "importance": 2,
+  "id": "5b0f73df89a6e310",
+  "url": "https://openai.com/business/customer-stories/amplitude",
+  "source": "OpenAI",
+  "date": "Thu, 12 Nov 2026 20:00:00 GMT",
+  "added": "2026-11-13T06:56:40.248530+00:00"
+ },
+ {
+  "headline": "Apple launches Foundation Models framework for Swift",
+  "tldr": "Apple introduces a native Swift API that lets developers integrate on‑device and cloud large language models—including Apple’s own models, Claude, Gemini, and others—into iOS apps with built‑in features like guided generation, tool calling, and multimodal image prompts.",
+  "key_points": [
+   "Native Swift API for any LLM, supporting on‑device Apple models and server models via Private Cloud Compute",
+   "Built‑in capabilities: guided generation, tool calling, image understanding, OCR, barcode scanning",
+   "Dynamic Profiles let apps swap model configurations (temperature, tools, instructions) at runtime",
+   "Free access to Apple Foundation Models on Private Cloud Compute for small developers (under 2 M downloads)"
+  ],
+  "why_it_matters": "The framework lowers the barrier for iOS developers to embed advanced AI features while keeping data private and offline‑capable, potentially accelerating AI‑enhanced app experiences across the Apple ecosystem.",
+  "category": "product",
+  "companies": [
+   "Apple",
+   "Anthropic",
+   "Google"
+  ],
+  "tags": [
+   "foundation_models",
+   "swift",
+   "on-device",
+   "privacy"
+  ],
+  "importance": 3,
+  "id": "f560ce461252ed3f",
+  "url": "https://developer.apple.com/foundation-models-framework/",
+  "source": "Hacker News",
+  "date": "2026-11-12T21:13:26Z",
+  "added": "2026-11-13T06:56:28.497524+00:00"
+ },
+ {
+  "headline": "Chinese frontier AI models carry the fingerprint of export‑controlled GPUs",
+  "tldr": "Forensic analysis shows DeepSeek, Moonshot AI, MiniMax and Ant Group's recent models contain weight patterns matching NVIDIA's Blackwell GPUs, despite export bans.",
+  "key_points": [
+   "Six models released since April 2026 match Blackwell hardware fingerprints; earlier models match older Hopper chips.",
+   "Evidence derived from published model weights, not leaks, confirming Blackwell usage for training.",
+   "Alternative AMD hardware deemed unlikely; export‑control violations remain unproven."
+  ],
+  "why_it_matters": "Demonstrates that top Chinese AI firms may have accessed cutting‑edge U.S. GPU technology, raising concerns about export‑control enforcement and the global AI arms race.",
+  "category": "policy",
+  "companies": [
+   "DeepSeek",
+   "Moonshot AI",
+   "MiniMax",
+   "Ant Group"
+  ],
+  "tags": [
+   "GPU export controls",
+   "NVIDIA Blackwell",
+   "AI model forensics",
+   "China"
+  ],
+  "importance": 4,
+  "id": "d096a8a420fb437e",
+  "url": "https://unemploymentlabs.com/checkpoint-forensics",
+  "source": "Hacker News",
+  "date": "2026-11-12T21:56:11Z",
+  "added": "2026-11-13T06:56:16.117675+00:00"
+ },
+ {
+  "headline": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+  "tldr": "A new framework, Interactive Visual Gym, enables closed-loop evaluation and training of visual interaction models using simulated users and environments, revealing major limitations in current VLMs like Gemini 4 Argon.",
+  "key_points": [
+   "Introduces Interactive Visual Gym for closed-loop benchmarking with 315 scenarios across cooking, household, and mobile UI tasks.",
+   "State-of-the-art VLMs perform poorly: Gemini 4 Argon succeeds on only 53.4% of tasks and suffers from grounding and latency issues.",
+   "Human study shows 78.5% agreement with the interaction-quality metric, validating the evaluation protocol.",
+   "Closed-loop training improves Qwen3.5-4B performance in a cooking environment, demonstrating learning signal utility."
+  ],
+  "why_it_matters": "Closed-loop evaluation better reflects real-world use of visual assistants, exposing critical gaps in current models and guiding future improvements for safer, more reliable AI interaction.",
+  "category": "paper",
+  "companies": [
+   "Google",
+   "Alibaba"
+  ],
+  "tags": [
+   "visual interaction",
+   "benchmark",
+   "VLM",
+   "closed-loop"
+  ],
+  "importance": 3,
+  "id": "ce2f01d6fb8562b6",
+  "url": "https://huggingface.co/papers/2611.08286",
+  "source": "HF Daily Papers",
+  "date": "2026-11-04T19:00:00.000Z",
+  "added": "2026-11-13T06:56:04.488811+00:00"
+ },
+ {
+  "headline": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
+  "tldr": "Introduces a large dataset of 3D scans and egocentric recordings for robot learning, enabling scalable research on physical AI.",
+  "key_points": [
+   "Contains 1,589 metric-scale 3D scans and 4,230 egocentric recordings covering 74 tasks (131 hours).",
+   "Data can be turned into interactive simulation environments and robot trajectories via retargeting and virtual teleoperation.",
+   "Proposes the dataset as a benchmark for studying scaling laws in physical AI.",
+   "Supports closed-loop policy evaluation and improvement for long-horizon, contact-rich tasks."
+  ],
+  "why_it_matters": "Provides the first large‑scale, reusable resource linking real‑world environments with human demonstrations, a critical step toward robust, scalable robot learning and understanding how capabilities grow with data.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "physical AI",
+   "robotics",
+   "datasets",
+   "scaling"
+  ],
+  "importance": 3,
+  "id": "d7b46d3d8c2d7def",
+  "url": "https://huggingface.co/papers/2611.17060",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T06:55:52.328616+00:00"
+ },
+ {
+  "headline": "Factored One-sided Adam-Moment (FOAM) Makes SOAP Optimizer Faster and Cheaper",
+  "tldr": "FOAM cuts SOAP’s memory and compute costs by half while keeping its training speed and validation performance for LLMs.",
+  "key_points": [
+   "FOAM drops the output‑side Kronecker factor, removing an eigendecomposition and halving optimizer‑state memory.",
+   "Uses a factored Adam‑moment estimator that approximates SOAP’s dense second moment with only 15‑20% K‑FAC violation.",
+   "Matches SOAP and Muon baselines on validation loss for models from 124M to 760M parameters, with Muon‑class wall‑clock time."
+  ],
+  "why_it_matters": "Second‑order optimizers promise faster convergence but are too costly for most practitioners; FOAM shows those gains can be achieved with near‑Adam efficiency, potentially accelerating LLM pre‑training at lower hardware cost.",
+  "category": "paper",
+  "companies": [
+   "Naver AI"
+  ],
+  "tags": [
+   "optimizers",
+   "second-order",
+   "LLM training",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "95731083373f2224",
+  "url": "https://huggingface.co/papers/2611.16905",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T06:55:40.178958+00:00"
+ },
+ {
+  "headline": "On the Design of Hyper-Connections: Simplification, Stability, and Scalability",
+  "tldr": "The paper analyzes Hyper-Connections in large language models, proposes SimpleHC that removes residual mixing and uses shared memory, achieving comparable performance with only a 2.4% training overhead increase.",
+  "key_points": [
+   "Identifies learned read/write gating and unconstrained mixing as effective interaction groups.",
+   "Shows repeated access to expanded residual state causes most training overhead.",
+   "Introduces SimpleHC, simplifying architecture by removing residual mixing and using shared gate inputs.",
+   "SimpleHC adds only 2.4% training time over a vanilla residual baseline while matching mHC performance up to 30B parameters.",
+   "Demonstrates smoother gradient dynamics and stability under stress."
+  ],
+  "why_it_matters": "Simplifying Hyper-Connection architectures reduces training costs and complexity, making large‑scale model development more accessible and stable, which can accelerate progress in foundation model research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "hyper-connections",
+   "model-architecture",
+   "efficiency",
+   "scaling"
+  ],
+  "importance": 3,
+  "id": "563f8cc9ef90c4a2",
+  "url": "https://huggingface.co/papers/2611.05984",
+  "source": "HF Daily Papers",
+  "date": "2026-11-03T19:00:00.000Z",
+  "added": "2026-11-13T06:55:28.328149+00:00"
+ },
+ {
+  "headline": "Gemini 4 Hydrogen and Orchestrator",
+  "tldr": "Google launched Gemini 4 Hydrogen and the Orchestrator model routing system in Antigravity, combining Hydrogen with the stronger Gemini 4 Carbon for faster, quota‑efficient long‑horizon tasks.",
+  "key_points": [
+   "Hydrogen and Carbon models paired via new Orchestrator routing",
+   "Orchestrator dynamically switches between models during a task",
+   "Achieves 24% lower quota usage and 19% faster completion on Terminal‑Bench 4.1",
+   "Integrated into Google Antigravity SDK for issue triage and code generation"
+  ],
+  "why_it_matters": "Dynamic model routing lets developers keep high‑quality reasoning while cutting costs and latency, making large‑scale agent‑based workflows more practical for production use.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "Hydrogen",
+   "Orchestrator",
+   "AI agents"
+  ],
+  "importance": 4,
+  "id": "5ab15edc0315d765",
+  "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+  "source": "Hacker News",
+  "date": "2026-11-12T18:52:01Z",
+  "added": "2026-11-13T06:55:16.213570+00:00"
+ },
+ {
+  "headline": "WorldDraft: If Code Builds the World, Can Video Models Just Render It?",
+  "tldr": "The paper introduces WorldDraft, a benchmark for evaluating video models as generative renderers of 4D simulated worlds, revealing trade‑offs between world preservation and visual fidelity and proposing a visual prompting method (WorldDraft‑Primer) to improve performance.",
+  "key_points": [
+   "WorldDraft provides 432 paired test cases across 48 4D world families and six dynamic challenges.",
+   "Evaluations of 12 video models show a tension between preserving world dynamics and achieving appearance fidelity.",
+   "Richer draft scaffolding improves structural consistency but harms visual realism; conflicting cues cause up to 64% source leakage.",
+   "WorldDraft‑Primer, a plug‑and‑play visual prompting strategy, consistently boosts both world preservation and visual realization."
+  ],
+  "why_it_matters": "Bridging programmatic 4D simulation with video generation enables physically grounded generative rendering, a step toward more reliable AI systems that can create realistic visual content from code, impacting fields like virtual production, simulation, and interactive media.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "video-generation",
+   "benchmark",
+   "rendering"
+  ],
+  "importance": 3,
+  "id": "284da35216fbfbbf",
+  "url": "https://huggingface.co/papers/2611.16217",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T06:55:04.593480+00:00"
+ },
+ {
+  "headline": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
+  "tldr": "The paper shows that decision models that perform poorly as actors can still be effective teachers, improving policy performance when used as judges to evaluate actions after episodes.",
+  "key_points": [
+   "Decision models can serve as actors, judges, or teachers in long-horizon tasks.",
+   "Even models that act poorly can boost policy performance when used as judges/teachers.",
+   "JEV as a teacher raised Qwen2.5-1.5B policy success on ALFWorld from 72.8% to 82.9% and on WebShop from 56.8% to 71.4%.",
+   "Evaluation as a judge focuses on whether each action helped achieve subgoals, not just final task success.",
+   "Code and experiments are released publicly on GitHub."
+  ],
+  "why_it_matters": "Understanding the distinct roles of decision models helps improve training pipelines for autonomous agents, enabling better policy learning even when the acting model is suboptimal, which can accelerate development of more reliable AI assistants and robotics systems.",
+  "category": "paper",
+  "companies": [
+   "ZJU-REAL"
+  ],
+  "tags": [
+   "decision-models",
+   "long-horizon",
+   "reinforcement-learning",
+   "policy-teaching"
+  ],
+  "importance": 3,
+  "id": "731431771b9cdea1",
+  "url": "https://huggingface.co/papers/2611.17167",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T06:54:52.325379+00:00"
+ },
+ {
+  "headline": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
+  "tldr": "UniSpark-9B is a 9B‑parameter multimodal model that combines full and linear hybrid attention to handle both visual understanding and generation, achieving strong scores on multimodal benchmarks.",
+  "key_points": [
+   "Hybrid attention mixes full token interaction with GatedDeltaNet linear attention for efficiency.",
+   "Unified model supports VQA, text‑to‑image, instruction‑guided editing, and interleaved text‑image generation.",
+   "Trained on 159.7M generation, 213.4M understanding samples and 624.8K interleaved sequences via a four‑stage curriculum.",
+   "Achieves 2470.3 on MME‑S and 0.83 on GenEval, with image synthesis up to 2K resolution."
+  ],
+  "why_it_matters": "Demonstrates that hybrid attention can serve as an effective backbone for unified multimodal tasks, potentially reducing the need for separate models for understanding and generation and improving efficiency for large‑scale AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "hybrid_attention",
+   "generation",
+   "model"
+  ],
+  "importance": 3,
+  "id": "3c1c091f2df373b8",
+  "url": "https://huggingface.co/papers/2611.16517",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-13T06:54:40.421336+00:00"
+ },
+ {
+  "headline": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+  "tldr": "SO-Arena introduces a comprehensive benchmark that evaluates both the breadth of capabilities and the decision reliability of fast, general‑purpose System One models across multiple domains and tasks.",
+  "key_points": [
+   "Covers 11 domains and five capability families with fine‑grained difficulty criteria.",
+   "Measures decision reliability via stability under option changes and missing‑answer detection.",
+   "Evaluates 21 System One models, showing scaling benefits vary by domain and reliability often diverges from overall accuracy.",
+   "Provides interactive sandbox testing and reasoning‑intensive comparisons.",
+   "Highlights the need to assess capability spectrum and reliability as complementary dimensions."
+  ],
+  "why_it_matters": "Understanding not just how well System One models perform but also how consistently they make reliable decisions is crucial for deploying fast, decision‑making AI in real‑world applications where errors can be costly.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "benchmark",
+   "system_one",
+   "reliability",
+   "capability"
+  ],
+  "importance": 3,
+  "id": "7afe22db314e8f37",
+  "url": "https://huggingface.co/papers/2611.15777",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-13T06:54:28.558852+00:00"
+ },
+ {
+  "headline": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
+  "tldr": "BirdDreams is an autoregressive model that simultaneously generates perspective and bird's-eye-view videos for driving scenes, enabling realistic vehicle motion and ego‑trajectory control without needing HD maps or explicit future trajectories.",
+  "key_points": [
+   "Jointly generates perspective video and BEV video using two diffusion transformers that attend to each other.",
+   "BEV stream provides a geometric, occlusion‑free layout that can be manipulated to follow arbitrary ego trajectories.",
+   "Model produces realistic surrounding‑vehicle behavior and follows ego paths more faithfully than prior world models on PhysicalAI‑AV and nuScenes.",
+   "Operates from a single camera image, eliminating the need for HD maps or vehicle‑state inputs."
+  ],
+  "why_it_matters": "Enabling realistic, controllable driving world simulations from minimal sensor input advances autonomous‑vehicle research and testing, reducing reliance on costly map data and improving safety validation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "driving world model",
+   "video generation",
+   "bird's-eye view",
+   "autonomous vehicles"
+  ],
+  "importance": 3,
+  "id": "059822022bf881cc",
+  "url": "https://huggingface.co/papers/2611.14815",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-13T06:54:16.322488+00:00"
+ },
+ {
+  "headline": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+  "tldr": "Introduces Duo v1, a full‑duplex world model that simultaneously perceives audiovisual inputs and responds in real time using a Reciprocal World Model (RWM) that integrates intent and realization.",
+  "key_points": [
+   "RWM treats intelligence and physical reality as equally fundamental components of a world.",
+   "Duo v1 uses autoregressive modeling, synchronized chunk‑specific tokens, and dual rollout distillation for continuous interaction.",
+   "Supports real‑time audio, video, and text perception, enabling spontaneous conversations, interruptions, and control‑free interactions."
+  ],
+  "why_it_matters": "Enables AI agents that can both observe and act in real time across multiple modalities, moving beyond static world simulations toward truly interactive, embodied AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "world model",
+   "full-duplex",
+   "multimodal",
+   "interactive AI"
+  ],
+  "importance": 3,
+  "id": "2741c921d01961e0",
+  "url": "https://huggingface.co/papers/2611.15131",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-13T06:54:04.855242+00:00"
+ },
+ {
   "headline": "Jensen Huang is out. What did China want from him?",
   "tldr": "Nvidia CEO Jensen Huang resigned amid allegations of an affair with a suspected Chinese spy, prompting an emergency update to coverage.",
   "key_points": [
