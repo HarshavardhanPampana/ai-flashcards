@@ -1,5 +1,1028 @@
 [
  {
+  "headline": "STeP-C: Real-Time Neural Compression for Distributed Fiber-Optic Sensing at Scale",
+  "tldr": "STeP-C introduces a neural compression system that processes high‑rate distributed acoustic sensing data in real time, achieving ~99% size reduction while meeting throughput demands of large‑scale DAS deployments.",
+  "key_points": [
+   "Decouples spatial encoding, temporal prediction, and entropy‑optimized residual coding.",
+   "GPU‑side symbol computation and parallel arithmetic coding enable 535 MB/s throughput.",
+   "Achieves 98.85% file size reduction with 31.04 dB PSNR on live 81 km DAS streams.",
+   "Outperforms traditional codecs and works on unseen channel ranges without retraining.",
+   "Maintains downstream detection quality (96.62% class agreement, 100% Jaccard similarity)."
+  ],
+  "why_it_matters": "Real‑time compression of massive DAS data streams removes a major bottleneck for large‑scale fiber‑optic monitoring, enabling continuous, high‑resolution sensing for applications like seismic monitoring, infrastructure health, and security without prohibitive storage or bandwidth costs.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "neural compression",
+   "fiber-optic sensing",
+   "real-time",
+   "distributed acoustic sensing"
+  ],
+  "importance": 3,
+  "id": "ec2b5ac6e56a6ff8",
+  "url": "https://arxiv.org/abs/2611.17126v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:20:49Z",
+  "added": "2026-11-14T18:21:42.342807+00:00"
+ },
+ {
+  "headline": "Support-Constrained Offline Policy Improvement for Pediatric ECMO from Limited Clinical Data",
+  "tldr": "A new offline RL method (FQI‑SC) safely improves clinician policies for pediatric ECMO, boosting a safety‑balanced score by 38% and reducing risky actions.",
+  "key_points": [
+   "Introduces Support-Constrained Fitted Q‑Iteration (FQI‑SC) to limit policy updates to well‑supported state‑action pairs.",
+   "Evaluated on 78 pediatric ECMO trajectories (~6,000 hours), showing a 38% increase in the Balance Score versus standard FQI.",
+   "Achieves 1.28 FQE units higher value than imitation learning and cuts disagreement with clinicians by 71% relative to FQI.",
+   "Provides a unified safety‑performance metric (Balance Score) for offline RL in high‑risk medical settings."
+  ],
+  "why_it_matters": "Demonstrates how offline reinforcement learning can be safely applied to critical care, offering a path to improve treatment decisions without risking patient safety, and sets a benchmark for AI‑assisted medical policy learning.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "offline_rl",
+   "healthcare",
+   "pediatric_ecmo",
+   "policy_improvement"
+  ],
+  "importance": 3,
+  "id": "60701631dbd5072b",
+  "url": "https://arxiv.org/abs/2611.17134v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:26:01Z",
+  "added": "2026-11-14T18:21:30.364287+00:00"
+ },
+ {
+  "headline": "A Convex-Analytic Reformulation for Poisoning Attacks on Logistic Regression",
+  "tldr": "The paper presents a convex-analytic reformulation of data‑poisoning attacks on L2‑regularized logistic regression, turning the attacker’s problem into a concave objective with only bounded bilinear constraints, and shows it yields stronger dual bounds than local optimization.",
+  "key_points": [
+   "Uses strong convexity and convex conjugacy to derive an exact reformulation of the poisoning attack problem.",
+   "Transforms sigmoid relations into a single convex optimality‑gap inequality and makes stationarity affine.",
+   "Leaves only bounded bilinear equalities as nonconvex constraints, enabling tighter global bounds.",
+   "Experiments on eight binary classification datasets show the convex‑analytic formulation outperforms local optimization in attack strength and dual bounds."
+  ],
+  "why_it_matters": "Provides a more powerful and theoretically grounded method for evaluating and defending against data‑poisoning attacks on widely used logistic regression models, advancing security research in machine learning.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "poisoning attacks",
+   "logistic regression",
+   "convex optimization",
+   "machine learning security"
+  ],
+  "importance": 3,
+  "id": "37478186fc539f28",
+  "url": "https://arxiv.org/abs/2611.17143v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:30:34Z",
+  "added": "2026-11-14T18:21:18.937085+00:00"
+ },
+ {
+  "headline": "Maximizing Capacity Utilization of LoRA Adapters for Mitigating the Learning-Forgetting Trade-off",
+  "tldr": "A new regularizer boosts the effective rank of LoRA adapters, improving perplexity and reducing forgetting in continual fine‑tuning.",
+  "key_points": [
+   "Standard LoRA updates often use far lower effective rank than configured, limiting capacity.",
+   "Introducing a differentiable Rényi‑2 effective‑rank regularizer raises effective rank without harming training loss.",
+   "Across multiple models and ranks (≥16), the method consistently lowers Wiki perplexity and improves retention.",
+   "The approach complements existing LoRA variants and works in mixed‑domain and scheduling scenarios."
+  ],
+  "why_it_matters": "Enhancing LoRA’s capacity utilization narrows the gap with full fine‑tuning, making parameter‑efficient adaptation more reliable for heterogeneous and continual‑learning tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LoRA",
+   "effective rank",
+   "continual learning",
+   "parameter-efficient fine-tuning"
+  ],
+  "importance": 3,
+  "id": "af6f2d174a9a7526",
+  "url": "https://arxiv.org/abs/2611.17191v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:55:33Z",
+  "added": "2026-11-14T18:21:07.122969+00:00"
+ },
+ {
+  "headline": "Physically Interpretable Basin Selection in Discrete-Variable Origami Design",
+  "tldr": "Gradient-based design of origami mechanisms struggles with discrete hinge choices, but a simple initialization bias toward stiff hinges raises successful discrete solutions from 49% to 69%, and loss penalties boost it to 78%.",
+  "key_points": [
+   "Automatic differentiation works well for continuous design but falters with discrete hinge types.",
+   "Baseline gradient optimization solves 97% of continuous relaxations but only 49% of final discrete designs.",
+   "A uniform prior favoring stiff, flat hinges improves discrete solve rate to 69% without extra compute.",
+   "Adding penalties for frustration and floppiness further raises success to 78%.",
+   "Physical signatures of basins can guide initialization to avoid unfavorable solutions."
+  ],
+  "why_it_matters": "Shows how simple biasing strategies can close the gap between continuous relaxations and discrete realizations in mechanical design, informing future optimization pipelines for robotics, metamaterials, and other engineered systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "origami",
+   "mechanical design",
+   "optimization",
+   "discrete variables"
+  ],
+  "importance": 2,
+  "id": "d10e605ceb8f0f65",
+  "url": "https://arxiv.org/abs/2611.17196v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:59:43Z",
+  "added": "2026-11-14T18:20:54.364067+00:00"
+ },
+ {
+  "headline": "MALNISI-Infused Graph Construction and Weighted Contrastive Loss based GAT for Unsupervised Representation Learning in HSI",
+  "tldr": "Introduces MALNISI index to build weighted graphs for hyperspectral images, upgrades GAT with MALNISI‑weighted attention, and adds a neighborhood‑aware contrastive loss for better unsupervised representation learning.",
+  "key_points": [
+   "MALNISI measures pixel similarity using local neighborhood information and creates a weighted adjacency matrix.",
+   "Enhanced Graph Attention Network incorporates MALNISI weights in multi‑head attention and uses residuals, skip connections, and normalization.",
+   "Weighted contrastive loss leverages MALNISI to keep strongly connected pixels close in latent space.",
+   "Achieves superior performance on six benchmark HSI datasets compared to 14 state‑of‑the‑art methods."
+  ],
+  "why_it_matters": "Improves unsupervised learning for hyperspectral imaging, enabling more accurate land‑use classification without costly labeled data, and demonstrates the value of graph‑based methods with domain‑specific similarity metrics.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "hyperspectral imaging",
+   "graph neural networks",
+   "contrastive learning",
+   "unsupervised representation"
+  ],
+  "importance": 2,
+  "id": "0aee2a94cb78ad39",
+  "url": "https://arxiv.org/abs/2611.17199v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:02:53Z",
+  "added": "2026-11-14T18:20:42.252461+00:00"
+ },
+ {
+  "headline": "Introducing Feedback Delays to Non-Delayed Adversarial MDPs: Optimal \\sqrt S and \\sqrt K Dependencies in Tabular and Linear AMDPs",
+  "tldr": "The paper presents a new technique—introduced feedback delays—that enables optimal regret bounds for adversarial MDPs, achieving \\tilde O(\\sqrt{SAK}) in tabular settings and \\tilde O(\\sqrt K) in linear settings, resolving long‑standing gaps.",
+  "key_points": [
+   "Proposes voluntarily introduced feedback delays to estimate Q‑functions despite policy changes.",
+   "Develops Geometric Resampling with Rejection (GRR) to handle policy shifts during delays.",
+   "Achieves optimal \\tilde O(\\sqrt{SAK}) regret in tabular AMDPs, closing the \\sqrt S gap.",
+   "Achieves optimal \\tilde O(\\sqrt K) regret in linear AMDPs, the first efficient K‑optimal algorithm.",
+   "Extends results to delayed AMDPs, providing optimal bounds in both state size and total delay."
+  ],
+  "why_it_matters": "Regret minimization is central to reinforcement learning; closing the theoretical gaps for adversarial MDPs improves our understanding of optimal learning rates and informs the design of more efficient, robust RL algorithms for complex, non‑stationary environments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "adversarial_mdp",
+   "regret_bounds",
+   "online_learning"
+  ],
+  "importance": 3,
+  "id": "4495b5019a891c25",
+  "url": "https://arxiv.org/abs/2611.17214v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:10:46Z",
+  "added": "2026-11-14T18:20:30.687184+00:00"
+ },
+ {
+  "headline": "Combinatorial Bernoulli Factories with Polynomially Many Coins",
+  "tldr": "The paper presents an efficient algorithm for combinatorial Bernoulli factories that generates random vertices of certain polytopes using a polynomial number of coin flips, improving dramatically over previous methods for cases like perfect matchings.",
+  "key_points": [
+   "Provides a single algorithm for all affine slices of the cube with expected runtime polynomial in dimension and 1/δ*.",
+   "Achieves O(n⁸ δ*⁻² log(n/δ*)) flips for perfect matchings, far better than the prior n^{2n-1} bound.",
+   "Works without needing the δ* parameter as input, requiring only that the bias vector lies deep inside the polytope.",
+   "Extends to other polytopes under a promise that the input point is far from the boundary."
+  ],
+  "why_it_matters": "Efficient Bernoulli factories enable practical sampling from complex combinatorial structures, which is crucial for randomized algorithms, statistical physics simulations, and probabilistic inference tasks that rely on exact distributional guarantees.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Bernoulli factories",
+   "polytopes",
+   "randomized algorithms",
+   "theory"
+  ],
+  "importance": 3,
+  "id": "f7713d0adf738d8a",
+  "url": "https://arxiv.org/abs/2611.17223v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:19:37Z",
+  "added": "2026-11-14T18:20:18.257491+00:00"
+ },
+ {
+  "headline": "Data Archive for 2D and 3D Electrical Impedance Tomography with Moderate Conductivity Contrast Phantoms",
+  "tldr": "Open EIT measurement dataset and code released for 2D and 3D image reconstruction research.",
+  "key_points": [
+   "Includes 2D thoracic and 3D head-shaped phantom measurements.",
+   "Provides computational meshes, example reconstruction code, and sample images.",
+   "Collected using KIT4 and KIT5 devices at the University of Eastern Finland.",
+   "Targets algorithm development and benchmarking for EIT."
+  ],
+  "why_it_matters": "Provides the community with standardized, high‑quality data to develop and compare EIT reconstruction algorithms, accelerating research and clinical translation.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "EIT",
+   "dataset",
+   "biomedical imaging",
+   "reconstruction"
+  ],
+  "importance": 2,
+  "id": "89670025d1fc0e7c",
+  "url": "https://arxiv.org/abs/2611.17225v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:19:41Z",
+  "added": "2026-11-14T18:20:08.417171+00:00"
+ },
+ {
+  "headline": "Sheaf-Inspired Structured Scoring Extensions of LightGCN for Collaborative Filtering",
+  "tldr": "A modular, sheaf-inspired scoring layer is added to LightGCN for recommendation, showing modest, dataset‑dependent ranking changes and sometimes large coverage shifts.",
+  "key_points": [
+   "Introduces structured, pair‑dependent transformations of user/item embeddings atop a three‑layer LightGCN.",
+   "Evaluates identity, diagonal, rank‑one, full‑matrix residual scorers and a matched MLP baseline on four datasets.",
+   "Finds modest, dataset‑specific ranking improvements but notable variations in catalog coverage.",
+   "Method draws inspiration from cellular sheaves but does not implement sheaf‑Laplacian diffusion."
+  ],
+  "why_it_matters": "Explores a novel way to enhance collaborative filtering without altering graph propagation, offering insights into how structured scoring can affect recommendation quality and coverage.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "collaborative-filtering",
+   "graph-neural-networks",
+   "recommendation-systems",
+   "sheaf-geometry"
+  ],
+  "importance": 2,
+  "id": "aee2db4029bdc238",
+  "url": "https://arxiv.org/abs/2611.17226v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:20:22Z",
+  "added": "2026-11-14T18:19:54.241974+00:00"
+ },
+ {
+  "headline": "Linear Regression with Self-Selection Bias Solved in Polynomial Time",
+  "tldr": "Authors present a polynomial‑time algorithm for estimating multiple linear regressors under self‑selection bias, removing the exponential dependence on the number of regressors present in prior work.",
+  "key_points": [
+   "Provides a poly(n,k,1/ε) algorithm for the unknown‑index variant of the problem.",
+   "Handles correlated noise, covering the max‑affine regression setting.",
+   "Uses Hermite moment analysis and tensor decomposition to recover regressors.",
+   "Improves on previous exponential‑time methods from Gaitonde‑Mossel and others."
+  ],
+  "why_it_matters": "Efficiently learning linear models with selection bias is crucial for many econometric and causal inference tasks; a polynomial‑time solution opens the door to scalable applications and inspires new techniques for related latent‑variable problems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "linear regression",
+   "self-selection bias",
+   "tensor decomposition",
+   "algorithm"
+  ],
+  "importance": 3,
+  "id": "9b544368c2c56691",
+  "url": "https://arxiv.org/abs/2611.17228v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:21:11Z",
+  "added": "2026-11-14T18:19:42.357858+00:00"
+ },
+ {
+  "headline": "Al-Ghasali: A Computational Framework for Simulating Islamic Jurisprudential Rulings via Finite State Automata and Large Language Models",
+  "tldr": "The paper introduces Al‑Ghasali, a system that models Islamic legal rulings as deterministic finite‑state automata and uses LLMs under strict control to generate human‑readable summaries without hallucination.",
+  "key_points": [
+   "Fiqh chapters can be reduced to deterministic FSAs, enabling O(1) verdict extraction.",
+   "Hierarchical composition of sub‑chapter FSAs preserves constant‑time decision making.",
+   "LLM output is constrained by a grammar‑guided decoding mechanism to prevent hallucination.",
+   "Formal safety conditions ensure the LLM only transforms deterministic juristic facts."
+  ],
+  "why_it_matters": "Demonstrates a novel way to combine formal symbolic reasoning with LLMs for high‑stakes domains, offering provable guarantees against AI hallucination in legal/religious decision support.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "finite_state_automata",
+   "jurisprudence",
+   "LLM",
+   "formal_methods"
+  ],
+  "importance": 2,
+  "id": "3b0f28bc12a6e3ed",
+  "url": "https://arxiv.org/abs/2611.17235v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:23:56Z",
+  "added": "2026-11-14T18:19:30.240492+00:00"
+ },
+ {
+  "headline": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
+  "tldr": "The paper introduces Negative-Only Policy Optimization (NOPO), a method that updates RL policies by suppressing verified negative outcomes while treating unverified positives as unlabeled, improving performance on code, logic, and math tasks when full verification is unavailable.",
+  "key_points": [
+   "Defines one-sided verifiability (OSV) where only negative outcomes can be reliably verified.",
+   "Proposes NOPO, which uses a reference-relative negative suppression loss and a group-level scaling adapter.",
+   "Demonstrates improved pass@k on multiple benchmarks (code, logic, math) without oracle rewards.",
+   "Shows robustness across inference-time scaling and cross‑benchmark transfer."
+  ],
+  "why_it_matters": "Many real‑world AI systems lack perfect verification; NOPO offers a practical way to train reliable models using only cheap negative checks, expanding the applicability of reinforcement learning with verifiable rewards.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "verifiable_rewards",
+   "negative_optimization",
+   "benchmarking"
+  ],
+  "importance": 3,
+  "id": "c90b67eab9aeb8d9",
+  "url": "https://arxiv.org/abs/2611.17287v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:52:33Z",
+  "added": "2026-11-14T18:19:18.306227+00:00"
+ },
+ {
+  "headline": "Goal Encoding in LLMs",
+  "tldr": "Researchers discover that large language models encode upcoming sub-goals in specific attention heads, enabling goal‑directed behavior and showing causal, transferable representations.",
+  "key_points": [
+   "A sparse set of attention heads encodes the next sub-goal during multi‑step tasks.",
+   "These encodings can be decoded to predict the model's future actions in natural language.",
+   "Transplanting the encoding to different environments triggers analogous behavior with new token sequences.",
+   "The model repeatedly rereads the task specification to maintain goal information without recurrent state."
+  ],
+  "why_it_matters": "Understanding how LLMs internally represent goals sheds light on their planning abilities, informs safer alignment techniques, and opens avenues for controllable AI behavior across tasks and domains.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "goal_encoding",
+   "attention_heads",
+   "LLM_planning",
+   "causal_intervention"
+  ],
+  "importance": 3,
+  "id": "3c869f7e786db78c",
+  "url": "https://arxiv.org/abs/2611.17297v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:55:06Z",
+  "added": "2026-11-14T18:19:06.005005+00:00"
+ },
+ {
+  "headline": "Consistent Video-to-Video Translation via Explicit Correspondences",
+  "tldr": "The paper introduces vid2vid-long, a method that uses patch-level correspondences to improve long-range temporal consistency in real-time video-to-video translation without sacrificing speed.",
+  "key_points": [
+   "Computes patch-level correspondences in the input video to guide output generation.",
+   "Uses correspondence cross-attention to retrieve and condition on previously generated frames.",
+   "Improves long-range temporal consistency across existing video models while maintaining real-time performance.",
+   "Demonstrated consistent gains in quality and consistency in experiments."
+  ],
+  "why_it_matters": "Ensuring temporal consistency over long video sequences is crucial for realistic video synthesis in interactive applications such as virtual production, gaming, and live streaming, where latency constraints limit the use of large context windows.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video-to-video",
+   "temporal consistency",
+   "real-time",
+   "cross-attention"
+  ],
+  "importance": 3,
+  "id": "2867ce4c38e61b91",
+  "url": "https://arxiv.org/abs/2611.17298v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:55:09Z",
+  "added": "2026-11-14T18:18:54.296131+00:00"
+ },
+ {
+  "headline": "Linking Rapid Learning to Compositional Structure in Neural Networks: Evidence from Additive Analogies in Meta-Learned Parameter Spaces",
+  "tldr": "Meta‑learned networks organize their parameters so that additive manipulations of function‑representation vectors produce new networks that implement the expected functions, revealing a geometric basis for rapid learning.",
+  "key_points": [
+   "Meta‑learning creates a parameter space where each function is represented by a single vector.",
+   "These vectors exhibit additive relationships analogous to word‑embedding analogies (e.g., f1 – f2 + f3).",
+   "Recombined vectors generate networks that correctly perform the predicted functions without additional training.",
+   "Findings suggest meta‑learning induces systematic, functionally meaningful trajectories in parameter space."
+  ],
+  "why_it_matters": "Understanding how meta‑learning structures parameter space provides insight into the inductive biases that enable rapid adaptation, potentially guiding the design of more efficient, flexible AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "meta-learning",
+   "rapid learning",
+   "compositionality",
+   "parameter space"
+  ],
+  "importance": 3,
+  "id": "1e67e9bdd27cf09d",
+  "url": "https://arxiv.org/abs/2611.17314v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:57:49Z",
+  "added": "2026-11-14T18:18:42.082180+00:00"
+ },
+ {
+  "headline": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+  "tldr": "CoReMem introduces a framework that lets coding agents evaluate and store memory based on its future usefulness, improving task resolution rates and efficiency on successive coding tasks.",
+  "key_points": [
+   "Memory selection is guided by prospective valuation of future task benefit versus write/read costs.",
+   "Actor adaptation estimates on‑policy memory value using reward that balances resolution success and step count.",
+   "On the ChainSWE benchmark, a 27B actor with CoReMem improves resolve rate to 25.7% (up 4.7 pts) and reduces steps and token usage.",
+   "Memory is organized around anchors—repository locations and executable checks—enabling compact, actionable storage."
+  ],
+  "why_it_matters": "Efficient memory management enables coding agents to handle evolving codebases with less computational overhead, advancing the practicality of autonomous software development systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "coding agents",
+   "memory management",
+   "AI research",
+   "software engineering"
+  ],
+  "importance": 3,
+  "id": "0ca25edadd1d7b98",
+  "url": "https://arxiv.org/abs/2611.17316v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:58:22Z",
+  "added": "2026-11-14T18:18:30.293196+00:00"
+ },
+ {
+  "headline": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+  "tldr": "Agents can automatically design semi‑supervised learning pipelines, beating human baselines in most settings, but program selection remains a major bottleneck.",
+  "key_points": [
+   "Agents treat SSL as a program search problem and generate code combining existing techniques.",
+   "Outperform strongest human‑engineered baselines in 8 of 12 experiments, up to +21.8% improvement.",
+   "Performance drops up to 47% when program selection relies on the agent's own feedback metric.",
+   "Introduces ProgramSelectBench with 16,977 agent‑generated and human‑engineered SSL programs.",
+   "Demonstrates applicability on real‑world ecology detection tasks."
+  ],
+  "why_it_matters": "Shows that AI agents can automate the creation of effective semi‑supervised learning pipelines, reducing reliance on large labeled datasets, but also highlights the need for better program selection methods to fully realize this potential.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "semi-supervised learning",
+   "autoML",
+   "program synthesis",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "5551097f06d87d76",
+  "url": "https://arxiv.org/abs/2611.17323v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:59:06Z",
+  "added": "2026-11-14T18:18:18.618285+00:00"
+ },
+ {
+  "headline": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+  "tldr": "A continuous-action neurosymbolic reinforcement learning method learns to obey investment policy constraints, cutting mandate violations from >96% to 4.8% without post‑hoc corrections.",
+  "key_points": [
+   "Extends Probabilistic Logic Policy Gradient to continuous action spaces using reparameterized Monte Carlo sampling.",
+   "Adds a compliance probability term to the RL objective, enabling the agent to internalize symbolic mandates.",
+   "Reduces rule violations from 96‑98% (unconstrained RL) and 33.4% (reward‑penalty baseline) to 4.8% on a six‑rule regime‑conditional mandate.",
+   "Evaluated on deterministic mean actions, showing compliance without any inference‑time correction."
+  ],
+  "why_it_matters": "Demonstrates that RL agents can be trained to respect real‑world regulatory and policy constraints in finance, paving the way for safer deployment of AI‑driven portfolio managers.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "neurosymbolic",
+   "finance",
+   "portfolio_allocation"
+  ],
+  "importance": 2,
+  "id": "e5dc97b072d734e3",
+  "url": "https://arxiv.org/abs/2611.17329v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:59:37Z",
+  "added": "2026-11-14T18:18:06.088287+00:00"
+ },
+ {
+  "headline": "Building a Local AI Photography Editing Assistant – Community Inquiry",
+  "tldr": "A Reddit user asks how to create a local AI system that can understand and execute professional photo‑editing workflows in Photoshop and Lightroom using vision‑language models and automation.",
+  "key_points": [
+   "Goal: automate advanced landscape and portrait editing (exposure blending, masks, color grading, etc.) via a local AI assistant.",
+   "Hardware: RTX 5060 8 GB GPU, 64 GB RAM, Adobe Creative Cloud All Apps.",
+   "Proposed tech stack: local vision‑language models, Python/OpenCV, Photoshop UXP automation, and a tutorial knowledge base.",
+   "Questions: existing open‑source projects, feasibility of LLM + CV for editing, prior integrations with Adobe software."
+  ],
+  "why_it_matters": "If successful, such a tool could streamline complex editing tasks for professionals, reduce manual effort, and showcase practical, privacy‑preserving AI applications on consumer hardware.",
+  "category": "other",
+  "companies": [
+   "Adobe"
+  ],
+  "tags": [
+   "AI",
+   "photography",
+   "automation",
+   "local_models"
+  ],
+  "importance": 2,
+  "id": "addbdf4c8c865584",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvzkwz/building_a_local_ai_photography_editing_assistant/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T10:51:23+00:00",
+  "added": "2026-11-14T18:17:54.168065+00:00"
+ },
+ {
+  "headline": "Great Video for Understanding How Cosine Similarity Works",
+  "tldr": "A video explains dot products algebraically and geometrically, then derives cosine similarity and its use with embeddings.",
+  "key_points": [
+   "Covers dot product from algebraic and geometric perspectives",
+   "Derives cosine similarity formula step‑by‑step",
+   "Shows how cosine similarity measures similarity between embedding vectors",
+   "Provides visual intuition for the concept"
+  ],
+  "why_it_matters": "Understanding cosine similarity is fundamental for working with vector embeddings in NLP, recommendation systems, and many AI applications, helping practitioners evaluate similarity and retrieve relevant items effectively.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "cosine_similarity",
+   "embeddings",
+   "education",
+   "machine_learning"
+  ],
+  "importance": 2,
+  "id": "9b71478483e124db",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw0dgg/great_video_for_understanding_how_cosine/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T11:39:39+00:00",
+  "added": "2026-11-14T18:17:43.380224+00:00"
+ },
+ {
+  "headline": "Graph Attention Networks for Detecting Epilepsy From EEG Signals Using Accessible Hardware in Low-Resource Settings [R]",
+  "tldr": "A study proposes using graph attention networks on EEG data to detect epilepsy with affordable hardware for low‑resource environments.",
+  "key_points": [
+   "Applies graph attention networks to EEG signal analysis",
+   "Targets epilepsy detection",
+   "Emphasizes use of accessible, low‑cost hardware",
+   "Focuses on deployment in low‑resource settings"
+  ],
+  "why_it_matters": "If successful, the approach could enable affordable, real‑time epilepsy monitoring in regions lacking advanced medical infrastructure, improving diagnosis and treatment accessibility.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "graph_attention",
+   "EEG",
+   "epilepsy_detection",
+   "low_resource"
+  ],
+  "importance": 2,
+  "id": "43282e5a0fec5cbc",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw3si8/graph_attention_networks_for_detecting_epilepsy/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T14:31:29+00:00",
+  "added": "2026-11-14T18:17:30.016140+00:00"
+ },
+ {
+  "headline": "Ethical Alternatives to Kaggle Competitions Discussed on r/MachineLearning",
+  "tldr": "A Reddit user argues against mandatory biometric verification for competition entry and asks for ethical alternatives to Kaggle-style contests.",
+  "key_points": [
+   "Biometric verification requirement seen as unethical",
+   "Concern over using controversial vendors for identity checks",
+   "Call for competition platforms that allow SOTA model experimentation without invasive verification",
+   "Community discussion on possible alternatives"
+  ],
+  "why_it_matters": "Highlights growing concerns about privacy and ethics in AI competition platforms, prompting the community to consider more inclusive and less invasive ways to foster AI research.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "ethics",
+   "competitions",
+   "privacy",
+   "AI community"
+  ],
+  "importance": 1,
+  "id": "8184825aa8cdb620",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw6d7n/ethical_alternatives_to_kaggle_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T16:20:55+00:00",
+  "added": "2026-11-14T18:17:18.092055+00:00"
+ },
+ {
+  "headline": "Is it compulsory to upload NeurIPS poster by 15th Nov?",
+  "tldr": "A Reddit user asks whether the NeurIPS conference requires posters to be uploaded by the November 15 deadline.",
+  "key_points": [
+   "NeurIPS sent an email requesting poster and thumbnail uploads.",
+   "The email specifies a deadline of 15 November.",
+   "The user seeks clarification on whether the upload is mandatory.",
+   "No official policy excerpt is provided in the post."
+  ],
+  "why_it_matters": "Understanding conference submission requirements helps researchers avoid missing mandatory deliverables that could affect paper acceptance or presentation opportunities.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "NeurIPS",
+   "conference",
+   "submission",
+   "poster"
+  ],
+  "importance": 1,
+  "id": "b6d1a63a9907798c",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw3q5f/is_it_compulsory_to_upload_neurips_poster_by_15th/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T14:28:42+00:00",
+  "added": "2026-11-14T18:17:06.282193+00:00"
+ },
+ {
+  "headline": "Joint Null-Space Projection Enables Data-Free Merging of Fine-Tuned Models",
+  "tldr": "A new closed-form method, Joint Null-Space Projection (JNSP), merges independently fine‑tuned checkpoints without data, achieving up to 89.45% accuracy on CLIP tasks—significantly outperforming existing training‑free baselines.",
+  "key_points": [
+   "JNSP removes interference by projecting task deltas onto the null space of other tasks' top‑r singular subspaces.",
+   "No forward passes or gradient steps are required; the method is order‑independent and defined solely by the checkpoints.",
+   "On eight CLIP image‑classification tasks, JNSP reaches 89.45% average accuracy, 11.88 points above TIES‑Merging and 0.98 above the best prior data‑free merge.",
+   "Results hold across multiple ViT backbones; on RoBERTa-large the method underperforms task arithmetic."
+  ],
+  "why_it_matters": "Provides a practical, data‑free way to combine specialized models into a single multi‑task model, reducing storage and inference costs while preserving performance, which is valuable for deploying AI in privacy‑sensitive or resource‑constrained environments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "model_merging",
+   "data_free",
+   "transfer_learning",
+   "vision"
+  ],
+  "importance": 3,
+  "id": "a5d24378bb623512",
+  "url": "https://arxiv.org/abs/2611.17103v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:01:39Z",
+  "added": "2026-11-14T18:16:54.146866+00:00"
+ },
+ {
+  "headline": "LazyWeights: Decode-on-Demand Edge LLMs",
+  "tldr": "LazyWeights compresses LLM weights with Huffman coding and decodes them on demand, achieving 5.7‑31.4% size reduction and up to 36% lower latency/energy on edge devices.",
+  "key_points": [
+   "Tuned GPTQ compression + Huffman coding yields smaller weight files (5.7‑31.4% reduction).",
+   "On‑chip decoder unit (0.21 mm², 1 GHz, 7 nm) cuts token latency by up to 36% and energy by up to 38% on Jetson Orin.",
+   "On Jetson Nano, inference time drops 58‑64% and energy 53‑57% versus CPU llama.cpp.",
+   "Supports Phi‑3‑mini, Mistral‑7B, SmolLM‑1.7B with 1%‑3.5% perplexity budgets.",
+   "ASIC decoder outperforms rANS decoder and runs bit‑exact on a Zynq UltraScale+ FPGA."
+  ],
+  "why_it_matters": "Enables more powerful LLMs to run on low‑cost edge hardware by reducing memory bandwidth and energy needs, expanding AI capabilities to devices with limited resources.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA",
+   "AMD"
+  ],
+  "tags": [
+   "edge AI",
+   "LLM compression",
+   "ASIC",
+   "Huffman coding"
+  ],
+  "importance": 3,
+  "id": "08ed48a4f285636e",
+  "url": "https://arxiv.org/abs/2611.17108v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:03:40Z",
+  "added": "2026-11-14T18:16:42.243029+00:00"
+ },
+ {
+  "headline": "SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models",
+  "tldr": "SALA aligns latent actions from unpaired human and robot videos using language‑based semantic similarity, creating a shared latent space that improves training efficiency and boosts real‑world robot task success.",
+  "key_points": [
+   "Uses language descriptions to estimate semantic similarity between human and robot clips without paired data.",
+   "Guides human latent actions toward semantically related robot latents while grounding robot actions in control.",
+   "Enables scaling by pre‑training on more general human video and fine‑tuning on task‑specific human video.",
+   "Reduces robot action prediction error and increases real‑world task success rates."
+  ],
+  "why_it_matters": "By leveraging abundant egocentric human video, SALA reduces the costly data collection burden for embodied AI, offering a more efficient path to high‑performing robot policies and accelerating the development of generalist embodied foundation models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "embodied_ai",
+   "latent_actions",
+   "cross_modal",
+   "scaling"
+  ],
+  "importance": 3,
+  "id": "897a171ce7d5e53b",
+  "url": "https://arxiv.org/abs/2611.17110v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:04:50Z",
+  "added": "2026-11-14T18:16:30.261029+00:00"
+ },
+ {
+  "headline": "Estimating Required Size of 2nd‑Gen DNA‑Encoded Library for High‑Resolution Binding Models",
+  "tldr": "A new method predicts how large a second‑generation DEL must be to provide dense sampling and enough tight binders for accurate ML binding models, using an energy‑pixels framework.",
+  "key_points": [
+   "Binding modeled as independent target‑ligand interaction pixels.",
+   "Method converts needed number of tight binders into required library size.",
+   "Provides baseline yield estimate for randomly designed 2nd‑gen DELs.",
+   "Enables measurement of ML‑guided library design gains without huge control libraries."
+  ],
+  "why_it_matters": "Accurate ML models for DEL data can dramatically speed hit‑to‑lead optimization; knowing the minimal library size prevents wasteful synthesis while ensuring model fidelity.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "DNA‑encoded libraries",
+   "machine learning",
+   "binding affinity",
+   "library design"
+  ],
+  "importance": 3,
+  "id": "8f4dec0686b7ad5f",
+  "url": "https://arxiv.org/abs/2611.17121v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:13:57Z",
+  "added": "2026-11-14T18:16:17.934527+00:00"
+ },
+ {
+  "headline": "Parameter-Efficient Conciseness Adaptation: Differentiable Length Control for Concise Clinical Reasoning in Smaller Language Models",
+  "tldr": "PECA adds a differentiable conciseness term to QLoRA fine‑tuning, cutting response length by ~73% on a 1.7B clinical model while boosting diagnostic accuracy to 44%.",
+  "key_points": [
+   "Introduces a single conciseness term to the supervised fine‑tuning loss.",
+   "Works without preference data, reward models, or auxiliary teachers.",
+   "Reduces mean response length by 72.8% and improves multiple‑choice accuracy from 40.8% to 44.0% on a 1.7B model.",
+   "Requires only a single commodity GPU for training."
+  ],
+  "why_it_matters": "Short, accurate answers are critical for point‑of‑care clinical decision support, and the method makes efficient length control accessible for smaller, deployable models without extra infrastructure.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "conciseness",
+   "clinical NLP",
+   "parameter-efficient",
+   "SLM"
+  ],
+  "importance": 3,
+  "id": "f56b78634e1495d6",
+  "url": "https://arxiv.org/abs/2611.17128v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:21:12Z",
+  "added": "2026-11-14T18:16:06.349902+00:00"
+ },
+ {
+  "headline": "Paper-Faithful Federated Learning: Scientific Checks for Practitioner and Agent Development",
+  "tldr": "FedBrew is a new open-source codebase that adds systematic checks to ensure federated learning experiments follow their intended protocols, improving reproducibility and reliability.",
+  "key_points": [
+   "Provides configuration, data partition, and checkpoint recovery checks",
+   "Ensures client partitions are disjoint and aggregation weights are correct",
+   "Generates self‑describing run records for transparent reporting",
+   "Offers extension points for new algorithms, datasets, and models",
+   "Targets both human researchers and AI coding agents"
+  ],
+  "why_it_matters": "Federated learning results can be misleading due to subtle implementation errors; FedBrew's checks help prevent false conclusions and promote trustworthy research, which is critical as FL moves toward real‑world deployments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "federated_learning",
+   "reproducibility",
+   "research_tools",
+   "open_source"
+  ],
+  "importance": 3,
+  "id": "06239ace7a0c3fa4",
+  "url": "https://arxiv.org/abs/2611.17129v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:22:17Z",
+  "added": "2026-11-14T18:15:54.050283+00:00"
+ },
+ {
+  "headline": "Enhancing Preference Detection using Eye Movement Cascade and Multilayer Combinatorial Fusion",
+  "tldr": "A new Multi-layer Combinatorial Fusion (MCF) framework combines diverse eye‑tracking models to better predict human preferences, boosting accuracy from 0.90 to 0.9286.",
+  "key_points": [
+   "Analyzes eye‑tracking data of subjects choosing between face image pairs.",
+   "Applies multiple classifiers within the MCF framework to iteratively fuse models.",
+   "Second‑layer fusion outperforms the best single model, achieving Pre@k = 0.9286.",
+   "Demonstrates that cognitive diversity in model ensembles improves preference prediction."
+  ],
+  "why_it_matters": "Improved preference detection can enhance consumer behavior research, personalized marketing, and human‑computer interaction by leveraging subtle visual attention cues.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "eye-tracking",
+   "preference detection",
+   "model fusion",
+   "cognitive diversity"
+  ],
+  "importance": 2,
+  "id": "7734958975b57fd7",
+  "url": "https://arxiv.org/abs/2611.17145v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:31:50Z",
+  "added": "2026-11-14T18:15:42.541409+00:00"
+ },
+ {
+  "headline": "Cited but Unused: Parametric Provenance in Retrieval-Augmented Generation",
+  "tldr": "The paper shows that retrieval‑augmented generation models often cite sources they didn't actually use, with up to 15.7% of claims coming from the model's own memory, and that standard verification methods fail to detect this.",
+  "key_points": [
+   "Counterfactual value substitution reveals 1.2%‑15.7% of citable claims stem from parametric memory.",
+   "Standard NLI‑based verification performs no better than chance at detecting false provenance.",
+   "Larger models within a family exhibit higher rates of memory‑based citations.",
+   "Comparing model output distributions with and without context best separates true provenance, but still lacks practical accuracy."
+  ],
+  "why_it_matters": "Accurate citation of sources is crucial for trustworthy AI-generated content; hidden reliance on internal knowledge can mislead users and undermine verification efforts, highlighting a key challenge for safe deployment of retrieval‑augmented systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "retrieval-augmented generation",
+   "provenance",
+   "language models",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "e12b85a84eed34ac",
+  "url": "https://arxiv.org/abs/2611.17161v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:39:14Z",
+  "added": "2026-11-14T18:15:30.233769+00:00"
+ },
+ {
+  "headline": "Symmetry in Time: A Representation Theory of Linear Recurrent Memory",
+  "tldr": "The paper introduces a representation‑theoretic framework for state‑space models (SSMs), shows why diagonal SSMs can only capture commutative groups, and proposes HyperSSM with quaternion channels that can exactly solve non‑commutative group tasks while remaining linear‑time and parallelizable.",
+  "key_points": [
+   "Diagonal real/complex SSMs are limited to tracking commutative groups due to commuting scalar multiplications.",
+   "HyperSSM adds quaternion‑valued channels, enabling exact tracking of non‑commutative groups like S5 with minimal state size.",
+   "Theoretical analysis links SSM transition matrices to group quotients, guiding architecture design and interpretability.",
+   "HyperSSM generalizes to sequences 25× longer than training and can recover physical parameters (gyroscope calibration, qubit rotations, protein geometry)."
+  ],
+  "why_it_matters": "Understanding the algebraic limits of SSMs clarifies why they struggle with order‑sensitive tasks and provides a principled path to more expressive, efficient alternatives to Transformers, potentially impacting sequence modeling across NLP, scientific computing, and control systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "state-space models",
+   "representation theory",
+   "quaternion",
+   "sequence modeling"
+  ],
+  "importance": 3,
+  "id": "b491bb1c24cee78b",
+  "url": "https://arxiv.org/abs/2611.17162v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:39:35Z",
+  "added": "2026-11-14T18:15:18.564417+00:00"
+ },
+ {
+  "headline": "Theoretical and Empirical Analysis of Sparse Convolution",
+  "tldr": "The paper studies sparse convolution kernels for edge AI, showing they have much lower arithmetic intensity than dense kernels and proposing techniques that yield up to 1.65× speedup on an A100 and 1.52× on a Jetson Nano.",
+  "key_points": [
+   "Sparse 3×3 convolutions have ~10 FLOP/byte vs ~96 FLOP/byte for dense versions.",
+   "Irregular memory access and workload imbalance hinder runtime efficiency.",
+   "Proposed methods improve sparse convolution performance on both data‑center and edge GPUs.",
+   "Achieved up to 1.65× speedup on NVIDIA A100 and 1.52× on Jetson Nano."
+  ],
+  "why_it_matters": "Efficient sparse convolution can dramatically reduce compute and memory demands for deep‑learning inference on resource‑constrained devices, enabling more capable AI applications on drones, medical equipment, and smartphones.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "sparse convolution",
+   "edge AI",
+   "performance",
+   "accelerators"
+  ],
+  "importance": 3,
+  "id": "a0af3573cd84b0c3",
+  "url": "https://arxiv.org/abs/2611.17212v1",
+  "source": "arXiv",
+  "date": "2026-11-12T18:10:06Z",
+  "added": "2026-11-14T18:15:06.264729+00:00"
+ },
+ {
+  "headline": "Should short-horizon price forecasting papers benchmark against market-implied forecasts, not just naive baselines?",
+  "tldr": "A Reddit discussion questions why crypto and commodity price‑forecasting papers rarely compare against market‑implied forecasts (e.g., options implied volatility or crowd forecasts) and focus only on naive baselines like ARIMA.",
+  "key_points": [
+   "Most short‑term price‑forecasting papers use simple baselines (ARIMA, random walk, basic LSTM) and report lower RMSE.",
+   "The discussion argues that market‑implied forecasts already incorporate extensive public information and should be used as benchmarks.",
+   "Interval forecasts (e.g., 80% coverage) are more relevant for assets like Bitcoin than point‑forecast RMSE.",
+   "Possible reasons for the gap include data access challenges or lack of awareness of existing work."
+  ],
+  "why_it_matters": "Evaluating models against market‑derived expectations would provide a more realistic measure of their practical value and could prevent over‑stating performance improvements in financial forecasting research.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "forecasting",
+   "crypto",
+   "evaluation",
+   "finance"
+  ],
+  "importance": 2,
+  "id": "1bc3b9cc0ad97365",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw6fk9/should_shorthorizon_price_forecasting_papers/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T16:23:34+00:00",
+  "added": "2026-11-14T18:14:54.166396+00:00"
+ },
+ {
+  "headline": "Jensen Huang and the decline of the visionary showman founder CEO",
+  "tldr": "Nvidia CEO Jensen Huang delivered a flamboyant stage entrance on Jan 6, 2025, but the piece reflects on his waning visionary image.",
+  "key_points": [
+   "Huang's dramatic entrance at a 14,000‑person arena highlighted Nvidia's brand power.",
+   "The article argues that Huang's showmanship is losing its edge as the company matures.",
+   "Critics suggest Nvidia's future hinges more on technical leadership than hype.",
+   "The piece reflects broader industry fatigue with charismatic CEO narratives."
+  ],
+  "why_it_matters": "Understanding shifts in leadership perception helps gauge Nvidia's strategic direction and investor confidence in a market dominated by AI hardware.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "branding",
+   "AI hardware",
+   "Nvidia"
+  ],
+  "importance": 2,
+  "id": "567fa298898a17ca",
+  "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+  "source": "The Verge AI",
+  "date": "2026-11-14T07:00:00-05:00",
+  "added": "2026-11-14T18:14:42.225350+00:00"
+ },
+ {
+  "headline": "OpenAI board member who fired Sam Altman says we still can't trust AI CEOs",
+  "tldr": "Helen Toner, former OpenAI board member, argues that AI CEOs remain untrustworthy and highlights ongoing governance and safety challenges.",
+  "key_points": [
+   "Helen Toner served on OpenAI's board and participated in Sam Altman's removal.",
+   "She emphasizes the difficulty of trusting AI CEOs to manage existential risks.",
+   "The discussion underscores the need for stronger external oversight and policy frameworks.",
+   "Calls for clearer accountability mechanisms within AI companies."
+  ],
+  "why_it_matters": "Leadership decisions at leading AI labs directly affect the development and deployment of powerful models; mistrust in CEOs signals potential governance gaps that could impact safety and public policy.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI governance",
+   "leadership",
+   "safety",
+   "trust"
+  ],
+  "importance": 3,
+  "id": "d46b516a4c8344dc",
+  "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+  "source": "The Verge AI",
+  "date": "2026-11-14T10:00:00-05:00",
+  "added": "2026-11-14T18:14:30.134867+00:00"
+ },
+ {
+  "headline": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+  "tldr": "Asian governments are assessing the implications of Nvidia CEO Jensen Huang’s departure, with some confirming chip supply commitments and others monitoring local projects and investigations.",
+  "key_points": [
+   "Governments in Asia are seeking reassurance on Nvidia chip supply after Huang's exit",
+   "Some countries are actively confirming supply commitments with Nvidia",
+   "Other governments are monitoring potential impacts on regional AI projects",
+   "Ongoing investigations related to Nvidia are also being addressed"
+  ],
+  "why_it_matters": "Nvidia is a critical supplier of GPUs for AI development; changes in leadership could affect supply stability and regional AI initiatives, influencing tech growth and competitiveness in Asia.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership_change",
+   "chip_supply",
+   "Asia",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "075bbfb634c2a8a5",
+  "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 14 Nov 2026 16:34:15 +0000",
+  "added": "2026-11-14T18:14:17.944168+00:00"
+ },
+ {
+  "headline": "The AI graveyard: a running list of projects and startups that didn’t make it",
+  "tldr": "A roundup of AI projects and startups that have shut down or failed to meet expectations, including Apple’s Siri delays and OpenAI’s troubled super‑app launch.",
+  "key_points": [
+   "Apple’s Siri AI has faced repeated delays",
+   "OpenAI’s “super app” launch was problematic",
+   "Various AI startups have shut down",
+   "Projects missed expectations or were discontinued"
+  ],
+  "why_it_matters": "Understanding past AI project failures helps investors, developers, and policymakers gauge risks, avoid repeating mistakes, and set realistic expectations for future AI initiatives.",
+  "category": "other",
+  "companies": [
+   "Apple",
+   "OpenAI"
+  ],
+  "tags": [
+   "AI failures",
+   "startup closures",
+   "Siri",
+   "OpenAI"
+  ],
+  "importance": 2,
+  "id": "7134e7e1ad670b60",
+  "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 14 Nov 2026 17:30:00 +0000",
+  "added": "2026-11-14T18:14:06.164818+00:00"
+ },
+ {
+  "headline": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+  "tldr": "A tutorial shows how to run the 753B-parameter GLM-5.3 model using tensor parallelism across two Nvidia DGX stations, achieving 607.8 tokens per second.",
+  "key_points": [
+   "GLM-5.3 has 753B parameters (464 GB checkpoint) and uses a Mixture‑of‑Experts architecture.",
+   "Two Nvidia DGX stations with ConnectX‑8 RDMA and tensor parallelism (TP=2) split the model across two GB300 GPUs.",
+   "The setup runs vLLM to serve an OpenAI‑compatible API, reaching ~607 tokens/s under load.",
+   "All weights stay in GPU memory; CPU offload is disabled."
+  ],
+  "why_it_matters": "Demonstrates practical methods for deploying frontier‑scale models locally, highlighting hardware and software techniques needed to overcome memory limits and achieve high throughput.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA",
+   "Z.ai"
+  ],
+  "tags": [
+   "GLM-5.3",
+   "DGX",
+   "vLLM",
+   "tensor_parallelism"
+  ],
+  "importance": 3,
+  "id": "dbb6a7059ae0b9fb",
+  "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+  "source": "Hacker News",
+  "date": "2026-11-14T14:09:25Z",
+  "added": "2026-11-14T18:13:54.610079+00:00"
+ },
+ {
   "headline": "Two mathematical models of knowledge distillation",
   "tldr": "The paper proposes and analyzes mathematical models showing that knowledge distillation speeds up optimization rather than improving generalization, with proofs for generalized linear models and rank‑1 matrix approximation, and empirical validation on real data.",
   "key_points": [
