@@ -1,5 +1,255 @@
 [
  {
+  "headline": "Optimal Single-History Tokenization Disambiguation for Provably Secure Linguistic Steganography",
+  "tldr": "The paper introduces a closed-form \"coin projection\" scheme that resolves tokenization ambiguity in linguistic steganography, preserving up to 93% of string entropy and outperforming prior SyncPool methods.",
+  "key_points": [
+   "Proves that exact, error‑free extraction requires a prefix‑free candidate set at each step, eliminating stop‑entropy.",
+   "Introduces coin projection, a single‑model‑call per token method that retains most of the original entropy.",
+   "Demonstrates 91‑93% entropy retention across English, Chinese, and Japanese, vastly improving over SyncPool.",
+   "Shows ambiguous tokenizations are rare (≤11/1,000 tokens) but stop entropy still consumes 7.2‑9.0% of total entropy."
+  ],
+  "why_it_matters": "Resolving tokenization ambiguity enables more efficient and secure linguistic steganography, allowing higher data throughput without sacrificing security, and provides a theoretically optimal solution applicable to any language model.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "steganography",
+   "tokenization",
+   "language-models",
+   "entropy"
+  ],
+  "importance": 3,
+  "id": "b486ff10600da6a6",
+  "url": "https://arxiv.org/abs/2611.17091v1",
+  "source": "arXiv",
+  "date": "2026-11-12T16:54:18Z",
+  "added": "2026-11-14T22:35:27.197255+00:00"
+ },
+ {
+  "headline": "Speed-to-Power Dominates Energy Costs for AI Data Centers: Technoeconomic Analysis of Powering AI in the Continental United States",
+  "tldr": "A techno‑economic study shows that faster deployment of power solutions, especially DC‑coupled solar‑plus‑storage microgrids, outweighs raw energy cost savings for AI data centers across the U.S.",
+  "key_points": [
+   "DC‑coupled microgrids cut lifetime energy cost by ~18% vs. AC systems by removing inverters.",
+   "When accounting for deployment speed, DC‑coupled solutions are cheapest in 85% of U.S. locations.",
+   "Fast on‑site generation (e.g., natural‑gas or solar‑plus‑storage) often beats grid interconnection for AI workloads.",
+   "A speed‑adjusted cost‑of‑energy metric enables direct comparison of different power architectures."
+  ],
+  "why_it_matters": "AI training workloads are expanding rapidly, and data‑center operators must balance energy efficiency with the need to provision compute quickly; this research provides a framework to evaluate power‑infrastructure choices that prioritize speed, potentially shaping future AI‑center designs and investment decisions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "data centers",
+   "energy",
+   "AI infrastructure",
+   "technoeconomics"
+  ],
+  "importance": 3,
+  "id": "31f6c644d82c9389",
+  "url": "https://arxiv.org/abs/2611.17098v1",
+  "source": "arXiv",
+  "date": "2026-11-12T16:58:53Z",
+  "added": "2026-11-14T22:35:14.699232+00:00"
+ },
+ {
+  "headline": "A Compact xDAWN-Guided Spatio-Temporal Network with Filter-Bank Convolution for P300 Detection",
+  "tldr": "A lightweight deep learning model combining xDAWN spatial filtering and filter-bank convolutions achieves high‑speed, accurate P300 detection for brain‑computer interfaces with only 5,100 trainable parameters.",
+  "key_points": [
+   "Integrates xDAWN spatial filtering with a fixed frequency‑selective filter bank and depthwise‑separable convolutions.",
+   "Model contains just 5,100 trainable parameters, enabling low computational cost.",
+   "Achieves 17.8 bits/min (2 repetitions) on BCI Competition III and 40.5 bits/min on BCI Competition II datasets.",
+   "Demonstrates a favorable accuracy‑speed trade‑off for practical EEG‑based spellers."
+  ],
+  "why_it_matters": "Efficient, accurate P300 decoding reduces the number of stimulus repetitions needed for reliable BCI communication, making brain‑computer interfaces more practical for real‑time use, especially for users with limited motor abilities.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "BCI",
+   "EEG",
+   "deep_learning",
+   "P300"
+  ],
+  "importance": 3,
+  "id": "f12df7b5b42ac0a6",
+  "url": "https://arxiv.org/abs/2611.17101v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:00:30Z",
+  "added": "2026-11-14T22:35:02.437919+00:00"
+ },
+ {
+  "headline": "Predicting Ethanol Drinking Status from Nonhuman Primate Liver Histology: A Proof of Concept for Parameter-efficient Fine-tuning in Few-Shot Vision-Language Modeling",
+  "tldr": "Parameter-efficient fine-tuning (PEFT) of vision-language models dramatically improves few-shot classification of liver histology images, raising balanced accuracy from 43.5% to 78.1% in a four‑shot setting.",
+  "key_points": [
+   "Adapters added to VLMs outperform non‑PEFT baselines on whole‑slide image classification.",
+   "Four‑shot accuracy jumps from 43.5% (ABMIL alone) to 78.1% with an adapter.",
+   "Textual pathway adapters yield localized attention heatmaps; visual adapters produce diffuse patterns.",
+   "Pathologist review confirms that adapted models focus on relevant histological features."
+  ],
+  "why_it_matters": "Demonstrates that lightweight, parameter‑efficient tuning can make vision‑language models practical for biomedical imaging tasks with very limited labeled data, accelerating pathology research and potential clinical diagnostics.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language-models",
+   "parameter-efficient-fine-tuning",
+   "computational-pathology",
+   "few-shot"
+  ],
+  "importance": 3,
+  "id": "5abb3015bb936ecd",
+  "url": "https://arxiv.org/abs/2611.17105v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:02:27Z",
+  "added": "2026-11-14T22:34:50.430220+00:00"
+ },
+ {
+  "headline": "Disentangling Spurious Correlations: How IRM Handles Diverse Shortcuts in Text Classification",
+  "tldr": "Invariant Risk Minimization (IRM) can suppress various shortcut features in NLP, improving out-of-distribution robustness, even with limited environment variation and label noise.",
+  "key_points": [
+   "ERM models exploit spurious correlations like dialectal markers, hurting OOD performance.",
+   "IRM identifies stable predictive relationships across environments, rejecting shortcuts in synthetic and real-world settings.",
+   "Experiments on Bias in Bios and ActorCorr show IRM mitigates gender-profession and actor-name shortcuts, though careful penalty tuning is needed."
+  ],
+  "why_it_matters": "Demonstrates that invariant learning can enhance the reliability of NLP models by reducing reliance on spurious cues, a key step toward more robust and fair AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "invariant_learning",
+   "NLP",
+   "robustness",
+   "spurious_correlations"
+  ],
+  "importance": 3,
+  "id": "1345ded37ce4183e",
+  "url": "https://arxiv.org/abs/2611.17107v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:03:05Z",
+  "added": "2026-11-14T22:34:38.388804+00:00"
+ },
+ {
+  "headline": "Near-Optimal Regret for Oracle-Efficient Adversarial Contextual Bandits",
+  "tldr": "The paper presents an oracle‑efficient algorithm for adversarial contextual bandits that achieves near‑optimal regret O(√(KT log N) log (KT)), improving previous T^{2/3} bounds.",
+  "key_points": [
+   "Achieves expected regret O(√(KT log (2N)) log (2KT)), matching optimal rates up to logs.",
+   "Uses Poisson‑sampled auxiliary contexts and Laplace‑scaled perturbations.",
+   "Scales are optimized via a convex objective solved with projected stochastic gradient descent using only an offline cost‑sensitive oracle.",
+   "Algorithm’s oracle and computational complexity are polynomial in T, K, and log N."
+  ],
+  "why_it_matters": "Improving regret bounds for contextual bandits narrows the gap between theory and practice in online decision‑making, enabling more efficient learning in applications such as recommendation systems and adaptive experimentation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "contextual bandits",
+   "regret analysis",
+   "oracle-efficient",
+   "online learning"
+  ],
+  "importance": 3,
+  "id": "0e7f51cda4fbf2e7",
+  "url": "https://arxiv.org/abs/2611.17109v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:04:36Z",
+  "added": "2026-11-14T22:34:27.000968+00:00"
+ },
+ {
+  "headline": "Designing Institutions for Autonomous AI",
+  "tldr": "The paper argues that AI research should focus on institutional design for autonomous agents, proposing seven design principles and an experimental program with a programmable journal for AI research agents.",
+  "key_points": [
+   "Institutional design is crucial for aligning and coordinating large populations of autonomous AI agents.",
+   "Seven principles are proposed: reciprocal contributions, accountable authority, functional differentiation, epistemic pluralism, criticism and correction, human direction, and institutional adaptation.",
+   "Introduces MoltJournal, an API‑first journal that enables programmable, observable institutional frameworks for autonomous research agents.",
+   "Calls for experimental studies comparing different institutional arrangements to assess collective performance and accountability."
+  ],
+  "why_it_matters": "As AI agents become more autonomous and interact at scale, existing governance mechanisms are insufficient; establishing robust institutions can ensure cooperation, reliable collective judgments, and alignment with human values.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "institutional_design",
+   "AI_governance",
+   "autonomous_agents",
+   "collective_intelligence"
+  ],
+  "importance": 3,
+  "id": "bd04dc847bd5db6d",
+  "url": "https://arxiv.org/abs/2611.17114v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:06:54Z",
+  "added": "2026-11-14T22:34:14.541153+00:00"
+ },
+ {
+  "headline": "Bellman Contraction under MMD: A Unified Framework",
+  "tldr": "Introduces a mathematical framework linking Bellman operator contraction to conditional positive definiteness of kernels under Maximum Mean Discrepancy, unifying prior results and presenting new contracting kernels.",
+  "key_points": [
+   "Shows contraction reduces to conditional positive definiteness of a Bellman difference kernel.",
+   "Uses Schoenberg's theorem to connect radial kernels to Bernstein functions for dimension‑agnostic criteria.",
+   "Identifies 11 new kernels that induce contraction and proposes a chaining construction for arbitrary contraction factors.",
+   "Explains why the Gaussian RBF kernel can still be useful with bounded rewards despite lacking global contraction.",
+   "Reveals a tradeoff: faster contraction kernels tend to have lower discriminative power."
+  ],
+  "why_it_matters": "Provides a unified theoretical tool for designing and analyzing kernel‑based distributional RL algorithms, helping researchers select kernels that balance stability (contraction) and discriminative ability, and offering new kernels for improved performance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "MMD",
+   "kernel_methods",
+   "theory"
+  ],
+  "importance": 2,
+  "id": "70ee11332df2f44d",
+  "url": "https://arxiv.org/abs/2611.17116v1",
+  "source": "arXiv",
+  "date": "2026-11-12T17:09:17Z",
+  "added": "2026-11-14T22:34:02.486196+00:00"
+ },
+ {
+  "headline": "Anonymous GitHub not working [D]",
+  "tldr": "User reports broken GitHub links during ICLR rebuttals and asks if others experience the same issue.",
+  "key_points": [
+   "Issue observed with GitHub links during ICLR rebuttal period",
+   "User seeks confirmation from the community",
+   "No further details provided"
+  ],
+  "why_it_matters": "Broken repository links can hinder reproducibility and peer review in academic conferences like ICLR.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "github",
+   "iclr",
+   "rebuttal"
+  ],
+  "importance": 1,
+  "id": "454e7e82a5f5dead",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xw9m5h/anonymous_github_not_working_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T18:31:16+00:00",
+  "added": "2026-11-14T22:33:50.120933+00:00"
+ },
+ {
+  "headline": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+  "tldr": "Prominent tech leaders, including Elon Musk, petition Nvidia to bring back CEO Jensen Huang.",
+  "key_points": [
+   "Elon Musk joins petition",
+   "Other tech executives sign",
+   "Target: Nvidia",
+   "Goal: reinstate Jensen Huang"
+  ],
+  "why_it_matters": "Shows high‑profile pressure on Nvidia’s leadership decisions, indicating potential governance concerns that could affect the AI hardware market.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "petition",
+   "executives",
+   "Nvidia",
+   "leadership"
+  ],
+  "importance": 2,
+  "id": "a4a92fbcda03532a",
+  "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 14 Nov 2026 21:41:22 +0000",
+  "added": "2026-11-14T22:33:38.908132+00:00"
+ },
+ {
   "headline": "STeP-C: Real-Time Neural Compression for Distributed Fiber-Optic Sensing at Scale",
   "tldr": "STeP-C introduces a neural compression system that processes high‑rate distributed acoustic sensing data in real time, achieving ~99% size reduction while meeting throughput demands of large‑scale DAS deployments.",
   "key_points": [
