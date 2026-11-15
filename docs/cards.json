@@ -1,5 +1,258 @@
 [
  {
+  "headline": "Hackathon project Parallax aligns sentences across seven Wikipedia editions over time",
+  "tldr": "A hackathon team built Parallax, a system that stores every Wikipedia revision, embeds sentences with bge‑m3, and uses SQL time‑travel and vector similarity to match statements across Finnish, Swedish, German, English, Russian, Estonian and Ukrainian editions, enabling cross‑lingual historical comparison.",
+  "key_points": [
+   "Stores 875,572 revisions; each sentence embedded once (90,070 vectors) on an NVIDIA A100.",
+   "Uses system‑versioned tables and VEC_DISTANCE_COSINE to find matching sentences across languages for any past date.",
+   "Exact search (4 ms median) outperforms HNSW for single‑article queries; index recall@10 = 0.997 on the full DB.",
+   "Gemini 3.8 Flash judges sentence pairs (same, partial, contradicts, different) and extracts differing numbers/terms.",
+   "Demo and code are publicly available on GitHub."
+  ],
+  "why_it_matters": "Provides a scalable, open‑source way to compare how historical events are described across multiple languages and over time, supporting research in historiography, bias detection, and multilingual LLM evaluation.",
+  "category": "open_source",
+  "companies": [
+   "MariaDB",
+   "NVIDIA"
+  ],
+  "tags": [
+   "multilingual",
+   "vector_search",
+   "time_travel",
+   "LLM_judgment"
+  ],
+  "importance": 2,
+  "id": "e85c88162b2e7984",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwttxo/hackathon_project_for_mariadbs_wikipedia_through/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T12:03:27+00:00",
+  "added": "2026-11-15T18:58:09.921881+00:00"
+ },
+ {
+  "headline": "ICLR receives 42,000 submissions, raising questions about future acceptance rates",
+  "tldr": "The 2024 ICLR conference saw a surge to 42k paper submissions, prompting speculation on whether the acceptance rate will stay around 26‑28% or be reduced due to capacity limits.",
+  "key_points": [
+   "ICLR submissions jumped to 42,000 this year.",
+   "Typical acceptance rate has been about 26‑28% (≈11k papers).",
+   "Program chairs may need to cap accepted papers because of reviewer and venue constraints.",
+   "Community discussion centers on potential impact on conference quality and selectivity."
+  ],
+  "why_it_matters": "A significant change in ICLR's acceptance rate could affect the visibility of research, reviewer workload, and the overall prestige of the conference, influencing how AI research is disseminated.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "ICLR",
+   "submissions",
+   "acceptance_rate",
+   "conference"
+  ],
+  "importance": 1,
+  "id": "8441de704aa54573",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwqxwj/with_42k_submissions_to_iclr_do_you_think_the/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T09:05:22+00:00",
+  "added": "2026-11-15T18:57:57.589468+00:00"
+ },
+ {
+  "headline": "Critique of Double-Blind Review Systems in Machine Learning Conferences",
+  "tldr": "A Reddit user argues that double-blind peer review often fails because reviewers can see author identities, leading to bias and strategic rejections.",
+  "key_points": [
+   "Reviewers frequently have access to authors' names and affiliations.",
+   "Instances of reviewers rejecting competitors' papers to boost their own chances.",
+   "Well‑connected labs may receive unfair advantages in the review process."
+  ],
+  "why_it_matters": "Fair and unbiased peer review is essential for scientific progress; systemic bias can skew research directions and undermine trust in conference publications.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "peer_review",
+   "academic_integrity",
+   "double_blind"
+  ],
+  "importance": 2,
+  "id": "7e31ae19a116df84",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwuwqd/i_dont_think_doubleblind_review_systems_work_d/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T13:00:15+00:00",
+  "added": "2026-11-15T18:57:45.516590+00:00"
+ },
+ {
+  "headline": "Marimba: a System One model for speech",
+  "tldr": "Marimba is a fast, lightweight audio model built on the frozen Qwen3‑ASR‑0.6B that provides typed speech decisions (yes/no, choice, score) with zero‑shot scoring and calibration, released under Apache‑2.0.",
+  "key_points": [
+   "Runs on frozen Qwen3‑ASR‑0.6B encoder for low latency",
+   "Outputs typed decisions: binary, categorical, or scoring",
+   "Uses zero‑shot scores from ASR decoder hypotheses with calibration",
+   "Provides voice activity detection, turn ending, speaker change, and speaker count via small readouts",
+   "Open‑source weights (Apache‑2.0) and pip installable package"
+  ],
+  "why_it_matters": "Enables developers to integrate efficient, real‑time speech understanding into applications without heavy model fine‑tuning, lowering compute costs and expanding accessibility of speech AI.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "speech",
+   "audio",
+   "lightweight",
+   "zero-shot"
+  ],
+  "importance": 3,
+  "id": "56178e1b3623db54",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwzsm4/marimba_a_system_one_model_for_speech_r/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T16:30:09+00:00",
+  "added": "2026-11-15T18:57:33.693236+00:00"
+ },
+ {
+  "headline": "Making cudaMemcpy 5x faster on a B300",
+  "tldr": "A new open‑source tool speeds up pageable cudaMemcpy transfers by about 5× on a B300 GPU.",
+  "key_points": [
+   "Benchmarks show 10.2 GB/s → 51.5 GB/s for CPU→GPU transfers",
+   "Implemented as a tunable wrapper around cudaMemcpy",
+   "Code and blog post released on GitHub and personal site"
+  ],
+  "why_it_matters": "Faster host‑to‑device memory copies reduce data‑movement bottlenecks in GPU‑accelerated workloads, improving overall training and inference throughput.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "cuda",
+   "memcpy",
+   "performance",
+   "gpu"
+  ],
+  "importance": 2,
+  "id": "7da932b5ba3aed8b",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xx2n25/making_cudamemcpy_5x_faster_on_a_b300_p/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T18:20:27+00:00",
+  "added": "2026-11-15T18:57:21.585037+00:00"
+ },
+ {
+  "headline": "An overview of Jensen Huang’s messy days",
+  "tldr": "The Verge AI’s newsletter outlines the fallout from Nvidia CEO Jensen Huang’s resignation and the resulting leadership crisis at the company.",
+  "key_points": [
+   "Jensen Huang announced his resignation from Nvidia.",
+   "The departure sparked uncertainty about Nvidia’s strategic direction.",
+   "Industry observers are tracking the impact on Nvidia’s market position and upcoming product roadmaps."
+  ],
+  "why_it_matters": "Nvidia is a cornerstone of the AI hardware ecosystem; leadership changes could affect GPU supply, AI research timelines, and investor confidence across the sector.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "resignation",
+   "AI hardware"
+  ],
+  "importance": 3,
+  "id": "4c525e5e54fa3645",
+  "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+  "source": "The Verge AI",
+  "date": "2026-11-15T08:00:00-05:00",
+  "added": "2026-11-15T18:57:10.090576+00:00"
+ },
+ {
+  "headline": "Understanding Positional Embeddings in Modern LLMs",
+  "tldr": "An overview of how positional embeddings work in contemporary large language models.",
+  "key_points": [
+   "Explains the role of positional embeddings in LLMs",
+   "Covers different embedding techniques (e.g., sinusoidal, learned)",
+   "Discusses impact on model performance and architecture"
+  ],
+  "why_it_matters": "Positional embeddings are essential for LLMs to capture token order, influencing the quality of generated text and model capabilities.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "positional embeddings",
+   "LLM",
+   "AI fundamentals"
+  ],
+  "importance": 2,
+  "id": "950ac38f23f2d5a7",
+  "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+  "source": "Hacker News",
+  "date": "2026-11-15T12:14:06Z",
+  "added": "2026-11-15T18:56:57.385838+00:00"
+ },
+ {
+  "headline": "Why did some Apollo missions carry a grenade launcher?",
+  "tldr": "Some Apollo missions included a grenade launcher for emergency use during spacewalks.",
+  "key_points": [
+   "Apollo missions equipped with a grenade launcher",
+   "Intended for emergency situations",
+   "Used during extravehicular activities"
+  ],
+  "why_it_matters": "Shows how early space missions planned for unexpected hazards, highlighting engineering safety measures in historic spaceflight.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "Apollo",
+   "spacecraft safety",
+   "history"
+  ],
+  "importance": 2,
+  "id": "91e375cc559dcd99",
+  "url": "https://space.stackexchange.com/questions/37775",
+  "source": "Hacker News",
+  "date": "2026-11-15T09:06:43Z",
+  "added": "2026-11-15T18:56:45.356075+00:00"
+ },
+ {
+  "headline": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+  "tldr": "Anthropic's Claude Code and OpenAI's Codex were used to reverse‑engineer a 1994 Jeep engine control unit using a cheap Arduino setup.",
+  "key_points": [
+   "Claude Code and Codex applied to automotive ECU",
+   "Reverse engineering achieved with a $3 Arduino",
+   "Demonstrates AI code generation on legacy hardware"
+  ],
+  "why_it_matters": "Shows how modern AI coding assistants can tackle low‑level hardware tasks, lowering barriers for hobbyists and potentially accelerating DIY automotive repairs.",
+  "category": "product",
+  "companies": [
+   "Anthropic",
+   "OpenAI"
+  ],
+  "tags": [
+   "AI",
+   "reverse_engineering",
+   "automotive",
+   "Arduino"
+  ],
+  "importance": 2,
+  "id": "95021f2d6b065b75",
+  "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI",
+  "source": "Hacker News",
+  "date": "2026-11-12T05:29:24Z",
+  "added": "2026-11-15T18:56:33.556361+00:00"
+ },
+ {
+  "headline": "Lutnick Pushed to Weaken Chip Rules That Overlap with His Family Business",
+  "tldr": "Commerce Secretary Howard Lutnick is advocating softer U.S. chip export controls for Southeast Asian data centers that serve Chinese clients, a move that could benefit firms tied to his former company, Cantor Fitzgerald, and Nvidia.",
+  "key_points": [
+   "U.S. rules aim to block sales of advanced AI chips to China, but data centers in Southeast Asia can sidestep them.",
+   "Lutnick, former head of Cantor Fitzgerald, is drafting less stringent regulations that would ease chip sales to those data centers.",
+   "Critics say the proposal creates a conflict of interest and could undermine U.S. strategic chip export restrictions."
+  ],
+  "why_it_matters": "",
+  "category": "policy",
+  "companies": [
+   "Nvidia",
+   "Cantor Fitzgerald",
+   "U.S. Department of Commerce"
+  ],
+  "tags": [
+   "chip export controls",
+   "Southeast Asia",
+   "China",
+   "AI hardware"
+  ],
+  "importance": 3,
+  "id": "768d7342d58866f1",
+  "url": "https://www.nytimes.com/2026/11/15/us/politics/lutnick-pushed-to-weaken-chip-rules-that-overlap-with-his-family-business.html",
+  "source": "Hacker News",
+  "date": "2026-11-15T11:40:51Z",
+  "added": "2026-11-15T18:56:22.044741+00:00"
+ },
+ {
   "headline": "LongMemEval-S: 96.0% with the official judge, and what top-5 vs top-20 retrieval changes",
   "tldr": "Papr's memory retrieval system achieved 96.0% accuracy on LongMemEval-S using GPT‑4o judging, with most errors stemming from the reader rather than retrieval.",
   "key_points": [
