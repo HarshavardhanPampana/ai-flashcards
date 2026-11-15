@@ -1,5 +1,113 @@
 [
  {
+  "headline": "LongMemEval-S: 96.0% with the official judge, and what top-5 vs top-20 retrieval changes",
+  "tldr": "Papr's memory retrieval system achieved 96.0% accuracy on LongMemEval-S using GPT‑4o judging, with most errors stemming from the reader rather than retrieval.",
+  "key_points": [
+   "Retrieval recall is near saturation: 97.9% of answerable questions have the correct evidence in the top‑5.",
+   "Expanding from top‑5 to top‑20 yields a net gain of +3 correct answers, improving temporal reasoning.",
+   "A small model (gpt‑5‑mini) reaches 94.4% given the same retrieval, showing the strength of the retrieval component.",
+   "Used open‑source Papr‑Embed 0.6B embedding model and Gemini Flash 2.5 reranker.",
+   "Run‑to‑run variance is ±3 questions, making 96.0% vs 95.6% effectively a tie."
+  ],
+  "why_it_matters": "Demonstrates that high‑quality open‑source retrieval can close the gap to state‑of‑the‑art systems, reducing token usage and highlighting where future improvements (reader models) should focus.",
+  "category": "other",
+  "companies": [
+   "Papr.ai",
+   "OpenAI"
+  ],
+  "tags": [
+   "memory",
+   "retrieval",
+   "evaluation",
+   "long-context"
+  ],
+  "importance": 3,
+  "id": "0457569a4f418f55",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwnloh/longmemevals_960_with_the_official_judge_and_what/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-15T05:40:25+00:00",
+  "added": "2026-11-15T06:44:47.548038+00:00"
+ },
+ {
+  "headline": "TimeCues Studio – Free Open‑Source Tool for Annotating Music Structure",
+  "tldr": "A new MIT‑licensed web app lets researchers label music beats, sections, and cues, compare algorithm outputs, and export data for training music‑analysis models.",
+  "key_points": [
+   "Web‑based, beat‑locked timeline for detailed music annotation (sections, cues, riffs, lyrics, loops).",
+   "Shows separated stems, spectrogram, and color‑coded 3‑band waveform for quick visual cues.",
+   "Runs detectors (e.g., allin1, MSAF) side‑by‑side and scores them against user labels.",
+   "Supports solo or team work and exports to Audacity, MIDI, or JSON.",
+   "Free, open‑source (MIT license) with Docker deployment and online demo."
+  ],
+  "why_it_matters": "Provides researchers and developers with a standardized, reproducible way to create high‑quality labeled music data, accelerating progress on music‑to‑dance, video‑sync, and music‑analysis models.",
+  "category": "open_source",
+  "companies": [],
+  "tags": [
+   "music",
+   "annotation",
+   "open_source",
+   "tool"
+  ],
+  "importance": 2,
+  "id": "1b9395ded4f464c6",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1xwh3mw/acm_multimedia_2026_timecues_studio_a_free/",
+  "source": "r/MachineLearning",
+  "date": "2026-11-14T23:59:28+00:00",
+  "added": "2026-11-15T06:44:35.065377+00:00"
+ },
+ {
+  "headline": "Where was Nvidia’s security team?",
+  "tldr": "Nvidia’s security chief left in August, and the company’s CEO Jensen Huang stepped down amid concerns about ties to a firm suspected of sending chips to China, highlighting gaps in corporate security.",
+  "key_points": [
+   "Nvidia’s security chief quietly departed in August.",
+   "CEO Jensen Huang resigned due to alleged relationships with a suspect executive.",
+   "A former intelligence officer says such leaks are common and corporate security teams are often ill‑prepared.",
+   "The incident raises concerns about chip export controls and internal security."
+  ],
+  "why_it_matters": "The leadership turnover and potential security breach underscore vulnerabilities in protecting sensitive technology, especially regarding export restrictions to China, which could impact national security and industry trust.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "security",
+   "leadership",
+   "China",
+   "export_controls"
+  ],
+  "importance": 2,
+  "id": "acaf00569e865f08",
+  "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+  "source": "TechCrunch AI",
+  "date": "Sun, 15 Nov 2026 00:08:07 +0000",
+  "added": "2026-11-15T06:44:23.108536+00:00"
+ },
+ {
+  "headline": "Nvidia deliberately kept GPU prices high through circular financing deals",
+  "tldr": "Nvidia used financing structures to maintain elevated GPU prices",
+  "key_points": [
+   "Nvidia employed circular financing",
+   "GPU prices remained high",
+   "Financing deals linked to pricing strategy"
+  ],
+  "why_it_matters": "Shows how financial engineering can influence hardware costs, affecting developers, researchers, and consumers reliant on GPUs",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "GPU",
+   "pricing",
+   "finance",
+   "market"
+  ],
+  "importance": 2,
+  "id": "0322d2a0d024b300",
+  "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
+  "source": "Hacker News",
+  "date": "2026-11-14T22:26:30Z",
+  "added": "2026-11-15T06:44:11.111890+00:00"
+ },
+ {
   "headline": "Optimal Single-History Tokenization Disambiguation for Provably Secure Linguistic Steganography",
   "tldr": "The paper introduces a closed-form \"coin projection\" scheme that resolves tokenization ambiguity in linguistic steganography, preserving up to 93% of string entropy and outperforming prior SyncPool methods.",
   "key_points": [
