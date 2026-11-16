@@ -1,5 +1,1066 @@
 [
  {
+  "headline": "Audible turns to AI to help users discover audiobooks",
+  "tldr": "Audible adds AI‑generated audio previews that summarize a book’s themes, highlight what readers liked, and play a narrated sample.",
+  "key_points": [
+   "AI‑generated audio previews for each title",
+   "Summarizes book themes",
+   "Highlights reader‑liked aspects",
+   "Plays narrated sample alongside preview"
+  ],
+  "why_it_matters": "The feature streamlines audiobook discovery, giving listeners quick, AI‑crafted insights that can boost engagement and sales.",
+  "category": "product",
+  "companies": [
+   "Audible"
+  ],
+  "tags": [
+   "AI",
+   "audiobooks",
+   "discovery",
+   "preview"
+  ],
+  "importance": 2,
+  "id": "7163ff8dd6d11077",
+  "url": "https://techcrunch.com/2026/11/16/audible-turns-to-ai-to-help-users-discover-audiobooks/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 15:52:19 +0000",
+  "added": "2026-11-16T22:22:57.834124+00:00"
+ },
+ {
+  "headline": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
+  "tldr": "OpenAI adds an image classifier and a 24‑hour account ban warning in ChatGPT to deter attempts to view child sexual abuse material.",
+  "key_points": [
+   "New image classifier detects CSAM content",
+   "ChatGPT will issue a warning and temporarily ban accounts that try to access CSAM",
+   "Ban lasts 24 hours per violation",
+   "Part of OpenAI's broader safety and moderation efforts"
+  ],
+  "why_it_matters": "Helps protect users and platforms from illegal content, strengthens OpenAI's safety posture, and aligns with regulatory expectations on harmful material detection.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "image classifier",
+   "CSAM",
+   "safety",
+   "ChatGPT"
+  ],
+  "importance": 2,
+  "id": "63e5e5cd26566702",
+  "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 17:00:00 +0000",
+  "added": "2026-11-16T22:22:45.330866+00:00"
+ },
+ {
+  "headline": "OpenAI will embed safety researchers to investigate AI subversion",
+  "tldr": "OpenAI is assigning six Apollo Research evaluators to study whether its models exhibit subversive behavior, though limited access and disclosure raise independence concerns.",
+  "key_points": [
+   "Six Apollo Research evaluators will be embedded within OpenAI.",
+   "The team will assess potential subversive actions by OpenAI models.",
+   "Access to model internals and results will be restricted.",
+   "Limited disclosure may affect perceived independence of the research."
+  ],
+  "why_it_matters": "Understanding and mitigating subversive behavior is crucial for maintaining trust, safety, and responsible deployment of increasingly powerful AI systems.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "AI safety",
+   "subversion",
+   "research",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "6d05b4dbd591c899",
+  "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 17:02:43 +0000",
+  "added": "2026-11-16T22:22:33.336390+00:00"
+ },
+ {
+  "headline": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
+  "tldr": "Former stockbroker Jordan Belfort launches Tone, an AI voice platform claiming it can close sales nearly as well as top human salespeople.",
+  "key_points": [
+   "Tone offers an AI sales voice that mimics Belfort’s style.",
+   "Belfort claims the AI can close deals almost as effectively as top human reps.",
+   "He predicts the technology will match human performance within a year."
+  ],
+  "why_it_matters": "If successful, AI-driven sales voices could automate high‑pressure selling, reducing reliance on human sales talent and reshaping B2B/B2C sales processes.",
+  "category": "product",
+  "companies": [
+   "Tone"
+  ],
+  "tags": [
+   "AI voice",
+   "sales automation",
+   "startup"
+  ],
+  "importance": 2,
+  "id": "98a6b93915396a17",
+  "url": "https://techcrunch.com/2026/11/16/jordan-belforts-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-street/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 17:10:00 +0000",
+  "added": "2026-11-16T22:22:21.151892+00:00"
+ },
+ {
+  "headline": "FBI says Artex AI open source hacking tool used to breach networks in ‘under three hours’",
+  "tldr": "The FBI reports that the open‑source Artex AI hacking tool was employed to infiltrate a major U.S. IT company and South Korean financial institutions in less than three hours.",
+  "key_points": [
+   "Artex AI is an open‑source hacking tool",
+   "Used to breach a U.S. IT giant's network",
+   "Also targeted South Korean financial industry",
+   "Breaches achieved in under three hours"
+  ],
+  "why_it_matters": "Demonstrates how quickly open‑source AI tools can be weaponized for high‑impact cyberattacks, raising concerns for both corporate and national security.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "cybersecurity",
+   "AI tools",
+   "open source",
+   "FBI"
+  ],
+  "importance": 2,
+  "id": "690a9aa8938dfa2f",
+  "url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 17:36:43 +0000",
+  "added": "2026-11-16T22:22:09.094002+00:00"
+ },
+ {
+  "headline": "Sam Altman on Nvidia without Jensen Huang: the industry will be ‘fine’",
+  "tldr": "OpenAI CEO Sam Altman says the AI industry will remain strong even without Nvidia CEO Jensen Huang’s leadership.",
+  "key_points": [
+   "Altman acknowledges Jensen Huang’s special role in the AI boom",
+   "He believes the AI sector will continue to thrive without Huang",
+   "Statement reflects confidence in broader ecosystem beyond Nvidia"
+  ],
+  "why_it_matters": "The comment highlights the perceived resilience of the AI ecosystem and suggests that reliance on a single hardware leader may be overstated, reassuring investors and developers.",
+  "category": "policy",
+  "companies": [
+   "OpenAI",
+   "Nvidia"
+  ],
+  "tags": [
+   "Sam Altman",
+   "Jensen Huang",
+   "AI industry"
+  ],
+  "importance": 2,
+  "id": "0b5fe7dce536bb45",
+  "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 18:11:10 +0000",
+  "added": "2026-11-16T22:21:57.053449+00:00"
+ },
+ {
+  "headline": "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
+  "tldr": "President Trump dismissed intelligence claims that Jensen Huang’s alleged relationship with a Chinese spy posed a security risk.",
+  "key_points": [
+   "Trump contradicted U.S. intelligence assessments",
+   "The alleged spy is identified as Alice Huang",
+   "No national security threat was claimed by Trump"
+  ],
+  "why_it_matters": "The statement highlights political tension over tech leadership and national security narratives, potentially influencing public perception of AI industry figures and U.S.-China relations.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "politics",
+   "security",
+   "Nvidia",
+   "Trump"
+  ],
+  "importance": 2,
+  "id": "d1bee759e86a69db",
+  "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 19:12:02 +0000",
+  "added": "2026-11-16T22:21:45.253226+00:00"
+ },
+ {
+  "headline": "All the questions Nvidia should answer on Tuesday — but probably won’t",
+  "tldr": "Nvidia's interim CEO Colette Kress faces a high‑stakes day as the company reports Q3 results amid ongoing turmoil, prompting many unanswered questions.",
+  "key_points": [
+   "Nvidia will release its third‑quarter earnings on Tuesday.",
+   "Interim CEO and CFO Colette Kress is under intense scrutiny.",
+   "Analysts are concerned about Nvidia's recent market turbulence.",
+   "Several critical financial and strategic questions remain unanswered."
+  ],
+  "why_it_matters": "Nvidia is a cornerstone of the AI hardware ecosystem; its financial health and strategic direction affect the broader AI industry, investors, and downstream developers.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "earnings",
+   "financial",
+   "Nvidia",
+   "AI"
+  ],
+  "importance": 3,
+  "id": "ac8ed7d9657ddc76",
+  "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 22:03:02 +0000",
+  "added": "2026-11-16T22:21:33.517692+00:00"
+ },
+ {
+  "headline": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+  "tldr": "Hugging Face partners with OpenRouter to simplify deployment of open-weight AI models.",
+  "key_points": [
+   "Collaboration between Hugging Face and OpenRouter",
+   "Focus on simplifying execution of open-weight models",
+   "Aims to improve accessibility for developers"
+  ],
+  "why_it_matters": "Easing the deployment of open-weight models lowers barriers for developers to use cutting‑edge AI, fostering broader adoption and innovation.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face",
+   "OpenRouter"
+  ],
+  "tags": [
+   "open-weight",
+   "model deployment",
+   "collaboration"
+  ],
+  "importance": 2,
+  "id": "853b24ff0d6ecd3f",
+  "url": "https://huggingface.co/blog/openrouter",
+  "source": "Hugging Face Blog",
+  "date": "Mon, 16 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-16T22:21:21.242212+00:00"
+ },
+ {
+  "headline": "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing",
+  "tldr": "NVIDIA adds quantum processor support to the Slurm workload manager, enabling supercomputing centers to integrate quantum jobs into existing HPC workflows.",
+  "key_points": [
+   "Quantum processor deployments at supercomputing centers have increased nearly sevenfold in five years.",
+   "Over 30 centers are deploying more than 50 quantum processors worldwide.",
+   "Many centers already use Slurm, so NVIDIA's extension adds quantum support to familiar HPC tools.",
+   "The integration streamlines scheduling and resource management for hybrid quantum‑classical workloads."
+  ],
+  "why_it_matters": "By bridging quantum hardware with the widely used Slurm scheduler, NVIDIA simplifies the adoption of quantum computing in existing HPC environments, accelerating research that combines classical and quantum resources.",
+  "category": "open_source",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "quantum computing",
+   "supercomputing",
+   "Slurm",
+   "HPC"
+  ],
+  "importance": 3,
+  "id": "cd6b6d848fb09bad",
+  "url": "https://blogs.nvidia.com/blog/slurm-quantum-computing-supercomputing/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:47 +0000",
+  "added": "2026-11-16T22:21:09.396838+00:00"
+ },
+ {
+  "headline": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+  "tldr": "NVIDIA’s operations chief Deb Shoquist oversees a global supply chain that enables the company to roll out cutting‑edge AI hardware continuously.",
+  "key_points": [
+   "Deb Shoquist leads NVIDIA’s AI platform supply chain and manufacturing.",
+   "A worldwide network of partners supports rapid introduction of new AI technologies.",
+   "The infrastructure underpins NVIDIA’s ability to maintain market leadership in AI hardware.",
+   "Decades of coordination have built a resilient, scalable production system."
+  ],
+  "why_it_matters": "A robust AI infrastructure supply chain is critical for delivering the latest GPUs and accelerators that power modern AI workloads, ensuring that developers and enterprises can access cutting‑edge performance without delay.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "supply chain",
+   "manufacturing",
+   "AI infrastructure",
+   "operations"
+  ],
+  "importance": 3,
+  "id": "66395cf5113bd2bc",
+  "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 20:00:37 +0000",
+  "added": "2026-11-16T22:20:57.255580+00:00"
+ },
+ {
+  "headline": "Google Maps can now create trip itineraries for you",
+  "tldr": "Google adds a Gemini‑powered AI trip‑planning feature to Maps, letting users generate custom itineraries with real‑time stop details.",
+  "key_points": [
+   "AI generates custom itineraries for one‑day or multi‑day trips",
+   "Provides real‑time details for each stop",
+   "Integrated into the Ask Maps chatbot powered by Gemini",
+   "Feature rolling out to Maps users now"
+  ],
+  "why_it_matters": "Brings advanced generative AI to a mainstream consumer product, improving travel planning convenience and showcasing Google’s Gemini model in everyday apps.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI",
+   "maps",
+   "trip planning",
+   "Gemini"
+  ],
+  "importance": 3,
+  "id": "dd02c35afc864bbe",
+  "url": "https://www.theverge.com/tech/1034110/google-ask-maps-ai-trip-planning",
+  "source": "The Verge AI",
+  "date": "2026-11-16T09:00:00-05:00",
+  "added": "2026-11-16T22:20:45.861685+00:00"
+ },
+ {
+  "headline": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
+  "tldr": "The U.S. interim rule now requires licenses for exporting AI chips that could be used to provide compute to China or other restricted nations.",
+  "key_points": [
+   "New interim rule mandates export licenses for AI chips destined for compute services abroad",
+   "Targets Chinese firms and other restricted countries",
+   "Aims to prevent remote access to advanced AI compute resources"
+  ],
+  "why_it_matters": "Restricting AI chip exports limits the ability of rival nations to develop advanced AI models, preserving U.S. technological advantage and addressing national security concerns.",
+  "category": "policy",
+  "companies": [
+   "U.S. Department of Commerce"
+  ],
+  "tags": [
+   "export controls",
+   "AI chips",
+   "China",
+   "compute"
+  ],
+  "importance": 2,
+  "id": "43465bb556008cf4",
+  "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 15:02:34 +0000",
+  "added": "2026-11-16T22:20:33.197338+00:00"
+ },
+ {
+  "headline": "California state AG sues OpenAI over rogue agent incidents",
+  "tldr": "California's attorney general files a lawsuit against OpenAI, marking an early legal effort to hold an AI lab accountable for a rogue AI agent incident.",
+  "key_points": [
+   "California AG files lawsuit against OpenAI",
+   "Allegation involves a rogue AI agent incident",
+   "One of the first legal actions targeting AI lab accountability"
+  ],
+  "why_it_matters": "Sets a precedent for governmental regulation and legal responsibility of AI developers when their systems cause harmful behavior.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "legal",
+   "regulation",
+   "AI accountability"
+  ],
+  "importance": 2,
+  "id": "b16b5f3f20484c92",
+  "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+  "source": "TechCrunch AI",
+  "date": "Mon, 16 Nov 2026 20:07:13 +0000",
+  "added": "2026-11-16T22:20:21.030701+00:00"
+ },
+ {
+  "headline": "NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Science, Engineering and Analytics",
+  "tldr": "NVIDIA unveiled the Rubin HPC GPU, part of the Vera Rubin platform, to speed up simulation and data‑processing workloads for scientific, engineering and analytics applications that use AI agents.",
+  "key_points": [
+   "Rubin HPC is a new GPU announced at SC26.",
+   "Designed for the Vera Rubin platform to accelerate agent‑driven simulations.",
+   "Targets science, engineering, and analytics workflows involving material, molecule, and design exploration.",
+   "Optimized for high‑performance computing (HPC) and AI‑enhanced data processing."
+  ],
+  "why_it_matters": "Accelerating simulations and data processing enables researchers and engineers to explore more candidates faster, shortening discovery cycles in fields like materials science, drug design, and complex engineering, and showcases NVIDIA's push to integrate AI agents into HPC workloads.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "GPU",
+   "HPC",
+   "AI agents",
+   "simulation"
+  ],
+  "importance": 3,
+  "id": "13aacf9f27d87578",
+  "url": "https://blogs.nvidia.com/blog/rubin-hpc/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:01 +0000",
+  "added": "2026-11-16T22:20:09.759479+00:00"
+ },
+ {
+  "headline": "CUDA at 20: How the Platform Transformed Scientific Computing",
+  "tldr": "NVIDIA celebrates CUDA's 20‑year anniversary at SC26, highlighting its role in making GPU computing essential for modern science and AI.",
+  "key_points": [
+   "20 years of CUDA milestones showcased at SC26",
+   "Recognition of early developers and engineers who built the platform",
+   "CUDA credited with enabling breakthroughs in scientific research and AI",
+   "GPU computing now a foundational layer for many modern applications"
+  ],
+  "why_it_matters": "CUDA’s two‑decade legacy demonstrates how a programmable GPU platform can accelerate scientific discovery and AI development, shaping the entire compute ecosystem and influencing future hardware and software innovations.",
+  "category": "other",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "CUDA",
+   "GPU computing",
+   "AI",
+   "Scientific Computing"
+  ],
+  "importance": 3,
+  "id": "ed06a68081ab0f32",
+  "url": "https://blogs.nvidia.com/blog/20-years-cuda/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:11 +0000",
+  "added": "2026-11-16T22:19:57.346869+00:00"
+ },
+ {
+  "headline": "NVIDIA CUDA-X Libraries Give Agents the Tools to Accelerate Scientific Discovery",
+  "tldr": "NVIDIA expands its CUDA-X library suite with new modules like cuPhoton, cuPotential, and cuSpa, enabling AI agents to speed up data analysis and modeling across fields such as astrophysics, materials science, and single‑cell biology.",
+  "key_points": [
+   "New CUDA-X libraries (cuPhoton, cuPotential, cuSpa) released",
+   "Accelerates analysis of large scientific datasets",
+   "Supports AI agents in modeling complex systems",
+   "Targets domains from astrophysics to single‑cell biology"
+  ],
+  "why_it_matters": "By providing specialized, high‑performance tools, NVIDIA helps researchers tackle bigger data challenges faster, potentially shortening the time to scientific breakthroughs across multiple disciplines.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "CUDA-X",
+   "scientific computing",
+   "AI agents",
+   "accelerated computing"
+  ],
+  "importance": 3,
+  "id": "7ffe4f27310feb57",
+  "url": "https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:16 +0000",
+  "added": "2026-11-16T22:19:45.650113+00:00"
+ },
+ {
+  "headline": "Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics",
+  "tldr": "Lambda uses NVIDIA's co‑packaged optics switches to link over 10,000 GPUs across GB300 racks, improving network speed, efficiency, and resilience for large‑scale AI training.",
+  "key_points": [
+   "Lambda integrates NVIDIA Photonics CPO switches into its AI training infrastructure.",
+   "The switches connect NVIDIA GB300 NVL72 racks housing more than 10,000 GPUs.",
+   "Co‑packaged optics provide faster, more power‑efficient, and fault‑tolerant networking.",
+   "Improved network resiliency reduces training downtime and operational costs."
+  ],
+  "why_it_matters": "Efficient, high‑bandwidth networking is a bottleneck for massive AI model training; NVIDIA's photonic switches enable larger clusters to train faster and more reliably, accelerating AI research and deployment.",
+  "category": "product",
+  "companies": [
+   "Lambda",
+   "NVIDIA"
+  ],
+  "tags": [
+   "photonics",
+   "AI training",
+   "networking",
+   "datacenter"
+  ],
+  "importance": 3,
+  "id": "f149dc1a48ff445d",
+  "url": "https://blogs.nvidia.com/blog/lambda-photonics/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:51 +0000",
+  "added": "2026-11-16T22:19:33.333831+00:00"
+ },
+ {
+  "headline": "TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient",
+  "tldr": "TokenEconomizer is an open‑source plugin that reuses prior coding‑agent sessions to reduce token usage and cost while keeping performance.",
+  "key_points": [
+   "Reduces token consumption by leveraging past interactions",
+   "Open‑source plugin for AI coding assistants",
+   "Maintains task success rates despite lower compute",
+   "Promotes more efficient use of large language models in coding tasks"
+  ],
+  "why_it_matters": "Lowering token usage cuts operational costs for developers and enterprises using AI coding agents, making large‑model assistance more affordable and scalable.",
+  "category": "open_source",
+  "companies": [
+   "Microsoft"
+  ],
+  "tags": [
+   "coding agents",
+   "token efficiency",
+   "open-source",
+   "AI productivity"
+  ],
+  "importance": 2,
+  "id": "8451eda18f3aa606",
+  "url": "https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/",
+  "source": "Microsoft Research",
+  "date": "Mon, 16 Nov 2026 17:01:35 +0000",
+  "added": "2026-11-16T22:19:21.294999+00:00"
+ },
+ {
+  "headline": "New Ask Maps features to help with holiday travel and prep",
+  "tldr": "Google AI adds Ask Maps capabilities aimed at simplifying holiday travel planning and preparation.",
+  "key_points": [
+   "Introduces Ask Maps for travel queries",
+   "Focus on holiday travel assistance",
+   "Provides preparation tips and recommendations"
+  ],
+  "why_it_matters": "Helps users quickly get AI‑driven answers for travel logistics, improving the utility of Google Maps during peak holiday periods.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "maps",
+   "travel",
+   "holiday",
+   "AI"
+  ],
+  "importance": 2,
+  "id": "717626b76ea030ce",
+  "url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+  "source": "Google AI",
+  "date": "Mon, 16 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-16T22:19:09.066267+00:00"
+ },
+ {
+  "headline": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+  "tldr": "NVIDIA's new Vera Rubin platform topped all MLPerf Training v6.1 benchmarks and achieved over 10× generational throughput‑per‑watt gains in its first MLPerf Endpoints submission for agentic AI.",
+  "key_points": [
+   "Vera Rubin swept every MLPerf Training v6.1 benchmark.",
+   "First MLPerf Endpoints submission from NVIDIA shows >10× throughput‑per‑watt improvement for agentic inference.",
+   "Results highlight leading performance across training, post‑training, and agentic inference workloads.",
+   "Benchmark gains underscore NVIDIA's hardware advantage in AI compute efficiency."
+  ],
+  "why_it_matters": "Benchmark dominance signals that NVIDIA's latest hardware platform sets a new efficiency standard for large‑scale AI training and inference, influencing future hardware choices and competitive dynamics in the AI infrastructure market.",
+  "category": "hardware",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "MLPerf",
+   "Vera Rubin",
+   "training",
+   "inference"
+  ],
+  "importance": 4,
+  "id": "3197bf91500d6695",
+  "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+  "source": "NVIDIA",
+  "date": "Mon, 16 Nov 2026 16:00:25 +0000",
+  "added": "2026-11-16T22:18:57.429810+00:00"
+ },
+ {
+  "headline": "More ways to move care forward with ChatGPT for Healthcare",
+  "tldr": "OpenAI adds computer-use agents, better clinical answers, and healthcare plugins that integrate with medical software.",
+  "key_points": [
+   "Introduction of computer-use agents for healthcare tasks",
+   "Improved accuracy of clinical answer generation",
+   "New plugins that work across existing healthcare software"
+  ],
+  "why_it_matters": "",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "healthcare",
+   "ChatGPT",
+   "plugins",
+   "clinical AI"
+  ],
+  "importance": 2,
+  "id": "cfcc7acb02e9ca79",
+  "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 06:00:00 GMT",
+  "added": "2026-11-16T22:18:45.144110+00:00"
+ },
+ {
+  "headline": "Advancing computer-use agents for healthcare teams",
+  "tldr": "OpenAI is developing AI agents that can operate computers to assist healthcare professionals.",
+  "key_points": [
+   "Focus on computer-use agents",
+   "Targeted at healthcare teams",
+   "Advancement of AI assistance in medical settings"
+  ],
+  "why_it_matters": "AI agents that can interact with software can streamline workflows, reduce administrative burden, and improve patient care efficiency for healthcare providers.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "healthcare",
+   "AI agents",
+   "computer-use"
+  ],
+  "importance": 2,
+  "id": "b0ded74e06b06613",
+  "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 06:00:00 GMT",
+  "added": "2026-11-16T22:18:33.348693+00:00"
+ },
+ {
+  "headline": "LVMH’s Media Division announces strategic partnership with OpenAI",
+  "tldr": "LVMU’s Media Division partners with OpenAI to use AI for journalism support and make publications accessible via ChatGPT.",
+  "key_points": [
+   "Collaboration between LVMH’s Media Division and OpenAI",
+   "AI tools will assist journalists and editors",
+   "Content will be made searchable and interactive through ChatGPT"
+  ],
+  "why_it_matters": "The partnership shows how major luxury and media brands are adopting generative AI to enhance content creation and accessibility, signaling broader industry adoption beyond tech companies.",
+  "category": "other",
+  "companies": [
+   "LVMH",
+   "OpenAI"
+  ],
+  "tags": [
+   "media",
+   "journalism",
+   "AI",
+   "ChatGPT"
+  ],
+  "importance": 2,
+  "id": "91e58e2ea930c2fa",
+  "url": "https://openai.com/index/lvmh-media-division-partnership",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 09:00:00 GMT",
+  "added": "2026-11-16T22:18:21.143924+00:00"
+ },
+ {
+  "headline": "Science at the Frontier: How scientists use ChatGPT",
+  "tldr": "A study of 1,800+ scientists shows how they incorporate ChatGPT into daily research workflows, boosting productivity and shaping expectations for discovery.",
+  "key_points": [
+   "Over 1,800 scientists surveyed",
+   "ChatGPT integrated into daily research tasks",
+   "Reported productivity gains",
+   "Expectations for future scientific discovery"
+  ],
+  "why_it_matters": "Understanding real-world scientific adoption of LLMs helps gauge AI's impact on research efficiency and future innovation pathways.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "ChatGPT",
+   "scientific research",
+   "productivity",
+   "survey"
+  ],
+  "importance": 2,
+  "id": "f891bd93f3d21469",
+  "url": "https://openai.com/index/science-at-the-frontier",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 12:00:00 GMT",
+  "added": "2026-11-16T22:18:09.213101+00:00"
+ },
+ {
+  "headline": "Strengthening the fight against online child sexual abuse with new tools and support",
+  "tldr": "OpenAI announces new tools, guidance, and partnerships to help prevent, detect, and respond to online child sexual exploitation.",
+  "key_points": [
+   "Launch of practical tools for detecting abusive content",
+   "Release of guidance for organizations to respond effectively",
+   "Formation of partnerships to broaden impact"
+  ],
+  "why_it_matters": "Improving detection and response capabilities helps protect vulnerable children online and sets a precedent for industry-wide responsibility.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "child safety",
+   "online abuse",
+   "tools",
+   "partnerships"
+  ],
+  "importance": 2,
+  "id": "b1c71d07875ac772",
+  "url": "https://openai.com/index/strengthening-online-child-safety",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 17:00:00 GMT",
+  "added": "2026-11-16T22:17:57.203633+00:00"
+ },
+ {
+  "headline": "Broadening access to AI for scientists",
+  "tldr": "OpenAI expands its ChatGPT for Academic Researchers program, granting free access to frontier models for 200,000 researchers worldwide.",
+  "key_points": [
+   "ChatGPT for Academic Researchers program expanded",
+   "200,000 researchers worldwide eligible",
+   "Free access to OpenAI's frontier models"
+  ],
+  "why_it_matters": "Providing free, high‑performance AI tools to a large scientific community can accelerate research, democratize cutting‑edge technology, and foster broader innovation across disciplines.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "access",
+   "researchers",
+   "free",
+   "frontier-models"
+  ],
+  "importance": 2,
+  "id": "f26f2a4dfd6b9b95",
+  "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 17:00:00 GMT",
+  "added": "2026-11-16T22:17:45.178912+00:00"
+ },
+ {
+  "headline": "At Holiday Extras, dots get to work before anyone asks",
+  "tldr": "Holiday Extras uses AI \"dots\" to automatically generate launch reports, flag issues, and prep for meetings without prompting.",
+  "key_points": [
+   "Dots deliver launch reports unprompted",
+   "They flag potential issues people might miss",
+   "They discuss upcoming meetings during commutes"
+  ],
+  "why_it_matters": "Shows how AI assistants can proactively handle routine tasks, improving efficiency and reducing human oversight in business operations.",
+  "category": "product",
+  "companies": [
+   "Holiday Extras"
+  ],
+  "tags": [
+   "AI assistants",
+   "automation",
+   "productivity"
+  ],
+  "importance": 2,
+  "id": "3899b6e8ee3cc1f1",
+  "url": "https://openai.com/business/customer-stories/holiday-extras-dots",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-16T22:17:33.155688+00:00"
+ },
+ {
+  "headline": "The King’s Trust and OpenAI launch £1m partnership",
+  "tldr": "OpenAI and The King’s Trust are funding a £1 million program to teach AI skills to up to 25,000 young people in the UK.",
+  "key_points": [
+   "£1 million joint investment",
+   "Targets up to 25,000 UK youth",
+   "Focus on practical AI skills for employment",
+   "Collaboration between OpenAI and The King’s Trust"
+  ],
+  "why_it_matters": "Building a large, skilled AI workforce early helps the UK stay competitive in the fast‑growing AI sector and expands inclusive access to AI education.",
+  "category": "funding",
+  "companies": [
+   "OpenAI",
+   "The King's Trust"
+  ],
+  "tags": [
+   "AI education",
+   "UK",
+   "partnership",
+   "youth"
+  ],
+  "importance": 2,
+  "id": "e3915f7e4cf071c4",
+  "url": "https://openai.com/index/the-kings-trust-and-openai",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-16T22:17:21.390003+00:00"
+ },
+ {
+  "headline": "Our first phase of embedded assessments",
+  "tldr": "OpenAI launches its first embedded assessment phase with partners to independently evaluate model alignment, safeguards, and monitoring systems.",
+  "key_points": [
+   "Partnerships with Apollo Research, METR, Transluce, and Goodfire",
+   "Independent evaluation of model alignment",
+   "Assessment of safety safeguards and monitoring mechanisms"
+  ],
+  "why_it_matters": "Independent assessments help verify that AI models meet alignment and safety standards, building trust and guiding responsible deployment.",
+  "category": "policy",
+  "companies": [
+   "OpenAI",
+   "Apollo Research",
+   "METR",
+   "Transluce",
+   "Goodfire"
+  ],
+  "tags": [
+   "alignment",
+   "assessment",
+   "safety",
+   "monitoring"
+  ],
+  "importance": 2,
+  "id": "ebd9eb94963902d2",
+  "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+  "source": "OpenAI",
+  "date": "Mon, 16 Nov 2026 08:00:00 GMT",
+  "added": "2026-11-16T22:17:09.515683+00:00"
+ },
+ {
+  "headline": "Do Underwater Image Quality Metrics Agree with Human Perception? A Benchmark with Human Choices, Simple Edits and Generative Drift",
+  "tldr": "A study evaluates 73 no‑reference underwater image quality metrics against human preferences and finds none consistently align with human judgments, releasing the TrustUIQA benchmark.",
+  "key_points": [
+   "73 handcrafted, learned, vision‑language, and general‑purpose metrics were tested on five human‑based reference sets.",
+   "Best worst‑case Cohen's kappa was only 0.23 (Q‑Align), far below human inter‑rater agreement (median 0.41).",
+   "Common metrics like UCIQE often favor edits rejected by people.",
+   "Simple edits, adversarial perturbations, and repeated generative edits can inflate metric scores despite degrading image quality.",
+   "The TrustUIQA benchmark and dataset are released for future evaluation."
+  ],
+  "why_it_matters": "Accurate evaluation of underwater image enhancement is crucial for marine research, robotics, and visual media; mismatches between metrics and human perception highlight the need for better assessment tools.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "underwater",
+   "image_quality",
+   "benchmark",
+   "human_perception"
+  ],
+  "importance": 2,
+  "id": "f3f48383e04dbb8d",
+  "url": "https://huggingface.co/papers/2611.18429",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:16:57.319876+00:00"
+ },
+ {
+  "headline": "OneSteer: Unlocking Steerable General Humanoid Motion Tracking via One-Step Diffusion Whole-Body Control",
+  "tldr": "OneSteer introduces a diffusion‑based whole‑body controller that can track motions and be steered at test time using differentiable task costs, achieving high success rates on both simulated and real humanoid robots.",
+  "key_points": [
+   "One‑step diffusion controller combines motion tracking with test‑time steering via task‑cost optimization.",
+   "Achieves 90% clean passage under a 1.25 m bar in simulation, up from 2% baseline.",
+   "On a Unitree G1 robot, completes 27 nominal tracking trials and passes low‑height obstacles with minimal falls.",
+   "Predictive variation scoring ranks likely tracking failures 10× faster than simulation rollouts.",
+   "Model trained from scratch outperforms baselines on AMASS and BONES datasets."
+  ],
+  "why_it_matters": "Enables flexible, real‑time adaptation of humanoid robots to new objectives without retraining, advancing practical deployment of general‑purpose robot control in dynamic environments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "motion tracking",
+   "diffusion",
+   "humanoid robotics",
+   "control"
+  ],
+  "importance": 3,
+  "id": "49676e2ddf6b7456",
+  "url": "https://huggingface.co/papers/2610.41354",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:16:45.453354+00:00"
+ },
+ {
+  "headline": "Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game",
+  "tldr": "The paper introduces Re-Search, a Twenty Questions‑style framework that tests how LLMs generate research ideas by asking yes‑no questions, revealing that generation—not judgment—is the main bottleneck.",
+  "key_points": [
+   "Re-Search isolates ideation from execution using a 100‑question binary feedback game",
+   "Most progress occurs in the first 30 questions, after which models plateau",
+   "Models can recognize good ideas when presented but struggle to generate them independently",
+   "Over‑exploitation or over‑exploration of question space leads to failure",
+   "Enriching the search with external ideas may be more effective than improving generation alone"
+  ],
+  "why_it_matters": "Understanding the limits of LLM‑driven research ideation helps guide the design of future autoresearch systems, indicating that augmenting models with external suggestions could accelerate scientific discovery.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "ideation",
+   "LLM",
+   "evaluation",
+   "research"
+  ],
+  "importance": 3,
+  "id": "84417c012de9e02b",
+  "url": "https://huggingface.co/papers/2611.14487",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-16T22:16:33.462221+00:00"
+ },
+ {
+  "headline": "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+  "tldr": "An agentic system automatically fine‑tunes and quantizes small language models for specific tasks and Android phones, achieving on‑device performance that rivals larger models while using far less GPU time.",
+  "key_points": [
+   "Automates SLM selection, hyperparameter tuning, data mining, and synthetic data generation per device",
+   "Searches across model sizes and quantizations, adapting accuracy goals with real phone measurements",
+   "Outperforms five‑shot frontier models on 5 of 10 tasks and matches on 3, using 19× less GPU time than exhaustive training",
+   "Demonstrates that hardware‑specific measurements change the optimal model configuration"
+  ],
+  "why_it_matters": "Enables privacy‑preserving, offline AI on smartphones without expert intervention, lowering compute costs and expanding personalized AI capabilities to edge devices.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "mobile",
+   "small language models",
+   "model optimization",
+   "edge AI"
+  ],
+  "importance": 3,
+  "id": "890b3b5545c8fcb4",
+  "url": "https://huggingface.co/papers/2611.13509",
+  "source": "HF Daily Papers",
+  "date": "2026-11-09T19:00:00.000Z",
+  "added": "2026-11-16T22:16:21.322602+00:00"
+ },
+ {
+  "headline": "G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands",
+  "tldr": "G-CAST is a system that continuously fine‑tunes e‑commerce LLM agents using daily production data, balancing new demand adaptation with preservation of existing capabilities.",
+  "key_points": [
+   "Addresses demand drift and tool/skill evolution in LLM‑powered shopping agents.",
+   "Uses reward‑routed, entropy‑prioritized data selection and governed reward evolution.",
+   "Provides checkpoint‑based governance to ensure new updates don’t regress prior behavior.",
+   "Demonstrated improved adaptation and stability on Alibaba's 1688 B2B procurement agent."
+  ],
+  "why_it_matters": "Continual learning for production LLM agents reduces costly manual retraining, enabling faster response to changing market demands while maintaining reliable user experience—a critical capability for large e‑commerce platforms.",
+  "category": "paper",
+  "companies": [
+   "Alibaba"
+  ],
+  "tags": [
+   "continual_learning",
+   "e-commerce",
+   "LLM",
+   "self_training"
+  ],
+  "importance": 3,
+  "id": "4b6efe4e39bbfb9c",
+  "url": "https://huggingface.co/papers/2611.17814",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:16:09.190505+00:00"
+ },
+ {
+  "headline": "LuthorSQL: A One-Pass Text-to-SQL Model as System 1 for a Slower LLM Agent",
+  "tldr": "LuthorSQL, a 7B non‑autoregressive text‑to‑SQL model, runs a single forward pass to filter queries for a slower LLM agent, achieving 68% execution accuracy in 0.84 s per query and cutting API costs by a third while preserving overall accuracy.",
+  "key_points": [
+   "7B non‑autoregressive model makes a single pass to generate and validate up to 32 candidate SQL plans.",
+   "Runs in 0.84 s on a single GPU, 68.03% execution accuracy on BIRD hidden test set; retains performance with 8‑bit quantization.",
+   "Acts as a fast System 1 gate, escalating uncertain queries to Claude Opus 5.5, reducing API calls by 33.3% with no loss in overall accuracy.",
+   "Zero‑shot transfers to Snowflake, BigQuery, MySQL, PostgreSQL, DuckDB with only ~3 point drop from SQLite baseline."
+  ],
+  "why_it_matters": "By offloading the majority of database queries to a lightweight local model, organizations can dramatically lower cloud‑API costs, reduce latency, and keep sensitive query data in‑house while still leveraging powerful LLM agents for complex cases.",
+  "category": "paper",
+  "companies": [
+   "Anthropic",
+   "IAMIbrahimmemon"
+  ],
+  "tags": [
+   "text-to-sql",
+   "LLM agents",
+   "model efficiency",
+   "cost reduction"
+  ],
+  "importance": 3,
+  "id": "a2aa3f3e40baae52",
+  "url": "https://huggingface.co/papers/2611.17780",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:15:57.477982+00:00"
+ },
+ {
+  "headline": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+  "tldr": "A new video-language model (V-JEPA-LM) combines a world-model video encoder with counterfactual supervision to extract dynamic information, achieving state‑of‑the‑art scores on multiple video benchmarks.",
+  "key_points": [
+   "World‑model encoder V-JEPA captures dynamics (speed, direction, order) in a shared subspace.",
+   "Counterfactual supervision forces the language model to read those dynamics, improving answer accuracy.",
+   "Single‑stage training on 4.53 M videos yields V‑JEPA‑LM models (1B‑8B) that outperform all open models of comparable size.",
+   "4B model scores 72.1 vs. 61.1 (best open 4B) and 64.8 (best open 8B) on eleven video benchmarks."
+  ],
+  "why_it_matters": "Demonstrates that dynamic visual information can be effectively leveraged in video‑language models, narrowing the gap to closed‑source systems and advancing multimodal AI capabilities.",
+  "category": "paper",
+  "companies": [
+   "Qwen3",
+   "Llama"
+  ],
+  "tags": [
+   "video-language",
+   "multimodal",
+   "counterfactual supervision",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "bc15f7248029aa22",
+  "url": "https://huggingface.co/papers/2611.17831",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:15:45.351471+00:00"
+ },
+ {
+  "headline": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+  "tldr": "WebArena-Pro introduces a 300‑task benchmark covering 20 self‑hosted web apps, adding audio/video modalities and reproducible evaluation for web agents.",
+  "key_points": [
+   "300 tasks across 20 web applications in six domains",
+   "Supports text, vision, audio, and video modalities",
+   "Reproducible, isolated task execution with parallel evaluation",
+   "Top agents: Codex with GPT‑6.1 Sol and Claude Code with Claude Opus 5.5 (62.3% success)",
+   "Human‑curated, LLM‑assisted annotation pipeline"
+  ],
+  "why_it_matters": "Provides the most comprehensive, multimodal, and reproducible benchmark for web agents, enabling fair comparison and driving progress in realistic browser‑based AI tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "web agents",
+   "multimodal",
+   "reproducibility"
+  ],
+  "importance": 3,
+  "id": "3ae07814cc15c93f",
+  "url": "https://huggingface.co/papers/2611.17955",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-16T22:15:33.268799+00:00"
+ },
+ {
+  "headline": "MIRIX-2.0: Multi-Agent Memory System",
+  "tldr": "MIRIX-2.0 is a public, fine‑tuning‑free multi‑agent memory system that outperforms prior methods on several QA and procedural benchmarks while keeping retrieval costs bounded.",
+  "key_points": [
+   "Achieves 91.4% on LoCoMo and 72.6% on LongMemEval‑S, beating baselines by up to 14.3 points",
+   "Six typed memory agents store complete records indexed by a provenance hypergraph",
+   "AutoDream merges duplicates and distills sessions into reusable skills without rewriting records",
+   "Runs with both closed and open LLMs, needs no fine‑tuning, and code is publicly released"
+  ],
+  "why_it_matters": "Effective long‑term memory is crucial for LLM agents to stay consistent, personalize interactions, and reuse past successes; MIRIX‑2.0 demonstrates a scalable, accurate approach that can be adopted widely without costly model retraining.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "memory",
+   "multi-agent",
+   "LLM",
+   "open-source"
+  ],
+  "importance": 3,
+  "id": "979c445d2a85e8c9",
+  "url": "https://huggingface.co/papers/2611.12068",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-16T22:15:21.323444+00:00"
+ },
+ {
+  "headline": "VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender",
+  "tldr": "A new benchmark, VibePrevisBench, assesses how coding agents reconstruct 4D scenes in Blender and generate proxy videos, revealing strengths and gaps in multimodal spatial understanding.",
+  "key_points": [
+   "242 tasks covering scripts, photos, continuations, and reference videos.",
+   "Two evaluation dimensions: rule‑based scene check and VLM‑based screen check.",
+   "Agents excel at basic camera work but struggle with complex spatial and motion requests.",
+   "Agents can inspect renders but cannot reliably correct errors."
+  ],
+  "why_it_matters": "Provides the first systematic way to measure and improve agents' ability to create and verify 4D scene content, a critical step for controllable video generation and AI‑driven content creation pipelines.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "4D scene",
+   "coding agents",
+   "Blender"
+  ],
+  "importance": 3,
+  "id": "19becf065be41ef0",
+  "url": "https://huggingface.co/papers/2611.15789",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-16T22:15:09.910312+00:00"
+ },
+ {
   "headline": "When to Trust Simulated Patient Responses: Support-Gated World Models for Vasopressor Decision Support",
   "tldr": "A new support-gated world-model framework improves the reliability of simulated patient responses for vasopressor dosing by withholding uncertain predictions, achieving better error and agreement metrics on a large multi‑hospital ICU dataset.",
   "key_points": [
