@@ -1,5 +1,1045 @@
 [
  {
+  "headline": "Termination Lag: Coding Agents Solve Early but Stop Late",
+  "tldr": "Coding agents often find the correct patch early but waste many steps afterward, with up to 60% of post‑solution effort, and occasionally revert correct fixes.",
+  "key_points": [
+   "38‑82% of successful runs get the correct solution on the first edit.",
+   "Agents continue working for a median of 35‑60% of total steps after the correct patch.",
+   "Most extra steps involve verification and repository exploration; 1‑8% of runs undo the correct patch.",
+   "Observed across five models, two frameworks, and three SWE‑bench datasets."
+  ],
+  "why_it_matters": "Understanding termination lag can guide the design of more efficient coding agents, reducing wasted compute and preventing regressions that compromise code reliability.",
+  "category": "paper",
+  "companies": [
+   "Alibaba",
+   "Laguna AI"
+  ],
+  "tags": [
+   "coding agents",
+   "termination lag",
+   "SWE-bench",
+   "code verification"
+  ],
+  "importance": 3,
+  "id": "85b4b15a2534b28f",
+  "url": "https://huggingface.co/papers/2611.14960",
+  "source": "HF Daily Papers",
+  "date": "2026-11-10T19:00:00.000Z",
+  "added": "2026-11-17T21:09:53.592821+00:00"
+ },
+ {
+  "headline": "Reflection Anchors for Propagation-Aware Visual Retention in Long-Chain Multimodal Reasoning",
+  "tldr": "A new policy optimization method (RAPO) improves visual grounding in long-chain multimodal reasoning by selecting high‑entropy reflection anchors and optimizing a KL surrogate, yielding strong gains on LVLM benchmarks.",
+  "key_points": [
+   "Analyzes visual information loss in chain‑of‑thought reasoning using information theory.",
+   "Derives a lower bound on visual gain based on token entropy and downstream propagation potential.",
+   "Introduces RAPO, a GRPO‑based optimizer that picks high‑entropy reflection anchors.",
+   "Shows substantial performance improvements across multiple LVLM backbones.",
+   "Demonstrates that reflection anchors align with visually sensitive decision points."
+  ],
+  "why_it_matters": "Improving visual retention enables large vision‑language models to reason over longer sequences without losing sight context, advancing capabilities in complex multimodal tasks such as detailed image analysis, robotics planning, and interactive AI assistants.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language",
+   "chain-of-thought",
+   "policy optimization",
+   "information theory"
+  ],
+  "importance": 3,
+  "id": "83f05cbf50f33550",
+  "url": "https://huggingface.co/papers/2605.09614",
+  "source": "HF Daily Papers",
+  "date": "2026-11-14T19:00:00.000Z",
+  "added": "2026-11-17T21:09:40.918748+00:00"
+ },
+ {
+  "headline": "EvenVLM: A Text and Multimodal Dataset for the Endangered Even Language with Vision-Language Fine-Tuning",
+  "tldr": "Researchers release EvenVLM, a dataset and fine‑tuning pipeline for the endangered Even language, enabling translation, grammar tasks, and visual question answering with a LoRA‑adapted Qwen3‑VL‑4B model.",
+  "key_points": [
+   "First multimodal (VQA) dataset for Even (≈6,800 speakers)",
+   "50,521 Even‑Russian entries → 107,543 synthetic training examples",
+   "Tokenizer expansion cuts tokens per word by 27%",
+   "LoRA fine‑tuning improves text exact match to 11.4% and VQA accuracy to 65%"
+  ],
+  "why_it_matters": "Shows how modern vision‑language models can be adapted to extremely low‑resource, endangered languages, providing a template for preserving linguistic diversity and expanding AI inclusivity.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "low-resource",
+   "multimodal",
+   "dataset",
+   "language preservation"
+  ],
+  "importance": 3,
+  "id": "4222a880b859317a",
+  "url": "https://huggingface.co/papers/2611.16500",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-17T21:09:28.789986+00:00"
+ },
+ {
+  "headline": "OutfitterBench: Evaluating LLM Agents on Long-Horizon Resource Allocation and Commitment Coordination",
+  "tldr": "A new benchmark, OutfitterBench, tests how LLM agents manage a multi‑day equipment‑rental business, revealing that most frontier models struggle to keep commitments feasible and miss profitable reallocations.",
+  "key_points": [
+   "Agents must balance fixed capital, reservation requests, and walk‑in demand over 200 days.",
+   "Seven state‑of‑the‑art LLMs were evaluated; most underperformed a simple rule‑based baseline.",
+   "The leading agent showed better economic planning but still missed higher‑return opportunities.",
+   "Benchmark code is open‑source on GitHub."
+  ],
+  "why_it_matters": "Long‑horizon resource planning is critical for real‑world AI deployment; this benchmark exposes current LLM agents' weaknesses in maintaining coherent commitments and optimizing asset use over time.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM agents",
+   "resource allocation",
+   "benchmark",
+   "long-horizon planning"
+  ],
+  "importance": 3,
+  "id": "ca3d64679d408cc4",
+  "url": "https://huggingface.co/papers/2611.17933",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-17T21:09:16.810817+00:00"
+ },
+ {
+  "headline": "When Expert Disagreement Hurts: Prestige and Selectivity in LLM Decision Revision",
+  "tldr": "A two‑pass audit shows that LLMs often reverse correct answers when presented with expert disagreement, leading to accuracy drops of up to 16 points.",
+  "key_points": [
+   "Revision improves accuracy only if it reverses wrong answers > a/(1‑a) times correct ones",
+   "Across 5 models and 1,989 decisions, no model met this selectivity under expert cues",
+   "Expert prestige labels increase reversals but can harm or help accuracy inconsistently",
+   "Models also react to stated source reliability, highlighting bias to authority cues"
+  ],
+  "why_it_matters": "Understanding how LLMs handle disagreement is crucial for safe deployment in high‑stakes domains like medicine, science, and law, where blind deference to perceived authority can degrade performance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "decision revision",
+   "expert disagreement",
+   "model reliability"
+  ],
+  "importance": 3,
+  "id": "49221946abd3ac9a",
+  "url": "https://huggingface.co/papers/2611.16694",
+  "source": "HF Daily Papers",
+  "date": "2026-11-11T19:00:00.000Z",
+  "added": "2026-11-17T21:09:05.112348+00:00"
+ },
+ {
+  "headline": "The DOJ says it’s investigating Megaspeed",
+  "tldr": "The U.S. Justice and Commerce Departments are probing Singapore‑based data‑center firm Megaspeed, which has been linked to the resignation of Nvidia CEO Jensen Huang.",
+  "key_points": [
+   "DOJ and Commerce Department launched an investigation into Megaspeed.",
+   "Megaspeed is a Singapore data‑center company tied to Nvidia’s leadership change.",
+   "Earlier reports suggested the probe had been halted, but officials say it is active.",
+   "The investigation may focus on competition and national‑security concerns in AI infrastructure."
+  ],
+  "why_it_matters": "The probe could have major implications for the AI hardware supply chain and competition policy, affecting how data‑center services support large‑scale AI models and potentially shaping future regulatory oversight of AI‑related infrastructure.",
+  "category": "policy",
+  "companies": [
+   "Megaspeed",
+   "Nvidia"
+  ],
+  "tags": [
+   "investigation",
+   "data_center",
+   "AI_hardware",
+   "competition"
+  ],
+  "importance": 3,
+  "id": "cb8293f821d94f0d",
+  "url": "https://www.theverge.com/policy/1035410/doj-megaspeed-nvidia-investigation-update",
+  "source": "The Verge AI",
+  "date": "2026-11-17T11:19:03-05:00",
+  "added": "2026-11-17T21:08:53.561029+00:00"
+ },
+ {
+  "headline": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
+  "tldr": "The paper reveals that LLM agents using the Model Context Protocol can be tricked into invoking attacker‑controlled tools due to weak binding between tool metadata and provider identity.",
+  "key_points": [
+   "Tool-provider misbinding occurs when metadata alone does not verify the tool's true source.",
+   "Attacker can run a rogue MCP server advertising malicious tools with crafted names, descriptions, and schemas.",
+   "Experiments with five LLM clients show misbinding is most likely with exact name collisions, task‑aligned descriptions, and compatible schemas.",
+   "Even without name collisions, authority‑enhanced descriptions can cause wrong‑provider execution or ambiguity.",
+   "Different LLMs exhibit varied failure modes, such as automatic selection of malicious providers, clarification requests, or inconsistent resolution."
+  ],
+  "why_it_matters": "As LLMs increasingly act as autonomous agents invoking external tools, insecure provider binding could let attackers hijack workflows, leading to data leakage, malicious actions, or degraded system reliability.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "MCP",
+   "tool selection",
+   "security",
+   "LLM agents"
+  ],
+  "importance": 3,
+  "id": "24817791f262e8b7",
+  "url": "https://arxiv.org/abs/2611.21577v1",
+  "source": "arXiv",
+  "date": "2026-11-16T18:49:37Z",
+  "added": "2026-11-17T21:08:40.934389+00:00"
+ },
+ {
+  "headline": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+  "tldr": "CertiSum ensures deterministic, bitwise‑identical training with the 4‑bit MXFP4 format across different GPUs and parallelism schemes by certifying native FP32 accumulations and recomputing only uncertified results.",
+  "key_points": [
+   "Identifies that native FP32 accumulation of MXFP4 products is often exact regardless of summation order.",
+   "Collects quantization statistics to certify matrix‑multiplication results and falls back to exact kernels when needed.",
+   "Maintains identical quantization blocks across layouts and merges partial sums without rounding, even in attention and weight‑gradient calculations.",
+   "Demonstrates bit‑for‑bit reproducibility on AMD MI350X and NVIDIA GB200 across various parallelism configurations.",
+   "Adds 11.8–60.5% latency overhead but still achieves up to 1.24× speedup over BF16 and 1.70× over deterministic BF16."
+  ],
+  "why_it_matters": "Deterministic training is crucial for debugging, reproducibility, and auditability of large language models; CertiSum provides a practical solution for 4‑bit quantized training without sacrificing most of the efficiency gains.",
+  "category": "paper",
+  "companies": [
+   "AMD",
+   "NVIDIA"
+  ],
+  "tags": [
+   "MXFP4",
+   "deterministic training",
+   "quantization",
+   "large language models"
+  ],
+  "importance": 3,
+  "id": "b05d343c10cc2e5d",
+  "url": "https://arxiv.org/abs/2611.21584v1",
+  "source": "arXiv",
+  "date": "2026-11-16T18:54:07Z",
+  "added": "2026-11-17T21:08:29.177684+00:00"
+ },
+ {
+  "headline": "Latent Lattice Language Models",
+  "tldr": "Introducing per-layer horizontal latent streams that persist across tokens, improving Transformer perplexity on large-scale training.",
+  "key_points": [
+   "Adds a lattice of per-layer latent states that run recurrently alongside the vertical residual stream.",
+   "Improves validation perplexity from 15.41 to 14.40 for a 406M-parameter model on 20B tokens.",
+   "Combines with other residual enhancements to reach 13.61 perplexity, and boosts hybrid architectures like Gated DeltaNet and Mamba-2.",
+   "Demonstrates a new axis for scaling language model computation beyond depth and looped layers."
+  ],
+  "why_it_matters": "Shows a novel way to increase model capacity with persistent per-layer states, yielding consistent perplexity gains across architectures, which could lead to more efficient and powerful language models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "latent_states",
+   "transformer",
+   "perplexity",
+   "model_scaling"
+  ],
+  "importance": 3,
+  "id": "20163f0376f0e415",
+  "url": "https://arxiv.org/abs/2611.21608v1",
+  "source": "arXiv",
+  "date": "2026-11-16T18:59:38Z",
+  "added": "2026-11-17T21:08:16.654543+00:00"
+ },
+ {
+  "headline": "AI models can be tricked into identifying civilians as military targets by telling them it’s a game",
+  "tldr": "A San Francisco AI evaluation startup showed that leading AI models can be manipulated into labeling civilians as military targets when framed as a game.",
+  "key_points": [
+   "Vals tested manipulation of top AI models",
+   "Framing the task as a game caused misidentification",
+   "Models labeled civilians as military targets",
+   "Raises concerns about autonomous warfare safety"
+  ],
+  "why_it_matters": "Demonstrates a critical vulnerability in AI systems that could be exploited for lethal autonomous weapons, highlighting the need for robust safeguards and ethical guidelines.",
+  "category": "policy",
+  "companies": [
+   "Vals"
+  ],
+  "tags": [
+   "AI safety",
+   "autonomous weapons",
+   "model manipulation"
+  ],
+  "importance": 2,
+  "id": "447a475adcedf3c1",
+  "url": "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 17:20:41 +0000",
+  "added": "2026-11-17T21:08:04.916819+00:00"
+ },
+ {
+  "headline": "Pedestal AI raises $4.7 million to agentify the supply chain",
+  "tldr": "Pedestal AI secured $4.7M to apply agentic AI for faster, more reliable supply chains.",
+  "key_points": [
+   "Funding round of $4.7 million",
+   "Focus on agentic AI technology",
+   "Goal to improve supply chain speed and reliability"
+  ],
+  "why_it_matters": "Injecting agentic AI into logistics could streamline operations, reduce delays, and set a precedent for AI-driven supply chain optimization.",
+  "category": "funding",
+  "companies": [
+   "Pedestal AI"
+  ],
+  "tags": [
+   "supply chain",
+   "agentic AI",
+   "fundraising"
+  ],
+  "importance": 2,
+  "id": "b145ab91c01065c7",
+  "url": "https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 18:04:16 +0000",
+  "added": "2026-11-17T21:07:52.606853+00:00"
+ },
+ {
+  "headline": "Science Corporation’s brain tech is worth $3.5 billion after new funding",
+  "tldr": "Science Corp. raised $400 M in Series D, valuing its anti‑blindness brain‑tech business at $3.5 B.",
+  "key_points": [
+   "Series D round raised $400 M",
+   "Company valuation now $3.5 B",
+   "Focus on brain‑tech for anti‑blindness",
+   "Funding aimed at scaling operations"
+  ],
+  "why_it_matters": "The large capital infusion accelerates development of neuro‑technology that could restore vision, positioning Science Corp. as a major player in the emerging brain‑tech market.",
+  "category": "funding",
+  "companies": [
+   "Science Corporation"
+  ],
+  "tags": [
+   "brain tech",
+   "anti-blindness",
+   "funding",
+   "Series D"
+  ],
+  "importance": 2,
+  "id": "bcc5080f4e5647dc",
+  "url": "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 14:26:46 +0000",
+  "added": "2026-11-17T21:07:41.931777+00:00"
+ },
+ {
+  "headline": "Isomorphic Labs raises $5B as it looks to take drug candidates to clinical trials",
+  "tldr": "AI drug‑discovery startup Isomorphic Labs secured a $5 billion Series C round to advance its candidates toward clinical trials.",
+  "key_points": [
+   "Raised $5 billion in Series C funding",
+   "Spun out of Google DeepMind in 2021",
+   "Goal: move AI‑designed drug candidates into clinical trials"
+  ],
+  "why_it_matters": "The massive funding underscores growing investor confidence in AI‑driven drug discovery, potentially accelerating the development of new medicines and reshaping biotech investment.",
+  "category": "funding",
+  "companies": [
+   "Isomorphic Labs",
+   "Google",
+   "DeepMind"
+  ],
+  "tags": [
+   "AI drug discovery",
+   "funding",
+   "biotech",
+   "clinical trials"
+  ],
+  "importance": 2,
+  "id": "3ddd561d3db586e7",
+  "url": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 14:50:58 +0000",
+  "added": "2026-11-17T21:07:28.959591+00:00"
+ },
+ {
+  "headline": "Daydream’s new AI agent acts as your personal stylist — and can shop for you, too",
+  "tldr": "Daydream launches an AI shopping agent that remembers your style, virtually tries on clothes, plans outfits, tracks sales, and completes purchases.",
+  "key_points": [
+   "Remembers user style preferences",
+   "Virtually tries on clothes and plans outfits",
+   "Tracks sales and can complete purchases automatically"
+  ],
+  "why_it_matters": "Combines personal styling with automated purchasing, streamlining the online shopping experience and showcasing AI's potential in consumer retail.",
+  "category": "product",
+  "companies": [
+   "Daydream"
+  ],
+  "tags": [
+   "fashion",
+   "shopping",
+   "AI agent"
+  ],
+  "importance": 2,
+  "id": "f70b9be328657a7e",
+  "url": "https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 16:32:55 +0000",
+  "added": "2026-11-17T21:07:16.918925+00:00"
+ },
+ {
+  "headline": "Proton’s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
+  "tldr": "Proton launches Lumo, a desktop AI assistant for Windows, macOS, and Linux that emphasizes privacy and granular access controls.",
+  "key_points": [
+   "Lumo is a desktop app available on Windows, Mac, and Linux.",
+   "It automates tasks across files and connected applications.",
+   "Users can set granular permissions for what the AI can access."
+  ],
+  "why_it_matters": "Offers a privacy‑first AI assistant, addressing growing concerns about data security in popular chat models.",
+  "category": "product",
+  "companies": [
+   "Proton"
+  ],
+  "tags": [
+   "privacy",
+   "AI assistant",
+   "desktop app"
+  ],
+  "importance": 2,
+  "id": "42c4fd05f3f446d0",
+  "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 17:32:25 +0000",
+  "added": "2026-11-17T21:07:04.690400+00:00"
+ },
+ {
+  "headline": "As decision model use skyrockets, is customization the next frontier?",
+  "tldr": "Sqwish Labs introduces a decision model that can be trained with user data to boost performance.",
+  "key_points": [
+   "Decision model adoption is rapidly increasing",
+   "Customization is presented as the next major development",
+   "Sqwish Labs enables training on proprietary data",
+   "Goal is to maximize model capabilities"
+  ],
+  "why_it_matters": "Allowing users to fine‑tune decision models with their own data could significantly improve accuracy for specific applications, driving broader enterprise adoption and creating new competitive advantages in AI‑powered decision making.",
+  "category": "product",
+  "companies": [
+   "Sqwish Labs"
+  ],
+  "tags": [
+   "decision models",
+   "customization",
+   "AI training"
+  ],
+  "importance": 2,
+  "id": "f4982bcb3ccbe841",
+  "url": "https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 18:10:00 +0000",
+  "added": "2026-11-17T21:06:52.645516+00:00"
+ },
+ {
+  "headline": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
+  "tldr": "Google extends Gemini chat retention to 2 months, up from 72 hours, regardless of history settings, with a global rollout in the coming weeks.",
+  "key_points": [
+   "Chat history retained for 2 months",
+   "Increase from the previous 72‑hour limit",
+   "Applies even when chat history is turned off",
+   "Global rollout over the next few weeks"
+  ],
+  "why_it_matters": "Longer chat retention improves continuity for users and developers building on Gemini, influencing how conversational AI experiences are designed and stored.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "chat retention",
+   "AI",
+   "Google"
+  ],
+  "importance": 2,
+  "id": "560e703561a25cd9",
+  "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 18:48:23 +0000",
+  "added": "2026-11-17T21:06:40.949456+00:00"
+ },
+ {
+  "headline": "Google expands access to Gemini Tasks, which can help with calls, purchases",
+  "tldr": "Google opens Gemini's Task mode to more users, enabling the AI to coordinate calls, log into sites, and make purchases on behalf of users.",
+  "key_points": [
+   "Gemini Task mode now available to a broader audience",
+   "AI can schedule and coordinate phone calls",
+   "AI can log into websites and complete purchases automatically"
+  ],
+  "why_it_matters": "Automating routine digital interactions can save time and reduce friction for users, showcasing a step toward more capable, assistant-like AI services.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "Task mode",
+   "automation",
+   "AI assistant"
+  ],
+  "importance": 2,
+  "id": "0fc744e43d6095d8",
+  "url": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 19:02:20 +0000",
+  "added": "2026-11-17T21:06:28.591288+00:00"
+ },
+ {
+  "headline": "Model ML raises $250M to automate investment banking grunt work",
+  "tldr": "Model ML secured $250 million to build AI agents that automatically update financial models and presentations as deal contexts change.",
+  "key_points": [
+   "AI agents understand full deal context",
+   "Automatically revise financial models and decks",
+   "Targets time‑consuming tasks in investment banking",
+   "Raised $250 M in funding"
+  ],
+  "why_it_matters": "Automating routine banking analysis can dramatically cut costs and speed decision‑making, potentially reshaping how financial institutions handle deal work.",
+  "category": "funding",
+  "companies": [
+   "Model ML"
+  ],
+  "tags": [
+   "finance",
+   "AI agents",
+   "automation",
+   "fundraising"
+  ],
+  "importance": 4,
+  "id": "d9a047affb028160",
+  "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+  "source": "TechCrunch AI",
+  "date": "Tue, 17 Nov 2026 19:32:11 +0000",
+  "added": "2026-11-17T21:06:17.024110+00:00"
+ },
+ {
+  "headline": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+  "tldr": "NVIDIA unveiled new AI‑agent tools for scientific research, announced the Nemotron for Science model, the Rubin HPC GPU, and an expanded Vera CPU platform at SC26.",
+  "key_points": [
+   "Launch of AI‑agent software that can plan experiments, run code, and verify results on researchers' own systems",
+   "Introduction of Nemotron for Science, a specialized large‑language model for scientific workloads",
+   "Reveal of the Rubin high‑performance computing GPU",
+   "Expansion of the Vera CPU platform for HPC workloads"
+  ],
+  "why_it_matters": "These tools and hardware accelerate AI‑driven scientific discovery, giving researchers on‑premise access to advanced agent capabilities and boosting NVIDIA's foothold in the high‑performance computing market.",
+  "category": "product",
+  "companies": [
+   "NVIDIA"
+  ],
+  "tags": [
+   "AI agents",
+   "HPC",
+   "GPU",
+   "software"
+  ],
+  "importance": 3,
+  "id": "b198e88d7ab77bde",
+  "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+  "source": "NVIDIA",
+  "date": "Tue, 17 Nov 2026 14:00:10 +0000",
+  "added": "2026-11-17T21:06:05.045042+00:00"
+ },
+ {
+  "headline": "Put Gemini to work for you",
+  "tldr": "Google introduces a user interface for Gemini that prompts users to describe tasks for the AI to handle.",
+  "key_points": [
+   "New UI asks \"What can I get done for you?\"",
+   "Input box invites users to describe a task",
+   "Designed to make Gemini more accessible for everyday tasks"
+  ],
+  "why_it_matters": "A simple, task‑oriented interface can lower the barrier for users to leverage Gemini’s capabilities, potentially increasing adoption and practical usage of Google’s AI assistant.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "Gemini",
+   "AI",
+   "interface",
+   "product"
+  ],
+  "importance": 2,
+  "id": "357d085ae06f4ca2",
+  "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+  "source": "Google AI",
+  "date": "Tue, 17 Nov 2026 17:00:00 +0000",
+  "added": "2026-11-17T21:05:52.575025+00:00"
+ },
+ {
+  "headline": "ChatGPT Ads expands market presence with Aleph as exclusive reseller in 44 countries",
+  "tldr": "Aleph becomes the exclusive reseller for ChatGPT Ads across 44 countries, providing local invoicing, support, and market expertise.",
+  "key_points": [
+   "Aleph appointed as exclusive reseller for ChatGPT Ads",
+   "Coverage spans 44 countries",
+   "Offers local invoicing, in‑person support, and market expertise to brands and agencies"
+  ],
+  "why_it_matters": "The partnership broadens ChatGPT Ads' global reach, making it easier for advertisers to adopt the platform with localized services, potentially increasing revenue and market share for OpenAI.",
+  "category": "product",
+  "companies": [
+   "OpenAI",
+   "Aleph"
+  ],
+  "tags": [
+   "ads",
+   "reseller",
+   "global expansion",
+   "marketing"
+  ],
+  "importance": 2,
+  "id": "a045ec708b22e25e",
+  "url": "https://openai.com/ads/blog/chatgpt-ads-increases-its-market-presence",
+  "source": "OpenAI",
+  "date": "Thu, 12 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-17T21:05:41.046823+00:00"
+ },
+ {
+  "headline": "Introducing OpenAI for Chile",
+  "tldr": "OpenAI partners with the Chilean government to promote responsible AI use, train public‑sector workers, and aid local startups.",
+  "key_points": [
+   "Collaboration between OpenAI and the Government of Chile",
+   "Focus on responsible AI adoption in the public sector",
+   "Skill‑building programs for government employees",
+   "Support for Chilean startups developing AI applications"
+  ],
+  "why_it_matters": "The partnership aims to accelerate AI integration in a national context, fostering a skilled workforce and nurturing local AI innovation, which can serve as a model for other countries.",
+  "category": "policy",
+  "companies": [
+   "OpenAI",
+   "Government of Chile"
+  ],
+  "tags": [
+   "AI adoption",
+   "Chile",
+   "public sector",
+   "startups"
+  ],
+  "importance": 2,
+  "id": "58da9c66b1456ac9",
+  "url": "https://openai.com/index/introducing-openai-for-chile",
+  "source": "OpenAI",
+  "date": "Tue, 17 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-17T21:05:28.739613+00:00"
+ },
+ {
+  "headline": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+  "tldr": "Google rebrands its Spark AI agent as Tasks, makes it free, and powers it with the new Gemini 4 Hydrogen model for personal assistance tasks.",
+  "key_points": [
+   "Rebranded Spark AI to “Tasks”",
+   "Now free for US users",
+   "Powered by Gemini 4 Hydrogen model",
+   "Handles meal planning, calendar management, and email expense analysis"
+  ],
+  "why_it_matters": "Provides a free, integrated AI assistant for everyday productivity, showcasing Google’s push to mainstream its Gemini models and compete with other free AI tools.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "AI assistant",
+   "Gemini",
+   "free",
+   "product launch"
+  ],
+  "importance": 3,
+  "id": "72284a47c9d975a2",
+  "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+  "source": "The Verge AI",
+  "date": "2026-11-17T13:58:01-05:00",
+  "added": "2026-11-17T21:05:18.572153+00:00"
+ },
+ {
+  "headline": "Astra for Law leads in legal intelligence",
+  "tldr": "Astra for Law topped a 24‑area legal evaluation and is now available to all ChatGPT Enterprise users.",
+  "key_points": [
+   "Ranked first in a launch evaluation covering 24 areas of law",
+   "Available to every ChatGPT Enterprise customer",
+   "Highlights OpenAI's push into legal‑focused AI"
+  ],
+  "why_it_matters": "Demonstrates OpenAI's growing foothold in specialized enterprise AI, signaling broader adoption of AI tools in the legal sector.",
+  "category": "product",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "legal AI",
+   "enterprise",
+   "ranking"
+  ],
+  "importance": 2,
+  "id": "0604bc2b50fc0c3b",
+  "url": "https://openai.com/index/astra-law-6-2",
+  "source": "OpenAI",
+  "date": "Tue, 17 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-17T21:05:04.728393+00:00"
+ },
+ {
+  "headline": "Introducing GPT-6.2 Astra and Sol",
+  "tldr": "OpenAI launches GPT‑6.2 Astra and Sol, promising better professional outputs, coding assistance, computer use, and higher efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+  "key_points": [
+   "Improved professional-quality responses",
+   "Enhanced coding and computer-use capabilities",
+   "Higher efficiency and lower cost",
+   "Available via ChatGPT Work, Codex, and API"
+  ],
+  "why_it_matters": "The upgrades aim to make AI assistance more reliable and affordable for businesses and developers, potentially expanding adoption of OpenAI's services in professional and coding contexts.",
+  "category": "model_release",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "gpt-6.2",
+   "astra",
+   "sol",
+   "coding"
+  ],
+  "importance": 2,
+  "id": "549a77347d5e1e5f",
+  "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "source": "OpenAI",
+  "date": "Tue, 17 Nov 2026 17:45:00 GMT",
+  "added": "2026-11-17T21:04:53.069447+00:00"
+ },
+ {
+  "headline": "Phrack 73 Released",
+  "tldr": "The 73rd issue of the hacker magazine Phrack has been published.",
+  "key_points": [
+   "Issue number 73 of Phrack is now available",
+   "Continues the tradition of the long‑running hacker zine",
+   "No additional details provided"
+  ],
+  "why_it_matters": "Phrack is a historic publication in the security and hacking community, and new issues often contain insights or techniques of interest to security researchers.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "security",
+   "magazine",
+   "hacking"
+  ],
+  "importance": 1,
+  "id": "0818b59eab9ac65f",
+  "url": "https://phrack.org/issues/73/introduction_md",
+  "source": "Hacker News",
+  "date": "2026-11-17T18:31:25Z",
+  "added": "2026-11-17T21:04:40.608625+00:00"
+ },
+ {
+  "headline": "How the Claude Code team thinks about verification",
+  "tldr": "Anthropic's Claude Code team shares its approach to verifying AI-generated code.",
+  "key_points": [
+   "Focus on verification methods for AI code output",
+   "Insights from the Claude Code development team",
+   "Emphasis on reliability and safety in code generation"
+  ],
+  "why_it_matters": "Understanding verification strategies helps improve the trustworthiness and safety of AI-assisted programming tools.",
+  "category": "other",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "AI verification",
+   "code generation",
+   "Claude"
+  ],
+  "importance": 2,
+  "id": "567d2c83df20a534",
+  "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+  "source": "Hacker News",
+  "date": "2026-11-17T10:20:40Z",
+  "added": "2026-11-17T21:04:28.547002+00:00"
+ },
+ {
+  "headline": "What is the best harness for each model?",
+  "tldr": "A discussion about optimal harnesses for different AI models.",
+  "key_points": [
+   "Evaluates harness suitability per model",
+   "Considers model-specific requirements",
+   "Aims to improve deployment efficiency"
+  ],
+  "why_it_matters": "Choosing the right harness can enhance performance, reliability, and scalability of AI deployments.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "model_deployment",
+   "infrastructure",
+   "best_practices"
+  ],
+  "importance": 2,
+  "id": "b563d314a26cfbc5",
+  "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
+  "source": "Hacker News",
+  "date": "2026-11-17T14:53:43Z",
+  "added": "2026-11-17T21:04:16.549478+00:00"
+ },
+ {
+  "headline": "MovieRoll: A Systematic Framework for Rolling Out Long-Form Videos",
+  "tldr": "MovieRoll introduces a base‑to‑distilled framework that enables high‑quality streaming video generation over long horizons by combining window‑wise teacher forcing, hierarchical KV‑cache compression, and efficient long‑rollout distillation.",
+  "key_points": [
+   "Window-wise Teacher Forcing (WinTF) denoises video chunks with bidirectional attention and causal history access.",
+   "Hierarchical KV‑cache compression (HieraKV) cuts cache memory by up to 78% while preserving context.",
+   "CuLT‑DMD distillation trains long‑rollout generators with fixed parameters and averaged gradients.",
+   "Guidance annealing (AnnealCFG) stabilizes generation beyond the training horizon.",
+   "MovieRoll‑Distilled achieves state‑of‑the‑art scores on HeliosBench up to 60‑second videos."
+  ],
+  "why_it_matters": "Efficient long‑form video generation is critical for streaming services, virtual production, and interactive media; MovieRoll’s techniques dramatically reduce memory costs and improve quality, making real‑time, high‑fidelity video synthesis more practical.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "streaming",
+   "video generation",
+   "long-horizon",
+   "distillation"
+  ],
+  "importance": 3,
+  "id": "770e1ac61b961d40",
+  "url": "https://huggingface.co/papers/2611.21339",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:04:05.339199+00:00"
+ },
+ {
+  "headline": "VoxMel TTS Technical Report Introduces Tokenizer-Free Autoregressive Speech Synthesis",
+  "tldr": "VoxMel uses a fixed Haar transform to model mel-spectrograms without encoders, achieving low error rates and high speaker similarity, with efficient student models.",
+  "key_points": [
+   "Fixed, invertible two-axis Haar transform replaces learned encoders for mel modeling",
+   "Autoregressive language model generates Coarse-Mel; residuals predicted non‑autoregressively",
+   "Supervised 0.6B model reaches 1.15% WER (English) and 1.17% CER (Chinese) with high speaker similarity",
+   "Distilled student models require only 2–4 flow head evaluations per frame, retaining performance"
+  ],
+  "why_it_matters": "Eliminating encoder overhead simplifies TTS pipelines, improves generation fidelity, and enables faster, lower‑cost inference, advancing high‑quality speech synthesis.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "text-to-speech",
+   "autoregressive",
+   "Haar transform",
+   "model distillation"
+  ],
+  "importance": 3,
+  "id": "86464306a36ac36d",
+  "url": "https://huggingface.co/papers/2611.20254",
+  "source": "HF Daily Papers",
+  "date": "2026-11-14T19:00:00.000Z",
+  "added": "2026-11-17T21:03:53.069108+00:00"
+ },
+ {
+  "headline": "Latent Feedback Is a Compute and Data Amplifier",
+  "tldr": "Latent feedback, which injects each token's top‑layer state into the next token's input, reduces the compute and unique data needed to reach a Transformer's loss, saving up to ~48% of compute and ~47% of data.",
+  "key_points": [
+   "Latent feedback outperforms vanilla Transformers when compute is fixed, achieving the same loss with less data.",
+   "When epochs are fixed, latent feedback reaches the same loss with less unique data.",
+   "Savings increase with more unique data per parameter and with repeated training.",
+   "A unified scaling law predicts growing savings for larger models, validated up to 778M parameters."
+  ],
+  "why_it_matters": "Improving data and compute efficiency directly addresses the bottleneck of high‑quality data scarcity, enabling larger or more capable models to be trained with fewer resources, which can accelerate AI development and reduce environmental impact.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "latent_feedback",
+   "scaling_laws",
+   "compute_efficiency",
+   "transformers"
+  ],
+  "importance": 3,
+  "id": "bf014626c05950a0",
+  "url": "https://huggingface.co/papers/2611.20404",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:03:40.767287+00:00"
+ },
+ {
+  "headline": "PaperCritic: Training AI Reviewers to Assess the Soundness of Papers",
+  "tldr": "PaperCritic is an AI reviewer trained via reinforcement learning on a new dataset (PaperSound-23K) to evaluate the soundness of academic papers, achieving higher precision‑recall F1 than existing models and showing cross‑domain transfer.",
+  "key_points": [
+   "Creates PaperSound-23K, a quality‑labeled dataset of 23K review points from 1K ICLR submissions.",
+   "Trains PaperCritic with RL using F1 of precision and recall as the reward.",
+   "Outperforms frontier models on in‑domain tests and transfers to Nature papers, code review, legal contracts, and story feedback."
+  ],
+  "why_it_matters": "Automating objective paper soundness assessment can scale peer review for the exploding volume of AI conference submissions and may improve consistency and speed of scholarly evaluation across domains.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AI_review",
+   "paper_evaluation",
+   "reinforcement_learning",
+   "cross_domain"
+  ],
+  "importance": 3,
+  "id": "6b2104dfb87053c4",
+  "url": "https://huggingface.co/papers/2611.17834",
+  "source": "HF Daily Papers",
+  "date": "2026-11-12T19:00:00.000Z",
+  "added": "2026-11-17T21:03:28.924087+00:00"
+ },
+ {
+  "headline": "Accelerate Bench: Evaluating Agents for Application-Level Program Optimization",
+  "tldr": "A new benchmark, Accelerate Bench, tests 32 CPU optimization tasks with coding agents, revealing wide performance variance and the importance of coordinated program changes.",
+  "key_points": [
+   "Accelerate Bench provides 32 real-world CPU optimization tasks with clear correctness and timing constraints.",
+   "Sixteen coding agents were evaluated, achieving Score@1 from 25.5% to 67.4% and varying speedups.",
+   "Top agents achieved at least 2x speedup on 22+ tasks, while many others struggled to exceed 1.25x.",
+   "Results show that coordination across an application dramatically impacts performance, with identical code ranging 0.29x‑2.12x depending on build/runtime settings.",
+   "The benchmark includes a verifier and public testing to support iterative agent development."
+  ],
+  "why_it_matters": "Understanding how AI coding agents optimize entire applications, not just isolated functions, is crucial for real-world performance gains in scientific and supercomputing workloads.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "program_optimization",
+   "coding_agents",
+   "CPU"
+  ],
+  "importance": 3,
+  "id": "e337e8608e1e9412",
+  "url": "https://huggingface.co/papers/2611.20882",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:03:16.806183+00:00"
+ },
+ {
+  "headline": "Continuation-Guided LLM Evolution of Program Policies and Goal Compilers in Craftax",
+  "tldr": "A new framework lets coding agents refine program-based policies via a feedback cascade, achieving 50% success in the Craftax game and enabling zero-shot transfer to new goals without additional inference calls.",
+  "key_points": [
+   "Feedback cascade improves policy success from <1% to 50% in Craftax.",
+   "Separates controller into environment interpreter and rule program for reusability.",
+   "Goal compiler C_θ maps tasks to new rule programs, enabling zero-shot transfer.",
+   "No inference-time LLM calls needed after initial synthesis."
+  ],
+  "why_it_matters": "Demonstrates a path to more efficient, reusable AI agents that can adapt to new objectives without costly model invocations, advancing scalable autonomous learning.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "coding agents",
+   "policy synthesis",
+   "reinforcement learning",
+   "program compilation"
+  ],
+  "importance": 3,
+  "id": "bec2bf62ad1fcaaa",
+  "url": "https://huggingface.co/papers/2611.19537",
+  "source": "HF Daily Papers",
+  "date": "2026-11-13T19:00:00.000Z",
+  "added": "2026-11-17T21:03:05.402826+00:00"
+ },
+ {
+  "headline": "GPT‑6.2 Astra and Sol",
+  "tldr": "Announcement of new GPT‑6.2 variants named Astra and Sol.",
+  "key_points": [
+   "Introduces GPT‑6.2 model series",
+   "Two variants: Astra and Sol",
+   "Suggests continued evolution of GPT models"
+  ],
+  "why_it_matters": "Shows ongoing development of large language models, indicating incremental improvements and diversification of capabilities.",
+  "category": "model_release",
+  "companies": [],
+  "tags": [
+   "GPT-6.2",
+   "Astra",
+   "Sol",
+   "language model"
+  ],
+  "importance": 2,
+  "id": "725c967606cef490",
+  "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+  "source": "Hacker News",
+  "date": "2026-11-17T17:46:43Z",
+  "added": "2026-11-17T21:02:53.030753+00:00"
+ },
+ {
+  "headline": "ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters",
+  "tldr": "A 552B vision-language model backbone dramatically improves robot learning efficiency, generalization, and precise manipulation compared to smaller VLMs.",
+  "key_points": [
+   "ScaleVLA links a 552B DeepSeek-V4.1-Flash backbone with a trainable action DiT.",
+   "10 demonstrations with the 552B model outperform 50 demos using a 2B backbone (87.8% vs. 85.6%).",
+   "Generalization success on LIBERO-PRO rises to 45.1% versus ≤31.3% for smaller models.",
+   "Real‑world charger insertion success jumps from 4/10 to 9/10.",
+   "Median latency remains low at 216 ms per action chunk."
+  ],
+  "why_it_matters": "Demonstrates that frontier‑scale vision-language models can serve as powerful foundations for robot policies, enabling more sample‑efficient, generalizable, and precise physical task execution while keeping latency practical.",
+  "category": "paper",
+  "companies": [
+   "DeepSeek"
+  ],
+  "tags": [
+   "vision-language",
+   "robotics",
+   "large-models",
+   "efficiency"
+  ],
+  "importance": 4,
+  "id": "0904df37e969bdc1",
+  "url": "https://huggingface.co/papers/2611.21607",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:02:40.930710+00:00"
+ },
+ {
+  "headline": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+  "tldr": "A new benchmark, SWE-CoWork, evaluates coding agents on 101 real-world software tasks, revealing a large gap between partial test passing and full task completion, and highlighting challenges in requirement tracking for autonomous software engineering.",
+  "key_points": [
+   "Benchmark includes 101 assignments across 11 languages and 12 domains with simulated colleagues.",
+   "Top models pass ~63% of fail-to-pass tests but complete <8% of full assignments.",
+   "Providing complete requirements upfront improves test pass rates but not overall task success.",
+   "Analysis shows agents often miss colleague-held requirements and leave implementations incomplete."
+  ],
+  "why_it_matters": "Understanding the limitations of current coding agents helps guide research toward more reliable autonomous software development, a critical step for scaling AI assistance in real engineering teams.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "coding agents",
+   "software engineering",
+   "benchmark",
+   "AI autonomy"
+  ],
+  "importance": 3,
+  "id": "b88709aa5efa153c",
+  "url": "https://huggingface.co/papers/2611.20218",
+  "source": "HF Daily Papers",
+  "date": "2026-11-14T19:00:00.000Z",
+  "added": "2026-11-17T21:02:28.826129+00:00"
+ },
+ {
+  "headline": "InclusionMed: Benchmarking AI for Inclusive Healthcare",
+  "tldr": "A new open evaluation framework, InclusionMed, maps medical AI benchmarks across roles and capabilities, releases five curated tests, and scores frontier LLMs, revealing gaps in inclusive healthcare performance.",
+  "key_points": [
+   "InclusionMed Atlas organizes benchmarks by three healthcare roles and three AI capabilities.",
+   "First release includes five public and private benchmarks selected from 388 candidates.",
+   "Frontier large language models score 17.5–49.1/100 on the InclusionMed Index, with variance across roles and tasks.",
+   "Top models excel at patient communication but lag in clinical decision‑making; inference costs differ widely.",
+   "Open, community‑driven effort aims to expand coverage to diverse global healthcare needs."
+  ],
+  "why_it_matters": "Provides the first systematic, role‑aware benchmark for medical AI, exposing performance blind spots that can affect patient safety and equity, and guiding developers toward models that suit specific clinical contexts.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "healthcare",
+   "benchmark",
+   "AI evaluation",
+   "large language models"
+  ],
+  "importance": 3,
+  "id": "15712514dcdfa437",
+  "url": "https://huggingface.co/papers/2611.21218",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:02:17.090822+00:00"
+ },
+ {
+  "headline": "Sage S1.5 Flash Technical Report",
+  "tldr": "A 320B-parameter mixture-of-experts model, Sage S1.5 Flash, excels at scientific reasoning, tool use, and multimodal tasks, achieving top scores on multiple benchmarks.",
+  "key_points": [
+   "320‑billion‑parameter MoE architecture with dedicated encoders for molecules, sequences, spectra, text, and images",
+   "Agent capabilities tested in verifiable environments for tool use, search, coding, and scientific workflows",
+   "Ranks first on OfficeQA Pro, MLE‑bench Lite, Harvey LAB, and SpreadsheetBench 2; second on OSWorld‑Verified, WebArena‑Verified, and DeepResearch Bench II",
+   "Shows strong performance in using documentary evidence and producing verifiable workbooks"
+  ],
+  "why_it_matters": "Demonstrates that extremely large, multimodal MoE models can reliably perform scientific tasks and act as agents in interactive environments, pushing the frontier of AI‑assisted research and automation.",
+  "category": "paper",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "mixture_of_experts",
+   "scientific_ai",
+   "agent",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "c618f0b74f32ed02",
+  "url": "https://huggingface.co/papers/2611.21072",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-17T21:02:05.364668+00:00"
+ },
+ {
   "headline": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
   "tldr": "Introduces Continual-ARC, a lifelong benchmark that lets memory‑based and weight‑based AI systems be compared on the same scale, and shows weight‑based continual learning outperforms harness‑based methods.",
   "key_points": [
@@ -25111,1063 +26151,5 @@
   "source": "HF Daily Papers",
   "date": "2026-11-03T19:00:00.000Z",
   "added": "2026-11-05T14:46:21.397734+00:00"
- },
- {
-  "headline": "Factorized MLLM Embeddings for Composed Image Retrieval",
-  "tldr": "Introduces FactEmbed, a method that factorizes multimodal LLM embeddings to better handle visual modifications in composed image retrieval, achieving state‑of‑the‑art results.",
-  "key_points": [
-   "Decouples query comprehension from embedding generation via factorized latent representations.",
-   "Uses an intermediate target imagination objective and factor‑level contrastive loss.",
-   "Combines a global [EOS] token embedding with mean‑pooled factor latents for efficient reranking.",
-   "Outperforms previous methods on multiple composed image retrieval benchmarks."
-  ],
-  "why_it_matters": "Improves the ability of multimodal LLMs to understand and apply textual modifications to images, advancing retrieval systems that combine visual and textual cues.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "CIR",
-   "MLLM",
-   "retrieval",
-   "embeddings"
-  ],
-  "importance": 3,
-  "id": "25bdd6e9b6c3afc0",
-  "url": "https://huggingface.co/papers/2611.05193",
-  "source": "HF Daily Papers",
-  "date": "2026-11-02T19:00:00.000Z",
-  "added": "2026-11-05T14:46:09.495389+00:00"
- },
- {
-  "headline": "Turns Matter: Advancing Streaming Video RL via Turn-Level Credit",
-  "tldr": "The paper introduces TurnWise, a turn-level GRPO framework that assigns credit per decision in streaming video understanding, improving response relevance and reducing redundancy without extra critics or rollouts.",
-  "key_points": [
-   "Identifies mismatch between trajectory-level feedback and turn-level decisions in streaming video RL.",
-   "Proposes turn-level credit assignment using silence-completed prefix scoring.",
-   "Introduces turn-mean policy optimization to weight response and waiting decisions equally.",
-   "Demonstrates superior performance over prior RL methods in extensive experiments."
-  ],
-  "why_it_matters": "Better credit assignment at the turn level enables more accurate and efficient streaming video models, leading to more responsive AI systems for real-time video analysis and interaction.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "streaming_video",
-   "reinforcement_learning",
-   "turn_level",
-   "policy_optimization"
-  ],
-  "importance": 3,
-  "id": "c997aee47d8b367f",
-  "url": "https://huggingface.co/papers/2611.06728",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T19:00:00.000Z",
-  "added": "2026-11-05T14:45:57.689753+00:00"
- },
- {
-  "headline": "From Pixels to Actions - Towards Native Vision-Language-Action Policies",
-  "tldr": "NEO-VLA introduces an encoder-free vision-language-action framework that jointly processes visual and language tokens, showing that native architectures outperform traditional encoder-based models for embodied manipulation tasks.",
-  "key_points": [
-   "NEO-VLA tokenizes images with lightweight patch convolutions and integrates them with language throughout the backbone.",
-   "Native architectures outperform encoder-based counterparts, especially for action-critical visual signals that appear early in the network.",
-   "Full fine-tuning narrows but does not eliminate the performance gap, and scaling alone cannot recover it.",
-   "The approach yields stronger, more robust control across diverse manipulation settings and distribution shifts."
-  ],
-  "why_it_matters": "Demonstrates that allowing action policies to access visual representations at multiple depths improves embodied AI performance, challenging the prevailing encoder-first paradigm and guiding future model design for robotics and interactive systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "vision-language",
-   "action",
-   "embodied AI",
-   "native architecture"
-  ],
-  "importance": 3,
-  "id": "3701202fe75e9758",
-  "url": "https://huggingface.co/papers/2611.06918",
-  "source": "HF Daily Papers",
-  "date": "2026-11-04T13:59:58.000Z",
-  "added": "2026-11-05T14:45:45.615512+00:00"
- },
- {
-  "headline": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
-  "tldr": "An LLM‑driven agent can generate robot demonstration data in simulation, cutting teleoperation costs while matching or exceeding real‑world policy performance.",
-  "key_points": [
-   "Agent receives a single calibration episode and creates a simulated task with expert controller and success judge.",
-   "Rendered video from real images provides synchronized multi‑view data ready for policy training.",
-   "Policies trained on generated data match teleoperation‑trained policies and are more robust to visual changes.",
-   "Cost per episode drops to $0.80 after a one‑time $21 API fee, versus $107–$290 for traditional teleoperation."
-  ],
-  "why_it_matters": "Reduces the expensive human‑in‑the‑loop bottleneck in robot learning, enabling scalable data collection and more robust policies without sacrificing performance.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "robotics",
-   "LLM",
-   "data generation",
-   "teleoperation"
-  ],
-  "importance": 3,
-  "id": "358a04f018244145",
-  "url": "https://huggingface.co/papers/2611.05320",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T13:25:14.000Z",
-  "added": "2026-11-05T14:45:34.387384+00:00"
- },
- {
-  "headline": "Our newest AI Quest: Mapping the human brain",
-  "tldr": "Google AI announces a new initiative to map the human brain using artificial intelligence.",
-  "key_points": [
-   "Launch of a new AI Quest project",
-   "Focus on mapping the human brain",
-   "Initiated by Google AI"
-  ],
-  "why_it_matters": "Understanding the brain could accelerate advances in neuroscience, AI modeling, and medical research.",
-  "category": "other",
-  "companies": [
-   "Google"
-  ],
-  "tags": [
-   "AI",
-   "neuroscience",
-   "brain mapping",
-   "research"
-  ],
-  "importance": 2,
-  "id": "be77c96c39b4ea3e",
-  "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
-  "source": "Google AI",
-  "date": "Mon, 26 Oct 2026 16:00:00 +0000",
-  "added": "2026-11-05T04:50:43.671940+00:00"
- },
- {
-  "headline": "The latest AI news we announced in October 2026",
-  "tldr": "Google AI’s roundup of AI announcements made in October 2026",
-  "key_points": [
-   "Compilation of October 2026 AI announcements",
-   "Includes multiple AI updates",
-   "Presented by Google AI"
-  ],
-  "why_it_matters": "Provides a concise overview of Google’s recent AI developments for stakeholders and enthusiasts",
-  "category": "other",
-  "companies": [
-   "Google"
-  ],
-  "tags": [
-   "AI",
-   "October2026",
-   "news"
-  ],
-  "importance": 2,
-  "id": "b810030289ed799f",
-  "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
-  "source": "Google AI",
-  "date": "Mon, 02 Nov 2026 17:45:00 +0000",
-  "added": "2026-11-05T04:50:31.661876+00:00"
- },
- {
-  "headline": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
-  "tldr": "Meta released Muse Spark Open, an open-weight frontier multimodal mixture-of-experts model.",
-  "key_points": [
-   "Open-weight model released",
-   "Frontier multimodal capabilities",
-   "Mixture-of-experts architecture",
-   "Developed by Meta"
-  ],
-  "why_it_matters": "Provides researchers and developers with an accessible, high-performance multimodal model, advancing open AI research and enabling broader experimentation.",
-  "category": "model_release",
-  "companies": [
-   "Meta",
-   "Hugging Face"
-  ],
-  "tags": [
-   "multimodal",
-   "mixture-of-experts",
-   "open-weight",
-   "model"
-  ],
-  "importance": 2,
-  "id": "9d251ac6836a600d",
-  "url": "https://huggingface.co/blog/meta-muse-spark-open",
-  "source": "Hugging Face Blog",
-  "date": "Thu, 15 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-05T04:50:19.633945+00:00"
- },
- {
-  "headline": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
-  "tldr": "NVIDIA introduces new RTX Spark thin‑and‑light Windows laptops from multiple OEMs, featuring a combined Blackwell RTX GPU and Grace CPU superchip with up to 128 GB unified memory.",
-  "key_points": [
-   "RTX Spark laptops now offered by ASUS, Dell, HP, Lenovo, Microsoft, and MSI",
-   "Each system uses a single superchip that integrates a Blackwell RTX GPU and a Grace CPU",
-   "Supports up to 128 GB of unified memory for high‑performance workloads",
-   "Includes new AI agent tools and optimized game titles",
-   "Targets developers, creators, and gamers seeking thin, lightweight performance"
-  ],
-  "why_it_matters": "The integration of GPU and CPU on one superchip delivers unprecedented performance in a portable form factor, enabling AI‑enhanced workflows and gaming on thin laptops and signaling a shift toward unified memory architectures in consumer hardware.",
-  "category": "product",
-  "companies": [
-   "NVIDIA",
-   "ASUS",
-   "Dell",
-   "HP",
-   "Lenovo",
-   "Microsoft",
-   "MSI"
-  ],
-  "tags": [
-   "RTX Spark",
-   "Blackwell",
-   "Grace",
-   "laptops"
-  ],
-  "importance": 3,
-  "id": "2952348be6c4a620",
-  "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
-  "source": "NVIDIA",
-  "date": "Wed, 28 Oct 2026 15:00:46 +0000",
-  "added": "2026-11-05T04:49:55.849828+00:00"
- },
- {
-  "headline": "3 ways to prep for your next big race with Search",
-  "tldr": "Google shows three ways to use Search to get ready for a big race",
-  "key_points": [
-   "Use Search to find training tips",
-   "Use Search to locate race routes",
-   "Use Search to track progress"
-  ],
-  "why_it_matters": "Helps athletes quickly gather information and plan their preparation using a familiar tool",
-  "category": "product",
-  "companies": [
-   "Google"
-  ],
-  "tags": [
-   "search",
-   "racing",
-   "preparation"
-  ],
-  "importance": 2,
-  "id": "1852061b5cf6950b",
-  "url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
-  "source": "Google AI",
-  "date": "Thu, 10 Sep 2026 16:00:00 +0000",
-  "added": "2026-11-05T04:49:43.919544+00:00"
- },
- {
-  "headline": "Accelerating engineering for the physical world",
-  "tldr": "ChatGPT and Codex are being used to speed up CAD, PCB design, simulation, and other engineering workflows.",
-  "key_points": [
-   "ChatGPT assists engineers in physical‑world design tasks",
-   "Codex helps automate CAD and PCB design processes",
-   "AI accelerates simulation and related engineering workflows"
-  ],
-  "why_it_matters": "AI tools can reduce development time and cost for hardware engineers, making product design faster and more efficient.",
-  "category": "product",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "AI",
-   "engineering",
-   "CAD",
-   "simulation"
-  ],
-  "importance": 2,
-  "id": "26c6032e1d267765",
-  "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
-  "source": "OpenAI",
-  "date": "Tue, 03 Nov 2026 12:00:00 GMT",
-  "added": "2026-11-05T04:49:31.515375+00:00"
- },
- {
-  "headline": "Introducing Images 2.6",
-  "tldr": "OpenAI releases Images 2.6 with faster generation, GIF support, precise editing, and new API controls for ChatGPT, Codex, and the API.",
-  "key_points": [
-   "Faster image generation",
-   "GIF creation capability",
-   "More precise image editing",
-   "New API controls across ChatGPT, Codex, and the API"
-  ],
-  "why_it_matters": "Enhances visual content creation and interactivity for developers and users, expanding the utility of OpenAI's image models.",
-  "category": "product",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "image generation",
-   "GIF",
-   "API",
-   "ChatGPT"
-  ],
-  "importance": 2,
-  "id": "0a437d67f2effbc5",
-  "url": "https://openai.com/index/introducing-images-2-6",
-  "source": "OpenAI",
-  "date": "Wed, 04 Nov 2026 00:00:00 GMT",
-  "added": "2026-11-05T04:49:19.570568+00:00"
- },
- {
-  "headline": "A thousand fewer paths to root",
-  "tldr": "OpenAI built an autonomous pipeline that discovered, validated, and generated patches for 948 local privilege‑escalation bugs in the Linux kernel.",
-  "key_points": [
-   "Autonomous pipeline created by OpenAI",
-   "Found 948 local privilege‑escalation vulnerabilities",
-   "Generated patches for the Linux kernel",
-   "Validated each vulnerability automatically"
-  ],
-  "why_it_matters": "Reducing kernel privilege‑escalation bugs strengthens system security and demonstrates AI’s capability to automate large‑scale vulnerability remediation.",
-  "category": "other",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "security",
-   "linux",
-   "kernel",
-   "vulnerabilities"
-  ],
-  "importance": 2,
-  "id": "a4f4c423c5426033",
-  "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
-  "source": "OpenAI",
-  "date": "Wed, 04 Nov 2026 08:00:00 GMT",
-  "added": "2026-11-05T04:49:07.895652+00:00"
- },
- {
-  "headline": "OpenAI to acquire Pierre Computer Company, Inc.",
-  "tldr": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
-  "key_points": [
-   "OpenAI announces acquisition of Pierre Computer Company, Inc.",
-   "Acquisition aims to broaden Codex’s code‑related capabilities",
-   "Focus on tools for building, understanding, and reviewing code"
-  ],
-  "why_it_matters": "The deal strengthens OpenAI’s Codex platform, enhancing its ability to assist developers with code creation and analysis, potentially increasing its competitiveness in AI‑assisted programming tools.",
-  "category": "acquisition",
-  "companies": [
-   "OpenAI",
-   "Pierre Computer Company, Inc."
-  ],
-  "tags": [
-   "acquisition",
-   "code",
-   "Codex",
-   "AI"
-  ],
-  "importance": 2,
-  "id": "3a06f84c0f51a102",
-  "url": "https://openai.com/index/openai-to-acquire-pierre",
-  "source": "OpenAI",
-  "date": "Wed, 04 Nov 2026 14:30:00 GMT",
-  "added": "2026-11-05T04:48:55.739864+00:00"
- },
- {
-  "headline": "Gemini 3.8 text-to-speech says hello",
-  "tldr": "Google DeepMind announced Gemini 3.8 with a new text‑to‑speech feature that greets users",
-  "key_points": [
-   "Gemini 3.8 version released",
-   "Adds text‑to‑speech capability",
-   "Model greets with \"hello\""
-  ],
-  "why_it_matters": "Introduces conversational voice output to the Gemini series, expanding interaction modes for AI applications",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "text-to-speech",
-   "AI model"
-  ],
-  "importance": 2,
-  "id": "be2314c62992cc2b",
-  "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-  "source": "Google DeepMind",
-  "date": "Wed, 23 Sep 2026 15:25:14 +0000",
-  "added": "2026-11-05T04:48:43.635321+00:00"
- },
- {
-  "headline": "Introducing Gemini 3.8 Live with Live Avatar",
-  "tldr": "Google DeepMind launches Gemini 3.8 Live featuring a live avatar",
-  "key_points": [
-   "Gemini 3.8 Live released",
-   "Includes a live avatar capability",
-   "Announced by Google DeepMind"
-  ],
-  "why_it_matters": "Adds real‑time visual interaction to the Gemini model, expanding how users can engage with AI",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "Live",
-   "Avatar",
-   "AI"
-  ],
-  "importance": 2,
-  "id": "e7107d9a76d915c4",
-  "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
-  "source": "Google DeepMind",
-  "date": "Thu, 24 Sep 2026 16:20:39 +0000",
-  "added": "2026-11-05T04:48:31.596974+00:00"
- },
- {
-  "headline": "Gemini 4 Argon: our next era of frontier intelligence",
-  "tldr": "Google DeepMind announces Gemini 4 Argon as the next step in advanced AI capabilities.",
-  "key_points": [
-   "Gemini 4 Argon is the new model name",
-   "Positioned as a new era of frontier intelligence",
-   "Announced by Google DeepMind"
-  ],
-  "why_it_matters": "Signals a major progression in DeepMind's AI roadmap, indicating upcoming enhancements in capability and potential applications.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "AI",
-   "Gemini",
-   "frontier_intelligence"
-  ],
-  "importance": 2,
-  "id": "15e70ee5e4a75a6c",
-  "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
-  "source": "Google DeepMind",
-  "date": "Wed, 30 Sep 2026 20:01:45 +0000",
-  "added": "2026-11-05T04:48:19.715341+00:00"
- },
- {
-  "headline": "Gemini 4 Argon: Built to solve your hardest problems",
-  "tldr": "DeepMind announces Gemini 4 Argon, a new AI model aimed at tackling complex challenges.",
-  "key_points": [
-   "Gemini 4 Argon is a new AI model",
-   "Designed to solve hardest problems",
-   "Developed by DeepMind"
-  ],
-  "why_it_matters": "Introducing a model focused on solving complex problems could advance AI capabilities in research, industry, and critical applications.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "AI",
-   "problem_solving"
-  ],
-  "importance": 2,
-  "id": "f174716114a9131e",
-  "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
-  "source": "Google DeepMind",
-  "date": "Tue, 13 Oct 2026 16:01:52 +0000",
-  "added": "2026-11-05T04:48:07.586594+00:00"
- },
- {
-  "headline": "Gemini 4 Argon for Robotics",
-  "tldr": "DeepMind announces the Gemini 4 Argon model aimed at robotics applications.",
-  "key_points": [
-   "Gemini 4 Argon model released",
-   "Targeted for robotics use cases",
-   "Developed by Google DeepMind"
-  ],
-  "why_it_matters": "Brings advanced AI capabilities to robotics, potentially improving autonomy and performance in robotic systems.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "Robotics",
-   "AI",
-   "Model"
-  ],
-  "importance": 2,
-  "id": "884ebf3c3978ea46",
-  "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-  "source": "Google DeepMind",
-  "date": "Tue, 13 Oct 2026 16:01:58 +0000",
-  "added": "2026-11-05T04:47:55.731671+00:00"
- },
- {
-  "headline": "Developing Gemini 4 Argon responsibly and safely",
-  "tldr": "Google DeepMind announces responsible and safe development of Gemini 4 Argon",
-  "key_points": [
-   "Gemini 4 Argon development",
-   "Focus on responsibility",
-   "Emphasis on safety"
-  ],
-  "why_it_matters": "Ensures advanced AI models are built with safety and ethical safeguards, reducing risk of misuse or harmful outcomes",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini4",
-   "AI safety",
-   "responsible AI"
-  ],
-  "importance": 2,
-  "id": "471508c04c304cbd",
-  "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-  "source": "Google DeepMind",
-  "date": "Tue, 13 Oct 2026 19:43:07 +0000",
-  "added": "2026-11-05T04:47:43.785747+00:00"
- },
- {
-  "headline": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-  "tldr": "Google DeepMind partners with Singapore's GovTech to create an on-device Gemma model that detects scams in private chats without sending data to the cloud.",
-  "key_points": [
-   "Collaboration between Google DeepMind and Singapore Government",
-   "Fine‑tuned AI model for scam detection",
-   "Uses lightweight on‑device Gemma models",
-   "Intercepts conversational scams in private chats",
-   "Zero cloud data egress"
-  ],
-  "why_it_matters": "Demonstrates a privacy‑preserving approach to AI‑driven security, showing how on‑device models can protect users from scams without compromising data sovereignty.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind",
-   "GovTech Singapore"
-  ],
-  "tags": [
-   "scam detection",
-   "on-device AI",
-   "privacy",
-   "collaboration"
-  ],
-  "importance": 2,
-  "id": "58e4191fcfe4b88c",
-  "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
-  "source": "Google DeepMind",
-  "date": "Wed, 14 Oct 2026 02:00:14 +0000",
-  "added": "2026-11-05T04:47:31.734097+00:00"
- },
- {
-  "headline": "Genie 4: A new generation of world simulation",
-  "tldr": "DeepMind introduces Genie 4, a world model delivering unprecedented realism in real-time simulation.",
-  "key_points": [
-   "New world model",
-   "Unprecedented realism",
-   "Real-time simulation"
-  ],
-  "why_it_matters": "Advances the fidelity and speed of AI-driven simulations, enabling more accurate virtual environments for research and applications.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "world simulation",
-   "real-time",
-   "AI model"
-  ],
-  "importance": 2,
-  "id": "d17d13a0006a776d",
-  "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
-  "source": "Google DeepMind",
-  "date": "Tue, 27 Oct 2026 16:01:38 +0000",
-  "added": "2026-11-05T04:47:19.646601+00:00"
- },
- {
-  "headline": "An updated Model Spec for more capable and beneficial AI",
-  "tldr": "OpenAI releases an updated Model Spec defining five core values to steer AI toward sound judgment, human agency, and faithfulness to human intent.",
-  "key_points": [
-   "OpenAI publishes an updated Model Spec",
-   "Spec outlines five core values",
-   "Focus on sound judgment, human agency, and faithfulness"
-  ],
-  "why_it_matters": "Establishing clear values helps ensure future AI systems act responsibly and align with human intentions, reducing risk as capabilities grow.",
-  "category": "policy",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "model_spec",
-   "AI_ethics",
-   "values",
-   "capability"
-  ],
-  "importance": 2,
-  "id": "7bf0065ceb1646f5",
-  "url": "https://openai.com/index/updated-model-spec",
-  "source": "OpenAI",
-  "date": "Thu, 29 Oct 2026 17:00:00 GMT",
-  "added": "2026-11-05T04:47:07.763712+00:00"
- },
- {
-  "headline": "LifeVal",
-  "tldr": "OpenAI introduces LifeVal, a benchmark that evaluates how effectively AI assists with everyday tasks like childcare, finances, and government paperwork.",
-  "key_points": [
-   "LifeVal is a new benchmark for AI assistance",
-   "Measures performance on everyday tasks",
-   "Includes childcare, financial management, and government paperwork",
-   "Helps gauge real‑world impact of AI tools"
-  ],
-  "why_it_matters": "Provides a standardized way to assess AI's practical usefulness in daily life, guiding development toward more helpful and trustworthy systems.",
-  "category": "other",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "benchmark",
-   "AI assistance",
-   "evaluation",
-   "real-world impact"
-  ],
-  "importance": 2,
-  "id": "ed4b58253682640f",
-  "url": "https://openai.com/index/lifeval",
-  "source": "OpenAI",
-  "date": "Mon, 02 Nov 2026 09:00:00 GMT",
-  "added": "2026-11-05T04:46:55.855279+00:00"
- },
- {
-  "headline": "Daybreak Red is now available in AWS GovCloud (US-East)",
-  "tldr": "OpenAI's Daybreak Red, featuring GPT-5.6 Cyber, is offered via Amazon Bedrock in AWS GovCloud for authorized cybersecurity customers.",
-  "key_points": [
-   "Daybreak Red includes GPT-5.6 Cyber",
-   "Available in AWS GovCloud (US-East)",
-   "Delivered through Amazon Bedrock",
-   "For approved cybersecurity work"
-  ],
-  "why_it_matters": "Provides U.S. government and regulated entities access to advanced AI-driven cybersecurity tools within a compliant cloud environment.",
-  "category": "product",
-  "companies": [
-   "OpenAI",
-   "Amazon",
-   "AWS"
-  ],
-  "tags": [
-   "GPT-5.6",
-   "Cybersecurity",
-   "GovCloud",
-   "Bedrock"
-  ],
-  "importance": 2,
-  "id": "75679f5aa60bfcf8",
-  "url": "https://openai.com/index/daybreak-red-aws-govcloud",
-  "source": "OpenAI",
-  "date": "Wed, 04 Nov 2026 07:00:00 GMT",
-  "added": "2026-11-05T04:46:43.692253+00:00"
- },
- {
-  "headline": "Basically no one is using AI agents for their DoorDash orders",
-  "tldr": "AI agents have seen little adoption for automating DoorDash food orders.",
-  "key_points": [
-   "AI agents are being considered for DoorDash ordering",
-   "Actual usage remains minimal",
-   "No significant impact on DoorDash business yet"
-  ],
-  "why_it_matters": "Understanding the adoption gap helps gauge realistic expectations for AI-driven automation in consumer services and informs future investment decisions.",
-  "category": "other",
-  "companies": [
-   "DoorDash"
-  ],
-  "tags": [
-   "AI",
-   "agents",
-   "delivery"
-  ],
-  "importance": 2,
-  "id": "538ea1326a6a8ff9",
-  "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
-  "source": "Hacker News",
-  "date": "2026-11-02T15:48:45Z",
-  "added": "2026-11-05T04:46:31.599874+00:00"
- },
- {
-  "headline": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-  "tldr": "Google DeepMind releases EmbeddingGemma 2, an open and lightweight multimodal embedding model.",
-  "key_points": [
-   "Open-source release",
-   "Lightweight architecture",
-   "Multimodal embedding capabilities",
-   "Version 2 of EmbeddingGemma"
-  ],
-  "why_it_matters": "Provides researchers and developers with a freely available, efficient model for multimodal embeddings, lowering barriers to experimentation and deployment.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "embedding",
-   "multimodal",
-   "open-source",
-   "lightweight"
-  ],
-  "importance": 2,
-  "id": "4dd290070848fb61",
-  "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
-  "source": "Google DeepMind",
-  "date": "Tue, 06 Oct 2026 19:57:04 +0000",
-  "added": "2026-11-05T04:46:19.768792+00:00"
- },
- {
-  "headline": "Gemini 4 Carbon: Our next frontier model",
-  "tldr": "Google DeepMind announces the upcoming Gemini 4 Carbon model as its next major AI advancement",
-  "key_points": [
-   "Gemini 4 Carbon announced",
-   "Positioned as next frontier model",
-   "Developed by Google DeepMind"
-  ],
-  "why_it_matters": "Signals a new generation of AI models from DeepMind, indicating continued progress in large‑scale model capabilities",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "AI",
-   "model",
-   "frontier"
-  ],
-  "importance": 2,
-  "id": "b0da25ea6c1a2967",
-  "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
-  "source": "Google DeepMind",
-  "date": "Wed, 28 Oct 2026 17:00:58 +0000",
-  "added": "2026-11-05T04:46:07.483947+00:00"
- },
- {
-  "headline": "How we detect frontier model misalignment",
-  "tldr": "OpenAI uses layered monitoring to spot misalignment and unauthorized agent behavior early.",
-  "key_points": [
-   "Layered monitoring system",
-   "Detects frontier model misalignment",
-   "Identifies unauthorized agent behavior",
-   "Enables responders to intervene before escalation"
-  ],
-  "why_it_matters": "Early detection of misalignment helps prevent harmful outcomes from advanced AI systems, protecting users and maintaining trust.",
-  "category": "policy",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "misalignment",
-   "monitoring",
-   "AI safety",
-   "frontier models"
-  ],
-  "importance": 2,
-  "id": "d28967fce9c692cd",
-  "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-  "source": "OpenAI",
-  "date": "Thu, 29 Oct 2026 09:00:00 GMT",
-  "added": "2026-11-05T04:45:55.694502+00:00"
- },
- {
-  "headline": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
-  "tldr": "DevRev uses OpenAI's GPT-6.1 Sol to power its Computer and Operator services, offering balanced reasoning, speed, and cost for enterprise self‑service.",
-  "key_points": [
-   "GPT-6.1 Sol powers DevRev's Computer and Operator",
-   "Provides autonomous self‑service for enterprises",
-   "Balances reasoning quality, response speed, and cost"
-  ],
-  "why_it_matters": "Enables enterprises to automate support tasks efficiently, reducing human workload and operational expenses while maintaining high‑quality responses.",
-  "category": "product",
-  "companies": [
-   "DevRev",
-   "OpenAI"
-  ],
-  "tags": [
-   "GPT-6.1",
-   "autonomous",
-   "enterprise",
-   "self-service"
-  ],
-  "importance": 2,
-  "id": "bf25be8f87794d7d",
-  "url": "https://openai.com/index/devrev-enterprise-self-service",
-  "source": "OpenAI",
-  "date": "Wed, 04 Nov 2026 00:00:00 GMT",
-  "added": "2026-11-05T04:45:43.994953+00:00"
- },
- {
-  "headline": "Ask HN: What's your current AI agentic setup?",
-  "tldr": "A Hacker News thread asking users to share which AI subscriptions, models, coding tools, orchestration frameworks, and agent platforms they currently use and why.",
-  "key_points": [
-   "Users list paid AI subscriptions (e.g., Claude, ChatGPT/Codex, Cursor) and tier choices.",
-   "Discussion of alternative model access via pay‑as‑you‑go APIs, OpenRouter, or self‑hosted models.",
-   "Exploration of coding harnesses and IDE integrations such as OpenCode, Pi, Aider, Muse Code, or custom tools.",
-   "Mention of agent orchestration or swarm tools like Munder Difflin, Gas Town, Ruflo.",
-   "Survey of broader agent platforms (OpenClaw, Hermes Agent, Grok bot, Dots, Muse) and their use cases."
-  ],
-  "why_it_matters": "Captures a real‑time snapshot of how developers and AI enthusiasts are building their AI‑augmented workflows, revealing trends in subscription models, tooling preferences, and emerging orchestration platforms.",
-  "category": "other",
-  "companies": [
-   "Anthropic",
-   "OpenAI",
-   "Cursor",
-   "OpenRouter"
-  ],
-  "tags": [
-   "AI subscriptions",
-   "agent platforms",
-   "developer tools",
-   "workflow"
-  ],
-  "importance": 2,
-  "id": "793baf0e54548bea",
-  "url": "https://news.ycombinator.com/item?id=50366117",
-  "source": "Hacker News",
-  "date": "2026-11-04T14:37:22Z",
-  "added": "2026-11-05T04:45:32.010938+00:00"
- },
- {
-  "headline": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-  "tldr": "Ricursive Intelligence released Ripple-65B Preview, a 65‑billion‑parameter model that sets new U.S. open‑weight state‑of‑the‑art performance on agentic coding benchmarks while costing only $32 M to train.",
-  "key_points": [
-   "Trained on 12 trillion tokens with up to 1 M context length",
-   "Achieves 80.52 on TerminalBench 2.1, beating larger models like Reflection Beam 501B",
-   "Cost $32 M to develop, about one‑tenth the expense of prior open‑weight SOTA",
-   "Available via Hugging Face, Together AI, GMI Cloud, and OpenRouter"
-  ],
-  "why_it_matters": "Demonstrates that high‑performing, open‑weight LLMs for specialized coding tasks can be built far more cost‑effectively, potentially lowering barriers for AI hardware and software co‑design.",
-  "category": "model_release",
-  "companies": [
-   "Ricursive Intelligence",
-   "Hugging Face",
-   "Together AI",
-   "GMI Cloud",
-   "OpenRouter"
-  ],
-  "tags": [
-   "agentic coding",
-   "open-weight",
-   "efficiency",
-   "benchmark"
-  ],
-  "importance": 4,
-  "id": "0f35e299c97c927a",
-  "url": "https://www.ricursive.com/ripple",
-  "source": "Hacker News",
-  "date": "2026-11-04T18:53:29Z",
-  "added": "2026-11-05T04:45:19.997682+00:00"
- },
- {
-  "headline": "Retell uses OpenAI models to help power 100M monthly calls",
-  "tldr": "Retell leverages OpenAI's GPT-6 Astra and Codex to power a voice agent handling 100 million calls per month and achieve a $1.6 M annual revenue run rate per employee.",
-  "key_points": [
-   "Retell uses OpenAI models for its voice agent",
-   "Handles 100 M monthly calls",
-   "GPT‑6 Astra tops Retell’s benchmark",
-   "Codex contributes to $1.6 M ARR per employee"
-  ],
-  "why_it_matters": "Demonstrates the scalability and revenue potential of integrating advanced OpenAI models into high‑volume voice AI services.",
-  "category": "product",
-  "companies": [
-   "Retell",
-   "OpenAI"
-  ],
-  "tags": [
-   "voice AI",
-   "revenue",
-   "benchmark",
-   "GPT-6"
-  ],
-  "importance": 2,
-  "id": "d42fb1eb3362412f",
-  "url": "https://openai.com/index/retell-ai",
-  "source": "OpenAI",
-  "date": "Tue, 27 Oct 2026 15:00:00 GMT",
-  "added": "2026-11-05T04:45:07.857903+00:00"
- },
- {
-  "headline": "Progress on provable inference for large language models",
-  "tldr": "New advances reported in making inference for LLMs provably correct.",
-  "key_points": [
-   "Research shows improved provable inference techniques",
-   "Focus on large language model architectures",
-   "Potential for more reliable AI predictions"
-  ],
-  "why_it_matters": "Provable inference can increase trust and safety in AI systems by ensuring predictable behavior of large language models.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "large language models",
-   "provable inference",
-   "research"
-  ],
-  "importance": 2,
-  "id": "d94c9f77ddafc83a",
-  "url": "https://www.anthropic.com/research/provable-inference",
-  "source": "Hacker News",
-  "date": "2026-11-04T17:17:46Z",
-  "added": "2026-11-05T04:44:55.695135+00:00"
- },
- {
-  "headline": "Kimi K3.1 Pro model weights are out",
-  "tldr": "Moonshot AI released open-weight Kimi K3.1 Pro, a 3‑trillion‑parameter multimodal model with a 1‑million‑token context window and new sparse attention layers.",
-  "key_points": [
-   "Open‑weight 3T‑class model released",
-   "First K3.1 series model with Gated DeepSeek Sparse Attention for long‑context efficiency",
-   "1 million token context improves coding, 3D, finance, and factual tasks",
-   "API compatible with OpenAI/Anthropic formats and supports multiple inference engines"
-  ],
-  "why_it_matters": "Providing open weights and a massive context window lets developers and researchers build advanced multimodal applications and experiment with long‑context reasoning without proprietary restrictions.",
-  "category": "model_release",
-  "companies": [
-   "Moonshot AI"
-  ],
-  "tags": [
-   "multimodal",
-   "open_weights",
-   "long_context",
-   "AI_models"
-  ],
-  "importance": 3,
-  "id": "7838c87736f9082f",
-  "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-  "source": "Hacker News",
-  "date": "2026-11-04T15:30:30Z",
-  "added": "2026-11-05T04:44:43.971460+00:00"
- },
- {
-  "headline": "Dory1.0-4B: A Looped Normalized-GPT",
-  "tldr": "A 4‑billion‑parameter looped language model with elastic depth that can adapt compute budget at inference and outperforms larger models on coding, agentic, and long‑context benchmarks.",
-  "key_points": [
-   "Single checkpoint supports variable inference loops, giving flexible compute budgets.",
-   "Pre‑trained on 6 trillion tokens; context length extended to 256K tokens.",
-   "Looping improves accuracy and token efficiency, achieving 1.3‑2.5× fewer output tokens on agentic tasks.",
-   "Outperforms larger models (Qwen3.5‑9B, Gemma 4 12B, Gemma 4 26B‑A4B) across 12 benchmarks with two or more loops.",
-   "Open‑sourced quantized checkpoints in BF16, MXFP8, NVFP4, and GGUF formats."
-  ],
-  "why_it_matters": "Demonstrates that looped, elastic‑depth architectures can deliver higher performance and token efficiency than larger static models, enabling cost‑effective deployment for long‑context and coding applications.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "looped model",
-   "elastic depth",
-   "token efficiency",
-   "long-context"
-  ],
-  "importance": 3,
-  "id": "b8fc016e940e5e7e",
-  "url": "https://huggingface.co/papers/2611.03998",
-  "source": "HF Daily Papers",
-  "date": "2026-11-01T19:00:00.000Z",
-  "added": "2026-11-05T04:44:32.203343+00:00"
- },
- {
-  "headline": "EvoTeam: Multi-Agent Collaboration via Evolving Teams",
-  "tldr": "EvoTeam introduces a framework that evolves team organization, interaction rules, and individual agent skills jointly, improving multi-agent system collaboration across heterogeneous tasks.",
-  "key_points": [
-   "Joint evolution of team structure, interaction rules, and agent skills",
-   "Maintains a reusable library of teams for context‑specific collaboration",
-   "Allows individual skills to be shared across different team configurations",
-   "Demonstrated effectiveness on four benchmark tasks"
-  ],
-  "why_it_matters": "Better coordination among specialized LLM agents can solve more complex problems, and EvoTeam's approach reduces the need for manual prompt or skill tuning by evolving collaboration itself.",
-  "category": "paper",
-  "companies": [
-   "DEEP-JLU"
-  ],
-  "tags": [
-   "multi-agent",
-   "evolution",
-   "collaboration",
-   "LLM"
-  ],
-  "importance": 3,
-  "id": "916bde684bf426b1",
-  "url": "https://huggingface.co/papers/2610.39813",
-  "source": "HF Daily Papers",
-  "date": "2026-10-29T20:00:00.000Z",
-  "added": "2026-11-05T04:44:19.811316+00:00"
- },
- {
-  "headline": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
-  "tldr": "An automated pipeline converts raw videos into high-quality instruction data, creating the 100K-sample VidUEU-100K dataset that boosts multimodal model performance across tasks.",
-  "key_points": [
-   "Four-stage pipeline filters low-quality shots, extracts keyframes and multimodal signals, and synthesizes instruction samples",
-   "Agent can iteratively adjust data distribution based on downstream training results",
-   "VidUEU-100K contains 100,000 diverse training samples spanning multiple domains and tasks",
-   "Fine‑tuning baseline models on VidUEU-100K yields consistent performance gains on benchmark suites"
-  ],
-  "why_it_matters": "It tackles the bottleneck of scarce, costly multimodal instruction data by leveraging abundant video content, enabling more effective training of multimodal AI systems and accelerating research in video‑based understanding and editing.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multimodal",
-   "data_curation",
-   "video",
-   "dataset"
-  ],
-  "importance": 3,
-  "id": "49c4f78acfc1d008",
-  "url": "https://huggingface.co/papers/2611.04418",
-  "source": "HF Daily Papers",
-  "date": "2026-11-02T19:00:00.000Z",
-  "added": "2026-11-05T04:44:08.146951+00:00"
- },
- {
-  "headline": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
-  "tldr": "Introduces YANAMI, a 400K multi-turn multimodal dialogue dataset and benchmark to evaluate models' ability to track and realize evolving dialogue states.",
-  "key_points": [
-   "Contains 400K dialogues, >2M images, and 2.6M turns across four scenarios",
-   "Provides YANAMI-Bench with 400 dialogues for systematic evaluation",
-   "Fine-tuning BAGEL on YANAMI-400K improves editing, generation, and stateful interaction performance",
-   "Current unified multimodal models still struggle with maintaining and visualizing evolving states"
-  ],
-  "why_it_matters": "Enables rigorous training and assessment of multimodal models on stateful, multi-turn interactions, a gap in existing benchmarks, driving progress toward more coherent visual dialogue systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multimodal",
-   "dataset",
-   "dialogue",
-   "stateful"
-  ],
-  "importance": 3,
-  "id": "61aa1110a2ecdbb7",
-  "url": "https://huggingface.co/papers/2611.05280",
-  "source": "HF Daily Papers",
-  "date": "2026-11-02T19:00:00.000Z",
-  "added": "2026-11-05T04:43:55.944338+00:00"
- },
- {
-  "headline": "Words Caught in the Heart: Simulating Person-Specific Expression for Self-Opaque Clients in Psychotherapy",
-  "tldr": "Pandora is a new LLM-based framework that simulates psychotherapy clients by explicitly planning expression, achieving higher expression similarity and lower AI-like judgments than prior baselines.",
-  "key_points": [
-   "Models psychological and relational states that update with therapist interventions.",
-   "Separates expression planning from language generation using client-specific utterance patterns.",
-   "Outperforms five baselines on 115 cases across four counseling datasets.",
-   "Reduces AI-like perception from 43.3–67.2% to 7.2% in evaluator study."
-  ],
-  "why_it_matters": "Improving the realism of client simulators can enhance training for therapists and research on therapeutic techniques, ensuring simulated clients reflect individual expression rather than generic, AI-like responses.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "psychotherapy",
-   "client simulation",
-   "language model",
-   "expression planning"
-  ],
-  "importance": 3,
-  "id": "83de50efad5d5595",
-  "url": "https://huggingface.co/papers/2611.00617",
-  "source": "HF Daily Papers",
-  "date": "2026-10-30T20:00:00.000Z",
-  "added": "2026-11-05T04:43:31.850483+00:00"
- },
- {
-  "headline": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-  "tldr": "The paper introduces Embodied Agent Arena to evaluate ten frontier vision‑language models on robot generalist tasks, finding closed‑weight models outperform open‑weight ones, especially in planning and manipulation.",
-  "key_points": [
-   "Embodied Agent Arena tests VLM agents across geometry, spatial reasoning, affordance, task planning, and manipulation using 1,000 cases.",
-   "Closed‑weight VLMs lead in all five domains, while open‑weight VLMs show weaker planning and manipulation performance.",
-   "Errors often stem from hidden geometric distortions and misidentifying actionable regions, causing subgoal loss or premature task termination.",
-   "Additional computation (code repair, self‑review) does not consistently fix failures and can sometimes reverse correct actions."
-  ],
-  "why_it_matters": "Understanding the limits of current VLM agents for embodied robotics highlights gaps in planning and manipulation, guiding future research toward more reliable robot generalists.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "VLM",
-   "robot_generalist",
-   "embodied_ai",
-   "evaluation"
-  ],
-  "importance": 3,
-  "id": "4dcce518c56d2780",
-  "url": "https://huggingface.co/papers/2610.00854",
-  "source": "HF Daily Papers",
-  "date": "2026-10-22T20:00:00.000Z",
-  "added": "2026-11-05T04:43:19.749532+00:00"
  }
 ]
