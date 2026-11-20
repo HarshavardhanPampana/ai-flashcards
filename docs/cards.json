@@ -1,5 +1,1048 @@
 [
  {
+  "headline": "NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding",
+  "tldr": "Reducing the hidden width of draft models in speculative decoding to half or a quarter can speed up generation by up to ~1.44× without hurting acceptance rates.",
+  "key_points": [
+   "Draft models like DFlash and EAGLE-3 can operate with narrower residual streams.",
+   "Half or quarter width drafts preserve token acceptance and keep logits unchanged.",
+   "Speedups of 1.06‑1.44× observed on B200 and DGX Spark GPUs across batch sizes.",
+   "Works for targets Qwen3‑8B and GPT‑OSS‑20B in SGLang experiments."
+  ],
+  "why_it_matters": "Shows a simple architectural tweak that improves inference efficiency for large language models, making speculative decoding faster and cheaper for real‑world deployments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "speculative decoding",
+   "draft model",
+   "inference speedup",
+   "LLM efficiency"
+  ],
+  "importance": 3,
+  "id": "594acaf6a68ab598",
+  "url": "https://huggingface.co/papers/2611.23835",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:36:35.908800+00:00"
+ },
+ {
+  "headline": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+  "tldr": "A new framework (O²LaF) reuses a pretrained video diffusion transformer as a shared prior for both inverse and forward dynamics, achieving state‑of‑the‑art few‑shot action learning and zero‑shot transfer in navigation and manipulation tasks.",
+  "key_points": [
+   "Uses a single pretrained video DiT model as a prior for both inverse (action inference) and forward (action‑conditioned video generation) dynamics.",
+   "Introduces learnable action queries and a compact bottleneck to train both dynamics end‑to‑end on unlabeled video data.",
+   "Sets new benchmarks in few‑shot action probing and zero‑shot action transfer across visual contexts and robot embodiments.",
+   "Extends the approach to predictive representation priors (V‑JEPA2) with competitive results."
+  ],
+  "why_it_matters": "Demonstrates that large pretrained video generative models can be repurposed for efficient, self‑supervised learning of transferable actions, reducing the need for costly labeled data in robotics and embodied AI.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video diffusion",
+   "latent action learning",
+   "self-supervised",
+   "robotics"
+  ],
+  "importance": 3,
+  "id": "1819d8b854c8a63a",
+  "url": "https://huggingface.co/papers/2611.26617",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:36:24.012089+00:00"
+ },
+ {
+  "headline": "Do Probing and Steering Favor the Same Directions Within and Across Language Models?",
+  "tldr": "Probing and steering use different hidden‑state directions; the best probe isn’t the best steering direction, and their transferability varies across instruction‑tuned models.",
+  "key_points": [
+   "Probe directions (e.g., covariance‑adjusted discriminant) differ from optimal steering directions (closer to mean difference).",
+   "Across three instruction‑tuned models, the best probe never matches the best steering direction for truthfulness and sentiment.",
+   "Steering gains can be 27‑56% stronger with intermediate directions, but effects are unstable across layers and operators.",
+   "Linear‑map transfer retains 81‑91% probe performance but loses most steering effect in most model pairs.",
+   "Steering toward \"unknown\" boosts abstention on uncertain errors by 18‑44 points with minimal correction of reachable answers."
+  ],
+  "why_it_matters": "Understanding the mismatch between probing and steering informs how we design controllable language models, improves safety techniques like truthfulness steering, and highlights limits of transferring control signals across models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "probing",
+   "steering",
+   "language models",
+   "model control"
+  ],
+  "importance": 3,
+  "id": "4b98fb88628a101d",
+  "url": "https://huggingface.co/papers/2611.19499",
+  "source": "HF Daily Papers",
+  "date": "2026-11-13T19:00:00.000Z",
+  "added": "2026-11-20T20:36:11.961620+00:00"
+ },
+ {
+  "headline": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights",
+  "tldr": "Researchers present a zero‑gradient compiler that embeds deterministic arithmetic circuits directly into pretrained language‑model weights, achieving near‑perfect multi‑digit calculation without fine‑tuning.",
+  "key_points": [
+   "Introduces closed‑form, zero‑gradient primitives that graft exact computation into LM weights with no training data or runtime hooks.",
+   "Combines Mellin‑GLU quadrature, Chebyshev Indefinite‑RoPE attention, and axis‑aligned width extension to preserve NL competence while enabling precise arithmetic.",
+   "Achieves 99‑100% accuracy on 4‑8 digit arithmetic using IBM Granite 4.2 3B and Alibaba Qwen 3.5 4B models, surpassing LoRA fine‑tuning baselines.",
+   "Compiler runs in constant TC⁰ depth and fits within modest A100 memory using block‑sparse sidecars."
+  ],
+  "why_it_matters": "Enables LLMs to perform exact numeric reasoning without costly fine‑tuning, opening paths for reliable AI‑driven computation and reducing reliance on external toolchains.",
+  "category": "paper",
+  "companies": [
+   "IBM",
+   "Alibaba"
+  ],
+  "tags": [
+   "arithmetic",
+   "compilation",
+   "LLM",
+   "zero-gradient"
+  ],
+  "importance": 3,
+  "id": "9d28b97a9c7b1e93",
+  "url": "https://huggingface.co/papers/2611.26450",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:35:59.770297+00:00"
+ },
+ {
+  "headline": "In Situ Training of Optical Neural Networks by Coding Agents",
+  "tldr": "A coding agent (LLM) can train optical neural networks directly from hardware measurements without per-device calibration, outperforming gradient‑free methods and approaching backpropagation performance.",
+  "key_points": [
+   "Introduces \"optics as code\" where an LLM writes programs to train optical NN from camera images.",
+   "Agent learns a physical model of the optics and reparameterizes the network with interpretable optical elements.",
+   "Achieves higher accuracy than gradient‑free trial‑and‑error and nears backpropagation results without calibrated models.",
+   "Eliminates the need for per‑device calibration or hardware gradients, enabling scalable optical NN deployment."
+  ],
+  "why_it_matters": "Provides a practical, low‑cost method to program and optimize large‑scale optical neural hardware, accelerating the path toward fast, energy‑efficient AI accelerators and simplifying experimental calibration.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "optical computing",
+   "neural networks",
+   "coding agents",
+   "in-situ training"
+  ],
+  "importance": 3,
+  "id": "1e600adf92575813",
+  "url": "https://huggingface.co/papers/2611.23875",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:35:47.928197+00:00"
+ },
+ {
+  "headline": "Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests",
+  "tldr": "The UX-1 model, fine‑tuned on human browsing data, correctly predicted outcomes of 84% of 318 long‑running A/B tests, outperforming the Qwen3 Next 80B model's 62% accuracy.",
+  "key_points": [
+   "UX-1 simulated 1,000 shoppers per arm and classified 267 of 318 outcomes correctly (84.0%).",
+   "Qwen3 Next 80B achieved 196 correct classifications (61.6%).",
+   "When UX-1 favored the variant, 118 of 126 variants won in live tests (93.7%).",
+   "Study used 412 historical tests, focusing on 318 that ran >21 days.",
+   "Results suggest simulated shopper forecasts can guide experiment selection."
+  ],
+  "why_it_matters": "Accurate simulation of shopper behavior can reduce the cost and risk of live A/B testing by prioritizing the most promising changes, accelerating product iteration for e‑commerce and web platforms.",
+  "category": "paper",
+  "companies": [
+   "Squoosh",
+   "Qwen3"
+  ],
+  "tags": [
+   "A/B testing",
+   "simulation",
+   "forecasting",
+   "UX"
+  ],
+  "importance": 3,
+  "id": "bf5d9ebd92833919",
+  "url": "https://huggingface.co/papers/2611.25200",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:35:35.954190+00:00"
+ },
+ {
+  "headline": "General progress substitutes for specific training data in language models",
+  "tldr": "Withholding specific training data only delays a model's capability; as models improve, they need far less data to relearn the withheld skill.",
+  "key_points": [
+   "Models can acquire withheld skills later with a small fraction of the original data.",
+   "The amount of data needed to regain a skill decreases as model size and overall training progress increase.",
+   "Experiments across chess, Othello, molecular strings, bracket languages, and web text confirm the effect.",
+   "A control task of equal difficulty learns much more slowly, highlighting the role of general progress."
+  ],
+  "why_it_matters": "Understanding how general training progress compensates for missing data informs safety strategies, data curation, and resource allocation for future model development.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "training data",
+   "model scaling",
+   "capability emergence"
+  ],
+  "importance": 3,
+  "id": "d88c5631b7f06aa6",
+  "url": "https://huggingface.co/papers/2611.24844",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:35:23.561731+00:00"
+ },
+ {
+  "headline": "DailySafe: Benchmarking Dynamic Safety Awareness in Everyday Multi-Turn Multimodal Interactions",
+  "tldr": "Introduces the DailySafe benchmark to evaluate multimodal LLMs' ability to maintain safety awareness across realistic multi‑turn, multi‑image interactions.",
+  "key_points": [
+   "195 naturalistic multi‑turn, multi‑image interactions covering 10 everyday domains",
+   "Focuses on evolving safety risks that emerge from ordinary tasks, not just adversarial prompts",
+   "Provides case‑specific safety annotations to test dynamic risk recognition and safe assistance",
+   "Publicly released for the research community (GitHub link included)"
+  ],
+  "why_it_matters": "Ensuring AI assistants can detect and mitigate safety hazards in everyday, multi‑modal conversations is crucial for trustworthy deployment in real‑world settings.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "safety",
+   "multimodal",
+   "benchmark",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "1e2cfe3c8e8aa902",
+  "url": "https://huggingface.co/papers/2611.26298",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:35:11.773537+00:00"
+ },
+ {
+  "headline": "TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs",
+  "tldr": "TwinLab-Bench is a new benchmark that tests AI agents' ability to design and execute real laboratory experiments across 52 scientific tasks, revealing that even top models like Claude Fable 5.2 score only 45%.",
+  "key_points": [
+   "Benchmarks AI scientists on self‑designed experiments using real lab records.",
+   "Covers 52 tasks across physical sciences, life sciences, and engineering with 100+ action types.",
+   "Top frontier model Claude Fable 5.2 achieves just 45% average score, showing the challenge.",
+   "TwinLab agents act as environments, executing experiments and providing ground‑truth readings."
+  ],
+  "why_it_matters": "Accurately evaluating AI's ability to autonomously conduct scientific experiments is crucial for developing trustworthy AI scientists that can accelerate research and reduce human workload.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "benchmark",
+   "AI agents",
+   "scientific discovery",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "0115555b39344353",
+  "url": "https://huggingface.co/papers/2611.26248",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:34:59.869611+00:00"
+ },
+ {
+  "headline": "How Far Can Untrained Neural Networks Go in Anomaly Detection? From Tables to Pixels",
+  "tldr": "The PRISM framework uses fixed random nonlinear features with Mahalanobis scoring to achieve state‑of‑the‑art anomaly detection on tabular and visual datasets without any training or pretrained weights.",
+  "key_points": [
+   "PRISM combines random nonlinear features with normal‑reference Mahalanobis scoring.",
+   "Achieves top mean AUROC (86.4%) on 47 tabular datasets and high image/pixel AUROCs (90.4%/96.4%) on visual benchmarks.",
+   "No neural weight optimization or pretrained representations are required.",
+   "Provides a strong prior‑to‑learning baseline for evaluating learned representations in AD."
+  ],
+  "why_it_matters": "Demonstrates that untrained networks can serve as powerful, lightweight anomaly detectors, offering a cheap baseline and highlighting the true contribution of learned features in future AD research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "anomaly detection",
+   "unsupervised learning",
+   "Mahalanobis scoring",
+   "random features"
+  ],
+  "importance": 3,
+  "id": "c0779d7c53522049",
+  "url": "https://huggingface.co/papers/2611.08136",
+  "source": "HF Daily Papers",
+  "date": "2026-11-08T19:00:00.000Z",
+  "added": "2026-11-20T20:34:47.677437+00:00"
+ },
+ {
+  "headline": "Online Mistake Detection in Instruction-Conditioned Procedural Video",
+  "tldr": "A new model can detect and localize mistakes in egocentric procedural videos in real time by conditioning on task instructions, outperforming prior methods.",
+  "key_points": [
+   "Introduces online, instruction‑conditioned mistake detection for egocentric videos.",
+   "Joint model predicts step identification, temporal localization, and execution verification in one step.",
+   "Achieves 84.1% binary mistake‑detection F1@0.5, surpassing prior AEM and ESTANet checkpoints.",
+   "Repartitions EgoPER dataset to include erroneous videos for supervised learning."
+  ],
+  "why_it_matters": "Real‑time mistake detection can enable assistive systems that intervene during procedures—improving safety in domains like medical training, industrial assembly, and DIY tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "mistake detection",
+   "instruction-conditioned",
+   "egocentric video",
+   "real-time"
+  ],
+  "importance": 3,
+  "id": "0c3a2b64bbe38292",
+  "url": "https://huggingface.co/papers/2611.25567",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:34:35.802086+00:00"
+ },
+ {
+  "headline": "Direct3D-V3: Latent-Free Diffusion Transformers in the Native Voxel Domain",
+  "tldr": "Direct3D-V3 introduces a diffusion transformer that generates 3D shapes directly in voxel SDF space, removing the VAE bottleneck and improving detail and image‑to‑geometry alignment.",
+  "key_points": [
+   "Operates on raw SDF voxel grids without a latent VAE, enabling native‑domain training and sampling.",
+   "Adds implicit manifold regularization and mesh‑based normal losses to ensure watertight geometry.",
+   "Predicts camera parameters as an auxiliary task to better align generated shapes with conditioning images.",
+   "Supports generative reconstruction by interleaving diffusion with normal‑guided refinement."
+  ],
+  "why_it_matters": "By eliminating the latent compression step, Direct3D-V3 can produce higher‑fidelity 3D meshes with richer local detail and tighter image‑to‑shape correspondence, advancing diffusion‑based 3D generation and reconstruction pipelines.",
+  "category": "paper",
+  "companies": [
+   "DreamTech AI"
+  ],
+  "tags": [
+   "diffusion",
+   "3D generation",
+   "voxels",
+   "transformers"
+  ],
+  "importance": 3,
+  "id": "ad0cccf26e909961",
+  "url": "https://huggingface.co/papers/2611.26511",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:34:23.780265+00:00"
+ },
+ {
+  "headline": "S1CogBench: What System One Decision Models Can and Cannot Do on Cognitive Experiments",
+  "tldr": "The paper introduces S1CogBench, a benchmark of 24 cognitive tasks to evaluate seven open System One decision models and the Jev API model, revealing varied strengths, failures, and the impact of readout controls on model rankings.",
+  "key_points": [
+   "S1CogBench evaluates fast, structured decision models on 24 established cognitive tasks.",
+   "Seven open models and the Jev API model show distinct behavioral profiles and trade‑offs.",
+   "High accuracy does not guarantee human‑like adaptability to changing task demands.",
+   "Model rankings are influenced by how choices are extracted (readout controls).",
+   "Latency analysis shows long generative responses are slower than direct decisions."
+  ],
+  "why_it_matters": "Provides the first systematic assessment of System One decision models, helping researchers understand their capabilities and limits before deploying them in real‑world automated decision systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "cognitive",
+   "decision_models",
+   "AI"
+  ],
+  "importance": 3,
+  "id": "db90f852819508af",
+  "url": "https://huggingface.co/papers/2611.00911",
+  "source": "HF Daily Papers",
+  "date": "2026-11-13T19:00:00.000Z",
+  "added": "2026-11-20T20:34:11.675355+00:00"
+ },
+ {
+  "headline": "The week everything fell apart",
+  "tldr": "A cascade of major tech outages—including Outlook, a nationwide air traffic ground stop, banking systems, and iCloud—disrupted services across the country.",
+  "key_points": [
+   "Days‑long Outlook outage",
+   "Only second nationwide ground stop in 25 years",
+   "Banking systems experienced widespread failures",
+   "iCloud service went down"
+  ],
+  "why_it_matters": "The simultaneous failures highlight the fragility of critical digital infrastructure and the cascading impact on businesses and consumers when core services collapse.",
+  "category": "other",
+  "companies": [
+   "Microsoft",
+   "Apple"
+  ],
+  "tags": [
+   "outage",
+   "infrastructure",
+   "reliability"
+  ],
+  "importance": 2,
+  "id": "299291fdd5181a56",
+  "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+  "source": "The Verge AI",
+  "date": "2026-11-20T09:06:59-05:00",
+  "added": "2026-11-20T20:33:59.894912+00:00"
+ },
+ {
+  "headline": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+  "tldr": "President Trump warned of a heavy tax on companies that locate AI data centers abroad, amid growing state and city restrictions on new facilities.",
+  "key_points": [
+   "Trump announced a proposed tax on AI data centers built outside the United States.",
+   "The statement comes as multiple states and cities impose limits on new data center projects.",
+   "No specific tax rate or legislative pathway was detailed.",
+   "The move signals a push for domestic AI infrastructure and could affect global cloud providers."
+  ],
+  "why_it_matters": "Domestic AI compute capacity is critical for national competitiveness, data security, and economic growth; a tax could reshape where major tech firms locate their infrastructure.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "AI infrastructure",
+   "tax policy",
+   "data centers",
+   "US government"
+  ],
+  "importance": 3,
+  "id": "3a0cb236fd3220da",
+  "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+  "source": "The Verge AI",
+  "date": "2026-11-20T13:50:19-05:00",
+  "added": "2026-11-20T20:33:47.544583+00:00"
+ },
+ {
+  "headline": "Verify the Verifier: Specification-Grounded LLM Cross-Checking for Bugs That Escape UVM Scoreboards",
+  "tldr": "A new framework uses LLMs to cross‑check passing UVM regressions against specifications, uncovering hidden scoreboard‑escape bugs in hardware IP.",
+  "key_points": [
+   "LLM‑based Anomaly Cross‑Checker compares simulation traces to formal specifications.",
+   "Detected 41 scoreboard‑escape bugs out of 564 injected bugs in OpenTitan IPs.",
+   "First framework to automatically verify that passing tests also satisfy the design specification.",
+   "Highlights limitations of traditional UVM scoreboards in catching specification‑violating bugs."
+  ],
+  "why_it_matters": "Ensuring hardware designs meet their specifications is critical for security and reliability; this approach reveals hidden bugs that traditional testbenches miss, improving verification confidence for complex silicon projects.",
+  "category": "paper",
+  "companies": [
+   "OpenTitan"
+  ],
+  "tags": [
+   "verification",
+   "LLM",
+   "hardware",
+   "bugs"
+  ],
+  "importance": 3,
+  "id": "febede2eb69795c6",
+  "url": "https://arxiv.org/abs/2611.26588v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:45:54Z",
+  "added": "2026-11-20T20:33:35.681581+00:00"
+ },
+ {
+  "headline": "Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning",
+  "tldr": "The paper shows that self‑consistency certificates for language models assume independent rollouts, but in practice rollouts are correlated, leading to a mismatch between realized and population reliability; it proposes a prompt‑level e‑process that restores population validity.",
+  "key_points": [
+   "Standard self‑consistency certification assumes conditionally independent rollouts, which is violated by shared reasoning prefixes.",
+   "Correlation introduces a split between a realized null (specific rollout) and a population null (average model behavior).",
+   "The usual e‑process remains valid only for the realized null; population‑level validity requires a prompt‑level e‑process with one rollout per prompt.",
+   "Empirical tests on GSM8K and AIME datasets illustrate when the gap between realized and population validity appears."
+  ],
+  "why_it_matters": "Understanding and correcting the dependence in rollout sampling ensures that reliability guarantees for language‑model reasoning are statistically sound, preventing over‑confident claims about model performance across diverse prompts.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "self-consistency",
+   "e-process",
+   "correlated reasoning",
+   "reliability"
+  ],
+  "importance": 3,
+  "id": "892acbafa60c8531",
+  "url": "https://arxiv.org/abs/2611.26592v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:47:51Z",
+  "added": "2026-11-20T20:33:23.795359+00:00"
+ },
+ {
+  "headline": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+  "tldr": "The paper introduces AgentRoboCritic, a framework that critiques each low-level robot action of frontier multimodal language agents, revealing strengths like zero-shot manipulation and recovery, and weaknesses such as grasping bottlenecks, while releasing a 12.8k‑action annotated dataset and an open‑source critic model.",
+  "key_points": [
+   "Provides the first systematic action‑level analysis of frontier agents across 12 manipulation benchmarks.",
+   "Introduces an intent‑grounded critique system where the agent states intent and a critic evaluates outcomes and failure modes.",
+   "Shows strong zero‑shot manipulation and closed‑loop recovery, but highlights physical execution limits like grasping and alignment.",
+   "Releases a 12,844‑action annotated dataset and a fine‑tuned open‑source critic (Muse‑Glimmer‑30B) improving failure‑mode accuracy to 74.24%."
+  ],
+  "why_it_matters": "Understanding fine‑grained successes and failures of advanced language agents in robot control is crucial for building reliable autonomous systems, guiding future research on physical grounding, and providing a benchmark for evaluating and improving robot‑centric AI models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robot_control",
+   "multimodal_agents",
+   "evaluation",
+   "dataset"
+  ],
+  "importance": 3,
+  "id": "400d931ab84af6d8",
+  "url": "https://arxiv.org/abs/2611.26613v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:57:25Z",
+  "added": "2026-11-20T20:33:11.863228+00:00"
+ },
+ {
+  "headline": "Six AI-powered gadgets that could make your home office smarter",
+  "tldr": "A roundup of six AI-enabled devices—from note‑taking tools to webcams—designed to upgrade home office productivity.",
+  "key_points": [
+   "AI-driven notetakers",
+   "Smart webcams with AI features",
+   "Gadgets aimed at home office efficiency",
+   "Six products highlighted",
+   "Focus on AI integration"
+  ],
+  "why_it_matters": "AI‑enhanced hardware can streamline remote work, improve ergonomics, and boost productivity for the growing number of home‑based professionals.",
+  "category": "product",
+  "companies": [],
+  "tags": [
+   "AI",
+   "gadgets",
+   "home office",
+   "productivity"
+  ],
+  "importance": 2,
+  "id": "7d8981ef54762173",
+  "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 20 Nov 2026 14:00:00 +0000",
+  "added": "2026-11-20T20:32:59.650653+00:00"
+ },
+ {
+  "headline": "The fallout from Nvidia’s Jensen Huang scandal continues",
+  "tldr": "Nvidia reports strong earnings despite the recent scandal surrounding former CEO Jensen Huang and announces it will cease sales of its H200 chips to China.",
+  "key_points": [
+   "Nvidia posted healthy growth in its latest earnings report",
+   "The company is ending sales of H200 chips in China",
+   "The scandal over Jensen Huang’s ouster continues to affect the firm’s public image"
+  ],
+  "why_it_matters": "The earnings show Nvidia’s resilience amid leadership turmoil, while the H200 chip ban could impact China’s AI hardware supply and broader geopolitical tech tensions.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "chip",
+   "earnings",
+   "China",
+   "scandal"
+  ],
+  "importance": 3,
+  "id": "92c1cc867c014247",
+  "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 20 Nov 2026 14:55:44 +0000",
+  "added": "2026-11-20T20:32:47.705697+00:00"
+ },
+ {
+  "headline": "Chips can survive the space environment — can their financing?",
+  "tldr": "Lenders are wary of financing space‑based data center hardware, raising questions about the future of space‑borne chips and data centers.",
+  "key_points": [
+   "Space‑qualified chips can operate in orbit",
+   "Lenders reluctant to back SpaceX collateral in space",
+   "Financing challenges could hinder space data center growth"
+  ],
+  "why_it_matters": "Financing constraints may limit the deployment of resilient space‑based computing infrastructure, affecting industries that rely on low‑latency data processing from orbit.",
+  "category": "funding",
+  "companies": [
+   "SpaceX"
+  ],
+  "tags": [
+   "space",
+   "data centers",
+   "financing",
+   "chips"
+  ],
+  "importance": 2,
+  "id": "079373956374b3c3",
+  "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 20 Nov 2026 17:40:01 +0000",
+  "added": "2026-11-20T20:32:35.552673+00:00"
+ },
+ {
+  "headline": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too",
+  "tldr": "An AI system announced a proof of the Riemann Hypothesis, and a human mathematician also presented a competing solution.",
+  "key_points": [
+   "AI claims proof of the 167-year-old Riemann Hypothesis",
+   "Human mathematician offers a competing solution",
+   "Both results spark excitement in the math community"
+  ],
+  "why_it_matters": "A proof of the Riemann Hypothesis would be a monumental breakthrough in mathematics, impacting number theory, cryptography, and many scientific fields; AI involvement highlights the growing role of machine intelligence in advanced research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "RiemannHypothesis",
+   "AI",
+   "Mathematics",
+   "Proof"
+  ],
+  "importance": 2,
+  "id": "d6bff5841b5a64e7",
+  "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 20 Nov 2026 19:32:08 +0000",
+  "added": "2026-11-20T20:32:23.672727+00:00"
+ },
+ {
+  "headline": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+  "tldr": "Spotify founder Daniel Ek is investing in Europa Fusion, a fusion power startup founded by an AI researcher.",
+  "key_points": [
+   "Daniel Ek provides backing",
+   "Startup founded by AI researcher",
+   "Focus on fusion power technology",
+   "Company named Europa Fusion"
+  ],
+  "why_it_matters": "The investment links a high‑profile tech entrepreneur with cutting‑edge fusion research, highlighting cross‑industry interest in AI‑driven energy solutions.",
+  "category": "funding",
+  "companies": [
+   "Spotify",
+   "Europa Fusion"
+  ],
+  "tags": [
+   "fusion",
+   "AI research",
+   "investment",
+   "energy"
+  ],
+  "importance": 2,
+  "id": "340614cb1d4599fc",
+  "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+  "source": "TechCrunch AI",
+  "date": "Fri, 20 Nov 2026 19:53:41 +0000",
+  "added": "2026-11-20T20:32:11.550486+00:00"
+ },
+ {
+  "headline": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+  "tldr": "Hugging Face introduces Inkling 2 Mini, a compact model delivering high performance on local hardware.",
+  "key_points": [
+   "Inkling 2 Mini released",
+   "Cutting‑edge performance",
+   "Optimized for local setups",
+   "Compact model size"
+  ],
+  "why_it_matters": "Provides developers with a powerful, low‑resource AI model that can run locally, reducing reliance on cloud services and lowering latency.",
+  "category": "product",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "model",
+   "performance",
+   "local",
+   "mini"
+  ],
+  "importance": 2,
+  "id": "80d31a6dee298bbd",
+  "url": "https://huggingface.co/blog/inkling2mini",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 20 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-20T20:31:59.656159+00:00"
+ },
+ {
+  "headline": "Signal is blocking Gemini and Siri AI from reading your screen",
+  "tldr": "Signal disables screenshot functionality on Android and iOS to stop AI agents like Gemini and Siri from reading on‑screen messages, bolstering user privacy.",
+  "key_points": [
+   "Signal restricts screenshots on Android and iOS",
+   "Prevents AI agents (Gemini, Siri) from accessing on‑screen content",
+   "Aims to preserve Signal's end‑to‑end privacy guarantees",
+   "Highlights growing concerns over AI‑driven data scraping"
+  ],
+  "why_it_matters": "It safeguards user privacy by blocking AI systems from covertly reading personal messages, setting a precedent for how messaging apps may counteract on‑device AI surveillance.",
+  "category": "policy",
+  "companies": [
+   "Signal",
+   "Google",
+   "Apple"
+  ],
+  "tags": [
+   "privacy",
+   "AI",
+   "mobile",
+   "screen_capture"
+  ],
+  "importance": 3,
+  "id": "779ccf54081cfd88",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+  "source": "The Verge AI",
+  "date": "2026-11-20T07:30:47-05:00",
+  "added": "2026-11-20T20:31:48.270978+00:00"
+ },
+ {
+  "headline": "Anthropic mathematician claims to have solved the Riemann hypothesis with Claude",
+  "tldr": "Levent Alpöge says Claude helped him prove the Riemann hypothesis, a Millennium Prize problem, though the proof is not yet verified.",
+  "key_points": [
+   "Anthropic researcher Levent Alpöge asserts a proof of the Riemann hypothesis.",
+   "The proof was generated with assistance from Claude, Anthropic's language model.",
+   "If confirmed, it would be a landmark AI contribution to pure mathematics.",
+   "The claim remains unverified by the mathematical community."
+  ],
+  "why_it_matters": "A verified AI‑assisted proof of a Millennium Prize problem would demonstrate AI's potential to tackle deep, unsolved scientific challenges, reshaping research workflows.",
+  "category": "other",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "AI",
+   "mathematics",
+   "Riemann hypothesis",
+   "Millennium Prize"
+  ],
+  "importance": 3,
+  "id": "859ee3ec8c206bcf",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+  "source": "The Verge AI",
+  "date": "2026-11-20T11:34:13-05:00",
+  "added": "2026-11-20T20:31:35.859228+00:00"
+ },
+ {
+  "headline": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+  "tldr": "Hugging Face releases harness adapters that let you fine‑tune any model for a specific deployment harness, boosting efficiency and lowering expense.",
+  "key_points": [
+   "Adapters bridge models and deployment harnesses",
+   "Improves inference performance",
+   "Reduces computational cost",
+   "Works with existing Hugging Face models"
+  ],
+  "why_it_matters": "By tailoring models to the hardware or serving environment, developers can achieve faster responses and cheaper inference, making large models more accessible for production use.",
+  "category": "open_source",
+  "companies": [
+   "Hugging Face"
+  ],
+  "tags": [
+   "adapters",
+   "model optimization",
+   "cost efficiency"
+  ],
+  "importance": 2,
+  "id": "211fbe8009a45ecd",
+  "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+  "source": "Hugging Face Blog",
+  "date": "Fri, 20 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-20T20:31:23.580630+00:00"
+ },
+ {
+  "headline": "Can AI help scientists identify promising drug candidates?",
+  "tldr": "MedChemBench benchmark tests AI models on interpreting molecular structures, reasoning from experimental data, and selecting early‑stage drug compounds.",
+  "key_points": [
+   "Evaluates AI's ability to understand molecular structures",
+   "Measures reasoning from experimental evidence",
+   "Assesses compound selection for early drug discovery"
+  ],
+  "why_it_matters": "A reliable benchmark helps gauge how well AI can accelerate early‑stage drug discovery, potentially reducing time and cost for bringing new medicines to market.",
+  "category": "other",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "drug discovery",
+   "AI",
+   "benchmark",
+   "chemistry"
+  ],
+  "importance": 2,
+  "id": "f4784c30400364a2",
+  "url": "https://openai.com/index/introducing-medchembench",
+  "source": "OpenAI",
+  "date": "Fri, 20 Nov 2026 00:00:00 GMT",
+  "added": "2026-11-20T20:31:11.589927+00:00"
+ },
+ {
+  "headline": "Combatting adversarial distillation",
+  "tldr": "OpenAI outlines a layered strategy—training, safeguards, detection, and enforcement—to defend against adversarial distillation and capability extraction.",
+  "key_points": [
+   "Layered approach combines model training, safeguards, detection, and enforcement",
+   "Aims to protect against capability extraction via adversarial distillation",
+   "Focuses on both prevention and active mitigation"
+  ],
+  "why_it_matters": "Adversarial distillation can leak a model's capabilities to malicious actors, so robust defenses are crucial for maintaining AI safety and trust.",
+  "category": "policy",
+  "companies": [
+   "OpenAI"
+  ],
+  "tags": [
+   "adversarial",
+   "distillation",
+   "security",
+   "model_protection"
+  ],
+  "importance": 2,
+  "id": "3ea993db7e3c60d1",
+  "url": "https://openai.com/index/combatting-adversarial-distillation",
+  "source": "OpenAI",
+  "date": "Fri, 20 Nov 2026 10:00:00 GMT",
+  "added": "2026-11-20T20:30:59.735356+00:00"
+ },
+ {
+  "headline": "Inhabitant: An Agent Framework for Long-Horizon Human-Scene Interaction with Spatial Control and Quantitative Feedback",
+  "tldr": "Inhabitant is a training‑free agent framework that adds explicit spatial control and quantitative feedback to language‑model agents, achieving near‑perfect success on a new 75‑task household benchmark (Inhabit).",
+  "key_points": [
+   "Agents specify motions via positions, paths, and poses and receive quantitative feedback on execution.",
+   "Introduces Inhabit, a benchmark of 75 household tasks across 31 furniture layouts.",
+   "Achieves 98.7% success with Claude Opus 5.5, 93.3% with Claude Sonnet 5.5, and 82.7% with Gemini 4 Argon.",
+   "Ablation studies show spatial control and feedback are critical for task completion."
+  ],
+  "why_it_matters": "Adds precise spatial reasoning to language‑model agents, closing a gap in long‑horizon human‑scene interaction and enabling more reliable robotic or virtual assistants in everyday environments.",
+  "category": "paper",
+  "companies": [
+   "Anthropic",
+   "Google"
+  ],
+  "tags": [
+   "human-scene interaction",
+   "agent framework",
+   "benchmark",
+   "spatial control"
+  ],
+  "importance": 3,
+  "id": "8c18510fcbeb81f6",
+  "url": "https://huggingface.co/papers/2611.25005",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:30:47.774848+00:00"
+ },
+ {
+  "headline": "Show HN: I made an audio-to-MIDI model 60x more efficient",
+  "tldr": "A new audio-to-MIDI conversion model claims 60× efficiency improvement.",
+  "key_points": [
+   "Converts audio signals to MIDI format",
+   "Achieves 60 times greater efficiency than prior versions",
+   "Released as a showcase on Hacker News"
+  ],
+  "why_it_matters": "More efficient audio-to-MIDI conversion can enable faster music transcription and lower computational costs for developers and musicians.",
+  "category": "model_release",
+  "companies": [],
+  "tags": [
+   "audio",
+   "midi",
+   "efficiency",
+   "model"
+  ],
+  "importance": 2,
+  "id": "9e9229586485a20f",
+  "url": "https://kobi.music/research/dettato",
+  "source": "Hacker News",
+  "date": "2026-11-17T01:03:05Z",
+  "added": "2026-11-20T20:30:35.866346+00:00"
+ },
+ {
+  "headline": "Accord: Universal Online Metric Localization and Dense Mapping from one Camera and an IMU",
+  "tldr": "Accord fuses visual‑inertial odometry with a depth foundation model to produce accurate online dense metric maps from a single camera‑IMU pair, achieving top‑ranked F‑scores across multiple datasets.",
+  "key_points": [
+   "Combines VIO metric poses with a depth foundation model for dense prediction.",
+   "Uses a factor graph to fuse submaps and correct per‑image scale errors.",
+   "Achieves best or second‑best mean F‑score at 5 cm on five public setups and a new phone‑rig dataset.",
+   "Open‑source code and dataset released for the research community."
+  ],
+  "why_it_matters": "Provides a practical, hardware‑agnostic solution for dense metric mapping, enabling high‑precision SLAM on consumer devices without extensive tuning, which can accelerate robotics, AR, and navigation research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "visual-inertial odometry",
+   "dense mapping",
+   "depth estimation",
+   "SLAM"
+  ],
+  "importance": 3,
+  "id": "725425a0db170dfd",
+  "url": "https://huggingface.co/papers/2611.25279",
+  "source": "HF Daily Papers",
+  "date": "2026-11-17T19:00:00.000Z",
+  "added": "2026-11-20T20:30:23.878200+00:00"
+ },
+ {
+  "headline": "Accelerating Mixture of Block Attention via Dynamic Routing, KV-Centric Execution and Runtime Pipelining",
+  "tldr": "LightningMoBA introduces dynamic routing, KV‑centric ownership, and runtime pipelining to speed up MoBA inference, achieving 1.2‑1.6× faster generation and higher RULER scores.",
+  "key_points": [
+   "Dynamic routing creates variable‑cardinality sparse metadata per query.",
+   "KV‑centric ownership groups rows by (query head, KV block) to improve reuse.",
+   "Runtime pipelining overlaps KV transfers and query gathers with Tensor Core compute.",
+   "Matches Top‑16 retention while delivering 1.20‑1.60× speedup and a RULER increase from 74.42 to 75.28."
+  ],
+  "why_it_matters": "Improves long‑context transformer inference efficiency, enabling faster generation for large language models without sacrificing quality, which is critical for real‑time applications and cost‑effective deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Mixture of Block Attention",
+   "dynamic routing",
+   "GPU acceleration",
+   "LLM inference"
+  ],
+  "importance": 3,
+  "id": "5e93d3e105c8487c",
+  "url": "https://huggingface.co/papers/2611.26268",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:30:11.856386+00:00"
+ },
+ {
+  "headline": "Twice-Told Critiques: Claim-Level Homogenization of Peer Review in the LLM Era",
+  "tldr": "Study finds increasing overlap in peer‑review critiques across major AI conferences and journals, especially when reviews are flagged as LLM‑generated.",
+  "key_points": [
+   "Critique overlap at ICLR rose from 12.0% (2026) to 21.3% (2027).",
+   "LLM‑flagged reviews show 3–5.4 point higher overlap than unflagged reviews.",
+   "Across venues (NeurIPS, ICML, F1000, PLOS) a consistent year‑on‑year increase in overlap is observed.",
+   "A third ICLR review adds fewer new problems (5.46 in 2027 vs 6.12 in 2026).",
+   "Results suggest declining diversity of feedback as LLM‑generated text becomes more common."
+  ],
+  "why_it_matters": "Reduced critique diversity may lower the effectiveness of peer review, risking weaker validation of AI research and enabling homogenized, potentially biased assessments as LLM‑assisted reviews proliferate.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "peer review",
+   "LLM",
+   "critique overlap",
+   "academic publishing"
+  ],
+  "importance": 3,
+  "id": "aaacea95c7721ed3",
+  "url": "https://huggingface.co/papers/2611.26286",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:29:59.962098+00:00"
+ },
+ {
+  "headline": "Language Models Can Rewrite Their Own Weights",
+  "tldr": "A 27B language model can diagnose its own failures and edit its own weights without gradients or additional training, improving accuracy on unseen tasks and even repairing corrupted copies.",
+  "key_points": [
+   "Self‑rewriting: the model edits its own weights based on its reasoning and test feedback.",
+   "Performance boost: a single edit adds 6.6 points accuracy on 490 unseen problems.",
+   "No extra inference cost: improvements persist in the weights, requiring only a few GPU hours.",
+   "Repair capability: the model can fix a damaged copy, raising accuracy from 7% to 70% on image benchmarks.",
+   "Scale dependence: only models 27B and larger exhibit effective self‑editing."
+  ],
+  "why_it_matters": "Enables continual improvement of deployed models without costly retraining, opening paths for on‑the‑fly updates, self‑repair, and more efficient AI deployment.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "self‑editing",
+   "weight editing",
+   "language models",
+   "inference"
+  ],
+  "importance": 4,
+  "id": "3976a6719c927750",
+  "url": "https://huggingface.co/papers/2611.21885",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "added": "2026-11-20T20:29:47.760248+00:00"
+ },
+ {
+  "headline": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
+  "tldr": "AltRA-Test is a bootstrap-based statistical test that evaluates whether LLMs can replace human annotators without shared annotators, showing LLMs pass in about half of tasks.",
+  "key_points": [
+   "Introduces AltRA-Test to handle non‑shared annotator settings",
+   "Uses resampled annotations and compares inter‑annotator agreement",
+   "Consistent test with asymptotic level α, needing ~100 items",
+   "LLMs pass the test in ~50% of real‑world setups",
+   "Helps researchers decide when LLM replacement is statistically justified"
+  ],
+  "why_it_matters": "Provides a rigorous, practical method for researchers and practitioners to validate replacing human annotators with LLMs, ensuring quality and cost‑effectiveness across diverse multimodal tasks.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "annotation",
+   "evaluation",
+   "LLM",
+   "statistics"
+  ],
+  "importance": 3,
+  "id": "399e786b295dfb8e",
+  "url": "https://huggingface.co/papers/2611.26073",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:29:35.829431+00:00"
+ },
+ {
+  "headline": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+  "tldr": "ZeroVLN introduces a slow‑fast navigation framework that lets a vision‑language model navigate without any domain‑specific fine‑tuning, using a semantic tool‑calling interface and closed‑loop RL to train both the model and an action expert.",
+  "key_points": [
+   "ZeroVLN avoids supervised fine‑tuning of the VLM brain on navigation data.",
+   "It uses a semantic tool‑calling interface to let the VLM issue movement commands in natural language.",
+   "A separate action expert executes these commands, and both components are jointly refined via reinforcement learning.",
+   "The method outperforms traditional SFT‑based VLN approaches on VLN‑CE benchmarks while preserving the VLM's general visual capabilities."
+  ],
+  "why_it_matters": "Eliminating domain‑specific fine‑tuning preserves the broad visual understanding of large VLMs, reduces the risk of catastrophic forgetting, and simplifies deployment of navigation agents across varied environments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language navigation",
+   "reinforcement learning",
+   "zero-shot",
+   "VLN-CE"
+  ],
+  "importance": 3,
+  "id": "279185ff611e2406",
+  "url": "https://huggingface.co/papers/2611.26414",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:29:23.862680+00:00"
+ },
+ {
+  "headline": "Training Vision Models for LLM-Driven Weight-Space Programming",
+  "tldr": "A new benchmark shows that training vision models with Edit-Ready Training (ERT) makes them far easier for large language models to edit directly in weight space, improving success on relabeling and error‑correction tasks.",
+  "key_points": [
+   "Benchmark of 5 LLMs editing CNNs and vision transformers on four vision datasets.",
+   "Over 2,600 edit processes evaluated for success, side effects, and accuracy loss.",
+   "Edit-Ready Training (ERT) rehearses closed‑form weight edits, boosting edit success versus standard training.",
+   "ERT achieves the highest mean scores for GPT‑6 Astra and Claude Opus 5.5 across all baselines.",
+   "The authors will release the LLM testing framework, tasks, trajectories, and scores."
+  ],
+  "why_it_matters": "Enabling reliable weight‑space programming lets LLMs directly modify model parameters, opening a path to rapid, targeted model updates without full retraining, which could accelerate deployment and maintenance of vision systems.",
+  "category": "paper",
+  "companies": [
+   "University of Ulm"
+  ],
+  "tags": [
+   "weight-space programming",
+   "vision models",
+   "LLM editing",
+   "edit-ready training"
+  ],
+  "importance": 3,
+  "id": "ffb0dde8d8967242",
+  "url": "https://huggingface.co/papers/2611.26408",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:29:11.783723+00:00"
+ },
+ {
+  "headline": "Probing the \"Conscious\" Mind: Selective Access and Global Workspace in Vision-Language Models",
+  "tldr": "The paper introduces MC‑Lens, a multimodal Jacobian lens for inspecting how vision‑language models represent and access concepts, showing selective access, cross‑modal alignment development, and shared patterns across model families.",
+  "key_points": [
+   "MC‑Lens maps intermediate VLM states to a shared semantic space, enabling readout of concept information across vision and language streams.",
+   "Experiments reveal that concepts become selectively accessible depending on the task and that this access influences downstream reasoning.",
+   "New J‑space metrics track cross‑modal concept alignment more clearly than traditional hidden‑state cosine similarity.",
+   "Selective access emerges later in training than basic concept accessibility, and similar patterns appear across different VLM architectures and sizes."
+  ],
+  "why_it_matters": "Understanding internal concept representations and selective access in VLMs helps improve interpretability, guide better cross‑modal alignment techniques, and provides an experimental framework for applying cognitive theories like Global Workspace Theory to artificial systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language",
+   "interpretability",
+   "global_workspace_theory",
+   "multimodal"
+  ],
+  "importance": 3,
+  "id": "eb4d2df7b7187bdc",
+  "url": "https://huggingface.co/papers/2611.26590",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:28:59.692408+00:00"
+ },
+ {
+  "headline": "HiUni: Harmonizing Understanding and Generation in Shared Visual Space",
+  "tldr": "HiUni shows that a single pretrained vision‑language model can be extended to handle both visual understanding and image generation by sharing the same backbone and adding a pixel diffusion head and a lightweight HiGate pathway.",
+  "key_points": [
+   "Reuses the same language‑aligned ViT and dense Transformer for both understanding and generation tasks.",
+   "Introduces a Pixel Diffusion Head for direct pixel‑space optimization.",
+   "Adds a lightweight HiGate pathway to inject fine‑grained spatial details near the output.",
+   "Achieves comparable understanding performance to the original VLM while delivering competitive image generation and editing results.",
+   "Demonstrates that extensive parameter sharing can simplify unified multimodal modeling."
+  ],
+  "why_it_matters": "A unified model reduces the need for separate architectures for perception and synthesis, lowering computational costs and simplifying deployment of multimodal AI systems that can both interpret and create visual content.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "vision-language",
+   "unified-model",
+   "pixel-diffusion"
+  ],
+  "importance": 3,
+  "id": "3b627af7791cfed8",
+  "url": "https://huggingface.co/papers/2611.26107",
+  "source": "HF Daily Papers",
+  "date": "2026-11-18T19:00:00.000Z",
+  "added": "2026-11-20T20:28:48.815729+00:00"
+ },
+ {
   "headline": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
   "tldr": "Depth Pro 2 introduces a single scalable network that delivers full‑resolution, metrically accurate depth maps for images and video, achieving sharpness, temporal consistency, and speed simultaneously.",
   "key_points": [
@@ -25042,1055 +26085,5 @@
   "source": "HF Daily Papers",
   "date": "2026-11-04T08:32:04.000Z",
   "added": "2026-11-07T21:57:49.992021+00:00"
- },
- {
-  "headline": "DRAP: Dynamics-Risk Adaptive Plasticity for Continual Learning in Physical AI",
-  "tldr": "DRAP is a replay‑free continual learning method that uses risk‑weighted gradient importance to protect critical model components, improving retention on sequential physical AI tasks.",
-  "key_points": [
-   "Estimates tensor importance via sample‑level action gradients weighted by trajectory‑amplification risk.",
-   "Uses the largest singular value of a local linear model as a Lyapunov‑inspired risk metric.",
-   "Scales AdamW learning rates per tensor based on accumulated importance to reduce plasticity where needed.",
-   "Evaluated on OpenVLA subnetwork across LIBERO Spatial, Object, and Goal suites, outperforming standard fine‑tuning and EWC."
-  ],
-  "why_it_matters": "Physical AI agents are highly sensitive to small policy errors that can cascade, leading to task failure. DRAP provides a principled way to preserve previously learned behaviors without replay, enabling more reliable and efficient continual adaptation in robotics and embodied AI systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "continual_learning",
-   "physical_ai",
-   "replay_free",
-   "robotics"
-  ],
-  "importance": 3,
-  "id": "5d1dfc99f5125549",
-  "url": "https://huggingface.co/papers/2611.05029",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T10:05:06.000Z",
-  "added": "2026-11-07T21:57:38.108403+00:00"
- },
- {
-  "headline": "UniRestorer++: Scalable Universal Image Restoration with Multi-Granularity Degradation Modeling",
-  "tldr": "UniRestorer++ introduces a scalable, multi-granularity framework for universal image restoration that improves performance across diverse degradations and scales log‑linearly with model size.",
-  "key_points": [
-   "Multi‑granularity degradation modeling with group‑specific experts",
-   "Routing based on degradation and granularity estimates for robustness",
-   "New CDD‑50 benchmark covering 50 degradation categories",
-   "Log‑linear PSNR scaling and strong out‑of‑distribution performance",
-   "State‑of‑the‑art results and zero‑shot/few‑shot generalization"
-  ],
-  "why_it_matters": "Provides a more reliable way to scale universal image restoration models, addressing saturation and error‑prone degradation estimation, which can benefit real‑world image enhancement applications and future research on adaptable vision models.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "image restoration",
-   "multi-granularity",
-   "scaling",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "fd2d5c6578d3db0f",
-  "url": "https://huggingface.co/papers/2611.06042",
-  "source": "HF Daily Papers",
-  "date": "2026-11-04T01:46:47.000Z",
-  "added": "2026-11-07T21:57:26.104130+00:00"
- },
- {
-  "headline": "Identically Trained Language Models Break on Different Jailbreaks",
-  "tldr": "Jailbreak susceptibility varies more with pretraining seed than data, with high correlation within the same run but lower across different seeds, revealing unique fingerprints for each pretraining run.",
-  "key_points": [
-   "Same data and safety training but different pretraining seeds cause lower jailbreak correlation (0.811 vs 0.984).",
-   "Across 25 data recipes, pretraining seed impacts jailbreak behavior more than data recipe.",
-   "Model fingerprints can identify the exact pretraining run using as few as 50 prompts with 98% accuracy.",
-   "Best attack templates transfer poorly across seeds (27% consistency) compared to post‑training changes (67%)."
-  ],
-  "why_it_matters": "Understanding that pretraining randomness heavily influences safety vulnerabilities helps researchers design more robust evaluation methods and highlights the need for diverse testing across multiple model instances.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "jailbreak",
-   "pretraining",
-   "model safety",
-   "fingerprinting"
-  ],
-  "importance": 3,
-  "id": "9e76e7a96c5c8ccd",
-  "url": "https://huggingface.co/papers/2610.34074",
-  "source": "HF Daily Papers",
-  "date": "2026-10-24T20:00:00.000Z",
-  "added": "2026-11-07T21:57:13.814730+00:00"
- },
- {
-  "headline": "GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats",
-  "tldr": "A transformer model, GaussianRenderFormer, directly renders images from 3D Gaussian splats without a rasterizer, achieving 38.08 dB PSNR on unseen objects.",
-  "key_points": [
-   "Each Gaussian is encoded as a token; a view‑dependent decoder attends to these tokens to produce pixels.",
-   "Trained on 26,820 Objaverse objects (≈20k Gaussians each) and evaluated on 300 unseen objects.",
-   "Achieves 38.08 dB PSNR versus 44.02 dB for rasterized pruned splats, with a 1.4 dB gap recoverable by providing projected footprints.",
-   "Code, models, and demo videos are publicly released."
-  ],
-  "why_it_matters": "Demonstrates that transformer architectures can learn end‑to‑end 3D rendering, opening possibilities for differentiable rendering pipelines without traditional rasterization.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "3D rendering",
-   "transformers",
-   "neural graphics",
-   "Gaussian splats"
-  ],
-  "importance": 3,
-  "id": "eba6af43a6452502",
-  "url": "https://huggingface.co/papers/2611.05593",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T15:26:14.000Z",
-  "added": "2026-11-07T21:57:02.209315+00:00"
- },
- {
-  "headline": "ICLR 2027 Reviews Discussion",
-  "tldr": "A Reddit thread invites users to share and discuss upcoming ICLR 2027 paper reviews, mentioning tools like papercopilot and paperScorer for fun predictions.",
-  "key_points": [
-   "ICLR 2027 reviews will be released soon.",
-   "Community members are encouraged to post their review results.",
-   "Tools such as papercopilot and paperScorer are highlighted for estimating acceptance odds.",
-   "The discussion is meant for amusement, not serious evaluation."
-  ],
-  "why_it_matters": "It reflects community engagement around peer review transparency and showcases emerging tools that aim to predict conference outcomes, highlighting the growing interest in meta‑research and review analytics.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "ICLR",
-   "reviews",
-   "community",
-   "prediction-tools"
-  ],
-  "importance": 2,
-  "id": "71c3ed6d17c184ba",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xo6yzo/iclr_2027_reviews_discussion_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-05T02:17:59+00:00",
-  "added": "2026-11-07T13:21:26.805984+00:00"
- },
- {
-  "headline": "Looking for Emergency Reviewers [R]",
-  "tldr": "The FABRIC Workshop at WACV 2027 seeks urgent reviewers with expertise in CV, multimodal learning, healthcare AI, etc., to submit reviews by Nov 6 noon (U.S. time).",
-  "key_points": [
-   "Tight review timeline for the FABRIC Workshop at WACV 2027",
-   "Looking for reviewers in computer vision, multimodal learning, physiological sensing, healthcare AI, affective computing",
-   "Reviews must be completed by November 6 noon (U.S. time)",
-   "Contact via DM or comment to volunteer"
-  ],
-  "why_it_matters": "Ensuring timely, high‑quality peer review is critical for the workshop’s success and for maintaining standards in emerging AI research areas.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "review",
-   "workshop",
-   "computer_vision",
-   "healthcare_ai"
-  ],
-  "importance": 1,
-  "id": "1ace1f6b1c63d335",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xoqca2/looking_for_emergency_reviewers_r/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-05T18:31:03+00:00",
-  "added": "2026-11-07T13:21:14.566581+00:00"
- },
- {
-  "headline": "The Ultimate MoE Training Handbook released by Hugging Face",
-  "tldr": "Hugging Face published a detailed handbook and code for training Mixture-of-Experts models with Megatron‑LM, including runbooks, code snippets, and insights from 800k GPU‑hours on the Alps cluster.",
-  "key_points": [
-   "Step‑by‑step Megatron‑LM runbook for MoE training, from hardware testing to baseline comparison",
-   "Deep dive into MoE internals: router, load balancing, expert layout, and training tricks",
-   "Includes scripts, 55 figure gallery, and serving/RL guidance; no GPU needed for later chapters",
-   "Insights derived from ~800,000 GH200 GPU‑hours on the Alps cluster at CSCS"
-  ],
-  "why_it_matters": "Provides practitioners with practical, battle‑tested guidance to adopt MoE architectures, lowering the barrier to scale models efficiently and accelerating research and product development in large‑scale AI.",
-  "category": "open_source",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "MixtureOfExperts",
-   "Megatron-LM",
-   "GPUTraining",
-   "AIHandbook"
-  ],
-  "importance": 3,
-  "id": "12eff376938bb6e7",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xorgq0/the_ultimate_moe_training_handbook_training/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-05T19:13:51+00:00",
-  "added": "2026-11-07T13:21:01.376812+00:00"
- },
- {
-  "headline": "CASP-DREAM TAP Challenge: Predict TCR + peptide-MHC activation on unseen peptides",
-  "tldr": "A new competition invites participants to train sequence models that predict T‑cell activation from TCR and peptide‑HLA sequences, using a benchmark of ~5,800 labeled pairs and ensuring test peptides are novel.",
-  "key_points": [
-   "Task: predict binary activation given TCR and peptide‑HLA amino‑acid sequences",
-   "Benchmark contains ~5,800 labeled TCR‑peptide pairs; test peptides are ≥4 edits away from any training peptide",
-   "Data sources include public VDJdb and proprietary Adaptive Biotechnologies datasets via Synapse",
-   "Evaluation metric is AUROC; registration is open on Synapse"
-  ],
-  "why_it_matters": "Accurate TCR‑peptide interaction prediction can accelerate immunotherapy design and vaccine development by enabling in‑silico screening of immune responses to novel antigens.",
-  "category": "other",
-  "companies": [
-   "Adaptive Biotechnologies"
-  ],
-  "tags": [
-   "immunology",
-   "sequence-models",
-   "benchmark",
-   "competition"
-  ],
-  "importance": 2,
-  "id": "6f30286f4672af8d",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpn4gp/caspdream_tap_challenge_tcr_peptidemhc_activation/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-06T20:22:25+00:00",
-  "added": "2026-11-07T13:20:49.473689+00:00"
- },
- {
-  "headline": "ML conference reviewers demand extra experiments, authors allege generic LLM‑generated feedback",
-  "tldr": "A researcher claims reviewer comments asking for additional experiments are generic, possibly copied from an LLM, and distract from core contributions.",
-  "key_points": [
-   "Reviewer requests for experiments A‑D are seen as minor and unrelated to the paper's main ideas.",
-   "The author ran the paper through ChatGPT and received identical feedback, suggesting automated review language.",
-   "Strict 10‑page limits make adding extra experiments burdensome, yet reviewers often ignore subsequent discussion.",
-   "The author plans to raise the issue confidentially with the conference Area Chair."
-  ],
-  "why_it_matters": "If reviewer feedback is increasingly generic or AI‑generated, it could undermine the rigor and fairness of peer review, affecting research quality and trust in conference proceedings.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "peer_review",
-   "conference",
-   "LLM",
-   "experiments"
-  ],
-  "importance": 2,
-  "id": "de6075fd1eb5bfb0",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpsj1p/ml_conferences_what_do_you_think_about_reviewer/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-07T00:17:47+00:00",
-  "added": "2026-11-07T13:20:37.449063+00:00"
- },
- {
-  "headline": "The most scathing reviewer 2 review I have ever read",
-  "tldr": "A reviewer harshly criticizes a paper on latent-state world models, calling it likely AI‑generated, poorly written, and lacking original contributions.",
-  "key_points": [
-   "Paper attempts to learn correlations in latent states for long‑horizon planning via a pessimistic objective.",
-   "Reviewer finds the presentation incomprehensible and the technical depth insufficient.",
-   "Claims the work may be fully AI‑generated and contains many undefined jargon terms.",
-   "No clear experimental tasks or results are provided."
-  ],
-  "why_it_matters": "Highlights the need for rigorous peer review and clear scientific communication to maintain research quality in AI.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "review",
-   "paper_quality",
-   "ML",
-   "research_integrity"
-  ],
-  "importance": 1,
-  "id": "c9cec80f14869cfa",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpu1eq/the_most_scathing_reviewer_2_review_i_have_ever/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-07T01:30:53+00:00",
-  "added": "2026-11-07T13:20:25.393835+00:00"
- },
- {
-  "headline": "Protesters break into Microsoft data center site in Amsterdam",
-  "tldr": "Around 100 protesters, organized by the Geef Tegengas group, broke into the construction site of Microsoft's new three‑tower data center on the outskirts of Amsterdam.",
-  "key_points": [
-   "Microsoft is building three 85‑meter data center towers near Amsterdam.",
-   "Approximately 100 demonstrators entered the construction site.",
-   "The protest was organized by the environmental activist group Geef Tegengas."
-  ],
-  "why_it_matters": "The action underscores growing public resistance to large‑scale data‑center projects due to environmental and community impact concerns, potentially affecting timelines and prompting stricter scrutiny of such developments.",
-  "category": "other",
-  "companies": [
-   "Microsoft"
-  ],
-  "tags": [
-   "protest",
-   "data_center",
-   "Amsterdam",
-   "environment"
-  ],
-  "importance": 2,
-  "id": "44766e97c42926fe",
-  "url": "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam",
-  "source": "The Verge AI",
-  "date": "2026-11-06T06:55:19-05:00",
-  "added": "2026-11-07T13:20:13.753926+00:00"
- },
- {
-  "headline": "Amazon will let you text Alexa your shopping list",
-  "tldr": "Amazon adds a texting feature to Alexa for Shopping, letting users send product descriptions or photos via SMS and receive purchase recommendations.",
-  "key_points": [
-   "Text-based interaction with Alexa for Shopping",
-   "Supports product descriptions and photos",
-   "AI searches Amazon catalog and replies with recommendations",
-   "Streamlines mobile shopping experience"
-  ],
-  "why_it_matters": "Makes shopping with Alexa more accessible on any phone, reduces friction by allowing simple text or image inputs, and showcases Amazon's multimodal AI capabilities in e‑commerce.",
-  "category": "product",
-  "companies": [
-   "Amazon"
-  ],
-  "tags": [
-   "voice assistant",
-   "shopping",
-   "AI",
-   "multimodal"
-  ],
-  "importance": 2,
-  "id": "35ab47bbc76cac8b",
-  "url": "https://www.theverge.com/tech/1028587/amazon-alexa-shopping-ai-text-orders",
-  "source": "The Verge AI",
-  "date": "2026-11-06T09:00:00-05:00",
-  "added": "2026-11-07T13:20:01.573518+00:00"
- },
- {
-  "headline": "How Akai and Moog are embracing vibe-coded mods",
-  "tldr": "inMusic will release toolkits and internal schematics for its music hardware (e.g., MPC, Sample) to enable community modding.",
-  "key_points": [
-   "inMusic owns Akai, Moog, Native Instruments and other music brands",
-   "CEO Jack O'Donnell announced plans to provide a modding toolbox",
-   "The toolkit will expose inner workings of devices like the MPC and Sample",
-   "Aims to foster a community-driven ecosystem for hardware modifications"
-  ],
-  "why_it_matters": "Opening up hardware designs encourages innovation, extends product lifespans, and builds a loyal user community, potentially setting a new standard for music tech manufacturers.",
-  "category": "product",
-  "companies": [
-   "inMusic",
-   "Akai",
-   "Moog",
-   "Native Instruments"
-  ],
-  "tags": [
-   "modding",
-   "music tech",
-   "community",
-   "hardware"
-  ],
-  "importance": 2,
-  "id": "c821c11af1c22210",
-  "url": "https://www.theverge.com/tech/1028720/vibe-coding-open-source-inmusic-akai",
-  "source": "The Verge AI",
-  "date": "2026-11-06T11:34:39-05:00",
-  "added": "2026-11-07T13:19:49.566353+00:00"
- },
- {
-  "headline": "Big Tech lost big in the 2026 election",
-  "tldr": "US voters overwhelmingly supported Democrats and expressed opposition to AI, signaling a political backlash against Big Tech.",
-  "key_points": [
-   "Millions voted for Democrats and against AI on Election Day 2026.",
-   "The result suggests a renewed political fight against Big Tech.",
-   "Future battles may focus on data center construction and regulation."
-  ],
-  "why_it_matters": "The election outcome indicates growing public and political resistance to AI and Big Tech influence, which could lead to stricter regulations and impact the industry's growth.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "election",
-   "big tech",
-   "AI regulation",
-   "data centers"
-  ],
-  "importance": 2,
-  "id": "22815b4f725ebdf4",
-  "url": "https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast",
-  "source": "The Verge AI",
-  "date": "2026-11-06T11:38:02-05:00",
-  "added": "2026-11-07T13:19:37.425494+00:00"
- },
- {
-  "headline": "AI is the new dating dealbreaker",
-  "tldr": "Users are increasingly filtering potential matches based on AI usage, making AI a factor in dating decisions.",
-  "key_points": [
-   "A 25‑year‑old analyst in San Francisco noticed a trend on Hinge.",
-   "Hinge includes a prompt asking about AI usage.",
-   "AI usage is becoming a criterion for match eligibility.",
-   "The shift reflects broader societal attitudes toward AI."
-  ],
-  "why_it_matters": "When AI becomes a social filter, it influences how people present themselves online and can affect adoption, privacy, and perception of AI technologies across a mainstream audience.",
-  "category": "other",
-  "companies": [
-   "Hinge"
-  ],
-  "tags": [
-   "AI",
-   "dating",
-   "social media",
-   "privacy"
-  ],
-  "importance": 2,
-  "id": "91f8d419f4fcff35",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
-  "source": "The Verge AI",
-  "date": "2026-11-06T12:00:00-05:00",
-  "added": "2026-11-07T13:19:25.544341+00:00"
- },
- {
-  "headline": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
-  "tldr": "Meta adds ‘spaces’ to Muse, letting users build app‑like experiences (shopping hub, school dashboard, music tracker, trivia game, etc.) directly within the AI assistant.",
-  "key_points": [
-   "New “spaces” feature lets users design custom, app‑like interfaces inside Muse.",
-   "Spaces can serve diverse purposes such as shopping, education, music tracking, and games.",
-   "Creation is done through Muse’s AI assistant, requiring no coding.",
-   "Designed to make the Muse app more versatile and personalized."
-  ],
-  "why_it_matters": "By enabling on‑the‑fly, AI‑generated micro‑apps, Meta expands Muse from a simple assistant to a customizable platform, potentially increasing user engagement and showcasing AI‑driven UI creation.",
-  "category": "product",
-  "companies": [
-   "Meta"
-  ],
-  "tags": [
-   "AI assistant",
-   "customization",
-   "app platform",
-   "Muse"
-  ],
-  "importance": 2,
-  "id": "52e0623fab799a21",
-  "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
-  "source": "The Verge AI",
-  "date": "2026-11-06T13:10:10-05:00",
-  "added": "2026-11-07T13:19:13.552915+00:00"
- },
- {
-  "headline": "All the latest updates on AI data centers",
-  "tldr": "AI data center expansion is booming, sparking global debates over power grid strain, utility costs, community impact, and environmental concerns.",
-  "key_points": [
-   "Massive new AI‑focused data centers are being built to meet growing compute demand.",
-   "Their high energy consumption is stressing power grids and raising utility costs.",
-   "Local communities and environmental groups are pushing back over noise, heat, and carbon footprints.",
-   "Policymakers are debating regulations and incentives to balance AI growth with sustainability."
-  ],
-  "why_it_matters": "The infrastructure that powers AI models determines the speed of AI adoption, influences energy policy, and affects the environment and local economies worldwide.",
-  "category": "policy",
-  "companies": [
-   "Amazon",
-   "Microsoft",
-   "Google",
-   "Meta"
-  ],
-  "tags": [
-   "AI infrastructure",
-   "data centers",
-   "energy",
-   "policy"
-  ],
-  "importance": 3,
-  "id": "c0641eb0de56205a",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
-  "source": "The Verge AI",
-  "date": "2026-11-06T15:02:22-05:00",
-  "added": "2026-11-07T13:19:01.407683+00:00"
- },
- {
-  "headline": "China reportedly recruited AI exec to spy on Jensen Huang",
-  "tldr": "China's Ministry of State Security allegedly recruited Megaspeed executive Alice Huang to gather intel on Nvidia's AI chips and influence chip availability for China.",
-  "key_points": [
-   "MSS enlisted Alice Huang, a Megaspeed executive, to spy on Nvidia CEO Jensen Huang.",
-   "Goal: obtain details on U.S. AI chip technology and push for advanced chips to be sold to China.",
-   "The report comes from The New York Times, highlighting state-sponsored tech espionage.",
-   "Implications for U.S.-China tech rivalry and supply chain security."
-  ],
-  "why_it_matters": "The alleged espionage underscores the strategic importance of AI hardware in the U.S.-China competition, raising concerns about intellectual property theft and the need for tighter export controls on advanced chips.",
-  "category": "policy",
-  "companies": [
-   "Nvidia",
-   "Megaspeed"
-  ],
-  "tags": [
-   "espionage",
-   "AI chips",
-   "China",
-   "Nvidia"
-  ],
-  "importance": 3,
-  "id": "1bc7ba2a28c4372d",
-  "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
-  "source": "The Verge AI",
-  "date": "2026-11-06T18:00:44-05:00",
-  "added": "2026-11-07T13:18:49.525156+00:00"
- },
- {
-  "headline": "Why a new report on Anthropic automating AI development is alarming researchers",
-  "tldr": "METR’s report finds Anthropic’s AI‑driven model‑building is accelerating, with model performance improving about twice as fast as a year ago, raising safety concerns.",
-  "key_points": [
-   "Anthropic uses AI to design and train its own next‑generation models.",
-   "Model performance gains have roughly doubled compared to the previous year.",
-   "The acceleration shows no sign of slowing, according to an 11‑week METR investigation.",
-   "Researchers warn the rapid self‑improvement could outpace safety oversight."
-  ],
-  "why_it_matters": "If AI systems can reliably accelerate their own development, the pace of capability gains may outstrip existing safety and governance frameworks, increasing the risk of unintended consequences.",
-  "category": "paper",
-  "companies": [
-   "Anthropic",
-   "METR"
-  ],
-  "tags": [
-   "AI safety",
-   "model automation",
-   "rapid scaling",
-   "research report"
-  ],
-  "importance": 4,
-  "id": "8879475e62b3793a",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
-  "source": "The Verge AI",
-  "date": "2026-11-07T07:30:00-05:00",
-  "added": "2026-11-07T13:18:37.912713+00:00"
- },
- {
-  "headline": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
-  "tldr": "The paper introduces a continuous-validation workflow to maintain agentic benchmarks, revealing that about 30% of Terminal-Bench 2.0 needed fixes, leading to a 10‑point accuracy boost and rank changes in the leaderboard.",
-  "key_points": [
-   "Benchmark maintenance debt arises as models outpace static test suites.",
-   "A continuous-validation workflow combines community reports, automated checks, and human repairs.",
-   "Applying it to Terminal-Bench 2.0 uncovered issues in ~30% of tasks, resulting in Terminal-Bench 2.1.",
-   "Repairs improved accuracy by >10 pp and altered leaderboard positions, while rankings stayed highly correlated.",
-   "Resource budgets (e.g., time limits) significantly affect agent performance and must be part of benchmark specs."
-  ],
-  "why_it_matters": "Reliable evaluation of coding agents is crucial for measuring real‑world impact of LLMs; without continuous benchmark upkeep, reported scores can mislead developers and stakeholders about model capabilities.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "benchmarking",
-   "LLM agents",
-   "evaluation",
-   "continuous validation"
-  ],
-  "importance": 3,
-  "id": "f1a34f90549443b4",
-  "url": "https://arxiv.org/abs/2611.08417v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:18:39Z",
-  "added": "2026-11-07T13:18:25.597100+00:00"
- },
- {
-  "headline": "On the limitations of molecular representations",
-  "tldr": "The paper systematically evaluates molecular fingerprints and learned embeddings, finding that current state‑of‑the‑art embeddings do not outperform classic fingerprints in capturing graph structure, 3D shape, or ADMET similarity, and that many molecules in large databases have non‑unique fingerprint representations.",
-  "key_points": [
-   "State‑of‑the‑art molecular embeddings fail to capture graph, 3D, or ADMET similarity better than classic fingerprints",
-   "Classic fingerprints also have major limitations, with 225 M–4 B non‑unique entries in the 10.8 B Enamine REAL database",
-   "Evaluation of representations is often limited to narrow downstream benchmarks, missing broader quality aspects"
-  ],
-  "why_it_matters": "Understanding the shortcomings of current molecular representations is crucial for drug discovery pipelines, virtual screening efficiency, and guiding future research toward more robust encodings of small molecules.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "cheminformatics",
-   "molecular embeddings",
-   "fingerprints",
-   "virtual screening"
-  ],
-  "importance": 3,
-  "id": "fd55b9f63c698394",
-  "url": "https://arxiv.org/abs/2611.08420v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:19:19Z",
-  "added": "2026-11-07T13:18:13.481418+00:00"
- },
- {
-  "headline": "The Power of Meta Access in the Software of the Future — Demonstrated on LLM Chat UIs and Chat AI",
-  "tldr": "The paper proposes giving LLM assistants structured, permissioned access to the UI and application state (meta access), enabling them to navigate, organize, and control the entire workspace from a chat interface while highlighting new security and trust challenges.",
-  "key_points": [
-   "Defines a ladder of meta‑access levels from simple tutoring to full orchestration of UI state.",
-   "Shows a prototype (Meta Chat) that can read settings, summaries, and messages, suggest personas, and perform reversible UI changes.",
-   "Highlights risks such as grounding errors, privacy leaks, prompt injection, and the need for a separate control‑plane.",
-   "Argues that future AI‑era interfaces should expose a structured, permissioned metamodel similar to a debugger."
-  ],
-  "why_it_matters": "Enabling LLMs to safely manipulate the broader software environment could turn chat from a single‑conversation view into a universal control layer, expanding agentic capabilities while preserving user oversight.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "meta-access",
-   "LLM",
-   "UI",
-   "agentic"
-  ],
-  "importance": 3,
-  "id": "d9642532b6db65c8",
-  "url": "https://arxiv.org/abs/2611.08428v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:22:24Z",
-  "added": "2026-11-07T13:18:01.515924+00:00"
- },
- {
-  "headline": "Aina’s smart ring has a screen, a joystick, and a mic so you can talk to AI agents",
-  "tldr": "Aina introduced a smart ring equipped with a display, joystick, and microphone that lets users interact with AI agents, take calls, and dictate notes on a Mac.",
-  "key_points": [
-   "Ring includes a screen, joystick, and built‑in mic",
-   "Enables voice interaction with AI agents",
-   "Can take phone calls and dictate notes on a Mac"
-  ],
-  "why_it_matters": "Brings conversational AI to a discreet, wearable form factor, expanding how users can access AI assistance on the go.",
-  "category": "product",
-  "companies": [
-   "Aina"
-  ],
-  "tags": [
-   "wearable",
-   "AI agents",
-   "smart ring",
-   "voice interface"
-  ],
-  "importance": 2,
-  "id": "0f2052ea73f7a4c1",
-  "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
-  "source": "TechCrunch AI",
-  "date": "Thu, 05 Nov 2026 14:42:00 +0000",
-  "added": "2026-11-07T13:17:49.459850+00:00"
- },
- {
-  "headline": "Axiom Math wants to keep AI slop out of mathematics",
-  "tldr": "Axiom Math’s AI agents have formally verified the Stacks Project, aiming to prevent unchecked AI-generated proofs in mathematics.",
-  "key_points": [
-   "AI is generating many unverified mathematical proofs",
-   "Axiom Math uses AI agents for formal verification",
-   "The startup successfully verified the extensive Stacks Project library"
-  ],
-  "why_it_matters": "Ensuring the correctness of AI-generated mathematical results protects the integrity of research and prevents the propagation of errors in a field that relies on rigorous proof.",
-  "category": "product",
-  "companies": [
-   "Axiom Math"
-  ],
-  "tags": [
-   "formal verification",
-   "mathematics",
-   "AI safety",
-   "research tools"
-  ],
-  "importance": 2,
-  "id": "c2788911aa715e52",
-  "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
-  "source": "TechCrunch AI",
-  "date": "Thu, 05 Nov 2026 16:16:45 +0000",
-  "added": "2026-11-07T13:17:37.360121+00:00"
- },
- {
-  "headline": "AutoSynthData: Generating Training Data for Enterprise Agents",
-  "tldr": "Hugging Face introduces AutoSynthData, a tool that automatically creates synthetic training data tailored for enterprise AI agents.",
-  "key_points": [
-   "AutoSynthData generates synthetic training data",
-   "Optimized for enterprise AI agents",
-   "Automates data creation workflow"
-  ],
-  "why_it_matters": "Synthetic data reduces the cost and time of collecting real-world datasets, enabling faster development and deployment of enterprise AI agents.",
-  "category": "product",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "synthetic data",
-   "training data",
-   "enterprise AI",
-   "agents"
-  ],
-  "importance": 2,
-  "id": "a885ed61f54a415a",
-  "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
-  "source": "Hugging Face Blog",
-  "date": "Fri, 02 Oct 2026 04:01:31 GMT",
-  "added": "2026-11-07T13:17:25.324926+00:00"
- },
- {
-  "headline": "Introducing Falcon ASR",
-  "tldr": "Hugging Face launches Falcon ASR, a new speech‑to‑text model.",
-  "key_points": [
-   "Falcon ASR announced",
-   "Speech‑to‑text model from Hugging Face",
-   "Open‑source release",
-   "Supports multiple languages"
-  ],
-  "why_it_matters": "Provides an accessible, open‑source speech recognition solution, lowering barriers for developers to add voice capabilities to applications.",
-  "category": "product",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "ASR",
-   "speech recognition",
-   "Falcon",
-   "open_source"
-  ],
-  "importance": 2,
-  "id": "91ed3eb235f3237f",
-  "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
-  "source": "Hugging Face Blog",
-  "date": "Wed, 07 Oct 2026 13:21:03 GMT",
-  "added": "2026-11-07T13:17:13.466397+00:00"
- },
- {
-  "headline": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-  "tldr": "Hugging Face introduces the LFM2.5-24B-A2B model for fast, private on-device agents.",
-  "key_points": [
-   "24B-parameter LFM2.5 model optimized for on-device inference",
-   "Focus on privacy by keeping data local",
-   "Designed for low-latency, high-speed agent execution"
-  ],
-  "why_it_matters": "Enables powerful AI agents to run locally on consumer hardware, reducing reliance on cloud services and enhancing data privacy.",
-  "category": "model_release",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "on-device",
-   "privacy",
-   "agents",
-   "LFM2.5"
-  ],
-  "importance": 2,
-  "id": "550c4c02e9ff21a9",
-  "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-  "source": "Hugging Face Blog",
-  "date": "Tue, 13 Oct 2026 17:05:48 GMT",
-  "added": "2026-11-07T13:17:01.458013+00:00"
- },
- {
-  "headline": "Welcome FLUX.3 Image Klein in Diffusers",
-  "tldr": "Hugging Face adds the FLUX.3 image model to its Diffusers library.",
-  "key_points": [
-   "Integration of FLUX.3 image model",
-   "Available through Diffusers library",
-   "Supports image generation tasks"
-  ],
-  "why_it_matters": "Brings a new image generation model to a popular open‑source toolkit, making it easier for developers to experiment with and deploy FLUX.3.",
-  "category": "model_release",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "image generation",
-   "diffusers",
-   "flux.3",
-   "AI models"
-  ],
-  "importance": 2,
-  "id": "3733c75a28bf26df",
-  "url": "https://huggingface.co/blog/flux-3",
-  "source": "Hugging Face Blog",
-  "date": "Thu, 15 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-07T13:16:49.608136+00:00"
- },
- {
-  "headline": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
-  "tldr": "Hugging Face announces simplified use of TorchNeuron to run its models on AWS Trainium chips.",
-  "key_points": [
-   "TorchNeuron integration with Hugging Face models",
-   "Optimized execution on AWS Trainium hardware",
-   "Simplified deployment workflow",
-   "Improved performance for inference tasks"
-  ],
-  "why_it_matters": "Makes high‑performance inference on AWS's custom Trainium chips more accessible, lowering barriers for developers to leverage specialized AI hardware with Hugging Face models.",
-  "category": "product",
-  "companies": [
-   "Hugging Face",
-   "Amazon Web Services"
-  ],
-  "tags": [
-   "torchneuron",
-   "trainium",
-   "huggingface",
-   "aws"
-  ],
-  "importance": 2,
-  "id": "9dbc0d55ff9123c6",
-  "url": "https://huggingface.co/blog/hf-torchneuron",
-  "source": "Hugging Face Blog",
-  "date": "Mon, 19 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-07T13:16:37.420097+00:00"
- },
- {
-  "headline": "MPS in PyTorch 2.15",
-  "tldr": "PyTorch 2.15 adds support for Apple’s Metal Performance Shaders (MPS) backend.",
-  "key_points": [
-   "Introduces MPS backend in PyTorch 2.15",
-   "Enables GPU acceleration on Apple silicon",
-   "Improves performance for Mac users"
-  ],
-  "why_it_matters": "Brings native GPU acceleration to PyTorch on macOS, expanding hardware support and speeding up model training and inference for developers using Apple devices.",
-  "category": "open_source",
-  "companies": [
-   "Meta",
-   "Hugging Face"
-  ],
-  "tags": [
-   "PyTorch",
-   "MPS",
-   "Apple",
-   "GPU"
-  ],
-  "importance": 2,
-  "id": "3eb18e5ff7f2a0ef",
-  "url": "https://huggingface.co/blog/mps-pytorch-2-15",
-  "source": "Hugging Face Blog",
-  "date": "Tue, 20 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-07T13:16:25.924670+00:00"
- },
- {
-  "headline": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
-  "tldr": "Hugging Face celebrates the first year of AnyLanguageModel 1.0, enabling on‑device language models to run locally on iOS, iPadOS, and macOS.",
-  "key_points": [
-   "AnyLanguageModel 1.0 supports running large language models directly on Apple devices",
-   "Provides privacy‑preserving inference without cloud dependence",
-   "Optimized for Apple silicon and integrates with Core ML",
-   "One year of community contributions and model improvements"
-  ],
-  "why_it_matters": "Local AI on consumer devices boosts privacy, reduces latency, and expands AI capabilities to offline scenarios, showcasing the viability of on‑device large language models.",
-  "category": "product",
-  "companies": [
-   "Hugging Face",
-   "Apple"
-  ],
-  "tags": [
-   "local-models",
-   "Apple",
-   "AnyLanguageModel",
-   "on-device AI"
-  ],
-  "importance": 2,
-  "id": "2596ff929aeef557",
-  "url": "https://huggingface.co/blog/anylanguagemodel-1-0",
-  "source": "Hugging Face Blog",
-  "date": "Tue, 20 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-07T13:16:13.437819+00:00"
- },
- {
-  "headline": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
-  "tldr": "Hugging Face releases TorchTPU, adding native TPU support for PyTorch users.",
-  "key_points": [
-   "Introduces TorchTPU library",
-   "Provides native TPU integration for PyTorch",
-   "Simplifies running models on TPUs",
-   "Open‑source release on Hugging Face Hub"
-  ],
-  "why_it_matters": "Native TPU support lowers the barrier for developers to accelerate PyTorch models on Google Cloud TPUs, speeding up training and inference without extensive custom code.",
-  "category": "open_source",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "TPU",
-   "TorchTPU",
-   "PyTorch",
-   "integration"
-  ],
-  "importance": 2,
-  "id": "84cd8d44e9825e73",
-  "url": "https://huggingface.co/blog/hf-torchtpu",
-  "source": "Hugging Face Blog",
-  "date": "Tue, 20 Oct 2026 00:00:00 GMT",
-  "added": "2026-11-07T13:16:01.402358+00:00"
- },
- {
-  "headline": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium",
-  "tldr": "Hugging Face introduces a guide for using TorchNeuron to profile deep‑learning workloads on AWS Trainium chips.",
-  "key_points": [
-   "Shows how to collect system‑level metrics with TorchNeuron on Trainium",
-   "Provides step‑by‑step commands for profiling CPU, GPU, and accelerator usage",
-   "Helps identify performance bottlenecks in training pipelines"
-  ],
-  "why_it_matters": "Understanding performance on Trainium enables developers to optimize models for cost‑effective, high‑throughput training on AWS.",
-  "category": "product",
-  "companies": [
-   "Hugging Face",
-   "Amazon Web Services"
-  ],
-  "tags": [
-   "TorchNeuron",
-   "AWS Trainium",
-   "profiling",
-   "performance"
-  ],
-  "importance": 2,
-  "id": "f9b499debdda31c0",
-  "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-  "source": "Hugging Face Blog",
-  "date": "Wed, 21 Oct 2026 16:04:43 GMT",
-  "added": "2026-11-07T13:15:49.402115+00:00"
- },
- {
-  "headline": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-  "tldr": "Hugging Face introduces ThinkingBox, a framework that converts database grading signals into reinforcement‑learning rewards for fine‑tuning agents after training.",
-  "key_points": [
-   "Transforms database grading metrics into RL reward signals",
-   "Enables post‑training adaptation of agents without retraining from scratch",
-   "Integrates with existing Hugging Face pipelines via the ThinkingBox library"
-  ],
-  "why_it_matters": "Provides a practical way to improve model behavior using real‑world evaluation data, lowering the cost and time of iterative model updates.",
-  "category": "product",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "reinforcement_learning",
-   "database_grading",
-   "post_training",
-   "ThinkingBox"
-  ],
-  "importance": 2,
-  "id": "95eb6975ad245049",
-  "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-  "source": "Hugging Face Blog",
-  "date": "Thu, 22 Oct 2026 22:24:34 GMT",
-  "added": "2026-11-07T13:15:37.327299+00:00"
- },
- {
-  "headline": "Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors",
-  "tldr": "Accuracy alone can't gauge restart monitors; a decision-value framework shows when restarts help or hurt, using statistical audits on agent traces.",
-  "key_points": [
-   "Fixed 90% monitor accuracy can cause outcomes ranging from -5% to +35% success depending on residual budget success probability.",
-   "Introduces decision-sufficiency criterion to identify useful progress representations for optimal restart decisions.",
-   "Presents a finite-sample, model‑free decision audit using binomial intervals to certify restart vs. continue actions.",
-   "Empirical study on 194 model runs shows mixed results: small gains, large losses, and no certified improvements."
-  ],
-  "why_it_matters": "Provides a rigorous way to evaluate AI agent monitors beyond simple classification metrics, helping developers design safer and more effective restart strategies.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "monitoring",
-   "restart",
-   "decision theory",
-   "AI agents"
-  ],
-  "importance": 2,
-  "id": "0fa4d4e05ba6ceeb",
-  "url": "https://huggingface.co/papers/2610.36544",
-  "source": "HF Daily Papers",
-  "date": "2026-10-26T20:00:00.000Z",
-  "added": "2026-11-07T13:15:25.559108+00:00"
- },
- {
-  "headline": "TaoMate-HD: Progressive-Resolution Autoregressive Audio-Video Generation",
-  "tldr": "TaoMate-HD is an autoregressive model that streams high‑resolution audio‑video by progressively denoising chunks, achieving up to 3.0× speedup and reducing error rates.",
-  "key_points": [
-   "Two low‑resolution denoising steps create coarse video, followed by a high‑resolution refinement per chunk",
-   "History of audiovisual predictions is passed between chunks to maintain continuity across text updates",
-   "Continuation training with asymmetric text conditioning cuts character error rate by 11.18 points",
-   "Stage‑parallel deployment yields an additional 1.9× speedup over serial generation"
-  ],
-  "why_it_matters": "Enables real‑time generation of long, high‑fidelity digital‑human videos, lowering compute costs and improving speech continuity for interactive AI avatars.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "audio-video",
-   "streaming",
-   "autoregressive",
-   "high-resolution"
-  ],
-  "importance": 3,
-  "id": "2454403fce88b9b9",
-  "url": "https://huggingface.co/papers/2611.03394",
-  "source": "HF Daily Papers",
-  "date": "2026-11-01T19:00:00.000Z",
-  "added": "2026-11-07T13:15:13.357104+00:00"
- },
- {
-  "headline": "Information Games: Strategic Crowding and Firm Repositioning in Language-Model Space",
-  "tldr": "The paper models how firms adjust capacity in response to cash‑flow shocks, using LLM‑derived document embeddings to track competitive dynamics in news and analyst reports.",
-  "key_points": [
-   "Firms' capacity choices affect future discounted free cash flows for competitors and investors.",
-   "LLM embeddings turn news articles into dense vectors that capture firm dissimilarity over time.",
-   "A novel sandwich estimator and multi‑agent simulation quantify the magnitude of capacity adjustments.",
-   "Findings are validated on Nasdaq‑listed company reports from 2018‑2022."
-  ],
-  "why_it_matters": "Understanding strategic capacity shifts helps investors and analysts anticipate competitive moves, while the use of LLM embeddings demonstrates a new way to quantify firm‑level information flow in financial markets.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "capacity",
-   "free cash flow",
-   "language models",
-   "simulation"
-  ],
-  "importance": 2,
-  "id": "7b53ba42dae3a88d",
-  "url": "https://huggingface.co/papers/2609.37820",
-  "source": "HF Daily Papers",
-  "date": "2026-11-04T19:00:00.000Z",
-  "added": "2026-11-07T13:15:01.726873+00:00"
- },
- {
-  "headline": "OpenFrontiers: Open Research Problems Corpus and Benchmark for Scientific Rediscovery",
-  "tldr": "A new cross‑disciplinary dataset of 12,151 open research problems and a formal benchmark (HQ‑50) for evaluating LLMs on rediscovering solved scientific results.",
-  "key_points": [
-   "Contains a structured corpus of 12,151 open research problems across disciplines.",
-   "Includes a retrospective benchmark of 200 problems (110 solved in 2026, 90 still open) with Lean 4 formal statements.",
-   "Evaluates seven LLM agents on a high‑quality subset (HQ‑50) under closed‑book, frozen‑retrieval, and live‑web conditions.",
-   "Finds closed‑book rediscovery rare (≤7/40 solved problems) and live‑web success largely due to retrieving existing solutions.",
-   "Dataset and benchmark released on Hugging Face for community use."
-  ],
-  "why_it_matters": "Provides the first large, structured resource to systematically test LLMs on genuine research‑level problem solving, enabling measurable progress toward AI‑driven scientific discovery.",
-  "category": "paper",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "benchmark",
-   "LLM",
-   "research",
-   "open_science"
-  ],
-  "importance": 3,
-  "id": "b7d2996dc9216394",
-  "url": "https://huggingface.co/papers/2610.37739",
-  "source": "HF Daily Papers",
-  "date": "2026-10-26T20:00:00.000Z",
-  "added": "2026-11-07T13:14:49.731085+00:00"
- },
- {
-  "headline": "Speculative Listening speeds up chunk-interleaved full-duplex speech models",
-  "tldr": "A training-free framework called Speculative Listening uses idle compute to draft future audio chunks, cutting decoding delay by up to 73% and speeding speak chunks 2.6‑2.8x and tool‑call chunks up to 23.4x.",
-  "key_points": [
-   "Idle compute is used to draft next audio chunk under silence",
-   "95.3% of chunks unchanged by actual audio; 88% of changes start at first token",
-   "Cross‑chunk hypothesis pool verifies drafts when real audio arrives",
-   "Speeds up speak chunks 2.6‑2.8x, tool‑call chunks up to 23.4x",
-   "Reduces response start delay by 73% (to 74‑241 ms)"
-  ],
-  "why_it_matters": "Reduces latency in real‑time speech assistants, bringing AI turn‑taking closer to human conversational speed and improving user experience for voice‑first applications.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "speech",
-   "real-time",
-   "speculative decoding",
-   "latency"
-  ],
-  "importance": 3,
-  "id": "701da9d9a64029ae",
-  "url": "https://huggingface.co/papers/2611.06982",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T19:00:00.000Z",
-  "added": "2026-11-07T13:14:37.353802+00:00"
- },
- {
-  "headline": "From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence",
-  "tldr": "The paper proposes AI‑augmented human intelligence (AHI) and introduces the concept of a lifelong, proactive cognitive symbiont that continuously assists and learns from an individual.",
-  "key_points": [
-   "Defines AI‑augmented human intelligence (AHI) as the machine’s ability to extend a person’s cognition.",
-   "Introduces the \"cognitive symbiont\" – a low‑friction, private companion that senses, remembers, and acts alongside the user.",
-   "Outlines a symbiosis loop: sensing, keeping, understanding, living alongside, acting for, thinking with, and growing.",
-   "Highlights new governance risks such as covert assistance and societal pressure to adopt symbionts."
-  ],
-  "why_it_matters": "Shifts AI focus from autonomous agents to tools that amplify human intellect, opening new research directions, product opportunities, and policy considerations for responsible human‑centric AI.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "AI-augmented intelligence",
-   "cognitive symbiont",
-   "human-AI interaction"
-  ],
-  "importance": 3,
-  "id": "874635804694b8fb",
-  "url": "https://huggingface.co/papers/2611.05376",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T13:59:52.000Z",
-  "added": "2026-11-07T13:14:25.786021+00:00"
  }
 ]
