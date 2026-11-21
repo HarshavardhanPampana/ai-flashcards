@@ -1,5 +1,644 @@
 [
  {
+  "headline": "A Complete Geometric Message-Passing Architecture for Point Clouds",
+  "tldr": "The paper introduces a simple equivariant message-passing network for 3D point clouds that is provably complete, matching the expressive power of more complex methods without high computational cost.",
+  "key_points": [
+   "Proposes a novel equivariant message-passing architecture for point clouds.",
+   "Proves the architecture is complete, i.e., can distinguish any non‑symmetrical inputs.",
+   "Demonstrates experimentally that it separates cases where distance‑based methods fail.",
+   "Shows high‑order equivariant features may be unnecessary for expressivity.",
+   "Provides initial completeness proof for a modified SEGNN variant."
+  ],
+  "why_it_matters": "Completeness ensures that the model can fully capture geometric differences in 3D data, leading to more reliable perception in robotics, AR/VR, and autonomous systems without incurring the heavy computational overhead of prior complete methods.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "point clouds",
+   "message passing",
+   "equivariance",
+   "expressivity"
+  ],
+  "importance": 3,
+  "id": "2c247ee58e84676a",
+  "url": "https://arxiv.org/abs/2611.26384v1",
+  "source": "arXiv",
+  "date": "2026-11-19T16:40:26Z",
+  "added": "2026-11-21T19:29:27.422339+00:00"
+ },
+ {
+  "headline": "Democratizing Cross-Project Knowledge for Transforming Water Governance and Climate Resilience: an Agentic AI Ecosystem",
+  "tldr": "The paper presents an Agentic AI Ecosystem that consolidates EU project documents into a domain-aware knowledge base and uses a Retrieval-Augmented Generation pipeline with domain-specific embeddings to improve cross‑project knowledge retrieval for water governance and climate resilience.",
+  "key_points": [
+   "Aggregates heterogeneous EU project documentation into a hierarchical, metadata‑rich knowledge base.",
+   "Employs two fine‑tuned domain embeddings (water, climate) and a ReAct‑style controller for adaptive retrieval.",
+   "Achieves a 26.7% relative improvement in Mean Reciprocal Rank over single‑domain baselines.",
+   "Supports evidence‑based decision‑making for climate‑resilient water governance."
+  ],
+  "why_it_matters": "Improved retrieval of relevant evidence across multiple EU projects enables policymakers and practitioners to make more informed, coordinated decisions on water management and climate adaptation, addressing fragmentation of knowledge that hampers effective governance.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AI",
+   "water governance",
+   "climate resilience",
+   "retrieval-augmented generation"
+  ],
+  "importance": 3,
+  "id": "c4eb85779ddc6f62",
+  "url": "https://arxiv.org/abs/2611.26398v1",
+  "source": "arXiv",
+  "date": "2026-11-19T16:49:04Z",
+  "added": "2026-11-21T19:29:15.460355+00:00"
+ },
+ {
+  "headline": "How to Effectively Manage the Energy in Residential Systems: Development and Comparison of Methods",
+  "tldr": "The thesis introduces TreeC, a machine‑learning method for residential energy management, compares it with rule‑based, optimization, and reinforcement‑learning approaches, and validates findings with a real‑world experiment in Belgian homes.",
+  "key_points": [
+   "TreeC achieves competitive performance with model predictive control and reinforcement learning while remaining interpretable.",
+   "Real‑world tests show both TreeC and MPC underperform simulations due to training data gaps and unreliable real‑time inputs.",
+   "Energy‑management algorithms can cut costs for poorly insulated homes, EV chargers, and PV systems, but savings currently do not offset implementation costs.",
+   "Three simulation cases and one hardware experiment illustrate trade‑offs between simple rules, optimization, and ML methods."
+  ],
+  "why_it_matters": "Understanding and improving residential energy management is crucial for reducing reliance on fossil fuels, lowering household electricity costs, and increasing trust in AI‑driven control systems as the grid integrates more renewable sources.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "energy_management",
+   "machine_learning",
+   "residential",
+   "optimization"
+  ],
+  "importance": 2,
+  "id": "b50f072970c9d0fb",
+  "url": "https://arxiv.org/abs/2611.26412v1",
+  "source": "arXiv",
+  "date": "2026-11-19T16:59:58Z",
+  "added": "2026-11-21T19:29:03.410242+00:00"
+ },
+ {
+  "headline": "Awaken-HI: Scaling Humanoid Intelligence with Whole-Body Human Experience",
+  "tldr": "Awaken-HI is a vision‑language‑action model trained on 50,000 h of paired egocentric video and whole‑body motion, achieving 93.75% success on real‑robot loco‑manipulation tasks and demonstrating scaling benefits from human data.",
+  "key_points": [
+   "Introduces Awaken‑Human dataset: ~50k h of egocentric stereo video synced with full‑body motion covering 100+ skills.",
+   "Awaken‑HI jointly predicts human motion and robot actions via a shared action expert, improving skill transfer.",
+   "Empirical scaling law shows more human pre‑training data lowers robot action error and raises task success.",
+   "Achieves 93.75% mean success across eight real‑robot tasks, outperforming prior baselines (GR00T N1.7, π₀.₅).",
+   "Policy generalizes to unseen objects and new object‑destination pairings."
+  ],
+  "why_it_matters": "Providing large‑scale, synchronized human motion data enables more reliable transfer of complex loco‑manipulation skills to humanoid robots, a key step toward deploying robots in everyday home and workplace settings.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "humanoid robotics",
+   "vision-language-action",
+   "large-scale dataset",
+   "skill transfer"
+  ],
+  "importance": 3,
+  "id": "21d7cc6940b806a8",
+  "url": "https://arxiv.org/abs/2611.26420v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:03:03Z",
+  "added": "2026-11-21T19:28:51.409843+00:00"
+ },
+ {
+  "headline": "Learning to Defer under Expert Drift",
+  "tldr": "Introduces EDA-L2D, a learning-to-defer framework that adapts to temporal changes in human expert reliability using a sequence model, improving decision allocation across image classification, medical diagnosis, and hate speech detection tasks.",
+  "key_points": [
+   "Models expert reliability drift with a history-aware deferral head.",
+   "Uses sequence modeling to anticipate performance fluctuations.",
+   "Demonstrates superior adaptation over prior L2D methods on three domains.",
+   "Provides code for reproducibility."
+  ],
+  "why_it_matters": "Accounting for dynamic human performance makes AI–human collaborative systems safer and more effective, especially in high‑stakes areas where expert reliability can vary over time.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "learning-to-defer",
+   "expert drift",
+   "human-AI collaboration",
+   "sequence modeling"
+  ],
+  "importance": 2,
+  "id": "8fbfe481f57cca60",
+  "url": "https://arxiv.org/abs/2611.26440v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:13:58Z",
+  "added": "2026-11-21T19:28:39.148973+00:00"
+ },
+ {
+  "headline": "Should Belgians Install an Advanced Energy Management System in Their Electrified Dwelling?",
+  "tldr": "Simulation of 500 Belgian homes shows advanced EMS (MPC and TreeC) can save up to €177 per year versus a rule‑based controller, but savings are modest compared to system costs, limiting broad adoption.",
+  "key_points": [
+   "Simulated 500 dwellings with heat pumps, electric water boilers, EVs, and PVs.",
+   "Advanced EMSs (MPC, TreeC) outperformed rule‑based control, saving €82‑€177 annually per home.",
+   "TreeC achieved higher EV charge completion and smoother aggregate load than MPC.",
+   "Cost of EMS hardware (€280‑€680) and subscription (€0‑€360/yr) outweighs modest savings.",
+   "Data and code are publicly released for reproducibility."
+  ],
+  "why_it_matters": "Understanding the economic viability of smart energy management is crucial for policymakers and utilities aiming to promote residential electrification and grid stability in Belgium and similar markets.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "energy_management",
+   "Belgium",
+   "electrification",
+   "MPC"
+  ],
+  "importance": 2,
+  "id": "88c8320a5431f61c",
+  "url": "https://arxiv.org/abs/2611.26441v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:14:13Z",
+  "added": "2026-11-21T19:28:27.233123+00:00"
+ },
+ {
+  "headline": "Scaling classical hardware for accurate real-time quantum error correction",
+  "tldr": "The paper introduces Rapids, a streaming neural decoder co‑designed with an FPGA that decodes surface‑code syndromes in under a microsecond with 240× lower logical error rate than existing hardware decoders, and scales across multiple FPGAs or custom silicon.",
+  "key_points": [
+   "Rapids combines a neural network with FPGA-friendly integer arithmetic for ultra‑fast decoding.",
+   "Achieves sub‑microsecond latency for distance‑19 surface code, meeting superconducting processor requirements.",
+   "Logical error rate is 240× lower than prior real‑time hardware decoders; 16× better on other codes.",
+   "Design is scalable across multiple FPGAs or custom ASICs, enabling larger code distances.",
+   "Demonstrates that classical hardware can be a scalable resource for fault‑tolerant quantum computing."
+  ],
+  "why_it_matters": "Fast, accurate decoding is a bottleneck for fault‑tolerant quantum computers; reducing latency and error rates without excessive qubit overhead brings practical quantum error correction closer to reality.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "quantum computing",
+   "error correction",
+   "FPGA",
+   "neural networks"
+  ],
+  "importance": 4,
+  "id": "09dd952b33f8cdcc",
+  "url": "https://arxiv.org/abs/2611.26447v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:16:21Z",
+  "added": "2026-11-21T19:28:15.578746+00:00"
+ },
+ {
+  "headline": "Bayesian optimization on amortized search space",
+  "tldr": "The paper introduces a method that uses an amortized inverse map of a mechanistic simulator to constrain Bayesian optimization to a low-dimensional space, improving efficiency especially for tasks like personalized drug dosing in Parkinson's disease.",
+  "key_points": [
+   "Amortized inverse map restricts search space in Bayesian optimization",
+   "Gaussian process kernel respects original problem geometry",
+   "Derives intrinsic-dimension-dependent regret bounds",
+   "Demonstrated on Parkinson's disease drug dosing using PK/PD simulator",
+   "Shows robustness to simulator misspecification"
+  ],
+  "why_it_matters": "Enables more efficient black-box optimization by leveraging known simulator structure, reducing dimensionality and computational cost, which can accelerate personalized medicine and other domains with expensive simulations.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "bayesian_optimization",
+   "amortized_inference",
+   "pharmacokinetics",
+   "dimensionality_reduction"
+  ],
+  "importance": 3,
+  "id": "4a293ae049fe51df",
+  "url": "https://arxiv.org/abs/2611.26459v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:22:39Z",
+  "added": "2026-11-21T19:28:03.279171+00:00"
+ },
+ {
+  "headline": "Monte Carlo Pass Search for Setpieces",
+  "tldr": "A new Monte Carlo-based method evaluates soccer set-piece deliveries and attacker positions by simulating many plausible outcomes, showing measurable xG gains over actual kicks.",
+  "key_points": [
+   "Treats each set-piece as a distribution of possible deliveries and attacker setups.",
+   "Runs thousands of simulations using a 3D physics world model and player behavior generators.",
+   "Finds optimal deliveries can add 0.0085 xG (28%) over the actual kick.",
+   "Optimizing attacker positioning adds further xG improvements.",
+   "Provides a framework to estimate data requirements before deployment in clubs."
+  ],
+  "why_it_matters": "Improving set-piece strategy can significantly boost scoring efficiency in soccer, and the method demonstrates how AI-driven simulation can inform real-world tactical decisions in professional sports.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "soccer",
+   "set pieces",
+   "Monte Carlo",
+   "AI simulation"
+  ],
+  "importance": 3,
+  "id": "884c5f013c6d0a7b",
+  "url": "https://arxiv.org/abs/2611.26464v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:26:38Z",
+  "added": "2026-11-21T19:27:51.374692+00:00"
+ },
+ {
+  "headline": "A new algorithmic approach for finding flat minima: critically damped Polyak stepsizes",
+  "tldr": "Introduces critically damped Polyak (CDP) stepsizes that bias gradient descent toward flatter minima with theoretical guarantees and empirical performance comparable to SAM.",
+  "key_points": [
+   "CDP multiplies classic Polyak stepsize by 4 and a damping factor to create equioscillations around the minimizer manifold.",
+   "Provides uniform-in-time guarantees on sharpness reduction and loss decrease for locally quadratic objectives.",
+   "Empirically matches Sharpness-Aware Minimization in flattening loss landscapes, even for fine‑tuning large language models."
+  ],
+  "why_it_matters": "Flatter minima are linked to better generalization and robustness; CDP offers a theoretically grounded, adaptive optimizer that can achieve this without extra computational overhead, benefiting training of over‑parameterized neural networks and LLM fine‑tuning.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "flat minima",
+   "optimization",
+   "adaptive stepsize",
+   "deep learning"
+  ],
+  "importance": 3,
+  "id": "b9febf10223de763",
+  "url": "https://arxiv.org/abs/2611.26475v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:35:37Z",
+  "added": "2026-11-21T19:27:39.448246+00:00"
+ },
+ {
+  "headline": "Anticipating Future Build Results with BuildPredictor",
+  "tldr": "The paper proposes a random‑forest model that predicts CI build outcomes using code change and historical build features, achieving median MCC scores of 0.82‑0.86 and enabling developers to skip unnecessary builds.",
+  "key_points": [
+   "Random‑forest model predicts CI build success/failure",
+   "Uses source‑code, build‑code, complexity, and historical build data",
+   "Median MCC of 0.82 intra‑project, 0.86 holistic",
+   "Model quickly reaches peak performance and remains effective without hard‑to‑interpret historical features",
+   "Potential to save CI resources by avoiding wasted builds"
+  ],
+  "why_it_matters": "Predicting build results can reduce CI resource consumption and developer wait times, improving productivity and lowering infrastructure costs for software teams.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "CI",
+   "machine_learning",
+   "build_optimization",
+   "software_engineering"
+  ],
+  "importance": 2,
+  "id": "00cd9507513c7283",
+  "url": "https://arxiv.org/abs/2611.26476v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:35:44Z",
+  "added": "2026-11-21T19:27:27.416247+00:00"
+ },
+ {
+  "headline": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
+  "tldr": "The paper proposes using eigenvectors of a transition matrix (inspired by grid cells) as a fixed basis for successor features, enabling instant task adaptation via linear regression without extra networks or replay buffers.",
+  "key_points": [
+   "Successor features are expressed as linear combinations of eigenvector bases with closed‑form coefficients θ_i = 1/(1‑γλ_i).",
+   "The approach eliminates the need for a separate successor‑feature network or replay buffer.",
+   "In a two‑goal gridworld, the method retains near‑optimal returns across goal changes, outperforming SimpleSF and DQN.",
+   "Agents act greedily on the reference policy’s action values, providing a one‑step policy improvement.",
+   "The basis derives from low‑frequency Laplacian eigenvectors of a uniform random‑walk reference policy."
+  ],
+  "why_it_matters": "Provides a simple, computationally cheap way to achieve continual reinforcement learning, allowing agents to reuse knowledge and adapt instantly to new tasks, which could accelerate development of more flexible AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "successor_features",
+   "grid_cells",
+   "continual_learning"
+  ],
+  "importance": 3,
+  "id": "67102c2e5d7a38fa",
+  "url": "https://arxiv.org/abs/2611.26504v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:54:04Z",
+  "added": "2026-11-21T19:27:15.452045+00:00"
+ },
+ {
+  "headline": "Hybrid Retrieval for Government Scheme Search in English and Marathi",
+  "tldr": "A bilingual search system for Maharashtra government schemes combines BM25 and sentence‑embedding similarity, achieving modest gains over lexical baseline.",
+  "key_points": [
+   "Indexes aligned English‑Marathi scheme descriptions for multilingual search.",
+   "Hybrid fusion of BM25 and IndicSBERT/MahaSBERT raises MRR to 0.872‑0.879.",
+   "Dense‑only retrieval lags behind lexical baseline (MRR ~0.66).",
+   "Precision improves to 0.808 while maintaining BM25 recall of 0.946."
+  ],
+  "why_it_matters": "Demonstrates how combining lexical and semantic signals can enhance public‑service information access in multilingual contexts, guiding future government AI deployments.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "information_retrieval",
+   "bilingual",
+   "government",
+   "semantic_search"
+  ],
+  "importance": 2,
+  "id": "f54eae37dfc5e200",
+  "url": "https://arxiv.org/abs/2611.26514v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:58:39Z",
+  "added": "2026-11-21T19:27:03.234447+00:00"
+ },
+ {
+  "headline": "Simple Private Noisy SGD is Minimax-Optimal under Population Strong Convexity",
+  "tldr": "The paper proves that a basic differentially private Noisy SGD algorithm achieves minimax-optimal error rates for smooth, strongly convex losses, including private logistic regression, matching lower bounds without extra poly‑log factors.",
+  "key_points": [
+   "Provides upper bounds for single‑pass Noisy SGD with fixed stepsize and constant batch size under Rényi DP.",
+   "Derives matching minimax lower bounds using the Score Attack framework.",
+   "Achieves first minimax‑optimal rates for private logistic regression, eliminating previous poly‑logarithmic overhead.",
+   "Analysis holds in expectation and with high probability, using standard convex analysis."
+  ],
+  "why_it_matters": "Establishes that simple private SGD can be as statistically efficient as the best possible algorithms, simplifying deployment of privacy‑preserving machine learning for strongly convex problems and informing future theoretical and practical work.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "differential_privacy",
+   "sgd",
+   "convex_optimization",
+   "theory"
+  ],
+  "importance": 3,
+  "id": "a08f9a52c37a53b4",
+  "url": "https://arxiv.org/abs/2611.26515v1",
+  "source": "arXiv",
+  "date": "2026-11-19T17:58:51Z",
+  "added": "2026-11-21T19:26:51.521745+00:00"
+ },
+ {
+  "headline": "Deterministic Temporal Embedding for Calcium Imaging Trace Extraction",
+  "tldr": "A new deterministic temporal embedding method maps pixel fluorescence traces to a low‑dimensional space, enabling reliable extraction of calcium imaging signals without shape priors.",
+  "key_points": [
+   "Uses a fuzzy‑neighborhood graph and spectral initialization for embedding.",
+   "Optimizes a class‑balanced cross‑entropy loss with exact sparse attraction and deterministic particle‑mesh repulsion.",
+   "Produces spatially coherent source regions, handling irregular and touching cells.",
+   "Demonstrated on synthetic and in‑vivo two‑photon data with robust recovery."
+  ],
+  "why_it_matters": "Improves the accuracy and efficiency of calcium trace extraction, a core step in neuroscience imaging analysis, by removing stochastic sampling and shape assumptions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "calcium imaging",
+   "temporal embedding",
+   "neuroscience",
+   "signal extraction"
+  ],
+  "importance": 3,
+  "id": "44f0d15d69020448",
+  "url": "https://arxiv.org/abs/2611.26522v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:00:35Z",
+  "added": "2026-11-21T19:26:39.115049+00:00"
+ },
+ {
+  "headline": "GEOHunter: Mapping a Generative Engine Optimization Network in the Wild",
+  "tldr": "The paper uncovers a large network of paid accounts that inject promotional content into user‑generated platforms, influencing the answers of multiple generative AI engines, especially in medical and financial domains.",
+  "key_points": [
+   "Identified 1,985 accounts responsible for 466,357 promotional placements across three Chinese UGC platforms.",
+   "The network affects 4.5%‑20% of cited pages on nine generative engines, with client names appearing in 52% of answers.",
+   "Coordinated campaigns span months, evolve listicle content, and target multiple engines from the US and China.",
+   "Content‑level defenses are insufficient; account‑ and platform‑level signals are needed to mitigate manipulation."
+  ],
+  "why_it_matters": "Demonstrates how coordinated UGC promotion can bias generative AI outputs, posing risks of misinformation in critical domains and highlighting the need for stronger detection and defense mechanisms.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "generative AI",
+   "UGC manipulation",
+   "search bias",
+   "risk mitigation"
+  ],
+  "importance": 3,
+  "id": "94590bef9d5c6835",
+  "url": "https://arxiv.org/abs/2611.26564v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:33:42Z",
+  "added": "2026-11-21T19:26:27.429274+00:00"
+ },
+ {
+  "headline": "Active Feature Acquisition by Distilling an Oracle Teacher",
+  "tldr": "The paper introduces OracleImitator, a method that explicitly constructs an oracle teacher to rank feature acquisitions and distills this ranking into a policy, achieving near‑optimal accuracy with significantly lower acquisition cost on medical and benchmark tasks.",
+  "key_points": [
+   "Active Feature Acquisition (AFA) learns which features to acquire under a budget.",
+   "OracleImitator builds an explicit oracle teacher that ranks features by their impact on prediction error.",
+   "The teacher's ranking is distilled into a deployable policy via soft‑target imitation.",
+   "Experiments show up to 90% of the attainable accuracy gain at less than 25% of the acquisition cost.",
+   "The explicit teacher allows analysis of how much ranking can be recovered by a deployable policy."
+  ],
+  "why_it_matters": "Reducing feature acquisition costs is critical for domains like medical diagnosis where tests are expensive or invasive; an explicit teacher provides both performance gains and interpretability for budget‑constrained prediction systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "active feature acquisition",
+   "oracle distillation",
+   "budgeted learning",
+   "medical diagnosis"
+  ],
+  "importance": 3,
+  "id": "0a397c5e315f6bca",
+  "url": "https://arxiv.org/abs/2611.26598v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:52:57Z",
+  "added": "2026-11-21T19:26:15.433048+00:00"
+ },
+ {
+  "headline": "Bio-PM-Guided Synthetic IMU Generation",
+  "tldr": "The paper shows that synthetic inertial measurement unit (IMU) data generated in the embedding space of a pretrained biosignal encoder can effectively augment human activity recognition models, boosting cross‑subject performance.",
+  "key_points": [
+   "Uses Bio-PM's frozen encoder to convert 10‑second IMU windows into token embeddings.",
+   "Trains class‑conditional autoregressive transformer and diffusion decoders to generate realistic token sequences.",
+   "Synthetic tokens achieve a Train‑on‑Synthetic‑Test‑on‑Real macro‑F1 of 0.68.",
+   "Augmenting with synthetic tokens raises LOSO macro‑F1 from 0.729 to 0.809 on the WISDM benchmark.",
+   "Introduces a PatchDecoder for approximate raw waveform reconstruction."
+  ],
+  "why_it_matters": "Generating high‑quality synthetic sensor data reduces the costly need for extensive real‑world IMU collection and improves model generalization across subjects, addressing a key bottleneck in wearable AI applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "synthetic data",
+   "IMU",
+   "human activity recognition",
+   "representation learning"
+  ],
+  "importance": 3,
+  "id": "3a8b4233a7737556",
+  "url": "https://arxiv.org/abs/2611.26607v1",
+  "source": "arXiv",
+  "date": "2026-11-19T18:56:25Z",
+  "added": "2026-11-21T19:26:03.506848+00:00"
+ },
+ {
+  "headline": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+  "tldr": "Chess.com launches a Classic Games platform adding ten new board and puzzle games beyond chess.",
+  "key_points": [
+   "Adds backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and a Scrabble‑like game",
+   "Follows earlier launch of Gambit, a gambling‑free poker site",
+   "Expands Chess.com’s ecosystem to become a broader classic‑games hub",
+   "All games are free‑to‑play and integrated into a single platform",
+   "Aims to attract non‑chess players and increase user engagement"
+  ],
+  "why_it_matters": "Diversifying Chess.com’s offerings helps the platform grow its user base, increases engagement, and positions it as a one‑stop destination for classic tabletop games in a competitive online gaming market.",
+  "category": "product",
+  "companies": [
+   "Chess.com"
+  ],
+  "tags": [
+   "gaming",
+   "board games",
+   "platform",
+   "expansion"
+  ],
+  "importance": 2,
+  "id": "e74727ec8af70116",
+  "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+  "source": "The Verge AI",
+  "date": "2026-11-21T09:00:00-05:00",
+  "added": "2026-11-21T19:25:51.421347+00:00"
+ },
+ {
+  "headline": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+  "tldr": "An actor licensed his digital likeness to a microdrama startup, sparking debate about the impact of AI‑generated faces in Hollywood.",
+  "key_points": [
+   "Actor grants a startup rights to use his AI‑generated facial model",
+   "Practice mirrors a trend already seen in China",
+   "Experts warn of potential long‑term consequences for the film industry"
+  ],
+  "why_it_matters": "The move highlights emerging legal, ethical, and economic issues around AI‑generated celebrity likenesses, which could reshape talent contracts and content creation in Hollywood.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "AI faces",
+   "digital likeness",
+   "Hollywood",
+   "ethics"
+  ],
+  "importance": 2,
+  "id": "89298d3b7fb05770",
+  "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 21 Nov 2026 16:00:00 +0000",
+  "added": "2026-11-21T19:25:39.254289+00:00"
+ },
+ {
+  "headline": "Here are the top AI agents that can live in your text messages",
+  "tldr": "TechCrunch lists notable AI agents that can be embedded in SMS for general assistance, family, travel, and work use cases.",
+  "key_points": [
+   "Compilation of AI agents usable via text messaging",
+   "Covers general assistants and niche agents for families, travel, and work",
+   "Highlights agents that operate directly within SMS platforms"
+  ],
+  "why_it_matters": "Embedding AI agents in everyday text messaging makes conversational AI more accessible, allowing users to leverage AI assistance without needing separate apps or platforms.",
+  "category": "product",
+  "companies": [],
+  "tags": [
+   "AI agents",
+   "text messaging",
+   "conversational AI"
+  ],
+  "importance": 2,
+  "id": "01945f6a907c7618",
+  "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 21 Nov 2026 17:00:00 +0000",
+  "added": "2026-11-21T19:25:27.207303+00:00"
+ },
+ {
+  "headline": "Can Anthropic afford to put safety first?",
+  "tldr": "Anthropic went public on Nasdaq, sparking discussion on whether its IPO funding can sustain its safety‑first approach.",
+  "key_points": [
+   "Anthropic completed its IPO on Nasdaq.",
+   "The company raised a large amount of capital but faces high ongoing costs.",
+   "Safety‑centric research is a core part of Anthropic's mission.",
+   "Debate centers on balancing profitability with long‑term safety investments."
+  ],
+  "why_it_matters": "The outcome will influence how AI labs prioritize safety versus growth, setting a precedent for future AI startups and investors.",
+  "category": "funding",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "IPO",
+   "AI safety",
+   "funding",
+   "startup"
+  ],
+  "importance": 4,
+  "id": "a9f34b76fcc6d54c",
+  "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+  "source": "The Verge AI",
+  "date": "2026-11-21T10:00:00-05:00",
+  "added": "2026-11-21T19:25:15.316799+00:00"
+ },
+ {
+  "headline": "LLMs can read and write executables byte by byte from a hex dump",
+  "tldr": "Researchers demonstrate that large language models can understand and modify compiled binaries directly from hex dumps, identifying program behavior, discovering bugs, and patching code without any traditional tooling.",
+  "key_points": [
+   "LLM correctly identified functionality of three custom programs and a stripped FreeBSD binary from raw bytes alone",
+   "Discovered a subtle bug in the FreeBSD 'ministat' binary by analyzing its data tables",
+   "Successfully generated byte-level patches that added new features while preserving existing behavior"
+  ],
+  "why_it_matters": "Shows that LLMs can operate on low‑level machine code, opening possibilities for automated binary analysis, vulnerability discovery, and patch generation without source access.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "binary analysis",
+   "LLM capabilities",
+   "software security",
+   "machine code"
+  ],
+  "importance": 4,
+  "id": "bf623f2575d90ce5",
+  "url": "https://sgiannopoulos.github.io/blog/machine-code-programming/",
+  "source": "Hacker News",
+  "date": "2026-11-18T14:15:58Z",
+  "added": "2026-11-21T19:25:03.077366+00:00"
+ },
+ {
+  "headline": "ClawDOS – An AI coding agent for DOS",
+  "tldr": "A Claude‑powered AI coding assistant runs directly on an IBM PC XT, letting users program and compile code via DOS.",
+  "key_points": [
+   "Runs on original 8088 hardware (4.77 MHz, 640 KB RAM, CGA)",
+   "Uses a bridge PC only for TLS; all other logic runs on the DOS machine",
+   "HARNESS.EXE (176 KB) implements Claude Messages API, edits files, compiles with Turbo C, and displays output",
+   "Shows that modern LLMs can operate under extreme legacy constraints"
+  ],
+  "why_it_matters": "Demonstrates the flexibility of large language models to function in highly constrained, vintage environments, bridging retro computing with modern AI and inspiring novel use‑cases.",
+  "category": "product",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "AI coding",
+   "DOS",
+   "vintage computing",
+   "Claude"
+  ],
+  "importance": 2,
+  "id": "d5eeee1878b570ec",
+  "url": "http://ricapar.net/ClawDOS/",
+  "source": "Hacker News",
+  "date": "2026-11-21T05:38:01Z",
+  "added": "2026-11-21T19:24:51.095425+00:00"
+ },
+ {
+  "headline": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
+  "tldr": "The Brazilian Federal Revenue has released its tax calculation tool as open‑source software on GitHub with an MIT license.",
+  "key_points": [
+   "Tax calculator code now publicly available",
+   "Hosted on GitHub",
+   "Licensed under MIT for free reuse",
+   "Aims to increase transparency and enable community contributions"
+  ],
+  "why_it_matters": "Open‑sourcing a government tax tool can improve transparency, allow developers to build better financial applications, and set a precedent for public sector software openness.",
+  "category": "open_source",
+  "companies": [
+   "Brazilian Federal Revenue"
+  ],
+  "tags": [
+   "tax",
+   "open_source",
+   "government",
+   "MIT"
+  ],
+  "importance": 2,
+  "id": "cd340a793de1857e",
+  "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
+  "source": "Hacker News",
+  "date": "2026-11-17T15:22:57Z",
+  "added": "2026-11-21T19:24:39.535206+00:00"
+ },
+ {
   "headline": "Evidence from a Multi-Regime Causal Discovery Benchmark: UCMT Algorithms, Comparative Performance, and Controlled Ablation Studies",
   "tldr": "The paper evaluates the UCMT causal discovery algorithm family against established methods across diverse benchmarks, showing mixed performance gains and identifying which internal components impact results.",
   "key_points": [
@@ -25464,633 +26103,5 @@
   "source": "arXiv",
   "date": "2026-11-05T17:48:00Z",
   "added": "2026-11-08T06:19:04.826438+00:00"
- },
- {
-  "headline": "MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation",
-  "tldr": "MOMASPLAT uses 3D Gaussian splatting and foundation models to synthesize full manipulation trajectories from unseen robot base poses, boosting mobile manipulation success rates.",
-  "key_points": [
-   "Synthesizes novel-view demonstrations including dynamic object interactions",
-   "Separately reconstructs static scene and manipulated object using multiview data",
-   "Combines 3D Gaussian splatting, foundation models, and kinematics retargeting",
-   "Doubles success rate over strongest baseline on real-world MoMa tasks"
-  ],
-  "why_it_matters": "Improves robustness of visuomotor policies to viewpoint changes, reducing costly data collection and enabling more reliable mobile manipulation in real-world environments.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "mobile_manipulation",
-   "novel_view_synthesis",
-   "3D_gaussian_splatting",
-   "robotics"
-  ],
-  "importance": 3,
-  "id": "138e98fd0d20f007",
-  "url": "https://arxiv.org/abs/2611.08372v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:50:35Z",
-  "added": "2026-11-08T06:18:52.606080+00:00"
- },
- {
-  "headline": "GraphMuon: A Graph-Aware Optimizer Boosts GNN Training Speed",
-  "tldr": "GraphMuon adapts matrix-aware updates to the covariance of graph‑propagated features, cutting validation‑loss time‑to‑target by 1.3‑2.4× versus AdamW on large OGB benchmarks.",
-  "key_points": [
-   "Introduces GraphMuon, a graph‑metric extension of the Muon optimizer for GNNs.",
-   "Mitigates update amplification caused by graph‑propagated representations.",
-   "Delivers 1.32×‑2.42× faster validation‑loss convergence on three OGB datasets.",
-   "Improves time‑to‑target in 13 of 15 dataset‑architecture settings while keeping accuracy competitive.",
-   "Code released publicly on GitHub."
-  ],
-  "why_it_matters": "Efficient training of GNNs is critical for scaling graph AI to real‑world problems; a optimizer that speeds convergence without sacrificing performance can reduce compute costs and accelerate research and deployment.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "graph neural networks",
-   "optimizers",
-   "machine learning",
-   "open source"
-  ],
-  "importance": 3,
-  "id": "a542b66df001bc09",
-  "url": "https://arxiv.org/abs/2611.08379v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:56:33Z",
-  "added": "2026-11-08T06:18:40.985786+00:00"
- },
- {
-  "headline": "Hybrid Machine Learning Framework Improves Imbalanced Landing-Phase Safety Event Prediction",
-  "tldr": "A hybrid LSTM autoencoder and XGBoost model achieves >0.90 macro recall for rare landing-phase safety events using NASA flight data.",
-  "key_points": [
-   "LSTM autoencoder learns normal approach behavior and provides reconstruction-error features",
-   "Features fused with statistical flight-history data and fed to class-weighted XGBoost",
-   "Evaluated on 53,750 NASA DASHlink approach windows across three airports",
-   "Mean macro recall >0.90 with strong class-balanced detection",
-   "Local specialization helps at data‑rich airports; pooled training benefits data‑sparse sites"
-  ],
-  "why_it_matters": "Accurate detection of rare landing‑phase safety events can guide proactive interventions, improve flight‑data monitoring, and enhance overall aviation safety, especially under highly imbalanced data conditions.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "flight safety",
-   "imbalanced data",
-   "LSTM",
-   "XGBoost"
-  ],
-  "importance": 3,
-  "id": "83acb46db1b6c178",
-  "url": "https://arxiv.org/abs/2611.08386v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:04:26Z",
-  "added": "2026-11-08T06:18:28.845886+00:00"
- },
- {
-  "headline": "Social Humanoid: Hierarchical System for Socially Responsive Human-Humanoid Interaction",
-  "tldr": "A new hierarchical framework enables a 29-DoF Unitree G1 robot to generate and execute whole-body motions that respond to and anticipate human partners, backed by a 260‑hour HHI benchmark.",
-  "key_points": [
-   "High‑level policy uses tokenized shared representation for joint human‑humanoid motion modeling.",
-   "Low‑level whole‑body tracking controller executes generated motions on the Unitree G1 robot.",
-   "Two‑phase adaptive retargeting preserves contact dynamics and body scale across partners.",
-   "Benchmark created from five motion‑capture datasets totaling 260 hours of interactions.",
-   "Demonstrated coordinated, human‑aligned behavior in both simulation and real‑world tests."
-  ],
-  "why_it_matters": "Enables robots to act as collaborative partners rather than isolated agents, advancing socially aware robotics for assistive, industrial, and entertainment applications.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "humanoid",
-   "human‑robot interaction",
-   "whole‑body motion",
-   "adaptive retargeting"
-  ],
-  "importance": 3,
-  "id": "0c050a581d0d31fe",
-  "url": "https://arxiv.org/abs/2611.08407v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:14:06Z",
-  "added": "2026-11-08T06:18:16.994403+00:00"
- },
- {
-  "headline": "Conformal Prediction for Time-Dependent PDEs",
-  "tldr": "The paper analyzes why conformal prediction can fail for time-dependent PDE surrogates and proposes weighted conformal methods to regain finite-sample coverage over long horizons.",
-  "key_points": [
-   "Distributional singularity at nearby times makes exact coverage impossible in continuous settings.",
-   "In discretized models, total variation distance saturates exponentially with grid resolution, limiting spatial discretization.",
-   "Weighted conformal prediction can provide finite-sample coverage guarantees over growing time horizons.",
-   "Implications for safety‑critical applications like flood forecasting and financial risk management."
-  ],
-  "why_it_matters": "Reliable uncertainty quantification for time‑dependent physical systems is essential for safety‑critical decisions; this work clarifies fundamental limits and offers practical remedies.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "conformal_prediction",
-   "PDE",
-   "uncertainty_quantification",
-   "machine_learning"
-  ],
-  "importance": 3,
-  "id": "0de1e287f6deaed8",
-  "url": "https://arxiv.org/abs/2611.08409v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:15:42Z",
-  "added": "2026-11-08T06:18:04.765530+00:00"
- },
- {
-  "headline": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
-  "tldr": "The paper introduces ProofTrace, a graph‑based framework that identifies statistical signatures of AI‑generated mathematical proofs and can reliably distinguish them from human‑written papers, even after AI re‑wording.",
-  "key_points": [
-   "Constructed five cohorts of 8,281 papers covering human, AI‑reworded, and AI‑generated proofs.",
-   "ProofTrace extracts graph‑based features (GIPS) revealing fewer external citations and higher reliance on intermediate results in AI‑generated proofs.",
-   "The method reliably detects AI involvement, outperforming text‑only detectors that degrade with re‑wording."
-  ],
-  "why_it_matters": "As AI tools become common in mathematical research, reliable detection of AI‑assisted proofs is crucial for transparency, attribution, and maintaining trust in scholarly communication.",
-  "category": "paper",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "AI4Math",
-   "proof detection",
-   "generative AI",
-   "arXiv"
-  ],
-  "importance": 3,
-  "id": "4a6b08df2fe76909",
-  "url": "https://arxiv.org/abs/2611.08412v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:17:18Z",
-  "added": "2026-11-08T06:17:52.861144+00:00"
- },
- {
-  "headline": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",
-  "tldr": "The paper introduces VLA‑Tug, a lightweight latent probe that detects failures early in Vision‑Language‑Action models, offering calibrated false‑alarm and missed‑detection bounds and predicting failure modes to improve real‑time task success.",
-  "key_points": [
-   "VLA‑Tug monitors latent layers of VLA backbones with minimal overhead for edge deployment.",
-   "Improves early failure detection by up to 30% at matched false‑positive rates versus strong baselines.",
-   "Maintains valid detection bounds in up to 86% of runs under unseen task shifts, compared to ≤21% for baselines.",
-   "Predicts failure mode, boosting top‑3 accuracy on unseen tasks by up to 44% over a majority baseline.",
-   "Release of a 3,180‑episode annotated manipulation dataset for future latent failure detection research."
-  ],
-  "why_it_matters": "Reliable failure detection is crucial for deploying embodied AI systems safely in real‑world environments, where undetected errors can cause equipment damage or safety hazards. VLA‑Tug provides a practical, low‑cost monitoring solution that enhances robustness and enables corrective actions during operation.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "vision-language",
-   "failure detection",
-   "embodied AI",
-   "latent probing"
-  ],
-  "importance": 3,
-  "id": "5dce3e19e4daaa42",
-  "url": "https://arxiv.org/abs/2611.08425v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:21:07Z",
-  "added": "2026-11-08T06:17:41.053884+00:00"
- },
- {
-  "headline": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
-  "tldr": "A comprehensive survey of mechanistic interpretability methods, their role in AI safety, and a proposed framework for evaluating such work.",
-  "key_points": [
-   "Defines mechanistic interpretability concepts (features, polysemanticity, circuits).",
-   "Reviews methods for feature extraction, circuit discovery, causal verification, and training-data attribution.",
-   "Proposes a unified evaluation framework and outlines six research orientations.",
-   "Discusses how mechanistic insights can aid safety tasks like knowledge editing, steering, and monitoring."
-  ],
-  "why_it_matters": "Understanding the internal workings of neural networks is crucial for building reliable safety measures, enabling better control, prediction, and mitigation of harmful behaviors in increasingly powerful AI systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "interpretability",
-   "AI safety",
-   "mechanistic",
-   "research survey"
-  ],
-  "importance": 3,
-  "id": "3b623e3c625ade34",
-  "url": "https://arxiv.org/abs/2611.08438v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:30:54Z",
-  "added": "2026-11-08T06:17:28.584845+00:00"
- },
- {
-  "headline": "ReproBridge: Building Reproducibility into ML Research Artifacts",
-  "tldr": "ReproBridge introduces a standardized artifact design and workflow that boosts ML experiment reproduction success from 76.4% to 92.6% while cutting downstream API costs.",
-  "key_points": [
-   "Standardized artifact includes refined code, environment setup, launchers, and guide.",
-   "ReproBridge-Bench offers 1,029 tasks from 387 experiments across 36 papers.",
-   "Refined artifacts raise mean reproduction success to >90% for four models.",
-   "API spending drops by ~20% and success-rate variance narrows dramatically.",
-   "Ablation shows code and environment components are most critical."
-  ],
-  "why_it_matters": "Improving reproducibility accelerates trustworthy AI research, reduces wasted compute resources, and provides a clear benchmark for future reproducibility tools.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "reproducibility",
-   "ML tooling",
-   "benchmark",
-   "automation"
-  ],
-  "importance": 3,
-  "id": "6d7cd387b9498c15",
-  "url": "https://arxiv.org/abs/2611.08452v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:45:36Z",
-  "added": "2026-11-08T06:17:16.604440+00:00"
- },
- {
-  "headline": "On-policy Distillation (OPD) vs. GRPO: Compute Efficiency Analysis",
-  "tldr": "OPD generally lags behind GRPO in FLOP efficiency, but when using the student’s own GRPO checkpoint as teacher, OPD can achieve the same accuracy with up to 50× fewer FLOPs, and multi‑teacher OPD can cut total compute by over 40% across domains.",
-  "key_points": [
-   "OPD with external teacher is less FLOP‑efficient than GRPO and can inflate response length.",
-   "Using the student’s own GRPO checkpoint as teacher lets OPD match accuracy with ~50× fewer distillation FLOPs.",
-   "Multi‑teacher OPD consolidates domain‑specific GRPO experts, costing only 5–8% of specialist training FLOPs.",
-   "Combined specialist training + distillation saves 42% total FLOPs for a 2‑domain mix."
-  ],
-  "why_it_matters": "Shows how strategic teacher selection and multi‑teacher distillation can dramatically reduce training compute, informing cost‑effective model development and deployment strategies.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "on-policy distillation",
-   "GRPO",
-   "compute efficiency",
-   "multi-teacher"
-  ],
-  "importance": 3,
-  "id": "092e4f7d82d531bc",
-  "url": "https://arxiv.org/abs/2611.08453v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:47:05Z",
-  "added": "2026-11-08T06:17:04.715959+00:00"
- },
- {
-  "headline": "Finite Experiments Can Certify Integrated Information in Stochastic Networks",
-  "tldr": "The paper shows when integrated information (Φ) can be identified, measured, and certified from limited, noisy experiments, revealing both possibilities and limits in small stochastic networks.",
-  "key_points": [
-   "Identifiability of Φ is proven for 4‑ and 5‑unit stochastic networks with known ground truth.",
-   "Even networks with identical input‑output behavior can be distinguished with 4‑53 trials via internal recordings.",
-   "Partial observation imposes precision floors (0.30‑1.02 bits) that cannot be reduced by larger sample sizes.",
-   "Φ exhibits sharp edges: tiny mechanism changes can cause 25‑100% shifts, and ~1% of near‑perfect surrogate models misreport Φ by >20%."
-  ],
-  "why_it_matters": "Understanding the limits of measuring integrated information informs AI interpretability, auditing, and consciousness assessments, highlighting when mechanistic claims are reliable or vulnerable to hidden uncertainties.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "integrated_information",
-   "interpretability",
-   "causal_inference",
-   "AI_auditing"
-  ],
-  "importance": 3,
-  "id": "79391932843481ba",
-  "url": "https://arxiv.org/abs/2611.08469v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:55:31Z",
-  "added": "2026-11-08T06:16:52.736602+00:00"
- },
- {
-  "headline": "Scientist World: Executable Research Environments for AI-Scientists",
-  "tldr": "A new platform turns 1,000 research papers into runnable environments, letting AI-Scientists benchmark against human results and improve their research capabilities.",
-  "key_points": [
-   "Transforms each paper into an executable baseline environment",
-   "Releases 1,000 verified research worlds for AI-Scientist evaluation",
-   "AI-Scientists outperform human authors 74% of the time in these tests",
-   "Small model gains 158% performance boost to match frontier models"
-  ],
-  "why_it_matters": "Provides a standardized, runnable benchmark for AI-driven scientific discovery, accelerating AI-Scientist development and enabling measurable progress against human research.",
-  "category": "open_source",
-  "companies": [],
-  "tags": [
-   "AI-Scientist",
-   "research automation",
-   "executable papers",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "731cb5af224f8f57",
-  "url": "https://arxiv.org/abs/2611.08478v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:58:17Z",
-  "added": "2026-11-08T06:16:40.581791+00:00"
- },
- {
-  "headline": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
-  "tldr": "User embeddings can be decomposed into sparse, interpretable behavioral modes using sparse dictionary learning, enabling post‑hoc interpretability and zero‑shot audience queries.",
-  "key_points": [
-   "Proposes that dense user embeddings are sparse superpositions of understandable behavioral modes.",
-   "Sparse autoencoders reliably recover these modes, outperforming classical sparse baselines on synthetic and real data.",
-   "Recovered modes can be automatically labeled in natural language, allowing zero‑shot audience retrieval without text‑trained models.",
-   "The approach is model‑agnostic and requires no changes to existing embedding pipelines."
-  ],
-  "why_it_matters": "Improves transparency and control in recommendation and personalization systems, helping engineers diagnose, audit, and query user representations without retraining models.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "user_embeddings",
-   "interpretability",
-   "sparse_autoencoders",
-   "recommendation"
-  ],
-  "importance": 3,
-  "id": "8b4d884faceb643e",
-  "url": "https://arxiv.org/abs/2611.08487v1",
-  "source": "arXiv",
-  "date": "2026-11-05T18:59:42Z",
-  "added": "2026-11-08T06:16:28.707811+00:00"
- },
- {
-  "headline": "How do you build visibility through open source contributions?",
-  "tldr": "A MSc CS student asks how to gain credibility in AI/ML by contributing to established open‑source projects, especially in 3D computer vision, and seeks advice on challenges and finding impactful projects.",
-  "key_points": [
-   "Contributing to well‑known open‑source projects is seen as a stronger signal than solo repos.",
-   "New contributors face challenges locating projects where their work will be noticed.",
-   "Advice is sought on strategies for visibility, especially for 3D CV and applied AI fields."
-  ],
-  "why_it_matters": "Understanding how emerging researchers can effectively showcase their skills helps grow the open‑source ecosystem and ensures talent is recognized, which benefits both individuals and the broader AI community.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "open_source",
-   "visibility",
-   "career",
-   "3D_vision"
-  ],
-  "importance": 1,
-  "id": "3ab0be9dcea10b84",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xp90lz/how_do_you_build_visibility_through_open_source/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-06T09:55:15+00:00",
-  "added": "2026-11-08T06:16:16.653710+00:00"
- },
- {
-  "headline": "Looking to connect with people working on Embodied AI, Humanoid Robotics & Cognitive Architectures",
-  "tldr": "A Reddit user seeks collaborators and discussion partners in embodied AI, humanoid robotics, and cognitive architecture research.",
-  "key_points": [
-   "Focus on embodied AI systems and humanoid robots",
-   "Interest in robot foundation models, VLMs, VLAs, world models, and RL",
-   "Open invitation for networking, idea exchange, and potential collaborations"
-  ],
-  "why_it_matters": "Building connections across these interdisciplinary fields can accelerate progress toward more capable and adaptable robotic agents, bridging gaps between AI research and physical embodiment.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "embodied_ai",
-   "robotics",
-   "cognitive_architecture",
-   "humanoid"
-  ],
-  "importance": 2,
-  "id": "996a93771b48b024",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpp7z5/looking_to_connect_with_people_working_on/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-06T21:49:56+00:00",
-  "added": "2026-11-08T06:16:04.635280+00:00"
- },
- {
-  "headline": "Can I become an ML/AI Engineer with a BS Mathematics and Data Science degree instead of Computer Science?",
-  "tldr": "A student with a BS in Mathematics & Data Science asks if the degree is sufficient for an ML/AI engineering career and what extra CS fundamentals might be needed.",
-  "key_points": [
-   "Degree covers calculus, linear algebra, statistics, Python, OOP, ML, DL, and data science basics.",
-   "Employers may prioritize practical ML projects and portfolio over the specific degree title.",
-   "Supplementary CS topics like algorithms, data structures, systems design, and software engineering are valuable.",
-   "A master's in AI or CS can boost credentials but is not strictly required if you build strong hands‑on experience."
-  ],
-  "why_it_matters": "Clarifies the viability of non‑CS academic paths for entering the fast‑growing AI/ML job market, guiding students and hiring practices.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "career",
-   "education",
-   "machine-learning",
-   "data-science"
-  ],
-  "importance": 2,
-  "id": "d9d8db68b7ff07f7",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqcl2h/can_i_become_an_mlai_engineer_with_a_bs/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-07T17:59:30+00:00",
-  "added": "2026-11-08T06:15:52.807702+00:00"
- },
- {
-  "headline": "ICLR27 reviewer flags paper as too similar to author's prior workshop version",
-  "tldr": "A reviewer at ICLR noted that a submitted paper is essentially the same as the author's earlier workshop/arXiv version, despite a new title and method name.",
-  "key_points": [
-   "Author revised and renamed a previously workshop‑presented work for ICLR submission.",
-   "Reviewer identified the new submission as closely matching the earlier version.",
-   "The reviewer requests a direct comparison, raising concerns about anonymity and novelty.",
-   "The author reports low scores and limited chances of acceptance."
-  ],
-  "why_it_matters": "Highlights challenges in maintaining anonymity and demonstrating novelty when re‑submitting substantially revised work to top conferences, a common issue for researchers navigating the peer‑review process.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "peer_review",
-   "ICLR",
-   "paper_submission",
-   "research_ethics"
-  ],
-  "importance": 2,
-  "id": "a30825e60538f546",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpf4t6/iclr27_reviewer_says_my_paper_is_too_close_to_the/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-06T15:09:18+00:00",
-  "added": "2026-11-08T06:15:40.888585+00:00"
- },
- {
-  "headline": "ICLR 2027 Reviews are out [D]",
-  "tldr": "The review scores for papers submitted to ICLR 2027 have been released.",
-  "key_points": [
-   "ICLR 2027 review results are publicly available",
-   "Scores include 3/3/2 for a submission by user mr_carlduke",
-   "Community can discuss the outcomes via comments"
-  ],
-  "why_it_matters": "Review transparency helps researchers gauge the conference's standards and informs future submissions.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "ICLR2027",
-   "reviews"
-  ],
-  "importance": 2,
-  "id": "6da5478bf2b14783",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xpc9sh/iclr_2027_reviews_are_out_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-06T13:03:09+00:00",
-  "added": "2026-11-08T06:15:28.730869+00:00"
- },
- {
-  "headline": "ICLR 2027 Rebuttal response discussion on r/MachineLearning",
-  "tldr": "A Reddit user shares their progress on a rebuttal for an ICLR 2027 paper, asking others about their status and revisions.",
-  "key_points": [
-   "User reports scores of 3/3/2 and is drafting a rebuttal to improve the average rating.",
-   "They are revising the paper and adding new measurements as requested by reviewers.",
-   "The post seeks community input on rebuttal strategies and readability concerns."
-  ],
-  "why_it_matters": "Rebuttal and revision processes are a core part of academic peer review, influencing the quality and acceptance of AI research.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "ICLR2027",
-   "rebuttal",
-   "paper_revision"
-  ],
-  "importance": 1,
-  "id": "7f39a054c74c10b6",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqqryx/iclr_2027_rebuttal_response_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-08T05:27:25+00:00",
-  "added": "2026-11-08T06:15:16.821476+00:00"
- },
- {
-  "headline": "LeanContext Benchmark Introduces Disentangled Mathematical and Environment Contexts for Whole-Proof Generation",
-  "tldr": "LeanContext provides 129,826 Lean proof generation tasks, showing that including mathematical context during training improves model performance, boosting Pass@32 by up to 1.70% for LLaDA and Llama.",
-  "key_points": [
-   "Benchmark of 129,826 whole-proof generation problems in Lean.",
-   "Separates Mathematical Context (MC) from Environment Context (EC) for analysis.",
-   "Models trained with MC outperform alternatives, improving Pass@32 by 1.40% (LLaDA) and 1.70% (Llama).",
-   "Selection experiment runs without target proofs, keeping checkpoints and budgets constant."
-  ],
-  "why_it_matters": "Understanding how different types of context affect neural theorem proving helps build more efficient and accurate AI proof assistants, advancing formal verification and automated mathematics.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "theorem_proving",
-   "benchmark",
-   "Lean",
-   "AI_models"
-  ],
-  "importance": 3,
-  "id": "5aa76bc961fc6477",
-  "url": "https://arxiv.org/abs/2611.08277v1",
-  "source": "arXiv",
-  "date": "2026-11-05T16:44:59Z",
-  "added": "2026-11-08T06:15:04.624342+00:00"
- },
- {
-  "headline": "Generative Model of Contextual Integrity Explores Appropriate vs. Inappropriate Information Sharing",
-  "tldr": "Researchers built a generative model using large language models to simulate conversations and study how contextual norms affect information disclosure and refusal.",
-  "key_points": [
-   "Simulated dialogues between two LLM actors, one holding private data and the other requesting it.",
-   "Disclosures follow contextual norms: information is shared with rightful recipients but also sometimes leaked to unauthorized parties.",
-   "The model varies outcomes based on situation, decision logic, disposition, and the underlying language model.",
-   "Provides a framework to analyze how privacy norms evolve through conversational interaction."
-  ],
-  "why_it_matters": "Understanding how AI systems handle privacy-sensitive information under different contextual norms helps design safer conversational agents and informs policy on data sharing.",
-  "category": "paper",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "contextual integrity",
-   "privacy",
-   "large language models",
-   "information sharing"
-  ],
-  "importance": 3,
-  "id": "7ad560881df80978",
-  "url": "https://arxiv.org/abs/2611.08284v1",
-  "source": "arXiv",
-  "date": "2026-11-05T16:48:31Z",
-  "added": "2026-11-08T06:14:52.891269+00:00"
- },
- {
-  "headline": "LLM-Assisted Label Noise Correction Boosts EEG Sleep Stage Classification",
-  "tldr": "Using LLaMA 3.1 to flag low‑confidence EEG epochs during training improves TinySleepNet accuracy from 81.8% to 84.6% on Sleep‑EDF.",
-  "key_points": [
-   "TinySleepNet trained first, then low‑confidence epochs sent to LLaMA 3.1 with spectral features and context",
-   "LLM judges epochs against AASM guidelines, labeling them RELIABLE or SUSPICIOUS",
-   "Suspicious epochs are removed and TinySleepNet retrained on cleaned data",
-   "Accuracy rises to 84.6% and Macro F1 to 77.4%, especially better REM detection",
-   "Inference model remains lightweight (1.3 M parameters) for real‑time wearables"
-  ],
-  "why_it_matters": "Improving label quality with an LLM yields measurable gains in clinical sleep monitoring without increasing inference cost, demonstrating a practical way to combine LLM reasoning with lightweight signal models.",
-  "category": "paper",
-  "companies": [
-   "Meta"
-  ],
-  "tags": [
-   "sleep",
-   "EEG",
-   "LLM",
-   "label_noise"
-  ],
-  "importance": 3,
-  "id": "2c82ad78a3640b46",
-  "url": "https://arxiv.org/abs/2611.08311v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:12:05Z",
-  "added": "2026-11-08T06:14:40.863503+00:00"
- },
- {
-  "headline": "Interpretable many-body interaction laws for collective motion from few trajectories",
-  "tldr": "The paper introduces directional atomic cluster expansion (dACE), an equivariant model that accurately learns interpretable many-body interaction laws in collective motion from limited data, outperforming existing neural approaches.",
-  "key_points": [
-   "dACE adapts the atomic cluster expansion to self‑propelled agents, providing a systematic, equivariant expansion of acceleration into 1‑, 2‑, 3‑body terms plus a self term.",
-   "On simulated 2D/3D collectives, dACE recovers interaction laws body order by order with far less data than the competing SocialNet model.",
-   "Applied to real zebrafish and golden shiner data, dACE yields more consistent and interpretable interaction laws, revealing a 3‑body term that counteracts pairwise response in dense neighborhoods.",
-   "The study shows that standard next‑step prediction metrics mainly capture self‑propulsion and noise, proposing more robust error measures for learning interactions."
-  ],
-  "why_it_matters": "Understanding many‑body interaction rules in animal groups enables better modeling of collective behavior, informs the design of swarm robotics, and provides a transparent alternative to black‑box neural models, advancing both biology and AI research.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "collective motion",
-   "machine learning",
-   "interaction modeling",
-   "biology"
-  ],
-  "importance": 3,
-  "id": "f0d714fbea6d31d2",
-  "url": "https://arxiv.org/abs/2611.08314v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:12:40Z",
-  "added": "2026-11-08T06:14:28.960878+00:00"
- },
- {
-  "headline": "Discovering Learning Rules that Shape Others",
-  "tldr": "The paper introduces DUOS, a meta-learned update rule that enables an agent in general-sum games to shape opponents without accessing their parameters, achieving top performance in benchmarks.",
-  "key_points": [
-   "DUOS meta-trains an update rule using only the agent's own experience.",
-   "First method to discover opponent-shaping rules for general-sum games without opponent information.",
-   "Outperforms prior methods, ranking 1st in normalized mean score and self‑play tournaments.",
-   "Builds on meta‑learning successes like DiscoRL in single‑agent RL."
-  ],
-  "why_it_matters": "It demonstrates that effective opponent shaping can be achieved without invasive access to opponents, broadening applicability of meta‑learned update rules to competitive multi‑agent environments and potentially improving cooperation and safety in AI systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "meta-learning",
-   "opponent-shaping",
-   "reinforcement-learning",
-   "general-sum-games"
-  ],
-  "importance": 3,
-  "id": "deed6a32c40e0b60",
-  "url": "https://arxiv.org/abs/2611.08335v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:23:34Z",
-  "added": "2026-11-08T06:14:16.797341+00:00"
- },
- {
-  "headline": "GRFNet: Open‑source PyTorch model for multichannel EEG time‑series classification",
-  "tldr": "A new lightweight PyTorch architecture (GRFNet) for EEG classification builds on ROCKET with random frozen convolutions and learnable spatial filters, released as open source.",
-  "key_points": [
-   "Uses random, untrained convolutional kernels (ROCKET‑style) plus learnable spatial filters initialized from electrode layout",
-   "Model is tiny (3,847 parameters) and works with any input length or sampling rate",
-   "Author will benchmark against EEGNet and ShallowConvNet on PhysioNet EEGMMIDB (109 subjects) with subject‑independent splits"
-  ],
-  "why_it_matters": "Provides a highly efficient, adaptable baseline for EEG decoding that can be easily extended and compared, encouraging reproducible research and faster experimentation in brain‑computer interface studies.",
-  "category": "open_source",
-  "companies": [],
-  "tags": [
-   "EEG",
-   "time-series",
-   "PyTorch",
-   "open-source"
-  ],
-  "importance": 2,
-  "id": "dca9973e5de9f736",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xqqj67/grfnet_pytorch_model_for_multichannel_timeseries/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-08T05:13:11+00:00",
-  "added": "2026-11-08T06:14:04.771923+00:00"
  }
 ]
