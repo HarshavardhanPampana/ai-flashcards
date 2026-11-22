@@ -1,5 +1,106 @@
 [
  {
+  "headline": "The UN fails to agree on rules regulating ‘killer robots’",
+  "tldr": "UN diplomats in Geneva could not reach a consensus on regulating autonomous weapons, but pledged to keep discussing options.",
+  "key_points": [
+   "Negotiations on autonomous weapon regulations ended without a concrete agreement.",
+   "Delegates agreed only to \"start discussing options\" moving forward.",
+   "The deadlock highlights challenges in achieving global AI weapon governance.",
+   "Calls for clearer rules intensify as AI-driven weapon systems advance."
+  ],
+  "why_it_matters": "Without international standards, autonomous weapons could be deployed without accountability, raising ethical, security, and humanitarian risks worldwide.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "autonomous weapons",
+   "UN",
+   "AI policy",
+   "ethics"
+  ],
+  "importance": 3,
+  "id": "234da3fc18675af9",
+  "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+  "source": "The Verge AI",
+  "date": "2026-11-21T15:03:37-05:00",
+  "added": "2026-11-22T07:00:59.033641+00:00"
+ },
+ {
+  "headline": "A tale of two Nvidias",
+  "tldr": "TechCrunch contrasts Nvidia's latest earnings report with tech executives urging Jensen Huang's return.",
+  "key_points": [
+   "Two contrasting views of Nvidia",
+   "Latest earnings report shows performance",
+   "Tech executives call for Jensen Huang's return"
+  ],
+  "why_it_matters": "Highlights tension between Nvidia's financial results and industry sentiment about its leadership, indicating potential strategic shifts.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "earnings",
+   "leadership",
+   "executives",
+   "Nvidia"
+  ],
+  "importance": 2,
+  "id": "127326b87b53e7a9",
+  "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 21 Nov 2026 21:07:42 +0000",
+  "added": "2026-11-22T07:00:47.169500+00:00"
+ },
+ {
+  "headline": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+  "tldr": "Signal is adding a screenshot restriction on its Android and iOS apps to combat AI-driven surveillance concerns.",
+  "key_points": [
+   "Signal limits screenshot capability on both Android and iOS.",
+   "The move is framed as a response to AI surveillance threats.",
+   "Aims to enhance user privacy and security."
+  ],
+  "why_it_matters": "Limiting screenshots helps protect private conversations from being captured and potentially analyzed by AI surveillance tools, reinforcing Signal's privacy‑first stance.",
+  "category": "product",
+  "companies": [
+   "Signal"
+  ],
+  "tags": [
+   "privacy",
+   "security",
+   "screenshots",
+   "AI surveillance"
+  ],
+  "importance": 2,
+  "id": "8d54d4add32f2fcc",
+  "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+  "source": "TechCrunch AI",
+  "date": "Sat, 21 Nov 2026 21:37:10 +0000",
+  "added": "2026-11-22T07:00:35.217406+00:00"
+ },
+ {
+  "headline": "Data Processing Incidents on Inference Providers",
+  "tldr": "Recent incidents involving data handling by inference service providers have been reported.",
+  "key_points": [
+   "Incidents reported",
+   "Affect inference providers",
+   "Concern over data processing practices"
+  ],
+  "why_it_matters": "Highlights risks to user data privacy and reliability when using third‑party AI inference services.",
+  "category": "other",
+  "companies": [],
+  "tags": [
+   "data",
+   "incidents",
+   "inference",
+   "privacy"
+  ],
+  "importance": 2,
+  "id": "7893687ce6315731",
+  "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+  "source": "Hacker News",
+  "date": "2026-11-22T02:14:14Z",
+  "added": "2026-11-22T07:00:23.295867+00:00"
+ },
+ {
   "headline": "A Complete Geometric Message-Passing Architecture for Point Clouds",
   "tldr": "The paper introduces a simple equivariant message-passing network for 3D point clouds that is provably complete, matching the expressive power of more complex methods without high computational cost.",
   "key_points": [
@@ -25827,281 +25928,5 @@
   "source": "r/MachineLearning",
   "date": "2026-11-08T07:48:52+00:00",
   "added": "2026-11-08T13:37:17.896440+00:00"
- },
- {
-  "headline": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
-  "tldr": "A new method enables safe RL to scale to massive parallel training by reconstructing episode-level safety costs from short rollouts, preserving performance while cutting wall‑clock time.",
-  "key_points": [
-   "Analyzes bias from staggered environment resets in short‑horizon parallel rollouts.",
-   "Introduces a phase‑aggregated cost estimator to recover full‑episode safety metrics.",
-   "Incorporates uncertainty and distribution mismatch into a constraint‑tightening framework.",
-   "Demonstrates comparable safety performance to serial baselines with much faster training."
-  ],
-  "why_it_matters": "Safe RL is critical for deploying AI systems in real‑world settings where safety constraints must be respected; scaling it efficiently opens the door to larger, more complex applications.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "safe reinforcement learning",
-   "parallel training",
-   "cost estimation",
-   "AI safety"
-  ],
-  "importance": 3,
-  "id": "f501b39eead61415",
-  "url": "https://arxiv.org/abs/2611.08273v1",
-  "source": "arXiv",
-  "date": "2026-11-05T16:43:57Z",
-  "added": "2026-11-08T06:21:04.557509+00:00"
- },
- {
-  "headline": "Aligning Policy Encoders with a Shape Teacher",
-  "tldr": "A training-time method uses pretrained 3D shape features to align image‑based policy encoders, yielding faster convergence and higher success on robotic manipulation tasks without needing depth sensors at deployment.",
-  "key_points": [
-   "Uses Point‑MAE 3D shape features as a teacher for image‑based policy encoders.",
-   "Improves policy convergence speed by 4.7×–5.6× on LIBERO benchmarks.",
-   "Retains purely image‑based inputs at deployment, avoiding extra sensing.",
-   "Produces image representations more structured around object shape and parts."
-  ],
-  "why_it_matters": "Enables more efficient and robust robot learning by infusing 3D geometric knowledge into image‑only policies, reducing hardware complexity while boosting performance on manipulation tasks.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "robotics",
-   "3D representation",
-   "policy learning",
-   "image-based"
-  ],
-  "importance": 3,
-  "id": "b55d333ae101fe6c",
-  "url": "https://arxiv.org/abs/2611.08275v1",
-  "source": "arXiv",
-  "date": "2026-11-05T16:44:24Z",
-  "added": "2026-11-08T06:20:52.807898+00:00"
- },
- {
-  "headline": "Dynamic Optimistic Constrained OCO with Memory via Delay Equivalence",
-  "tldr": "Introduces an optimistic algorithm for online convex optimization with memory and time‑varying constraints, achieving adaptive dynamic regret and reduced constraint violation using predictions.",
-  "key_points": [
-   "First algorithm to handle COCO-M with predictions, adapting to non‑stationarity and prediction accuracy",
-   "Reduces memory to delay, treating state‑dependent gradients as delayed feedback",
-   "Achieves O(1) regret with perfect predictions and sublinear constraint violation (O(√T) or O(log T))",
-   "Lifts prior restrictive assumptions such as functional separability"
-  ],
-  "why_it_matters": "Advances theoretical foundations for stateful online learning and non‑stochastic control, enabling more efficient algorithms in settings with budget constraints and delayed feedback.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "online_convex_optimization",
-   "memory_to_delay",
-   "optimistic_algorithms",
-   "constraint_violation"
-  ],
-  "importance": 3,
-  "id": "869f1c39dfa00113",
-  "url": "https://arxiv.org/abs/2611.08302v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:05:45Z",
-  "added": "2026-11-08T06:20:40.708230+00:00"
- },
- {
-  "headline": "First-Token Attraction in Mamba Dynamics",
-  "tldr": "The paper introduces an analytical framework for deep Mamba models, showing that the first token exerts a privileged attracting influence on subsequent tokens, leading to token clustering and attention-sink behavior.",
-  "key_points": [
-   "Mamba dynamics use full matrix-valued interaction coefficients, unlike scalar attention weights.",
-   "A high-dimensional invariant box and exit-time argument recover effective sign-definiteness.",
-   "The first token's direction attracts later tokens, causing clustering that intensifies with depth.",
-   "Findings extend to state-space models, causal attention, and classic time-series models.",
-   "Experiments on Falcon-Mamba-7B confirm increasing first-token concentration in deeper layers."
-  ],
-  "why_it_matters": "Understanding token attraction in Mamba architectures reveals fundamental differences from attention mechanisms, guiding better model design, debugging, and potential improvements in sequence modeling performance.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "Mamba",
-   "token dynamics",
-   "sequence models",
-   "deep learning"
-  ],
-  "importance": 3,
-  "id": "08ba5e43aa7a9794",
-  "url": "https://arxiv.org/abs/2611.08303v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:06:17Z",
-  "added": "2026-11-08T06:20:28.858964+00:00"
- },
- {
-  "headline": "RM-VLM: From Natural-Language Task Descriptions to Vision-Grounded Reward Machines",
-  "tldr": "A new framework uses LLMs to generate reward machines from natural language and VLMs to ground propositions in visual observations, improving RL performance on non‑Markovian tasks.",
-  "key_points": [
-   "LLM creates reward machine (RM) from plain‑text task description",
-   "Vision‑language model (VLM) serves as labeling function for visual inputs",
-   "VLM‑based value estimator provides dense rewards for RM transitions",
-   "Outperforms prior VLM‑based reward methods on grid‑world, manipulation, and 3D collection tasks"
-  ],
-  "why_it_matters": "It removes the need for hand‑crafted labeling functions, enabling scalable, vision‑grounded reinforcement learning on complex, temporally extended tasks.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "reinforcement_learning",
-   "reward_machines",
-   "vision_language_models",
-   "large_language_models"
-  ],
-  "importance": 3,
-  "id": "349418f5841db7d1",
-  "url": "https://arxiv.org/abs/2611.08308v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:10:10Z",
-  "added": "2026-11-08T06:20:16.739090+00:00"
- },
- {
-  "headline": "Multitask Learning with Syntax Augmentation Boosts Sentiment Polarity Classification",
-  "tldr": "Contrastive-MTL integrates syntactic knowledge during training, outperforming baseline sentiment models on 10 of 11 multilingual datasets while being up to 9× faster at inference.",
-  "key_points": [
-   "Two MTL strategies: Standard-MTL (explicit parsing) and Contrastive-MTL (implicit syntax via contrastive loss).",
-   "Contrastive-MTL beats syntax‑naive baselines on 10/11 datasets and outperforms rule‑based pipelines while eliminating runtime parsing.",
-   "Evaluated on 11 datasets across 7 languages using four sequence‑labeling encodings.",
-   "Achieves 1.5–9× speedup at evaluation compared to external parsers."
-  ],
-  "why_it_matters": "Shows that implicit syntactic supervision can replace costly parsing at inference, enabling faster, more accurate multilingual sentiment analysis—a key step for scalable NLP applications.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "sentiment-analysis",
-   "multitask-learning",
-   "syntax-augmentation",
-   "multilingual"
-  ],
-  "importance": 3,
-  "id": "e060e16e46b21f22",
-  "url": "https://arxiv.org/abs/2611.08323v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:19:09Z",
-  "added": "2026-11-08T06:20:05.074965+00:00"
- },
- {
-  "headline": "Cultural Adaptation within Repeated Social Interactions",
-  "tldr": "The paper shows that large language models can continuously learn cultural norms through repeated social interactions, using memory mechanisms to adapt across languages and settings.",
-  "key_points": [
-   "Memory mechanisms enable longitudinal learning in LLMs",
-   "Adaptation transfers to new social contexts",
-   "Multilingual norm assimilation demonstrated in five languages"
-  ],
-  "why_it_matters": "Understanding and improving cultural competence of LLMs is crucial for safe, inclusive deployment in diverse communities, reducing bias and enhancing user experience.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "cultural_adaptation",
-   "LLM",
-   "social_interaction",
-   "multilingual"
-  ],
-  "importance": 3,
-  "id": "8461c3c1145090f4",
-  "url": "https://arxiv.org/abs/2611.08334v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:23:30Z",
-  "added": "2026-11-08T06:19:52.617301+00:00"
- },
- {
-  "headline": "USB Gym: A Gymnasium Testbed for Closed-Loop Ultrasound View Matching",
-  "tldr": "A new simulation testbed (USB Gym) evaluates combined published methods for guiding ultrasound probes, showing current approaches still fall far short of optimal positioning.",
-  "key_points": [
-   "USB Gym simulates ultrasound from public CT scans with organ texture rendering.",
-   "The guide integrates 20 published methods across segmentation, control, and reward slots.",
-   "Only an SSIM-based reward modestly improved performance, achieving 13.7 mm error vs. 1.5 mm oracle.",
-   "Combined methods still leave the probe far from target view, highlighting research gaps.",
-   "The testbed is open for adding new methods but has not been tested on real hardware."
-  ],
-  "why_it_matters": "Provides a standardized platform to benchmark and accelerate research on closed-loop ultrasound guidance, a critical step toward reliable AI-assisted medical imaging.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "ultrasound",
-   "simulation",
-   "reinforcement_learning",
-   "medical_imaging"
-  ],
-  "importance": 2,
-  "id": "df15e1707c11c44c",
-  "url": "https://arxiv.org/abs/2611.08352v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:34:53Z",
-  "added": "2026-11-08T06:19:40.833434+00:00"
- },
- {
-  "headline": "Unifying Central Flow, Rod Flow, and the Edge Coupling",
-  "tldr": "The paper shows that central flow and rod flow, two continuous-time models for gradient descent at the edge of stability, are derived from a unified edge coupling functional, and extends these flows to momentum methods like heavy ball and Adam.",
-  "key_points": [
-   "Edge coupling functional links central flow and rod flow as coarse-grainings at different time scales.",
-   "Rod flow captures the fastest time scale; central flow captures both fast and intermediate scales.",
-   "Derived analogous flows for momentum optimizers (heavy ball, Adam) and validated on neural networks.",
-   "Flows accurately track discrete gradient descent iterates across stable and edge-of-stability regimes."
-  ],
-  "why_it_matters": "Understanding and modeling the dynamics of gradient descent near the edge of stability helps improve optimizer design and training stability for deep neural networks.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "gradient_descent",
-   "edge_of_stability",
-   "continuous_time",
-   "optimization"
-  ],
-  "importance": 3,
-  "id": "adba25baec917849",
-  "url": "https://arxiv.org/abs/2611.08358v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:37:58Z",
-  "added": "2026-11-08T06:19:28.781287+00:00"
- },
- {
-  "headline": "SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing",
-  "tldr": "SHORE combines learned stability predictions with on‑policy RL to pack 3D boxes faster and achieve higher space utilization, outperforming prior state‑of‑the‑art methods.",
-  "key_points": [
-   "Learns a stability probability for each placement using a 3D U‑Net trained on executed and simulated outcomes.",
-   "Integrates stability predictions into a discrete on‑policy actor‑critic, improving learning speed and utilization.",
-   "Achieves 73% space utilization in 0.4M steps vs. 1M steps without stability modeling; 0.734 vs. 0.588 on a 60‑box benchmark.",
-   "Demonstrated on a real robot with no extra search or simulation overhead."
-  ],
-  "why_it_matters": "Efficient, stable online bin packing is critical for logistics and manufacturing; SHORE shows that stability‑aware RL can significantly boost throughput while handling real‑world uncertainty.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "reinforcement_learning",
-   "bin_packing",
-   "robotics",
-   "stability"
-  ],
-  "importance": 3,
-  "id": "66cee90f74968573",
-  "url": "https://arxiv.org/abs/2611.08364v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:42:31Z",
-  "added": "2026-11-08T06:19:16.923768+00:00"
- },
- {
-  "headline": "VisionSIM: Beyond Idealized Sensors - A Multi-Modal Simulator for Robot Perception",
-  "tldr": "VisionSIM is a physically grounded simulator that models raw measurements for cameras, event, SPAD, iToF/dToF, and thermal sensors, exposing realistic failure modes for robot perception research.",
-  "key_points": [
-   "Models raw physical measurement processes for diverse sensor modalities",
-   "Reproduces modality-specific failure modes such as LiDAR pileup, iToF phase wrapping, event camera refractory drops, and thermal emission history",
-   "Provides fine-grained control over sensor parameters for cross-modality comparison",
-   "Releases a large indoor dataset with synchronized raw measurements and rich ground‑truth annotations"
-  ],
-  "why_it_matters": "Accurate simulation of heterogeneous sensors enables researchers to develop and evaluate perception algorithms under realistic conditions, reducing the gap between simulation and real‑world deployment and accelerating progress in robotic perception.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "simulation",
-   "robotics",
-   "perception",
-   "multimodal"
-  ],
-  "importance": 3,
-  "id": "3bfa9ef44bb37e9c",
-  "url": "https://arxiv.org/abs/2611.08368v1",
-  "source": "arXiv",
-  "date": "2026-11-05T17:48:00Z",
-  "added": "2026-11-08T06:19:04.826438+00:00"
  }
 ]
