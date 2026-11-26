@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=10">
-  <link rel="stylesheet" href="about.css?v=2">
+  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="about.css?v=3">
   <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
 </head>
 <body>
@@ -92,12 +92,22 @@
     </section>
 
     <section>
+      <h2>Colours</h2>
+      <p class="muted lead">Every colour on this site comes from <b>Sanzo Wada's <i>A Dictionary of Color
+        Combinations</i></b> (1933–34), a classic Japanese study of colour harmony, using the values published at
+        <a href="https://www.wada-sanzo-colors.com/combinations/classic/all" target="_blank" rel="noopener">wada-sanzo-colors.com</a>.
+        Light mode is built on Ivory Buff paper with Deep Lyons Blue (in the spirit of combination #126); dark mode on
+        Dull Violet Black with Sulphur Yellow text. Each colour was checked for WCAG AA contrast.</p>
+      <div class="swatches" id="swatches"></div>
+    </section>
+
+    <section>
       <h2>Stack &amp; cost</h2>
       <p class="muted">Python · feedparser · RapidFuzz · fastembed (ONNX) · scikit-learn · Groq / Gemini APIs · diffusers ·
         transformers · GitHub Actions (scheduler) · GitHub Pages (hosting) · vanilla JS + transformers.js.
         <b>Total cost: $0</b>. Everything runs on free tiers.</p>
     </section>
   </main>
-  <script src="about.js?v=1"></script>
+  <script src="about.js?v=2"></script>
 </body>
 </html>

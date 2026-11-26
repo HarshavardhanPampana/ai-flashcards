@@ -1,10 +1,11 @@
 /* "How it works" page. Reuses the tokens from style.css */
-/* model colours: seiheki teal, kincha ochre, ai-iro indigo, fuji wisteria, shu vermilion */
-:root { --m-enc: #24665f; --m-fnn: #7c560c; --m-llm: #2b4c7e; --m-dec: #6a4c93; --m-diff: #b23a32; }
+/* model colours, exact Wada colours: Vandar Poel's Blue, Pale Raw Umber, Deep Lyons Blue, Violet, Carmine Red
+   (dark: Calamine Blue, Yellow Ocher, Salvia Blue, Grayish Lavender 1, Coral Red) */
+:root { --m-enc: #064f6e; --m-fnn: #71502f; --m-llm: #1c4286; --m-dec: #4f4086; --m-diff: #a62c37; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --m-enc: #7cc3bb; --m-fnn: #d9b45e; --m-llm: #8ea9d6; --m-dec: #b9a3db; --m-diff: #e8857c; }
+  :root:not([data-theme="light"]) { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #97acc8; --m-dec: #b5b1d8; --m-diff: #f58e84; }
 }
-:root[data-theme="dark"] { --m-enc: #7cc3bb; --m-fnn: #d9b45e; --m-llm: #8ea9d6; --m-dec: #b9a3db; --m-diff: #e8857c; }
+:root[data-theme="dark"] { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #97acc8; --m-dec: #b5b1d8; --m-diff: #f58e84; }
 
 .about { padding-bottom: 48px; }
 .about section { margin-top: 34px; }
@@ -76,3 +77,9 @@ table.runs th { color: var(--muted); font-weight: 600; font-size: 12px; }
 .stat, .flow li, .model, .panel, .cmp .side { border-radius: 10px; box-shadow: var(--shadow); }
 .flow li em, .model .tag { letter-spacing: .05em; }
 .dups li { border-radius: 7px; }
+.swatches { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); }
+.sw { display: grid; grid-template-columns: 40px 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+.sw .chip-c { grid-row: 1 / 3; width: 40px; height: 40px; border-radius: 7px; border: 1px solid var(--line); }
+.sw b { font-size: 13.5px; }
+.sw span:last-child { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }

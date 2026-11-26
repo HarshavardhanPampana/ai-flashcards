@@ -1,96 +1,101 @@
-/* ---------- Theme tokens: "Washi & Sumi" ----------
-   An original palette inspired by the spirit of Sanzo Wada's "A Dictionary of Color
-   Combinations" and traditional Japanese colors: warm paper, sumi ink, ai-iro indigo,
-   shu vermilion, kincha ochre, matcha, kaki persimmon, fuji wisteria, seiheki teal, nezumi grey.
-   Every text color passes WCAG AA (4.5:1) in both themes. */
+/* ---------- Theme tokens: Sanzo Wada palette ----------
+   Every named colour below is an exact colour from Sanzo Wada's "A Dictionary of Color
+   Combinations" (Classic Vol. 1, as published at wada-sanzo-colors.com). Backgrounds are
+   Wada colours thinned with white (light) or used as-is (dark). Every text colour passes
+   WCAG AA (4.5:1) in its theme.
+   Light: "Ivory Buff" paper, "Black" ink, "Deep Lyons Blue" accent, cf. combination #126.
+   Dark:  "Dull Violet Black" night, "Sulphur Yellow" text, "Salvia Blue" accent, cf. #60. */
 :root {
-  --bg: #f2ece0;                         /* washi paper */
-  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(178, 58, 50, .07) 0%, transparent 60%),
-             radial-gradient(900px 480px at 100% 0%, rgba(43, 76, 126, .08) 0%, transparent 55%);
-  --surface: #fbf8f1;                    /* kinari, unbleached silk */
-  --surface-2: #efe8da;
-  --text: #2a2723;                       /* sumi ink */
-  --muted: #6b6357;
-  --line: #e0d6c4;
-  --accent: #2b4c7e;                     /* ai-iro, indigo */
-  --accent-ink: #fbf8f1;
-  --good: #456b32;                       /* matcha, deep */
-  --warn: #9c4622;                       /* kaki, persimmon */
-  --star: #a87a0c;                       /* kincha, golden ochre */
-  --vermilion: #b23a32;                  /* shu */
-  --shadow: 0 1px 0 rgba(60, 45, 20, .04), 0 4px 14px rgba(60, 45, 20, .06);
-  --shadow-hover: 0 1px 0 rgba(60, 45, 20, .05), 0 10px 26px rgba(60, 45, 20, .11);
+  --bg: #f7edd8;                         /* Ivory Buff #ebd3a2, thinned */
+  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(166, 44, 55, .06) 0%, transparent 60%),
+             radial-gradient(900px 480px at 100% 0%, rgba(28, 66, 134, .07) 0%, transparent 55%);
+  --surface: #fbf7ee;
+  --surface-2: #f3e9d4;
+  --text: #111314;                       /* Black */
+  --muted: #635a3a;                      /* Deep Grayish Olive */
+  --line: #e7dabd;
+  --accent: #1c4286;                     /* Deep Lyons Blue */
+  --accent-ink: #fbf7ee;
+  --on-strong: #fbf7ee;                  /* text on strong colour fills */
+  --good: #437742;                       /* Cossack Green */
+  --warn: #a84222;                       /* Brick Red */
+  --star: #986f2d;                       /* Orange Citrine */
+  --vermilion: #cc1236;                  /* Carmine */
+  --shadow: 0 1px 0 rgba(75, 51, 23, .05), 0 4px 14px rgba(75, 51, 23, .07);
+  --shadow-hover: 0 1px 0 rgba(75, 51, 23, .06), 0 10px 26px rgba(75, 51, 23, .12);
   --radius: 12px;
 
-  /* category colors */
-  --c-model_release: #2b4c7e;            /* ai-iro, indigo */
-  --c-paper: #6a4c93;                    /* fuji, wisteria */
-  --c-product: #24665f;                  /* seiheki, blue-green */
-  --c-funding: #4d6623;                  /* matcha */
-  --c-acquisition: #9c4622;              /* kaki, persimmon */
-  --c-policy: #b23a32;                   /* shu, vermilion */
-  --c-hardware: #7c560c;                 /* kincha, ochre */
-  --c-open_source: #336a50;              /* tokiwa, evergreen */
-  --c-other: #6a655c;                    /* nezumi, mouse grey */
+  /* category colours (all exact Wada colours) */
+  --c-model_release: #1c4286;            /* Deep Lyons Blue */
+  --c-paper: #4f4086;                    /* Violet */
+  --c-product: #064f6e;                  /* Vandar Poel's Blue */
+  --c-funding: #555832;                  /* Lincoln Green */
+  --c-acquisition: #a84222;              /* Brick Red */
+  --c-policy: #a62c37;                   /* Carmine Red */
+  --c-hardware: #71502f;                 /* Pale Raw Umber */
+  --c-open_source: #004f46;              /* Dusky Green */
+  --c-other: #34454c;                    /* Slate Color */
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1b1a17;                       /* sumi night */
-    --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(232, 133, 124, .06) 0%, transparent 60%),
-               radial-gradient(900px 480px at 100% 0%, rgba(142, 169, 214, .07) 0%, transparent 55%);
-    --surface: #24221e;
-    --surface-2: #2e2b26;
-    --text: #ece4d4;
-    --muted: #a79f90;
-    --line: #3a362f;
-    --accent: #8ea9d6;
-    --accent-ink: #1b1a17;
-    --good: #9cbf6e;
-    --warn: #e39a6a;
-    --star: #d9b44a;
-    --vermilion: #e8857c;
-    --shadow: 0 1px 0 rgba(0, 0, 0, .25), 0 6px 18px rgba(0, 0, 0, .28);
-    --shadow-hover: 0 1px 0 rgba(0, 0, 0, .3), 0 12px 30px rgba(0, 0, 0, .4);
-    --c-model_release: #8ea9d6;
-    --c-paper: #b9a3db;
-    --c-product: #7cc3bb;
-    --c-funding: #b3c77a;
-    --c-acquisition: #e8a07a;
-    --c-policy: #e8857c;
-    --c-hardware: #d9b45e;
-    --c-open_source: #8cc2a3;
-    --c-other: #b5aea2;
+    --bg: #0d1c43;                       /* Dull Violet Black */
+    --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(244, 128, 103, .07) 0%, transparent 60%),
+               radial-gradient(900px 480px at 100% 0%, rgba(120, 205, 208, .06) 0%, transparent 55%);
+    --surface: #1c2a4e;
+    --surface-2: #253356;
+    --text: #f5ecc2;                     /* Sulphur Yellow */
+    --muted: #c2ae93;                    /* Ecru */
+    --line: #313e5f;
+    --accent: #97acc8;                   /* Salvia Blue */
+    --accent-ink: #0d1c43;
+    --on-strong: #0d1c43;
+    --good: #96d1aa;                     /* Cobalt Green */
+    --warn: #eeb480;                     /* Pinkish Cinnamon */
+    --star: #e2b540;                     /* Yellow Ocher */
+    --vermilion: #f48067;                /* Grenadine Pink */
+    --shadow: 0 1px 0 rgba(0, 0, 0, .22), 0 6px 18px rgba(0, 0, 0, .3);
+    --shadow-hover: 0 1px 0 rgba(0, 0, 0, .28), 0 12px 30px rgba(0, 0, 0, .42);
+    --c-model_release: #97acc8;          /* Salvia Blue */
+    --c-paper: #b5b1d8;                  /* Grayish Lavender 1 */
+    --c-product: #78cdd0;                /* Calamine Blue */
+    --c-funding: #96d1aa;                /* Cobalt Green */
+    --c-acquisition: #eeb480;            /* Pinkish Cinnamon */
+    --c-policy: #f58e84;                 /* Coral Red */
+    --c-hardware: #e2b540;               /* Yellow Ocher */
+    --c-open_source: #b5decc;            /* Turquoise Green */
+    --c-other: #b6bfc1;                  /* Neutral Gray */
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1b1a17;
-  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(232, 133, 124, .06) 0%, transparent 60%),
-             radial-gradient(900px 480px at 100% 0%, rgba(142, 169, 214, .07) 0%, transparent 55%);
-  --surface: #24221e;
-  --surface-2: #2e2b26;
-  --text: #ece4d4;
-  --muted: #a79f90;
-  --line: #3a362f;
-  --accent: #8ea9d6;
-  --accent-ink: #1b1a17;
-  --good: #9cbf6e;
-  --warn: #e39a6a;
-  --star: #d9b44a;
-  --vermilion: #e8857c;
-  --shadow: 0 1px 0 rgba(0, 0, 0, .25), 0 6px 18px rgba(0, 0, 0, .28);
-  --shadow-hover: 0 1px 0 rgba(0, 0, 0, .3), 0 12px 30px rgba(0, 0, 0, .4);
-  --c-model_release: #8ea9d6;
-  --c-paper: #b9a3db;
-  --c-product: #7cc3bb;
-  --c-funding: #b3c77a;
-  --c-acquisition: #e8a07a;
-  --c-policy: #e8857c;
-  --c-hardware: #d9b45e;
-  --c-open_source: #8cc2a3;
-  --c-other: #b5aea2;
+  --bg: #0d1c43;
+  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(244, 128, 103, .07) 0%, transparent 60%),
+             radial-gradient(900px 480px at 100% 0%, rgba(120, 205, 208, .06) 0%, transparent 55%);
+  --surface: #1c2a4e;
+  --surface-2: #253356;
+  --text: #f5ecc2;
+  --muted: #c2ae93;
+  --line: #313e5f;
+  --accent: #97acc8;
+  --accent-ink: #0d1c43;
+  --on-strong: #0d1c43;
+  --good: #96d1aa;
+  --warn: #eeb480;
+  --star: #e2b540;
+  --vermilion: #f48067;
+  --shadow: 0 1px 0 rgba(0, 0, 0, .22), 0 6px 18px rgba(0, 0, 0, .3);
+  --shadow-hover: 0 1px 0 rgba(0, 0, 0, .28), 0 12px 30px rgba(0, 0, 0, .42);
+  --c-model_release: #97acc8;
+  --c-paper: #b5b1d8;
+  --c-product: #78cdd0;
+  --c-funding: #96d1aa;
+  --c-acquisition: #eeb480;
+  --c-policy: #f58e84;
+  --c-hardware: #e2b540;
+  --c-open_source: #b5decc;
+  --c-other: #b6bfc1;
   color-scheme: dark;
 }
 
@@ -232,7 +237,7 @@ h1 { margin: 0; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
 }
 .new {
   font-size: 10.5px; font-weight: 800; letter-spacing: .06em; padding: 3px 7px; border-radius: 6px;
-  color: #fff; background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: var(--on-strong); background: var(--vermilion);
 }
 .stars { margin-left: auto; color: var(--star); font-size: 13px; letter-spacing: 1px; white-space: nowrap; }
 .stars .off { color: var(--line); }
@@ -259,12 +264,12 @@ h1 { margin: 0; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
   height: 32px; padding: 0 10px; border-radius: 9px; cursor: pointer; font-size: 12.5px; font-weight: 600;
   border: 1px solid var(--line); background: var(--surface-2);
 }
-.mark[data-mark="got"]:hover, .st-got .mark[data-mark="got"] { background: var(--good); color: #fff; border-color: transparent; }
-.mark[data-mark="again"]:hover, .st-again .mark[data-mark="again"] { background: var(--warn); color: #fff; border-color: transparent; }
+.mark[data-mark="got"]:hover, .st-got .mark[data-mark="got"] { background: var(--good); color: var(--on-strong); border-color: transparent; }
+.mark[data-mark="again"]:hover, .st-again .mark[data-mark="again"] { background: var(--warn); color: var(--on-strong); border-color: transparent; }
 
 .badge-state {
   position: absolute; top: 12px; right: 12px; z-index: 2; width: 22px; height: 22px; border-radius: 50%;
-  display: none; place-items: center; font-size: 12px; font-weight: 800; color: #fff; pointer-events: none;
+  display: none; place-items: center; font-size: 12px; font-weight: 800; color: var(--on-strong); pointer-events: none;
 }
 .st-got .badge-state { display: grid; background: var(--good); }
 .st-again .badge-state { display: grid; background: var(--warn); }
@@ -456,7 +461,7 @@ h1 { font-weight: 800; }
 .card.has-img .face::before { z-index: 1; }
 .cat { border-radius: 4px; letter-spacing: .04em; font-weight: 700; font-size: 11.5px; }
 .tags span { border-radius: 4px; }
-.new { background: var(--vermilion); color: #fff; border-radius: 4px; letter-spacing: .08em; }
+.new { background: var(--vermilion); color: var(--on-strong); border-radius: 4px; letter-spacing: .08em; }
 .stars .off { color: color-mix(in srgb, var(--muted) 30%, transparent); }
 .thumb img { filter: saturate(.82) sepia(.08); }        /* softer, closer to the palette */
 .mark { border-radius: 7px; }

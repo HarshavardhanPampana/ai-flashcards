@@ -86,9 +86,10 @@ Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit 
 - **Pick mode** (`P`): swipe right to keep, left to skip, then study only your picks
 - **Study mode** (`S`): one card at a time, Space flips, ← →, 1 = Got it, 2 = Review again; related stories jump in
 - "How it works" page with live metrics from the pipeline
-- **"Washi & Sumi" design:** an original palette inspired by Sanzo Wada's *A Dictionary of Color Combinations* and
-  traditional Japanese colors (ai-iro indigo, shu vermilion, kincha ochre, matcha, kaki persimmon, fuji wisteria) on
-  warm washi paper or sumi-ink dark, with Shippori Mincho headlines. Every text color passes WCAG AA in both themes.
+- **Sanzo Wada palette:** every colour is an exact colour from Sanzo Wada's *A Dictionary of Color Combinations*
+  (values from [wada-sanzo-colors.com](https://www.wada-sanzo-colors.com/combinations/classic/all)). Light mode is
+  Ivory Buff paper with Deep Lyons Blue (cf. combination #126); dark mode is Dull Violet Black with Sulphur Yellow text.
+  Each category has its own Wada colour, and every text colour passes WCAG AA. Shippori Mincho headlines.
 - Light/dark, phone layout, add-to-home-screen; progress saved per browser
 
 ## Deploy

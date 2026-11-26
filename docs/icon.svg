@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- indigo (ai-iro) tile, washi-paper cards, vermilion (shu) seal -->
-  <rect width="64" height="64" rx="12" fill="#2b4c7e"/>
-  <rect x="21" y="12" width="29" height="38" rx="4" fill="#efe8da" opacity=".45" transform="rotate(9 35 31)"/>
-  <rect x="14" y="13" width="29" height="38" rx="4" fill="#fbf8f1"/>
-  <rect x="14" y="13" width="29" height="5" rx="2" fill="#a87a0c"/>
-  <rect x="19" y="25" width="19" height="2.6" rx="1.3" fill="#2a2723" opacity=".8"/>
-  <rect x="19" y="31" width="15" height="2.6" rx="1.3" fill="#2a2723" opacity=".45"/>
-  <rect x="19" y="37" width="17" height="2.6" rx="1.3" fill="#2a2723" opacity=".45"/>
-  <rect x="31" y="40" width="13" height="13" rx="2.5" fill="#b23a32" transform="rotate(-6 37.5 46.5)"/>
-  <path d="M34.5 44h6M34.5 47h6M37.5 43v7" stroke="#fbf8f1" stroke-width="1.6" stroke-linecap="round" transform="rotate(-6 37.5 46.5)"/>
+  <!-- Wada colours: Deep Lyons Blue tile, Ivory Buff cards, Yellow Ocher band, Carmine seal -->
+  <rect width="64" height="64" rx="12" fill="#1c4286"/>
+  <rect x="21" y="12" width="29" height="38" rx="4" fill="#ebd3a2" opacity=".45" transform="rotate(9 35 31)"/>
+  <rect x="14" y="13" width="29" height="38" rx="4" fill="#fbf7ee"/>
+  <rect x="14" y="13" width="29" height="5" rx="2" fill="#e2b540"/>
+  <rect x="19" y="25" width="19" height="2.6" rx="1.3" fill="#111314" opacity=".8"/>
+  <rect x="19" y="31" width="15" height="2.6" rx="1.3" fill="#111314" opacity=".45"/>
+  <rect x="19" y="37" width="17" height="2.6" rx="1.3" fill="#111314" opacity=".45"/>
+  <rect x="31" y="40" width="13" height="13" rx="2.5" fill="#cc1236" transform="rotate(-6 37.5 46.5)"/>
+  <path d="M34.5 44h6M34.5 47h6M37.5 43v7" stroke="#fbf7ee" stroke-width="1.6" stroke-linecap="round" transform="rotate(-6 37.5 46.5)"/>
 </svg>

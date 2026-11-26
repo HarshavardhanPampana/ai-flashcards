@@ -103,3 +103,33 @@ async function main() {
     </div>`).join("");
 }
 main();
+
+// ---------- palette: exact Sanzo Wada colours used on the site ----------
+(function swatches() {
+  const P = [
+    ["Model release", "Deep Lyons Blue", "#1c4286", "Salvia Blue", "#97acc8"],
+    ["Paper", "Violet", "#4f4086", "Grayish Lavender 1", "#b5b1d8"],
+    ["Product", "Vandar Poel's Blue", "#064f6e", "Calamine Blue", "#78cdd0"],
+    ["Funding", "Lincoln Green", "#555832", "Cobalt Green", "#96d1aa"],
+    ["Acquisition", "Brick Red", "#a84222", "Pinkish Cinnamon", "#eeb480"],
+    ["Policy", "Carmine Red", "#a62c37", "Coral Red", "#f58e84"],
+    ["Hardware", "Pale Raw Umber", "#71502f", "Yellow Ocher", "#e2b540"],
+    ["Open source", "Dusky Green", "#004f46", "Turquoise Green", "#b5decc"],
+    ["Other", "Slate Color", "#34454c", "Neutral Gray", "#b6bfc1"],
+    ["Paper / night", "Ivory Buff", "#ebd3a2", "Dull Violet Black", "#0d1c43"],
+    ["Ink / text", "Black", "#111314", "Sulphur Yellow", "#f5ecc2"],
+  ];
+  const el = document.getElementById("swatches");
+  if (!el) return;
+  const dark = () => document.documentElement.dataset.theme === "dark" ||
+    (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+  const draw = () => {
+    const d = dark();
+    el.innerHTML = P.map(([role, ln, lh, dn, dh]) => {
+      const [n, h] = d ? [dn, dh] : [ln, lh];
+      return `<div class="sw"><span class="chip-c" style="background:${h}"></span><b>${esc(n)}</b><span>${h} · ${esc(role)}</span></div>`;
+    }).join("");
+  };
+  draw();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", draw);
+})();
