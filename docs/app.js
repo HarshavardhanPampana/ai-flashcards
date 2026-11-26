@@ -15,7 +15,7 @@ const store = {
 };
 let progress = store.get("progress", {});
 let picks = store.get("picks", {});          // id -> "keep" | "skip"
-const state = { cat: "", time: "all", q: "", minImp: 1, review: "", sort: "top" };
+const state = { cat: "", time: "all", q: "", minImp: 1, review: "", sort: "top", semantic: false };
 Object.assign(state, store.get("filters", {}), { q: "" });
 
 // "New since last visit": a visit = a session separated by 30+ minutes
@@ -27,6 +27,7 @@ const lastVisit = visits.previous;
 
 let cards = [];
 let view = [];
+let byId = new Map();
 
 // ---------- helpers ----------
 function esc(s) {
@@ -43,6 +44,8 @@ function ago(d) {
   if (s < 86400 * 7) return Math.round(s / 86400) + "d ago";
   return new Date(t).toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
+let images = {};
+const shortModel = (m) => String(m || "LLM").split("/").pop().replace(/-instruct$/i, "");
 const isNew = (c) => lastVisit && ts(c.added) > lastVisit;
 const stars = (n) => { n = Math.max(1, Math.min(5, n || 1)); return "★".repeat(n) + `<span class="off">${"★".repeat(5 - n)}</span>`; };
 
@@ -53,16 +56,26 @@ async function load() {
   try {
     const res = await fetch("cards.json?t=" + Date.now()); // bypass cache
     cards = await res.json();
+    try {                                                   // diffusion cover images (optional)
+      const im = await fetch("images.json?t=" + Date.now()).then((r) => (r.ok ? r.json() : {}));
+      images = im.images || {};
+    } catch { images = {}; }
   } catch {
     $("grid").innerHTML = `<div class="empty"><b>Couldn't load cards.json</b>Serve this folder over http (not file://).</div>`;
     $("updated").textContent = "";
     return;
   }
-  cards.forEach((c) => { c._cat = catKey(c.category); c._text = JSON.stringify(c).toLowerCase(); });
+  cards.forEach((c) => {
+    c._cat = catKey(c.category); c._img = images[c.id] || "";
+    c._text = [c.headline, c.tldr, c.why_it_matters, c.source, ...(c.key_points || []), ...(c.tags || []),
+      ...(c.companies || []), c.category].join(" ").toLowerCase();
+  });
+  byId = new Map(cards.map((c) => [c.id, c]));
+  syncSem();
   const latest = Math.max(0, ...cards.map((c) => ts(c.added)));
   const fresh = cards.filter(isNew).length;
-  $("updated").textContent = latest
-    ? `Updated ${ago(new Date(latest).toISOString())} · refreshes every 6 hours` + (fresh ? ` · ${fresh} new for you` : "")
+  $("updated").innerHTML = latest
+    ? `Updated ${esc(ago(new Date(latest).toISOString()))}<span class="hide-sm"> · refreshes every 6 hours</span>` + (fresh ? ` · ${fresh} new for you` : "")
     : "No cards yet";
   buildChips();
   syncControls();
@@ -100,24 +113,30 @@ function filtered(opts = {}) {
         : review === "todo" ? !progress[c.id] : progress[c.id] === review))
     .filter((c) => state.time === "all" ||
       (state.time === "new" ? isNew(c) : now - ts(c.added) < (state.time === "today" ? day : 7 * day)))
-    .filter((c) => !q || q.split(/\s+/).every((w) => c._text.includes(w)))
-    .sort((a, b) => state.sort === "new"
+    .filter((c) => !q || (semanticOn() ? (simById.get(c.id) ?? -1) >= SIM_MIN
+      : q.split(/\s+/).every((w) => c._text.includes(w))))
+    .sort((a, b) => semanticOn() ? (simById.get(b.id) ?? -1) - (simById.get(a.id) ?? -1)
+      : state.sort === "new"
       ? ts(b.added) - ts(a.added) || ts(b.date) - ts(a.date)
       : (b.importance || 1) - (a.importance || 1) || ts(b.added) - ts(a.added));
 }
 
 function cardHTML(c) {
   const st = progress[c.id];
+  const rel = (c.related || []).map((id) => byId.get(id)).filter(Boolean).slice(0, 3);
+  const sim = semanticOn() ? simById.get(c.id) : null;
   return `
-  <div class="card ${st ? "st-" + st : ""}" data-id="${esc(c.id)}" style="--c:var(--c-${c._cat})"
+  <div class="card ${st ? "st-" + st : ""}${c._img ? " has-img" : ""}" data-id="${esc(c.id)}" style="--c:var(--c-${c._cat})"
        tabindex="0" role="button" aria-label="${esc(c.headline)}. Press Enter to flip.">
     <span class="badge-state" aria-hidden="true">${st === "got" ? "✓" : st === "again" ? "↻" : ""}</span>
     <div class="inner">
       <div class="face front">
+        ${c._img ? `<div class="thumb"><img src="${esc(c._img)}" alt="" loading="lazy" decoding="async"></div>` : ""}
         <div class="meta">
           <span class="cat">${esc(catName(c._cat))}</span>
           ${isNew(c) ? `<span class="new">NEW</span>` : ""}
           ${picks[c.id] === "keep" ? `<span class="picked-heart" title="In your picks">♥</span>` : ""}
+          ${sim != null ? `<span class="match" title="How close this card is in meaning to your search">${Math.round(sim * 100)}% match</span>` : ""}
           <span class="stars" title="Importance ${c.importance || 1}/5">${stars(c.importance)}</span>
         </div>
         <h3>${esc(c.headline)}</h3>
@@ -133,6 +152,12 @@ function cardHTML(c) {
           ${(c.key_points || []).length ? `<h4>Key points</h4><ul>${c.key_points.map((k) => `<li>${esc(k)}</li>`).join("")}</ul>` : ""}
           ${c.why_it_matters ? `<h4>Why it matters</h4><p>${esc(c.why_it_matters)}</p>` : ""}
           ${(c.companies || []).length ? `<p class="companies">${c.companies.map(esc).join(" · ")}</p>` : ""}
+          ${rel.length ? `<h4>Related stories</h4><div class="rel">${rel.map((r) =>
+            `<button type="button" data-rel="${esc(r.id)}" style="--c:var(--c-${r._cat})">${esc(r.headline)}</button>`).join("")}</div>` : ""}
+          <div class="ai-labels">
+            <span title="This card was written and rated by this LLM">🤖 ${esc(shortModel(c.model))} · ★${c.importance || 1} · ${esc(catName(c._cat))}</span>
+            ${c.mlp ? `<span title="Predicted by the MLP from the raw story, before the LLM saw it">🧠 MLP · ★${c.mlp.importance} · ${esc(catName(c.mlp.category))}</span>` : ""}
+          </div>
         </div>
         <div class="actions">
           <a href="${esc(safeUrl(c.url))}" target="_blank" rel="noopener">Read source ↗</a>
@@ -157,7 +182,7 @@ function moreHTML() {
 function updateCount() {
   const filteredOut = view.length !== cards.length;
   $("count").textContent = !cards.length ? ""
-    : `Showing ${Math.min(shown, view.length)} of ${view.length}${filteredOut ? " matching" : ""} cards`
+    : `Showing ${Math.min(shown, view.length)} of ${view.length}${filteredOut ? " matching" : ""} cards${semanticOn() ? " by meaning" : ""}`
       + (filteredOut ? ` (${cards.length} total)` : "");
 }
 function render(keepPage = false) {
@@ -166,7 +191,7 @@ function render(keepPage = false) {
   $("grid").innerHTML = view.length ? view.slice(0, shown).map(cardHTML).join("") + moreHTML() : emptyHTML();
   updateCount();
   updateProgress();
-  store.set("filters", { cat: state.cat, time: state.time, minImp: state.minImp, review: state.review, sort: state.sort });
+  store.set("filters", { cat: state.cat, time: state.time, minImp: state.minImp, review: state.review, sort: state.sort, semantic: state.semantic });
 }
 
 function emptyHTML() {
@@ -214,6 +239,12 @@ $("grid").addEventListener("click", (e) => {
   }
   const card = e.target.closest(".card");
   if (!card || card.classList.contains("skel") || e.target.closest("a")) return;
+  const relBtn = e.target.closest("[data-rel]");
+  if (relBtn) {                          // open the related story (and its own related ones) in study mode
+    const r = byId.get(relBtn.dataset.rel);
+    if (r) openStudy([r, ...(r.related || []).map((id) => byId.get(id)).filter(Boolean)]);
+    return;
+  }
   const btn = e.target.closest("button[data-mark]");
   if (btn) {
     applyMarkClass(card, mark(card.dataset.id, btn.dataset.mark));
@@ -247,7 +278,10 @@ $("time").addEventListener("click", (e) => {
 let searchTimer;
 $("search").addEventListener("input", (e) => {
   clearTimeout(searchTimer);
-  searchTimer = setTimeout(() => { state.q = e.target.value; render(); }, 120);
+  searchTimer = setTimeout(() => {
+    state.q = e.target.value;
+    if (state.semantic) runSemantic(state.q); else render();
+  }, state.semantic ? 300 : 120);
 });
 $("importance").addEventListener("change", (e) => { state.minImp = +e.target.value; render(); });
 $("review").addEventListener("change", (e) => { state.review = e.target.value; render(); });
@@ -263,10 +297,10 @@ $("theme").addEventListener("click", () => {
 
 // ---------- study mode ----------
 let si = 0, deck = [];
-function openStudy() {
+function openStudy(list) {
   // unreviewed and "review again" cards first, "got it" last
   const rank = (c) => (progress[c.id] === "got" ? 2 : progress[c.id] === "again" ? 0 : 1);
-  deck = filtered().slice().sort((a, b) => rank(a) - rank(b));
+  deck = Array.isArray(list) ? list : filtered().slice().sort((a, b) => rank(a) - rank(b));
   if (!deck.length) return;
   si = 0;
   $("studyView").hidden = false;
@@ -301,7 +335,7 @@ function studyMark(how) {
   setTimeout(() => step(1), 180);
   applyMarkClass($("studyStage").firstElementChild, how);
 }
-$("study").addEventListener("click", openStudy);
+$("study").addEventListener("click", () => openStudy());
 $("studyClose").addEventListener("click", closeStudy);
 $("prev").addEventListener("click", () => step(-1));
 $("next").addEventListener("click", () => step(1));
@@ -309,6 +343,16 @@ $("got").addEventListener("click", () => studyMark("got"));
 $("again").addEventListener("click", () => studyMark("again"));
 $("studyStage").addEventListener("click", (e) => {
   const card = e.target.closest(".card"); if (!card || e.target.closest("a")) return;
+  const relBtn = e.target.closest("[data-rel]");
+  if (relBtn) {                       // jump to a related story: insert it right after this card
+    const r = byId.get(relBtn.dataset.rel);
+    if (r) {
+      const cur = deck[si];
+      deck = deck.filter((d) => d !== r); si = deck.indexOf(cur);
+      deck.splice(si + 1, 0, r); step(1);
+    }
+    return;
+  }
   const btn = e.target.closest("button[data-mark]");
   if (btn) return studyMark(btn.dataset.mark);
   card.classList.toggle("flipped");
@@ -482,5 +526,72 @@ $("pickClose").addEventListener("click", closePick);
 $("pickKeep").addEventListener("click", () => decide(1));
 $("pickSkip").addEventListener("click", () => decide(-1));
 $("pickUndo").addEventListener("click", undo);
+
+
+// ---------- AI search by meaning (same MiniLM encoder as the pipeline, running in your browser) ----------
+const SIM_MIN = 0.36;   // below this, a card is not really about your query
+let encoder = null, encLoading = null, vecIds = [], vecs = null, dim = 384;
+let simById = new Map(), simQuery = "";
+const semanticOn = () => state.semantic && state.q.trim() && simQuery === state.q.trim() && simById.size > 0;
+const setSemStatus = (t) => { $("semStatus").textContent = t; $("semStatus").hidden = !t; };
+function syncSem() {
+  $("semToggle").classList.toggle("on", !!state.semantic);
+  $("semToggle").setAttribute("aria-pressed", state.semantic ? "true" : "false");
+  $("search").placeholder = state.semantic ? "Ask by meaning… e.g. “cheaper AI chips”, “AI in medicine”"
+    : "Search headlines, companies, tags…  ( / )";
+}
+function ensureEncoder() {
+  if (encoder) return Promise.resolve(encoder);
+  if (!encLoading) {
+    encLoading = (async () => {
+      setSemStatus("Loading the AI search model (about 23 MB, first time only)…");
+      const [lib, emb] = await Promise.all([
+        import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1"),
+        fetch("embeddings.json?t=" + Date.now()).then((r) => r.json()),
+      ]);
+      lib.env.allowLocalModels = false;
+      vecIds = emb.ids || []; dim = emb.dim || 384;
+      const raw = Uint8Array.from(atob(emb.vecs || ""), (ch) => ch.charCodeAt(0));
+      const q8 = new Int8Array(raw.buffer);
+      vecs = new Float32Array(q8.length);
+      for (let r = 0; r < vecIds.length; r++) {          // int8 -> float, re-normalize each row
+        let n = 0;
+        for (let k = 0; k < dim; k++) { const v = q8[r * dim + k] / 127; vecs[r * dim + k] = v; n += v * v; }
+        n = Math.sqrt(n) || 1;
+        for (let k = 0; k < dim; k++) vecs[r * dim + k] /= n;
+      }
+      encoder = await lib.pipeline("feature-extraction", emb.browser_model || "Xenova/all-MiniLM-L6-v2", { dtype: "q8" });
+      setSemStatus("");
+      return encoder;
+    })().catch((e) => {
+      console.warn("semantic search unavailable", e);
+      encLoading = null; state.semantic = false; syncSem();
+      setSemStatus("Couldn't load AI search right now. Using keyword search.");
+      setTimeout(() => setSemStatus(""), 5000);
+      throw e;
+    });
+  }
+  return encLoading;
+}
+async function runSemantic(q) {
+  q = q.trim();
+  if (!q) { simById = new Map(); simQuery = ""; render(); return; }
+  try { await ensureEncoder(); } catch { render(); return; }
+  const out = await encoder(q, { pooling: "mean", normalize: true });
+  const qv = out.data;
+  const m = new Map();
+  for (let r = 0; r < vecIds.length; r++) {
+    let d = 0; const o = r * dim;
+    for (let k = 0; k < dim; k++) d += vecs[o + k] * qv[k];
+    m.set(vecIds[r], d);
+  }
+  if (state.q.trim() !== q || !state.semantic) return;   // user typed more meanwhile
+  simById = m; simQuery = q; render();
+}
+$("semToggle").addEventListener("click", () => {
+  state.semantic = !state.semantic; syncSem();
+  if (state.semantic) { ensureEncoder().catch(() => {}); runSemantic(state.q); } else render();
+  $("search").focus();
+});
 
 load();

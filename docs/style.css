@@ -364,3 +364,54 @@ body.studying { overflow: hidden; }
 /* "Show more" button under the grid */
 .more { grid-column: 1 / -1; display: flex; justify-content: center; padding: 6px 0 4px; }
 .more .btn { height: 44px; padding: 0 22px; }
+
+/* ---------- AI features: images, related, labels, meaning search ---------- */
+.card.has-img .front { padding-top: 0; }
+.thumb { margin: 0 -18px 2px; height: 112px; flex: none; overflow: hidden; background: var(--surface-2); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card.has-img .tldr { -webkit-line-clamp: 2; line-clamp: 2; }
+.card.has-img h3 { -webkit-line-clamp: 2; line-clamp: 2; }
+.card.has-img h3 { font-size: 1rem; }
+.match { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.rel { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.rel button {
+  text-align: left; font-size: 13px; line-height: 1.35; padding: 7px 10px; border-radius: 9px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface-2); border-left: 3px solid var(--c);
+}
+.rel button:hover { border-color: var(--c); }
+.ai-labels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.ai-labels span { font-size: 11.5px; padding: 3px 8px; border-radius: 7px; background: var(--surface-2); color: var(--muted); }
+.sem {
+  flex: none; height: 32px; padding: 0 11px; border-radius: 9px; cursor: pointer; font-size: 13px; font-weight: 600;
+  border: 1px solid var(--line); background: var(--surface-2); color: var(--muted);
+  transition: background .2s, color .2s, border-color .2s;
+}
+.sem.on { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent); border-color: var(--accent); }
+.sem-status { margin: 8px 2px 0; font-size: 13px; }
+@media (max-width: 640px) {
+  .sem span { display: none; }
+  .top-actions a.btn span { display: none; }
+  .top-actions a.btn { width: 38px; padding: 0; }
+}
+
+/* keep summaries a whole number of lines (never squeezed to a half line by the flex layout) */
+.tldr { flex-shrink: 0; line-clamp: 5; }
+.card h3 { flex-shrink: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.study-stage .card h3, .pick-stage .card h3 { -webkit-line-clamp: 4; line-clamp: 4; }
+
+a.btn { text-decoration: none; color: inherit; }
+a.btn.primary { color: var(--accent-ink); }
+@media (max-width: 640px) {
+  .brand { gap: 9px; }
+  .brand img { width: 30px; height: 30px; }
+  h1 { font-size: 1.05rem; white-space: nowrap; }
+  #updated { font-size: 12px; line-height: 1.35; }
+  .top-actions { gap: 6px; }
+  .top-actions .btn { width: 36px; height: 36px; }
+  .top-actions .btn.backlink { width: 40px; font-size: 18px; }
+  .top-row .brand img { display: none; }
+  .brand > div { min-width: 0; }
+  h1 { overflow: hidden; text-overflow: ellipsis; }
+}
+@media (max-width: 640px) { .hide-sm { display: none; } }

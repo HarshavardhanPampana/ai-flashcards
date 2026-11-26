@@ -1,14 +1,49 @@
 # AI News Flashcards
 
-Free, self-updating AI/tech news flashcards. GitHub Actions scrapes RSS feeds and APIs every 6 hours,
-summarizes the top items with a free LLM (Groq first, Gemini as backup) and commits `docs/cards.json`.
-GitHub Pages serves `docs/`.
+A self-updating study deck of AI news, powered by **five kinds of AI models** and running entirely on free
+infrastructure. Every few hours GitHub Actions scans about 300 new stories from 14 sources, removes duplicates
+(by text *and* by meaning), predicts which ones matter, has an LLM write flashcards, illustrates the top ones with
+a diffusion model, and publishes everything to a static site on GitHub Pages.
 
-## Sources
-OpenAI, Google DeepMind, Google AI, Microsoft Research, NVIDIA, Hugging Face blog, TechCrunch AI,
-The Verge AI, r/MachineLearning (RSS) · arXiv cs.AI/LG/CL · HF Daily Papers · Hacker News (Algolia).
-Edit `scraper/config.py` to add or remove sources. `fetchers.fetch_html_list` handles sites with no feed
-and checks robots.txt first.
+**Live:** https://harshavardhanpampana.github.io/ai-flashcards/ · **How it works:** [`/about.html`](docs/about.html)
+
+| Model family | Model | What it does here |
+|---|---|---|
+| **Encoder Transformer** | all-MiniLM-L6-v2 (22M params, fastembed/ONNX; transformers.js in the browser) | Semantic dedupe, related cards, search by meaning |
+| **Feedforward network** | MLP 384→128→classes (scikit-learn) | Predicts stars and category *before* the LLM; ranking uses it |
+| **LLM / Decoder Transformer** | gpt-oss-120b via Groq (Qwen, Gemini as automatic fallbacks) | Writes each card as strict JSON |
+| **Local decoder** | Qwen2.5-0.5B-Instruct (transformers, CPU) | Weekly head-to-head against the 120B API model |
+| **Diffusion model** | SD-Turbo (1-step Stable Diffusion, diffusers, CPU) | Cover images for the most important cards |
+
+## Pipeline
+
+```
+fetch (RSS + APIs) ─▶ fuzzy dedupe ─▶ [Encoder] semantic dedupe ─▶ [FNN] MLP predicts stars/category
+   ─▶ rank top 40 ─▶ [LLM] write cards ─▶ [Encoder] embed + related cards ─▶ cards.json / embeddings.json / stats.json
+                                                     └▶ (next job) [Diffusion] cover images ─▶ img/*.webp
+weekly: [Local decoder] Qwen 0.5B vs gpt-oss-120b on the same inputs ─▶ compare.json
+```
+
+| Workflow | When | What |
+|---|---|---|
+| `update-flashcards` | every 6 h (GitHub runs it ~2×/day in practice) | fetch → ML → LLM → commit |
+| `generate-images` | after each successful update | SD-Turbo images for up to 8 new top cards |
+| `compare-models` | Mondays + on demand | local decoder vs API model |
+| `tests` | every push | 12 unit tests (`pytest`) |
+
+## Results (measured on real data)
+
+- **MLP vs LLM:** on a held-out 20% of ~980 cards, the MLP matches the LLM's category **80%** of the time
+  (always-guess-most-common: 56%), its stars are exact **76%** and within ±1 **98%**. It has ~50K weights, about
+  2 million times smaller than the LLM, and trains in about 5 s.
+- **Semantic dedupe:** tuned on 131 stories with known matches (`python -m eval.dedupe_eval`). At cosine ≥ 0.80 it
+  catches 87% of true duplicates and flags ~2% of other stories. Its value is cross-outlet duplicates, the same
+  story in different words, which fuzzy title matching cannot catch.
+- **Local 0.5B vs 120B decoder:** the small model writes valid card JSON about ⅔ of the time at ~9 tokens/s on CPU, and
+  mostly disagrees on category and stars. Model size matters a lot for reliable structured output.
+- **Diffusion on CPU:** ~13–17 s per 512×512 image with 1 step; ~22 KB WebP each.
+- **Reliability:** the LLM step paces itself to free-tier limits, falls back across models and providers, and validates
+  JSON. 50+ scheduled runs succeeded in a row.
 
 ## Local setup
 ```bash
@@ -17,51 +52,50 @@ python -m venv .venv
 pip install -r requirements.txt
 copy .env.example .env            # then add your Groq key (console.groq.com) and/or Gemini key (aistudio.google.com)
 ```
+For images and the model comparison, also:
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements-gen.txt
+```
 
 | Command | What it does |
 |---|---|
-| `python test_fetch.py` | Fetch only. Prints counts per source (no LLM) |
-| `python -m scraper.main` | Full pipeline: fetch, dedupe, rank, summarize, write `docs/cards.json` |
-| `python -m scraper.main --no-llm` | Plain cards without an LLM, for testing the site. Doesn't mark items as seen; real runs replace these cards |
+| `python -m scraper.main` | Full pipeline: fetch, dedupe, ML, LLM, write `docs/*.json` |
+| `python -m scraper.main --no-llm` / `--no-ml` | Test without the LLM / without the encoder and MLP |
+| `python -m gen.images` | Diffusion cover images (`IMAGES_PER_RUN`, default 8) |
+| `python -m gen.compare` | Local decoder vs API comparison (`COMPARE_N`, `LOCAL_MODEL`) |
+| `python -m eval.dedupe_eval` | Measure semantic vs fuzzy dedupe on live data |
+| `python -m pytest -q` | Unit tests |
 | `python -m http.server 8000 --directory docs` | Preview the site at http://localhost:8000 |
 
 Environment variables: `GROQ_API_KEY`, `GEMINI_API_KEY` (at least one), `GROQ_MODEL` / `LLM_MODEL` (optional:
 force a model; blank = auto-pick from what your key can use), `LLM_ORDER` (default `groq,gemini`),
-`MAX_CARDS_PER_RUN` (default 40). The site keeps the newest 1,000 cards from the last 14 days
-(`KEEP_DAYS` and `MAX_CARDS_TOTAL` in `scraper/main.py`).
+`MAX_CARDS_PER_RUN` (default 40). The site keeps the newest 1,000 cards from the last 14 days.
 
-How the LLM step copes with free tiers: each provider paces itself to its per-minute limit, moves to its
-next model when one is overloaded or out of quota (each model has its own free quota), and is switched off
-for the rest of the run if it keeps failing. After 3 failed cards in a row the run stops without marking
-those items as seen, so they're retried next time.
-
-## Deploy
-1. Create a **public** GitHub repo `ai-flashcards` and push this folder to `main`.
-2. Settings → Secrets and variables → Actions:
-   - Secret `GROQ_API_KEY` (main) and/or `GEMINI_API_KEY` (backup)
-   - Optional variables `GROQ_MODEL` / `LLM_MODEL` to force a specific model (otherwise one is picked automatically)
-3. Settings → Pages → Deploy from a branch → `main` / `/docs`.
-4. Actions → update-flashcards → **Run workflow** to test it. After that it runs every 6 hours.
-
-Site: `https://<username>.github.io/ai-flashcards/`
-
-## Budget
-4 runs/day × 40 cards = 160 LLM calls/day (about 1.2K tokens each). Groq's free tier (about 1,000
-requests/day per model) covers this. Gemini's free tier can be as low as 20 requests/day, so it works only
-as a backup. Check your real limits in each provider's console and lower `MAX_CARDS_PER_RUN` if needed.
+## Sources
+OpenAI, Google DeepMind, Google AI, Microsoft Research, NVIDIA, Hugging Face blog, BAIR, TechCrunch AI, The Verge AI,
+MIT Technology Review, Ars Technica (RSS) · arXiv cs.AI/LG/CL · HF Daily Papers · Hacker News (Algolia).
+Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit now blocks automated feed access.)
 
 ## Site features
-- Click a card to flip it: the front has the headline and TL;DR, the back has key points and why it matters
-- Color-coded category chips, a time filter (All / New since your last visit / Today / This week),
-  importance, review status and sort
-- Search across headlines, summaries, companies and tags (press `/`)
-- **Pick mode** (press `P`): swipe through cards like a deck. Right (or →) keeps a card, left (or ←) skips it,
-  Z undoes, and a tap peeks at the back. Then "Study my picks", or filter the grid by **♥ My picks**.
-- **Study mode** (press `S`): one card at a time. Space flips, ← → move, 1 = Got it, 2 = Review again,
-  swipe on a phone. Cards marked "Review again" come first.
-- Light/dark toggle, and it can be added to a phone home screen
-- Progress ("Got it" / "Review again"), filters and theme are saved per browser in localStorage
+- Flip cards (front: cover image, headline, TL;DR; back: key points, why it matters, related stories, and both the
+  LLM's and the MLP's labels)
+- **Search by meaning** (✨): your query is embedded *in the browser* with the same MiniLM encoder and matched
+  against every card's vector, so "cheaper AI chips" finds stories that never use those words
+- Category chips, time filter (All / New / Today / This week), importance, review status, sort
+- **Pick mode** (`P`): swipe right to keep, left to skip, then study only your picks
+- **Study mode** (`S`): one card at a time, Space flips, ← →, 1 = Got it, 2 = Review again; related stories jump in
+- "How it works" page with live metrics from the pipeline
+- Light/dark, phone layout, add-to-home-screen; progress saved per browser
 
-When you change `docs/style.css` or `docs/app.js`, bump the `?v=` number on their links in
-`docs/index.html`. GitHub Pages lets browsers cache files for 10 minutes, so without the bump a returning
-visitor can get the new page with the old script.
+## Deploy
+1. Public GitHub repo, push to `main`.
+2. Settings → Secrets and variables → Actions: secret `GROQ_API_KEY` (and/or `GEMINI_API_KEY`).
+3. Settings → Pages → Deploy from a branch → `main` / `/docs`.
+4. Actions → update-flashcards → **Run workflow**. Images and comparisons follow automatically.
+
+**Cost: $0.** GitHub Actions and Pages are free for public repos, Groq and Gemini have free tiers, and every model
+runs on CPU. SD-Turbo's license allows personal, non-commercial use.
+
+When you change `docs/style.css` or `docs/app.js`, bump the `?v=` number on their links in `docs/index.html`
+(GitHub Pages lets browsers cache files for 10 minutes).

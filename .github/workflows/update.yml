@@ -26,6 +26,12 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache encoder model
+        uses: actions/cache@v4
+        with:
+          path: .cache/fastembed
+          key: fastembed-minilm-v1
+
       - name: Run scraper
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -39,7 +45,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/cards.json data/seen.json
+          for f in docs/cards.json docs/embeddings.json docs/stats.json data/seen.json data/compare_inputs.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
           git diff --staged --quiet || git commit -m "chore: update flashcards"
           git pull --rebase
           git push

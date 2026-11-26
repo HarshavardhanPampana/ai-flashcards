@@ -1,0 +1,62 @@
+name: generate-images
+
+# Runs right after each successful card update (and on demand): SD-Turbo makes cover images
+# for the most important new cards.
+on:
+  workflow_run:
+    workflows: [update-flashcards]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many images to generate"
+        default: "8"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-flashcards      # never runs at the same time as the scraper
+  cancel-in-progress: false
+
+jobs:
+  images:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main                # get the cards the scraper just committed
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install PyTorch (CPU) and diffusers
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-gen.txt
+
+      - name: Cache model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-sd-turbo-v1
+
+      - name: Generate images
+        env:
+          IMAGES_PER_RUN: ${{ github.event.inputs.count || '8' }}
+          HF_HUB_DISABLE_TELEMETRY: "1"
+        run: python -u -m gen.images
+
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A docs/images.json
+          if [ -d docs/img ]; then git add -A docs/img; fi
+          git diff --staged --quiet || git commit -m "chore: update card images"
+          git pull --rebase
+          git push

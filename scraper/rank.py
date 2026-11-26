@@ -5,6 +5,7 @@ from .config import RSS_SOURCES, KEYWORDS
 
 WEIGHTS = {s["name"]: s["weight"] for s in RSS_SOURCES}
 WEIGHTS.update({"arXiv": 1.0, "HF Daily Papers": 2.5, "Hacker News": 1.5})
+MLP_WEIGHT = 0.8   # how much the MLP's predicted stars count in ranking
 
 # word-boundary match so "model" doesn't match inside unrelated words like "remodel"
 _KW = [re.compile(r"\b" + re.escape(k) + r"\b") for k in KEYWORDS]
@@ -16,6 +17,9 @@ def score(it):
     s += 0.5 * sum(bool(k.search(text)) for k in _KW)
     s += math.log1p(it["extra"].get("upvotes", 0) or 0) * 0.8   # HF papers
     s += math.log1p(it["extra"].get("points", 0) or 0) * 0.5    # Hacker News
+    mlp = it["extra"].get("mlp")
+    if mlp:   # the feedforward network's predicted stars (1-5), centred on 2.5
+        s += MLP_WEIGHT * (mlp.get("expected_importance", mlp.get("importance", 2.5)) - 2.5)
     return s
 
 
@@ -36,4 +40,6 @@ def top_n(items, n):
         out.append(it)
         if len(out) >= n:
             return out
+    # fill leftover slots with news/company items first (otherwise papers took >50% of all cards)
+    rest.sort(key=lambda it: it["category"] == "paper")
     return out + rest[: n - len(out)]

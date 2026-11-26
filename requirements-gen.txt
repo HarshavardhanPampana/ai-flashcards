@@ -1,0 +1,7 @@
+# Extra libraries for the image (diffusion) and model-comparison (local decoder) workflows.
+# Install PyTorch first:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+accelerate==1.16.0
+diffusers==0.43.0
+pillow==13.0.0
+safetensors==0.8.0
+transformers==5.24.1

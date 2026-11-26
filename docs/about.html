@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How It Works · AI News Flashcards</title>
+  <meta name="description" content="The five AI models behind AI News Flashcards, and how well they work, measured live.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="about.css?v=1">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="./" style="text-decoration:none;color:inherit">
+        <img src="icon.svg" alt="" width="34" height="34">
+        <div>
+          <h1>How it works</h1>
+          <p class="muted" id="updated">Five AI models, one self-updating pipeline</p>
+        </div>
+      </a>
+      <div class="top-actions"><a class="btn primary backlink" href="./" aria-label="Back to cards">←<span>&nbsp;Back to cards</span></a></div>
+    </div>
+  </header>
+
+  <main class="wrap about">
+    <section class="hero-stats" id="heroStats"></section>
+
+    <section>
+      <h2>The pipeline</h2>
+      <p class="muted lead">Every 6 hours a GitHub Actions job runs this pipeline on a free CPU machine. The site
+        you're reading is a static page that loads the results.</p>
+      <ol class="flow">
+        <li><span class="step">1</span><div><b>Fetch</b><p>About 300 new items from 14 sources: OpenAI, DeepMind, Google AI,
+          Microsoft Research, NVIDIA, Hugging Face, BAIR, TechCrunch, The Verge, MIT Tech Review, Ars Technica, arXiv, HF Daily Papers, Hacker News</p></div></li>
+        <li><span class="step">2</span><div><b>Fuzzy dedupe</b><p>Drops stories already seen and near-identical titles
+          (RapidFuzz string matching).</p></div></li>
+        <li class="m enc"><span class="step">3</span><div><b>Semantic dedupe <em>Encoder</em></b><p>MiniLM turns each story into
+          a 384-number meaning vector. If it's ≥ 0.80 similar to an existing card, it's the same story in other words
+          → dropped.</p></div></li>
+        <li class="m fnn"><span class="step">4</span><div><b>Predict importance <em>Feedforward network</em></b><p>An MLP trained
+          on ~1,000 past cards guesses each story's stars and category <i>before</i> any LLM call, and ranking uses it to
+          choose the best 40.</p></div></li>
+        <li class="m llm"><span class="step">5</span><div><b>Write the card <em>LLM · decoder</em></b><p>gpt-oss-120b (via Groq)
+          writes the headline, TL;DR, key points, why it matters, category and stars as strict JSON. It falls back to other
+          models and Gemini on errors.</p></div></li>
+        <li class="m enc"><span class="step">6</span><div><b>Related cards + search index <em>Encoder</em></b><p>New cards are
+          embedded. The 4 nearest neighbours become "Related stories", and the vectors power search by meaning in your
+          browser.</p></div></li>
+        <li class="m diff"><span class="step">7</span><div><b>Cover images <em>Diffusion</em></b><p>A follow-up job runs
+          SD-Turbo (one-step Stable Diffusion) on CPU to illustrate the most important new cards.</p></div></li>
+        <li class="m dec"><span class="step">★</span><div><b>Weekly model comparison <em>Local decoder</em></b><p>A 0.5B-parameter
+          open model (Qwen2.5) runs locally on the same inputs, and we measure how close it gets to the 120B API model.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Models</h2>
+      <div class="models">
+        <div class="model enc"><span class="tag">Encoder Transformer</span><b>all-MiniLM-L6-v2</b>
+          <p>22M params · 384-d embeddings · runs in the pipeline <i>and</i> in your browser (transformers.js)</p></div>
+        <div class="model fnn"><span class="tag">Feedforward network</span><b>MLP (384 → 128 → classes)</b>
+          <p id="mlpParams">scikit-learn · retrained every run on the LLM's own labels</p></div>
+        <div class="model llm"><span class="tag">LLM · Decoder Transformer</span><b id="apiModel">gpt-oss-120b</b>
+          <p>via Groq's free API · Gemini as backup · JSON output mode</p></div>
+        <div class="model dec"><span class="tag">Local decoder</span><b id="localModel">Qwen2.5-0.5B-Instruct</b>
+          <p>Hugging Face transformers on CPU · compared against the API model</p></div>
+        <div class="model diff"><span class="tag">Diffusion model</span><b id="imgModel">SD-Turbo</b>
+          <p id="imgInfo">1 denoising step · 512×512 → 448×280 WebP</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Results, measured live</h2>
+      <div class="results">
+        <div class="panel" id="mlpPanel"><h3>MLP vs the LLM</h3><p class="muted">Loading…</p></div>
+        <div class="panel" id="dedupePanel"><h3>Duplicates caught by meaning</h3><p class="muted">Loading…</p></div>
+      </div>
+      <div class="panel wide" id="runsPanel"><h3>Recent runs</h3><p class="muted">Loading…</p></div>
+    </section>
+
+    <section id="compareSection">
+      <h2>Same story, two decoders</h2>
+      <p class="muted lead">Identical prompt and input. On the left, the 120B model the site uses; on the right, a 0.5B model
+        running on a laptop-class CPU.</p>
+      <div id="compareSummary" class="hero-stats small"></div>
+      <div id="compareItems"></div>
+    </section>
+
+    <section>
+      <h2>Stack &amp; cost</h2>
+      <p class="muted">Python · feedparser · RapidFuzz · fastembed (ONNX) · scikit-learn · Groq / Gemini APIs · diffusers ·
+        transformers · GitHub Actions (scheduler) · GitHub Pages (hosting) · vanilla JS + transformers.js.
+        <b>Total cost: $0</b>. Everything runs on free tiers.</p>
+    </section>
+  </main>
+  <script src="about.js?v=1"></script>
+</body>
+</html>

@@ -250,7 +250,8 @@ def summarize(item, retries=2):
                 if not card["headline"]:
                     raise ValueError("empty headline")
                 card.update({"id": item["id"], "url": item["url"],
-                             "source": item["source"], "date": item["published"]})
+                             "source": item["source"], "date": item["published"],
+                             "model": p.models[p.idx] if p.models and p.idx < len(p.models) else p.name})
                 p.fails = 0
                 return card
             except FatalLLMError as e:
