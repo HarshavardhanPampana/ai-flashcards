@@ -129,24 +129,22 @@ main();
 
 // ---------- palette: exact Sanzo Wada colours used on the site ----------
 (function swatches() {
-  const P = [
-    ["Model release", "Deep Lyons Blue", "#1c4286", "Pale King's Blue 2", "#a7d4e4"],
-    ["Paper", "Violet", "#4f4086", "Grayish Lavender 1", "#b5b1d8"],
-    ["Product", "Vandar Poel's Blue", "#064f6e", "Calamine Blue", "#78cdd0"],
-    ["Funding", "Lincoln Green", "#555832", "Light Green Yellow", "#c7d14f"],
-    ["Acquisition", "Brick Red", "#a84222", "Pinkish Cinnamon", "#eeb480"],
-    ["Policy", "Carmine Red", "#a62c37", "Corinthian Pink", "#f8b6ba"],
-    ["Hardware", "Pale Raw Umber", "#71502f", "Yellow Ocher", "#e2b540"],
-    ["Open source", "Dusky Green", "#004f46", "Cobalt Green", "#96d1aa"],
+  const P = [   // [role, light name, light hex, dark name, dark hex]
+    ["Model release", "Blue", "#006eb8", "Yellow", "#fff200"],
+    ["Paper", "Violet", "#4f4086", "Lilac", "#b984af"],
+    ["Product", "Antwarp Blue", "#007190", "Calamine Blue", "#78cdd0"],
+    ["Funding", "Cossack Green", "#437742", "Light Green", "#87c540"],
+    ["Acquisition", "Rosolanc Purple", "#b73f74", "Yellow Orange", "#f99d1b"],
+    ["Policy", "Carmine", "#cc1236", "Peach Red", "#f15a30"],
+    ["Hardware", "Brick Red", "#a84222", "Eosine Pink", "#f37f94"],
+    ["Open source", "Dusky Green", "#004f46", "Sea Green", "#00b49b"],
     ["Other", "Slate Color", "#34454c", "Neutral Gray", "#b6bfc1"],
-    ["Paper / night", "Ivory Buff", "#ebd3a2", "Deep Slate Green", "#112f2c"],
-    ["Ink / text", "Black", "#111314", "Naples Yellow", "#fbe6a0"],
-    ["Accent", "Deep Lyons Blue", "#1c4286", "Coral Red", "#f58e84"],
+    ["Accent", "Carmine", "#cc1236", "Peach Red", "#f15a30"],
+    ["Ink / NEW", "Black", "#111314", "Yellow", "#fff200"],
   ];
   const el = document.getElementById("swatches");
   if (!el) return;
-  const dark = () => document.documentElement.dataset.theme === "dark" ||
-    (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+  const dark = () => document.documentElement.dataset.theme !== "light";   // dark is the default
   const draw = () => {
     const d = dark();
     el.innerHTML = P.map(([role, ln, lh, dn, dh]) => {
@@ -155,5 +153,5 @@ main();
     }).join("");
   };
   draw();
-  matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();

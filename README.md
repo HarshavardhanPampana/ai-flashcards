@@ -90,11 +90,11 @@ Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit 
 - **Pick mode** (`P`): swipe right to keep, left to skip, then study only your picks
 - **Study mode** (`S`): one card at a time, Space flips, ← →, 1 = Got it, 2 = Review again; related stories jump in
 - "How it works" page with live metrics from the pipeline
-- **Sanzo Wada palette:** every colour is an exact colour from Sanzo Wada's *A Dictionary of Color Combinations*
-  (values from [wada-sanzo-colors.com](https://www.wada-sanzo-colors.com/combinations/classic/all)). Light mode is
-  Ivory Buff paper with Deep Lyons Blue (cf. combination #126); dark mode is a forest night of Deep Slate Green with
-  Naples Yellow text and Coral Red (cf. #166).
-  Each category has its own Wada colour, and every text colour passes WCAG AA. Shippori Mincho headlines.
+- **Tokyo neon design:** dark by default, with accent and category colours from Sanzo Wada's brightest inks
+  (Peach Red, Yellow, Sea Green, Calamine Blue; values from wada-sanzo-colors.com), glowing chips and cards, and a crisp
+  white light mode. Every text colour passes WCAG AA. Shippori Mincho headlines.
+- **Front page:** a "Today in AI" masthead with today's top story and live stats, a scrolling ticker of the newest
+  headlines, trending topic chips (tap to filter), and a footer with sources and credits
 - Light/dark, phone layout, add-to-home-screen; progress saved per browser
 
 ## Deploy

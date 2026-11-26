@@ -78,6 +78,7 @@ async function load() {
     ? `Updated ${esc(ago(new Date(latest).toISOString()))}<span class="hide-sm"> · refreshes every 6 hours</span>` + (fresh ? ` · ${fresh} new for you` : "")
     : "No cards yet";
   buildChips();
+  buildMasthead();
   syncControls();
   render();
 }
@@ -223,6 +224,8 @@ function updateProgress() {
   const pct = cards.length ? Math.round((got / cards.length) * 100) : 0;
   $("bar").style.width = pct + "%";
   $("progress").textContent = `${got} / ${cards.length} learned`;
+  const tile = document.querySelector("#mhStats .mh-stat:last-child b");   // masthead "learned" tile
+  if (tile) tile.textContent = got;
 }
 
 function mark(id, how) {
@@ -306,8 +309,7 @@ $("sort").addEventListener("change", (e) => { state.sort = e.target.value; rende
 
 $("theme").addEventListener("click", () => {
   const root = document.documentElement;
-  const dark = root.dataset.theme ? root.dataset.theme === "dark"
-    : matchMedia("(prefers-color-scheme: dark)").matches;
+  const dark = root.dataset.theme !== "light";          // dark is the default look
   root.dataset.theme = dark ? "light" : "dark";
   try { localStorage.setItem("theme", root.dataset.theme); } catch {}
 });
@@ -661,6 +663,75 @@ function observeCards() {
 }
 $("grid").addEventListener("animationend", (e) => {
   if (e.target.classList?.contains("in")) e.target.classList.remove("pre", "in", "watched");
+});
+
+
+// ---------- masthead, live ticker, stats and trending topics ----------
+function buildMasthead() {
+  const DAY = 86400e3, nowT = Date.now();
+  const today = cards.filter((c) => nowT - ts(c.added) < DAY);
+  const recent = today.length ? today : cards.slice(0, 40);
+  const week = cards.filter((c) => nowT - ts(c.added) < 7 * DAY);
+  const sources = new Set(recent.map((c) => c.source));
+  const latest = Math.max(0, ...cards.map((c) => ts(c.added)));
+  $("mhKicker").textContent = new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })
+    + (latest ? " · updated " + ago(new Date(latest).toISOString()) : "");
+  const top = recent.slice().sort((a, b) => (b.importance || 1) - (a.importance || 1))[0];
+  $("mhSub").innerHTML = cards.length
+    ? `<b>${recent.length}</b> new ${today.length ? "stories in the last 24 hours" : "stories"} from <b>${sources.size}</b> sources.`
+      + (top ? ` Today's top story: <a href="#" data-open="${esc(top.id)}">${esc(top.headline)}</a>` : "")
+    : "No stories yet. The pipeline runs a couple of times a day.";
+
+  // stats
+  const catCount = {};
+  recent.forEach((c) => { catCount[c._cat] = (catCount[c._cat] || 0) + 1; });
+  const topCat = Object.entries(catCount).sort((a, b) => b[1] - a[1])[0];
+  const learned = cards.filter((c) => progress[c.id] === "got").length;
+  const stat = (n, label, cls = "", style = "") => `<div class="mh-stat ${cls}" style="${style}"><b>${n}</b><span>${label}</span></div>`;
+  $("mhStats").innerHTML = [
+    stat(today.length, "new today", "hot"),
+    stat(new Set(week.map((c) => c.source)).size, "sources this week"),
+    topCat ? stat(esc(catName(topCat[0])), "top topic today", "topic", `--c:var(--c-${topCat[0]})`) : "",
+    stat(learned, "cards you've learned"),
+  ].join("");
+
+  // ticker: newest headlines, duplicated so the loop is seamless
+  const newest = cards.slice().sort((a, b) => ts(b.added) - ts(a.added) || (b.importance || 1) - (a.importance || 1)).slice(0, 16);
+  const items = newest.map((c) => `<button type="button" class="tick" data-open="${esc(c.id)}" style="--c:var(--c-${c._cat})">
+    <span class="dot"></span>${esc(c.headline)}</button>`).join("");
+  $("ticker").innerHTML = items + `<span aria-hidden="true" class="tick-dup">${items}</span>`;
+  $("ticker").style.setProperty("--dur", Math.max(40, newest.length * 7) + "s");
+  $("tickerWrap").hidden = !newest.length;
+
+  // trending tags (last 48 h, or the last week if it's quiet)
+  const pool = cards.filter((c) => nowT - ts(c.added) < 2 * DAY);
+  const tagCount = {};
+  (pool.length >= 20 ? pool : week).forEach((c) => (c.tags || []).forEach((t) => {
+    const k = String(t).trim().toLowerCase(); if (k.length > 1) tagCount[k] = (tagCount[k] || 0) + 1;
+  }));
+  const tags = Object.entries(tagCount).filter(([, n]) => n > 1).sort((a, b) => b[1] - a[1]).slice(0, 12);
+  $("trending").innerHTML = tags.length
+    ? `<span class="t-label">Trending</span>` + tags.map(([t, n], i) =>
+        `<button type="button" class="t-chip" data-tag="${esc(t)}" style="--i:${i}">#${esc(t)} <span>${n}</span></button>`).join("")
+    : "";
+}
+// clicks in the masthead / ticker open that card; trending chips search for the tag
+document.addEventListener("click", (e) => {
+  const open = e.target.closest("[data-open]");
+  if (open && !open.closest(".card")) {
+    e.preventDefault();
+    const c = byId.get(open.dataset.open);
+    if (c) openStudy([c, ...(c.related || []).map((id) => byId.get(id)).filter(Boolean)]);
+    return;
+  }
+  const tag = e.target.closest("[data-tag]");
+  if (tag) {
+    const q = state.q.trim().toLowerCase() === tag.dataset.tag ? "" : tag.dataset.tag;
+    state.q = q; $("search").value = q;
+    document.querySelectorAll(".t-chip").forEach((b) => b.classList.toggle("on", b.dataset.tag === q && !!q));
+    if (state.semantic && q) runSemantic(q); else render();
+    if (q) $("count").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });
 
 load();

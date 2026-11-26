@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>AI News Flashcards</title>
   <meta name="description" content="Self-updating flashcards of the latest AI research, model releases and industry news.">
-  <meta name="theme-color" content="#f7edd8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#112f2c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0b0c0f">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
   <script>
     // apply saved theme before paint (no flash)
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
@@ -51,6 +50,19 @@
       </div>
     </div>
 
+    <section class="wrap masthead" aria-label="Today in AI">
+      <div class="mh-text">
+        <p class="kicker" id="mhKicker">&nbsp;</p>
+        <h2 class="mh-title">Today in <span>AI</span></h2>
+        <p class="mh-sub" id="mhSub">Loading the latest stories…</p>
+      </div>
+      <div class="mh-stats" id="mhStats"></div>
+    </section>
+    <div class="ticker" id="tickerWrap" aria-label="Latest headlines">
+      <span class="ticker-label">Latest</span>
+      <div class="ticker-view"><div class="ticker-track" id="ticker"></div></div>
+    </div>
+
     <div class="wrap">
       <div class="search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke-width="2"/><path d="m20 20-4-4" stroke-width="2" stroke-linecap="round"/></svg>
@@ -61,6 +73,7 @@
       <p id="semStatus" class="sem-status muted" hidden aria-live="polite"></p>
 
       <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+      <div class="trending" id="trending" aria-label="Trending topics"></div>
 
       <div class="filters">
         <div class="seg" role="group" aria-label="Time range" id="time">
@@ -107,6 +120,26 @@
   </header>
 
   <main id="grid" class="wrap grid"></main>
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-brand">AI News Flashcards</p>
+        <p class="muted">A self-updating study deck of AI news. Five kinds of AI models read about 300 stories a day so you
+          can learn the important ones in minutes.</p>
+        <a href="about.html">How it works →</a>
+      </div>
+      <div>
+        <p class="foot-h">Sources</p>
+        <p class="muted" id="footSources">OpenAI, Google DeepMind, Google AI, Microsoft Research, NVIDIA, Hugging Face, BAIR,
+          TechCrunch, The Verge, MIT Technology Review, Ars Technica, arXiv, HF Daily Papers, Hacker News</p>
+      </div>
+      <div>
+        <p class="foot-h">Made with</p>
+        <p class="muted">gpt-oss-120b · MiniLM · an MLP · SD-Turbo · Qwen · GitHub Actions and Pages. Colours from Sanzo
+          Wada's <i>A Dictionary of Color Combinations</i>. Running cost: $0.</p>
+      </div>
+    </div>
+  </footer>
   <p class="wrap hint muted">Tip: click a card to flip it · <kbd>P</kbd> to swipe-pick cards · <kbd>S</kbd> for study mode · <kbd>/</kbd> to search</p>
 
   <!-- Study mode -->
@@ -140,6 +173,6 @@
     <p class="muted study-help">Swipe or drag: right = keep, left = skip · tap to peek at the back · ← → keys</p>
   </div>
 
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>
