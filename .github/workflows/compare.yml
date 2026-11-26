@@ -1,27 +1,28 @@
 name: compare-models
 
 # Weekly (and on demand): summarize a few recent stories with a small local decoder
-# (Qwen2.5-0.5B on CPU) and compare with the big API model's cards.
+# (Qwen2.5-0.5B and 1.5B on CPU) and compare with the big API model's cards.
+# Results accumulate week by week, so the sample keeps growing.
 on:
   schedule:
     - cron: "40 3 * * 1"         # Mondays 03:40 UTC
   workflow_dispatch:
     inputs:
       count:
-        description: "How many stories to compare"
-        default: "5"
+        description: "How many new stories to compare (per model)"
+        default: "15"
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-flashcards
+  group: compare-models          # own queue: long runs must not hold up the scraper
   cancel-in-progress: false
 
 jobs:
   compare:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
 
@@ -41,11 +42,11 @@ jobs:
           path: |
             ~/.cache/huggingface
             .cache/fastembed
-          key: hf-qwen05-minilm-v1
+          key: hf-qwen05-qwen15-minilm-v1
 
       - name: Compare models
         env:
-          COMPARE_N: ${{ github.event.inputs.count || '5' }}
+          COMPARE_N: ${{ github.event.inputs.count || '15' }}
         run: python -u -m gen.compare
 
       - name: Commit results

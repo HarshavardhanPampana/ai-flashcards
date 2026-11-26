@@ -12,7 +12,7 @@ a diffusion model, and publishes everything to a static site on GitHub Pages.
 | **Encoder Transformer** | all-MiniLM-L6-v2 (22M params, fastembed/ONNX; transformers.js in the browser) | Semantic dedupe, related cards, search by meaning |
 | **Feedforward network** | MLP 384→128→classes (scikit-learn) | Predicts stars and category *before* the LLM; ranking uses it |
 | **LLM / Decoder Transformer** | gpt-oss-120b via Groq (Qwen, Gemini as automatic fallbacks) | Writes each card as strict JSON |
-| **Local decoder** | Qwen2.5-0.5B-Instruct (transformers, CPU) | Weekly head-to-head against the 120B API model |
+| **Local decoders** | Qwen2.5-0.5B and 1.5B-Instruct (transformers, CPU) | Weekly head-to-head against the 120B API model |
 | **Diffusion model** | SD-Turbo (1-step Stable Diffusion, diffusers, CPU) | Cover images for the most important cards |
 
 ## Pipeline
@@ -21,14 +21,14 @@ a diffusion model, and publishes everything to a static site on GitHub Pages.
 fetch (RSS + APIs) ─▶ fuzzy dedupe ─▶ [Encoder] semantic dedupe ─▶ [FNN] MLP predicts stars/category
    ─▶ rank top 40 ─▶ [LLM] write cards ─▶ [Encoder] embed + related cards ─▶ cards.json / embeddings.json / stats.json
                                                      └▶ (next job) [Diffusion] cover images ─▶ img/*.webp
-weekly: [Local decoder] Qwen 0.5B vs gpt-oss-120b on the same inputs ─▶ compare.json
+weekly: [Local decoders] Qwen 0.5B and 1.5B vs gpt-oss-120b on the same inputs ─▶ compare.json
 ```
 
 | Workflow | When | What |
 |---|---|---|
 | `update-flashcards` | every 6 h (GitHub runs it ~2×/day in practice) | fetch → ML → LLM → commit |
 | `generate-images` | after each successful update | SD-Turbo images for up to 8 new top cards |
-| `compare-models` | Mondays + on demand | local decoder vs API model |
+| `compare-models` | Mondays + on demand | 0.5B and 1.5B local decoders vs API model (15 new stories each per run, results accumulate) |
 | `tests` | every push | 12 unit tests (`pytest`) |
 
 ## Results (measured on real data)

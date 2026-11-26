@@ -36,7 +36,6 @@ async function main() {
   if (images?.model) $("imgModel").textContent = shortModel(images.model);
   if (images?.last_run) $("imgInfo").textContent =
     `${images.last_run.steps} denoising step · about ${images.last_run.avg_seconds}s per image on a free CPU · 448×280 WebP`;
-  if (compare?.local_model) $("localModel").textContent = shortModel(compare.local_model);
 
   // MLP panel
   const m = stats?.mlp;
@@ -74,32 +73,56 @@ async function main() {
         <td>${r.collected}</td><td>${r.after_fuzzy}</td><td>${r.after_semantic}</td><td>${r.cards_added}</td><td>${r.seconds}</td></tr>`).join("")}
       </tbody></table>` : `<p class="empty-note">The table fills in after the next pipeline run.</p>`}`;
 
-  // decoder comparison
-  const items = compare?.items || [];
-  const sm = compare?.summary;
-  if (!items.length) {
+  // decoder comparison (accepts the old single-model format too)
+  let items = compare?.items || [];
+  let models = compare?.local_models || (compare?.local_model ? [compare.local_model] : []);
+  let summary = compare?.summary || {};
+  if (compare?.local_model && !compare.local_models) {           // old format
+    items = items.map((x) => ({ ...x, locals: x.locals || { [compare.local_model]: { ...x.local, tldr_similarity: x.tldr_similarity } } }));
+    summary = { [compare.local_model]: { n: items.length, json_valid_rate: summary.json_valid_rate, avg_seconds: summary.avg_seconds_local,
+      avg_tokens_per_second: summary.avg_tokens_per_second, category_agreement: summary.category_agreement,
+      importance_within_1: summary.importance_within_1, avg_tldr_similarity: summary.avg_tldr_similarity } };
+  }
+  if (!items.length || !models.length) {
     $("compareItems").innerHTML = `<p class="empty-note">The weekly comparison hasn't run yet.</p>`;
     return;
   }
-  $("compareSummary").innerHTML = [
-    stat(pct(sm.json_valid_rate), "valid card JSON (local model)"),
-    stat(sm.avg_seconds_local + "s", `per card on CPU (${sm.avg_tokens_per_second} tokens/s)`),
-    stat(pct(sm.category_agreement), "same category as the 120B model"),
-    stat(sm.avg_tldr_similarity == null ? "–" : sm.avg_tldr_similarity.toFixed(2), "TL;DR meaning similarity (encoder)"),
-  ].join("");
+  if (models.length) $("localModel").textContent = models.map(shortModel).join(" + ");
+  const size = (m) => { const x = /(\d+(?:\.\d+)?)B/i.exec(m); return x ? x[1] + "B" : shortModel(m); };
+  const ci = (c) => (c ? ` <span class="ci">${Math.round(c[0] * 100)}–${Math.round(c[1] * 100)}%</span>` : "");
+  const cell = (v, c) => (v == null ? "–" : pct(v) + ci(c));
+  const nStories = Math.max(...models.map((m) => summary[m]?.n || 0));
+  $("compareSummary").outerHTML = `<div class="panel wide" id="compareSummary">
+    <h3>Results by model <span class="muted" style="font-weight:400;font-size:13px">· ${nStories} stories so far, growing every week</span></h3>
+    <table class="runs cmp-table"><thead><tr><th>Model</th><th>Stories</th><th>Valid card JSON</th><th>Same category as 120B</th>
+      <th>Stars within ±1</th><th>TL;DR similarity</th><th>Speed (CPU)</th></tr></thead><tbody>
+    ${models.map((m) => { const s = summary[m] || {}; return `<tr>
+      <td><b>${esc(shortModel(m))}</b></td><td>${s.n ?? 0}</td>
+      <td>${cell(s.json_valid_rate, s.json_valid_ci)}</td><td>${cell(s.category_agreement, s.category_ci)}</td>
+      <td>${cell(s.importance_within_1, s.importance_ci)}</td>
+      <td>${s.avg_tldr_similarity == null ? "–" : s.avg_tldr_similarity.toFixed(2)}</td>
+      <td>${s.avg_seconds ?? "–"}s · ${s.avg_tokens_per_second ?? "–"} tok/s</td></tr>`; }).join("")}
+    <tr class="ref"><td><b>${esc(shortModel(compare.api_model))}</b> (reference)</td><td>–</td><td>100%</td><td>–</td><td>–</td><td>1.00</td><td>API</td></tr>
+    </tbody></table>
+    <p class="note">Small grey ranges are 95% confidence intervals: with only a few stories they're wide, and they
+      narrow as the weekly runs add more. Agreement is measured only on cards where the local model returned valid JSON.</p></div>`;
+
   const side = (who, cls, c, meta, bad) => `<div class="side ${cls}"><span class="who">${who}</span>
-    ${bad ? `<p class="bad">Didn't return valid card JSON</p><p class="meta2">${esc(bad)}</p>` : `
+    ${bad != null ? `<p class="bad">Didn't return valid card JSON</p><p class="meta2">${esc(bad)}</p>` : `
     <h4>${esc(c.headline)}</h4><p>${esc(c.tldr)}</p>
     ${(c.key_points || []).length ? `<ul>${c.key_points.slice(0, 4).map((k) => `<li>${esc(k)}</li>`).join("")}</ul>` : ""}`}
     <p class="meta2">${meta}</p></div>`;
-  $("compareItems").innerHTML = items.slice(0, 6).map((x) => `<div class="cmp">
+  const shown = items.filter((x) => models.some((m) => x.locals[m])).slice(0, 6);
+  $("compareItems").innerHTML = shown.map((x) => `<div class="cmp" style="--cols:${1 + models.length}">
       <div class="cmp-head">${esc(x.title)} <a href="${/^https?:/.test(x.url) ? esc(x.url) : "#"}" target="_blank" rel="noopener">source ↗</a></div>
-      ${side("API · " + esc(shortModel(x.api.model) || compare.api_model), "llm", x.api,
+      ${side("API · " + esc(shortModel(x.api.model) || shortModel(compare.api_model)), "llm", x.api,
         `★${x.api.importance} · ${esc(x.api.category)}`)}
-      ${side("Local · " + esc(shortModel(compare.local_model)), "dec", x.local.card,
-        `★${x.local.card.importance} · ${esc(x.local.card.category)} · ${x.local.seconds}s on CPU` +
-        (x.tldr_similarity != null ? ` · similarity ${x.tldr_similarity.toFixed(2)}` : ""),
-        x.local.valid_json ? "" : (x.local.raw || "").slice(0, 160))}
+      ${models.map((m, k) => { const l = x.locals[m];
+        if (!l) return `<div class="side dec${k ? " dec2" : ""}"><span class="who">Local · ${esc(size(m))}</span><p class="meta2">Not run on this story yet</p></div>`;
+        return side("Local · " + esc(shortModel(m)), "dec" + (k ? " dec2" : ""), l.card,
+          `★${l.card.importance} · ${esc(l.card.category)} · ${l.seconds}s on CPU` +
+          (l.tldr_similarity != null ? ` · similarity ${l.tldr_similarity.toFixed(2)}` : ""),
+          l.valid_json ? null : (l.raw || "").slice(0, 160)); }).join("")}
     </div>`).join("");
 }
 main();

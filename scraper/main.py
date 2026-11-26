@@ -249,7 +249,7 @@ def main():
         raise SystemExit(1)   # make the Actions run show red
 
 
-def save_compare_inputs(new_inputs, keep=30):
+def save_compare_inputs(new_inputs, keep=100):
     old = json.loads(COMPARE_INPUTS.read_text(encoding="utf-8")) if COMPARE_INPUTS.exists() else []
     ids = {x["id"] for x in new_inputs}
     rows = new_inputs + [x for x in old if x["id"] not in ids]
