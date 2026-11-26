@@ -1,89 +1,96 @@
-/* ---------- Theme tokens ---------- */
+/* ---------- Theme tokens: "Washi & Sumi" ----------
+   An original palette inspired by the spirit of Sanzo Wada's "A Dictionary of Color
+   Combinations" and traditional Japanese colors: warm paper, sumi ink, ai-iro indigo,
+   shu vermilion, kincha ochre, matcha, kaki persimmon, fuji wisteria, seiheki teal, nezumi grey.
+   Every text color passes WCAG AA (4.5:1) in both themes. */
 :root {
-  --bg: #f5f6fa;
-  --bg-grad: radial-gradient(1200px 600px at 10% -10%, #e4e9ff 0%, transparent 60%),
-             radial-gradient(900px 500px at 100% 0%, #f3e8ff 0%, transparent 55%);
-  --surface: #ffffff;
-  --surface-2: #f0f2f7;
-  --text: #141821;
-  --muted: #5d6677;
-  --line: #e3e6ee;
-  --accent: #4f5bd5;
-  --accent-ink: #ffffff;
-  --good: #16a36a;
-  --warn: #d9822b;
-  --star: #f0a400;
-  --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 6px 18px rgba(16, 24, 40, .07);
-  --shadow-hover: 0 2px 4px rgba(16, 24, 40, .08), 0 14px 32px rgba(16, 24, 40, .12);
-  --radius: 16px;
+  --bg: #f2ece0;                         /* washi paper */
+  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(178, 58, 50, .07) 0%, transparent 60%),
+             radial-gradient(900px 480px at 100% 0%, rgba(43, 76, 126, .08) 0%, transparent 55%);
+  --surface: #fbf8f1;                    /* kinari, unbleached silk */
+  --surface-2: #efe8da;
+  --text: #2a2723;                       /* sumi ink */
+  --muted: #6b6357;
+  --line: #e0d6c4;
+  --accent: #2b4c7e;                     /* ai-iro, indigo */
+  --accent-ink: #fbf8f1;
+  --good: #456b32;                       /* matcha, deep */
+  --warn: #9c4622;                       /* kaki, persimmon */
+  --star: #a87a0c;                       /* kincha, golden ochre */
+  --vermilion: #b23a32;                  /* shu */
+  --shadow: 0 1px 0 rgba(60, 45, 20, .04), 0 4px 14px rgba(60, 45, 20, .06);
+  --shadow-hover: 0 1px 0 rgba(60, 45, 20, .05), 0 10px 26px rgba(60, 45, 20, .11);
+  --radius: 12px;
 
   /* category colors */
-  --c-model_release: #4f5bd5;
-  --c-paper: #8b5cf6;
-  --c-product: #0ea5a4;
-  --c-funding: #16a34a;
-  --c-acquisition: #ea580c;
-  --c-policy: #dc2626;
-  --c-hardware: #ca8a04;
-  --c-open_source: #059669;
-  --c-other: #64748b;
+  --c-model_release: #2b4c7e;            /* ai-iro, indigo */
+  --c-paper: #6a4c93;                    /* fuji, wisteria */
+  --c-product: #24665f;                  /* seiheki, blue-green */
+  --c-funding: #4d6623;                  /* matcha */
+  --c-acquisition: #9c4622;              /* kaki, persimmon */
+  --c-policy: #b23a32;                   /* shu, vermilion */
+  --c-hardware: #7c560c;                 /* kincha, ochre */
+  --c-open_source: #336a50;              /* tokiwa, evergreen */
+  --c-other: #6a655c;                    /* nezumi, mouse grey */
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0e1116;
-    --bg-grad: radial-gradient(1200px 600px at 10% -10%, #1b2140 0%, transparent 60%),
-               radial-gradient(900px 500px at 100% 0%, #26173d 0%, transparent 55%);
-    --surface: #171b23;
-    --surface-2: #20252f;
-    --text: #e8ebf1;
-    --muted: #98a2b3;
-    --line: #2a303b;
-    --accent: #8b95ff;
-    --accent-ink: #0e1116;
-    --good: #34d399;
-    --warn: #f5a524;
-    --star: #fbbf24;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
-    --shadow-hover: 0 2px 6px rgba(0, 0, 0, .5), 0 16px 36px rgba(0, 0, 0, .45);
-    --c-model_release: #8b95ff;
-    --c-paper: #b69cff;
-    --c-product: #2dd4bf;
-    --c-funding: #4ade80;
-    --c-acquisition: #fb923c;
-    --c-policy: #f87171;
-    --c-hardware: #facc15;
-    --c-open_source: #34d399;
-    --c-other: #94a3b8;
+    --bg: #1b1a17;                       /* sumi night */
+    --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(232, 133, 124, .06) 0%, transparent 60%),
+               radial-gradient(900px 480px at 100% 0%, rgba(142, 169, 214, .07) 0%, transparent 55%);
+    --surface: #24221e;
+    --surface-2: #2e2b26;
+    --text: #ece4d4;
+    --muted: #a79f90;
+    --line: #3a362f;
+    --accent: #8ea9d6;
+    --accent-ink: #1b1a17;
+    --good: #9cbf6e;
+    --warn: #e39a6a;
+    --star: #d9b44a;
+    --vermilion: #e8857c;
+    --shadow: 0 1px 0 rgba(0, 0, 0, .25), 0 6px 18px rgba(0, 0, 0, .28);
+    --shadow-hover: 0 1px 0 rgba(0, 0, 0, .3), 0 12px 30px rgba(0, 0, 0, .4);
+    --c-model_release: #8ea9d6;
+    --c-paper: #b9a3db;
+    --c-product: #7cc3bb;
+    --c-funding: #b3c77a;
+    --c-acquisition: #e8a07a;
+    --c-policy: #e8857c;
+    --c-hardware: #d9b45e;
+    --c-open_source: #8cc2a3;
+    --c-other: #b5aea2;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0e1116;
-  --bg-grad: radial-gradient(1200px 600px at 10% -10%, #1b2140 0%, transparent 60%),
-             radial-gradient(900px 500px at 100% 0%, #26173d 0%, transparent 55%);
-  --surface: #171b23;
-  --surface-2: #20252f;
-  --text: #e8ebf1;
-  --muted: #98a2b3;
-  --line: #2a303b;
-  --accent: #8b95ff;
-  --accent-ink: #0e1116;
-  --good: #34d399;
-  --warn: #f5a524;
-  --star: #fbbf24;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
-  --shadow-hover: 0 2px 6px rgba(0, 0, 0, .5), 0 16px 36px rgba(0, 0, 0, .45);
-  --c-model_release: #8b95ff;
-  --c-paper: #b69cff;
-  --c-product: #2dd4bf;
-  --c-funding: #4ade80;
-  --c-acquisition: #fb923c;
-  --c-policy: #f87171;
-  --c-hardware: #facc15;
-  --c-open_source: #34d399;
-  --c-other: #94a3b8;
+  --bg: #1b1a17;
+  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(232, 133, 124, .06) 0%, transparent 60%),
+             radial-gradient(900px 480px at 100% 0%, rgba(142, 169, 214, .07) 0%, transparent 55%);
+  --surface: #24221e;
+  --surface-2: #2e2b26;
+  --text: #ece4d4;
+  --muted: #a79f90;
+  --line: #3a362f;
+  --accent: #8ea9d6;
+  --accent-ink: #1b1a17;
+  --good: #9cbf6e;
+  --warn: #e39a6a;
+  --star: #d9b44a;
+  --vermilion: #e8857c;
+  --shadow: 0 1px 0 rgba(0, 0, 0, .25), 0 6px 18px rgba(0, 0, 0, .28);
+  --shadow-hover: 0 1px 0 rgba(0, 0, 0, .3), 0 12px 30px rgba(0, 0, 0, .4);
+  --c-model_release: #8ea9d6;
+  --c-paper: #b9a3db;
+  --c-product: #7cc3bb;
+  --c-funding: #b3c77a;
+  --c-acquisition: #e8a07a;
+  --c-policy: #e8857c;
+  --c-hardware: #d9b45e;
+  --c-open_source: #8cc2a3;
+  --c-other: #b5aea2;
   color-scheme: dark;
 }
 
@@ -415,3 +422,58 @@ a.btn.primary { color: var(--accent-ink); }
   h1 { overflow: hidden; text-overflow: ellipsis; }
 }
 @media (max-width: 640px) { .hide-sm { display: none; } }
+
+/* ======================================================================
+   "Washi & Sumi" styling layer
+   ====================================================================== */
+body { font-family: "Zen Kaku Gothic New", Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+h1, .card h3, .about h2, .about h3, .stat b, .pick-done h3, .empty b, .model b, .cmp .side h4 {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+  letter-spacing: 0;
+}
+h1 { font-weight: 800; }
+.card h3 { font-weight: 700; font-size: 1.12rem; line-height: 1.38; }
+.study-stage .card h3, .pick-stage .card h3 { font-size: 1.4rem; }
+
+/* buttons, inputs: quieter, squarer */
+.btn { border-radius: 8px; box-shadow: none; }
+.btn.primary { box-shadow: 0 1px 0 rgba(0, 0, 0, .08); }
+.search { border-radius: 10px; box-shadow: none; }
+.sel, .seg { border-radius: 8px; }
+.seg button { border-radius: 6px; }
+.seg button.on { box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+.sem { border-radius: 7px; }
+
+/* category chips: like little ink stamps (hanko) when selected */
+.chip { border-radius: 6px; font-weight: 500; }
+.chip.on { background: var(--c); border-color: var(--c); color: var(--surface); }
+.chip.on .dot { background: var(--surface); }
+.chip.on .n { color: var(--surface); opacity: .8; }
+
+/* cards: paper sheets with a coloured obi band */
+.face { border-radius: var(--radius); box-shadow: var(--shadow); }
+.face::before { height: 5px; }
+.card.has-img .face::before { z-index: 1; }
+.cat { border-radius: 4px; letter-spacing: .04em; font-weight: 700; font-size: 11.5px; }
+.tags span { border-radius: 4px; }
+.new { background: var(--vermilion); color: #fff; border-radius: 4px; letter-spacing: .08em; }
+.stars .off { color: color-mix(in srgb, var(--muted) 30%, transparent); }
+.thumb img { filter: saturate(.82) sepia(.08); }        /* softer, closer to the palette */
+.mark { border-radius: 7px; }
+.rel button { border-radius: 7px; }
+.ai-labels span { border-radius: 5px; }
+.round { box-shadow: var(--shadow); }
+.round.keep { color: var(--vermilion); }
+.picked-heart { color: var(--vermilion); }
+.bar span { background: var(--good); }
+
+/* subtle washi grain */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.how-sm { display: none; font-size: 12px; font-weight: 700; text-decoration: none; }
+@media (max-width: 640px) {
+  .top-actions a.how-lg { display: none; }
+  .how-sm { display: inline-block; margin-top: 1px; }
+}

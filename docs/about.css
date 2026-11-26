@@ -1,9 +1,10 @@
 /* "How it works" page. Reuses the tokens from style.css */
-:root { --m-enc: #0ea5a4; --m-fnn: #d9822b; --m-llm: #4f5bd5; --m-dec: #8b5cf6; --m-diff: #e5484d; }
+/* model colours: seiheki teal, kincha ochre, ai-iro indigo, fuji wisteria, shu vermilion */
+:root { --m-enc: #24665f; --m-fnn: #7c560c; --m-llm: #2b4c7e; --m-dec: #6a4c93; --m-diff: #b23a32; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --m-enc: #2dd4bf; --m-fnn: #f5a524; --m-llm: #8b95ff; --m-dec: #b69cff; --m-diff: #ff6b6f; }
+  :root:not([data-theme="light"]) { --m-enc: #7cc3bb; --m-fnn: #d9b45e; --m-llm: #8ea9d6; --m-dec: #b9a3db; --m-diff: #e8857c; }
 }
-:root[data-theme="dark"] { --m-enc: #2dd4bf; --m-fnn: #f5a524; --m-llm: #8b95ff; --m-dec: #b69cff; --m-diff: #ff6b6f; }
+:root[data-theme="dark"] { --m-enc: #7cc3bb; --m-fnn: #d9b45e; --m-llm: #8ea9d6; --m-dec: #b9a3db; --m-diff: #e8857c; }
 
 .about { padding-bottom: 48px; }
 .about section { margin-top: 34px; }
@@ -70,3 +71,8 @@ table.runs th { color: var(--muted); font-weight: 600; font-size: 12px; }
 .cmp .bad { color: var(--warn); font-weight: 600; }
 .empty-note { padding: 18px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); font-size: 14px; }
 @media (max-width: 640px) { .cmp { grid-template-columns: 1fr; } }
+
+/* Washi & Sumi */
+.stat, .flow li, .model, .panel, .cmp .side { border-radius: 10px; box-shadow: var(--shadow); }
+.flow li em, .model .tag { letter-spacing: .05em; }
+.dups li { border-radius: 7px; }
