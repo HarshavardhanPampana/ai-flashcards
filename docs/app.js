@@ -121,18 +121,19 @@ function filtered(opts = {}) {
       : (b.importance || 1) - (a.importance || 1) || ts(b.added) - ts(a.added));
 }
 
-function cardHTML(c) {
+function cardHTML(c, layout = "") {
   const st = progress[c.id];
   const rel = (c.related || []).map((id) => byId.get(id)).filter(Boolean).slice(0, 3);
   const sim = semanticOn() ? simById.get(c.id) : null;
   return `
-  <div class="card ${st ? "st-" + st : ""}${c._img ? " has-img" : ""}" data-id="${esc(c.id)}" style="--c:var(--c-${c._cat})"
+  <div class="card ${layout} ${st ? "st-" + st : ""}${c._img ? " has-img" : ""}" data-id="${esc(c.id)}" style="--c:var(--c-${c._cat})"
        tabindex="0" role="button" aria-label="${esc(c.headline)}. Press Enter to flip.">
     <span class="badge-state" aria-hidden="true">${st === "got" ? "✓" : st === "again" ? "↻" : ""}</span>
     <div class="inner">
       <div class="face front">
         ${c._img ? `<div class="thumb"><img src="${esc(c._img)}" alt="" loading="lazy" decoding="async"></div>` : ""}
         <div class="meta">
+          ${layout.includes("hero") ? `<span class="ribbon">Top story</span>` : ""}
           <span class="cat">${esc(catName(c._cat))}</span>
           ${isNew(c) ? `<span class="new">NEW</span>` : ""}
           ${picks[c.id] === "keep" ? `<span class="picked-heart" title="In your picks">♥</span>` : ""}
@@ -141,6 +142,8 @@ function cardHTML(c) {
         </div>
         <h3>${esc(c.headline)}</h3>
         <p class="tldr">${esc(c.tldr)}</p>
+        ${layout.includes("hero") && (c.key_points || []).length
+          ? `<ul class="hero-points">${c.key_points.slice(0, 3).map((k) => `<li>${esc(k)}</li>`).join("")}</ul>` : ""}
         <div class="tags">${(c.tags || []).slice(0, 4).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
         <div class="foot">
           <span class="src">${esc(c.source)}</span><span>· ${esc(ago(c.date) || ago(c.added))}</span>
@@ -173,6 +176,18 @@ function cardHTML(c) {
 const PAGE = 60;
 let shown = PAGE;
 
+// Magazine layout: the first card is a big "Top story", 4-5 star cards are wide
+// (at most one wide card in any run of 5, so it stays a rhythm and not a wall)
+let lastWide = -99;
+function layoutFor(c, i) {
+  const cls = ["pre"];
+  if (i === 0) lastWide = -99;
+  if (i === 0 && view.length > 3) cls.push("hero");
+  else if ((c.importance || 1) >= 4 && i - lastWide >= 5) { cls.push("wide"); lastWide = i; }
+  return cls.join(" ");
+}
+const gridCards = (from, to) => view.slice(from, to).map((c, k) => cardHTML(c, layoutFor(c, from + k))).join("");
+
 function moreHTML() {
   const left = view.length - shown;
   return left > 0
@@ -188,7 +203,8 @@ function updateCount() {
 function render(keepPage = false) {
   view = filtered();
   if (!keepPage) shown = PAGE;
-  $("grid").innerHTML = view.length ? view.slice(0, shown).map(cardHTML).join("") + moreHTML() : emptyHTML();
+  $("grid").innerHTML = view.length ? gridCards(0, shown) + moreHTML() : emptyHTML();
+  observeCards();
   updateCount();
   updateProgress();
   store.set("filters", { cat: state.cat, time: state.time, minImp: state.minImp, review: state.review, sort: state.sort, semantic: state.semantic });
@@ -233,7 +249,8 @@ $("grid").addEventListener("click", (e) => {
   if (e.target.closest("#more")) {      // append the next page without redrawing the rest
     const from = shown; shown += PAGE;
     e.target.closest(".more").remove();
-    $("grid").insertAdjacentHTML("beforeend", view.slice(from, shown).map(cardHTML).join("") + moreHTML());
+    $("grid").insertAdjacentHTML("beforeend", gridCards(from, shown) + moreHTML());
+    observeCards();
     updateCount();
     return;
   }
@@ -592,6 +609,58 @@ $("semToggle").addEventListener("click", () => {
   state.semantic = !state.semantic; syncSem();
   if (state.semantic) { ensureEncoder().catch(() => {}); runSemantic(state.q); } else render();
   $("search").focus();
+});
+
+
+// ---------- living cards: 3D tilt toward the cursor, glare, image parallax ----------
+const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
+if (motionOK && finePointer) {
+  $("grid").addEventListener("pointermove", (e) => {
+    const card = e.target.closest(".card");
+    if (!card || card.classList.contains("skel")) return;
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    const k = card.classList.contains("hero") ? 5 : 9;          // big cards tilt less
+    card.style.setProperty("--ry", ((x - 0.5) * k).toFixed(2) + "deg");
+    card.style.setProperty("--rx", (-(y - 0.5) * k).toFixed(2) + "deg");
+    card.style.setProperty("--mx", (x * 100).toFixed(1) + "%");
+    card.style.setProperty("--my", (y * 100).toFixed(1) + "%");
+    card.style.setProperty("--px", ((0.5 - x) * 12).toFixed(1) + "px");
+    card.style.setProperty("--py", ((0.5 - y) * 8).toFixed(1) + "px");
+  });
+  $("grid").addEventListener("pointerout", (e) => {
+    const card = e.target.closest(".card");
+    if (!card || card.contains(e.relatedTarget)) return;
+    ["--rx", "--ry", "--px", "--py"].forEach((v) => card.style.removeProperty(v));
+  });
+}
+
+// ---------- cascade in: cards rise into view as you scroll ----------
+const io = motionOK && "IntersectionObserver" in window
+  ? new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    }), { rootMargin: "0px 0px -30px 0px" })
+  : null;
+function observeCards() {
+  if (!io) { $("grid").querySelectorAll(".card.pre").forEach((c) => c.classList.remove("pre")); return; }
+  let k = 0;
+  $("grid").querySelectorAll(".card.pre:not(.watched)").forEach((c) => {
+    c.classList.add("watched");
+    c.style.setProperty("--d", (k++ % 6) * 55 + "ms");
+    io.observe(c);
+  });
+  // safety net: never leave a card invisible if the observer or animations don't run
+  clearTimeout(observeCards.t);
+  observeCards.t = setTimeout(() => {
+    $("grid").querySelectorAll(".card.pre:not(.in)").forEach((c) => {
+      const r = c.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) c.classList.remove("pre", "watched");
+    });
+  }, 2000);
+}
+$("grid").addEventListener("animationend", (e) => {
+  if (e.target.classList?.contains("in")) e.target.classList.remove("pre", "in", "watched");
 });
 
 load();

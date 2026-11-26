@@ -107,17 +107,18 @@ main();
 // ---------- palette: exact Sanzo Wada colours used on the site ----------
 (function swatches() {
   const P = [
-    ["Model release", "Deep Lyons Blue", "#1c4286", "Salvia Blue", "#97acc8"],
+    ["Model release", "Deep Lyons Blue", "#1c4286", "Pale King's Blue 2", "#a7d4e4"],
     ["Paper", "Violet", "#4f4086", "Grayish Lavender 1", "#b5b1d8"],
     ["Product", "Vandar Poel's Blue", "#064f6e", "Calamine Blue", "#78cdd0"],
-    ["Funding", "Lincoln Green", "#555832", "Cobalt Green", "#96d1aa"],
+    ["Funding", "Lincoln Green", "#555832", "Light Green Yellow", "#c7d14f"],
     ["Acquisition", "Brick Red", "#a84222", "Pinkish Cinnamon", "#eeb480"],
-    ["Policy", "Carmine Red", "#a62c37", "Coral Red", "#f58e84"],
+    ["Policy", "Carmine Red", "#a62c37", "Corinthian Pink", "#f8b6ba"],
     ["Hardware", "Pale Raw Umber", "#71502f", "Yellow Ocher", "#e2b540"],
-    ["Open source", "Dusky Green", "#004f46", "Turquoise Green", "#b5decc"],
+    ["Open source", "Dusky Green", "#004f46", "Cobalt Green", "#96d1aa"],
     ["Other", "Slate Color", "#34454c", "Neutral Gray", "#b6bfc1"],
-    ["Paper / night", "Ivory Buff", "#ebd3a2", "Dull Violet Black", "#0d1c43"],
-    ["Ink / text", "Black", "#111314", "Sulphur Yellow", "#f5ecc2"],
+    ["Paper / night", "Ivory Buff", "#ebd3a2", "Deep Slate Green", "#112f2c"],
+    ["Ink / text", "Black", "#111314", "Naples Yellow", "#fbe6a0"],
+    ["Accent", "Deep Lyons Blue", "#1c4286", "Coral Red", "#f58e84"],
   ];
   const el = document.getElementById("swatches");
   if (!el) return;

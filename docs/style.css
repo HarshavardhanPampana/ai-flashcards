@@ -4,7 +4,7 @@
    Wada colours thinned with white (light) or used as-is (dark). Every text colour passes
    WCAG AA (4.5:1) in its theme.
    Light: "Ivory Buff" paper, "Black" ink, "Deep Lyons Blue" accent, cf. combination #126.
-   Dark:  "Dull Violet Black" night, "Sulphur Yellow" text, "Salvia Blue" accent, cf. #60. */
+   Dark:  "Deep Slate Green" forest night, "Naples Yellow" text, "Coral Red" accent, cf. #166. */
 :root {
   --bg: #f7edd8;                         /* Ivory Buff #ebd3a2, thinned */
   --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(166, 44, 55, .06) 0%, transparent 60%),
@@ -40,62 +40,62 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0d1c43;                       /* Dull Violet Black */
-    --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(244, 128, 103, .07) 0%, transparent 60%),
-               radial-gradient(900px 480px at 100% 0%, rgba(120, 205, 208, .06) 0%, transparent 55%);
-    --surface: #1c2a4e;
-    --surface-2: #253356;
-    --text: #f5ecc2;                     /* Sulphur Yellow */
-    --muted: #c2ae93;                    /* Ecru */
-    --line: #313e5f;
-    --accent: #97acc8;                   /* Salvia Blue */
-    --accent-ink: #0d1c43;
-    --on-strong: #0d1c43;
+    --bg: #112f2c;                       /* Deep Slate Green */
+    --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(245, 142, 132, .07) 0%, transparent 60%),
+               radial-gradient(900px 480px at 100% 0%, rgba(251, 230, 160, .05) 0%, transparent 55%);
+    --surface: #1d3937;
+    --surface-2: #24403d;
+    --text: #fbe6a0;                     /* Naples Yellow */
+    --muted: #b4cdc2;                    /* Glaucous Green */
+    --line: #335250;
+    --accent: #f58e84;                   /* Coral Red */
+    --accent-ink: #112f2c;
+    --on-strong: #112f2c;
     --good: #96d1aa;                     /* Cobalt Green */
-    --warn: #eeb480;                     /* Pinkish Cinnamon */
+    --warn: #fdc57e;                     /* Cinnamon Buff */
     --star: #e2b540;                     /* Yellow Ocher */
-    --vermilion: #f48067;                /* Grenadine Pink */
-    --shadow: 0 1px 0 rgba(0, 0, 0, .22), 0 6px 18px rgba(0, 0, 0, .3);
-    --shadow-hover: 0 1px 0 rgba(0, 0, 0, .28), 0 12px 30px rgba(0, 0, 0, .42);
-    --c-model_release: #97acc8;          /* Salvia Blue */
+    --vermilion: #f37f94;                /* Eosine Pink */
+    --shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 6px 18px rgba(0, 0, 0, .28);
+    --shadow-hover: 0 1px 0 rgba(0, 0, 0, .26), 0 14px 32px rgba(0, 0, 0, .4);
+    --c-model_release: #a7d4e4;          /* Pale King's Blue 2 */
     --c-paper: #b5b1d8;                  /* Grayish Lavender 1 */
     --c-product: #78cdd0;                /* Calamine Blue */
-    --c-funding: #96d1aa;                /* Cobalt Green */
+    --c-funding: #c7d14f;                /* Light Green Yellow */
     --c-acquisition: #eeb480;            /* Pinkish Cinnamon */
-    --c-policy: #f58e84;                 /* Coral Red */
+    --c-policy: #f8b6ba;                 /* Corinthian Pink */
     --c-hardware: #e2b540;               /* Yellow Ocher */
-    --c-open_source: #b5decc;            /* Turquoise Green */
+    --c-open_source: #96d1aa;            /* Cobalt Green */
     --c-other: #b6bfc1;                  /* Neutral Gray */
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0d1c43;
-  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(244, 128, 103, .07) 0%, transparent 60%),
-             radial-gradient(900px 480px at 100% 0%, rgba(120, 205, 208, .06) 0%, transparent 55%);
-  --surface: #1c2a4e;
-  --surface-2: #253356;
-  --text: #f5ecc2;
-  --muted: #c2ae93;
-  --line: #313e5f;
-  --accent: #97acc8;
-  --accent-ink: #0d1c43;
-  --on-strong: #0d1c43;
-  --good: #96d1aa;
-  --warn: #eeb480;
-  --star: #e2b540;
-  --vermilion: #f48067;
-  --shadow: 0 1px 0 rgba(0, 0, 0, .22), 0 6px 18px rgba(0, 0, 0, .3);
-  --shadow-hover: 0 1px 0 rgba(0, 0, 0, .28), 0 12px 30px rgba(0, 0, 0, .42);
-  --c-model_release: #97acc8;
-  --c-paper: #b5b1d8;
-  --c-product: #78cdd0;
-  --c-funding: #96d1aa;
-  --c-acquisition: #eeb480;
-  --c-policy: #f58e84;
-  --c-hardware: #e2b540;
-  --c-open_source: #b5decc;
-  --c-other: #b6bfc1;
+  --bg: #112f2c;                       /* Deep Slate Green */
+  --bg-grad: radial-gradient(1100px 520px at 8% -12%, rgba(245, 142, 132, .07) 0%, transparent 60%),
+             radial-gradient(900px 480px at 100% 0%, rgba(251, 230, 160, .05) 0%, transparent 55%);
+  --surface: #1d3937;
+  --surface-2: #24403d;
+  --text: #fbe6a0;                     /* Naples Yellow */
+  --muted: #b4cdc2;                    /* Glaucous Green */
+  --line: #335250;
+  --accent: #f58e84;                   /* Coral Red */
+  --accent-ink: #112f2c;
+  --on-strong: #112f2c;
+  --good: #96d1aa;                     /* Cobalt Green */
+  --warn: #fdc57e;                     /* Cinnamon Buff */
+  --star: #e2b540;                     /* Yellow Ocher */
+  --vermilion: #f37f94;                /* Eosine Pink */
+  --shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 6px 18px rgba(0, 0, 0, .28);
+  --shadow-hover: 0 1px 0 rgba(0, 0, 0, .26), 0 14px 32px rgba(0, 0, 0, .4);
+  --c-model_release: #a7d4e4;          /* Pale King's Blue 2 */
+  --c-paper: #b5b1d8;                  /* Grayish Lavender 1 */
+  --c-product: #78cdd0;                /* Calamine Blue */
+  --c-funding: #c7d14f;                /* Light Green Yellow */
+  --c-acquisition: #eeb480;            /* Pinkish Cinnamon */
+  --c-policy: #f8b6ba;                 /* Corinthian Pink */
+  --c-hardware: #e2b540;               /* Yellow Ocher */
+  --c-open_source: #96d1aa;            /* Cobalt Green */
+  --c-other: #b6bfc1;                  /* Neutral Gray */
   color-scheme: dark;
 }
 
@@ -482,3 +482,68 @@ body::before {
   .top-actions a.how-lg { display: none; }
   .how-sm { display: inline-block; margin-top: 1px; }
 }
+
+/* ======================================================================
+   Living cards: tilt toward the cursor, glare, parallax, springy flip
+   ====================================================================== */
+.card { --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 30%; --px: 0px; --py: 0px;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
+.inner { transition: transform .8s cubic-bezier(.34, 1.42, .52, 1); }        /* overshoots a little, like a real card */
+@media (hover: hover) and (pointer: fine) {
+  #grid .card:hover { transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-5px);
+    transition: transform .12s ease-out; z-index: 2; }
+}
+.face::after {                                                               /* soft light that follows the cursor */
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 3;
+  background: radial-gradient(circle at var(--mx) var(--my), rgba(255, 255, 255, .28), transparent 52%);
+  opacity: 0; transition: opacity .35s; mix-blend-mode: soft-light;
+}
+#grid .card:hover .face::after { opacity: 1; }
+.thumb img { transform: scale(1.08) translate(var(--px), var(--py)); transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
+#grid .card:hover .thumb img { transition: transform .12s ease-out; }
+@media (pointer: coarse) {                                                   /* phones: a gentle press instead of tilt */
+  #grid .card:active { transform: scale(.975); transition: transform .12s; }
+}
+
+/* ---------- cascade in ---------- */
+#grid .card { animation: none; }
+#grid .card.pre { opacity: 0; }
+#grid .card.pre.in { opacity: 1; animation: cascade .7s cubic-bezier(.2, .8, .2, 1) var(--d, 0ms) both; }
+@keyframes cascade { from { opacity: 0; transform: translateY(26px) scale(.97); } to { opacity: 1; transform: none; } }
+
+/* ======================================================================
+   Magazine grid: a big "Top story" and wide cards for 4-5 star stories
+   ====================================================================== */
+.ribbon { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 8px;
+  border-radius: 4px; background: var(--accent); color: var(--accent-ink); }
+@media (min-width: 900px) {
+  #grid { grid-auto-flow: row dense; }
+  #grid .card.hero { grid-column: span 2; grid-row: span 2; height: calc(700px + 18px); }
+  #grid .card.wide { grid-column: span 2; }
+}
+@media (min-width: 640px) and (max-width: 899px) {
+  #grid .card.hero { grid-column: span 2; }
+}
+#grid .card.hero .thumb { height: 300px; }
+#grid .card.hero h3 { font-size: 1.85rem; line-height: 1.25; -webkit-line-clamp: 4; line-clamp: 4; }
+#grid .card.hero .tldr { font-size: 16.5px; -webkit-line-clamp: 7; line-clamp: 7; }
+#grid .card.hero .front { padding-left: 26px; padding-right: 26px; }
+#grid .card.hero .thumb { margin-left: -26px; margin-right: -26px; }
+#grid .card.hero:not(.has-img) h3 { font-size: 2.3rem; }
+#grid .card.wide .thumb { height: 140px; }
+#grid .card.wide h3 { font-size: 1.25rem; }
+#grid .card.wide.has-img .tldr { -webkit-line-clamp: 2; line-clamp: 2; }
+@media (max-width: 639px) {
+  #grid .card.hero { height: 460px; }
+  #grid .card.hero .thumb { height: 170px; }
+  #grid .card.hero h3 { font-size: 1.3rem; -webkit-line-clamp: 3; line-clamp: 3; }
+  #grid .card.hero .tldr { font-size: 15px; -webkit-line-clamp: 3; line-clamp: 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #grid .card.pre { opacity: 1; }
+  .thumb img { transform: none; }
+}
+.hero-points { margin: 4px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.55; color: var(--text); flex-shrink: 0; }
+.hero-points li { margin-bottom: 4px; }
+.hero-points li::marker { color: var(--c); }
+@media (max-width: 639px) { .hero-points { display: none; } }

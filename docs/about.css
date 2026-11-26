@@ -1,11 +1,11 @@
 /* "How it works" page. Reuses the tokens from style.css */
 /* model colours, exact Wada colours: Vandar Poel's Blue, Pale Raw Umber, Deep Lyons Blue, Violet, Carmine Red
-   (dark: Calamine Blue, Yellow Ocher, Salvia Blue, Grayish Lavender 1, Coral Red) */
+   (dark: Calamine Blue, Yellow Ocher, Pale King's Blue 2, Grayish Lavender 1, Corinthian Pink) */
 :root { --m-enc: #064f6e; --m-fnn: #71502f; --m-llm: #1c4286; --m-dec: #4f4086; --m-diff: #a62c37; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #97acc8; --m-dec: #b5b1d8; --m-diff: #f58e84; }
+  :root:not([data-theme="light"]) { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #a7d4e4; --m-dec: #b5b1d8; --m-diff: #f8b6ba; }
 }
-:root[data-theme="dark"] { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #97acc8; --m-dec: #b5b1d8; --m-diff: #f58e84; }
+:root[data-theme="dark"] { --m-enc: #78cdd0; --m-fnn: #e2b540; --m-llm: #a7d4e4; --m-dec: #b5b1d8; --m-diff: #f8b6ba; }
 
 .about { padding-bottom: 48px; }
 .about section { margin-top: 34px; }

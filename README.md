@@ -78,6 +78,10 @@ MIT Technology Review, Ars Technica (RSS) · arXiv cs.AI/LG/CL · HF Daily Paper
 Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit now blocks automated feed access.)
 
 ## Site features
+- **Magazine layout:** the top story is a large hero card (with its key points on the front), and 4–5 star stories
+  get wide feature cards; cards rise into view as you scroll
+- **Living cards:** on desktop, cards tilt in 3D toward the cursor with a soft glare and image parallax, and the
+  flip has a springy overshoot; on phones, cards press down. All motion is off with the reduced-motion setting.
 - Flip cards (front: cover image, headline, TL;DR; back: key points, why it matters, related stories, and both the
   LLM's and the MLP's labels)
 - **Search by meaning** (✨): your query is embedded *in the browser* with the same MiniLM encoder and matched
@@ -88,7 +92,8 @@ Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit 
 - "How it works" page with live metrics from the pipeline
 - **Sanzo Wada palette:** every colour is an exact colour from Sanzo Wada's *A Dictionary of Color Combinations*
   (values from [wada-sanzo-colors.com](https://www.wada-sanzo-colors.com/combinations/classic/all)). Light mode is
-  Ivory Buff paper with Deep Lyons Blue (cf. combination #126); dark mode is Dull Violet Black with Sulphur Yellow text.
+  Ivory Buff paper with Deep Lyons Blue (cf. combination #126); dark mode is a forest night of Deep Slate Green with
+  Naples Yellow text and Coral Red (cf. #166).
   Each category has its own Wada colour, and every text colour passes WCAG AA. Shippori Mincho headlines.
 - Light/dark, phone layout, add-to-home-screen; progress saved per browser
 
