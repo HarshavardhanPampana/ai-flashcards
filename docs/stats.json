@@ -1,0 +1,76 @@
+{
+ "runs": [
+  {
+   "time": "2026-11-26T22:26:51+00:00",
+   "collected": 320,
+   "after_fuzzy": 47,
+   "after_semantic": 42,
+   "fuzzy_removed": 273,
+   "semantic_removed": 5,
+   "summarized": 40,
+   "cards_added": 40,
+   "models": [
+    "openai/gpt-oss-120b"
+   ],
+   "seconds": 496,
+   "ml": true
+  }
+ ],
+ "updated": "2026-11-26T22:26:51+00:00",
+ "cards": 1000,
+ "mlp": {
+  "category": {
+   "accuracy": 0.815,
+   "baseline_majority": 0.595,
+   "n_train": 800,
+   "n_test": 200,
+   "params": 50441
+  },
+  "importance": {
+   "accuracy": 0.825,
+   "baseline_majority": 0.625,
+   "n_train": 800,
+   "n_test": 200,
+   "params": 49796,
+   "within_1_star": 0.985
+  }
+ },
+ "semantic_examples": [
+  {
+   "new": "The open-source movement wants Jensen Huang back",
+   "matches": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+   "similarity": 0.817,
+   "source": "MIT Technology Review AI"
+  },
+  {
+   "new": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
+   "matches": "Tidal will start banning AI-generated music next month",
+   "similarity": 0.938,
+   "source": "Ars Technica AI"
+  },
+  {
+   "new": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
+   "matches": "Trump engineered a risky comeback for Jensen Huang",
+   "similarity": 0.824,
+   "source": "Ars Technica AI"
+  },
+  {
+   "new": "Jensen Huang reinstated as Nvidia CEO, board chair",
+   "matches": "Nvidia CEO Jensen Huang says it's 'not true' Trump got him rehired",
+   "similarity": 0.837,
+   "source": "Ars Technica AI"
+  },
+  {
+   "new": "Will Wright's next simulation will use AI to mine content from your memories",
+   "matches": "Will Wright’s next game uses AI to map your memories",
+   "similarity": 0.822,
+   "source": "Ars Technica AI"
+  }
+ ],
+ "agreement": {
+  "cards": 40,
+  "category": 0.775,
+  "importance_exact": 0.775,
+  "importance_within_1": 1.0
+ }
+}
