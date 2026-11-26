@@ -1,5 +1,1026 @@
 [
  {
+  "headline": "DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity",
+  "tldr": "DFly2 introduces a block‑parallel drafter that reuses the target model's sparse attention cache and index selections, eliminating its own cache and scoring pass, and achieving 10‑30% higher throughput on long‑context tasks.",
+  "key_points": [
+   "Shares the target model's KV cache and index selections, removing the drafter's own cache.",
+   "Runs no scoring pass, reducing prefill time and memory overhead.",
+   "Improves token acceptance rates and throughput by 3.9‑31.5% across several sparse models (DeepSeek‑V4, GLM‑5.3, Hy4).",
+   "Demonstrates 62‑81% higher throughput at high concurrency on 64K context benchmarks."
+  ],
+  "why_it_matters": "Efficient long‑context decoding is a bottleneck for large language models; DFly2’s cache‑sharing approach cuts compute and memory costs, enabling faster, cheaper inference for applications like agents and document‑level reasoning.",
+  "category": "paper",
+  "companies": [
+   "DeepSeek",
+   "Alibaba",
+   "Hy4"
+  ],
+  "tags": [
+   "sparse attention",
+   "speculative decoding",
+   "long-context",
+   "efficiency"
+  ],
+  "importance": 3,
+  "id": "c73b0da3ab05e071",
+  "url": "https://arxiv.org/abs/2611.34776v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:37:49Z",
+  "added": "2026-11-26T21:48:22.149639+00:00"
+ },
+ {
+  "headline": "Adaptive Reliability Reserves for Residential Battery Fleets",
+  "tldr": "Replacing a fixed 20% battery reserve with a county‑risk threshold raises five‑hour backup coverage from 75.0% to 86.5% and adds about $10.2 annual margin per home; the paper releases the HomeFleet‑ERCOT benchmark, controllers, and checkpoints for reproducible research.",
+  "key_points": [
+   "County‑risk threshold improves backup coverage to 86.5%",
+   "Modeled annual margin gain of $10.2 per home",
+   "Benchmark dataset (HomeFleet‑ERCOT) and PPO‑trained controllers released",
+   "Analysis of transferability across geography, time, and storm conditions",
+   "Alert‑charging override provides conditional sufficiency guarantee"
+  ],
+  "why_it_matters": "Provides a data‑driven framework for utilities and policymakers to design residential battery programs that jointly optimize market revenue and household outage resilience, a growing need as distributed storage scales.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "battery",
+   "reliability",
+   "reinforcement_learning",
+   "residential_energy"
+  ],
+  "importance": 2,
+  "id": "f7ae15b5d98cc10d",
+  "url": "https://arxiv.org/abs/2611.34779v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:39:17Z",
+  "added": "2026-11-26T21:48:11.109060+00:00"
+ },
+ {
+  "headline": "Comparative Study of Deep Learning Architectures for Brain Tumour Classification",
+  "tldr": "Six DL models were benchmarked on multi‑source MRI data with leakage‑aware validation; ShuffleNetV2 and EfficientNet‑B0 achieved ~98% cross‑validation accuracy but dropped to 66‑78% on a held‑out dataset, highlighting over‑optimistic in‑distribution results.",
+  "key_points": [
+   "Evaluated CNN, attention‑CNN, ShuffleNet, EfficientNet‑B0, ResNet‑50, and Xception (with CBAM) on four‑class tumour classification.",
+   "Implemented leakage‑aware pipeline (MD5 & perceptual hashing) and 5‑fold group CV to prevent data leakage.",
+   "ShuffleNetV2 and EfficientNet‑B0 reached ~98% CV accuracy; on unseen data, performance fell to 66.2% and 78.4% respectively.",
+   "Glioma‑meningioma confusion was the main error; Grad‑CAM showed predictions focused on tumour regions."
+  ],
+  "why_it_matters": "Shows that high in‑distribution accuracy can be misleading without proper cross‑dataset validation, guiding future medical AI research toward more robust evaluation practices.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "brain tumor",
+   "MRI",
+   "deep learning",
+   "model evaluation"
+  ],
+  "importance": 3,
+  "id": "981450b48cdfa502",
+  "url": "https://arxiv.org/abs/2611.34781v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:40:22Z",
+  "added": "2026-11-26T21:47:58.177801+00:00"
+ },
+ {
+  "headline": "PersonaFactory: Stylistic User Prompt Augmentation with Synthetic Persona Bank",
+  "tldr": "PersonaFactory creates a massive bank of synthetic user personas and persona‑styled conversations in 85 languages, improving style control and intent preservation for LLM training.",
+  "key_points": [
+   "Generates 740k structured personas with background and communication attributes.",
+   "Produces ~1.24 M persona‑styled synthetic dialogues covering 85 languages.",
+   "Shows better per‑axis style control and intent preservation than free‑text personas.",
+   "Human evaluation finds augmented conversations plausible and stylistically natural.",
+   "Maintains benchmark performance while improving user‑aligned reply style."
+  ],
+  "why_it_matters": "Provides scalable, multilingual synthetic data that more accurately mimics real user behavior, enabling better alignment, evaluation, and persona control of large language models without costly human annotation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "synthetic data",
+   "persona",
+   "multilingual",
+   "LLM alignment"
+  ],
+  "importance": 3,
+  "id": "1456693a87f2636b",
+  "url": "https://arxiv.org/abs/2611.34785v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:42:31Z",
+  "added": "2026-11-26T21:47:46.114487+00:00"
+ },
+ {
+  "headline": "Split-RL: Local Conflict Resolution in Reinforcement Learning",
+  "tldr": "Split-RL introduces a Gradient Boosting Trees algorithm that uses guidance labels to isolate conflicting reinforcement learning signals in localized state-space regions, improving performance on constrained and offline RL tasks.",
+  "key_points": [
+   "Uses Gradient Boosting Trees to partition state space per objective, avoiding gradient interference.",
+   "Incorporates guidance labels from heuristics, sensors, or rule‑based systems into tree construction.",
+   "Demonstrates superior performance on spatial, rare‑event, and temporal conflict domains, meeting cost budgets while maintaining rewards.",
+   "Outperforms existing methods in offline RL by balancing imitation and policy improvement across dataset sizes."
+  ],
+  "why_it_matters": "Provides a principled way to handle locally contradictory feedback in RL, enabling more reliable policy learning in safety‑critical and constrained environments where traditional neural networks struggle.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "gradient_boosting",
+   "offline_rl"
+  ],
+  "importance": 3,
+  "id": "a2124464d7a0a7b0",
+  "url": "https://arxiv.org/abs/2611.34799v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:52:23Z",
+  "added": "2026-11-26T21:47:33.957804+00:00"
+ },
+ {
+  "headline": "Barron Smoothness for Layers in Deep Neural Networks",
+  "tldr": "The paper introduces a layer-wise generalization of Barron norms to bound approximation errors in deep networks, linking infinite-width limits to finite-size discretization and characterizing local minima via an equidistribution principle.",
+  "key_points": [
+   "Splits error bounding into optimal infinite-width selection and finite-size discretization",
+   "Defines layer-wise Barron norms as the governing quantity for discretization error",
+   "Analyzes optimization landscape, showing local minima follow an equidistribution principle",
+   "Connects ideas to adaptive spline and finite element approximation methods"
+  ],
+  "why_it_matters": "Provides a theoretical framework for understanding how deep networks approximate functions and how their architecture influences optimization, potentially guiding more efficient model design and training.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "Barron norms",
+   "deep learning",
+   "approximation theory",
+   "optimization landscape"
+  ],
+  "importance": 2,
+  "id": "8e5fdcbe77f27d3a",
+  "url": "https://arxiv.org/abs/2611.34805v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:56:02Z",
+  "added": "2026-11-26T21:47:21.772160+00:00"
+ },
+ {
+  "headline": "VulnSafe: Measuring Vulnerability-Aware Relational Safety in Large Language Models",
+  "tldr": "The paper introduces VulnSafe, a Chinese benchmark that evaluates large language models on five dimensions of vulnerability-aware relational safety, revealing varied competence profiles across eight LLMs.",
+  "key_points": [
+   "Defines Vulnerability-Aware Response Competence (VARC) with five constructs: Risk Perception, Safety Preservation, Autonomy Protection, Supportive Response, Boundary Management.",
+   "Provides 41 scenarios and 2,050 balanced prompts with detailed scoring rubrics to separate proactive and prohibitive behaviors.",
+   "Evaluates eight representative LLMs, showing distinct safety competence profiles and larger gaps in proactive safety than in refusal compliance.",
+   "Highlights the need to view relational safety as a multidimensional capability rather than just refusal rates."
+  ],
+  "why_it_matters": "Understanding and measuring relational safety helps developers create LLMs that can responsibly support vulnerable users, ensuring ethical interactions beyond simple content filtering.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "safety",
+   "relational",
+   "LLM",
+   "benchmark"
+  ],
+  "importance": 3,
+  "id": "b6bef84628be4aee",
+  "url": "https://arxiv.org/abs/2611.34819v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:03:09Z",
+  "added": "2026-11-26T21:47:10.395084+00:00"
+ },
+ {
+  "headline": "LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?",
+  "tldr": "Parameter revisit in looped MoE architectures provides minimal benefit; most performance gains stem from network shape, optimizer choice, and added compute.",
+  "key_points": [
+   "Matched non-revisit controls show revisit adds almost no gain.",
+   "Network shape and residual scaling account for most improvements.",
+   "Optimizer behavior (AdamW vs Muon) influences perceived benefits.",
+   "Extra compute with revisit outperforms extra experts, but deeper standard MoE can recover most of the gain."
+  ],
+  "why_it_matters": "The study clarifies that the perceived advantages of looped MoE designs are due to factors other than parameter revisiting, guiding future model architecture decisions and resource allocation in the AI community.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "mixture-of-experts",
+   "parameter-revisit",
+   "optimizer",
+   "model-architecture"
+  ],
+  "importance": 3,
+  "id": "107d92ed2d8e1552",
+  "url": "https://arxiv.org/abs/2611.34821v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:04:31Z",
+  "added": "2026-11-26T21:46:58.157616+00:00"
+ },
+ {
+  "headline": "Gradient TD($λ$) for Non-Linear Function Approximation",
+  "tldr": "The paper extends Gradient TD algorithms with λ-returns from linear to non-linear function approximation, enabling stable off-policy learning with modern non-linear models.",
+  "key_points": [
+   "Provides a convergent off-policy TD($λ$) algorithm for non-linear function approximators.",
+   "Builds on projected Bellman error framework to ensure stability.",
+   "Addresses limitations of semi-gradient TD methods that can diverge.",
+   "Offers an alternative to recent generalized projected Bellman error approaches."
+  ],
+  "why_it_matters": "Non-linear function approximators (e.g., deep neural networks) are central to modern RL; a stable TD($λ$) method expands the toolbox for reliable off-policy learning and could improve performance of many RL applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "temporal_difference",
+   "non_linear_approximation",
+   "gradient_td"
+  ],
+  "importance": 3,
+  "id": "0244f1ae7e45a07c",
+  "url": "https://arxiv.org/abs/2611.34826v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:08:06Z",
+  "added": "2026-11-26T21:46:45.915527+00:00"
+ },
+ {
+  "headline": "Repairing the Trustworthiness of Distilled Language Models",
+  "tldr": "A new framework using proximal Bregman response functions improves trustworthiness of distilled language models without needing the original distillation data and with minimal impact on performance.",
+  "key_points": [
+   "Introduces PBRF-based repair that works with a surrogate proxy dataset.",
+   "Supports preference-based supervision via an odds‑ratio objective.",
+   "Improves trustworthiness regressions by up to 8% while keeping perplexity loss under 1%.",
+   "Works for both pre‑training and post‑training distilled models."
+  ],
+  "why_it_matters": "Ensures smaller, deployable language models remain reliable and safe, addressing a key barrier to widespread adoption of distilled AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "trustworthiness",
+   "distillation",
+   "language models",
+   "preference optimization"
+  ],
+  "importance": 3,
+  "id": "1b3746fc216615b2",
+  "url": "https://arxiv.org/abs/2611.34831v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:12:20Z",
+  "added": "2026-11-26T21:46:34.071296+00:00"
+ },
+ {
+  "headline": "Knowledge-Base Gradient Descent: Self-Structuring Learning through Question Answering",
+  "tldr": "A new method, Knowledge-Base Gradient Descent, iteratively edits knowledge‑base structures (graphs or document links) using question‑answer feedback to improve answer quality.",
+  "key_points": [
+   "Introduces Self‑Structuring Learning where QA pairs guide KB construction.",
+   "Proposes a gradient‑descent‑like process that proposes, evaluates, and adopts structural edits.",
+   "Instantiates the approach for graph schemas (Schema Descent) and document‑based cards.",
+   "Experiments show higher mean Answer F1 on held‑out generated questions after edits.",
+   "Human‑question performance improves for schemas but may drop for document cards."
+  ],
+  "why_it_matters": "Enables automated, data‑driven refinement of knowledge‑base structures, reducing manual engineering and improving LLM‑driven retrieval for specific domains.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "knowledge-base",
+   "gradient-descent",
+   "self-structuring",
+   "LLM"
+  ],
+  "importance": 3,
+  "id": "5ac53a30c09021a1",
+  "url": "https://arxiv.org/abs/2611.34841v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:19:02Z",
+  "added": "2026-11-26T21:46:21.954613+00:00"
+ },
+ {
+  "headline": "From Prediction to Decision: Decision-Focused Fine-Tuning of Autoregressive Tabular Transformers for Cost-Sensitive Financial Events",
+  "tldr": "The paper proposes fine‑tuning pretrained autoregressive tabular transformers directly on a decision‑oriented utility objective, improving cost‑sensitive financial decision making over standard probability‑thresholding.",
+  "key_points": [
+   "Uses pretrained autoregressive transformers on tokenized tabular event streams for fraud prediction.",
+   "Fine‑tunes model to maximize expected utility under a custom, amount‑scaled cost matrix rather than post‑hoc thresholding.",
+   "Provides a closed‑form gradient for the decision‑focused loss, preserving calibration via a KL anchor and language‑modeling term.",
+   "Introduces a sampled, group‑normalized variant for extending to trajectory‑level rewards."
+  ],
+  "why_it_matters": "Financial institutions face asymmetric costs for false positives and false negatives; aligning model training with actual decision utilities can reduce losses and improve operational efficiency beyond traditional probability‑based approaches.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "transformers",
+   "financial-fraud",
+   "cost-sensitive-learning",
+   "decision-focused-fine-tuning"
+  ],
+  "importance": 3,
+  "id": "4633f7ca3bea50cd",
+  "url": "https://arxiv.org/abs/2611.34858v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:27:48Z",
+  "added": "2026-11-26T21:46:10.121632+00:00"
+ },
+ {
+  "headline": "Training-Free Focus Maps Boost Frozen Vision Transformers for Long-Video Object Segmentation",
+  "tldr": "A training‑free focus‑map policy for frozen DINOv3 ViTs reduces encoder FLOPs by ~16% while improving segmentation scores over ALGM on long‑video benchmarks.",
+  "key_points": [
+   "Uses a frozen DINOv3 ViT with a Cutie head and a training‑free focus map that keeps full resolution on object regions.",
+   "Policy merges velocity‑shifted and block‑matched masks, applies a camera‑compensated surprise check, and falls back when objects are lost.",
+   "Achieves +2.76 J&F over ALGM on LVOS V2 with 16% fewer encoder FLOPs; comparable performance on DAVIS 2017.",
+   "Lower counted compute does not significantly affect end‑to‑end latency; trade‑offs explored for memory and latency."
+  ],
+  "why_it_matters": "Demonstrates that smart, training‑free token merging can cut compute for vision‑transformer video segmentation without sacrificing accuracy, enabling more efficient deployment on long videos.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision_transformer",
+   "video_object_segmentation",
+   "training_free",
+   "efficiency"
+  ],
+  "importance": 2,
+  "id": "ad719e8a38ff6ab2",
+  "url": "https://arxiv.org/abs/2611.34863v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:30:28Z",
+  "added": "2026-11-26T21:45:58.443593+00:00"
+ },
+ {
+  "headline": "Shape-Aware Three-Way Merge for RDF Knowledge Graphs: The schema defines the conflict: an implementation and evaluation",
+  "tldr": "The paper presents a three-way merge operator for RDF graphs that uses SHACL shapes to detect cardinality conflicts, showing fewer human decisions than baseline methods while preserving data integrity.",
+  "key_points": [
+   "Combines canonical triples with SHACL shape constraints to identify contended slots.",
+   "Implementation evaluated against Quit Store's Context Merge and six other strategies.",
+   "Detected 33 true‑positive conflicts with no data loss, requiring far fewer human queries than the baseline.",
+   "Handles cardinality changes effectively; datatype evolution reveals a detection blind spot.",
+   "Open‑source implementation integrated into a production multi‑agent RDF store."
+  ],
+  "why_it_matters": "Accurate merging of RDF knowledge graphs reduces manual conflict resolution, improves data quality, and supports reliable collaborative updates in semantic web applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "RDF",
+   "SHACL",
+   "knowledge-graph",
+   "merge"
+  ],
+  "importance": 2,
+  "id": "cc282ab72e6b1735",
+  "url": "https://arxiv.org/abs/2611.34870v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:34:46Z",
+  "added": "2026-11-26T21:45:46.082856+00:00"
+ },
+ {
+  "headline": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+  "tldr": "The paper introduces a hybrid decision tree that combines feature-based and selective case-based splits, achieving accuracy comparable to ensembles while keeping trees shallow and interpretable.",
+  "key_points": [
+   "Hybrid architecture supports both feature-based and case-based splits throughout the tree.",
+   "Selective case-based splits find informative feature subsets to define splits.",
+   "Experiments on diverse tabular datasets show performance on par with ensemble methods.",
+   "Resulting trees are shallow, maintaining interpretability without sacrificing accuracy."
+  ],
+  "why_it_matters": "Improves the trade‑off between interpretability and predictive power for tabular data, offering a practical alternative to black‑box ensembles in high‑stakes applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "decision trees",
+   "interpretability",
+   "hybrid models",
+   "tabular data"
+  ],
+  "importance": 3,
+  "id": "45edb7a9088fd6d9",
+  "url": "https://arxiv.org/abs/2611.34887v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:45:35Z",
+  "added": "2026-11-26T21:45:34.011737+00:00"
+ },
+ {
+  "headline": "PhysReader: Sim-to-Real Material Estimation for Deformable Objects from Video",
+  "tldr": "A feed‑forward model trained only on synthetic drops can estimate density‑normalized stiffness and yield stress of real deformable objects from a single video, with 2D optical‑flow tracklets proving most effective for sim‑to‑real transfer.",
+  "key_points": [
+   "Predictor trained solely on simulation estimates E/ρ and σY/ρ from real drop videos.",
+   "3D depth‑based inputs work best in simulation but fail on real data; 2D optical‑flow tracklets transfer best.",
+   "PhysReader outperforms all baselines on a new real‑world dataset (PhysReader‑Real) of 16 objects.",
+   "A per‑scene optimizer can slightly improve predictions but requires 49 min per video versus 12 s for PhysReader."
+  ],
+  "why_it_matters": "Demonstrates that sim‑trained models can reliably infer material properties of everyday objects from simple video, enabling low‑cost, non‑destructive testing and advancing sim‑to‑real perception research.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "material estimation",
+   "sim-to-real",
+   "deformable objects",
+   "computer vision"
+  ],
+  "importance": 3,
+  "id": "d57d26fab13321ba",
+  "url": "https://arxiv.org/abs/2611.34894v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:47:56Z",
+  "added": "2026-11-26T21:45:22.058335+00:00"
+ },
+ {
+  "headline": "Attack Policy Selection can Mislead Monitor Evaluators",
+  "tldr": "Evaluations of AI safety monitors are highly sensitive to the choice and optimization of attack policies, leading to widely varying false negative rates and potential overconfidence in monitor strength.",
+  "key_points": [
+   "False negative rates for an OpenAI monitor varied from 0.5% to 20.8% across RL optimization levels.",
+   "Different attack methods (optimised prompting vs. transcript editing) yielded 6.4% to 23.0% false negatives at best optimization.",
+   "All attacks transferred to a held-out GPT-5.4 monitor, showing proxy-based evaluations can be misleading.",
+   "Choice of proxy attack policy can change evaluation conclusions, requiring justification of its legitimacy."
+  ],
+  "why_it_matters": "Accurate assessment of AI safety monitors is crucial for preventing dangerous AI behavior in deployment; misleading evaluations could give a false sense of security and hinder effective risk mitigation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AI safety",
+   "monitor evaluation",
+   "attack policies"
+  ],
+  "importance": 3,
+  "id": "ab328cdaa522dc1f",
+  "url": "https://arxiv.org/abs/2611.34934v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:59:28Z",
+  "added": "2026-11-26T21:45:09.954606+00:00"
+ },
+ {
+  "headline": "Tokenisation is not in APX",
+  "tldr": "The paper proves that, unless P=NP, tokenisation cannot be approximated within any constant factor in polynomial time, placing it outside the APX class.",
+  "key_points": [
+   "No polynomial-time algorithm can achieve a constant-factor approximation for tokenisation objectives.",
+   "Proof applies to both direct and bottom‑up tokenisation under compression and unigram log‑likelihood goals.",
+   "Results hold for binary, larger, and even unary alphabets, showing APX‑hardness.",
+   "Implication: tokenisation lacks a polynomial-time approximation scheme (PTAS)."
+  ],
+  "why_it_matters": "Understanding the computational limits of tokenisation informs the design of realistic tokenisation algorithms and sets expectations for achievable performance in NLP pipelines.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "tokenisation",
+   "complexity",
+   "APX",
+   "NLP"
+  ],
+  "importance": 3,
+  "id": "aa2ae51b7bdf3e44",
+  "url": "https://arxiv.org/abs/2611.34938v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:59:38Z",
+  "added": "2026-11-26T21:44:57.806902+00:00"
+ },
+ {
+  "headline": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
+  "tldr": "The paper proposes a low‑latency transfer‑learning method to adapt autoencoder‑based communication systems trained on AWGN channels to fading channels, achieving near‑optimal BER with far less training time and energy.",
+  "key_points": [
+   "AE communication systems trained on AWGN perform poorly on Rayleigh fading with impairments.",
+   "A budget‑constrained layer‑selection algorithm fine‑tunes only a small subset of layers.",
+   "Partial updates eliminate the error floor and approach the performance of fully retrained models.",
+   "Adaptation reduces training time, MAC operations, energy use, and updated‑parameter fraction."
+  ],
+  "why_it_matters": "Enables practical deployment of AI‑driven physical‑layer designs by drastically cutting adaptation cost, making them viable for real‑world wireless systems that face varying channel conditions.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "autoencoder",
+   "transfer_learning",
+   "communications",
+   "physical_layer"
+  ],
+  "importance": 3,
+  "id": "d89d47a6bc7d4bb2",
+  "url": "https://arxiv.org/abs/2611.34942v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:59:57Z",
+  "added": "2026-11-26T21:44:47.950091+00:00"
+ },
+ {
+  "headline": "LiDAR Intensity Reconstruction with Limited Real Data: An Architecture Benchmark under Fixed-Epoch Training",
+  "tldr": "The paper benchmarks nine neural architectures for reconstructing LiDAR intensity from depth and other cues, showing UNet-V2 excels with full real data while a diffusion model (DDPM) performs best with limited real data.",
+  "key_points": [
+   "Benchmarked nine architectures on real SemanticKITTI and synthetic VoxelScape data under a fixed 20‑epoch training protocol.",
+   "UNet-V2 achieved the lowest error when trained on 100% real data; DDPM outperformed deterministic models with only 1‑10% real data.",
+   "Evaluated performance across metrics (MAE, MSE, PSNR, SSIM), inference speed, and spectral‑energy agreement.",
+   "Results highlight trade‑offs between data realism and model type, especially for diffusion‑based approaches."
+  ],
+  "why_it_matters": "Understanding how different neural architectures handle scarce real LiDAR intensity data helps autonomous‑vehicle developers choose efficient models and informs the use of synthetic data to reduce costly real‑world collection.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LiDAR",
+   "intensity reconstruction",
+   "diffusion model",
+   "benchmark"
+  ],
+  "importance": 2,
+  "id": "6302fdf80095ab35",
+  "url": "https://arxiv.org/abs/2611.34724v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:10:43Z",
+  "added": "2026-11-26T21:44:33.900605+00:00"
+ },
+ {
+  "headline": "Hierarchical Graph Metanetworks (H‑GMNs) Enable Scalable, Hierarchy‑Aware Model Analysis",
+  "tldr": "H‑GMNs add hierarchy‑preserving pooling to graph metanetworks, letting them process large CNNs, ResNets and Vision Transformers efficiently while improving accuracy on evaluation, backdoor detection, and pruning tasks.",
+  "key_points": [
+   "Introduces permutation‑symmetry‑preserving pooling/un‑pooling to exploit layer‑ and block‑level hierarchy in neural nets.",
+   "Extends the approach to Transformers with a graph construction that respects permutation symmetries.",
+   "Shows near‑constant computational cost as metanetwork depth grows, outperforming flat GMNs on ResNet‑18, ViT and up to 86 M‑parameter model zoos.",
+   "Improves sample efficiency and accuracy on tasks such as Lipschitz bound estimation, generalisation prediction, backdoor detection, and pruning."
+  ],
+  "why_it_matters": "By scaling metanetworks to modern, hierarchical architectures, H‑GMNs make weight‑space learning practical for real‑world models, opening new possibilities for automated model evaluation, robustness testing, and editing at scale.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "graph neural networks",
+   "model evaluation",
+   "transformers",
+   "hierarchical learning"
+  ],
+  "importance": 3,
+  "id": "e5cf168d333e59d3",
+  "url": "https://arxiv.org/abs/2611.34726v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:12:08Z",
+  "added": "2026-11-26T21:44:22.211701+00:00"
+ },
+ {
+  "headline": "Was the Model Given the Right Action? Auditing and Repairing Action Interfaces in Navigation World Models",
+  "tldr": "The paper audits mismatches between training and rollout action encoding in Navigation World Models, showing that fixing these mismatches can cut visual prediction error by 42% and alter model rankings.",
+  "key_points": [
+   "Three interacting differences were found between training and rollout code for action encoding.",
+   "Correcting the action inputs without retraining reduces mean visual prediction error by 42% on the RECON dataset.",
+   "The introduced tool ActRosetta detects and repairs action‑encoding mismatches, though its impact is limited when models are insensitive to actions.",
+   "Mismatched action preparation can falsely inflate or deflate model performance, affecting comparative evaluations."
+  ],
+  "why_it_matters": "Accurate evaluation of action‑conditioned world models is crucial for reliable navigation research; unnoticed encoding bugs can mislead the community about model capabilities and hinder progress.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "world-models",
+   "action-encoding",
+   "evaluation",
+   "navigation"
+  ],
+  "importance": 3,
+  "id": "6b9693cfecf6329a",
+  "url": "https://arxiv.org/abs/2611.34739v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:18:15Z",
+  "added": "2026-11-26T21:44:09.952244+00:00"
+ },
+ {
+  "headline": "BRIAR: Martingale Belief Smoothing on Bifurcation-Guided Reasoning Trees",
+  "tldr": "BRIAR introduces a tree-structured RLVR framework that leverages martingale geometry to guide rollouts, smooth beliefs, and improve long-chain reasoning efficiency.",
+  "key_points": [
+   "Identifies a Doob martingale structure in prefix pass probabilities of on-policy verifiers.",
+   "Expands reasoning trees using an upper-confidence bifurcation frontier to avoid wasted rollouts.",
+   "Applies linear-time RTS belief smoothing, avoiding costly matrix inversions.",
+   "Detects absorbed frontier nodes and applies zero-sum suffix advantages post‑absorption."
+  ],
+  "why_it_matters": "By aligning rollout strategies with the underlying martingale dynamics, BRIAR reduces redundant computation and improves the reliability of long-chain reasoning in reinforcement learning with verifiable rewards, a key challenge for complex problem solving.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "reasoning",
+   "martingale",
+   "tree_smoothing"
+  ],
+  "importance": 3,
+  "id": "eac633f2060a9c9c",
+  "url": "https://arxiv.org/abs/2611.34746v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:23:23Z",
+  "added": "2026-11-26T21:43:57.978171+00:00"
+ },
+ {
+  "headline": "Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor Detection",
+  "tldr": "The paper proposes a token‑based scoring system to evaluate weight, activation, and output‑based model diffing methods for detecting backdoors introduced during fine‑tuning, showing that the J‑lens and its refinement improve weight‑based detection.",
+  "key_points": [
+   "Introduces a token readout scoring system for model diffing in backdoor detection.",
+   "Enhances weight‑based methods with the J‑lens and J++‑lens, achieving top‑10 token ranking in 11/12 settings.",
+   "Finds activation/output‑based methods (ADL, Diff Mining) vulnerable to penalisation attacks, while weight‑based methods resist them.",
+   "Demonstrates that permuting hidden units or training only residual‑stream layers can hide backdoors from weight‑based methods but not from activation‑based ones.",
+   "No single method is robust against both types of attacks."
+  ],
+  "why_it_matters": "Detecting backdoors in fine‑tuned models is critical for AI security, and the study provides a systematic way to compare detection techniques, highlighting strengths and weaknesses that guide future defenses.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "backdoor detection",
+   "model diffing",
+   "fine-tuning",
+   "AI security"
+  ],
+  "importance": 3,
+  "id": "1dcc8d8f1fb2b307",
+  "url": "https://arxiv.org/abs/2611.34758v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:28:59Z",
+  "added": "2026-11-26T21:43:46.059104+00:00"
+ },
+ {
+  "headline": "One Model, Many Modes: Evolving System Prompt Ensembles for Creative Generation",
+  "tldr": "The paper introduces SEPO, a training‑free system‑prompt ensemble method that improves the creativity of large language models by balancing quality, diversity, and novelty at inference time.",
+  "key_points": [
+   "SEPO evolves a set of behaviorally distinct system prompts and selects them via greedy max‑min optimization under a quality constraint.",
+   "Across four creative tasks and three open‑weight models, SEPO leads in 8 of 12 settings on the harmonic mean of quality, diversity, and novelty.",
+   "Diversity scores rise from 1.92 to 3.43 and novelty from 1.00 to 3.34, with only a modest quality drop (3.72 to 3.30).",
+   "Larger ensembles further separate prompt‑conditioned response distributions, enhancing creative output."
+  ],
+  "why_it_matters": "Creative generation requires not just diverse outputs but also high‑quality, novel responses; SEPO offers a practical, training‑free way to achieve this balance, improving user experience for applications like brainstorming, storytelling, and design.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "creative-generation",
+   "prompt-ensemble",
+   "LLM",
+   "inference"
+  ],
+  "importance": 3,
+  "id": "83fe5430a4ee5df0",
+  "url": "https://arxiv.org/abs/2611.34760v1",
+  "source": "arXiv",
+  "date": "2026-11-25T17:29:33Z",
+  "added": "2026-11-26T21:43:34.279177+00:00"
+ },
+ {
+  "headline": "Transferring Architecture as an Optimization Prior",
+  "tldr": "The paper proposes aligning a target network's initialization to the representational geometry of a randomly initialized guide network, allowing cross‑architecture transfer of optimization priors without using labels or gradients, which improves downstream performance.",
+  "key_points": [
+   "Introduces an initialization alignment method that transfers the geometric prior of a guide network to a target network.",
+   "Demonstrates that shallow networks can inherit the optimization benefits of deeper networks.",
+   "Shows that fine‑resolution networks can impart representational granularity to coarser networks.",
+   "The alignment requires no label data, no gradient flow, and does not transfer learned features.",
+   "Empirical results indicate improved downstream performance after alignment."
+  ],
+  "why_it_matters": "Understanding and manipulating the initial geometry of neural networks can boost training efficiency and performance, offering a new tool for model design that decouples architectural advantages from physical depth or resolution.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "initialization",
+   "architecture",
+   "transfer learning",
+   "optimization"
+  ],
+  "importance": 3,
+  "id": "9ec3d15976b2c361",
+  "url": "https://arxiv.org/abs/2611.34816v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:01:49Z",
+  "added": "2026-11-26T21:43:22.147958+00:00"
+ },
+ {
+  "headline": "F-MADDPG: Flexible Multi-Agent RL for UAV Data Harvesting with Variable Team Sizes and Agent Loss",
+  "tldr": "A new variant of MADDPG, called F-MADDPG, enables UAV teams to learn decentralized data‑harvesting policies that adapt to changing numbers of sensors and drones, and remain robust to permanent agent failures.",
+  "key_points": [
+   "Introduces F-MADDPG, a flexible extension of Multi-Agent DDPG that handles variable team sizes.",
+   "Uses team‑size sampling (inverse‑cardinality) to improve training efficiency across populations.",
+   "Demonstrates faster mission completion and resilience to agent loss compared to a standard MADDPG baseline.",
+   "Exposure to failures during training does not consistently improve robustness."
+  ],
+  "why_it_matters": "Enables scalable, resilient UAV data‑collection missions without retraining separate models for each team configuration, lowering deployment costs for remote sensing applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "reinforcement_learning",
+   "UAV",
+   "data_harvesting",
+   "multi_agent"
+  ],
+  "importance": 2,
+  "id": "b15396b236db2a0c",
+  "url": "https://arxiv.org/abs/2611.34818v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:03:00Z",
+  "added": "2026-11-26T21:43:09.900169+00:00"
+ },
+ {
+  "headline": "Linguistic Knowledge Benchmark Evaluates Language Models on Early-Grade Literacy in Kiswahili and English",
+  "tldr": "A new benchmark tests LM knowledge across nine linguistic domains for early literacy; frontier models score >90% but smaller models drop to ~40% in Kiswahili, highlighting gaps for low‑resource classroom deployment.",
+  "key_points": [
+   "Benchmark converts curricula into 135 Kiswahili and 137 English questions across nine linguistic domains and seven grades.",
+   "Frontier models achieve >90% accuracy; models <10B parameters fall to 51.9% (English) and 40.7% (Kiswahili).",
+   "Mobile‑friendly models average 47% (English) and 24% (Kiswahili) accuracy, limiting practical use in LMIC classrooms.",
+   "Open‑source pipeline, sample items, code, and leaderboard released for community evaluation."
+  ],
+  "why_it_matters": "Shows that state‑of‑the‑art LMs still lack sufficient linguistic knowledge for low‑resource languages, impacting AI‑driven literacy tools in LMICs and guiding future model development and data collection.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "literacy",
+   "low-resource",
+   "benchmark",
+   "language-models"
+  ],
+  "importance": 3,
+  "id": "95a3d283c043027b",
+  "url": "https://arxiv.org/abs/2611.34823v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:07:44Z",
+  "added": "2026-11-26T21:42:57.983075+00:00"
+ },
+ {
+  "headline": "Study Reveals How Training Objectives and Architectures Shape Epistemic Uncertainty in JEPA and RSSM World Models",
+  "tldr": "An empirical comparison shows that RSSM world models dampen state perturbations, reducing epistemic uncertainty signals, while JEPA models transmit changes directly, leading to more reliable uncertainty estimates for downstream tasks.",
+  "key_points": [
+   "Compared post‑hoc epistemic uncertainty (Laplace, ensembles) between JEPA (LeWorldModel) and RSSM (DreamerV3).",
+   "RSSM attenuates perturbations via recurrent averaging and reconstruction weighting, missing small changes.",
+   "JEPA passes changes through all stages, preserving uncertainty signals.",
+   "Differences cause performance gaps in tasks like unfamiliar‑state detection and uncertainty‑penalised planning.",
+   "Experiments conducted across ten simulated visual‑control environments."
+  ],
+  "why_it_matters": "Understanding how model architecture and training objectives affect uncertainty estimation is crucial for safe decision‑making in reinforcement learning and robotics, where reliable detection of out‑of‑distribution states can prevent costly errors.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "world-models",
+   "epistemic-uncertainty",
+   "JEPA",
+   "RSSM"
+  ],
+  "importance": 3,
+  "id": "b9848a6debdf7ee4",
+  "url": "https://arxiv.org/abs/2611.34830v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:11:49Z",
+  "added": "2026-11-26T21:42:45.886503+00:00"
+ },
+ {
+  "headline": "Computational analysis of 50,000 English proverbs reveals collective prescriptions",
+  "tldr": "Researchers used large language models to map the topics and prescriptive tendencies of nearly 50k English proverbs, finding they mostly advise caution, honesty, and long‑term thinking, while offering mixed guidance on trade‑offs.",
+  "key_points": [
+   "Analyzed ~50,000 English proverbs with LLMs validated against human judgments",
+   "Most proverbs are prescriptive, favoring caution, honesty, and forward‑looking actions",
+   "Proverbs about uncontrollable events tend to describe rather than prescribe",
+   "When advice involves trade‑offs, proverbs often present contradictory recommendations"
+  ],
+  "why_it_matters": "Quantifying the moral and behavioral guidance embedded in cultural sayings helps us understand collective human values, informs AI alignment research, and provides a data‑driven basis for cross‑cultural studies of wisdom.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "proverbs",
+   "cultural analysis",
+   "LLM",
+   "behavior"
+  ],
+  "importance": 2,
+  "id": "4582cc8882c12f70",
+  "url": "https://arxiv.org/abs/2611.34832v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:12:23Z",
+  "added": "2026-11-26T21:42:34.239052+00:00"
+ },
+ {
+  "headline": "Probing Visual Idiosyncrasies in Text-to-Image Models",
+  "tldr": "A ResNet-50 can perfectly identify which open-source T2I model generated an image, revealing subtle visual fingerprints that humans miss.",
+  "key_points": [
+   "ResNet-50 classifies images from HiDream-O1-Dev, FLUX.2-dev, HunyuanImage-3.0, and Qwen-Image-2512 with 100% accuracy.",
+   "Humans achieve only 62.61% accuracy, showing cues are not obvious.",
+   "Low-level texture, layout, depth, albedo, and style preferences act as model-specific fingerprints.",
+   "These cues persist under image corruption and out-of-distribution prompts."
+  ],
+  "why_it_matters": "Identifying model-specific visual fingerprints enables better model comparison, attribution, and warns against assuming anonymity in human evaluations of T2I systems.",
+  "category": "paper",
+  "companies": [
+   "HiDream",
+   "FLUX",
+   "HunyuanImage",
+   "Qwen"
+  ],
+  "tags": [
+   "text-to-image",
+   "model fingerprinting",
+   "visual analysis",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "97dd0318b0e07fb8",
+  "url": "https://arxiv.org/abs/2611.34843v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:20:18Z",
+  "added": "2026-11-26T21:42:21.760287+00:00"
+ },
+ {
+  "headline": "Put the World Back: Timestamps Matter in Time Series Reasoning",
+  "tldr": "The paper shows that LLMs often rely on shortcuts rather than true timestamp grounding in time‑series tasks, and introduces a diagnostic protocol to reveal this weakness.",
+  "key_points": [
+   "Current evaluations give LLMs events in chronological order, masking reliance on timestamps.",
+   "Three explicit timestamp structures are identified: temporal causal structure, time semantics, and event‑series alignment.",
+   "A diagnostic protocol reveals that models maintain high accuracy even when timestamps are removed or replaced, but fail when event‑series alignment is broken.",
+   "Findings indicate that high benchmark scores do not guarantee genuine timestamp‑grounded reasoning."
+  ],
+  "why_it_matters": "Understanding whether LLMs truly use timestamps is crucial for building reliable time‑series reasoning systems, especially in domains like finance, climate modeling, and healthcare where temporal alignment is essential.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "time_series",
+   "LLM",
+   "evaluation",
+   "timestamps"
+  ],
+  "importance": 3,
+  "id": "a7a0eb1741bb7fca",
+  "url": "https://arxiv.org/abs/2611.34848v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:23:07Z",
+  "added": "2026-11-26T21:42:10.329588+00:00"
+ },
+ {
+  "headline": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+  "tldr": "Introduces DRBench Pro, a benchmark that evaluates deep research agents on structured knowledge coverage using Wikipedia-derived knowledge trees, with 144 cases, 44,102 rubrics, and reports agent performance.",
+  "key_points": [
+   "Benchmark focuses on breadth and depth of knowledge coverage rather than just report quality.",
+   "Automated pipeline creates local knowledge trees from Wikipedia and generates research queries with evidence‑grounded rubrics.",
+   "Includes 144 cases across 24 domains, totaling 44,102 rubrics for evaluation.",
+   "Best‑performing agent achieved 57.04% overall coverage; rubric judgments align closely with human annotations."
+  ],
+  "why_it_matters": "Provides a standardized way to measure how well AI agents can gather and synthesize knowledge across domains, guiding future improvements in research‑assistant capabilities.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "benchmark",
+   "deep research agents",
+   "knowledge coverage",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "603403c78a7741ec",
+  "url": "https://arxiv.org/abs/2611.34852v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:25:30Z",
+  "added": "2026-11-26T21:41:58.203134+00:00"
+ },
+ {
+  "headline": "Call for Technical Validation of Re-identification Tests under EDPB Anonymisation Guidelines",
+  "tldr": "The EDPB's new anonymisation guidelines bring AI models into scope but lack concrete methods for designing and validating re-identification tests; the authors propose a framework using secure processing environments, airlocks, and regulatory sandboxes, and outline open questions for validation.",
+  "key_points": [
+   "EDPB Guidelines (02/2026) include AI models but give no guidance on re-identification test design or validation.",
+   "Proposed framework uses secure processing environments (airlocks) to review model outputs before release.",
+   "Distinguishes three evidence types—formal, empirical, indirect—and examines release of model weights, airlock review, and regulatory sandboxes.",
+   "Calls for re-identification tests to be validated like measurement methods, with defined detection limits, bias, and uncertainty."
+  ],
+  "why_it_matters": "Clear validation standards are essential to ensure that privacy guarantees for AI models are reliable, preventing false confidence in anonymisation and helping regulators enforce data protection laws effectively.",
+  "category": "policy",
+  "companies": [],
+  "tags": [
+   "re-identification",
+   "EDPB",
+   "privacy",
+   "model_weights"
+  ],
+  "importance": 3,
+  "id": "257aeff84cfeb54e",
+  "url": "https://arxiv.org/abs/2611.34859v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:28:20Z",
+  "added": "2026-11-26T21:41:46.082548+00:00"
+ },
+ {
+  "headline": "RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies",
+  "tldr": "RePace is an offline framework that uses a pretrained language model to select per‑segment speedup factors for robot demonstration data, improving the efficiency of vision‑language‑action policies without hurting success rates.",
+  "key_points": [
+   "Analyzes candidate speedup factors for each demonstration segment using visual context and motion windows.",
+   "A pretrained language model interprets retiming effects and selects an optimal speedup profile.",
+   "Outperforms baseline speedup methods on LIBERO and RoboCasa‑Kitchen tasks with a Franka Research 3 arm.",
+   "Matches or exceeds baseline success rates while completing trials faster."
+  ],
+  "why_it_matters": "Accelerating robot demonstrations reduces training time and deployment latency for VLA policies, enabling more practical and responsive robotic systems in real‑world settings.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision-language-action",
+   "robotics",
+   "offline speedup",
+   "policy efficiency"
+  ],
+  "importance": 3,
+  "id": "07aff8529387b3ae",
+  "url": "https://arxiv.org/abs/2611.34864v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:30:43Z",
+  "added": "2026-11-26T21:41:34.036638+00:00"
+ },
+ {
+  "headline": "A Survey of Security, Privacy, and Ethics of Large Language Models in Telecom",
+  "tldr": "The paper surveys how large language models are used in telecom, highlighting privacy, security, and ethical risks and proposing a telecom‑specific taxonomy and open research challenges.",
+  "key_points": [
+   "LLMs are being deployed for customer service, network analytics, and operational support in telecom.",
+   "Telecom data’s sensitivity and longitudinal nature raise unique privacy and security concerns.",
+   "The authors propose a taxonomy linking privacy, security, and ethics to specific telecom use cases.",
+   "Open challenges include longitudinal data privacy, cross‑border compliance, and scalable guardrails."
+  ],
+  "why_it_matters": "Telecom operators handle massive amounts of personal and operational data; understanding LLM risks is crucial to protect user privacy, ensure network security, and guide responsible AI deployment in a critical infrastructure sector.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "LLM",
+   "telecom",
+   "privacy",
+   "security"
+  ],
+  "importance": 3,
+  "id": "ab0cd7e6b2841f09",
+  "url": "https://arxiv.org/abs/2611.34868v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:33:07Z",
+  "added": "2026-11-26T21:41:21.960677+00:00"
+ },
+ {
+  "headline": "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
+  "tldr": "The study introduces Delta Residue Attribution (DRA) to measure which parts of AI-generated code patches are truly needed, finding that agents often add extra tests and documentation but their code necessity is comparable to developers'.",
+  "key_points": [
+   "DRA traces each unit of a patch back to the step that created it and checks if it is needed by re-running tests.",
+   "Across 7,660 GitHub Copilot CLI trajectories, agents add more lines than developers, mainly tests (61%) and docs (13%) on SWE-bench Verified.",
+   "Agents' code necessity is similar or better than developers' (NP_code 0.887 vs 0.864 on SWE-bench Verified).",
+   "Pruning unneeded code using DRA retains most task resolution (89% of pruned patches still solve the task).",
+   "The authors recommend reporting code necessity alongside resolve rate in future benchmarks."
+  ],
+  "why_it_matters": "Understanding and reducing over-editing in AI coding assistants improves efficiency, reduces noise in repositories, and helps benchmark and train models for more precise code generation.",
+  "category": "paper",
+  "companies": [
+   "GitHub"
+  ],
+  "tags": [
+   "code generation",
+   "benchmarking",
+   "evaluation",
+   "AI coding agents"
+  ],
+  "importance": 3,
+  "id": "9090f2c5d4193c12",
+  "url": "https://arxiv.org/abs/2611.34875v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:37:06Z",
+  "added": "2026-11-26T21:41:10.323098+00:00"
+ },
+ {
+  "headline": "STRANGE-Bench Reveals Persistent Typicality Bias in Modern Vision Models and Proposes Anchor-Atypicality Sampling",
+  "tldr": "A new benchmark shows that state-of-the-art vision models still rely on typical object co-occurrences, causing 5‑11 pp accuracy gaps; a simple data‑augmentation sampling rule (AAS) cuts this bias by up to 23 pp on synthetic tests.",
+  "key_points": [
+   "Typicality bias—over‑reliance on common object neighbors—remains across detectors, open‑vocab models, self‑supervised, VL, and multimodal LLMs.",
+   "STRANGE-Bench provides a photorealistic, layout‑controlled test with 17 sub‑tiers from typical to never‑co‑occurring object pairs.",
+   "Bias gaps of 5‑11 percentage points persist even in larger models and do not shrink with scale.",
+   "Anchor‑Atypicality Sampling (AAS) reweights paste‑based augmentations using NPMI to expose models to atypical object pairs.",
+   "AAS reduces the bias gap by up to 1.6 pp on COCO and 23.0 pp on STRANGE-Bench without hurting overall performance."
+  ],
+  "why_it_matters": "Understanding and mitigating typicality bias is crucial for reliable object recognition in real‑world scenes where objects often appear in unusual contexts, improving safety and robustness of AI systems.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "vision",
+   "bias",
+   "benchmark",
+   "data_augmentation"
+  ],
+  "importance": 3,
+  "id": "9a9169c3fa481349",
+  "url": "https://arxiv.org/abs/2611.34881v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:39:28Z",
+  "added": "2026-11-26T21:40:58.102974+00:00"
+ },
+ {
+  "headline": "Enhancing Maritime Domain Awareness using Latent Space Representations",
+  "tldr": "The paper shows that compressed Earth Observation embeddings from the TerraMind geospatial foundation model can detect, locate, and classify vessels in Sentinel-1 SAR images, achieving high detection AUC and releasing a new maritime dataset.",
+  "key_points": [
+   "Uses latent-space embeddings of Sentinel-1 SAR to bypass raw data processing bottlenecks.",
+   "Achieves 0.95 ROC-AUC for vessel detection and ~300 m median localisation error for large vessels.",
+   "Releases a curated dataset of ~2,000 Sentinel-1 images paired with AIS data via HuggingFace.",
+   "Demonstrates both potential and current limits of GeoFMs for fine‑grained maritime analysis."
+  ],
+  "why_it_matters": "Improving maritime domain awareness with efficient AI models can enhance monitoring of shipping traffic, security, and environmental compliance while reducing the computational load of processing massive satellite datasets.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "maritime",
+   "earth observation",
+   "embeddings",
+   "SAR"
+  ],
+  "importance": 3,
+  "id": "7740893bf19b25c8",
+  "url": "https://arxiv.org/abs/2611.34899v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:51:36Z",
+  "added": "2026-11-26T21:40:46.029871+00:00"
+ },
+ {
+  "headline": "Diverse Alternative Reasoning Traces (DART) Boost Hard Math Problem Solving",
+  "tldr": "DART mines rejected reasoning traces, generates diverse alternatives, and improves LLM math performance, recovering 37% more hard problems than standard sampling.",
+  "key_points": [
+   "Starts from a rejected trace and decomposes it into steps.",
+   "Ranks steps by position-weighted uncertainty to target revisions.",
+   "Generates distinct alternatives using reference-answer guidance and meta-thought.",
+   "Recovers 37% more DeepMath-103K problems vs. Monte Carlo sampling at equal trace budget.",
+   "Post‑training Llama‑3.1‑8B‑Instruct on DART traces yields top scores on MATH‑500 and AIME benchmarks."
+  ],
+  "why_it_matters": "Improving trace diversity expands the effective training data for mathematical reasoning, enabling smaller LLMs to achieve state‑of‑the‑art performance on challenging math benchmarks without extra compute.",
+  "category": "paper",
+  "companies": [
+   "Meta"
+  ],
+  "tags": [
+   "math reasoning",
+   "trace mining",
+   "LLM training",
+   "benchmark performance"
+  ],
+  "importance": 3,
+  "id": "1b64f5ab40f06384",
+  "url": "https://arxiv.org/abs/2611.34928v1",
+  "source": "arXiv",
+  "date": "2026-11-25T18:59:11Z",
+  "added": "2026-11-26T21:40:34.459600+00:00"
+ },
+ {
   "headline": "Bigger Model or Bigger Table? How Much Backbone a Chorus N-gram Module Replaces",
   "tldr": "Chorus N-gram tables can replace a limited number of transformer backbone parameters, achieving comparable loss with smaller models but offering modest efficiency gains.",
   "key_points": [
@@ -25046,485 +26067,5 @@
   "source": "The Verge AI",
   "date": "2026-11-12T16:55:32-05:00",
   "added": "2026-11-13T06:57:40.127323+00:00"
- },
- {
-  "headline": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
-  "tldr": "Metal Sandbox is an open‑source infrastructure that isolates per‑agent workspaces and schedules GPU commands across multiple Apple Silicon Macs, achieving roughly 2× higher command throughput and reducing tool waiting time.",
-  "key_points": [
-   "Combines restricted file access, native command execution, and per‑command scheduling.",
-   "Parallel commands run concurrently; serial commands share a single slot per node.",
-   "Experiments on four Mac mini M4 nodes show 1.68×‑2.05× throughput gains and 18.8% lower waiting time.",
-   "Integrates with Harbor for task execution, verification, and rollout collection.",
-   "Open‑source implementation available on GitHub."
-  ],
-  "why_it_matters": "Improves utilization of Apple Silicon GPUs for on‑device inference and model development, enabling faster training/evaluation cycles and more efficient deployment of AI workloads on macOS devices.",
-  "category": "paper",
-  "companies": [
-   "Apple"
-  ],
-  "tags": [
-   "GPU",
-   "AppleSilicon",
-   "OnDeviceInference",
-   "Scheduling"
-  ],
-  "importance": 3,
-  "id": "fa4fc5149cb300a1",
-  "url": "https://arxiv.org/abs/2611.17294v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:54:42Z",
-  "added": "2026-11-13T06:57:28.603850+00:00"
- },
- {
-  "headline": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-  "tldr": "Google integrates the Gemini 4 Hydrogen model into Search, enhancing results with AI-powered cards.",
-  "key_points": [
-   "Gemini 4 Hydrogen model is now used in Google Search",
-   "Search UI shows rotating carousel of AI-generated cards",
-   "Examples demonstrate new AI-driven answer format"
-  ],
-  "why_it_matters": "Embedding a newer Gemini model directly into Search brings more advanced language understanding and richer answer presentations to billions of users, showcasing Google's push to blend generative AI with core products.",
-  "category": "model_release",
-  "companies": [
-   "Google"
-  ],
-  "tags": [
-   "Gemini 4",
-   "Search",
-   "AI",
-   "Upgrade"
-  ],
-  "importance": 2,
-  "id": "459a57b4750adf48",
-  "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-  "source": "Google AI",
-  "date": "Thu, 12 Nov 2026 18:00:00 +0000",
-  "added": "2026-11-13T06:57:16.119358+00:00"
- },
- {
-  "headline": "Gondola doubles revenue as its team builds more with Codex",
-  "tldr": "Gondola's revenue has doubled thanks to Codex boosting its lead engineer's output by 50% and ChatGPT streamlining daily tasks.",
-  "key_points": [
-   "Revenue doubled",
-   "Codex increased lead engineer output by 50%",
-   "ChatGPT simplifies daily work",
-   "Helps creatives get credit and get hired"
-  ],
-  "why_it_matters": "Shows how AI coding assistants can directly improve productivity and financial performance for creative platforms.",
-  "category": "product",
-  "companies": [
-   "OpenAI",
-   "Gondola"
-  ],
-  "tags": [
-   "revenue",
-   "Codex",
-   "productivity",
-   "hiring"
-  ],
-  "importance": 2,
-  "id": "90d79223706ea3ab",
-  "url": "https://openai.com/business/customer-stories/gondola",
-  "source": "OpenAI",
-  "date": "Thu, 12 Nov 2026 12:00:00 GMT",
-  "added": "2026-11-13T06:57:04.108682+00:00"
- },
- {
-  "headline": "Introducing Gemini 4 Hydrogen",
-  "tldr": "DeepMind announces the Gemini 4 Hydrogen model.",
-  "key_points": [
-   "New Gemini 4 Hydrogen model introduced",
-   "Continuation of the Gemini series",
-   "Announced by Google DeepMind"
-  ],
-  "why_it_matters": "Adds another iteration to DeepMind's Gemini line, indicating ongoing development in large language models.",
-  "category": "model_release",
-  "companies": [
-   "Google DeepMind"
-  ],
-  "tags": [
-   "Gemini",
-   "Hydrogen",
-   "AI model"
-  ],
-  "importance": 2,
-  "id": "4bad5afe01a19f79",
-  "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-  "source": "Google DeepMind",
-  "date": "Thu, 12 Nov 2026 18:00:50 +0000",
-  "added": "2026-11-13T06:56:52.012607+00:00"
- },
- {
-  "headline": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-  "tldr": "Amplitude uses OpenAI models in its Wave agent to quickly identify, build, and measure product changes within 1–2 days.",
-  "key_points": [
-   "Wave, a proactive product agent, suggests what to build",
-   "Coding agents help teams implement changes rapidly",
-   "Impact of changes is measured automatically",
-   "Built primarily on OpenAI models"
-  ],
-  "why_it_matters": "Demonstrates how generative AI can accelerate product development cycles, reducing time‑to‑market for feature updates.",
-  "category": "product",
-  "companies": [
-   "Amplitude",
-   "OpenAI"
-  ],
-  "tags": [
-   "productivity",
-   "AI agents",
-   "software development",
-   "automation"
-  ],
-  "importance": 2,
-  "id": "5b0f73df89a6e310",
-  "url": "https://openai.com/business/customer-stories/amplitude",
-  "source": "OpenAI",
-  "date": "Thu, 12 Nov 2026 20:00:00 GMT",
-  "added": "2026-11-13T06:56:40.248530+00:00"
- },
- {
-  "headline": "Apple launches Foundation Models framework for Swift",
-  "tldr": "Apple introduces a native Swift API that lets developers integrate on‑device and cloud large language models—including Apple’s own models, Claude, Gemini, and others—into iOS apps with built‑in features like guided generation, tool calling, and multimodal image prompts.",
-  "key_points": [
-   "Native Swift API for any LLM, supporting on‑device Apple models and server models via Private Cloud Compute",
-   "Built‑in capabilities: guided generation, tool calling, image understanding, OCR, barcode scanning",
-   "Dynamic Profiles let apps swap model configurations (temperature, tools, instructions) at runtime",
-   "Free access to Apple Foundation Models on Private Cloud Compute for small developers (under 2 M downloads)"
-  ],
-  "why_it_matters": "The framework lowers the barrier for iOS developers to embed advanced AI features while keeping data private and offline‑capable, potentially accelerating AI‑enhanced app experiences across the Apple ecosystem.",
-  "category": "product",
-  "companies": [
-   "Apple",
-   "Anthropic",
-   "Google"
-  ],
-  "tags": [
-   "foundation_models",
-   "swift",
-   "on-device",
-   "privacy"
-  ],
-  "importance": 3,
-  "id": "f560ce461252ed3f",
-  "url": "https://developer.apple.com/foundation-models-framework/",
-  "source": "Hacker News",
-  "date": "2026-11-12T21:13:26Z",
-  "added": "2026-11-13T06:56:28.497524+00:00"
- },
- {
-  "headline": "Chinese frontier AI models carry the fingerprint of export‑controlled GPUs",
-  "tldr": "Forensic analysis shows DeepSeek, Moonshot AI, MiniMax and Ant Group's recent models contain weight patterns matching NVIDIA's Blackwell GPUs, despite export bans.",
-  "key_points": [
-   "Six models released since April 2026 match Blackwell hardware fingerprints; earlier models match older Hopper chips.",
-   "Evidence derived from published model weights, not leaks, confirming Blackwell usage for training.",
-   "Alternative AMD hardware deemed unlikely; export‑control violations remain unproven."
-  ],
-  "why_it_matters": "Demonstrates that top Chinese AI firms may have accessed cutting‑edge U.S. GPU technology, raising concerns about export‑control enforcement and the global AI arms race.",
-  "category": "policy",
-  "companies": [
-   "DeepSeek",
-   "Moonshot AI",
-   "MiniMax",
-   "Ant Group"
-  ],
-  "tags": [
-   "GPU export controls",
-   "NVIDIA Blackwell",
-   "AI model forensics",
-   "China"
-  ],
-  "importance": 4,
-  "id": "d096a8a420fb437e",
-  "url": "https://unemploymentlabs.com/checkpoint-forensics",
-  "source": "Hacker News",
-  "date": "2026-11-12T21:56:11Z",
-  "added": "2026-11-13T06:56:16.117675+00:00"
- },
- {
-  "headline": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
-  "tldr": "A new framework, Interactive Visual Gym, enables closed-loop evaluation and training of visual interaction models using simulated users and environments, revealing major limitations in current VLMs like Gemini 4 Argon.",
-  "key_points": [
-   "Introduces Interactive Visual Gym for closed-loop benchmarking with 315 scenarios across cooking, household, and mobile UI tasks.",
-   "State-of-the-art VLMs perform poorly: Gemini 4 Argon succeeds on only 53.4% of tasks and suffers from grounding and latency issues.",
-   "Human study shows 78.5% agreement with the interaction-quality metric, validating the evaluation protocol.",
-   "Closed-loop training improves Qwen3.5-4B performance in a cooking environment, demonstrating learning signal utility."
-  ],
-  "why_it_matters": "Closed-loop evaluation better reflects real-world use of visual assistants, exposing critical gaps in current models and guiding future improvements for safer, more reliable AI interaction.",
-  "category": "paper",
-  "companies": [
-   "Google",
-   "Alibaba"
-  ],
-  "tags": [
-   "visual interaction",
-   "benchmark",
-   "VLM",
-   "closed-loop"
-  ],
-  "importance": 3,
-  "id": "ce2f01d6fb8562b6",
-  "url": "https://huggingface.co/papers/2611.08286",
-  "source": "HF Daily Papers",
-  "date": "2026-11-04T19:00:00.000Z",
-  "added": "2026-11-13T06:56:04.488811+00:00"
- },
- {
-  "headline": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
-  "tldr": "Introduces a large dataset of 3D scans and egocentric recordings for robot learning, enabling scalable research on physical AI.",
-  "key_points": [
-   "Contains 1,589 metric-scale 3D scans and 4,230 egocentric recordings covering 74 tasks (131 hours).",
-   "Data can be turned into interactive simulation environments and robot trajectories via retargeting and virtual teleoperation.",
-   "Proposes the dataset as a benchmark for studying scaling laws in physical AI.",
-   "Supports closed-loop policy evaluation and improvement for long-horizon, contact-rich tasks."
-  ],
-  "why_it_matters": "Provides the first large‑scale, reusable resource linking real‑world environments with human demonstrations, a critical step toward robust, scalable robot learning and understanding how capabilities grow with data.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "physical AI",
-   "robotics",
-   "datasets",
-   "scaling"
-  ],
-  "importance": 3,
-  "id": "d7b46d3d8c2d7def",
-  "url": "https://huggingface.co/papers/2611.17060",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T06:55:52.328616+00:00"
- },
- {
-  "headline": "Factored One-sided Adam-Moment (FOAM) Makes SOAP Optimizer Faster and Cheaper",
-  "tldr": "FOAM cuts SOAP’s memory and compute costs by half while keeping its training speed and validation performance for LLMs.",
-  "key_points": [
-   "FOAM drops the output‑side Kronecker factor, removing an eigendecomposition and halving optimizer‑state memory.",
-   "Uses a factored Adam‑moment estimator that approximates SOAP’s dense second moment with only 15‑20% K‑FAC violation.",
-   "Matches SOAP and Muon baselines on validation loss for models from 124M to 760M parameters, with Muon‑class wall‑clock time."
-  ],
-  "why_it_matters": "Second‑order optimizers promise faster convergence but are too costly for most practitioners; FOAM shows those gains can be achieved with near‑Adam efficiency, potentially accelerating LLM pre‑training at lower hardware cost.",
-  "category": "paper",
-  "companies": [
-   "Naver AI"
-  ],
-  "tags": [
-   "optimizers",
-   "second-order",
-   "LLM training",
-   "efficiency"
-  ],
-  "importance": 3,
-  "id": "95731083373f2224",
-  "url": "https://huggingface.co/papers/2611.16905",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T06:55:40.178958+00:00"
- },
- {
-  "headline": "On the Design of Hyper-Connections: Simplification, Stability, and Scalability",
-  "tldr": "The paper analyzes Hyper-Connections in large language models, proposes SimpleHC that removes residual mixing and uses shared memory, achieving comparable performance with only a 2.4% training overhead increase.",
-  "key_points": [
-   "Identifies learned read/write gating and unconstrained mixing as effective interaction groups.",
-   "Shows repeated access to expanded residual state causes most training overhead.",
-   "Introduces SimpleHC, simplifying architecture by removing residual mixing and using shared gate inputs.",
-   "SimpleHC adds only 2.4% training time over a vanilla residual baseline while matching mHC performance up to 30B parameters.",
-   "Demonstrates smoother gradient dynamics and stability under stress."
-  ],
-  "why_it_matters": "Simplifying Hyper-Connection architectures reduces training costs and complexity, making large‑scale model development more accessible and stable, which can accelerate progress in foundation model research.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "hyper-connections",
-   "model-architecture",
-   "efficiency",
-   "scaling"
-  ],
-  "importance": 3,
-  "id": "563f8cc9ef90c4a2",
-  "url": "https://huggingface.co/papers/2611.05984",
-  "source": "HF Daily Papers",
-  "date": "2026-11-03T19:00:00.000Z",
-  "added": "2026-11-13T06:55:28.328149+00:00"
- },
- {
-  "headline": "Gemini 4 Hydrogen and Orchestrator",
-  "tldr": "Google launched Gemini 4 Hydrogen and the Orchestrator model routing system in Antigravity, combining Hydrogen with the stronger Gemini 4 Carbon for faster, quota‑efficient long‑horizon tasks.",
-  "key_points": [
-   "Hydrogen and Carbon models paired via new Orchestrator routing",
-   "Orchestrator dynamically switches between models during a task",
-   "Achieves 24% lower quota usage and 19% faster completion on Terminal‑Bench 4.1",
-   "Integrated into Google Antigravity SDK for issue triage and code generation"
-  ],
-  "why_it_matters": "Dynamic model routing lets developers keep high‑quality reasoning while cutting costs and latency, making large‑scale agent‑based workflows more practical for production use.",
-  "category": "product",
-  "companies": [
-   "Google"
-  ],
-  "tags": [
-   "Gemini",
-   "Hydrogen",
-   "Orchestrator",
-   "AI agents"
-  ],
-  "importance": 4,
-  "id": "5ab15edc0315d765",
-  "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
-  "source": "Hacker News",
-  "date": "2026-11-12T18:52:01Z",
-  "added": "2026-11-13T06:55:16.213570+00:00"
- },
- {
-  "headline": "WorldDraft: If Code Builds the World, Can Video Models Just Render It?",
-  "tldr": "The paper introduces WorldDraft, a benchmark for evaluating video models as generative renderers of 4D simulated worlds, revealing trade‑offs between world preservation and visual fidelity and proposing a visual prompting method (WorldDraft‑Primer) to improve performance.",
-  "key_points": [
-   "WorldDraft provides 432 paired test cases across 48 4D world families and six dynamic challenges.",
-   "Evaluations of 12 video models show a tension between preserving world dynamics and achieving appearance fidelity.",
-   "Richer draft scaffolding improves structural consistency but harms visual realism; conflicting cues cause up to 64% source leakage.",
-   "WorldDraft‑Primer, a plug‑and‑play visual prompting strategy, consistently boosts both world preservation and visual realization."
-  ],
-  "why_it_matters": "Bridging programmatic 4D simulation with video generation enables physically grounded generative rendering, a step toward more reliable AI systems that can create realistic visual content from code, impacting fields like virtual production, simulation, and interactive media.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multimodal",
-   "video-generation",
-   "benchmark",
-   "rendering"
-  ],
-  "importance": 3,
-  "id": "284da35216fbfbbf",
-  "url": "https://huggingface.co/papers/2611.16217",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T06:55:04.593480+00:00"
- },
- {
-  "headline": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
-  "tldr": "The paper shows that decision models that perform poorly as actors can still be effective teachers, improving policy performance when used as judges to evaluate actions after episodes.",
-  "key_points": [
-   "Decision models can serve as actors, judges, or teachers in long-horizon tasks.",
-   "Even models that act poorly can boost policy performance when used as judges/teachers.",
-   "JEV as a teacher raised Qwen2.5-1.5B policy success on ALFWorld from 72.8% to 82.9% and on WebShop from 56.8% to 71.4%.",
-   "Evaluation as a judge focuses on whether each action helped achieve subgoals, not just final task success.",
-   "Code and experiments are released publicly on GitHub."
-  ],
-  "why_it_matters": "Understanding the distinct roles of decision models helps improve training pipelines for autonomous agents, enabling better policy learning even when the acting model is suboptimal, which can accelerate development of more reliable AI assistants and robotics systems.",
-  "category": "paper",
-  "companies": [
-   "ZJU-REAL"
-  ],
-  "tags": [
-   "decision-models",
-   "long-horizon",
-   "reinforcement-learning",
-   "policy-teaching"
-  ],
-  "importance": 3,
-  "id": "731431771b9cdea1",
-  "url": "https://huggingface.co/papers/2611.17167",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T06:54:52.325379+00:00"
- },
- {
-  "headline": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
-  "tldr": "UniSpark-9B is a 9B‑parameter multimodal model that combines full and linear hybrid attention to handle both visual understanding and generation, achieving strong scores on multimodal benchmarks.",
-  "key_points": [
-   "Hybrid attention mixes full token interaction with GatedDeltaNet linear attention for efficiency.",
-   "Unified model supports VQA, text‑to‑image, instruction‑guided editing, and interleaved text‑image generation.",
-   "Trained on 159.7M generation, 213.4M understanding samples and 624.8K interleaved sequences via a four‑stage curriculum.",
-   "Achieves 2470.3 on MME‑S and 0.83 on GenEval, with image synthesis up to 2K resolution."
-  ],
-  "why_it_matters": "Demonstrates that hybrid attention can serve as an effective backbone for unified multimodal tasks, potentially reducing the need for separate models for understanding and generation and improving efficiency for large‑scale AI systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multimodal",
-   "hybrid_attention",
-   "generation",
-   "model"
-  ],
-  "importance": 3,
-  "id": "3c1c091f2df373b8",
-  "url": "https://huggingface.co/papers/2611.16517",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T06:54:40.421336+00:00"
- },
- {
-  "headline": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
-  "tldr": "SO-Arena introduces a comprehensive benchmark that evaluates both the breadth of capabilities and the decision reliability of fast, general‑purpose System One models across multiple domains and tasks.",
-  "key_points": [
-   "Covers 11 domains and five capability families with fine‑grained difficulty criteria.",
-   "Measures decision reliability via stability under option changes and missing‑answer detection.",
-   "Evaluates 21 System One models, showing scaling benefits vary by domain and reliability often diverges from overall accuracy.",
-   "Provides interactive sandbox testing and reasoning‑intensive comparisons.",
-   "Highlights the need to assess capability spectrum and reliability as complementary dimensions."
-  ],
-  "why_it_matters": "Understanding not just how well System One models perform but also how consistently they make reliable decisions is crucial for deploying fast, decision‑making AI in real‑world applications where errors can be costly.",
-  "category": "paper",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "benchmark",
-   "system_one",
-   "reliability",
-   "capability"
-  ],
-  "importance": 3,
-  "id": "7afe22db314e8f37",
-  "url": "https://huggingface.co/papers/2611.15777",
-  "source": "HF Daily Papers",
-  "date": "2026-11-10T19:00:00.000Z",
-  "added": "2026-11-13T06:54:28.558852+00:00"
- },
- {
-  "headline": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
-  "tldr": "BirdDreams is an autoregressive model that simultaneously generates perspective and bird's-eye-view videos for driving scenes, enabling realistic vehicle motion and ego‑trajectory control without needing HD maps or explicit future trajectories.",
-  "key_points": [
-   "Jointly generates perspective video and BEV video using two diffusion transformers that attend to each other.",
-   "BEV stream provides a geometric, occlusion‑free layout that can be manipulated to follow arbitrary ego trajectories.",
-   "Model produces realistic surrounding‑vehicle behavior and follows ego paths more faithfully than prior world models on PhysicalAI‑AV and nuScenes.",
-   "Operates from a single camera image, eliminating the need for HD maps or vehicle‑state inputs."
-  ],
-  "why_it_matters": "Enabling realistic, controllable driving world simulations from minimal sensor input advances autonomous‑vehicle research and testing, reducing reliance on costly map data and improving safety validation.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "driving world model",
-   "video generation",
-   "bird's-eye view",
-   "autonomous vehicles"
-  ],
-  "importance": 3,
-  "id": "059822022bf881cc",
-  "url": "https://huggingface.co/papers/2611.14815",
-  "source": "HF Daily Papers",
-  "date": "2026-11-09T19:00:00.000Z",
-  "added": "2026-11-13T06:54:16.322488+00:00"
- },
- {
-  "headline": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
-  "tldr": "Introduces Duo v1, a full‑duplex world model that simultaneously perceives audiovisual inputs and responds in real time using a Reciprocal World Model (RWM) that integrates intent and realization.",
-  "key_points": [
-   "RWM treats intelligence and physical reality as equally fundamental components of a world.",
-   "Duo v1 uses autoregressive modeling, synchronized chunk‑specific tokens, and dual rollout distillation for continuous interaction.",
-   "Supports real‑time audio, video, and text perception, enabling spontaneous conversations, interruptions, and control‑free interactions."
-  ],
-  "why_it_matters": "Enables AI agents that can both observe and act in real time across multiple modalities, moving beyond static world simulations toward truly interactive, embodied AI systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "world model",
-   "full-duplex",
-   "multimodal",
-   "interactive AI"
-  ],
-  "importance": 3,
-  "id": "2741c921d01961e0",
-  "url": "https://huggingface.co/papers/2611.15131",
-  "source": "HF Daily Papers",
-  "date": "2026-11-10T19:00:00.000Z",
-  "added": "2026-11-13T06:54:04.855242+00:00"
  }
 ]
