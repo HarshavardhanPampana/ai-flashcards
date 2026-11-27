@@ -42,11 +42,14 @@ jobs:
           MAX_CARDS_PER_RUN: "40"
         run: python -u -m scraper.main   # -u: show log lines live
 
+      - name: Bake top stories into index.html (for link previews and no-JS visitors)
+        run: python -m scraper.prerender
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in docs/cards.json docs/embeddings.json docs/stats.json data/seen.json data/compare_inputs.json; do
+          for f in docs/cards.json docs/embeddings.json docs/stats.json docs/index.html data/seen.json data/compare_inputs.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           git diff --staged --quiet || git commit -m "chore: update flashcards"

@@ -132,7 +132,7 @@ function cardHTML(c, layout = "") {
     <span class="badge-state" aria-hidden="true">${st === "got" ? "✓" : st === "again" ? "↻" : ""}</span>
     <div class="inner">
       <div class="face front">
-        ${c._img ? `<div class="thumb"><img src="${esc(c._img)}" alt="" loading="lazy" decoding="async"></div>` : ""}
+        ${c._img ? `<div class="thumb"><img src="${esc(c._img)}" alt="AI-generated illustration" loading="lazy" decoding="async"><span class="ai-badge" title="Illustration made by SD-Turbo, not a photo of the real event">AI-generated image</span></div>` : ""}
         <div class="meta">
           ${layout.includes("hero") ? `<span class="ribbon">Top story</span>` : ""}
           <span class="cat">${esc(catName(c._cat))}</span>

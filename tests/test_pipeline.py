@@ -166,3 +166,18 @@ def test_summarize_moves_to_next_model_when_overloaded(monkeypatch):
     g.call = call
     card = summarize.summarize(item("Story", text="y" * 300))
     assert card["headline"] == "Fine" and card["model"] == "ok"
+
+
+# ---------- pre-rendered top stories ----------
+def test_prerender_bakes_escaped_top_stories_between_markers():
+    from scraper import prerender
+    page = ("<head><!-- prerender-head:start --><!-- prerender-head:end --></head>"
+            "<main><!-- prerender-body:start -->old<!-- prerender-body:end --></main>")
+    cards = [{"headline": f"Story {i} <b>", "tldr": "t & t", "url": f"https://x.test/{i}", "source": "S",
+              "category": "news", "importance": i % 5 + 1, "added": "2099-01-01T00:00:00+00:00"} for i in range(8)]
+    out = prerender.render(page, cards)
+    assert out.count('class="seo-card"') == 5
+    assert "old" not in out and "<b>" not in out and "&lt;b&gt;" in out
+    assert 'property="og:title"' in out
+    assert prerender.render(out, cards) == out        # idempotent: re-running changes nothing
+
