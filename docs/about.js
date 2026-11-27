@@ -41,7 +41,9 @@ async function main() {
   const m = stats?.mlp;
   if (m?.category) {
     const ag = stats.agreement;
-    $("mlpPanel").innerHTML = `<h3>MLP vs the LLM</h3><div class="bars fnn">
+    $("mlpPanel").innerHTML = `<h3>Does the MLP agree with the LLM?</h3>
+      <p class="caveat">The LLM's labels are the reference here, not the truth: this shows how well the MLP imitates
+      gpt-oss, not whether either one is right.</p><div class="bars fnn">
       ${bar("Category, MLP", m.category.accuracy)}
       ${bar("Category, always-guess-most-common", m.category.baseline_majority, "base")}
       ${bar("Stars exactly right", m.importance.accuracy)}
@@ -52,7 +54,7 @@ async function main() {
       120B-parameter LLM, and predicts in microseconds, so ranking uses it to choose what's worth an LLM call.
       ${ag ? `<br>On ${ag.cards} live cards scored before the LLM saw them: category ${pct(ag.category)}, stars within ±1 ${pct(ag.importance_within_1)}.` : ""}</p>`;
   } else {
-    $("mlpPanel").innerHTML = `<h3>MLP vs the LLM</h3><p class="empty-note">Appears after the next pipeline run.</p>`;
+    $("mlpPanel").innerHTML = `<h3>Does the MLP agree with the LLM?</h3><p class="empty-note">Appears after the next pipeline run.</p>`;
   }
 
   // dedupe panel

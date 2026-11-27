@@ -86,3 +86,4 @@ table.runs th { color: var(--muted); font-weight: 600; font-size: 12px; }
 .cmp-table tr.ref td { color: var(--muted); }
 .ci { color: var(--muted); font-size: 11.5px; margin-left: 3px; white-space: nowrap; }
 @media (max-width: 900px) { .cmp { grid-template-columns: 1fr; } }
+.panel .caveat { font-size: .82rem; color: var(--muted); margin: -.2rem 0 .8rem; line-height: 1.45; }

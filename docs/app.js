@@ -408,8 +408,8 @@ document.addEventListener("keydown", (e) => {
       if (document.activeElement?.closest?.(".study-nav, .study-top, .actions")) return;
       e.preventDefault(); $("studyStage").firstElementChild?.classList.toggle("flipped");
     }
-    else if (e.key === "1") studyMark("got");
-    else if (e.key === "2") studyMark("again");
+    else if (e.key === "1") studyMark("again");   // keys follow the buttons, left to right
+    else if (e.key === "2") studyMark("got");
     return;
   }
   if (typing) { if (e.key === "Escape") document.activeElement.blur(); return; }

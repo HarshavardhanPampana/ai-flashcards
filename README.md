@@ -29,7 +29,7 @@ weekly: [Local decoders] Qwen 0.5B and 1.5B vs gpt-oss-120b on the same inputs �
 | `update-flashcards` | every 6 h (GitHub runs it ~2×/day in practice) | fetch → ML → LLM → commit |
 | `generate-images` | after each successful update | SD-Turbo images for up to 8 new top cards |
 | `compare-models` | Mondays + on demand | 0.5B and 1.5B local decoders vs API model (15 new stories each per run, results accumulate) |
-| `tests` | every push | 16 unit tests (`pytest`) |
+| `tests` | every push | 14 unit tests (`pytest`) |
 
 **Design choices worth knowing**
 - **Exploration picks:** the MLP ranks stories before the LLM labels them, and is retrained on those labels. On its

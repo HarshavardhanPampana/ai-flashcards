@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>How It Works · AI News Flashcards</title>
-  <meta name="description" content="The five AI models behind AI News Flashcards, and how well they work, measured live.">
+  <meta name="description" content="The AI models behind AI News Flashcards, what each one does, and how well they work, measured live.">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         <img src="icon.svg" alt="" width="34" height="34">
         <div>
           <h1>How it works</h1>
-          <p class="muted" id="updated">Five AI models, one self-updating pipeline</p>
+          <p class="muted" id="updated">Three models run on every update, one draws the covers, two are tested weekly</p>
         </div>
       </a>
       <div class="top-actions"><a class="btn primary backlink" href="./" aria-label="Back to cards">←<span>&nbsp;Back to cards</span></a></div>
@@ -56,7 +56,9 @@
         <li class="m diff"><span class="step">7</span><div><b>Cover images <em>Diffusion</em></b><p>A follow-up job runs
           SD-Turbo (one-step Stable Diffusion) on CPU to illustrate the most important new cards.</p></div></li>
         <li class="m dec"><span class="step">★</span><div><b>Weekly model comparison <em>Local decoder</em></b><p>Two small open models
-          (Qwen2.5 0.5B and 1.5B) run locally on the same inputs, and we measure how close each gets to the 120B API model.</p></div></li>
+          (Qwen2.5 0.5B and 1.5B) run locally on the same inputs and are scored against the 120B API model on four things: valid
+          JSON rate, same category, stars within ±1, and TL;DR similarity (cosine similarity of the two summaries' MiniLM
+          embeddings, where 1.0 means the same meaning).</p></div></li>
       </ol>
     </section>
 
@@ -79,7 +81,7 @@
     <section>
       <h2>Results, measured live</h2>
       <div class="results">
-        <div class="panel" id="mlpPanel"><h3>MLP vs the LLM</h3><p class="muted">Loading…</p></div>
+        <div class="panel" id="mlpPanel"><h3>Does the MLP agree with the LLM?</h3><p class="muted">Loading…</p></div>
         <div class="panel" id="dedupePanel"><h3>Duplicates caught by meaning</h3><p class="muted">Loading…</p></div>
       </div>
       <div class="panel wide" id="runsPanel"><h3>Recent runs</h3><p class="muted">Loading…</p></div>
@@ -110,6 +112,6 @@
         <b>Total cost: $0</b>. Everything runs on free tiers.</p>
     </section>
   </main>
-  <script src="about.js?v=5"></script>
+  <script src="about.js?v=6"></script>
 </body>
 </html>
