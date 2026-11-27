@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="style.css?v=24">
   <script>
     // apply saved theme before paint (no flash)
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
@@ -94,6 +94,13 @@
           <button type="button" data-v="today">Today</button>
           <button type="button" data-v="week">This week</button>
         </div>
+        <div class="status-row">
+          <p id="count" class="muted" aria-live="polite"></p>
+          <div class="progress" title="Cards you've marked “Got it”">
+            <div class="bar"><span id="bar"></span></div>
+            <span id="progress" class="muted"></span>
+          </div>
+        </div>
         <div class="selects">
           <label class="sel"><span>Importance</span>
             <select id="importance">
@@ -121,13 +128,6 @@
         </div>
       </div>
 
-      <div class="status-row">
-        <p id="count" class="muted" aria-live="polite"></p>
-        <div class="progress" title="Cards you've marked “Got it”">
-          <div class="bar"><span id="bar"></span></div>
-          <span id="progress" class="muted"></span>
-        </div>
-      </div>
     </div>
   </header>
 
