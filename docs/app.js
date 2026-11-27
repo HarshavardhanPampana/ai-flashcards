@@ -711,8 +711,8 @@ function buildMasthead() {
   }));
   const tags = Object.entries(tagCount).filter(([, n]) => n > 1).sort((a, b) => b[1] - a[1]).slice(0, 12);
   $("trending").innerHTML = tags.length
-    ? `<span class="t-label">Trending</span>` + tags.map(([t, n], i) =>
-        `<button type="button" class="t-chip" data-tag="${esc(t)}" style="--i:${i}">#${esc(t)} <span>${n}</span></button>`).join("")
+    ? `<span class="t-label">Trending</span><div class="t-chips">` + tags.map(([t, n], i) =>
+        `<button type="button" class="t-chip" data-tag="${esc(t)}" style="--i:${i}">#${esc(t)} <span>${n}</span></button>`).join("") + `</div>`
     : "";
 }
 // clicks in the masthead / ticker open that card; trending chips search for the tag
