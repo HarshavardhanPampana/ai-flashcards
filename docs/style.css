@@ -640,6 +640,12 @@ body.studying .wheel { display: none; }
 
 /* covers are illustrations, not news photos: say so on every one */
 .thumb { position: relative; }
+/* dark mode: covers keep full colour, but fade softly into the card at the bottom and get a thin edge
+   in the card's own category colour, so each picture belongs to its card (one static overlay, no filters) */
+:root:not([data-theme="light"]) .thumb::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%,
+    color-mix(in srgb, color-mix(in srgb, var(--surface) 80%, var(--c)) 88%, transparent) 100%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 40%, transparent); }
 .ai-badge { position: absolute; right: 8px; bottom: 6px; z-index: 2; font-size: 10px; font-weight: 700; letter-spacing: .02em;
   padding: 2px 7px; border-radius: 999px; color: #fff; background: rgba(8, 9, 12, .78);   /* no backdrop blur: 28 blurred layers made scrolling stutter */
   pointer-events: auto; }
