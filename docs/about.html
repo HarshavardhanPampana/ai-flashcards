@@ -35,16 +35,18 @@
       <p class="muted lead">Every 6 hours a GitHub Actions job runs this pipeline on a free CPU machine. The site
         you're reading is a static page that loads the results.</p>
       <ol class="flow">
-        <li><span class="step">1</span><div><b>Fetch</b><p>About 300 new items from 14 sources: OpenAI, DeepMind, Google AI,
+        <li><span class="step">1</span><div><b>Fetch</b><p>About 300 new items each run (scheduled every 6 hours; GitHub usually manages 2–4 runs a day) from 14 sources: OpenAI, DeepMind, Google AI,
           Microsoft Research, NVIDIA, Hugging Face, BAIR, TechCrunch, The Verge, MIT Tech Review, Ars Technica, arXiv, HF Daily Papers, Hacker News</p></div></li>
         <li><span class="step">2</span><div><b>Fuzzy dedupe</b><p>Drops stories already seen and near-identical titles
           (RapidFuzz string matching).</p></div></li>
         <li class="m enc"><span class="step">3</span><div><b>Semantic dedupe <em>Encoder</em></b><p>MiniLM turns each story into
           a 384-number meaning vector. If it's ≥ 0.80 similar to an existing card, it's the same story in other words
-          → dropped.</p></div></li>
+          → dropped. Exception: if that card is more than 36 hours old and the match is below 0.92, it's a follow-up
+          ("model released" → "model pulled") and is kept.</p></div></li>
         <li class="m fnn"><span class="step">4</span><div><b>Predict importance <em>Feedforward network</em></b><p>An MLP trained
           on ~1,000 past cards guesses each story's stars and category <i>before</i> any LLM call, and ranking uses it to
-          choose the best 40.</p></div></li>
+          choose the best 36. Four more are picked at random from the rest, so the network also gets labels for stories
+          it underrated, instead of only learning from what it already liked.</p></div></li>
         <li class="m llm"><span class="step">5</span><div><b>Write the card <em>LLM · decoder</em></b><p>gpt-oss-120b (via Groq)
           writes the headline, TL;DR, key points, why it matters, category and stars as strict JSON. It falls back to other
           models and Gemini on errors.</p></div></li>

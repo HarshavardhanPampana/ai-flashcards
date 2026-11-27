@@ -19,7 +19,7 @@ a diffusion model, and publishes everything to a static site on GitHub Pages.
 
 ```
 fetch (RSS + APIs) ─▶ fuzzy dedupe ─▶ [Encoder] semantic dedupe ─▶ [FNN] MLP predicts stars/category
-   ─▶ rank top 40 ─▶ [LLM] write cards ─▶ [Encoder] embed + related cards ─▶ cards.json / embeddings.json / stats.json
+   ─▶ rank top 36 + 4 random ─▶ [LLM] write cards ─▶ [Encoder] embed + related cards ─▶ cards.json / embeddings.json / stats.json
                                                      └▶ (next job) [Diffusion] cover images ─▶ img/*.webp
 weekly: [Local decoders] Qwen 0.5B and 1.5B vs gpt-oss-120b on the same inputs ─▶ compare.json
 ```
@@ -29,7 +29,16 @@ weekly: [Local decoders] Qwen 0.5B and 1.5B vs gpt-oss-120b on the same inputs �
 | `update-flashcards` | every 6 h (GitHub runs it ~2×/day in practice) | fetch → ML → LLM → commit |
 | `generate-images` | after each successful update | SD-Turbo images for up to 8 new top cards |
 | `compare-models` | Mondays + on demand | 0.5B and 1.5B local decoders vs API model (15 new stories each per run, results accumulate) |
-| `tests` | every push | 12 unit tests (`pytest`) |
+| `tests` | every push | 16 unit tests (`pytest`) |
+
+**Design choices worth knowing**
+- **Exploration picks:** the MLP ranks stories before the LLM labels them, and is retrained on those labels. On its
+  own that is a feedback loop: it would only ever learn from stories it already liked. So each run 4 of the 40
+  LLM slots go to random lower-ranked stories (`explore: true` on the card), which gives it labels for its mistakes.
+- **Follow-ups aren't duplicates:** a story ≥ 0.80 similar to a card older than 36 h is kept as a follow-up
+  (`followup_to` on the card) unless it's ≥ 0.92, which really is the same article again.
+- **Keep-alive:** GitHub disables scheduled workflows after 60 days without repo activity, so each update run
+  re-enables all three scheduled workflows through the API.
 
 ## Results (measured on real data)
 

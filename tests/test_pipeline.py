@@ -64,6 +64,31 @@ def test_semantic_dedupe_against_cards_and_within_batch():
     assert [d[1][0] for d in dropped] == ["card", "item"]
 
 
+def test_semantic_dedupe_keeps_follow_ups_to_older_cards():
+    existing = np.stack([unit([1, 0, 0]), unit([0, 0, 1])])
+    items = [item("follow-up"), item("repeat"), item("same article")]
+    vecs = np.stack([unit([0.85, 0.5, 0]),      # ~0.86 to an old card -> follow-up, keep
+                     unit([0.1, 0, 0.99]),       # ~0.99 to a fresh card -> repeat, drop
+                     unit([0.99, 0.05, 0])])     # ~0.999 to the old card -> same article, drop
+    kept, _, dropped = semantic.semantic_dedupe(items, vecs, existing, threshold=0.8,
+                                                existing_age_h=[72, 2])
+    assert [k["title"] for k in kept] == ["follow-up"]
+    assert kept[0]["extra"]["followup_of"] == 0
+    assert len(dropped) == 2
+
+
+def test_exploration_adds_random_lower_ranked_items():
+    import random
+    from scraper.main import pick_with_exploration
+    items = [{"title": f"t{i}", "text": "", "source": f"s{i % 8}", "category": "news",
+              "extra": {"points": 1000 - i}} for i in range(40)]
+    picked = pick_with_exploration(items, 12, 3, rng=random.Random(0))
+    assert len(picked) == 12
+    explored = [p for p in picked if p["extra"].get("explore")]
+    assert len(explored) == 3
+    assert len({id(p) for p in picked}) == 12       # no duplicates
+
+
 def test_related_skips_self_and_near_duplicates():
     ids = ["a", "b", "c", "d"]
     vecs = np.stack([unit([1, 0, 0]), unit([0.8, 0.6, 0]), unit([0, 0, 1]), unit([1, 0.001, 0])])

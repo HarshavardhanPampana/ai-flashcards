@@ -29,6 +29,8 @@ MAX_CARDS = int(os.environ.get("MAX_CARDS_PER_RUN", 40))
 KEEP_DAYS = 14
 MAX_CARDS_TOTAL = 1000   # keeps cards.json small and the site fast
 MAX_FAILS_IN_A_ROW = 3
+EXPLORE = int(os.environ.get("EXPLORE_PER_RUN", 4))   # random lower-ranked stories the LLM labels anyway,
+                                                       # so the MLP also learns from stories it underrated
 SLEEP_BETWEEN_CALLS = float(os.environ.get("SLEEP_BETWEEN_CALLS", 0))  # extra pause; providers pace themselves
 
 
@@ -123,8 +125,21 @@ class ML:
             iv = self.embed.embed([self.embed.item_text(it) for it in items])
             ids = [c["id"] for c in cards if c["id"] in self.vecs]
             base = np.stack([self.vecs[i] for i in ids]) if ids else None
-            kept, kv, dropped = semantic_dedupe(items, iv, base)
             by_id = {c["id"]: c for c in cards}
+            now = datetime.now(timezone.utc)
+
+            def age_h(c):
+                try:
+                    return (now - datetime.fromisoformat(c.get("added", ""))).total_seconds() / 3600
+                except ValueError:
+                    return 0.0
+            ages = [age_h(by_id[i]) for i in ids]
+            kept, kv, dropped = semantic_dedupe(items, iv, base, existing_age_h=ages)
+            for it in kept:                                   # follow-ups point at the earlier card
+                j = it["extra"].pop("followup_of", None)
+                if j is not None:
+                    it["extra"]["followup_to"] = ids[j]
+            self.info["followups"] = sum(1 for it in kept if it["extra"].get("followup_to"))
             examples = []
             for it, (kind, j), sim in dropped[:8]:
                 other = by_id[ids[j]]["headline"] if kind == "card" else kept[j]["title"]
@@ -187,9 +202,10 @@ def main():
     fresh_sem, fresh_vecs, dup_examples = ml.semantic_filter(fresh, [c for c in old if not c.get("no_llm")])
     # 3) the MLP scores what's left, then rank (score() adds the MLP's stars)
     ml.score_items(fresh_sem, fresh_vecs)
-    picked = top_n(fresh_sem, args.max)
+    picked = pick_with_exploration(fresh_sem, args.max, EXPLORE if ml.mlp else 0)
+    n_explore = sum(1 for it in picked if it["extra"].get("explore"))
     print(f"collected={len(items)} after_fuzzy={len(fresh)} after_semantic={len(fresh_sem)} "
-          f"summarizing={len(picked)}")
+          f"summarizing={len(picked)} (exploring {n_explore})")
 
     new_cards, streak, aborted, llm_inputs = [], [], False, []
     for i, it in enumerate(picked, 1):
@@ -220,6 +236,10 @@ def main():
             card["added"] = datetime.now(timezone.utc).isoformat()
             if it["extra"].get("mlp"):
                 card["mlp"] = it["extra"]["mlp"]       # what the MLP predicted before the LLM saw it
+            if it["extra"].get("explore"):
+                card["explore"] = True                 # picked at random, not because the MLP liked it
+            if it["extra"].get("followup_to"):
+                card["followup_to"] = it["extra"]["followup_to"]
             new_cards.append(card)
             print(f"  [{i}/{len(picked)}] {card['headline'][:70]}")
 
@@ -239,7 +259,8 @@ def main():
         "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "collected": len(items), "after_fuzzy": len(fresh), "after_semantic": len(fresh_sem),
         "fuzzy_removed": len(items) - len(fresh), "semantic_removed": len(fresh) - len(fresh_sem),
-        "summarized": len(picked), "cards_added": len(new_cards),
+        "summarized": len(picked), "cards_added": len(new_cards), "explored": n_explore,
+        "followups": ml.info.get("followups", 0),
         "models": sorted({c.get("model", "") for c in new_cards if c.get("model")}),
         "seconds": round(time.time() - t0),
         "ml": ml.on,
@@ -247,6 +268,25 @@ def main():
     print(f"added {len(new_cards)} cards, total {len(cards)}")
     if aborted and not new_cards:
         raise SystemExit(1)   # make the Actions run show red
+
+
+def pick_with_exploration(items, n, explore, rng=None):
+    """Top (n - explore) by score, plus `explore` random picks from the rest.
+
+    Without this the MLP only ever sees LLM labels for stories it already ranked highly, so it can
+    never learn that it underrated something (a feedback loop). The random picks fix that."""
+    import random
+    explore = max(0, min(explore, n // 4))
+    top = top_n(items, n - explore)
+    chosen = {id(it) for it in top}
+    rest = [it for it in items if id(it) not in chosen]
+    rng = rng or random.Random()
+    extra = rng.sample(rest, min(explore, len(rest)))
+    for it in extra:
+        it["extra"]["explore"] = True
+    if len(extra) < explore:                       # not enough leftovers: fill with ranked picks
+        top = top_n(items, n - len(extra))
+    return top + extra
 
 
 def save_compare_inputs(new_inputs, keep=100):
