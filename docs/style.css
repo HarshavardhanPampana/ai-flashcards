@@ -564,7 +564,10 @@ h1 { letter-spacing: -.01em; }
 .ticker[hidden] { display: none; }
 .ticker-label { flex: none; align-self: stretch; display: grid; place-items: center; padding: 0 14px; font-size: 11px; font-weight: 800;
   letter-spacing: .14em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); }
-.ticker-view { overflow: hidden; flex: 1; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+/* headlines fade in just after the LATEST label and fade out at the right edge, instead of being cut mid-word */
+.ticker-view { overflow: hidden; flex: 1;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 100px, #000 calc(100% - 140px), transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 100px, #000 calc(100% - 140px), transparent); }
 .ticker-track { display: inline-flex; white-space: nowrap; animation: tick var(--dur, 90s) linear infinite; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .tick-dup { display: inline-flex; }
