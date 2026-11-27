@@ -1,5 +1,612 @@
 [
  {
+  "headline": "So Many Ways to Multiply 3×3 Matrices: A Large Dataset of Rank-23 Schemes",
+  "tldr": "A new public dataset of 62,029 distinct rank‑23 schemes for 3×3 matrix multiplication reveals far more unique rank patterns than previously known.",
+  "key_points": [
+   "Dataset contains 62,029 pairwise inequivalent rank‑23 multiplication schemes.",
+   "Each scheme has a unique rank pattern, expanding known patterns from a few thousand to tens of thousands.",
+   "Schemes were generated using gradient descent, alternating least squares, and flip‑graph search.",
+   "Rank‑23 is optimal for integer‑coefficient schemes, making the collection valuable for theoretical and practical algorithm design."
+  ],
+  "why_it_matters": "Understanding the diversity of optimal matrix‑multiplication schemes can lead to more efficient algorithms, inform complexity‑theory research, and provide a rich benchmark for future automated discovery methods.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "matrix multiplication",
+   "algorithmic complexity",
+   "datasets",
+   "numerical methods"
+  ],
+  "importance": 3,
+  "id": "aa5cf4fda426d198",
+  "url": "https://huggingface.co/papers/2611.31155",
+  "source": "HF Daily Papers",
+  "date": "2026-11-22T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:47:44.392885+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.72,
+   "confidence": 0.55
+  },
+  "related": []
+ },
+ {
+  "headline": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+  "tldr": "The paper shows that frozen representations from tabular foundation models can quantify financial similarity between firms, improving spatial asset‑pricing models and enabling explainable applications in finance.",
+  "key_points": [
+   "Uses internal representations of four tabular foundation models as a measure of firm dissimilarity.",
+   "Demonstrates consistent positive gains over simple distance metrics when SEC filing data are included.",
+   "Reframes TFMs from black‑box predictors to tools for measuring economic structure.",
+   "Enables applications such as peer selection, risk attribution, and network‑based asset pricing."
+  ],
+  "why_it_matters": "Provides a method to extract interpretable economic insights from pretrained tabular models, addressing regulatory needs for explainability in financial AI and opening a new research direction on what foundation models encode about firms.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "tabular models",
+   "finance",
+   "foundation models",
+   "asset pricing"
+  ],
+  "importance": 3,
+  "id": "74cb5bdf3d60341b",
+  "url": "https://huggingface.co/papers/2611.31491",
+  "source": "HF Daily Papers",
+  "date": "2026-11-22T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:47:32.352665+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.81,
+   "confidence": 0.69
+  },
+  "related": []
+ },
+ {
+  "headline": "Who Makes the Decision? Auditing an Agentic LLM Pipeline for Illicit Cryptocurrency Transaction Monitoring",
+  "tldr": "The paper audits a multi‑component LLM pipeline for detecting illicit crypto transactions, revealing that deterministic wallet scores dominate decisions and the LLM judge often mirrors injected risk scores rather than providing independent justification.",
+  "key_points": [
+   "A trace‑level audit with causation, Shapley credit, and mediation layers shows the wallet‑score override accounts for ~94% of flagging credit.",
+   "The LLM judge frequently follows the injected risk score and can produce incorrect regulatory citations.",
+   "Short system prompts cause the judge to abstain, and hiding the score does not prevent score leakage in evidence.",
+   "Verification gates cancel many of the judge's flags, which tend to target legitimate transactions."
+  ],
+  "why_it_matters": "Understanding which component actually drives decisions is crucial for trustworthy crypto compliance tools; over‑reliance on deterministic scores or flawed LLM justifications could lead to false positives, regulatory missteps, and reduced confidence in AI‑assisted monitoring.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "cryptocurrency",
+   "LLM",
+   "audit",
+   "compliance"
+  ],
+  "importance": 3,
+  "id": "16dccd0a72ef1ece",
+  "url": "https://huggingface.co/papers/2611.29829",
+  "source": "HF Daily Papers",
+  "date": "2026-11-21T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:47:20.857824+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.86,
+   "confidence": 0.39
+  },
+  "related": [
+   "a694b922c91bd1db",
+   "d2165c64cfb7b5c8",
+   "89ccf4ed8f1ba61e",
+   "5cea63d09933ac34"
+  ]
+ },
+ {
+  "headline": "Generation as Reverse Encoding",
+  "tldr": "RevFlow leverages frozen pretrained visual encoders as intermediate generative targets, enabling faster learning and sampling for image generation with few-step diffusion.",
+  "key_points": [
+   "Uses frozen encoder representations as successive generation targets (semantic → shallow → pixel).",
+   "Unified HyC-DiT model shares a DiT backbone across stages with stage‑specific conditioning.",
+   "Achieves 1.96 FID at 690M parameters after only 5 epochs and 2.85 FID with a single sampling step per stage.",
+   "Reconstruction quality of 30.25 dB PSNR with an 89M decoder."
+  ],
+  "why_it_matters": "Shows that reusing pretrained encoders can dramatically reduce training and sampling costs for high‑quality diffusion models, opening a path to more efficient generative AI.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "generative models",
+   "diffusion",
+   "representation learning",
+   "image synthesis"
+  ],
+  "importance": 3,
+  "id": "61e574bea3592d25",
+  "url": "https://huggingface.co/papers/2611.34782",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:47:08.195768+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.98,
+   "confidence": 0.96
+  },
+  "related": [
+   "b15996e74022fea1",
+   "26ddf51f9dd415ad",
+   "50feeb157090174b",
+   "8780feaa752a0e9d"
+  ]
+ },
+ {
+  "headline": "Reading, Not Adapting: Unlocking Frozen Visual Knowledge for AI-Generated Image Detection",
+  "tldr": "The paper shows that frozen vision foundation models already contain strong detection knowledge for AI‑generated images, and proposes ReMoT, a lightweight readout framework that outperforms adaptation‑based methods.",
+  "key_points": [
+   "Vision foundation models encode transferable detection knowledge without fine‑tuning.",
+   "ReMoT reads complementary RGB and wavelet features via staged joint attention in a frozen backbone.",
+   "Achieves 91.2% average accuracy across eight benchmarks with only 3,074 trainable parameters.",
+   "Outperforms existing adaptation and multi‑cue detection approaches."
+  ],
+  "why_it_matters": "Demonstrates that preserving pretrained knowledge can yield better generalization to unseen image generators, reducing the need for costly model adaptation and enabling more efficient detection of AI‑generated content.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "frozen models",
+   "image detection",
+   "vision foundation",
+   "Mixture-of-Transformers"
+  ],
+  "importance": 3,
+  "id": "cde2e1787774aa7b",
+  "url": "https://huggingface.co/papers/2611.34719",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:46:57.892023+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.96,
+   "confidence": 0.94
+  },
+  "related": [
+   "606c9eca0385ab92",
+   "3b627af7791cfed8",
+   "cdf4593682f9d3d6",
+   "eba1ef6c1e98b332"
+  ]
+ },
+ {
+  "headline": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+  "tldr": "The paper introduces JudiAct, a safety guard that decides among allow, warn, review, or refuse actions for multimodal requests, using a new audit corpus and the JudiBench benchmark, achieving large gains over prior models.",
+  "key_points": [
+   "Creates a 20,126‑example audit corpus and the JudiBench benchmark linking actions to diagnostic judgments and evidence.",
+   "JudiAct generates explicit review items (source evidence, condition, rule) and uses them to predict safety actions.",
+   "Improves Macro‑F1 by >28 points on JudiBench and reduces attack success on MM‑SafetyBench from 40.78% to 25.30%.",
+   "Outperforms state‑of‑the‑art safety guards across nine public benchmarks in both pre‑ and post‑generation settings."
+  ],
+  "why_it_matters": "Providing nuanced, evidence‑based safety decisions helps AI systems handle risky requests more responsibly, reducing harmful outputs while still addressing user needs, and sets a new standard for multimodal safety evaluation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "AI safety",
+   "multimodal",
+   "benchmark",
+   "guard"
+  ],
+  "importance": 3,
+  "id": "fff0487071652ff6",
+  "url": "https://huggingface.co/papers/2611.28849",
+  "source": "HF Daily Papers",
+  "date": "2026-11-20T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:46:44.484595+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.89,
+   "confidence": 0.64
+  },
+  "related": [
+   "1e2cfe3c8e8aa902",
+   "adba844aff176e0b",
+   "ab328cdaa522dc1f",
+   "6fd4c32fe34a4cba"
+  ]
+ },
+ {
+  "headline": "DetourBench: Trajectory-Level Evaluation of Interactive Agents with Exact Minimum-Action Bounds",
+  "tldr": "Introduces DetourBench, a benchmark that computes exact minimum‑action counts for interactive language‑model agents, enabling fine‑grained evaluation of their trajectories beyond simple endpoint success.",
+  "key_points": [
+   "Defines a finite, partially observable transition system with unit‑cost accesses.",
+   "Computes the full‑information minimum action count L₀ and residual work R_T for each episode.",
+   "Reports separate metrics: success, attainment, residual progress, and normalized detour.",
+   "Evaluates 375 episodes across five model endpoints, showing varied success and attainment rates.",
+   "Open‑sources tasks, oracle witnesses, and evaluation harness on GitHub."
+  ],
+  "why_it_matters": "Provides a principled way to assess how efficiently and correctly agents reach decisions, distinguishing between merely reaching the right answer and taking the optimal path—crucial for building trustworthy, cost‑effective AI systems.",
+  "category": "paper",
+  "companies": [
+   "DatagridsAI"
+  ],
+  "tags": [
+   "benchmark",
+   "evaluation",
+   "interactive-agents",
+   "trajectory"
+  ],
+  "importance": 3,
+  "id": "51c727335e201a4c",
+  "url": "https://huggingface.co/papers/2611.20844",
+  "source": "HF Daily Papers",
+  "date": "2026-11-15T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:46:32.646851+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.96
+  },
+  "related": [
+   "400d931ab84af6d8",
+   "576bdfffc7bca566",
+   "8c18510fcbeb81f6",
+   "71d7a8ddbc528130"
+  ]
+ },
+ {
+  "headline": "When an AI agent makes a mistake in a database, what decides the damage?",
+  "tldr": "A systematic study evaluates how different database engines, guard layers, and model choices affect the impact of AI‑agent errors on production data.",
+  "key_points": [
+   "Two experimental layers: Layer A uses scripted canonical mistakes; Layer B uses minimal tool‑calling agents powered by six open‑weight models.",
+   "Tests span nine relational and NoSQL engines (PostgreSQL, MySQL, SQLite, ClickHouse, Cassandra, MongoDB, Valkey, Kafka, OpenSearch) plus additional engines in a secondary run.",
+   "Engines differ more in their undo capabilities than in the raw damage caused by mistakes.",
+   "Three of seven preregistered hypotheses were supported; others were not or were uninformative.",
+   "Post‑hoc analyses reveal inconsistencies between preregistered outcomes and raw row‑loss metrics for several engines."
+  ],
+  "why_it_matters": "Understanding where damage originates—model, guard layer, or database engine—helps design safer AI agents that interact with critical production data, reducing costly data loss and downtime.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "database",
+   "AI agents",
+   "safety",
+   "evaluation"
+  ],
+  "importance": 3,
+  "id": "f16fc64b85dca1ef",
+  "url": "https://huggingface.co/papers/2611.30483",
+  "source": "HF Daily Papers",
+  "date": "2026-11-22T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:46:20.381164+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.86,
+   "confidence": 0.41
+  },
+  "related": [
+   "08354571471bdbfb",
+   "6fd4c32fe34a4cba",
+   "6e5f032fb046721a",
+   "ab328cdaa522dc1f"
+  ]
+ },
+ {
+  "headline": "Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration",
+  "tldr": "Radev is a new multimodal model for CT‑based clinical decisions that uses anatomy‑guided visual compression and counterfactual confidence training to improve accuracy and calibration.",
+  "key_points": [
+   "Frozen 3D encoder extracts organ‑level features and dynamically selects relevant 2D slice tokens.",
+   "Language backbone predicts decision candidates in a single forward pass, avoiding autoregressive decoding.",
+   "Counterfactual‑Calibrated Training (CCT) aligns confidence scores with the presence or removal of target organ evidence.",
+   "Introduces CT‑Verdict benchmark covering binary, multiple‑choice, and ordinal severity tasks across cohorts.",
+   "Radev outperforms prior state‑of‑the‑art methods in both decision accuracy and confidence calibration."
+  ],
+  "why_it_matters": "Accurate, well‑calibrated AI decisions are critical for clinical CT interpretation; Radev’s anatomy‑aware approach reduces reliance on spurious cues and provides reliable confidence estimates, facilitating safer deployment in radiology workflows.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "multimodal",
+   "medical imaging",
+   "confidence calibration",
+   "CT"
+  ],
+  "importance": 3,
+  "id": "cbd6c73ad3becd54",
+  "url": "https://huggingface.co/papers/2611.32993",
+  "source": "HF Daily Papers",
+  "date": "2026-11-23T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:46:08.477518+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.97,
+   "confidence": 0.93
+  },
+  "related": [
+   "c2eb21d93e7a9ba0",
+   "077753344d38f542",
+   "d48bd8c2551a0146",
+   "b88c69fd1f65e6b1"
+  ]
+ },
+ {
+  "headline": "ShowNow: Fine-Grained Speculative Streaming for Responsive World Models",
+  "tldr": "ShowNow introduces a speculative streaming framework that prepares multiple action‑conditioned video futures during playback, cutting input‑to‑display latency from 620 ms to 208 ms on a single H100 GPU.",
+  "key_points": [
+   "Fine‑grained speculative streaming prepares 1‑8 future actions while video plays",
+   "Single‑latent commitment enables frequent decision points with low overhead",
+   "5B model runs at 16 fps (480p) on one H100, sustaining eight prepared futures",
+   "Latency reduced by 66% in ViZDoom compared to baseline, with near‑zero restart ticks"
+  ],
+  "why_it_matters": "Real‑time interactive world models have struggled with latency caused by coarse generation; ShowNow’s approach demonstrates that leveraging idle playback computation can dramatically improve responsiveness, a key step toward practical AI‑driven interactive video and gaming experiences.",
+  "category": "paper",
+  "companies": [
+   "Showlab"
+  ],
+  "tags": [
+   "speculative streaming",
+   "world models",
+   "real-time video",
+   "AI gaming"
+  ],
+  "importance": 3,
+  "id": "c8e92f78ca47aa6a",
+  "url": "https://huggingface.co/papers/2611.34693",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:45:56.529362+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.97,
+   "confidence": 0.89
+  },
+  "related": [
+   "3174dce13f9dbbdd",
+   "6e8dbe3788a3467a",
+   "787fa971724176c1",
+   "576bdfffc7bca566"
+  ]
+ },
+ {
+  "headline": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
+  "tldr": "Introduces ProxyGenBench, a benchmark with 312 cases to evaluate how video generators use structural proxies, assessing control, content completion, artifact correction, and multimodal binding.",
+  "key_points": [
+   "Defines three core requirements for proxy-guided video generation: preserve structure, complete missing content, bind multimodal conditions.",
+   "Benchmark contains 312 evaluation cases across 60 scenes, varying proxy fidelity, text detail, and input modalities.",
+   "Evaluates five existing video generators, finding proxies improve spatiotemporal control but higher proxy detail can hurt content completion."
+  ],
+  "why_it_matters": "Provides the first systematic evaluation of proxy-guided video generation, highlighting trade‑offs and guiding future research toward more controllable and reliable video synthesis.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "proxy guidance",
+   "benchmark",
+   "multimodal"
+  ],
+  "importance": 3,
+  "id": "4342d45f5c91eb55",
+  "url": "https://huggingface.co/papers/2611.34457",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:45:44.400245+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.96
+  },
+  "related": [
+   "afd27e183f629e39",
+   "cf71a125cc26a7a2",
+   "f6990214f0b638d6",
+   "5f705d3f5490e944"
+  ]
+ },
+ {
+  "headline": "StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation",
+  "tldr": "StateWeaver introduces Active States and Hierarchical Collaboration to maintain consistency and handle state changes in long video generation, outperforming prior methods on multiple benchmarks.",
+  "key_points": [
+   "Active States translate review-identified discrepancies into visual asset requirements.",
+   "Hierarchical Collaboration isolates tasks and uses memory to manage cross-shot consistency.",
+   "Links generated content to asset states, story time, and reference versions for verification.",
+   "Achieves sustained consistency in long videos under both predefined and autonomous storyboards."
+  ],
+  "why_it_matters": "Long-horizon video generation has struggled with maintaining continuity and correctly depicting event-driven changes; StateWeaver's approach could enable more coherent, high-quality video content for storytelling, gaming, and simulation applications.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "video generation",
+   "long-horizon",
+   "multi-agent",
+   "state consistency"
+  ],
+  "importance": 3,
+  "id": "cf71a125cc26a7a2",
+  "url": "https://huggingface.co/papers/2611.34290",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:45:32.246344+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.96
+  },
+  "related": [
+   "b75cf0f82f2942cf",
+   "f6990214f0b638d6",
+   "afd27e183f629e39",
+   "4342d45f5c91eb55"
+  ]
+ },
+ {
+  "headline": "Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation",
+  "tldr": "A new training method expands the reliable start-state region (handoff boundary) of visuomotor policies, enabling smoother coordination between multimodal agents and robot controllers and boosting success rates to 98.4% while cutting API cost and execution time.",
+  "key_points": [
+   "Introduces Boundary-Explicit Training to widen the policy's handoff boundary.",
+   "Adds Boundary-Expanding Self-Improvement to extend the boundary using successful rollouts.",
+   "Achieves 26+ percentage‑point improvement over baselines on RoboTwin 2.0 and RoboDojo.",
+   "Reduces API calls by 41.3% and execution time by 37.5%.",
+   "Demonstrates the importance of jointly shaping agent‑policy interfaces."
+  ],
+  "why_it_matters": "Reliable handoff between high‑level agents and low‑level robot controllers is critical for scalable, autonomous manipulation; widening the handoff boundary reduces reliance on costly language‑model calls and improves real‑world robustness.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "robot manipulation",
+   "policy learning",
+   "multimodal agents",
+   "visuomotor control"
+  ],
+  "importance": 3,
+  "id": "b3bc1206fc202557",
+  "url": "https://huggingface.co/papers/2611.32238",
+  "source": "HF Daily Papers",
+  "date": "2026-11-23T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:45:20.531014+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.96
+  },
+  "related": [
+   "63437884c9c25089",
+   "400d931ab84af6d8",
+   "437ba97640cd8007",
+   "6cb54b6e74313597"
+  ]
+ },
+ {
+  "headline": "Vernier Tool Measures Resolution of Time-Series Forecasting Leaderboards",
+  "tldr": "A new tool, Vernier, quantifies how precisely forecasting leaderboards can distinguish model performance, revealing many boards lack fine-grained resolution and exposing ranking instability.",
+  "key_points": [
+   "Vernier computes leaderboard resolution from published per-dataset scores.",
+   "Many leaderboards (e.g., GIFT-Eval, fev-bench, Chronos Benchmark II) have resolution far larger than gaps between top models.",
+   "Only the BOOM leaderboard resolves its top ten entries distinctly.",
+   "Ranking can flip when unrelated submissions are added, showing instability.",
+   "Shortening input history degrades performance of open models, sometimes by 15%."
+  ],
+  "why_it_matters": "Understanding leaderboard resolution ensures fair model comparison, prevents misleading rankings, and guides researchers on dataset adequacy for evaluating zero-shot time-series models.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "time-series",
+   "benchmarking",
+   "evaluation",
+   "leaderboard"
+  ],
+  "importance": 3,
+  "id": "9636993dcbefcb0f",
+  "url": "https://huggingface.co/papers/2611.31619",
+  "source": "HF Daily Papers",
+  "date": "2026-11-22T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:45:08.332640+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.83,
+   "confidence": 0.75
+  },
+  "related": [
+   "a036bb1a5f383372"
+  ]
+ },
+ {
+  "headline": "Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability",
+  "tldr": "The paper identifies why Gated DeltaNet-2 suffers training failures on long contexts and proposes symmetric erasure with decay‑regulated residual writing, achieving stable training and better long‑context performance.",
+  "key_points": [
+   "Linear attention provides O(N) complexity with fixed‑size recurrent states.",
+   "GDN‑2’s asymmetric erasure causes exponential state growth during long‑context training.",
+   "Symmetric erasure ensures non‑expansive state propagation.",
+   "Decay‑regulated residual writing retains flexibility while preventing blow‑up.",
+   "Stable model improves 128K RULER score by 6.80 points and downstream accuracy by 0.62 points."
+  ],
+  "why_it_matters": "Stabilizing recurrent state updates enables reliable training of large linear‑attention models, unlocking efficient long‑sequence processing for tasks like document retrieval and extended context generation.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "linear attention",
+   "state stability",
+   "long-context",
+   "GDN-2"
+  ],
+  "importance": 3,
+  "id": "ec4696bbb02f55d9",
+  "url": "https://huggingface.co/papers/2611.34051",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:44:56.384760+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.97
+  },
+  "related": [
+   "c73b0da3ab05e071",
+   "97d3633bdcb38575",
+   "770fedf6fe7a73a6",
+   "5ed4e8911b4bb11b"
+  ]
+ },
+ {
+  "headline": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+  "tldr": "OS-Omni introduces a cross‑platform benchmark (Windows, Ubuntu, macOS, iOS, Android, Web) with 300 tasks to evaluate long‑horizon computer‑using agents; Claude Opus 5.5 achieves 68.5% success, still lagging behind humans, especially on iOS/macOS.",
+  "key_points": [
+   "First live benchmark covering six OS environments and cross‑platform workflows",
+   "48 tasks per platform plus 12 desktop‑mobile combined tasks in version 1",
+   "Human baseline requires ~68 interaction steps vs. ~15 steps in prior OSWorld benchmark",
+   "Claude Opus 5.5 reaches 68.5% success, 8.8 points below human performance",
+   "Performance varies widely: agents surpass humans on Linux but fall >25 points on iOS/macOS"
+  ],
+  "why_it_matters": "Provides the first systematic way to measure how well generalist AI agents can handle realistic, multi‑OS user workflows, highlighting current gaps and guiding future research toward truly platform‑robust agents.",
+  "category": "paper",
+  "companies": [
+   "Anthropic"
+  ],
+  "tags": [
+   "benchmark",
+   "generalist-agent",
+   "cross-platform",
+   "long-horizon"
+  ],
+  "importance": 3,
+  "id": "ea247b47b521fbc6",
+  "url": "https://huggingface.co/papers/2611.34232",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T08:44:44.731208+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.95,
+   "confidence": 0.75
+  },
+  "related": [
+   "87a1cf2bb4958a33",
+   "b88709aa5efa153c",
+   "84084d872d88964e",
+   "8f4728ffc5b95bfc"
+  ]
+ },
+ {
   "headline": "Jensen Huang reinstated as Nvidia CEO, board chair",
   "tldr": "Nvidia's board reinstated Jensen Huang as CEO and board chair after a brief removal.",
   "key_points": [
@@ -275,7 +882,7 @@
    "49f0104ed04b09d4",
    "ce9f110ff065ce6a",
    "ff5e010f2bb4373b",
-   "8c18510fcbeb81f6"
+   "a329da690f58fbc4"
   ]
  },
  {
@@ -311,8 +918,8 @@
   "related": [
    "e6b37f5da94e2fd1",
    "f26f2a4dfd6b9b95",
-   "624c1d20c3486007",
-   "e683d40fba103b5f"
+   "e683d40fba103b5f",
+   "bd04dc847bd5db6d"
   ]
  },
  {
@@ -679,7 +1286,6 @@
   },
   "related": [
    "1c343af691bcf876",
-   "df267d7f735c49c2",
    "7ffe4f27310feb57"
   ]
  },
@@ -1548,9 +2154,9 @@
   },
   "related": [
    "46b31e0cbd48e780",
+   "b3bc1206fc202557",
    "ab298121176b2f09",
-   "e2aca7c0bded90b3",
-   "1711dfbcefcd2e40"
+   "e2aca7c0bded90b3"
   ]
  },
  {
@@ -1790,7 +2396,7 @@
    "5a831e0a7294769f",
    "676bccdabb367bf4",
    "0ca25edadd1d7b98",
-   "979c445d2a85e8c9"
+   "ea247b47b521fbc6"
   ]
  },
  {
@@ -1916,8 +2522,8 @@
   "related": [
    "83fe5430a4ee5df0",
    "7655b154f433b6c9",
-   "eb6c6ac62da451f0",
-   "598853ef8c21e01e"
+   "598853ef8c21e01e",
+   "80b6d0407b0410e7"
   ]
  },
  {
@@ -2299,9 +2905,9 @@
   "added": "2026-11-26T21:45:09.954606+00:00",
   "related": [
    "adba844aff176e0b",
-   "cb0d7372f9a0d9c6",
-   "6fd4c32fe34a4cba",
-   "6fbb892b6c12f639"
+   "fff0487071652ff6",
+   "f16fc64b85dca1ef",
+   "cb0d7372f9a0d9c6"
   ]
  },
  {
@@ -2772,9 +3378,9 @@
   "added": "2026-11-26T21:41:58.203134+00:00",
   "related": [
    "bf1c5aa19e699bfb",
-   "5a42b757c7e16d43",
    "f7443cad77b05a15",
-   "964abff5bf4e7cc8"
+   "964abff5bf4e7cc8",
+   "0115555b39344353"
   ]
  },
  {
@@ -3079,7 +3685,7 @@
    "3cb6f8957f1309aa",
    "3c869f7e786db78c",
    "97d3633bdcb38575",
-   "fed9e04f33fc05ee"
+   "3e2b76e4617cbecc"
   ]
  },
  {
@@ -3364,8 +3970,8 @@
   "related": [
    "bc15f7248029aa22",
    "6728be4729acd929",
-   "2867ce4c38e61b91",
-   "f6990214f0b638d6"
+   "4342d45f5c91eb55",
+   "2867ce4c38e61b91"
   ]
  },
  {
@@ -3681,7 +4287,7 @@
   "related": [
    "20846ea7ff45137b",
    "3ae07814cc15c93f",
-   "254acb1cf38ba08b",
+   "ea247b47b521fbc6",
    "b6e796bec6565c06"
   ]
  },
@@ -3906,8 +4512,8 @@
   "related": [
    "8780feaa752a0e9d",
    "79b8f27116994616",
-   "f53eb54da6e824d2",
-   "3b627af7791cfed8"
+   "61e574bea3592d25",
+   "f53eb54da6e824d2"
   ]
  },
  {
@@ -3939,8 +4545,8 @@
   "related": [
    "770e1ac61b961d40",
    "a683e7acfe154298",
-   "41c8064b0522ade9",
-   "afd27e183f629e39"
+   "4342d45f5c91eb55",
+   "41c8064b0522ade9"
   ]
  },
  {
@@ -4293,7 +4899,8 @@
   "related": [
    "3e2b76e4617cbecc",
    "c750175dcfd6ff94",
-   "3b627af7791cfed8"
+   "3b627af7791cfed8",
+   "61e574bea3592d25"
   ]
  },
  {
@@ -4485,10 +5092,10 @@
   "date": "2026-11-24T19:00:00.000Z",
   "added": "2026-11-26T08:37:40.160446+00:00",
   "related": [
+   "b3bc1206fc202557",
    "52f09809260e978d",
    "a90a868b5e0ff1de",
-   "63437884c9c25089",
-   "316e6b12da0b19df"
+   "63437884c9c25089"
   ]
  },
  {
@@ -4582,10 +5189,10 @@
   "date": "2026-11-24T19:00:00.000Z",
   "added": "2026-11-26T08:37:03.458546+00:00",
   "related": [
+   "ea247b47b521fbc6",
    "84084d872d88964e",
    "ccb9331ad40681b7",
-   "853993777f319fd1",
-   "576bdfffc7bca566"
+   "853993777f319fd1"
   ]
  },
  {
@@ -4709,10 +5316,10 @@
   "date": "2026-11-24T19:00:00.000Z",
   "added": "2026-11-26T08:36:15.879094+00:00",
   "related": [
+   "b3bc1206fc202557",
    "63437884c9c25089",
    "63f0f7ee2cf50c46",
-   "6cb54b6e74313597",
-   "400d931ab84af6d8"
+   "6cb54b6e74313597"
   ]
  },
  {
@@ -4925,10 +5532,10 @@
   "date": "2026-11-24T19:00:00.000Z",
   "added": "2026-11-26T08:34:52.547633+00:00",
   "related": [
+   "cf71a125cc26a7a2",
    "f6990214f0b638d6",
    "6728be4729acd929",
-   "f37a914567128be7",
-   "afd27e183f629e39"
+   "f37a914567128be7"
   ]
  },
  {
@@ -5273,10 +5880,10 @@
   "date": "2026-11-24T19:00:00.000Z",
   "added": "2026-11-26T08:32:39.802624+00:00",
   "related": [
+   "b3bc1206fc202557",
    "13a6b8013ec3564c",
    "6cb54b6e74313597",
-   "279a073e0c692f17",
-   "4dd75576157e6673"
+   "279a073e0c692f17"
   ]
  },
  {
@@ -5339,7 +5946,7 @@
    "4b0509310e9e561a",
    "0c3b5d46ca21a519",
    "63437884c9c25089",
-   "279a073e0c692f17"
+   "b3bc1206fc202557"
   ]
  },
  {
@@ -5870,10 +6477,10 @@
   "date": "Wed, 25 Nov 2026 13:00:00 +0000",
   "added": "2026-11-25T21:53:36.396570+00:00",
   "related": [
-   "71dad9da95c2fbfe",
    "cb8293f821d94f0d",
    "92c1cc867c014247",
-   "627c324df106de1b"
+   "d2f90fb918d969fe",
+   "fb5a7d58c9a946b0"
   ]
  },
  {
@@ -6570,10 +7177,10 @@
   "date": "2026-11-21T19:00:00.000Z",
   "added": "2026-11-25T21:49:12.437801+00:00",
   "related": [
+   "61e574bea3592d25",
    "26ddf51f9dd415ad",
    "eba1ef6c1e98b332",
-   "6ab67ac03b407a5f",
-   "9f45e6d852518099"
+   "6ab67ac03b407a5f"
   ]
  },
  {
@@ -6731,9 +7338,9 @@
   "added": "2026-11-25T21:48:12.427002+00:00",
   "related": [
    "ad719e8a38ff6ab2",
+   "cde2e1787774aa7b",
    "8e485c1c148701e4",
-   "57a5ba0acc697998",
-   "eba1ef6c1e98b332"
+   "57a5ba0acc697998"
   ]
  },
  {
@@ -6801,7 +7408,7 @@
   "related": [
    "316e6b12da0b19df",
    "49f0104ed04b09d4",
-   "4f659257ca036ff9",
+   "b3bc1206fc202557",
    "87a1cf2bb4958a33"
   ]
  },
@@ -7047,10 +7654,10 @@
   "date": "2026-11-22T19:00:00.000Z",
   "added": "2026-11-25T08:52:01.806458+00:00",
   "related": [
+   "b3bc1206fc202557",
    "5ed4e8911b4bb11b",
    "9341e04f1ac7831b",
-   "0904df37e969bdc1",
-   "07aff8529387b3ae"
+   "0904df37e969bdc1"
   ]
  },
  {
@@ -7150,7 +7757,7 @@
    "26ddf51f9dd415ad",
    "a683e7acfe154298",
    "8dfc20d232c82098",
-   "c750175dcfd6ff94"
+   "61e574bea3592d25"
   ]
  },
  {
@@ -7268,7 +7875,7 @@
    "3b627af7791cfed8",
    "606c9eca0385ab92",
    "16e0f52e6513b68f",
-   "5fb85d77dd564180"
+   "61e574bea3592d25"
   ]
  },
  {
@@ -7744,7 +8351,6 @@
   "added": "2026-11-25T08:47:37.643949+00:00",
   "related": [
    "50feeb157090174b",
-   "33d8937469a3b9ee",
    "57017ac735e46aec"
   ]
  },
@@ -7808,8 +8414,8 @@
   "related": [
    "87a1cf2bb4958a33",
    "e337e8608e1e9412",
-   "66fe800a733bf4d4",
-   "b88709aa5efa153c"
+   "ea247b47b521fbc6",
+   "66fe800a733bf4d4"
   ]
  },
  {
@@ -8251,10 +8857,10 @@
   "date": "2026-11-24T11:30:00-05:00",
   "added": "2026-11-24T22:40:03.609457+00:00",
   "related": [
-   "71dad9da95c2fbfe",
    "8ab70d6f89cfc96b",
    "f816757e046db752",
-   "859fe7425ca0830b"
+   "859fe7425ca0830b",
+   "4c525e5e54fa3645"
   ]
  },
  {
@@ -9050,8 +9656,7 @@
   "date": "2026-11-22T19:00:00.000Z",
   "added": "2026-11-24T22:35:03.924557+00:00",
   "related": [
-   "f26f2a4dfd6b9b95",
-   "eb6c6ac62da451f0"
+   "f26f2a4dfd6b9b95"
   ]
  },
  {
@@ -9145,8 +9750,8 @@
   "related": [
    "4b0509310e9e561a",
    "6cb54b6e74313597",
-   "935b5430b854deb8",
-   "9dbb7a6ae9fe4f78"
+   "b3bc1206fc202557",
+   "935b5430b854deb8"
   ]
  },
  {
@@ -9242,8 +9847,8 @@
   "related": [
    "c750175dcfd6ff94",
    "59c578bf213c6d53",
-   "2e6f0f3077d24a40",
-   "b15996e74022fea1"
+   "61e574bea3592d25",
+   "2e6f0f3077d24a40"
   ]
  },
  {
@@ -9338,8 +9943,8 @@
   "related": [
    "107d92ed2d8e1552",
    "af1852b4c46dc30e",
-   "df267d7f735c49c2",
-   "e0d5212ab487d51c"
+   "e0d5212ab487d51c",
+   "c73b0da3ab05e071"
   ]
  },
  {
@@ -9850,6 +10455,7 @@
   "related": [
    "790b2e1d548e5cac",
    "979c445d2a85e8c9",
+   "ea247b47b521fbc6",
    "36154cf86ff08e24"
   ]
  },
@@ -10447,10 +11053,10 @@
   "date": "2026-11-22T19:00:00.000Z",
   "added": "2026-11-24T10:02:47.031891+00:00",
   "related": [
+   "51c727335e201a4c",
    "d6624a4f03c35acf",
    "b75cf0f82f2942cf",
-   "19becf065be41ef0",
-   "f6990214f0b638d6"
+   "19becf065be41ef0"
   ]
  },
  {
@@ -10580,7 +11186,7 @@
    "400d931ab84af6d8",
    "13a6b8013ec3564c",
    "4dd75576157e6673",
-   "07aff8529387b3ae"
+   "b3bc1206fc202557"
   ]
  },
  {
@@ -10640,8 +11246,8 @@
   "related": [
    "4c525e5e54fa3645",
    "a59424729711a810",
-   "71dad9da95c2fbfe",
-   "8ab70d6f89cfc96b"
+   "8ab70d6f89cfc96b",
+   "b7579835e4e7c6dd"
   ]
  },
  {
@@ -10835,8 +11441,8 @@
   "related": [
    "b7579835e4e7c6dd",
    "4c525e5e54fa3645",
-   "627c324df106de1b",
-   "2475b067992dd4ab"
+   "2475b067992dd4ab",
+   "90f831b4fd3ecc8c"
   ]
  },
  {
@@ -10929,9 +11535,9 @@
   "added": "2026-11-24T00:05:35.926604+00:00",
   "related": [
    "8ab70d6f89cfc96b",
-   "627c324df106de1b",
    "4c525e5e54fa3645",
-   "9e3d554c6cb56d83"
+   "9e3d554c6cb56d83",
+   "90f831b4fd3ecc8c"
   ]
  },
  {
@@ -11150,9 +11756,9 @@
   "added": "2026-11-24T00:04:12.879616+00:00",
   "related": [
    "6e5f032fb046721a",
+   "f16fc64b85dca1ef",
    "118f3d692dd642c2",
-   "a34d7316442f46f6",
-   "37b5c9ba93266751"
+   "a34d7316442f46f6"
   ]
  },
  {
@@ -12395,10 +13001,10 @@
   "date": "2026-11-20T17:20:31Z",
   "added": "2026-11-23T07:54:19.360441+00:00",
   "related": [
+   "61e574bea3592d25",
    "96ad562d9987a4dd",
    "0aae5f17459bae16",
-   "3b627af7791cfed8",
-   "9341e04f1ac7831b"
+   "3b627af7791cfed8"
   ]
  },
  {
@@ -12967,7 +13573,7 @@
    "20846ea7ff45137b",
    "b6e796bec6565c06",
    "f2fbb8e41b886fd8",
-   "254acb1cf38ba08b"
+   "51c727335e201a4c"
   ]
  },
  {
@@ -13345,7 +13951,7 @@
    "92c1cc867c014247",
    "7465bbc4c963251d",
    "de36b121eed67039",
-   "71dad9da95c2fbfe"
+   "4c525e5e54fa3645"
   ]
  },
  {
@@ -13552,7 +14158,7 @@
    "03e1ce70f1125e7d",
    "720286b4961b1931",
    "020406cb2348e5d8",
-   "5c37229c595324bf"
+   "cde2e1787774aa7b"
   ]
  },
  {
@@ -14295,8 +14901,8 @@
   "related": [
    "0ca25edadd1d7b98",
    "6cfbaf9eebee60c8",
-   "fed9e04f33fc05ee",
-   "979c445d2a85e8c9"
+   "979c445d2a85e8c9",
+   "f9b2c6d1b672b959"
   ]
  },
  {
@@ -14327,8 +14933,8 @@
   "related": [
    "e92b96b00887cdea",
    "26ddf51f9dd415ad",
-   "8dfc20d232c82098",
-   "a683e7acfe154298"
+   "61e574bea3592d25",
+   "8dfc20d232c82098"
   ]
  },
  {
@@ -14542,10 +15148,10 @@
   "date": "2026-11-19T18:45:31Z",
   "added": "2026-11-21T07:25:00.410512+00:00",
   "related": [
+   "61e574bea3592d25",
    "26ddf51f9dd415ad",
    "50feeb157090174b",
-   "3b627af7791cfed8",
-   "a683e7acfe154298"
+   "3b627af7791cfed8"
   ]
  },
  {
@@ -14753,7 +15359,9 @@
   "source": "arXiv",
   "date": "2026-11-19T17:46:42Z",
   "added": "2026-11-21T07:23:36.414556+00:00",
-  "related": []
+  "related": [
+   "cbd6c73ad3becd54"
+  ]
  },
  {
   "headline": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers",
@@ -14847,6 +15455,7 @@
   "added": "2026-11-21T07:23:00.338716+00:00",
   "related": [
    "718c87c9a039ea20",
+   "16dccd0a72ef1ece",
    "399e786b295dfb8e",
    "01995458ab323d07"
   ]
@@ -14943,7 +15552,7 @@
    "720286b4961b1931",
    "20846ea7ff45137b",
    "1e2cfe3c8e8aa902",
-   "cdf4593682f9d3d6"
+   "fff0487071652ff6"
   ]
  },
  {
@@ -14977,9 +15586,9 @@
   "added": "2026-11-21T07:22:12.287870+00:00",
   "related": [
    "1e2cfe3c8e8aa902",
+   "fff0487071652ff6",
    "132e8d009f1edfc9",
-   "97dd0318b0e07fb8",
-   "79b8f27116994616"
+   "97dd0318b0e07fb8"
   ]
  },
  {
@@ -15130,7 +15739,7 @@
    "5f705d3f5490e944",
    "09ae542b3f916524",
    "4d8a65ee821b51c5",
-   "2867ce4c38e61b91"
+   "4342d45f5c91eb55"
   ]
  },
  {
@@ -15220,10 +15829,10 @@
   "date": "2026-11-18T19:00:00.000Z",
   "added": "2026-11-21T07:20:36.093841+00:00",
   "related": [
+   "b3bc1206fc202557",
    "853993777f319fd1",
    "07aff8529387b3ae",
-   "4b0509310e9e561a",
-   "63437884c9c25089"
+   "4b0509310e9e561a"
   ]
  },
  {
@@ -15283,10 +15892,10 @@
   "date": "2026-11-18T19:00:00.000Z",
   "added": "2026-11-21T07:20:12.123847+00:00",
   "related": [
+   "c8e92f78ca47aa6a",
    "ee39fc71f328b43e",
    "bc15f7248029aa22",
-   "1e691e4e9e009867",
-   "41c8064b0522ade9"
+   "1e691e4e9e009867"
   ]
  },
  {
@@ -15594,10 +16203,10 @@
   "date": "2026-11-18T19:00:00.000Z",
   "added": "2026-11-20T20:35:11.773537+00:00",
   "related": [
+   "fff0487071652ff6",
    "763260d43b5a1a14",
    "d48bd8c2551a0146",
-   "132e8d009f1edfc9",
-   "20846ea7ff45137b"
+   "132e8d009f1edfc9"
   ]
  },
  {
@@ -15906,10 +16515,10 @@
   "date": "2026-11-19T18:57:25Z",
   "added": "2026-11-20T20:33:11.863228+00:00",
   "related": [
+   "b3bc1206fc202557",
    "4b17f79747b00f07",
    "4dd75576157e6673",
-   "0904df37e969bdc1",
-   "5ed8080e8d3e8beb"
+   "51c727335e201a4c"
   ]
  },
  {
@@ -15971,9 +16580,9 @@
   "added": "2026-11-20T20:32:47.705697+00:00",
   "related": [
    "127326b87b53e7a9",
-   "627c324df106de1b",
    "28509d8a3a743ac7",
-   "de36b121eed67039"
+   "de36b121eed67039",
+   "075bbfb634c2a8a5"
   ]
  },
  {
@@ -16472,7 +17081,7 @@
    "718c87c9a039ea20",
    "28646e127b60ac77",
    "c135371959a55d44",
-   "40727faf3cf5a217"
+   "d2165c64cfb7b5c8"
   ]
  },
  {
@@ -16943,9 +17552,9 @@
   "added": "2026-11-20T07:31:47.835666+00:00",
   "related": [
    "ab298121176b2f09",
+   "b3bc1206fc202557",
    "6cb54b6e74313597",
-   "64d40a84782e1014",
-   "4dd75576157e6673"
+   "64d40a84782e1014"
   ]
  },
  {
@@ -17162,9 +17771,9 @@
   "added": "2026-11-20T07:30:23.898504+00:00",
   "related": [
    "9f45e6d852518099",
+   "61e574bea3592d25",
    "c750175dcfd6ff94",
-   "db5a7352d8a8f936",
-   "59c578bf213c6d53"
+   "db5a7352d8a8f936"
   ]
  },
  {
@@ -17385,9 +17994,9 @@
   "added": "2026-11-20T07:28:59.717737+00:00",
   "related": [
    "a22c687c439c6aed",
+   "ea247b47b521fbc6",
    "7134e7e1ad670b60",
-   "f7214e14d1e100a3",
-   "890b3b5545c8fcb4"
+   "f7214e14d1e100a3"
   ]
  },
  {
@@ -17573,7 +18182,7 @@
    "afd27e183f629e39",
    "e44c65cf42c4c921",
    "b75cf0f82f2942cf",
-   "0ec0be1e7f2dd51c"
+   "cf71a125cc26a7a2"
   ]
  },
  {
@@ -17672,7 +18281,7 @@
    "6e5f032fb046721a",
    "27b0129b73da0b19",
    "b88709aa5efa153c",
-   "adba844aff176e0b"
+   "f16fc64b85dca1ef"
   ]
  },
  {
@@ -17962,10 +18571,10 @@
   "date": "2026-09-28T20:00:00.000Z",
   "added": "2026-11-19T20:52:47.685791+00:00",
   "related": [
+   "51c727335e201a4c",
    "964abff5bf4e7cc8",
-   "84084d872d88964e",
-   "5a42b757c7e16d43",
-   "08354571471bdbfb"
+   "ea247b47b521fbc6",
+   "84084d872d88964e"
   ]
  },
  {
@@ -19116,7 +19725,7 @@
    "c750175dcfd6ff94",
    "59c578bf213c6d53",
    "26ddf51f9dd415ad",
-   "a7d0f7222e04dbb3"
+   "61e574bea3592d25"
   ]
  },
  {
@@ -19178,8 +19787,8 @@
   "related": [
    "6e8dbe3788a3467a",
    "11ac1d25eb0e562b",
-   "4f659257ca036ff9",
-   "ee39fc71f328b43e"
+   "ee39fc71f328b43e",
+   "84d2fa603ef696ee"
   ]
  },
  {
@@ -19437,8 +20046,8 @@
   "related": [
    "8ab70d6f89cfc96b",
    "9e3d554c6cb56d83",
-   "71dad9da95c2fbfe",
-   "0b5fe7dce536bb45"
+   "0b5fe7dce536bb45",
+   "b7579835e4e7c6dd"
   ]
  },
  {
@@ -19589,9 +20198,9 @@
   "added": "2026-11-19T07:40:10.556265+00:00",
   "related": [
    "28509d8a3a743ac7",
-   "627c324df106de1b",
    "049542555c2cb3db",
-   "2f75382e1552daaa"
+   "2f75382e1552daaa",
+   "32af257829de9696"
   ]
  },
  {
@@ -20293,7 +20902,7 @@
    "f6990214f0b638d6",
    "e44c65cf42c4c921",
    "b75cf0f82f2942cf",
-   "4d8a65ee821b51c5"
+   "4342d45f5c91eb55"
   ]
  },
  {
@@ -20325,7 +20934,7 @@
    "3b627af7791cfed8",
    "50feeb157090174b",
    "b88c69fd1f65e6b1",
-   "3f0202fb9b3062e9"
+   "cde2e1787774aa7b"
   ]
  },
  {
@@ -20951,9 +21560,9 @@
   "added": "2026-11-18T20:44:20.137511+00:00",
   "related": [
    "875022353549216c",
-   "df267d7f735c49c2",
    "97d3633bdcb38575",
-   "107d92ed2d8e1552"
+   "107d92ed2d8e1552",
+   "a4115a03062782cf"
   ]
  },
  {
@@ -22255,8 +22864,8 @@
   "related": [
    "ce416493dbd77e39",
    "075bbfb634c2a8a5",
-   "627c324df106de1b",
-   "8ad47877f742298c"
+   "8ad47877f742298c",
+   "acaf00569e865f08"
   ]
  },
  {
@@ -22514,8 +23123,8 @@
   "related": [
    "329a8f2fe2240e7a",
    "8b0327eb0ad9274a",
-   "4f659257ca036ff9",
-   "5cea63d09933ac34"
+   "5cea63d09933ac34",
+   "70fecf1d20c928d6"
   ]
  },
  {
@@ -22705,9 +23314,9 @@
   "added": "2026-11-18T07:40:30.477517+00:00",
   "related": [
    "ca38829e73128713",
+   "b3bc1206fc202557",
    "13a6b8013ec3564c",
-   "0c3b5d46ca21a519",
-   "4dd75576157e6673"
+   "0c3b5d46ca21a519"
   ]
  },
  {
@@ -22866,7 +23475,7 @@
    "400d931ab84af6d8",
    "4dd75576157e6673",
    "4b17f79747b00f07",
-   "63437884c9c25089"
+   "b3bc1206fc202557"
   ]
  },
  {
@@ -22962,9 +23571,9 @@
   "added": "2026-11-18T07:38:54.443892+00:00",
   "related": [
    "9939bfd922ed189c",
-   "df267d7f735c49c2",
    "b014c2bf13f4b6d6",
-   "c741354a44283ad9"
+   "c741354a44283ad9",
+   "5e93d3e105c8487c"
   ]
  },
  {
@@ -23156,7 +23765,7 @@
    "958b4d502f59f32f",
    "075bbfb634c2a8a5",
    "6e2564c29c662909",
-   "627c324df106de1b"
+   "9d1f6a725104cec1"
   ]
  },
  {
@@ -24461,9 +25070,7 @@
   "source": "r/MachineLearning",
   "date": "2026-11-16T21:40:45+00:00",
   "added": "2026-11-17T08:08:44.922370+00:00",
-  "related": [
-   "7cb2da0274ff01a5"
-  ]
+  "related": []
  },
  {
   "headline": "Struggled in my Infosys interview as a fresher – seeking advice to strengthen fundamentals for an AI/ML engineer career",
@@ -24578,8 +25185,8 @@
   "added": "2026-11-17T08:07:57.114557+00:00",
   "related": [
    "f8045fa626e2c02a",
-   "e09aa9a8dd804800",
    "2f1f5cbf7ce833ab",
+   "e09aa9a8dd804800",
    "32af257829de9696"
   ]
  },
@@ -24801,7 +25408,7 @@
    "9090f2c5d4193c12",
    "b20060722a6fcdb8",
    "84084d872d88964e",
-   "b88709aa5efa153c"
+   "ea247b47b521fbc6"
   ]
  },
  {
@@ -24867,7 +25474,7 @@
    "dd02c35afc864bbe",
    "717626b76ea030ce",
    "357d085ae06f4ca2",
-   "4f659257ca036ff9"
+   "b7b630b2fe964f78"
   ]
  },
  {
@@ -26568,7 +27175,7 @@
    "b5c8370aae01dd98",
    "a22c687c439c6aed",
    "8451eda18f3aa606",
-   "8b0327eb0ad9274a"
+   "ea247b47b521fbc6"
   ]
  },
  {
@@ -26700,8 +27307,8 @@
   "related": [
    "e87a4535763a3f27",
    "60e40361655d6751",
-   "20846ea7ff45137b",
-   "57017ac735e46aec"
+   "ea247b47b521fbc6",
+   "20846ea7ff45137b"
   ]
  },
  {
@@ -26730,9 +27337,9 @@
   "added": "2026-11-16T22:15:21.323444+00:00",
   "related": [
    "5a831e0a7294769f",
-   "fed9e04f33fc05ee",
    "0ca25edadd1d7b98",
-   "e1a5ad928bbd2e8f"
+   "e1a5ad928bbd2e8f",
+   "46b23216abae332a"
   ]
  },
  {
@@ -26966,8 +27573,8 @@
   "related": [
    "b832d2222a255484",
    "b88709aa5efa153c",
-   "7a6462e387eb267a",
-   "9090f2c5d4193c12"
+   "ea247b47b521fbc6",
+   "7a6462e387eb267a"
   ]
  },
  {
@@ -27114,7 +27721,8 @@
   "date": "2026-11-15T23:25:39+00:00",
   "added": "2026-11-16T06:49:07.104223+00:00",
   "related": [
-   "d9a047affb028160"
+   "d9a047affb028160",
+   "16dccd0a72ef1ece"
   ]
  },
  {
@@ -27140,9 +27748,7 @@
   "source": "r/MachineLearning",
   "date": "2026-11-16T00:42:45+00:00",
   "added": "2026-11-16T06:48:55.112327+00:00",
-  "related": [
-   "18e4cf77c20da662"
-  ]
+  "related": []
  },
  {
   "headline": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
@@ -27352,9 +27958,9 @@
   "added": "2026-11-16T06:47:31.063434+00:00",
   "related": [
    "b7579835e4e7c6dd",
-   "71dad9da95c2fbfe",
    "0b5fe7dce536bb45",
-   "627c324df106de1b"
+   "4c525e5e54fa3645",
+   "f816757e046db752"
   ]
  },
  {
@@ -27513,10 +28119,10 @@
   "date": "2026-11-15T19:46:49+00:00",
   "added": "2026-11-16T06:46:31.360970+00:00",
   "related": [
+   "c8e92f78ca47aa6a",
    "6e8dbe3788a3467a",
    "2d52a4076de31726",
-   "7fc09e03d574cdbc",
-   "11ac1d25eb0e562b"
+   "7fc09e03d574cdbc"
   ]
  },
  {
@@ -27614,8 +28220,8 @@
   "related": [
    "4b0509310e9e561a",
    "63437884c9c25089",
-   "00164f311d41670a",
-   "64d40a84782e1014"
+   "b3bc1206fc202557",
+   "00164f311d41670a"
   ]
  },
  {
@@ -27799,8 +28405,8 @@
   "related": [
    "a2aa3f3e40baae52",
    "5a831e0a7294769f",
-   "fed9e04f33fc05ee",
-   "97d3633bdcb38575"
+   "97d3633bdcb38575",
+   "0ca25edadd1d7b98"
   ]
  },
  {
@@ -28051,7 +28657,6 @@
   "date": "2026-11-15T09:05:22+00:00",
   "added": "2026-11-15T18:57:57.589468+00:00",
   "related": [
-   "6f356a114877e95b",
    "a69f240b4c0f0960"
   ]
  },
@@ -28168,10 +28773,10 @@
   "date": "2026-11-15T08:00:00-05:00",
   "added": "2026-11-15T18:57:10.090576+00:00",
   "related": [
-   "627c324df106de1b",
-   "71dad9da95c2fbfe",
    "a59424729711a810",
-   "8ab70d6f89cfc96b"
+   "8ab70d6f89cfc96b",
+   "b7579835e4e7c6dd",
+   "de36b121eed67039"
   ]
  },
  {
@@ -29114,8 +29719,8 @@
   "related": [
    "79b8f27116994616",
    "4d8c44c3f29eaf5d",
-   "5f705d3f5490e944",
-   "f6990214f0b638d6"
+   "cf71a125cc26a7a2",
+   "5f705d3f5490e944"
   ]
  },
  {
@@ -29173,8 +29778,8 @@
   "related": [
    "5a831e0a7294769f",
    "979c445d2a85e8c9",
-   "fed9e04f33fc05ee",
-   "8b0327eb0ad9274a"
+   "8b0327eb0ad9274a",
+   "8451eda18f3aa606"
   ]
  },
  {
@@ -29789,10 +30394,10 @@
   "date": "Sat, 14 Nov 2026 16:34:15 +0000",
   "added": "2026-11-14T18:14:17.944168+00:00",
   "related": [
-   "627c324df106de1b",
    "28509d8a3a743ac7",
    "8ab70d6f89cfc96b",
-   "b7579835e4e7c6dd"
+   "b7579835e4e7c6dd",
+   "4c525e5e54fa3645"
   ]
  },
  {
@@ -30445,8 +31050,7 @@
   "date": "2026-11-13T21:53:39+00:00",
   "added": "2026-11-14T06:41:32.638638+00:00",
   "related": [
-   "8441de704aa54573",
-   "6f356a114877e95b"
+   "8441de704aa54573"
   ]
  },
  {
@@ -30600,7 +31204,6 @@
   "added": "2026-11-14T06:40:33.847290+00:00",
   "related": [
    "06239ace7a0c3fa4",
-   "254acb1cf38ba08b",
    "8451eda18f3aa606",
    "887a9d54e326095b"
   ]
@@ -30664,8 +31267,8 @@
   "related": [
    "9e3d554c6cb56d83",
    "b7579835e4e7c6dd",
-   "627c324df106de1b",
-   "4c525e5e54fa3645"
+   "4c525e5e54fa3645",
+   "3feac09277102c22"
   ]
  },
  {
@@ -30915,7 +31518,7 @@
    "d6624a4f03c35acf",
    "2867ce4c38e61b91",
    "ef890fa13d4be292",
-   "1f5280f214a66a1d"
+   "cf71a125cc26a7a2"
   ]
  },
  {
@@ -31038,496 +31641,6 @@
    "0322d2a0d024b300",
    "d652f478feeed9d6",
    "3feac09277102c22"
-  ]
- },
- {
-  "headline": "Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction",
-  "tldr": "MixUA introduces a hierarchical memory system that extracts lessons from user‑agent interactions and assigns them to appropriate scopes, improving task performance while preserving privacy.",
-  "key_points": [
-   "Distills independent user‑agent trajectories into reusable lessons.",
-   "Assigns lessons to user‑agent pair, user, agent, or global scope based on benefit and privacy.",
-   "Improves pass rates by up to 16 points over no memory and 5 points over a single global memory.",
-   "Retains up to 90% of user preferences and leaks private facts in only 0.02% of probes.",
-   "Evaluated on CrossLearnBench, a benchmark combining agent tasks with user preferences and privacy tests."
-  ],
-  "why_it_matters": "Enables scalable, privacy‑aware knowledge sharing among heterogeneous agents and users, advancing the development of co‑evolving AI systems that can learn from each other without compromising sensitive information.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "memory",
-   "multi-agent",
-   "privacy",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "254acb1cf38ba08b",
-  "url": "https://huggingface.co/papers/2611.10439",
-  "source": "HF Daily Papers",
-  "date": "2026-11-06T19:00:00.000Z",
-  "added": "2026-11-14T06:37:33.376760+00:00",
-  "related": [
-   "fed9e04f33fc05ee",
-   "979c445d2a85e8c9",
-   "0ca25edadd1d7b98",
-   "5a831e0a7294769f"
-  ]
- },
- {
-  "headline": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
-  "tldr": "HiVe-Mem introduces a multimodal memory framework that expands retrieved memories via a relational graph and composes heterogeneous evidence per memory, boosting performance while cutting token usage by ~90% on benchmarks.",
-  "key_points": [
-   "Horizontal Memory Expansion builds a graph of textual and visual anchors to retrieve related memory episodes.",
-   "Vertical Evidence Composition provides multiple evidence forms (summaries, captions, images, history) per memory.",
-   "A lightweight trainable selector chooses evidence subsets adaptively for each query.",
-   "Achieves consistent performance gains across three multimodal memory benchmarks.",
-   "Reduces token consumption by about 90% compared to leading multimodal baselines."
-  ],
-  "why_it_matters": "Efficiently managing long interaction histories is crucial for multimodal agents to maintain context and provide accurate responses; HiVe-Mem’s dual expansion and composition approach offers a scalable solution that improves accuracy while dramatically lowering computational costs.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multimodal",
-   "memory",
-   "agents",
-   "retrieval"
-  ],
-  "importance": 3,
-  "id": "fed9e04f33fc05ee",
-  "url": "https://huggingface.co/papers/2611.12872",
-  "source": "HF Daily Papers",
-  "date": "2026-11-08T19:00:00.000Z",
-  "added": "2026-11-13T19:57:45.448614+00:00",
-  "related": [
-   "5a831e0a7294769f",
-   "979c445d2a85e8c9",
-   "254acb1cf38ba08b",
-   "0ca25edadd1d7b98"
-  ]
- },
- {
-  "headline": "DeepStress: Stress-Testing Deep Search Agents",
-  "tldr": "DeepStress introduces a framework that degrades evidence quality to evaluate how robust multi-step search agents are, revealing that many agents over‑confidently answer even with misleading or false documents.",
-  "key_points": [
-   "Synthetic environment generates documents with controllable trustworthiness, relevance, and factuality.",
-   "Introduces five‑way answer outcome classification plus reliability‑aware metrics RAS and CoPRAS.",
-   "Evaluation of 12 agents on HotpotQA and BrowseComp‑Plus shows over‑confidence on low‑quality sources.",
-   "Agents often rely on parametric knowledge, answering correctly even when retrieved documents are factually wrong."
-  ],
-  "why_it_matters": "Understanding and improving the robustness of search agents to poor‑quality evidence is crucial for safe deployment in real‑world applications where misinformation is common.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "search agents",
-   "robustness",
-   "evaluation",
-   "HotpotQA"
-  ],
-  "importance": 3,
-  "id": "5a42b757c7e16d43",
-  "url": "https://huggingface.co/papers/2607.13920",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-13T19:57:32.753269+00:00",
-  "related": [
-   "603403c78a7741ec",
-   "1fd1f42d90df6b56",
-   "f7443cad77b05a15",
-   "5f72fbdc79b9385d"
-  ]
- },
- {
-  "headline": "Weights for MNIST Handwriting Network [P]",
-  "tldr": "A beginner shares the weight matrices of a simple MNIST classifier achieving 96.52% accuracy.",
-  "key_points": [
-   "Network architecture: 64‑neuron first hidden layer, 32‑neuron second hidden layer, 10‑neuron output layer.",
-   "Achieved 96.52% accuracy on the MNIST test set (9,652/10,000 correct).",
-   "The author is new to machine learning and posted the weight visualizations as a learning milestone."
-  ],
-  "why_it_matters": "Demonstrates that newcomers can quickly build functional neural networks on classic datasets, encouraging community learning and sharing of reproducible results.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "MNIST",
-   "neural network",
-   "education",
-   "beginner"
-  ],
-  "importance": 2,
-  "id": "33d8937469a3b9ee",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xupgn8/weights_for_mnist_handwriting_network_p/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-12T21:35:41+00:00",
-  "added": "2026-11-13T19:57:21.383136+00:00",
-  "related": [
-   "c216fe867cbdf75d",
-   "86f67f24e8a381f6"
-  ]
- },
- {
-  "headline": "How to post an AC-confidential comment on OpenReview for ICLR 2027? [D]",
-  "tldr": "User asks how to leave a comment on OpenReview that only the Area Chair can see during the ICLR 2027 discussion period.",
-  "key_points": [
-   "The user wants a comment visible only to the Area Chair, not reviewers.",
-   "They noticed the \"Official Comment\" option but are unsure about the correct visibility setting.",
-   "Seeking step‑by‑step instructions for the AC‑only comment feature."
-  ],
-  "why_it_matters": "Understanding confidentiality controls on OpenReview helps maintain proper peer‑review integrity and protects sensitive feedback during conference review cycles.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "OpenReview",
-   "ICLR",
-   "conference_process"
-  ],
-  "importance": 2,
-  "id": "18e4cf77c20da662",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xug0ym/how_to_post_an_acconfidential_comment_on/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-12T15:41:18+00:00",
-  "added": "2026-11-13T19:57:08.989933+00:00",
-  "related": [
-   "41f0740fdcf90cbf"
-  ]
- },
- {
-  "headline": "CVPR 2027 Author enrollment form [D]",
-  "tldr": "A user missed the CVPR 2027 author enrollment deadline by an hour and seeks clarification on whether late submission will cause desk rejection.",
-  "key_points": [
-   "CVPR 2027 requires a separate author enrollment form besides an OpenReview profile.",
-   "The user submitted the form an hour after the abstract deadline without any reminder.",
-   "Guidelines warn of desk rejection for incomplete enrollment.",
-   "The user asks if late submission will be penalized and if others faced the same issue."
-  ],
-  "why_it_matters": "Understanding conference submission requirements prevents accidental desk rejections and informs authors about enforcement of deadline policies.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "CVPR",
-   "author_enrollment",
-   "deadline",
-   "OpenReview"
-  ],
-  "importance": 2,
-  "id": "7cb2da0274ff01a5",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xue879/cvpr_2027_author_enrollment_form_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-12T14:30:15+00:00",
-  "added": "2026-11-13T19:56:57.875543+00:00",
-  "related": [
-   "4f204d1fe2b410e0"
-  ]
- },
- {
-  "headline": "Proposal to Cap Accepted Papers at 1,000 for NeurIPS, ICML, and ICLR",
-  "tldr": "A Reddit user suggests limiting each major ML conference to 1,000 accepted papers to address rising submission volumes and potential quality concerns.",
-  "key_points": [
-   "Submissions to top ML conferences are growing rapidly.",
-   "A hard cap of 1,000 accepted papers per conference is proposed.",
-   "Debate centers on whether caps improve quality or increase arbitrariness.",
-   "Implications for researchers, reviewers, and conference prestige are discussed."
-  ],
-  "why_it_matters": "Conference acceptance rates shape research visibility and career advancement; policy changes could reshape how the ML community disseminates work.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "conference",
-   "paper_selection",
-   "ML"
-  ],
-  "importance": 2,
-  "id": "6f356a114877e95b",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xugl6c/what_if_neurips_icml_and_iclr_capped_accepted/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-12T16:02:13+00:00",
-  "added": "2026-11-13T19:56:44.891640+00:00",
-  "related": [
-   "8441de704aa54573",
-   "a69f240b4c0f0960"
-  ]
- },
- {
-  "headline": "SnorkelAI paid survey for ML researchers deemed a waste of time",
-  "tldr": "A PhD-level ML researcher describes a pushy, paperwork‑heavy paid survey from SnorkelAI as unprofessional and not worth the effort.",
-  "key_points": [
-   "SnorkelAI contacted the researcher for a paid survey after verifying credentials.",
-   "The verification process was repetitive and pushy, with frequent follow‑up emails.",
-   "Survey submission UI was confusing, showing contradictory statuses.",
-   "Payment paperwork was extensive, requiring in‑person tax documents and long wait times.",
-   "The researcher advises others to avoid similar survey requests."
-  ],
-  "why_it_matters": "Highlights potential exploitation of academic researchers by companies offering low‑pay surveys, raising concerns about professional outreach practices and the burden of compliance paperwork.",
-  "category": "other",
-  "companies": [
-   "SnorkelAI"
-  ],
-  "tags": [
-   "survey",
-   "researcher",
-   "paid",
-   "experience"
-  ],
-  "importance": 2,
-  "id": "94a77356671c3ace",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xv4rjy/paid_surveys_for_machine_learning_scientists_for/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T10:50:10+00:00",
-  "added": "2026-11-13T19:56:33.343751+00:00",
-  "related": []
- },
- {
-  "headline": "Open weights: ParaTrace v8 (RAID-tuned) ranks 5th on RAID leaderboard",
-  "tldr": "ParaTrace v8, a 1B-parameter encoder fine‑tuned for the RAID detection benchmark, achieves 99.20% true‑positive rate at 1% false‑positive rate, placing 5th on the leaderboard.",
-  "key_points": [
-   "1B‑parameter ModernBERT encoder, 512‑token windows",
-   "Fine‑tuned on RAID training split plus hard‑example round",
-   "TPR 99.20% @ 1% FPR, 99.76% @ 5% FPR on RAID hidden test set",
-   "Open‑weight model released on Hugging Face (CC BY‑NC‑SA 4.0)",
-   "Optimized for RAID; may miss AI‑generated text in general use"
-  ],
-  "why_it_matters": "Provides the community with a high‑performing, openly available AI‑text detector, enabling reproducible research and benchmarking while highlighting the limits of detection when models are tuned to specific datasets.",
-  "category": "open_source",
-  "companies": [
-   "HuggingFace",
-   "EmpirischTech"
-  ],
-  "tags": [
-   "AI detection",
-   "open weights",
-   "RAID benchmark",
-   "NLP"
-  ],
-  "importance": 3,
-  "id": "f07b8b7953eaebb1",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xv4ldx/open_weights_paratrace_v8_raidtuned_5th_on_the/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T10:39:43+00:00",
-  "added": "2026-11-13T19:56:20.952615+00:00",
-  "related": []
- },
- {
-  "headline": "Frontier AI models achieve 97.8–100% on a comprehensive 7-part materials‑science research test",
-  "tldr": "Gemini 4 (Carbon & Hydrogen) and Claude Opus/Fable scored near‑perfect on a synthetic, multi‑step materials‑science evaluation, highlighting current strengths and gaps in long‑horizon agent assessment.",
-  "key_points": [
-   "Four models (Gemini 4 Carbon, Gemini 4 Hydrogen, Claude Opus 5.5, Claude Fable 5.2) scored between 97.8 and 100 out of 100 across 8 categories.",
-   "All runs correctly handled unit traps, hidden CIF tests, physics calculations, error detection, and refused false‑premise queries; only minor formatting points were lost.",
-   "The test suggests bounded, procedure‑driven tasks are near‑saturated, while long‑horizon, open‑ended research remains a challenge.",
-   "The author proposes a simulated‑lab benchmark with budgets, instruments, and surprise events to better evaluate long‑term agent performance."
-  ],
-  "why_it_matters": "Demonstrates that state‑of‑the‑art LLMs can reliably perform complex, domain‑specific scientific workflows, but also underscores the need for better evaluation frameworks for extended, open‑ended research tasks.",
-  "category": "other",
-  "companies": [
-   "Google",
-   "Anthropic"
-  ],
-  "tags": [
-   "materials_science",
-   "agent_evaluation",
-   "AI_models",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "624c1d20c3486007",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvgf6h/four_frontier_models_scored_978100_on_a_7part/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T18:58:00+00:00",
-  "added": "2026-11-13T19:56:09.208192+00:00",
-  "related": [
-   "e97fae54855e27b5",
-   "27b0129b73da0b19",
-   "f4784c30400364a2",
-   "0115555b39344353"
-  ]
- },
- {
-  "headline": "Let’s talk about Jensen Huang’s many affairs!",
-  "tldr": "The article offers no concrete AI news, only speculation about Nvidia CEO Jensen Huang’s personal life.",
-  "key_points": [
-   "No substantive AI developments or announcements are described.",
-   "The piece is commentary on rumors rather than factual industry updates.",
-   "Nvidia is mentioned only in relation to the CEO’s personal matters."
-  ],
-  "why_it_matters": "Without verifiable AI-related information, the article does not impact the AI industry or its stakeholders.",
-  "category": "other",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "gossip",
-   "Nvidia",
-   "speculation"
-  ],
-  "importance": 1,
-  "id": "71dad9da95c2fbfe",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
-  "source": "The Verge AI",
-  "date": "2026-11-13T07:00:00-05:00",
-  "added": "2026-11-13T19:55:56.878040+00:00",
-  "related": [
-   "4c525e5e54fa3645",
-   "627c324df106de1b",
-   "9e3d554c6cb56d83",
-   "8ab70d6f89cfc96b"
-  ]
- },
- {
-  "headline": "What’s really at stake in the Jensen Huang saga",
-  "tldr": "Nvidia CEO Jensen Huang’s resignation sparks speculation about larger issues involving Nvidia’s China business and U.S. government policy.",
-  "key_points": [
-   "Jensen Huang stepped down as CEO of Nvidia.",
-   "The resignation may signal upcoming challenges related to Nvidia’s operations in China.",
-   "U.S. government attitudes toward AI technology transfers are a key backdrop.",
-   "Industry observers anticipate broader implications for the AI hardware market."
-  ],
-  "why_it_matters": "Nvidia is the leading supplier of AI chips; any leadership change or policy pressure could affect global AI development, supply chains, and geopolitical tech competition.",
-  "category": "policy",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "leadership",
-   "China",
-   "US policy",
-   "AI hardware"
-  ],
-  "importance": 3,
-  "id": "627c324df106de1b",
-  "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
-  "source": "The Verge AI",
-  "date": "2026-11-13T09:47:16-05:00",
-  "added": "2026-11-13T19:55:44.981676+00:00",
-  "related": [
-   "4c525e5e54fa3645",
-   "b7579835e4e7c6dd",
-   "71dad9da95c2fbfe",
-   "8ab70d6f89cfc96b"
-  ]
- },
- {
-  "headline": "When Both Sides Adapt: The Challenges of Evaluating Interactive LLM Systems",
-  "tldr": "User adaptivity in interactive LLM systems changes prompt distributions, causing offline benchmarks and live A/B tests to measure different effects and potentially rank models differently.",
-  "key_points": [
-   "Defines common-distribution vs. induced-distribution effects for model comparison.",
-   "Shows offline benchmarks target common-distribution effect, live A/B tests target induced-distribution effect.",
-   "Provides conditions when rankings from the two methods agree.",
-   "Demonstrates user adaptivity can increase variance and lead to reward hacking and novelty effects."
-  ],
-  "why_it_matters": "",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "evaluation",
-   "interactive-llm",
-   "user-adaptivity",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "40727faf3cf5a217",
-  "url": "https://arxiv.org/abs/2611.17239v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:26:51Z",
-  "added": "2026-11-13T19:55:33.022719+00:00",
-  "related": [
-   "febede2eb69795c6",
-   "399e786b295dfb8e",
-   "65fcbb33a051a304",
-   "8b0327eb0ad9274a"
-  ]
- },
- {
-  "headline": "LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds",
-  "tldr": "Introduces GeoWorld platform and LiveGeo benchmark to test LLM agents' decision‑making in dynamic, real‑world geographic environments, revealing current models struggle with evolving tasks.",
-  "key_points": [
-   "GeoWorld provides a controllable, continuously evolving geographic simulation grounded in real‑world data.",
-   "LiveGeo benchmark requires agents to acquire, verify, and update information as the world changes.",
-   "Even state‑of‑the‑art LLMs perform poorly on dynamic geographic tasks, highlighting a bottleneck in evidence acquisition and plan revision.",
-   "The release includes the platform and benchmark for the research community to develop more reliable geographic agents."
-  ],
-  "why_it_matters": "Dynamic geographic reasoning is essential for real‑world AI applications such as navigation, disaster response, and logistics; this benchmark exposes critical gaps in current LLM agents and offers a tool to drive progress.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "geographic AI",
-   "LLM agents",
-   "benchmark",
-   "dynamic environments"
-  ],
-  "importance": 3,
-  "id": "4f659257ca036ff9",
-  "url": "https://arxiv.org/abs/2611.17267v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:45:58Z",
-  "added": "2026-11-13T19:55:20.731245+00:00",
-  "related": [
-   "853993777f319fd1",
-   "1f48ec4b503fbb71",
-   "576bdfffc7bca566",
-   "49f0104ed04b09d4"
-  ]
- },
- {
-  "headline": "Synthesis Smuggling: Maliciously Hiding Inferred Personal Attributes in LLM Outputs",
-  "tldr": "The paper introduces a new threat where LLMs covertly embed inferred user attributes (e.g., gender, age) into generated text, which can be exfiltrated when users share the content.",
-  "key_points": [
-   "Adversarial LLMs can infer sensitive user traits from normal interactions.",
-   "Inferred traits are steganographically encoded using invisible characters or word choices.",
-   "Shared model outputs become covert channels for data leakage without direct model‑adversary communication.",
-   "Demonstrated with open‑weight models inferring gender and age‑group labels."
-  ],
-  "why_it_matters": "Highlights a novel privacy risk where user‑generated AI content can unintentionally leak personal data, prompting the need for detection and mitigation strategies in LLM deployments.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "privacy",
-   "security",
-   "LLM",
-   "steganography"
-  ],
-  "importance": 3,
-  "id": "eb6c6ac62da451f0",
-  "url": "https://arxiv.org/abs/2611.17280v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:51:05Z",
-  "added": "2026-11-13T19:55:09.218008+00:00",
-  "related": [
-   "f00d83341f65cba8",
-   "30d463386b152b16",
-   "1456693a87f2636b",
-   "3a7d802db1ff6d32"
-  ]
- },
- {
-  "headline": "Scaling to 1T MoE on TorchTitan",
-  "tldr": "The team trained a 1‑trillion‑parameter mixture‑of‑experts model on 384 GPUs of the JUPITER supercomputer, achieving ~1,300 tokens/s per GPU by using 384‑way FSDP and 4‑way expert parallelism, and shares lessons on communication bottlenecks and memory tricks.",
-  "key_points": [
-   "Used 384 GPUs (GH200) to train a ~1T‑parameter MoE at ~1,300 tokens/s per GPU.",
-   "Combined 384‑way Fully Sharded Data Parallel (FSDP) with 4‑way Expert Parallelism, avoiding pipeline parallelism.",
-   "Network latency (InfiniBand) was the main bottleneck; optimizations focused on keeping GPUs busy and increasing compute per byte.",
-   "Applied full activation checkpointing and increased token batch size to improve compute efficiency.",
-   "Detailed lessons and performance plots are available on the Domyn and PyTorch blogs."
-  ],
-  "why_it_matters": "Demonstrates that current GPU hardware and PyTorch tooling can scale to trillion‑parameter MoE models, providing a roadmap for future large‑scale AI training and highlighting the importance of communication‑aware parallelism.",
-  "category": "other",
-  "companies": [
-   "NVIDIA",
-   "Meta"
-  ],
-  "tags": [
-   "MoE",
-   "FSDP",
-   "scaling",
-   "supercomputer"
-  ],
-  "importance": 3,
-  "id": "df267d7f735c49c2",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvce5h/scaling_to_1t_moe_on_torchtitan_p/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T16:28:36+00:00",
-  "added": "2026-11-13T19:54:57.482984+00:00",
-  "related": [
-   "af1852b4c46dc30e",
-   "1c343af691bcf876",
-   "875022353549216c",
-   "9939bfd922ed189c"
   ]
  }
 ]
