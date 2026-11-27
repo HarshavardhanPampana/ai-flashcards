@@ -1,5 +1,61 @@
 [
  {
+  "id": "97bce453eb36f7e2",
+  "title": "CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes",
+  "text": "Situated 3D reasoning requires embodied agents to interpret objects, scene geometry, and viewpoint dependent spatial relations. Existing methods learn grounded interactions from supervised traces, but largely imitate prescribed evidence acquisition patterns rather than optimizing the support that the returned evidence provides for the correct answer. Moreover, outcome rewards provide limited credit for intermediate tool choices and may leave infrequent tools underexplored. An effective agent should instead adaptively decide what to ground, which tool to invoke, and how to assess the utility of returned evidence. To this end, this paper presents CARE-3D, a reinforcement post-training framework for adaptive grounded reasoning. Supervised fine-tuning (SFT) on grounding instructions first establishes valid interactions, after which Group Relative Policy Optimization (GRPO) optimizes the agent while keeping the 3D grounding module frozen. CARE-3D combines Counterfactual Attribution of Returned Evidence for evidence sensitive credit assignment, and Group Coverage Sampling to preserve tool coverage. Experiments on MSQA and Beacon3D show consistent gains over SFT and GRPO using only answer and format rewards, especially in spatial reasoning and grounding answer coherence. Our code is available at https://github.com/xiaoqian-UQ/CARE-3D{CARE-3D}.",
+  "source": "HF Daily Papers",
+  "url": "https://huggingface.co/papers/2611.29969",
+  "published": "2026-11-22T19:00:00.000Z"
+ },
+ {
+  "id": "9c493a96e3fa6482",
+  "title": "The open-source movement wants Jensen Huang back",
+  "text": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. On Friday, a petition to reinstate Jensen Huang as CEO of Nvidia began circulating on social media, and by Monday it listed some notable signatories, including Elon Musk and several influential Nvidia…",
+  "source": "MIT Technology Review AI",
+  "url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+  "published": "Mon, 16 Nov 2026 18:38:47 +0000"
+ },
+ {
+  "id": "cb39ce49d008d74a",
+  "title": "Will Wright's next simulation will use AI to mine content from your memories",
+  "text": "With MyMems , Wright says he wants to \"turn the simulation inward.\"",
+  "source": "Ars Technica AI",
+  "url": "https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/",
+  "published": "Wed, 18 Nov 2026 18:10:33 +0000"
+ },
+ {
+  "id": "2f75382e1552daaa",
+  "title": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
+  "text": "Huang’s allies enlisted Trump and Vance to pressure Nvidia’s board into taking him back.",
+  "source": "Ars Technica AI",
+  "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
+  "published": "Tue, 24 Nov 2026 14:56:50 +0000"
+ },
+ {
+  "id": "5a49fd4a2d776cb4",
+  "title": "Google rolls out new search homepage with AI chat history and no search button",
+  "text": "Google search is making it even easier to access AI tools on the search page.",
+  "source": "Ars Technica AI",
+  "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+  "published": "Fri, 20 Nov 2026 21:58:29 +0000"
+ },
+ {
+  "id": "d2f90fb918d969fe",
+  "title": "“Trump was in bed with Jensen”: Critics balk at Huang’s wish to return to Nvidia",
+  "text": "“I love our country”: Jensen Huang’s apology comes amid escalating Nvidia probes.",
+  "source": "Ars Technica AI",
+  "url": "https://arstechnica.com/tech-policy/2026/11/trump-was-in-bed-with-jensen-critics-balk-at-huangs-wish-to-return-to-nvidia/",
+  "published": "Tue, 17 Nov 2026 20:32:55 +0000"
+ },
+ {
+  "id": "e09aa9a8dd804800",
+  "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
+  "text": "Trump says he spoke to the board and that Huang \"did nothing wrong.\"",
+  "source": "Ars Technica AI",
+  "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
+  "published": "Mon, 23 Nov 2026 15:46:18 +0000"
+ },
+ {
   "id": "6cfbaf9eebee60c8",
   "title": "Evaluating Memanto on DolphinBench for AI Agents",
   "text": "Memory benchmarks built on question answering tell an agent which fact to recall. Workplace requests often leave that need implicit: to post an update in the team's channel, an agent must work out which channel from earlier interactions and use it in a tool call. We evaluate Memanto, a memory agent that ranks memories with an information-theoretic relevance score, on DolphinBench, which tests memory through 600 simulated workplace tasks, each validated as requiring memory. Running in the Hermes agent harness with GPT-6-Luna and at most 6 iterations per conversation, Memanto completes 503 tasks (83.83%). The strongest configuration reported by the benchmark's authors, Mem0 with GPT-5.6-Luna and up to 60 iterations, completes 424 (70.67%). Memanto's run also has the lowest total cost (10.86, against 61.48 for the cheapest reported run) and the shortest median task latency (15.32s). Grading uses the benchmark's own judge, but the agent model differs, so these results compare complete systems. The memory system affects both whether an agent completes such tasks and what completion costs.",

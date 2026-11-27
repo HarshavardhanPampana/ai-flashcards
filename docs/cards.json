@@ -1,5 +1,284 @@
 [
  {
+  "headline": "Jensen Huang reinstated as Nvidia CEO, board chair",
+  "tldr": "Nvidia's board reinstated Jensen Huang as CEO and board chair after a brief removal.",
+  "key_points": [
+   "Jensen Huang removed and then reinstated as CEO",
+   "Board also restored him as chair",
+   "Former US President Trump said Huang did nothing wrong"
+  ],
+  "why_it_matters": "Leadership stability at Nvidia, a key AI hardware maker, affects investor confidence and the company's strategic direction in the AI market.",
+  "category": "other",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "leadership",
+   "board",
+   "CEO",
+   "Nvidia"
+  ],
+  "importance": 2,
+  "id": "e09aa9a8dd804800",
+  "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
+  "source": "Ars Technica AI",
+  "date": "Mon, 23 Nov 2026 15:46:18 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:19:48.014020+00:00",
+  "mlp": {
+   "category": "other",
+   "importance": 2,
+   "expected_importance": 2.2,
+   "confidence": 0.59
+  },
+  "followup_to": "32af257829de9696",
+  "related": [
+   "90f831b4fd3ecc8c",
+   "47b1648bdb930a3d",
+   "5fbc7d8ce285cc02",
+   "f8045fa626e2c02a"
+  ]
+ },
+ {
+  "headline": "“Trump was in bed with Jensen”: Critics balk at Huang’s wish to return to Nvidia",
+  "tldr": "Critics question Jensen Huang’s comments linking former President Trump to Nvidia amid ongoing investigations into the company.",
+  "key_points": [
+   "Jensen Huang apologizes while defending Nvidia",
+   "Critics cite a quote linking Trump and Huang",
+   "Nvidia is under escalating regulatory probes"
+  ],
+  "why_it_matters": "The controversy highlights the intersection of tech leadership, political narratives, and regulatory scrutiny, which can affect Nvidia's public perception and stakeholder confidence.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "Nvidia",
+   "Jensen Huang",
+   "politics",
+   "regulation"
+  ],
+  "importance": 2,
+  "id": "d2f90fb918d969fe",
+  "url": "https://arstechnica.com/tech-policy/2026/11/trump-was-in-bed-with-jensen-critics-balk-at-huangs-wish-to-return-to-nvidia/",
+  "source": "Ars Technica AI",
+  "date": "Tue, 17 Nov 2026 20:32:55 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:19:35.979806+00:00",
+  "mlp": {
+   "category": "other",
+   "importance": 2,
+   "expected_importance": 2.25,
+   "confidence": 0.58
+  },
+  "related": [
+   "aa93777566bc104e",
+   "d1bee759e86a69db",
+   "049542555c2cb3db",
+   "2f75382e1552daaa"
+  ]
+ },
+ {
+  "headline": "Google rolls out new search homepage with AI chat history and no search button",
+  "tldr": "Google updates its search homepage to include AI chat history and removes the traditional search button for a streamlined experience.",
+  "key_points": [
+   "New search homepage design",
+   "Integrated AI chat history feature",
+   "Search button removed from UI"
+  ],
+  "why_it_matters": "The redesign makes AI-powered assistance more immediately accessible to users, signaling Google's push to embed conversational AI deeper into its core search product.",
+  "category": "product",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "search",
+   "AI",
+   "UI",
+   "chat"
+  ],
+  "importance": 2,
+  "id": "5a49fd4a2d776cb4",
+  "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+  "source": "Ars Technica AI",
+  "date": "Fri, 20 Nov 2026 21:58:29 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:19:24.039185+00:00",
+  "mlp": {
+   "category": "product",
+   "importance": 2,
+   "expected_importance": 2.25,
+   "confidence": 0.69
+  },
+  "related": [
+   "6900f6014b2aa0cd",
+   "890e2f7b3ac9f81c",
+   "1122627a66dfc215",
+   "c5903c8754bbbfd5"
+  ]
+ },
+ {
+  "headline": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
+  "tldr": "Trump and Silicon Valley leaders pressured Nvidia's board to reinstate CEO Jensen Huang.",
+  "key_points": [
+   "Trump and Senate Majority Leader Vance got involved",
+   "Silicon Valley allies backed the effort",
+   "Nvidia's board reversed its decision",
+   "Jensen Huang was reinstated as CEO"
+  ],
+  "why_it_matters": "The episode shows how political influence and industry lobbying can affect corporate governance decisions at a major AI hardware company, highlighting the intersection of tech leadership and government pressure.",
+  "category": "policy",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "politics",
+   "leadership",
+   "board",
+   "Trump"
+  ],
+  "importance": 2,
+  "id": "2f75382e1552daaa",
+  "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
+  "source": "Ars Technica AI",
+  "date": "Tue, 24 Nov 2026 14:56:50 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:19:12.118846+00:00",
+  "mlp": {
+   "category": "other",
+   "importance": 2,
+   "expected_importance": 2.25,
+   "confidence": 0.62
+  },
+  "followup_to": "049542555c2cb3db",
+  "related": [
+   "049542555c2cb3db",
+   "1cb78417896f91c9",
+   "32af257829de9696",
+   "90f831b4fd3ecc8c"
+  ]
+ },
+ {
+  "headline": "Will Wright's next simulation will use AI to mine content from your memories",
+  "tldr": "Will Wright plans a new simulation, MyMems, that uses AI to extract personal memories for gameplay.",
+  "key_points": [
+   "New simulation called MyMems",
+   "AI will mine user memories",
+   "Goal to \"turn the simulation inward\""
+  ],
+  "why_it_matters": "Integrating personal memory data could create deeply personalized gaming experiences, showcasing novel consumer AI applications.",
+  "category": "product",
+  "companies": [
+   "Will Wright"
+  ],
+  "tags": [
+   "simulation",
+   "AI",
+   "personalization"
+  ],
+  "importance": 2,
+  "id": "cb39ce49d008d74a",
+  "url": "https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/",
+  "source": "Ars Technica AI",
+  "date": "Wed, 18 Nov 2026 18:10:33 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:18:59.876995+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.75,
+   "confidence": 0.67
+  },
+  "followup_to": "84d2fa603ef696ee",
+  "related": [
+   "0ca25edadd1d7b98",
+   "001e886f942f0163",
+   "11ac1d25eb0e562b",
+   "6e8dbe3788a3467a"
+  ]
+ },
+ {
+  "headline": "The open-source movement wants Jensen Huang back",
+  "tldr": "A social-media petition calling for Nvidia CEO Jensen Huang's reinstatement has gathered high‑profile signatories, including Elon Musk, reflecting tensions between the open‑source AI community and Nvidia's hardware dominance.",
+  "key_points": [
+   "Petition to reinstate Jensen Huang as Nvidia CEO circulated on Friday.",
+   "By Monday, signatories included Elon Musk and other influential AI figures.",
+   "The effort highlights concerns that Nvidia's closed‑source hardware strategy hampers open‑source AI development.",
+   "Open‑source advocates see Huang's leadership as pivotal to balancing Nvidia's market power."
+  ],
+  "why_it_matters": "Nvidia's GPUs power most modern AI models; any shift in its leadership or policy could affect the openness, accessibility, and cost structure of AI research and development.",
+  "category": "open_source",
+  "companies": [
+   "Nvidia"
+  ],
+  "tags": [
+   "open-source",
+   "leadership",
+   "AI community",
+   "petition"
+  ],
+  "importance": 2,
+  "id": "9c493a96e3fa6482",
+  "url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+  "source": "MIT Technology Review AI",
+  "date": "Mon, 16 Nov 2026 18:38:47 +0000",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:18:48.227239+00:00",
+  "mlp": {
+   "category": "other",
+   "importance": 2,
+   "expected_importance": 2.13,
+   "confidence": 0.58
+  },
+  "followup_to": "a4a92fbcda03532a",
+  "related": [
+   "a4a92fbcda03532a",
+   "3feac09277102c22",
+   "8ab70d6f89cfc96b",
+   "b7579835e4e7c6dd"
+  ]
+ },
+ {
+  "headline": "CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes",
+  "tldr": "CARE-3D introduces a reinforcement‑learning post‑training framework that lets embodied agents adaptively choose what to ground, which tools to use, and how to evaluate evidence in 3D scenes, improving spatial reasoning over supervised baselines.",
+  "key_points": [
+   "Uses supervised fine‑tuning for basic grounding then applies Group Relative Policy Optimization (GRPO) while keeping the grounding module frozen.",
+   "Introduces Counterfactual Attribution of Returned Evidence for fine‑grained credit assignment.",
+   "Employs Group Coverage Sampling to maintain diverse tool usage during training.",
+   "Shows consistent performance gains on MSQA and Beacon3D benchmarks, especially in spatial reasoning and answer coherence."
+  ],
+  "why_it_matters": "Adaptive evidence selection and tool use address the limitations of static, supervised grounding pipelines, enabling more efficient and accurate embodied AI agents for complex 3D environments.",
+  "category": "paper",
+  "companies": [
+   "University of Queensland"
+  ],
+  "tags": [
+   "reinforcement_learning",
+   "3D_reasoning",
+   "grounded_agents",
+   "AI_tools"
+  ],
+  "importance": 3,
+  "id": "97bce453eb36f7e2",
+  "url": "https://huggingface.co/papers/2611.29969",
+  "source": "HF Daily Papers",
+  "date": "2026-11-22T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-27T00:18:36.412294+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.99,
+   "confidence": 0.98
+  },
+  "related": [
+   "49f0104ed04b09d4",
+   "ce9f110ff065ce6a",
+   "ff5e010f2bb4373b",
+   "8c18510fcbeb81f6"
+  ]
+ },
+ {
   "headline": "AI may soon change what it means to be a theoretical physicist",
   "tldr": "Frontier AI systems are beginning to solve problems that previously required a full day of work by top physicists.",
   "key_points": [
@@ -30,8 +309,8 @@
    "confidence": 0.43
   },
   "related": [
-   "f26f2a4dfd6b9b95",
    "e6b37f5da94e2fd1",
+   "f26f2a4dfd6b9b95",
    "624c1d20c3486007",
    "e683d40fba103b5f"
   ]
@@ -110,7 +389,7 @@
    "2919f418f3f51682",
    "cb4782794f2ff0ad",
    "66395cf5113bd2bc",
-   "6d05b4dbd591c899"
+   "be28d25a0e42e5e3"
   ]
  },
  {
@@ -475,8 +754,8 @@
   },
   "related": [
    "148a75b422c2ea8b",
-   "0cd17937bdc8feaa",
    "6359c2ce09004373",
+   "0cd17937bdc8feaa",
    "44255eb49d7cccbd"
   ]
  },
@@ -512,8 +791,8 @@
   },
   "related": [
    "75c7ee7437ec7c0d",
-   "b47f021e12d7c019",
    "0cd17937bdc8feaa",
+   "b47f021e12d7c019",
    "74f939e081ec8d04"
   ]
  },
@@ -624,9 +903,9 @@
    "confidence": 0.23
   },
   "related": [
-   "82dccdff1c4b48dc",
-   "dda73f1f63874c22",
    "6a7990e1ad10d3b0",
+   "dda73f1f63874c22",
+   "82dccdff1c4b48dc",
    "208b7ebb3cea9a1a"
   ]
  },
@@ -776,8 +1055,8 @@
   "related": [
    "7d8981ef54762173",
    "1501adb883e7f84c",
-   "e6b37f5da94e2fd1",
-   "01af437af6512847"
+   "01af437af6512847",
+   "e6b37f5da94e2fd1"
   ]
  },
  {
@@ -1151,8 +1430,8 @@
    "confidence": 0.95
   },
   "related": [
-   "1c013b363c30d60c",
    "e1f0b026991195d1",
+   "1c013b363c30d60c",
    "80b6d0407b0410e7",
    "950ac38f23f2d5a7"
   ]
@@ -1347,8 +1626,8 @@
   "related": [
    "1207b5c1c70bbc64",
    "ce416493dbd77e39",
-   "3dc626ea28ff3a7d",
-   "94305b427e5aac0a"
+   "94305b427e5aac0a",
+   "c6caa4d4f0b0e545"
   ]
  },
  {
@@ -1388,8 +1667,8 @@
   "related": [
    "770fedf6fe7a73a6",
    "ab298121176b2f09",
-   "2a158353075b7c16",
-   "ee2f14a27f5d7842"
+   "ee2f14a27f5d7842",
+   "2a158353075b7c16"
   ]
  },
  {
@@ -1637,8 +1916,8 @@
   "related": [
    "83fe5430a4ee5df0",
    "7655b154f433b6c9",
-   "598853ef8c21e01e",
-   "80b6d0407b0410e7"
+   "eb6c6ac62da451f0",
+   "598853ef8c21e01e"
   ]
  },
  {
@@ -1756,8 +2035,8 @@
   "date": "2026-11-25T18:04:31Z",
   "added": "2026-11-26T21:46:58.157616+00:00",
   "related": [
-   "af1852b4c46dc30e",
    "a4115a03062782cf",
+   "af1852b4c46dc30e",
    "875022353549216c",
    "9ec3d15976b2c361"
   ]
@@ -1789,8 +2068,8 @@
   "related": [
    "e2aca7c0bded90b3",
    "4495b5019a891c25",
-   "b6d8986dac67a474",
-   "def95eb3892b8320"
+   "def95eb3892b8320",
+   "b6d8986dac67a474"
   ]
  },
  {
@@ -1820,8 +2099,8 @@
   "related": [
    "cb92888c46cfce85",
    "03e1ce70f1125e7d",
-   "56f97d3b31580f3f",
-   "850f6865c91bcf15"
+   "850f6865c91bcf15",
+   "56f97d3b31580f3f"
   ]
  },
  {
@@ -1851,8 +2130,7 @@
   "added": "2026-11-26T21:46:21.954613+00:00",
   "related": [
    "7b3febd5b7776b0c",
-   "c42ca8f219e62b8c",
-   "00b1dbe5a0c29055"
+   "c42ca8f219e62b8c"
   ]
  },
  {
@@ -2102,9 +2380,7 @@
   "source": "arXiv",
   "date": "2026-11-25T17:10:43Z",
   "added": "2026-11-26T21:44:33.900605+00:00",
-  "related": [
-   "dcf061d1c31f312e"
-  ]
+  "related": []
  },
  {
   "headline": "Hierarchical Graph Metanetworks (H‑GMNs) Enable Scalable, Hierarchy‑Aware Model Analysis",
@@ -2161,8 +2437,7 @@
   "date": "2026-11-25T17:18:15Z",
   "added": "2026-11-26T21:44:09.952244+00:00",
   "related": [
-   "284a8b8a895b029a",
-   "46b31e0cbd48e780"
+   "284a8b8a895b029a"
   ]
  },
  {
@@ -2191,8 +2466,8 @@
   "added": "2026-11-26T21:43:57.978171+00:00",
   "related": [
    "a2124464d7a0a7b0",
-   "5c37c83cea812a23",
    "2696a13a373f0122",
+   "5c37c83cea812a23",
    "e2aca7c0bded90b3"
   ]
  },
@@ -2287,8 +2562,8 @@
   "related": [
    "1e67e9bdd27cf09d",
    "8e485c1c148701e4",
-   "4584b3d202ced805",
-   "107d92ed2d8e1552"
+   "107d92ed2d8e1552",
+   "4584b3d202ced805"
   ]
  },
  {
@@ -2316,8 +2591,8 @@
   "date": "2026-11-25T18:03:00Z",
   "added": "2026-11-26T21:43:09.900169+00:00",
   "related": [
-   "b03c94474886f6eb",
    "c01600d4160315a4",
+   "b03c94474886f6eb",
    "e2aca7c0bded90b3",
    "df180c06dc6caa72"
   ]
@@ -2437,8 +2712,8 @@
   "date": "2026-11-25T18:20:18Z",
   "added": "2026-11-26T21:42:21.760287+00:00",
   "related": [
-   "606c9eca0385ab92",
    "16e0f52e6513b68f",
+   "606c9eca0385ab92",
    "3b627af7791cfed8",
    "eb4d2df7b7187bdc"
   ]
@@ -2499,7 +2774,7 @@
    "bf1c5aa19e699bfb",
    "5a42b757c7e16d43",
    "f7443cad77b05a15",
-   "8400bdfe1e2afd49"
+   "964abff5bf4e7cc8"
   ]
  },
  {
@@ -2623,7 +2898,7 @@
    "5c441d68610c0b14",
    "85b4b15a2534b28f",
    "964abff5bf4e7cc8",
-   "b88709aa5efa153c"
+   "7a6462e387eb267a"
   ]
  },
  {
@@ -2654,8 +2929,8 @@
   "related": [
    "14bdada91054ba98",
    "121bd2762da89733",
-   "15e650823a7d2506",
-   "ff5e010f2bb4373b"
+   "ff5e010f2bb4373b",
+   "15e650823a7d2506"
   ]
  },
  {
@@ -2713,9 +2988,9 @@
   "added": "2026-11-26T21:40:34.459600+00:00",
   "related": [
    "b6d10f5dbc5e9f87",
-   "fa8c587dca267802",
    "a7fb52666c606df9",
-   "fcbadb5e4e74b6f8"
+   "fa8c587dca267802",
+   "b63023bfb9fc2173"
   ]
  },
  {
@@ -2932,8 +3207,8 @@
   "date": "2026-11-21T19:00:00.000Z",
   "added": "2026-11-26T21:28:34.997035+00:00",
   "related": [
-   "e2aca7c0bded90b3",
    "ab298121176b2f09",
+   "e2aca7c0bded90b3",
    "a2124464d7a0a7b0",
    "cb815125828299a9"
   ]
@@ -2964,10 +3239,10 @@
   "date": "2026-11-23T19:00:00.000Z",
   "added": "2026-11-26T21:28:23.028018+00:00",
   "related": [
-   "2427bacb74a96b4b",
    "00164f311d41670a",
    "9d04df52e96cbcfe",
-   "ab298121176b2f09"
+   "ab298121176b2f09",
+   "4b0509310e9e561a"
   ]
  },
  {
@@ -3344,8 +3619,8 @@
   "added": "2026-11-26T21:25:59.150118+00:00",
   "related": [
    "16ddaf7683c8da25",
-   "b16b5f3f20484c92",
-   "2919f418f3f51682"
+   "2919f418f3f51682",
+   "b16b5f3f20484c92"
   ]
  },
  {
@@ -3375,8 +3650,8 @@
   "related": [
    "e2aca7c0bded90b3",
    "b6d8986dac67a474",
-   "99849f769c13af32",
-   "0244f1ae7e45a07c"
+   "0244f1ae7e45a07c",
+   "99849f769c13af32"
   ]
  },
  {
@@ -3533,9 +3808,9 @@
   "added": "2026-11-26T21:24:47.212851+00:00",
   "related": [
    "ce416493dbd77e39",
-   "3dc626ea28ff3a7d",
    "28509d8a3a743ac7",
-   "075bbfb634c2a8a5"
+   "075bbfb634c2a8a5",
+   "1207b5c1c70bbc64"
   ]
  },
  {
@@ -3820,8 +4095,8 @@
   "related": [
    "5b35519867ea111a",
    "001e886f942f0163",
-   "63437884c9c25089",
-   "020406cb2348e5d8"
+   "020406cb2348e5d8",
+   "63437884c9c25089"
   ]
  },
  {
@@ -3953,7 +4228,7 @@
    "8451eda18f3aa606",
    "8b0327eb0ad9274a",
    "890b3b5545c8fcb4",
-   "b45831626333d173"
+   "97d3633bdcb38575"
   ]
  },
  {
@@ -3984,8 +4259,8 @@
   "date": "2026-11-15T19:00:00.000Z",
   "added": "2026-11-26T21:21:59.473516+00:00",
   "related": [
-   "c42ca8f219e62b8c",
    "fcbadb5e4e74b6f8",
+   "c42ca8f219e62b8c",
    "ab2819953b58dc32",
    "b5a755e51d76fef3"
   ]
@@ -4018,8 +4293,7 @@
   "related": [
    "3e2b76e4617cbecc",
    "c750175dcfd6ff94",
-   "3b627af7791cfed8",
-   "6e63ef81234dd62b"
+   "3b627af7791cfed8"
   ]
  },
  {
@@ -4051,7 +4325,7 @@
    "6e6050d9bee0cbba",
    "acee8bd0a8a36fc5",
    "db5a7352d8a8f936",
-   "71047f93c53296d7"
+   "4d8c44c3f29eaf5d"
   ]
  },
  {
@@ -4280,7 +4554,7 @@
    "1f48ec4b503fbb71",
    "ff5e010f2bb4373b",
    "5bdf8def5044ea19",
-   "63dbb81e2a2d11bd"
+   "97bce453eb36f7e2"
   ]
  },
  {
@@ -4340,8 +4614,8 @@
   "added": "2026-11-26T08:36:52.573056+00:00",
   "related": [
    "46b31e0cbd48e780",
-   "afb6e19cde341652",
    "64d40a84782e1014",
+   "afb6e19cde341652",
    "9d04df52e96cbcfe"
   ]
  },
@@ -4809,7 +5083,7 @@
    "50feeb157090174b",
    "5fb85d77dd564180",
    "0ec0be1e7f2dd51c",
-   "769d6247ab3b414f"
+   "cdf4593682f9d3d6"
   ]
  },
  {
@@ -4838,7 +5112,9 @@
   "source": "Hugging Face Blog",
   "date": "Thu, 26 Nov 2026 05:05:36 GMT",
   "added": "2026-11-26T08:33:39.602337+00:00",
-  "related": []
+  "related": [
+   "a7fb52666c606df9"
+  ]
  },
  {
   "headline": "BOP-Refer Benchmark Reveals Gaps in Monocular 3D Object Grounding for Vision-Language Models",
@@ -4938,7 +5214,7 @@
    "4b98fb88628a101d",
    "a755a0657f08ea86",
    "3976a6719c927750",
-   "132e8d009f1edfc9"
+   "ffb0dde8d8967242"
   ]
  },
  {
@@ -4998,8 +5274,8 @@
   "added": "2026-11-26T08:32:39.802624+00:00",
   "related": [
    "13a6b8013ec3564c",
-   "279a073e0c692f17",
    "6cb54b6e74313597",
+   "279a073e0c692f17",
    "4dd75576157e6673"
   ]
  },
@@ -5380,8 +5656,7 @@
   "added": "2026-11-25T21:55:01.121815+00:00",
   "related": [
    "db90f852819508af",
-   "b88c69fd1f65e6b1",
-   "16f0b60da1ddcdc3"
+   "b88c69fd1f65e6b1"
   ]
  },
  {
@@ -5438,8 +5713,8 @@
   "related": [
    "afd27e183f629e39",
    "f6990214f0b638d6",
-   "41c8064b0522ade9",
-   "b75cf0f82f2942cf"
+   "b75cf0f82f2942cf",
+   "41c8064b0522ade9"
   ]
  },
  {
@@ -5948,8 +6223,8 @@
   "date": "2026-11-24T18:28:41Z",
   "added": "2026-11-25T21:51:24.428116+00:00",
   "related": [
-   "964abff5bf4e7cc8",
    "e337e8608e1e9412",
+   "964abff5bf4e7cc8",
    "b88709aa5efa153c",
    "b45831626333d173"
   ]
@@ -6050,7 +6325,7 @@
    "b80c1a82c17c2552",
    "e683d40fba103b5f",
    "02839082ff9ffa67",
-   "bd04dc847bd5db6d"
+   "3439be5ca6040b72"
   ]
  },
  {
@@ -6360,7 +6635,7 @@
    "0ec0be1e7f2dd51c",
    "121bd2762da89733",
    "0355b130fa7b225c",
-   "e87a4535763a3f27"
+   "41c8064b0522ade9"
   ]
  },
  {
@@ -6492,8 +6767,8 @@
   "related": [
    "119c3112f4241aa1",
    "5c37229c595324bf",
-   "56f97d3b31580f3f",
-   "5c37c83cea812a23"
+   "5c37c83cea812a23",
+   "56f97d3b31580f3f"
   ]
  },
  {
@@ -6680,10 +6955,10 @@
   "date": "2026-11-23T19:00:00.000Z",
   "added": "2026-11-25T08:52:38.109768+00:00",
   "related": [
-   "984be6e13d67cbe3",
    "8780feaa752a0e9d",
+   "984be6e13d67cbe3",
    "cd6505f044a983c4",
-   "db5a7352d8a8f936"
+   "71047f93c53296d7"
   ]
  },
  {
@@ -6773,9 +7048,9 @@
   "added": "2026-11-25T08:52:01.806458+00:00",
   "related": [
    "5ed4e8911b4bb11b",
-   "0904df37e969bdc1",
    "9341e04f1ac7831b",
-   "279185ff611e2406"
+   "0904df37e969bdc1",
+   "07aff8529387b3ae"
   ]
  },
  {
@@ -6872,9 +7147,9 @@
   "date": "2026-11-23T19:00:00.000Z",
   "added": "2026-11-25T08:51:26.666344+00:00",
   "related": [
-   "8dfc20d232c82098",
-   "a683e7acfe154298",
    "26ddf51f9dd415ad",
+   "a683e7acfe154298",
+   "8dfc20d232c82098",
    "c750175dcfd6ff94"
   ]
  },
@@ -6932,8 +7207,8 @@
   "date": "2026-11-21T19:00:00.000Z",
   "added": "2026-11-25T08:51:01.872221+00:00",
   "related": [
-   "d57d26fab13321ba",
    "d6624a4f03c35acf",
+   "d57d26fab13321ba",
    "bc15f7248029aa22",
    "121bd2762da89733"
   ]
@@ -7189,7 +7464,7 @@
    "aa93777566bc104e",
    "32af257829de9696",
    "d1bee759e86a69db",
-   "c6caa4d4f0b0e545"
+   "d2f90fb918d969fe"
   ]
  },
  {
@@ -7254,8 +7529,8 @@
   "added": "2026-11-25T08:49:02.199885+00:00",
   "related": [
    "5d02e171408cd9c4",
-   "014e32d15c159478",
    "1c013b363c30d60c",
+   "014e32d15c159478",
    "1b64f5ab40f06384"
   ]
  },
@@ -7439,7 +7714,7 @@
    "f00d83341f65cba8",
    "bf623f2575d90ce5",
    "875022353549216c",
-   "b014c2bf13f4b6d6"
+   "36154cf86ff08e24"
   ]
  },
  {
@@ -7468,9 +7743,9 @@
   "date": "2026-11-25T00:54:49Z",
   "added": "2026-11-25T08:47:37.643949+00:00",
   "related": [
-   "57017ac735e46aec",
+   "50feeb157090174b",
    "33d8937469a3b9ee",
-   "50feeb157090174b"
+   "57017ac735e46aec"
   ]
  },
  {
@@ -7501,8 +7776,8 @@
   "added": "2026-11-25T08:47:26.150962+00:00",
   "related": [
    "43fa0a750af887e7",
-   "57017ac735e46aec",
    "231bf705081bf09e",
+   "57017ac735e46aec",
    "e87a4535763a3f27"
   ]
  },
@@ -7564,8 +7839,8 @@
   "related": [
    "e2aca7c0bded90b3",
    "b03c94474886f6eb",
-   "f37a914567128be7",
-   "a1bab071a14f561f"
+   "a1bab071a14f561f",
+   "f37a914567128be7"
   ]
  },
  {
@@ -7593,10 +7868,10 @@
   "date": "2026-11-23T19:00:00.000Z",
   "added": "2026-11-25T08:46:50.563257+00:00",
   "related": [
+   "97bce453eb36f7e2",
    "b48b5963fad98cc0",
    "43fa0a750af887e7",
-   "28a468536f32c3ad",
-   "19becf065be41ef0"
+   "28a468536f32c3ad"
   ]
  },
  {
@@ -7628,7 +7903,7 @@
    "41c8064b0522ade9",
    "87a1cf2bb4958a33",
    "b7b630b2fe964f78",
-   "84084d872d88964e"
+   "0ec0be1e7f2dd51c"
   ]
  },
  {
@@ -7694,8 +7969,8 @@
   "related": [
    "7fc61acd4d15604b",
    "20163f0376f0e415",
-   "4584b3d202ced805",
-   "97d3633bdcb38575"
+   "97d3633bdcb38575",
+   "4584b3d202ced805"
   ]
  },
  {
@@ -7911,8 +8186,8 @@
   "added": "2026-11-24T22:40:27.028619+00:00",
   "related": [
    "b75cf0f82f2942cf",
-   "0355b130fa7b225c",
    "5f705d3f5490e944",
+   "0355b130fa7b225c",
    "8867e3714bbc591c"
   ]
  },
@@ -8038,7 +8313,8 @@
   "date": "2026-11-24T13:15:00-05:00",
   "added": "2026-11-24T22:39:39.112940+00:00",
   "related": [
-   "89298d3b7fb05770"
+   "89298d3b7fb05770",
+   "84d2fa603ef696ee"
   ]
  },
  {
@@ -8070,8 +8346,8 @@
   "related": [
    "1cb78417896f91c9",
    "049542555c2cb3db",
-   "5fbc7d8ce285cc02",
-   "aa93777566bc104e"
+   "2f75382e1552daaa",
+   "5fbc7d8ce285cc02"
   ]
  },
  {
@@ -8198,8 +8474,8 @@
   "related": [
    "6b4b11d8558c175e",
    "d680d8751ecd7c4c",
-   "d0946e26531ae61b",
-   "f1dd0bea0b97e4ab"
+   "f1dd0bea0b97e4ab",
+   "d0946e26531ae61b"
   ]
  },
  {
@@ -8228,8 +8504,8 @@
   "date": "Tue, 24 Nov 2026 21:19:52 +0000",
   "added": "2026-11-24T22:38:27.066587+00:00",
   "related": [
-   "d9a047affb028160",
    "620756f297e99f3c",
+   "d9a047affb028160",
    "aae8c4832e631e5c",
    "8cd345b9ca86f67c"
   ]
@@ -8292,10 +8568,10 @@
   "date": "Tue, 24 Nov 2026 22:27:52 +0000",
   "added": "2026-11-24T22:38:03.582944+00:00",
   "related": [
-   "025949940b1ff6f3",
    "8ab70d6f89cfc96b",
    "b7579835e4e7c6dd",
-   "2f1f5cbf7ce833ab"
+   "2f1f5cbf7ce833ab",
+   "90f831b4fd3ecc8c"
   ]
  },
  {
@@ -8327,7 +8603,6 @@
   "date": "Tue, 24 Nov 2026 16:34:13 GMT",
   "added": "2026-11-24T22:37:51.268657+00:00",
   "related": [
-   "2427bacb74a96b4b",
    "afb6e19cde341652",
    "9d04df52e96cbcfe"
   ]
@@ -8393,10 +8668,10 @@
   "date": "2026-11-23T17:21:32Z",
   "added": "2026-11-24T22:37:27.367942+00:00",
   "related": [
-   "c42ca8f219e62b8c",
    "a7fb52666c606df9",
-   "def95eb3892b8320",
-   "b6d10f5dbc5e9f87"
+   "c42ca8f219e62b8c",
+   "b6d10f5dbc5e9f87",
+   "def95eb3892b8320"
   ]
  },
  {
@@ -8587,8 +8862,8 @@
   "related": [
    "5c441d68610c0b14",
    "9090f2c5d4193c12",
-   "b88709aa5efa153c",
-   "b20060722a6fcdb8"
+   "b20060722a6fcdb8",
+   "b88709aa5efa153c"
   ]
  },
  {
@@ -8741,8 +9016,8 @@
   "related": [
    "da6c827addce47a1",
    "8451eda18f3aa606",
-   "11ac1d25eb0e562b",
-   "890b3b5545c8fcb4"
+   "82dccdff1c4b48dc",
+   "11ac1d25eb0e562b"
   ]
  },
  {
@@ -8836,8 +9111,8 @@
   "added": "2026-11-24T22:34:39.128402+00:00",
   "related": [
    "49f0104ed04b09d4",
-   "316e6b12da0b19df",
    "63dbb81e2a2d11bd",
+   "316e6b12da0b19df",
    "787fa971724176c1"
   ]
  },
@@ -8871,7 +9146,7 @@
    "4b0509310e9e561a",
    "6cb54b6e74313597",
    "935b5430b854deb8",
-   "ca38829e73128713"
+   "9dbb7a6ae9fe4f78"
   ]
  },
  {
@@ -8935,8 +9210,8 @@
   "added": "2026-11-24T22:34:03.216727+00:00",
   "related": [
    "f2064448056d990a",
-   "3c4f4993adcaa465",
    "24817791f262e8b7",
+   "3c4f4993adcaa465",
    "001e886f942f0163"
   ]
  },
@@ -8999,8 +9274,8 @@
   "added": "2026-11-24T22:33:39.118379+00:00",
   "related": [
    "964abff5bf4e7cc8",
-   "9090f2c5d4193c12",
    "5c441d68610c0b14",
+   "9090f2c5d4193c12",
    "85b4b15a2534b28f"
   ]
  },
@@ -9096,7 +9371,7 @@
    "ce423dc885520d15",
    "9d28b97a9c7b1e93",
    "30d463386b152b16",
-   "875022353549216c"
+   "b05d343c10cc2e5d"
   ]
  },
  {
@@ -9127,8 +9402,8 @@
   "related": [
    "63f0f7ee2cf50c46",
    "770fedf6fe7a73a6",
-   "3c869f7e786db78c",
-   "ab298121176b2f09"
+   "ab298121176b2f09",
+   "3c869f7e786db78c"
   ]
  },
  {
@@ -9189,8 +9464,8 @@
   "related": [
    "4dd75576157e6673",
    "0904df37e969bdc1",
-   "68af699b42e962c7",
-   "11267d9d78144302"
+   "97bce453eb36f7e2",
+   "68af699b42e962c7"
   ]
  },
  {
@@ -9512,8 +9787,8 @@
   "added": "2026-11-24T10:06:59.276245+00:00",
   "related": [
    "5c37229c595324bf",
-   "56f97d3b31580f3f",
    "119c3112f4241aa1",
+   "56f97d3b31580f3f",
    "df180c06dc6caa72"
   ]
  },
@@ -9605,8 +9880,8 @@
   "related": [
    "13a6b8013ec3564c",
    "1819d8b854c8a63a",
-   "1f48ec4b503fbb71",
-   "56f97d3b31580f3f"
+   "56f97d3b31580f3f",
+   "1f48ec4b503fbb71"
   ]
  },
  {
@@ -9636,8 +9911,8 @@
   "related": [
    "5bdf8def5044ea19",
    "63437884c9c25089",
-   "fda63a0aaa2cd3d9",
-   "4dd75576157e6673"
+   "4dd75576157e6673",
+   "fda63a0aaa2cd3d9"
   ]
  },
  {
@@ -9699,10 +9974,10 @@
   "date": "2026-11-22T19:00:00.000Z",
   "added": "2026-11-24T10:05:47.093461+00:00",
   "related": [
-   "b7b630b2fe964f78",
    "7fc09e03d574cdbc",
+   "b7b630b2fe964f78",
    "4c1426fd24e98305",
-   "1711dfbcefcd2e40"
+   "a556368df1d24692"
   ]
  },
  {
@@ -9731,8 +10006,8 @@
   "added": "2026-11-24T10:05:35.456608+00:00",
   "related": [
    "606c9eca0385ab92",
-   "2ac73d3052ef4ab5",
    "e87a4535763a3f27",
+   "2ac73d3052ef4ab5",
    "8ef183033608f885"
   ]
  },
@@ -9761,8 +10036,7 @@
   "date": "2026-11-18T19:00:00.000Z",
   "added": "2026-11-24T10:05:23.228546+00:00",
   "related": [
-   "0831ea7948f8cd31",
-   "676bccdabb367bf4"
+   "0831ea7948f8cd31"
   ]
  },
  {
@@ -9825,10 +10099,10 @@
   "date": "Mon, 23 Nov 2026 14:21:59 +0000",
   "added": "2026-11-24T10:04:58.944369+00:00",
   "related": [
-   "f8045fa626e2c02a",
-   "5fbc7d8ce285cc02",
+   "e09aa9a8dd804800",
    "47b1648bdb930a3d",
-   "2f1f5cbf7ce833ab"
+   "f8045fa626e2c02a",
+   "5fbc7d8ce285cc02"
   ]
  },
  {
@@ -9890,10 +10164,10 @@
   "date": "Mon, 23 Nov 2026 15:04:01 +0000",
   "added": "2026-11-24T10:04:35.118572+00:00",
   "related": [
+   "d2f90fb918d969fe",
    "049542555c2cb3db",
    "d1bee759e86a69db",
-   "32af257829de9696",
-   "1cb78417896f91c9"
+   "32af257829de9696"
   ]
  },
  {
@@ -10049,8 +10323,8 @@
   "related": [
    "cb6d83b7295ce64c",
    "80b6d0407b0410e7",
-   "d48bd8c2551a0146",
-   "3ae07814cc15c93f"
+   "3ae07814cc15c93f",
+   "f2fbb8e41b886fd8"
   ]
  },
  {
@@ -10174,9 +10448,9 @@
   "added": "2026-11-24T10:02:47.031891+00:00",
   "related": [
    "d6624a4f03c35acf",
-   "19becf065be41ef0",
    "b75cf0f82f2942cf",
-   "e87a4535763a3f27"
+   "19becf065be41ef0",
+   "f6990214f0b638d6"
   ]
  },
  {
@@ -10399,9 +10673,9 @@
   "added": "2026-11-24T00:07:11.840303+00:00",
   "related": [
    "049542555c2cb3db",
+   "2f75382e1552daaa",
    "32af257829de9696",
-   "90f831b4fd3ecc8c",
-   "aa93777566bc104e"
+   "d2f90fb918d969fe"
   ]
  },
  {
@@ -10466,8 +10740,7 @@
   "added": "2026-11-24T00:06:47.994868+00:00",
   "related": [
    "6b1c4ab3d056003c",
-   "029ded4e9a8f172f",
-   "744da6a2871c93b3"
+   "029ded4e9a8f172f"
   ]
  },
  {
@@ -10500,7 +10773,7 @@
    "2f1f5cbf7ce833ab",
    "90f831b4fd3ecc8c",
    "f8045fa626e2c02a",
-   "2475b067992dd4ab"
+   "e09aa9a8dd804800"
   ]
  },
  {
@@ -10530,8 +10803,8 @@
   "related": [
    "31f6c644d82c9389",
    "94e979efd7382a51",
-   "b47f021e12d7c019",
-   "8a546b15d29e6902"
+   "8a546b15d29e6902",
+   "b47f021e12d7c019"
   ]
  },
  {
@@ -10562,8 +10835,8 @@
   "related": [
    "b7579835e4e7c6dd",
    "4c525e5e54fa3645",
-   "2475b067992dd4ab",
-   "627c324df106de1b"
+   "627c324df106de1b",
+   "2475b067992dd4ab"
   ]
  },
  {
@@ -10591,9 +10864,9 @@
   "date": "2026-11-23T17:25:12-05:00",
   "added": "2026-11-24T00:06:00.058496+00:00",
   "related": [
+   "2f75382e1552daaa",
    "1cb78417896f91c9",
    "32af257829de9696",
-   "aa93777566bc104e",
    "81a464b2bd018e0d"
   ]
  },
@@ -10624,9 +10897,9 @@
   "added": "2026-11-24T00:05:47.891618+00:00",
   "related": [
    "049542555c2cb3db",
+   "2f75382e1552daaa",
    "32af257829de9696",
-   "d1bee759e86a69db",
-   "aa93777566bc104e"
+   "d2f90fb918d969fe"
   ]
  },
  {
@@ -10719,10 +10992,10 @@
   "date": "Mon, 23 Nov 2026 18:12:22 +0000",
   "added": "2026-11-24T00:05:11.909135+00:00",
   "related": [
+   "e09aa9a8dd804800",
    "2f1f5cbf7ce833ab",
    "f8045fa626e2c02a",
-   "bd7cc537cd570a59",
-   "90f831b4fd3ecc8c"
+   "bd7cc537cd570a59"
   ]
  },
  {
@@ -10782,8 +11055,7 @@
   "added": "2026-11-24T00:04:47.772337+00:00",
   "related": [
    "cb8293f821d94f0d",
-   "958b4d502f59f32f",
-   "3dc626ea28ff3a7d"
+   "958b4d502f59f32f"
   ]
  },
  {
@@ -10813,8 +11085,8 @@
   "added": "2026-11-24T00:04:36.071221+00:00",
   "related": [
    "90f831b4fd3ecc8c",
+   "e09aa9a8dd804800",
    "a4a92fbcda03532a",
-   "f8045fa626e2c02a",
    "5fbc7d8ce285cc02"
   ]
  },
@@ -10942,8 +11214,8 @@
   "added": "2026-11-24T00:03:47.846440+00:00",
   "related": [
    "99043acd3b6a9c06",
-   "b6fd646548695355",
    "d0d45b2248dd790b",
+   "b6fd646548695355",
    "127326b87b53e7a9"
   ]
  },
@@ -11009,8 +11281,8 @@
   "related": [
    "c5903c8754bbbfd5",
    "890e2f7b3ac9f81c",
-   "0fc744e43d6095d8",
-   "c231d25e54b9ad3f"
+   "5a49fd4a2d776cb4",
+   "0fc744e43d6095d8"
   ]
  },
  {
@@ -11072,8 +11344,8 @@
   "related": [
    "7601f68fa236425c",
    "890e2f7b3ac9f81c",
-   "ceecf9e348f1c1f1",
-   "357d085ae06f4ca2"
+   "5a49fd4a2d776cb4",
+   "ceecf9e348f1c1f1"
   ]
  },
  {
@@ -11226,8 +11498,8 @@
   "added": "2026-11-24T00:02:00.341234+00:00",
   "related": [
    "11ac1d25eb0e562b",
-   "35abad2cd0b4a818",
    "7fc09e03d574cdbc",
+   "35abad2cd0b4a818",
    "576bdfffc7bca566"
   ]
  },
@@ -11288,8 +11560,8 @@
   "date": "Mon, 23 Nov 2026 08:00:00 GMT",
   "added": "2026-11-24T00:01:35.942665+00:00",
   "related": [
-   "549a77347d5e1e5f",
    "99b93f3e10984935",
+   "549a77347d5e1e5f",
    "c6c361c53bc4ce2d"
   ]
  },
@@ -11452,8 +11724,8 @@
   "related": [
    "24817791f262e8b7",
    "5e57d423bc79ab67",
-   "36154cf86ff08e24",
-   "89ccf4ed8f1ba61e"
+   "89ccf4ed8f1ba61e",
+   "36154cf86ff08e24"
   ]
  },
  {
@@ -11696,7 +11968,7 @@
    "e2aca7c0bded90b3",
    "df180c06dc6caa72",
    "63f0f7ee2cf50c46",
-   "770fedf6fe7a73a6"
+   "1711dfbcefcd2e40"
   ]
  },
  {
@@ -11753,7 +12025,7 @@
    "15712514dcdfa437",
    "b88709aa5efa153c",
    "0115555b39344353",
-   "964abff5bf4e7cc8"
+   "86ca62b70587c03e"
   ]
  },
  {
@@ -12188,7 +12460,7 @@
    "594acaf6a68ab598",
    "a60a79137558956a",
    "c73b0da3ab05e071",
-   "3a487cb157f7f817"
+   "ef27ea1143179f3c"
   ]
  },
  {
@@ -12757,8 +13029,8 @@
   "added": "2026-11-23T07:50:19.650540+00:00",
   "related": [
    "c19513a66c824328",
-   "ab2819953b58dc32",
    "5ed4e8911b4bb11b",
+   "ab2819953b58dc32",
    "950ac38f23f2d5a7"
   ]
  },
@@ -12946,7 +13218,7 @@
    "94e979efd7382a51",
    "0873131c018e5da5",
    "75c7ee7437ec7c0d",
-   "148a75b422c2ea8b"
+   "3a0cb236fd3220da"
   ]
  },
  {
@@ -12976,10 +13248,10 @@
   "date": "Sun, 22 Nov 2026 00:00:00 GMT",
   "added": "2026-11-22T19:48:13.758043+00:00",
   "related": [
-   "0115555b39344353",
    "6fd4c32fe34a4cba",
-   "7156825ae33dd830",
-   "27b0129b73da0b19"
+   "0115555b39344353",
+   "27b0129b73da0b19",
+   "7156825ae33dd830"
   ]
  },
  {
@@ -13505,8 +13777,7 @@
   "date": "2026-11-19T17:58:39Z",
   "added": "2026-11-21T19:27:03.234447+00:00",
   "related": [
-   "e85c88162b2e7984",
-   "7cf064159bf95f42"
+   "e85c88162b2e7984"
   ]
  },
  {
@@ -13727,10 +13998,10 @@
   "date": "Sat, 21 Nov 2026 17:00:00 +0000",
   "added": "2026-11-21T19:25:27.207303+00:00",
   "related": [
-   "c231d25e54b9ad3f",
    "f7214e14d1e100a3",
+   "890b3b5545c8fcb4",
    "a22c687c439c6aed",
-   "890b3b5545c8fcb4"
+   "b0ded74e06b06613"
   ]
  },
  {
@@ -14180,7 +14451,7 @@
   "related": [
    "adba844aff176e0b",
    "708e52618cd98258",
-   "774d9e56b7ae53aa",
+   "cb0d7372f9a0d9c6",
    "24817791f262e8b7"
   ]
  },
@@ -14451,10 +14722,10 @@
   "date": "2026-11-19T17:45:07Z",
   "added": "2026-11-21T07:23:48.217220+00:00",
   "related": [
+   "97bce453eb36f7e2",
    "49f0104ed04b09d4",
    "853993777f319fd1",
-   "e87a4535763a3f27",
-   "63dbb81e2a2d11bd"
+   "e87a4535763a3f27"
   ]
  },
  {
@@ -14608,8 +14879,8 @@
   "related": [
    "50feeb157090174b",
    "3b627af7791cfed8",
-   "16e0f52e6513b68f",
-   "ee39fc71f328b43e"
+   "ee39fc71f328b43e",
+   "16e0f52e6513b68f"
   ]
  },
  {
@@ -14637,10 +14908,10 @@
   "date": "2026-11-19T18:20:01Z",
   "added": "2026-11-21T07:22:36.232473+00:00",
   "related": [
-   "496ff8a0ac126192",
    "ce6471665a22d7ee",
+   "496ff8a0ac126192",
    "ab0cd7e6b2841f09",
-   "1456693a87f2636b"
+   "850f6865c91bcf15"
   ]
  },
  {
@@ -14952,7 +15223,7 @@
    "853993777f319fd1",
    "07aff8529387b3ae",
    "4b0509310e9e561a",
-   "437ba97640cd8007"
+   "63437884c9c25089"
   ]
  },
  {
@@ -15015,7 +15286,7 @@
    "ee39fc71f328b43e",
    "bc15f7248029aa22",
    "1e691e4e9e009867",
-   "d6624a4f03c35acf"
+   "41c8064b0522ade9"
   ]
  },
  {
@@ -15359,7 +15630,7 @@
    "27b0129b73da0b19",
    "f4784c30400364a2",
    "b88709aa5efa153c",
-   "576bdfffc7bca566"
+   "316e6b12da0b19df"
   ]
  },
  {
@@ -15575,8 +15846,8 @@
   "related": [
    "f00d83341f65cba8",
    "36154cf86ff08e24",
-   "bf623f2575d90ce5",
-   "30d463386b152b16"
+   "30d463386b152b16",
+   "bf623f2575d90ce5"
   ]
  },
  {
@@ -15670,7 +15941,7 @@
    "ab50b7af668be0ea",
    "ccb9331ad40681b7",
    "1501adb883e7f84c",
-   "b0ded74e06b06613"
+   "0f50037c76f25ff3"
   ]
  },
  {
@@ -16020,7 +16291,7 @@
    "1f48ec4b503fbb71",
    "49f0104ed04b09d4",
    "ff5e010f2bb4373b",
-   "1711dfbcefcd2e40"
+   "97bce453eb36f7e2"
   ]
  },
  {
@@ -16074,8 +16345,7 @@
   "added": "2026-11-20T20:30:23.878200+00:00",
   "related": [
    "6e6050d9bee0cbba",
-   "db4bd6cbca203078",
-   "e1360c67afed65d9"
+   "db4bd6cbca203078"
   ]
  },
  {
@@ -16106,7 +16376,7 @@
    "b014c2bf13f4b6d6",
    "875022353549216c",
    "1c343af691bcf876",
-   "af1852b4c46dc30e"
+   "ed025d4d62d54415"
   ]
  },
  {
@@ -16267,7 +16537,7 @@
    "c216fe867cbdf75d",
    "5d02e171408cd9c4",
    "3976a6719c927750",
-   "0904df37e969bdc1"
+   "a755a0657f08ea86"
   ]
  },
  {
@@ -16391,7 +16661,8 @@
   "date": "2026-11-16T19:00:00.000Z",
   "added": "2026-11-20T07:33:36.065573+00:00",
   "related": [
-   "94593b7e27319716"
+   "94593b7e27319716",
+   "82ab1241fac3e48a"
   ]
  },
  {
@@ -16484,8 +16755,7 @@
   "added": "2026-11-20T07:32:59.887157+00:00",
   "related": [
    "0077f0e57a635e52",
-   "5487100b1f610d90",
-   "f54eae37dfc5e200"
+   "5487100b1f610d90"
   ]
  },
  {
@@ -16675,7 +16945,7 @@
    "ab298121176b2f09",
    "6cb54b6e74313597",
    "64d40a84782e1014",
-   "63437884c9c25089"
+   "4dd75576157e6673"
   ]
  },
  {
@@ -16799,8 +17069,8 @@
   "added": "2026-11-20T07:30:59.871763+00:00",
   "related": [
    "7334b8c860093761",
-   "598853ef8c21e01e",
    "2867ce4c38e61b91",
+   "598853ef8c21e01e",
    "0cdac5c6e4a67a41"
   ]
  },
@@ -16831,8 +17101,8 @@
   "related": [
    "00164f311d41670a",
    "ab298121176b2f09",
-   "db5a7352d8a8f936",
-   "f1bffa96e54ae191"
+   "f1bffa96e54ae191",
+   "db5a7352d8a8f936"
   ]
  },
  {
@@ -17085,7 +17355,7 @@
    "e7090200216ed533",
    "299291fdd5181a56",
    "21c67f84759f6dc5",
-   "cb0d7372f9a0d9c6"
+   "44255eb49d7cccbd"
   ]
  },
  {
@@ -17175,8 +17445,8 @@
   "date": "Thu, 19 Nov 2026 00:00:00 GMT",
   "added": "2026-11-20T07:28:35.697736+00:00",
   "related": [
-   "4b08ec50268e04a4",
    "53f2a14376dda94d",
+   "4b08ec50268e04a4",
    "1d0c151fefed0dea"
   ]
  },
@@ -17433,7 +17703,7 @@
    "50feeb157090174b",
    "3b627af7791cfed8",
    "6e8dbe3788a3467a",
-   "bc15f7248029aa22"
+   "3174dce13f9dbbdd"
   ]
  },
  {
@@ -17786,8 +18056,8 @@
   "added": "2026-11-19T20:52:11.902797+00:00",
   "related": [
    "f7214e14d1e100a3",
-   "77828770ffb5c4ae",
    "44fe677fd46c23c4",
+   "77828770ffb5c4ae",
    "29a19e1aacc64ded"
   ]
  },
@@ -17916,10 +18186,10 @@
   "date": "2026-11-19T15:05:06-05:00",
   "added": "2026-11-19T20:51:24.019729+00:00",
   "related": [
+   "5a49fd4a2d776cb4",
    "890e2f7b3ac9f81c",
    "a513c3b2bdeaedaa",
-   "bb3ee1cf50e29f40",
-   "7601f68fa236425c"
+   "bb3ee1cf50e29f40"
   ]
  },
  {
@@ -18203,8 +18473,8 @@
   "added": "2026-11-19T20:49:35.839174+00:00",
   "related": [
    "99043acd3b6a9c06",
-   "5080a13c0be9c9f6",
    "d0d45b2248dd790b",
+   "5080a13c0be9c9f6",
    "c6caa4d4f0b0e545"
   ]
  },
@@ -18369,7 +18639,7 @@
    "be28d25a0e42e5e3",
    "eaadf2423721fd74",
    "99727b65c29013d0",
-   "61cb6e1f95ec64ca"
+   "e1845ee0b548d25f"
   ]
  },
  {
@@ -18399,10 +18669,10 @@
   "date": "Thu, 19 Nov 2026 17:00:00 +0000",
   "added": "2026-11-19T20:48:24.010569+00:00",
   "related": [
-   "bb3ee1cf50e29f40",
    "84d2fa603ef696ee",
-   "3f6c58621a366d1b",
-   "bd04dc847bd5db6d"
+   "bb3ee1cf50e29f40",
+   "bd04dc847bd5db6d",
+   "3f6c58621a366d1b"
   ]
  },
  {
@@ -18466,8 +18736,8 @@
   "related": [
    "0fc744e43d6095d8",
    "357d085ae06f4ca2",
-   "a513c3b2bdeaedaa",
-   "e2b6407cfa6894d3"
+   "e2b6407cfa6894d3",
+   "a513c3b2bdeaedaa"
   ]
  },
  {
@@ -18497,8 +18767,8 @@
   "added": "2026-11-19T20:47:47.696823+00:00",
   "related": [
    "dc85126b0ac71765",
-   "cfcc7acb02e9ca79",
    "549a77347d5e1e5f",
+   "cfcc7acb02e9ca79",
    "c6c361c53bc4ce2d"
   ]
  },
@@ -18658,7 +18928,7 @@
    "1e060931f4b40f09",
    "ca152729c5ba6c2f",
    "46b31e0cbd48e780",
-   "2a158353075b7c16"
+   "b6d8986dac67a474"
   ]
  },
  {
@@ -18783,8 +19053,7 @@
   "added": "2026-11-19T20:46:00.436970+00:00",
   "related": [
    "062215c0b5c67008",
-   "82ab1241fac3e48a",
-   "fdd45df45b7d7ead"
+   "82ab1241fac3e48a"
   ]
  },
  {
@@ -18847,7 +19116,7 @@
    "c750175dcfd6ff94",
    "59c578bf213c6d53",
    "26ddf51f9dd415ad",
-   "acee8bd0a8a36fc5"
+   "a7d0f7222e04dbb3"
   ]
  },
  {
@@ -18878,7 +19147,7 @@
    "b105c1327912640b",
    "9fa731b0ef6c1da9",
    "d48bd8c2551a0146",
-   "e9317a5007f5cb9c"
+   "66fe800a733bf4d4"
   ]
  },
  {
@@ -18941,8 +19210,8 @@
   "related": [
    "0ec0be1e7f2dd51c",
    "6728be4729acd929",
-   "79b8f27116994616",
-   "e87a4535763a3f27"
+   "e87a4535763a3f27",
+   "79b8f27116994616"
   ]
  },
  {
@@ -19003,8 +19272,8 @@
   "related": [
    "4c1426fd24e98305",
    "a556368df1d24692",
-   "11ac1d25eb0e562b",
-   "576bdfffc7bca566"
+   "576bdfffc7bca566",
+   "11ac1d25eb0e562b"
   ]
  },
  {
@@ -19067,10 +19336,10 @@
   "date": "2026-11-18T08:01:05-05:00",
   "added": "2026-11-19T07:41:46.595438+00:00",
   "related": [
-   "3dc626ea28ff3a7d",
    "28509d8a3a743ac7",
    "94305b427e5aac0a",
-   "1207b5c1c70bbc64"
+   "1207b5c1c70bbc64",
+   "075bbfb634c2a8a5"
   ]
  },
  {
@@ -19101,8 +19370,8 @@
   "related": [
    "11ac1d25eb0e562b",
    "6e8dbe3788a3467a",
-   "4c1426fd24e98305",
-   "0ca25edadd1d7b98"
+   "0ca25edadd1d7b98",
+   "4c1426fd24e98305"
   ]
  },
  {
@@ -19135,8 +19404,8 @@
   "related": [
    "da6c827addce47a1",
    "52f09809260e978d",
-   "ceecf9e348f1c1f1",
-   "029ded4e9a8f172f"
+   "029ded4e9a8f172f",
+   "ceecf9e348f1c1f1"
   ]
  },
  {
@@ -19322,7 +19591,7 @@
    "28509d8a3a743ac7",
    "627c324df106de1b",
    "049542555c2cb3db",
-   "8ab70d6f89cfc96b"
+   "2f75382e1552daaa"
   ]
  },
  {
@@ -19481,10 +19750,10 @@
   "date": "Wed, 18 Nov 2026 23:17:28 +0000",
   "added": "2026-11-19T07:39:10.478203+00:00",
   "related": [
-   "025949940b1ff6f3",
    "f8045fa626e2c02a",
+   "5fbc7d8ce285cc02",
    "90f831b4fd3ecc8c",
-   "5fbc7d8ce285cc02"
+   "2f1f5cbf7ce833ab"
   ]
  },
  {
@@ -19609,9 +19878,9 @@
   "added": "2026-11-19T07:38:22.637242+00:00",
   "related": [
    "a513c3b2bdeaedaa",
+   "5a49fd4a2d776cb4",
    "0fc744e43d6095d8",
-   "357d085ae06f4ca2",
-   "57728669e04868ae"
+   "357d085ae06f4ca2"
   ]
  },
  {
@@ -19644,8 +19913,8 @@
   "related": [
    "770fedf6fe7a73a6",
    "df180c06dc6caa72",
-   "5c37229c595324bf",
-   "001e886f942f0163"
+   "001e886f942f0163",
+   "5c37229c595324bf"
   ]
  },
  {
@@ -19675,10 +19944,10 @@
   "date": "2026-11-18T17:38:46Z",
   "added": "2026-11-19T07:37:58.689627+00:00",
   "related": [
-   "2ac73d3052ef4ab5",
    "3b627af7791cfed8",
-   "eb4d2df7b7187bdc",
-   "50feeb157090174b"
+   "2ac73d3052ef4ab5",
+   "50feeb157090174b",
+   "eb4d2df7b7187bdc"
   ]
  },
  {
@@ -19711,7 +19980,7 @@
    "03ca256a4adf4087",
    "e2b6407cfa6894d3",
    "a513c3b2bdeaedaa",
-   "0fc744e43d6095d8"
+   "357d085ae06f4ca2"
   ]
  },
  {
@@ -19741,10 +20010,10 @@
   "date": "Wed, 18 Nov 2026 08:00:00 GMT",
   "added": "2026-11-19T07:37:34.485867+00:00",
   "related": [
-   "c231d25e54b9ad3f",
    "cfcc7acb02e9ca79",
    "951c84561943a913",
-   "f26f2a4dfd6b9b95"
+   "f26f2a4dfd6b9b95",
+   "e6b37f5da94e2fd1"
   ]
  },
  {
@@ -19992,7 +20261,7 @@
    "0c3c8b23c6caec3f",
    "357d085ae06f4ca2",
    "0fc744e43d6095d8",
-   "72284a47c9d975a2"
+   "c1e94fc831365c13"
   ]
  },
  {
@@ -20241,7 +20510,7 @@
    "9090f2c5d4193c12",
    "5c441d68610c0b14",
    "16f0b60da1ddcdc3",
-   "b88709aa5efa153c"
+   "85b4b15a2534b28f"
   ]
  },
  {
@@ -20371,10 +20640,10 @@
   "date": "Wed, 18 Nov 2026 16:14:09 +0000",
   "added": "2026-11-18T20:46:20.417242+00:00",
   "related": [
+   "0b5fe7dce536bb45",
    "9e3d554c6cb56d83",
    "8ab70d6f89cfc96b",
-   "b7579835e4e7c6dd",
-   "3feac09277102c22"
+   "b7579835e4e7c6dd"
   ]
  },
  {
@@ -20468,10 +20737,10 @@
   "date": "Wed, 18 Nov 2026 18:04:05 +0000",
   "added": "2026-11-18T20:45:44.378557+00:00",
   "related": [
+   "5a49fd4a2d776cb4",
    "7601f68fa236425c",
    "6900f6014b2aa0cd",
-   "c5903c8754bbbfd5",
-   "a513c3b2bdeaedaa"
+   "c5903c8754bbbfd5"
   ]
  },
  {
@@ -21061,7 +21330,7 @@
    "d9a047affb028160",
    "a00b3f14f5f73240",
    "d6a5b08e3fa8b3f0",
-   "27b0129b73da0b19"
+   "6a7990e1ad10d3b0"
   ]
  },
  {
@@ -21123,8 +21392,8 @@
   "related": [
    "718c87c9a039ea20",
    "febede2eb69795c6",
-   "24817791f262e8b7",
-   "89ccf4ed8f1ba61e"
+   "89ccf4ed8f1ba61e",
+   "24817791f262e8b7"
   ]
  },
  {
@@ -21348,8 +21617,8 @@
   "added": "2026-11-18T20:40:08.394649+00:00",
   "related": [
    "0ec0be1e7f2dd51c",
-   "f53eb54da6e824d2",
    "47ddbf71e00ceb23",
+   "f53eb54da6e824d2",
    "f37a914567128be7"
   ]
  },
@@ -21417,8 +21686,8 @@
   "related": [
    "231bf705081bf09e",
    "91c6907223232958",
-   "28e902f8909ffada",
-   "d03dc3e7aff4873f"
+   "d03dc3e7aff4873f",
+   "28e902f8909ffada"
   ]
  },
  {
@@ -21481,7 +21750,7 @@
    "b45831626333d173",
    "499976ca057bb90b",
    "790b2e1d548e5cac",
-   "65fcbb33a051a304"
+   "5cea63d09933ac34"
   ]
  },
  {
@@ -21538,8 +21807,8 @@
   "added": "2026-11-18T07:46:06.397470+00:00",
   "related": [
    "b6bef84628be4aee",
-   "ed15daefee211dec",
    "850f6865c91bcf15",
+   "ed15daefee211dec",
    "ce6471665a22d7ee"
   ]
  },
@@ -21759,8 +22028,8 @@
   "added": "2026-11-18T07:44:41.760215+00:00",
   "related": [
    "d9a047affb028160",
-   "8cd345b9ca86f67c",
    "3ddd561d3db586e7",
+   "8cd345b9ca86f67c",
    "b145ab91c01065c7"
   ]
  },
@@ -21793,7 +22062,7 @@
    "f8045fa626e2c02a",
    "2f1f5cbf7ce833ab",
    "90f831b4fd3ecc8c",
-   "2475b067992dd4ab"
+   "e09aa9a8dd804800"
   ]
  },
  {
@@ -21857,7 +22126,7 @@
    "acaf00569e865f08",
    "d1bee759e86a69db",
    "4544035da65a5fc4",
-   "bd7cc537cd570a59"
+   "47b1648bdb930a3d"
   ]
  },
  {
@@ -21953,10 +22222,10 @@
   "date": "Tue, 17 Nov 2026 23:04:35 +0000",
   "added": "2026-11-18T07:43:30.022441+00:00",
   "related": [
+   "9c493a96e3fa6482",
    "0b5fe7dce536bb45",
    "f816757e046db752",
-   "b7579835e4e7c6dd",
-   "9e3d554c6cb56d83"
+   "b7579835e4e7c6dd"
   ]
  },
  {
@@ -22049,9 +22318,9 @@
   "added": "2026-11-18T07:42:53.900629+00:00",
   "related": [
    "d0d45b2248dd790b",
-   "f240bb31094b1ee3",
    "c6caa4d4f0b0e545",
-   "ec577d4c46a6d8ce"
+   "ec577d4c46a6d8ce",
+   "92c1cc867c014247"
   ]
  },
  {
@@ -22182,8 +22451,8 @@
   "added": "2026-11-18T07:42:06.374454+00:00",
   "related": [
    "1e060931f4b40f09",
-   "7d92970fba35bd74",
    "00164f311d41670a",
+   "7d92970fba35bd74",
    "9d04df52e96cbcfe"
   ]
  },
@@ -22214,8 +22483,8 @@
   "related": [
    "3f6c58621a366d1b",
    "bb3ee1cf50e29f40",
-   "e2b6407cfa6894d3",
-   "dc69597abec1a000"
+   "5a49fd4a2d776cb4",
+   "e2b6407cfa6894d3"
   ]
  },
  {
@@ -22277,8 +22546,8 @@
   "related": [
    "437ba97640cd8007",
    "db5a7352d8a8f936",
-   "1819d8b854c8a63a",
-   "07aff8529387b3ae"
+   "07aff8529387b3ae",
+   "1819d8b854c8a63a"
   ]
  },
  {
@@ -22501,7 +22770,7 @@
    "7fc61acd4d15604b",
    "b97c1be35e8ae6c3",
    "62671662bfc59c1e",
-   "8e485c1c148701e4"
+   "2ecd977eeb15a9c9"
   ]
  },
  {
@@ -22628,7 +22897,7 @@
    "c216fe867cbdf75d",
    "08ed48a4f285636e",
    "7fc61acd4d15604b",
-   "7047e076bccaf85c"
+   "af1852b4c46dc30e"
   ]
  },
  {
@@ -22662,7 +22931,7 @@
    "890b3b5545c8fcb4",
    "676bccdabb367bf4",
    "46b23216abae332a",
-   "b45831626333d173"
+   "63f0f7ee2cf50c46"
   ]
  },
  {
@@ -22791,8 +23060,8 @@
   "related": [
    "2ac73d3052ef4ab5",
    "50feeb157090174b",
-   "16e0f52e6513b68f",
-   "cdf4593682f9d3d6"
+   "cdf4593682f9d3d6",
+   "16e0f52e6513b68f"
   ]
  },
  {
@@ -22823,7 +23092,7 @@
    "5cea63d09933ac34",
    "b45831626333d173",
    "70fecf1d20c928d6",
-   "a036bb1a5f383372"
+   "e1a5ad928bbd2e8f"
   ]
  },
  {
@@ -22852,8 +23121,8 @@
   "added": "2026-11-17T21:09:05.112348+00:00",
   "related": [
    "aaacea95c7721ed3",
-   "718c87c9a039ea20",
-   "c42ca8f219e62b8c"
+   "c42ca8f219e62b8c",
+   "718c87c9a039ea20"
   ]
  },
  {
@@ -23015,8 +23284,8 @@
   "related": [
    "ab328cdaa522dc1f",
    "3439be5ca6040b72",
-   "590cb0b9c5dd23f2",
-   "6fd4c32fe34a4cba"
+   "6fd4c32fe34a4cba",
+   "590cb0b9c5dd23f2"
   ]
  },
  {
@@ -23141,10 +23410,10 @@
   "date": "Tue, 17 Nov 2026 16:32:55 +0000",
   "added": "2026-11-17T21:07:16.918925+00:00",
   "related": [
-   "c231d25e54b9ad3f",
-   "87a1cf2bb4958a33",
    "e1845ee0b548d25f",
-   "8f4728ffc5b95bfc"
+   "87a1cf2bb4958a33",
+   "8f4728ffc5b95bfc",
+   "42cb577d7e7884cb"
   ]
  },
  {
@@ -23231,8 +23500,8 @@
   "related": [
    "a513c3b2bdeaedaa",
    "03ca256a4adf4087",
-   "57728669e04868ae",
-   "0fc744e43d6095d8"
+   "0fc744e43d6095d8",
+   "57728669e04868ae"
   ]
  },
  {
@@ -23392,7 +23661,6 @@
   "date": "Thu, 12 Nov 2026 00:00:00 GMT",
   "added": "2026-11-17T21:05:41.046823+00:00",
   "related": [
-   "c231d25e54b9ad3f",
    "951c84561943a913"
   ]
  },
@@ -23918,7 +24186,7 @@
    "b0ded74e06b06613",
    "23b0b78bf3060353",
    "6717576b9778057c",
-   "808785e0ce7d2f2d"
+   "f26f2a4dfd6b9b95"
   ]
  },
  {
@@ -24047,8 +24315,7 @@
   "added": "2026-11-17T08:09:44.942344+00:00",
   "related": [
    "7156825ae33dd830",
-   "4b0fc5b701ffd77d",
-   "f26f2a4dfd6b9b95"
+   "4b0fc5b701ffd77d"
   ]
  },
  {
@@ -24108,8 +24375,8 @@
   "related": [
    "57a5ba0acc697998",
    "59c578bf213c6d53",
-   "ad719e8a38ff6ab2",
-   "f76b405a79505b9d"
+   "f76b405a79505b9d",
+   "ad719e8a38ff6ab2"
   ]
  },
  {
@@ -24311,8 +24578,8 @@
   "added": "2026-11-17T08:07:57.114557+00:00",
   "related": [
    "f8045fa626e2c02a",
+   "e09aa9a8dd804800",
    "2f1f5cbf7ce833ab",
-   "5fbc7d8ce285cc02",
    "32af257829de9696"
   ]
  },
@@ -24471,7 +24738,8 @@
   "related": [
    "f816757e046db752",
    "0b5fe7dce536bb45",
-   "c6c361c53bc4ce2d"
+   "c6c361c53bc4ce2d",
+   "c082f0539baa9791"
   ]
  },
  {
@@ -24631,8 +24899,8 @@
   "related": [
    "d6a5b08e3fa8b3f0",
    "645e798427f902eb",
-   "620756f297e99f3c",
-   "d9a047affb028160"
+   "d9a047affb028160",
+   "620756f297e99f3c"
   ]
  },
  {
@@ -24727,8 +24995,8 @@
   "related": [
    "c216fe867cbdf75d",
    "fcbadb5e4e74b6f8",
-   "ffb0dde8d8967242",
-   "5d02e171408cd9c4"
+   "5d02e171408cd9c4",
+   "ffb0dde8d8967242"
   ]
  },
  {
@@ -24885,8 +25153,8 @@
   "related": [
    "42ab94e8681b0b65",
    "b20060722a6fcdb8",
-   "ab50b7af668be0ea",
-   "b832d2222a255484"
+   "8451eda18f3aa606",
+   "ab50b7af668be0ea"
   ]
  },
  {
@@ -24916,8 +25184,8 @@
   "related": [
    "694c53c6c7341f2b",
    "63437884c9c25089",
-   "6fd4c32fe34a4cba",
-   "9fa731b0ef6c1da9"
+   "9fa731b0ef6c1da9",
+   "6fd4c32fe34a4cba"
   ]
  },
  {
@@ -24948,8 +25216,8 @@
   "related": [
    "b88709aa5efa153c",
    "964abff5bf4e7cc8",
-   "5c441d68610c0b14",
-   "b20060722a6fcdb8"
+   "b20060722a6fcdb8",
+   "5c441d68610c0b14"
   ]
  },
  {
@@ -25107,8 +25375,8 @@
   "related": [
    "e85847e7b6613d4d",
    "8656577bc6f00f0e",
-   "24817791f262e8b7",
-   "01995458ab323d07"
+   "01995458ab323d07",
+   "24817791f262e8b7"
   ]
  },
  {
@@ -25141,7 +25409,8 @@
   "related": [
    "3c6728c1bfd19879",
    "19083df15e187b0c",
-   "f4784c30400364a2"
+   "f4784c30400364a2",
+   "e1f0b026991195d1"
   ]
  },
  {
@@ -25207,8 +25476,8 @@
   "related": [
    "e1a5ad928bbd2e8f",
    "676bccdabb367bf4",
-   "e337e8608e1e9412",
-   "b014c2bf13f4b6d6"
+   "b014c2bf13f4b6d6",
+   "e337e8608e1e9412"
   ]
  },
  {
@@ -25271,7 +25540,7 @@
    "5f72fbdc79b9385d",
    "b1c71d07875ac772",
    "cfcc7acb02e9ca79",
-   "6687f7be62c34e4a"
+   "951c84561943a913"
   ]
  },
  {
@@ -25393,10 +25662,10 @@
   "date": "Mon, 16 Nov 2026 18:11:10 +0000",
   "added": "2026-11-16T22:21:57.053449+00:00",
   "related": [
+   "f816757e046db752",
    "9e3d554c6cb56d83",
    "8ab70d6f89cfc96b",
-   "b7579835e4e7c6dd",
-   "3feac09277102c22"
+   "b7579835e4e7c6dd"
   ]
  },
  {
@@ -25425,9 +25694,9 @@
   "date": "Mon, 16 Nov 2026 19:12:02 +0000",
   "added": "2026-11-16T22:21:45.253226+00:00",
   "related": [
+   "d2f90fb918d969fe",
    "aa93777566bc104e",
    "81a464b2bd018e0d",
-   "32af257829de9696",
    "1cb78417896f91c9"
   ]
  },
@@ -25557,9 +25826,9 @@
   "added": "2026-11-16T22:20:57.255580+00:00",
   "related": [
    "c6caa4d4f0b0e545",
-   "f240bb31094b1ee3",
    "9e3d554c6cb56d83",
-   "1207b5c1c70bbc64"
+   "1207b5c1c70bbc64",
+   "ce416493dbd77e39"
   ]
  },
  {
@@ -25623,8 +25892,8 @@
   "related": [
    "1207b5c1c70bbc64",
    "ce416493dbd77e39",
-   "3dc626ea28ff3a7d",
-   "3a0cb236fd3220da"
+   "3a0cb236fd3220da",
+   "94305b427e5aac0a"
   ]
  },
  {
@@ -26265,8 +26534,8 @@
   "added": "2026-11-16T22:16:33.462221+00:00",
   "related": [
    "b6d10f5dbc5e9f87",
-   "a556368df1d24692",
-   "c42ca8f219e62b8c"
+   "c42ca8f219e62b8c",
+   "a556368df1d24692"
   ]
  },
  {
@@ -26431,8 +26700,8 @@
   "related": [
    "e87a4535763a3f27",
    "60e40361655d6751",
-   "57017ac735e46aec",
-   "20846ea7ff45137b"
+   "20846ea7ff45137b",
+   "57017ac735e46aec"
   ]
  },
  {
@@ -26639,8 +26908,7 @@
   "related": [
    "b6d10f5dbc5e9f87",
    "3cb6f8957f1309aa",
-   "718c87c9a039ea20",
-   "48dc834320749afe"
+   "718c87c9a039ea20"
   ]
  },
  {
@@ -26903,10 +27171,10 @@
   "date": "2026-11-15T14:15:43-05:00",
   "added": "2026-11-16T06:48:43.260763+00:00",
   "related": [
-   "3dc626ea28ff3a7d",
    "43465bb556008cf4",
    "ce416493dbd77e39",
-   "07356858caea4ddc"
+   "07356858caea4ddc",
+   "94305b427e5aac0a"
   ]
  },
  {
@@ -27084,9 +27352,9 @@
   "added": "2026-11-16T06:47:31.063434+00:00",
   "related": [
    "b7579835e4e7c6dd",
-   "0b5fe7dce536bb45",
    "71dad9da95c2fbfe",
-   "4c525e5e54fa3645"
+   "0b5fe7dce536bb45",
+   "627c324df106de1b"
   ]
  },
  {
@@ -27151,10 +27419,10 @@
   "date": "Mon, 16 Nov 2026 00:00:28 +0000",
   "added": "2026-11-16T06:47:07.242230+00:00",
   "related": [
-   "f240bb31094b1ee3",
    "c82ab5c574080217",
    "bb3ee1cf50e29f40",
-   "1122627a66dfc215"
+   "1122627a66dfc215",
+   "3feac09277102c22"
   ]
  },
  {
@@ -27213,8 +27481,8 @@
   "date": "2026-11-15T17:52:41+00:00",
   "added": "2026-11-16T06:46:43.062642+00:00",
   "related": [
-   "cf77ef770c4ca97c",
    "00b1dbe5a0c29055",
+   "cf77ef770c4ca97c",
    "2696a13a373f0122",
    "03e1ce70f1125e7d"
   ]
@@ -27247,7 +27515,7 @@
   "related": [
    "6e8dbe3788a3467a",
    "2d52a4076de31726",
-   "db5a7352d8a8f936",
+   "7fc09e03d574cdbc",
    "11ac1d25eb0e562b"
   ]
  },
@@ -27345,8 +27613,8 @@
   "added": "2026-11-16T06:45:55.146429+00:00",
   "related": [
    "4b0509310e9e561a",
-   "2427bacb74a96b4b",
    "63437884c9c25089",
+   "00164f311d41670a",
    "64d40a84782e1014"
   ]
  },
@@ -27532,7 +27800,7 @@
    "a2aa3f3e40baae52",
    "5a831e0a7294769f",
    "fed9e04f33fc05ee",
-   "0ca25edadd1d7b98"
+   "97d3633bdcb38575"
   ]
  },
  {
@@ -27562,7 +27830,8 @@
   "added": "2026-11-16T06:44:31.061253+00:00",
   "related": [
    "7fc61acd4d15604b",
-   "7047e076bccaf85c"
+   "7047e076bccaf85c",
+   "4584b3d202ced805"
   ]
  },
  {
@@ -27721,8 +27990,8 @@
   "related": [
    "13a6b8013ec3564c",
    "63437884c9c25089",
-   "3c2b00179f4c2cf9",
-   "52f09809260e978d"
+   "52f09809260e978d",
+   "3c2b00179f4c2cf9"
   ]
  },
  {
@@ -28017,9 +28286,9 @@
   "added": "2026-11-15T18:56:22.044741+00:00",
   "related": [
    "94305b427e5aac0a",
-   "43465bb556008cf4",
    "ce416493dbd77e39",
-   "3dc626ea28ff3a7d"
+   "43465bb556008cf4",
+   "075bbfb634c2a8a5"
   ]
  },
  {
@@ -28423,10 +28692,10 @@
   "date": "Sat, 14 Nov 2026 21:41:22 +0000",
   "added": "2026-11-14T22:33:38.908132+00:00",
   "related": [
+   "9c493a96e3fa6482",
    "ada2460a24f685eb",
    "90f831b4fd3ecc8c",
-   "f8045fa626e2c02a",
-   "5fbc7d8ce285cc02"
+   "f8045fa626e2c02a"
   ]
  },
  {
@@ -28937,7 +29206,7 @@
    "8b0327eb0ad9274a",
    "a1bab071a14f561f",
    "63f0f7ee2cf50c46",
-   "964abff5bf4e7cc8"
+   "676bccdabb367bf4"
   ]
  },
  {
@@ -30207,10 +30476,10 @@
   "date": "2026-11-13T15:45:10-05:00",
   "added": "2026-11-14T06:41:20.872652+00:00",
   "related": [
-   "c231d25e54b9ad3f",
    "c6c361c53bc4ce2d",
    "cfcc7acb02e9ca79",
-   "2600860578f34aa5"
+   "2600860578f34aa5",
+   "dc85126b0ac71765"
   ]
  },
  {
@@ -30364,7 +30633,8 @@
   "related": [
    "8e485c1c148701e4",
    "4584b3d202ced805",
-   "5094532b4e2e63d2"
+   "5094532b4e2e63d2",
+   "c216fe867cbdf75d"
   ]
  },
  {
@@ -30519,8 +30789,8 @@
   "date": "2026-11-11T19:00:00.000Z",
   "added": "2026-11-14T06:39:21.259245+00:00",
   "related": [
-   "97d3633bdcb38575",
    "b63023bfb9fc2173",
+   "97d3633bdcb38575",
    "c42ca8f219e62b8c",
    "8b0327eb0ad9274a"
   ]
@@ -30644,7 +30914,8 @@
   "related": [
    "d6624a4f03c35acf",
    "2867ce4c38e61b91",
-   "ef890fa13d4be292"
+   "ef890fa13d4be292",
+   "1f5280f214a66a1d"
   ]
  },
  {
@@ -30673,8 +30944,7 @@
   "added": "2026-11-14T06:38:20.850115+00:00",
   "related": [
    "284d467a0171dbf2",
-   "b23489aeb6f1af79",
-   "6302fdf80095ab35"
+   "b23489aeb6f1af79"
   ]
  },
  {
@@ -30704,7 +30974,7 @@
    "a7fb52666c606df9",
    "5c37c83cea812a23",
    "23a6e8d38fa0e0cc",
-   "cf77ef770c4ca97c"
+   "b63023bfb9fc2173"
   ]
  },
  {
@@ -30764,9 +31034,9 @@
   "date": "2026-11-14T02:52:59Z",
   "added": "2026-11-14T06:37:44.623793+00:00",
   "related": [
-   "f240bb31094b1ee3",
    "d0d45b2248dd790b",
    "0322d2a0d024b300",
+   "d652f478feeed9d6",
    "3feac09277102c22"
   ]
  },
@@ -30862,7 +31132,7 @@
    "603403c78a7741ec",
    "1fd1f42d90df6b56",
    "f7443cad77b05a15",
-   "a1bab071a14f561f"
+   "5f72fbdc79b9385d"
   ]
  },
  {
@@ -31190,8 +31460,8 @@
   "related": [
    "853993777f319fd1",
    "1f48ec4b503fbb71",
-   "49f0104ed04b09d4",
-   "576bdfffc7bca566"
+   "576bdfffc7bca566",
+   "49f0104ed04b09d4"
   ]
  },
  {
@@ -31220,8 +31490,8 @@
   "added": "2026-11-13T19:55:09.218008+00:00",
   "related": [
    "f00d83341f65cba8",
-   "1456693a87f2636b",
    "30d463386b152b16",
+   "1456693a87f2636b",
    "3a7d802db1ff6d32"
   ]
  },
@@ -31255,234 +31525,9 @@
   "added": "2026-11-13T19:54:57.482984+00:00",
   "related": [
    "af1852b4c46dc30e",
-   "875022353549216c",
    "1c343af691bcf876",
-   "a4115a03062782cf"
-  ]
- },
- {
-  "headline": "Jensen Huang didn’t show confidence in his successor, report says",
-  "tldr": "Nvidia CEO Jensen Huang publicly doubted his successor, calling him a \"deer in the headlights\".",
-  "key_points": [
-   "Jensen Huang expressed lack of confidence",
-   "Referred to successor Kress as a \"deer in the headlights\"",
-   "Comment made during a summer meeting"
-  ],
-  "why_it_matters": "Leadership perception at Nvidia can affect investor confidence and company direction, especially during a critical succession period.",
-  "category": "other",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "leadership",
-   "succession",
-   "Nvidia"
-  ],
-  "importance": 2,
-  "id": "025949940b1ff6f3",
-  "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 12:28:23 +0000",
-  "added": "2026-11-13T19:54:45.513117+00:00",
-  "related": [
-   "2f1f5cbf7ce833ab",
-   "8ab70d6f89cfc96b",
-   "47b1648bdb930a3d",
-   "7a5947019eec714b"
-  ]
- },
- {
-  "headline": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
-  "tldr": "Israeli venture capitalists view Nvidia’s current challenges as a chance for rival AI hardware startups to gain traction.",
-  "key_points": [
-   "Nvidia faces turmoil affecting its AI dominance",
-   "Israeli VCs anticipate openings for challenger companies",
-   "Potential shift in AI hardware market dynamics in Israel"
-  ],
-  "why_it_matters": "Nvidia’s stronghold on AI chips underpins many global AI projects; any disruption could reshape investment flows and accelerate the emergence of alternative hardware providers, impacting the broader AI ecosystem.",
-  "category": "funding",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "venture capital",
-   "Israel",
-   "AI hardware",
-   "market dynamics"
-  ],
-  "importance": 2,
-  "id": "f240bb31094b1ee3",
-  "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 12:52:19 +0000",
-  "added": "2026-11-13T19:54:32.785505+00:00",
-  "related": [
-   "c6caa4d4f0b0e545",
-   "d652f478feeed9d6",
-   "ec577d4c46a6d8ce",
-   "9e3d554c6cb56d83"
-  ]
- },
- {
-  "headline": "ElevenLabs’ new app combines meeting note-taking and dictation for teams",
-  "tldr": "ElevenLabs launched ElevenAI, a meeting note‑taking and dictation app for teams and enterprises.",
-  "key_points": [
-   "New app merges note‑taking and live dictation",
-   "Targeted at team collaboration and enterprise use",
-   "Named ElevenAI and built by ElevenLabs"
-  ],
-  "why_it_matters": "Streamlines meeting workflows by providing integrated transcription and note generation, helping teams capture information faster and improve productivity.",
-  "category": "product",
-  "companies": [
-   "ElevenLabs"
-  ],
-  "tags": [
-   "meeting",
-   "dictation",
-   "enterprise",
-   "AI"
-  ],
-  "importance": 2,
-  "id": "744da6a2871c93b3",
-  "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 14:44:48 +0000",
-  "added": "2026-11-13T19:54:20.931659+00:00",
-  "related": [
-   "029ded4e9a8f172f",
-   "44fe677fd46c23c4",
-   "2600860578f34aa5",
-   "7d8981ef54762173"
-  ]
- },
- {
-  "headline": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
-  "tldr": "ChatGPT Wallet enables AI agents to purchase items on behalf of users, initially for U.S. Pro subscribers.",
-  "key_points": [
-   "AI agents can browse and add items to cart",
-   "Agents can complete checkout automatically",
-   "Limited rollout to U.S. Pro subscribers",
-   "Integrated within ChatGPT interface"
-  ],
-  "why_it_matters": "Automating purchases lowers friction for users and showcases practical, revenue‑generating uses of conversational AI, potentially expanding AI’s role in e‑commerce.",
-  "category": "product",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "AI agents",
-   "e-commerce",
-   "ChatGPT"
-  ],
-  "importance": 2,
-  "id": "c231d25e54b9ad3f",
-  "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 16:00:12 +0000",
-  "added": "2026-11-13T19:54:08.771369+00:00",
-  "related": [
-   "951c84561943a913",
-   "b527b6f0ddceafec",
-   "01945f6a907c7618",
-   "99b93f3e10984935"
-  ]
- },
- {
-  "headline": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh oh, Jensen!",
-  "tldr": "Research reveals China's top AI models were trained using Nvidia chips that are prohibited for export to the country.",
-  "key_points": [
-   "China's most advanced AI models rely on Nvidia hardware",
-   "The chips used are subject to export bans",
-   "Raises concerns about enforcement of technology restrictions"
-  ],
-  "why_it_matters": "It highlights gaps in export control enforcement and suggests that high‑performance AI capabilities can still be built in restricted regions, impacting geopolitical tech competition.",
-  "category": "hardware",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "export ban",
-   "China",
-   "AI models",
-   "chips"
-  ],
-  "importance": 2,
-  "id": "3dc626ea28ff3a7d",
-  "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 18:40:30 +0000",
-  "added": "2026-11-13T19:53:56.857587+00:00",
-  "related": [
-   "ce416493dbd77e39",
-   "1207b5c1c70bbc64",
-   "94305b427e5aac0a",
-   "43465bb556008cf4"
-  ]
- },
- {
-  "headline": "XYBench: Helping with the problem behind the question",
-  "tldr": "XYBench is introduced as a tool to address the underlying issue of question formulation.",
-  "key_points": [
-   "New benchmark named XYBench",
-   "Focuses on the problem behind each question",
-   "Aims to improve evaluation of AI models",
-   "Released by Hugging Face"
-  ],
-  "why_it_matters": "Understanding the root problem of a question can lead to more accurate model assessments and better downstream performance.",
-  "category": "product",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "benchmark",
-   "evaluation",
-   "XYBench",
-   "AI"
-  ],
-  "importance": 2,
-  "id": "8400bdfe1e2afd49",
-  "url": "https://huggingface.co/blog/allenai/xybench",
-  "source": "Hugging Face Blog",
-  "date": "Fri, 13 Nov 2026 17:02:35 GMT",
-  "added": "2026-11-13T19:53:44.861441+00:00",
-  "related": [
-   "603403c78a7741ec",
-   "964abff5bf4e7cc8",
-   "b88709aa5efa153c",
-   "27b0129b73da0b19"
-  ]
- },
- {
-  "headline": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
-  "tldr": "Hugging Face shows how to create a pick‑and‑place robot simulation using SimReady assets.",
-  "key_points": [
-   "Step‑by‑step guide to building a robot simulation",
-   "Uses SimReady assets for realistic environments",
-   "Focuses on pick‑and‑place tasks",
-   "Targeted at developers and researchers"
-  ],
-  "why_it_matters": "Provides accessible tools for robotics developers to prototype and test manipulation tasks without physical hardware, accelerating research and product development.",
-  "category": "product",
-  "companies": [
-   "Hugging Face"
-  ],
-  "tags": [
-   "robotics",
-   "simulation",
-   "pick-and-place",
-   "AI"
-  ],
-  "importance": 2,
-  "id": "2427bacb74a96b4b",
-  "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
-  "source": "Hugging Face Blog",
-  "date": "Fri, 13 Nov 2026 18:00:39 GMT",
-  "added": "2026-11-13T19:53:32.768502+00:00",
-  "related": [
-   "9d04df52e96cbcfe",
-   "afb6e19cde341652",
-   "16565a3f5dc091b0",
-   "4b0509310e9e561a"
+   "875022353549216c",
+   "9939bfd922ed189c"
   ]
  }
 ]

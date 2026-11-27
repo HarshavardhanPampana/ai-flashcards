@@ -1,6 +1,23 @@
 {
  "runs": [
   {
+   "time": "2026-11-27T00:19:48+00:00",
+   "collected": 320,
+   "after_fuzzy": 8,
+   "after_semantic": 7,
+   "fuzzy_removed": 312,
+   "semantic_removed": 1,
+   "summarized": 7,
+   "cards_added": 7,
+   "explored": 0,
+   "followups": 4,
+   "models": [
+    "openai/gpt-oss-120b"
+   ],
+   "seconds": 81,
+   "ml": true
+  },
+  {
    "time": "2026-11-26T22:26:51+00:00",
    "collected": 320,
    "after_fuzzy": 47,
@@ -16,26 +33,32 @@
    "ml": true
   }
  ],
- "updated": "2026-11-26T22:26:51+00:00",
+ "updated": "2026-11-27T00:19:48+00:00",
  "cards": 1000,
  "mlp": {
   "category": {
-   "accuracy": 0.815,
+   "accuracy": 0.79,
    "baseline_majority": 0.595,
    "n_train": 800,
    "n_test": 200,
    "params": 50441
   },
   "importance": {
-   "accuracy": 0.825,
-   "baseline_majority": 0.625,
+   "accuracy": 0.805,
+   "baseline_majority": 0.595,
    "n_train": 800,
    "n_test": 200,
-   "params": 49796,
-   "within_1_star": 0.985
+   "params": 49925,
+   "within_1_star": 1.0
   }
  },
  "semantic_examples": [
+  {
+   "new": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
+   "matches": "Tidal will start banning AI-generated music next month",
+   "similarity": 0.939,
+   "source": "Ars Technica AI"
+  },
   {
    "new": "The open-source movement wants Jensen Huang back",
    "matches": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
@@ -68,9 +91,9 @@
   }
  ],
  "agreement": {
-  "cards": 40,
-  "category": 0.775,
-  "importance_exact": 0.775,
+  "cards": 47,
+  "category": 0.723,
+  "importance_exact": 0.787,
   "importance_within_1": 1.0
  }
 }
