@@ -75,7 +75,7 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; min-height: 100vh;
   font: 15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg-grad), var(--bg); background-attachment: fixed;
+  background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -439,11 +439,12 @@ h1 { font-weight: 800; }
 .picked-heart { color: var(--vermilion); }
 .bar span { background: var(--good); }
 
-/* subtle washi grain */
-body::before {
-  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .35;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+/* background glow + film grain live on their own fixed, GPU-composited layers:
+   unlike background-attachment: fixed, they never force a repaint while scrolling */
+body::before, body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  transform: translateZ(0); will-change: transform; }
+body::before { background: var(--bg-grad); }
+body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity: .18; }
 .how-sm { display: none; font-size: 12px; font-weight: 700; text-decoration: none; }
 @media (max-width: 640px) {
   .top-actions a.how-lg { display: none; }
@@ -518,8 +519,7 @@ body::before {
 /* ======================================================================
    Tokyo neon layer: glows, bolder type, a hero that pops
    ====================================================================== */
-body { background: var(--bg-grad), var(--bg); background-attachment: fixed; }
-body::before { opacity: .18; }
+body { background: var(--bg); }
 h1 { letter-spacing: -.01em; }
 .card h3 { font-weight: 800; }
 .btn.primary { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent),
@@ -611,3 +611,38 @@ h1 { letter-spacing: -.01em; }
   .trending::-webkit-scrollbar { display: none; }
   .t-chip, .t-label { flex: none; }
 }
+
+/* ======================================================================
+   Scroll wheel: a canvas-drawn silver thumbwheel replacing the browser scrollbar.
+   JS eases transform + opacity every frame; no CSS transitions on it (they'd fight the easing).
+   ====================================================================== */
+html { scrollbar-width: none; }                       /* hide the native scrollbar (Firefox) */
+html::-webkit-scrollbar { width: 0; height: 0; }      /* (Chrome, Edge, Safari) */
+.wheel {
+  position: fixed; right: 5px; top: 0; width: 20px; height: 76px; z-index: 45;
+  transform-origin: 75% 50%; will-change: transform, opacity; opacity: .55;
+  border-radius: 9px; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none;
+  box-shadow: 0 0 0 .5px rgba(0, 0, 0, .55), 0 6px 16px rgba(0, 0, 0, .45);   /* static: never animated */
+}
+.wheel canvas { display: block; width: 20px; height: 76px; border-radius: 9px; }
+.wheel[hidden] { display: none; }
+.wheel:active { cursor: grabbing; }
+:root[data-theme="light"] .wheel { box-shadow: 0 0 0 .5px rgba(17, 19, 20, .25), 0 4px 12px rgba(17, 19, 20, .2); }
+body.studying .wheel { display: none; }
+@media (pointer: coarse) { .wheel { right: 3px; } }
+
+
+/* covers are illustrations, not news photos: say so on every one */
+.thumb { position: relative; }
+.ai-badge { position: absolute; right: 8px; bottom: 6px; z-index: 2; font-size: 10px; font-weight: 700; letter-spacing: .02em;
+  padding: 2px 7px; border-radius: 999px; color: #fff; background: rgba(8, 9, 12, .78);   /* no backdrop blur: 28 blurred layers made scrolling stutter */
+  pointer-events: auto; }
+
+/* baked-in top stories (shown before JavaScript loads, and to link previews / crawlers) */
+.seo-top { grid-column: 1 / -1; display: grid; gap: 12px; }
+.seo-note { color: var(--muted); font-size: 13px; margin: 0; }
+.seo-card { background: var(--surface); border: 1px solid var(--line, rgba(255,255,255,.08)); border-radius: 14px; padding: 14px 18px; }
+.seo-card h2 { font-size: 18px; margin: 4px 0 6px; line-height: 1.3; }
+.seo-card h2 a { color: var(--text); text-decoration: none; }
+.seo-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.seo-meta { font-size: 12px !important; text-transform: capitalize; }

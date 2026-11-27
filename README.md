@@ -104,6 +104,10 @@ Edit `scraper/config.py` to change them. (r/MachineLearning was dropped: Reddit 
   white light mode. Every text colour passes WCAG AA. Shippori Mincho headlines.
 - **Front page:** a "Today in AI" masthead with today's top story and live stats, a scrolling ticker of the newest
   headlines, trending topic chips (tap to filter), and a footer with sources and credits
+- **Scroll wheel:** the browser scrollbar is replaced by a gunmetal thumbwheel with fine ridges, drawn on a canvas at
+  full screen resolution with per-ridge lighting. It rides the scrollbar's line, glides (eased every frame), rolls as
+  you scroll, springs from 60% to 80% size while scrolling, tracks the page frame-for-frame, pulses at each notch, and can be dragged. On Android each
+  notch also gives a tiny vibration.
 - Light/dark, phone layout, add-to-home-screen; progress saved per browser
 
 ## Deploy

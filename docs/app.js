@@ -734,4 +734,177 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
+// ---------- scroll wheel: a canvas-drawn silver thumbwheel with hair-thin ridges ----------
+// Drawn at full screen resolution with per-ridge lighting, so it reads as polished aluminium.
+// Position, roll, zoom and fade are all eased every frame (transform + opacity only, no layout).
+// Each ridge passing the centre gives a small visual pulse (and a tiny vibration on Android phones).
+(function scrollWheel() {
+  const wheel = $("scrollKnob"), canvas = wheel.querySelector("canvas"), g = canvas.getContext("2d");
+  const coarse = matchMedia("(pointer: coarse)").matches;
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const canBuzz = "vibrate" in navigator && coarse;
+  const W = 20, H = 76, PAD = 10;          // css px; keep in sync with .wheel
+  const RIDGES = 72;                       // fine ridges all the way round (fewer = less shimmer when moving)
+  const DEG_PER_PX = 0.30;                 // roll speed
+  const DETENT_DEG = 15;                   // a click every 15 degrees (~50px of scrolling)
+
+  // ---- canvas at device resolution ----
+  let dpr = 1;
+  function sizeCanvas() {
+    dpr = Math.min(3, window.devicePixelRatio || 1);
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    canvas.style.width = W + "px"; canvas.style.height = H + "px";
+  }
+  sizeCanvas();
+  const isLight = () => document.documentElement.dataset.theme === "light";
+
+  // ---- draw one frame of the wheel at rotation `deg` ----
+  function draw(deg) {
+    const w = canvas.width, h = canvas.height, R = h / 2, cx = w / 2;
+    const light = isLight();
+    g.clearRect(0, 0, w, h);
+    g.save();
+    // rounded body clip (a cylinder seen edge-on)
+    const rad = Math.min(w / 2, 9 * dpr);
+    g.beginPath(); g.roundRect ? g.roundRect(0, 0, w, h, rad) : g.rect(0, 0, w, h); g.clip();
+
+    // base metal: vertical curvature light (bright just above centre, falling off to the rims)
+    const base = g.createLinearGradient(0, 0, 0, h);
+    const stops = light
+      ? [[0, "#7d8488"], [.18, "#a2a9ad"], [.40, "#d3d9dd"], [.5, "#bfc5ca"], [.72, "#9aa0a5"], [1, "#767c81"]]   // soft brushed silver
+      : [[0, "#101215"], [.18, "#33373d"], [.40, "#7a8089"], [.5, "#5b6068"], [.72, "#30343a"], [1, "#0e1013"]];  // gunmetal
+    stops.forEach(([o, c]) => base.addColorStop(o, c));
+    g.fillStyle = base; g.fillRect(0, 0, w, h);
+
+    // hair-thin ridges: project each ridge around the cylinder, foreshorten and light it
+    const step = 360 / RIDGES;
+    const off = ((deg % step) + step) % step;
+    for (let k = -RIDGES / 2; k <= RIDGES / 2; k++) {
+      const a = (k * step + off) * Math.PI / 180;           // angle from the viewer
+      const c = Math.cos(a);
+      if (c <= 0.02) continue;
+      const y = R + Math.sin(a) * R * 0.985;
+      const t = Math.max(0.45, c) * dpr * 1.25;             // thickness shrinks towards the rims
+      const lit = 0.55 + 0.45 * Math.cos(a + 0.35);         // light from slightly above
+      g.fillStyle = `rgba(0,0,0,${(light ? 0.28 : 0.42) * (0.55 + 0.45 * c)})`;   // groove
+      g.fillRect(0, y - t * 0.55, w, t * 0.55);
+      g.fillStyle = `rgba(255,255,255,${(light ? 0.34 : 0.26) * lit * c})`;        // ridge crest
+      g.fillRect(0, y, w, t * 0.45);
+    }
+
+
+    // soft specular sheen + side bevels so it reads as a solid metal disc edge
+    const sheen = g.createLinearGradient(0, 0, 0, h);
+    sheen.addColorStop(.30, "rgba(255,255,255,0)");
+    sheen.addColorStop(.42, `rgba(255,255,255,${light ? .35 : .22})`);
+    sheen.addColorStop(.52, "rgba(255,255,255,0)");
+    g.fillStyle = sheen; g.fillRect(0, 0, w, h);
+    const bevel = g.createLinearGradient(0, 0, w, 0);
+    bevel.addColorStop(0, "rgba(0,0,0,.45)"); bevel.addColorStop(.16, "rgba(0,0,0,0)");
+    bevel.addColorStop(.84, "rgba(0,0,0,0)"); bevel.addColorStop(1, "rgba(0,0,0,.45)");
+    g.fillStyle = bevel; g.fillRect(0, 0, w, h);
+    const rim = g.createLinearGradient(0, 0, 0, h);                // rims fall into shadow
+    rim.addColorStop(0, "rgba(0,0,0,.55)"); rim.addColorStop(.12, "rgba(0,0,0,0)");
+    rim.addColorStop(.88, "rgba(0,0,0,0)"); rim.addColorStop(1, "rgba(0,0,0,.55)");
+    g.fillStyle = rim; g.fillRect(0, 0, w, h);
+    g.restore();
+  }
+
+  // ---- motion: eased every frame ----
+  // page metrics are cached and refreshed only when the page size changes, so scrolling never forces layout
+  let docH = 0, viewH = innerHeight;
+  const measure = () => { docH = document.documentElement.scrollHeight; viewH = innerHeight; };
+  measure();
+  if ("ResizeObserver" in window) new ResizeObserver(() => { measure(); targets(); kick(); }).observe(document.body);
+  const maxScroll = () => Math.max(1, docH - viewH);
+  let tY = 0, tA = 0, tZ = 0, y = 0, a = 0, z = 0;        // z: 0 = resting, 1 = active
+  let lastFrame = 0, running = false, lastDetent = null, lastClick = 0, hideT = 0, dragging = false, safety = 0;
+  function targets() {
+    const scrollable = docH - viewH > 200;
+    if (wheel.hidden === scrollable) wheel.hidden = !scrollable;
+    const pr = Math.min(1, Math.max(0, scrollY / maxScroll()));
+    tY = PAD + pr * (viewH - H - 2 * PAD);
+    tA = scrollY * DEG_PER_PX;
+    wheel.setAttribute("aria-valuenow", Math.round(pr * 100));
+    return scrollable;
+  }
+  let drawnA = NaN, pulse = 0, vz = 0, scrolling = false, scrollEnd = 0;
+  function render() {
+    const scale = 0.6 + 0.2 * z + 0.015 * pulse;   // 60% at rest, 80% while scrolling, plus a tiny notch pulse
+    const snapY = Math.round(y * dpr) / dpr;                 // land on real pixels: no sub-pixel jitter
+    wheel.style.transform = `translate3d(0, ${snapY}px, 0) scale(${scale.toFixed(3)})`;
+    wheel.style.opacity = ((isLight() ? 0.85 : 0.55) + (isLight() ? 0.15 : 0.45) * z).toFixed(3);   // light: same silver at rest and in motion
+    if (!(Math.abs(a - drawnA) <= 0.04) || pulse > 0.02) { draw(a); drawnA = a; }   // (also true when drawnA is NaN)
+    const d = Math.floor(a / DETENT_DEG);
+    if (lastDetent !== null && d !== lastDetent) {
+      const now = performance.now();
+      if (now - lastClick > 60) {                                 // at most ~16 notches a second
+        lastClick = now;
+        pulse = 1;                                                  // the wheel "seats" into the notch
+        if (canBuzz) { try { navigator.vibrate(4); } catch {} }
+      }
+    }
+    lastDetent = d;
+  }
+  function frame() {
+    const now = performance.now();
+    const dt = Math.min(64, Math.max(0, now - (lastFrame || now - 16))); lastFrame = now;
+    // position and roll follow the page exactly, sampled once per frame. The browser already animates
+    // its own smooth scrolling, so the wheel moves in lock-step with it: no lag, no catch-up, no steps.
+    targets(); y = tY; a = tA;
+    if (reduced) { z = tZ; vz = 0; pulse = 0; }
+    else {
+      // zoom rides a soft spring (slightly under-damped) so it settles with a gentle, physical overshoot
+      const s = dt / 1000, w = 20, zeta = 0.72;
+      for (let n = 0; n < 2; n++) { vz += (w * w * (tZ - z) - 2 * zeta * w * vz) * (s / 2); z += vz * (s / 2); }
+      pulse *= Math.exp(-dt / 70);
+    }
+    render();
+    if (scrolling || Math.abs(tZ - z) > 0.002 || Math.abs(vz) > 0.01 || pulse > 0.01)
+      requestAnimationFrame(frame);
+    else { z = tZ; vz = 0; pulse = 0; render(); running = false; }
+  }
+  function kick() {
+    if (!running) { running = true; lastFrame = 0; requestAnimationFrame(frame); }
+    clearTimeout(safety);                // background tab with no animation frames: snap into place
+    safety = setTimeout(() => {
+      if (running && performance.now() - lastFrame > 140) { y = tY; a = tA; z = tZ; vz = 0; pulse = 0; render(); running = false; }
+    }, 150);
+  }
+  function wake() {
+    tZ = 1;
+    clearTimeout(hideT);
+    if (!dragging) hideT = setTimeout(() => { tZ = 0; kick(); }, 1000);
+  }
+  addEventListener("scroll", () => {
+    if (!targets()) return;
+    scrolling = true; clearTimeout(scrollEnd);
+    scrollEnd = setTimeout(() => { scrolling = false; }, 120);   // keep sampling until the page settles
+    wake(); kick();
+  }, { passive: true });
+  addEventListener("resize", () => { sizeCanvas(); drawnA = NaN; measure(); targets(); kick(); });
+  new MutationObserver(() => { measure(); targets(); kick(); }).observe($("grid"), { childList: true });
+  new MutationObserver(() => { drawnA = NaN; render(); })
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  // ---- drag along the scrollbar line ----
+  function dragTo(clientY) {
+    const pr = Math.min(1, Math.max(0, (clientY - PAD - H / 2) / (innerHeight - H - 2 * PAD)));
+    scrollTo({ top: pr * maxScroll(), behavior: "auto" });
+    targets(); kick();
+  }
+  wheel.addEventListener("pointerdown", (e) => {
+    dragging = true; wake();
+    try { wheel.setPointerCapture(e.pointerId); } catch {}
+    e.preventDefault();
+  });
+  wheel.addEventListener("pointermove", (e) => { if (dragging) dragTo(e.clientY); });
+  const end = () => { if (!dragging) return; dragging = false; wake(); kick(); };
+  wheel.addEventListener("pointerup", end);
+  wheel.addEventListener("pointercancel", end);
+
+  targets(); y = tY; a = tA; z = 0; render();
+})();
+
 load();
