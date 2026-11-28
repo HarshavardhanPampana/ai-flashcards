@@ -213,3 +213,24 @@ def test_ground_drops_unsupported_points_but_keeps_two():
     ml.ground(card2, article)
     assert len(card2["key_points"]) == 2
     assert ml.ground({"key_points": ["x"]}, "too short") is None   # not enough article text to judge
+
+
+def test_hf_paper_links_are_read_from_arxiv(monkeypatch):
+    from scraper import fetchers as F
+    seen = {}
+
+    class FakeResp:
+        status_code, headers, encoding = 200, {"content-type": "text/html"}, "utf-8"
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def iter_content(self, n):
+            yield b"<html><body><article><p>" + b"Real abstract sentence about the paper. " * 20 + b"</p></article></body></html>"
+
+    def fake_get(url, **kw):
+        seen["url"] = url
+        return FakeResp()
+    monkeypatch.setattr(F, "allowed_by_robots", lambda u: True)
+    monkeypatch.setattr(F.requests, "get", fake_get)
+    text = F.fetch_article_text("https://huggingface.co/papers/2611.31516")
+    assert seen["url"] == "https://arxiv.org/abs/2611.31516"
+    assert "Real abstract sentence" in text

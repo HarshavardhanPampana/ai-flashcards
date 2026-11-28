@@ -45,8 +45,9 @@ def semantic_dedupe(items, item_vecs, existing_vecs, threshold=DUP_THRESHOLD, ex
     return kept, kv, dropped
 
 
-SUPPORT_MIN = 0.45        # key point counts as supported if an article sentence is this similar. Checked on 16 real
-                          # cards: own-article points median 0.69, unrelated-article points 90th pct 0.31
+SUPPORT_MIN = 0.50        # key point counts as supported if an article sentence is at least this similar.
+                          # History test (5,266 points, eval/fulltext_eval.py): keeps 87.9% of real points and
+                          # rejects 82.0% of same-topic-other-story points and 98.8% of random ones
 
 
 def split_sentences(text, min_len=25, max_n=120):

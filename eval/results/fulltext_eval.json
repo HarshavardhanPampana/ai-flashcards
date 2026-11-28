@@ -1,0 +1,524 @@
+{
+ "cards_in_history": 1791,
+ "versions_scanned": 54,
+ "cards_with_full_text": 1262,
+ "key_points_tested": 5266,
+ "similarity": {
+  "own_article": {
+   "median": 0.685,
+   "p10": 0.477
+  },
+  "hard_control": {
+   "median": 0.381,
+   "p90": 0.551
+  },
+  "random_control": {
+   "median": 0.255,
+   "p90": 0.381
+  }
+ },
+ "current_threshold": 0.5,
+ "best_threshold": {
+  "threshold": 0.55,
+  "real_kept": 0.81,
+  "hard_rejected": 0.898,
+  "random_rejected": 0.996
+ },
+ "sweep": [
+  {
+   "threshold": 0.3,
+   "real_kept": 0.987,
+   "hard_rejected": 0.233,
+   "random_rejected": 0.685
+  },
+  {
+   "threshold": 0.35,
+   "real_kept": 0.973,
+   "hard_rejected": 0.398,
+   "random_rejected": 0.834
+  },
+  {
+   "threshold": 0.4,
+   "real_kept": 0.954,
+   "hard_rejected": 0.566,
+   "random_rejected": 0.926
+  },
+  {
+   "threshold": 0.45,
+   "real_kept": 0.925,
+   "hard_rejected": 0.713,
+   "random_rejected": 0.971
+  },
+  {
+   "threshold": 0.5,
+   "real_kept": 0.879,
+   "hard_rejected": 0.82,
+   "random_rejected": 0.988
+  },
+  {
+   "threshold": 0.55,
+   "real_kept": 0.81,
+   "hard_rejected": 0.898,
+   "random_rejected": 0.996
+  },
+  {
+   "threshold": 0.6,
+   "real_kept": 0.719,
+   "hard_rejected": 0.943,
+   "random_rejected": 0.999
+  },
+  {
+   "threshold": 0.65,
+   "real_kept": 0.595,
+   "hard_rejected": 0.972,
+   "random_rejected": 0.999
+  },
+  {
+   "threshold": 0.7,
+   "real_kept": 0.456,
+   "hard_rejected": 0.987,
+   "random_rejected": 1.0
+  },
+  {
+   "threshold": 0.75,
+   "real_kept": 0.317,
+   "hard_rejected": 0.994,
+   "random_rejected": 1.0
+  }
+ ],
+ "per_site": {
+  "huggingface.co": {
+   "cards": 645,
+   "ok": 605,
+   "short": 40,
+   "median_chars": 2629
+  },
+  "arxiv.org": {
+   "cards": 317,
+   "ok": 317,
+   "median_chars": 2253
+  },
+  "techcrunch.com": {
+   "cards": 213,
+   "robots": 213,
+   "median_chars": 0
+  },
+  "www.theverge.com": {
+   "cards": 128,
+   "ok": 128,
+   "median_chars": 2645
+  },
+  "www.reddit.com": {
+   "cards": 120,
+   "robots": 120,
+   "median_chars": 0
+  },
+  "openai.com": {
+   "cards": 98,
+   "robots": 98,
+   "median_chars": 0
+  },
+  "blogs.nvidia.com": {
+   "cards": 44,
+   "ok": 44,
+   "median_chars": 5338
+  },
+  "deepmind.google": {
+   "cards": 40,
+   "ok": 40,
+   "median_chars": 4588
+  },
+  "blog.google": {
+   "cards": 36,
+   "ok": 36,
+   "median_chars": 3223
+  },
+  "arstechnica.com": {
+   "cards": 20,
+   "robots": 20,
+   "median_chars": 0
+  },
+  "github.com": {
+   "cards": 17,
+   "ok": 16,
+   "short": 1,
+   "median_chars": 5467
+  },
+  "www.microsoft.com": {
+   "cards": 14,
+   "ok": 14,
+   "median_chars": 6000
+  },
+  "www.technologyreview.com": {
+   "cards": 10,
+   "ok": 10,
+   "median_chars": 6000
+  },
+  "bair.berkeley.edu": {
+   "cards": 10,
+   "ok": 10,
+   "median_chars": 6000
+  },
+  "twitter.com": {
+   "cards": 3,
+   "robots": 3,
+   "median_chars": 0
+  },
+  "news.ycombinator.com": {
+   "cards": 3,
+   "ok": 3,
+   "median_chars": 3355
+  },
+  "www.anthropic.com": {
+   "cards": 3,
+   "robots": 3,
+   "median_chars": 0
+  },
+  "pietromiotti.com": {
+   "cards": 2,
+   "ok": 2,
+   "median_chars": 6000
+  },
+  "generativehistory.substack.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "herecomesthemoon.net": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "techstackups.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "devnull.land": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "bjin.github.io": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "jayd.ml": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "www.comentr.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "www.lesswrong.com": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "greydanus.github.io": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "michaelharley.net": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 5235
+  },
+  "z.ai": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "openrouter.ai": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "sgiannopoulos.github.io": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "ricapar.net": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "www.gov.br": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 4159
+  },
+  "ankitg.me": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "kobi.music": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "thedataexchange.media": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "www.slowchronicle.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "europeanbusinessmagazine.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "rshekhar.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "exitpath-ruddy.vercel.app": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "microsoft.ai": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "energy-based-reasoners.github.io": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 2663
+  },
+  "complexdiscovery.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "phrack.org": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "claude.dev": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "runta.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "blog.antonio.cx": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "xusheng.dev": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "ykiko.me": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "magazine.sebastianraschka.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "space.stackexchange.com": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.youtube.com": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.nytimes.com": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.techspot.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "developer.nvidia.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "www.techpowerup.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 1436
+  },
+  "haddyalchaer.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 5321
+  },
+  "brave.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 2517
+  },
+  "status.claude.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 505
+  },
+  "developer.apple.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 4214
+  },
+  "unemploymentlabs.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "antigravity.google": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 3670
+  },
+  "libreagi.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 822
+  },
+  "www.cbsnews.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 2407
+  },
+  "blog.atuin.sh": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "9to5mac.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 2019
+  },
+  "claude.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "www.blender.org": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.nabo.dev": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.anthropocenemagazine.org": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 3373
+  },
+  "www.eetimes.com": {
+   "cards": 1,
+   "error": 1,
+   "median_chars": 0
+  },
+  "artificialanalysis.ai": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "research.meta.ai": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 3803
+  },
+  "www.payments.ca": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "ketchup3d.github.io": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "duxlabs.dev": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "www.lorekit.io": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "www.thestateofai.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "caleb.software": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 5714
+  },
+  "apiiro.com": {
+   "cards": 1,
+   "robots": 1,
+   "median_chars": 0
+  },
+  "www.euronews.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 5272
+  },
+  "www.linum.ai": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "alignment.openai.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "ernie.baidu.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  },
+  "hachyderm.io": {
+   "cards": 1,
+   "short": 1,
+   "median_chars": 0
+  },
+  "www.ricursive.com": {
+   "cards": 1,
+   "ok": 1,
+   "median_chars": 6000
+  }
+ },
+ "seconds": 1602
+}

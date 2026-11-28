@@ -148,6 +148,7 @@ class Groq(Provider):
             raise ModelUnavailable("rate limited") from e
         except groq.InternalServerError as e:
             raise ModelUnavailable(f"server error {e.status_code}") from e
+        _count_tokens(getattr(getattr(r, "usage", None), "total_tokens", 0))
         return r.choices[0].message.content
 
 
@@ -192,6 +193,7 @@ class Gemini(Provider):
             raise
         except errors.ServerError as e:
             raise ModelUnavailable(f"overloaded ({e.code})") from e
+        _count_tokens(getattr(getattr(resp, "usage_metadata", None), "total_token_count", 0))
         return resp.text
 
 
@@ -236,10 +238,21 @@ def _clean(card):
     }
 
 
+# The LLM reads at most this much article text. Median full article is ~2,800 chars (history test), and
+# 4,000 chars (~1,000 tokens) keeps a busy day under Groq's free daily token budget.
+ARTICLE_CHARS = 4000
+TOKENS = {"calls": 0, "total": 0}          # LLM token use this run (reported in stats.json)
+
+
+def _count_tokens(n):
+    TOKENS["calls"] += 1
+    TOKENS["total"] += int(n or 0)
+
+
 def summarize(item, retries=2):
     short = len(item["text"]) < 200
     prompt = PROMPT.format(source=item["source"], title=item["title"],
-                           text=item["text"][:6000] or "(none)",
+                           text=item["text"][:ARTICLE_CHARS] or "(none)",
                            title_only_note=TITLE_ONLY_NOTE if short else "")
     title = item["title"][:50]
     for p in _active():

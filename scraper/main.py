@@ -20,7 +20,7 @@ from .config import RSS_SOURCES, ARXIV_CATEGORIES, KEYWORDS
 from . import fetchers as f
 from .dedupe import load_seen, save_seen, dedupe
 from .rank import top_n, score
-from .summarize import summarize, basic_card, llm_available
+from .summarize import summarize, basic_card, llm_available, TOKENS
 
 CARDS = Path("docs/cards.json")
 STATS = Path("docs/stats.json")
@@ -297,6 +297,7 @@ def main():
         "summarized": len(picked), "cards_added": len(new_cards), "explored": n_explore,
         "followups": ml.info.get("followups", 0),
         "fulltext": n_full, "points_checked": ground_tot["checked"], "points_dropped": ground_tot["dropped"],
+        "llm_calls": TOKENS["calls"], "llm_tokens": TOKENS["total"],
         "models": sorted({c.get("model", "") for c in new_cards if c.get("model")}),
         "seconds": round(time.time() - t0),
         "ml": ml.on,

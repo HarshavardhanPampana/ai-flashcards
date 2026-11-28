@@ -1,4 +1,6 @@
+import functools
 import hashlib
+import re
 import warnings
 
 import feedparser
@@ -77,14 +79,21 @@ def fetch_hn(keywords, min_points=80):
     return out
 
 
-def allowed_by_robots(url):
-    base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+@functools.lru_cache(maxsize=256)
+def _robots(base):
+    """robots.txt is read once per site per run (not once per page)."""
     rp = robotparser.RobotFileParser(base + "/robots.txt")
     try:
         rp.read()
-        return rp.can_fetch(USER_AGENT, url)
+        return rp
     except Exception:
-        return False
+        return None
+
+
+def allowed_by_robots(url):
+    base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+    rp = _robots(base)
+    return bool(rp) and rp.can_fetch(USER_AGENT, url)
 
 
 def fetch_html_list(name, page_url, link_selector, category="company"):
@@ -106,6 +115,9 @@ def fetch_article_text(url, limit=6000, max_bytes=2_000_000):
 
     Respects robots.txt, stops reading after max_bytes, and returns "" on any problem
     (paywall, blocked, not HTML), so the caller can fall back to the feed snippet."""
+    m = re.match(r"https?://huggingface\.co/papers/(\d{4}\.\d{4,5})", url)
+    if m:                                  # HF paper pages are mostly script-rendered; read the arXiv page instead
+        url = f"https://arxiv.org/abs/{m.group(1)}"
     if not allowed_by_robots(url):
         return ""
     import trafilatura
