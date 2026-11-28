@@ -623,13 +623,13 @@ if (motionOK && finePointer) {
     if (!card || card.classList.contains("skel")) return;
     const r = card.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-    const k = card.classList.contains("hero") ? 5 : 9;          // big cards tilt less
+    const k = card.classList.contains("hero") ? 3 : 6;          // gentle tilt; big cards tilt less
     card.style.setProperty("--ry", ((x - 0.5) * k).toFixed(2) + "deg");
     card.style.setProperty("--rx", (-(y - 0.5) * k).toFixed(2) + "deg");
     card.style.setProperty("--mx", (x * 100).toFixed(1) + "%");
     card.style.setProperty("--my", (y * 100).toFixed(1) + "%");
-    card.style.setProperty("--px", ((0.5 - x) * 12).toFixed(1) + "px");
-    card.style.setProperty("--py", ((0.5 - y) * 8).toFixed(1) + "px");
+    card.style.setProperty("--px", ((0.5 - x) * 8).toFixed(1) + "px");
+    card.style.setProperty("--py", ((0.5 - y) * 5).toFixed(1) + "px");
   });
   $("grid").addEventListener("pointerout", (e) => {
     const card = e.target.closest(".card");
@@ -649,7 +649,7 @@ function observeCards() {
   let k = 0;
   $("grid").querySelectorAll(".card.pre:not(.watched)").forEach((c) => {
     c.classList.add("watched");
-    c.style.setProperty("--d", (k++ % 6) * 55 + "ms");
+    c.style.setProperty("--d", (k++ % 6) * 35 + "ms");
     io.observe(c);
   });
   // safety net: never leave a card invisible if the observer or animations don't run

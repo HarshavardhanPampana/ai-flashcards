@@ -3,6 +3,7 @@
    Combinations" (his brightest inks), on a near-black base. Dark is the default; light mode is
    opt-in via the theme button. Every text colour passes WCAG AA (4.5:1). */
 :root {
+  --ease: cubic-bezier(.2, .8, .2, 1);          /* one easing curve for all motion */
   --bg: #0b0c0f;
   --bg-grad: radial-gradient(900px 520px at 0% -10%, rgba(241, 90, 48, .16) 0%, transparent 60%),
              radial-gradient(800px 480px at 100% 0%, rgba(0, 180, 155, .12) 0%, transparent 58%),
@@ -180,7 +181,7 @@ h1 { margin: 0; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
   outline: none; animation: rise .35s both;
 }
 @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
-.inner { position: relative; height: 100%; transition: transform .6s cubic-bezier(.2, .8, .2, 1); transform-style: preserve-3d; }
+.inner { position: relative; height: 100%; transition: transform .5s var(--ease); transform-style: preserve-3d; }
 .card.flipped .inner { transform: rotateY(180deg); }
 .face {
   position: absolute; inset: 0; display: flex; flex-direction: column; gap: 10px;
@@ -305,7 +306,7 @@ body.studying { overflow: hidden; }
 .pick-stage .card {
   position: absolute; inset: 0; height: auto; animation: none;
   touch-action: none; user-select: none; -webkit-user-select: none;
-  transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .35s;
+  transition: transform .3s var(--ease), opacity .3s;
 }
 .pick-stage .card.under { transform: translateY(18px) scale(.94); opacity: .7; pointer-events: none; }
 .pick-stage .card.under2 { transform: translateY(36px) scale(.88); opacity: .35; pointer-events: none; }
@@ -457,8 +458,8 @@ body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www
    Living cards: tilt toward the cursor, glare, parallax, springy flip
    ====================================================================== */
 .card { --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 30%; --px: 0px; --py: 0px;
-  transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
-.inner { transition: transform .8s cubic-bezier(.34, 1.42, .52, 1); }        /* overshoots a little, like a real card */
+  transition: transform .35s var(--ease); }
+.inner { transition: transform .5s cubic-bezier(.25, 1.06, .4, 1); }        /* crisp flip with a barely-there settle */
 @media (hover: hover) and (pointer: fine) {
   #grid .card:hover { transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-5px);
     transition: transform .12s ease-out; z-index: 2; }
@@ -469,7 +470,7 @@ body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www
   opacity: 0; transition: opacity .35s; mix-blend-mode: soft-light;
 }
 #grid .card:hover .face::after { opacity: 1; }
-.thumb img { transform: scale(1.08) translate(var(--px), var(--py)); transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
+.thumb img { transform: scale(1.05) translate(var(--px), var(--py)); transition: transform .4s var(--ease); }
 #grid .card:hover .thumb img { transition: transform .12s ease-out; }
 @media (pointer: coarse) {                                                   /* phones: a gentle press instead of tilt */
   #grid .card:active { transform: scale(.975); transition: transform .12s; }
@@ -478,8 +479,8 @@ body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www
 /* ---------- cascade in ---------- */
 #grid .card { animation: none; }
 #grid .card.pre { opacity: 0; }
-#grid .card.pre.in { opacity: 1; animation: cascade .7s cubic-bezier(.2, .8, .2, 1) var(--d, 0ms) both; }
-@keyframes cascade { from { opacity: 0; transform: translateY(26px) scale(.97); } to { opacity: 1; transform: none; } }
+#grid .card.pre.in { opacity: 1; animation: cascade .4s var(--ease) var(--d, 0ms) both; }
+@keyframes cascade { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
 
 /* ======================================================================
    Magazine grid: a big "Top story" and wide cards for 4-5 star stories
