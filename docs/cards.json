@@ -1,5 +1,119 @@
 [
  {
+  "headline": "Build your own amp modeler: $78 DIY pedal kit from TONE3000",
+  "tldr": "TONE3000 and Daisy Audio released a $78 DIY kit for a fully assembled Neural Amp Modeler (NAM) A2 capture and IR player, with all hardware and firmware open‑source.",
+  "key_points": [
+   "DIY pedal kit costs under $80 and includes all parts to build a NAM A2 capture/IR player.",
+   "The kit is a collaboration between TONE3000 and Daisy Audio, targeting guitarists who want a home‑built amp modeling solution.",
+   "NAM A2 is an open‑source modeling platform praised for high‑quality tone captures and a growing community.",
+   "All firmware, schematics, PCB designs, and app are open source, allowing anyone to modify or improve the design."
+  ],
+  "why_it_matters": "Makes high‑quality, open‑source amp modeling accessible to hobbyists at a low price, potentially expanding the user base and encouraging community‑driven innovation in guitar tech.",
+  "category": "product",
+  "companies": [
+   "TONE3000",
+   "Daisy Audio"
+  ],
+  "tags": [
+   "DIY",
+   "amp modeling",
+   "open_source",
+   "music"
+  ],
+  "importance": 2,
+  "id": "e21a1751fff0a4bf",
+  "url": "https://www.guitarworld.com/gear/guitar-pedals/tone3000-daisy-audio-diy-pedal-kit",
+  "source": "Hacker News",
+  "date": "2026-11-24T17:55:27Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-28T07:58:56.501451+00:00",
+  "mlp": {
+   "category": "open_source",
+   "importance": 2,
+   "expected_importance": 2.48,
+   "confidence": 0.39
+  },
+  "related": []
+ },
+ {
+  "headline": "LayoutRecall: Preserving Appearance in Multi-Round 3D Layout-Controlled Image Editing",
+  "tldr": "LayoutRecall introduces a memory system that stores object appearance in 3D box coordinates, enabling consistent visual quality across sequential layout-controlled edits.",
+  "key_points": [
+   "Stores image latents on box faces (Box-Surface Latent Memory) for later retrieval.",
+   "Uses Geometry-Aligned Memory Conditioning to feed retrieved tokens into a FLUX.2 editor.",
+   "Introduces LayoutLoop benchmark for evaluating multi-round 3D layout editing.",
+   "Demonstrates improved appearance preservation on both benchmark and real-scene data."
+  ],
+  "why_it_matters": "Ensures objects retain consistent appearance across multiple edits, a key challenge for 3D-aware image generation tools, advancing practical applications like virtual staging and iterative design.",
+  "category": "paper",
+  "companies": [],
+  "tags": [
+   "3D_layout",
+   "image_editing",
+   "memory_networks",
+   "FLUX.2"
+  ],
+  "importance": 3,
+  "id": "65f9a6336a497045",
+  "url": "https://huggingface.co/papers/2611.33885",
+  "source": "HF Daily Papers",
+  "date": "2026-11-24T19:00:00.000Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-28T07:58:44.235446+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.97,
+   "confidence": 1.0
+  },
+  "related": [
+   "d03dc3e7aff4873f",
+   "fdd45df45b7d7ead",
+   "43fa0a750af887e7",
+   "2b78efb5fa2ce45a"
+  ]
+ },
+ {
+  "headline": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+  "tldr": "Google Research introduced DeepCrossAttention, a new transformer architecture that dynamically combines outputs from previous layers, delivering similar or better quality up to three times faster with minimal extra parameters.",
+  "key_points": [
+   "DeepCrossAttention replaces static residual connections with learnable, depth‑wise cross‑attention.",
+   "The method dynamically selects and routes features from earlier layers, reducing information dilution.",
+   "Achieves comparable or improved model quality while being up to 3× faster to train.",
+   "Presented in an ICML 2025 paper with negligible increase in parameter count."
+  ],
+  "why_it_matters": "Improving transformer efficiency can accelerate training of very deep models, lowering compute costs and enabling larger, more capable AI systems across the industry.",
+  "category": "paper",
+  "companies": [
+   "Google"
+  ],
+  "tags": [
+   "transformer",
+   "attention",
+   "architecture",
+   "efficiency"
+  ],
+  "importance": 4,
+  "id": "bcf32450cab1acca",
+  "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+  "source": "Hacker News",
+  "date": "2026-11-27T23:06:29Z",
+  "model": "openai/gpt-oss-120b",
+  "added": "2026-11-28T07:58:32.470145+00:00",
+  "mlp": {
+   "category": "paper",
+   "importance": 3,
+   "expected_importance": 2.82,
+   "confidence": 0.71
+  },
+  "related": [
+   "4584b3d202ced805",
+   "8e485c1c148701e4",
+   "64ce525b98a5ff26",
+   "7fc61acd4d15604b"
+  ]
+ },
+ {
   "headline": "Android’s DIY widgets are a bit of vibe-coding fun",
   "tldr": "The article explores how Android users can create custom widgets, like a real‑time bus arrival widget, using simple coding tricks.",
   "key_points": [
@@ -154,9 +268,9 @@
   },
   "related": [
    "86ca62b70587c03e",
-   "e85847e7b6613d4d",
+   "53f2a14376dda94d",
    "b832d2222a255484",
-   "53f2a14376dda94d"
+   "e29ac258c013c12c"
   ]
  },
  {
@@ -267,7 +381,7 @@
    "725c967606cef490",
    "549a77347d5e1e5f",
    "5487100b1f610d90",
-   "244a3e8cb4f170fa"
+   "d15c45643214b444"
   ]
  },
  {
@@ -2875,7 +2989,6 @@
   "added": "2026-11-26T21:47:58.177801+00:00",
   "related": [
    "220d89bfa9ca8344",
-   "2522511af4749b44",
    "8e5fdcbe77f27d3a"
   ]
  },
@@ -2997,8 +3110,8 @@
   "related": [
    "89ccf4ed8f1ba61e",
    "f00d83341f65cba8",
-   "e85847e7b6613d4d",
-   "496ff8a0ac126192"
+   "496ff8a0ac126192",
+   "ab0cd7e6b2841f09"
   ]
  },
  {
@@ -3088,10 +3201,10 @@
   "date": "2026-11-25T18:12:20Z",
   "added": "2026-11-26T21:46:34.071296+00:00",
   "related": [
-   "cb92888c46cfce85",
-   "03e1ce70f1125e7d",
    "850f6865c91bcf15",
-   "56f97d3b31580f3f"
+   "56f97d3b31580f3f",
+   "984be6e13d67cbe3",
+   "22dd9012d9d3f330"
   ]
  },
  {
@@ -3398,7 +3511,6 @@
   "date": "2026-11-25T17:12:08Z",
   "added": "2026-11-26T21:44:22.211701+00:00",
   "related": [
-   "35a1924a695bfc50",
    "8e485c1c148701e4",
    "c216fe867cbdf75d"
   ]
@@ -3669,9 +3781,7 @@
   "source": "arXiv",
   "date": "2026-11-25T18:12:23Z",
   "added": "2026-11-26T21:42:34.239052+00:00",
-  "related": [
-   "ba8d8327e32765c2"
-  ]
+  "related": []
  },
  {
   "headline": "Probing Visual Idiosyncrasies in Text-to-Image Models",
@@ -3855,7 +3965,7 @@
    "1729f775f6187ada",
    "f00d83341f65cba8",
    "b6bef84628be4aee",
-   "e85847e7b6613d4d"
+   "ed15daefee211dec"
   ]
  },
  {
@@ -5025,7 +5135,7 @@
    "a716e3fb18fec28b",
    "850f6865c91bcf15",
    "3976a6719c927750",
-   "ba8d8327e32765c2"
+   "f636180cf9bde906"
   ]
  },
  {
@@ -5516,7 +5626,7 @@
    "2ac73d3052ef4ab5",
    "b76cb2dfc7fd708f",
    "5487100b1f610d90",
-   "ba8d8327e32765c2"
+   "7e3d6248c012bcd4"
   ]
  },
  {
@@ -6299,9 +6409,9 @@
   "date": "2026-11-22T16:44:48Z",
   "added": "2026-11-26T08:32:27.668181+00:00",
   "related": [
-   "01cdd83d3c55e905",
    "725c967606cef490",
    "549a77347d5e1e5f",
+   "01cdd83d3c55e905",
    "16f0b60da1ddcdc3"
   ]
  },
@@ -6900,7 +7010,7 @@
    "5d3a453ab03ddae1",
    "31f6c644d82c9389",
    "0cd17937bdc8feaa",
-   "ec577d4c46a6d8ce"
+   "3a0cb236fd3220da"
   ]
  },
  {
@@ -8109,8 +8219,8 @@
   "related": [
    "850f6865c91bcf15",
    "7b3febd5b7776b0c",
-   "03e1ce70f1125e7d",
-   "00b1dbe5a0c29055"
+   "00b1dbe5a0c29055",
+   "3976a6719c927750"
   ]
  },
  {
@@ -8293,7 +8403,7 @@
    "ad0cccf26e909961",
    "b15996e74022fea1",
    "3f0202fb9b3062e9",
-   "59c578bf213c6d53"
+   "65f9a6336a497045"
   ]
  },
  {
@@ -8962,8 +9072,8 @@
   "related": [
    "7fc61acd4d15604b",
    "20163f0376f0e415",
-   "97d3633bdcb38575",
-   "4584b3d202ced805"
+   "bcf32450cab1acca",
+   "97d3633bdcb38575"
   ]
  },
  {
@@ -10714,10 +10824,10 @@
   "date": "2026-11-22T19:00:00.000Z",
   "added": "2026-11-24T10:07:23.290727+00:00",
   "related": [
-   "63e770c56cc1e04e",
    "77e0a0e89a0e9524",
    "ca38829e73128713",
-   "13a6b8013ec3564c"
+   "13a6b8013ec3564c",
+   "5bdf8def5044ea19"
   ]
  },
  {
@@ -11128,7 +11238,7 @@
    "aae8c4832e631e5c",
    "b145ab91c01065c7",
    "d9a047affb028160",
-   "645e798427f902eb"
+   "0d63fb1e6c01db65"
   ]
  },
  {
@@ -12305,8 +12415,8 @@
   "related": [
    "49ef9cf5084cd81b",
    "567d2c83df20a534",
-   "138e1e18872d9e9b",
-   "00d3c793baf99b8f"
+   "00d3c793baf99b8f",
+   "138e1e18872d9e9b"
   ]
  },
  {
@@ -12588,8 +12698,7 @@
   "related": [
    "e29ac258c013c12c",
    "53f2a14376dda94d",
-   "4b08ec50268e04a4",
-   "d1318183fe172893"
+   "4b08ec50268e04a4"
   ]
  },
  {
@@ -12805,9 +12914,7 @@
   "source": "Hacker News",
   "date": "2026-11-23T10:06:43Z",
   "added": "2026-11-23T23:59:59.823458+00:00",
-  "related": [
-   "82f3c56554875b40"
-  ]
+  "related": []
  },
  {
   "headline": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
@@ -12897,7 +13004,6 @@
   "date": "2026-11-20T16:47:39Z",
   "added": "2026-11-23T07:57:31.784519+00:00",
   "related": [
-   "35a1924a695bfc50",
    "e1f023bc0da0d3fb",
    "66c76a27a7166cf5"
   ]
@@ -13075,8 +13181,8 @@
   "added": "2026-11-23T07:56:19.179567+00:00",
   "related": [
    "8e485c1c148701e4",
+   "bcf32450cab1acca",
    "7fc61acd4d15604b",
-   "82f3c56554875b40",
    "6d4a47c2eb45424c"
   ]
  },
@@ -13202,9 +13308,9 @@
   "added": "2026-11-23T07:55:31.336720+00:00",
   "related": [
    "9dddeb89e408dae0",
-   "aea9277550c47ad7",
    "cd6b6d848fb09bad",
-   "46b23216abae332a"
+   "46b23216abae332a",
+   "676bccdabb367bf4"
   ]
  },
  {
@@ -13517,9 +13623,9 @@
   "added": "2026-11-23T07:53:31.559096+00:00",
   "related": [
    "4584b3d202ced805",
+   "bcf32450cab1acca",
    "e5cf168d333e59d3",
-   "c216fe867cbdf75d",
-   "82f3c56554875b40"
+   "c216fe867cbdf75d"
   ]
  },
  {
@@ -14516,7 +14622,7 @@
    "0904df37e969bdc1",
    "897a171ce7d5e53b",
    "11267d9d78144302",
-   "63e770c56cc1e04e"
+   "1433dd7803a4bb8c"
   ]
  },
  {
@@ -14544,10 +14650,10 @@
   "date": "2026-11-19T17:13:58Z",
   "added": "2026-11-21T19:28:39.148973+00:00",
   "related": [
-   "03e1ce70f1125e7d",
    "720286b4961b1931",
    "020406cb2348e5d8",
-   "cde2e1787774aa7b"
+   "cde2e1787774aa7b",
+   "5c37229c595324bf"
   ]
  },
  {
@@ -15477,8 +15583,7 @@
   "related": [
    "981450b48cdfa502",
    "6d7131db35491842",
-   "3169e03151a4361e",
-   "2522511af4749b44"
+   "3169e03151a4361e"
   ]
  },
  {
@@ -16473,9 +16578,9 @@
   "added": "2026-11-20T20:35:59.770297+00:00",
   "related": [
    "6ddc0d442f5ced93",
-   "aea9277550c47ad7",
    "fcbadb5e4e74b6f8",
-   "62671662bfc59c1e"
+   "62671662bfc59c1e",
+   "b05d343c10cc2e5d"
   ]
  },
  {
@@ -17064,9 +17169,9 @@
   "added": "2026-11-20T20:32:11.550486+00:00",
   "related": [
    "c82ab5c574080217",
-   "ec577d4c46a6d8ce",
    "0ea5fbe79c2f43ea",
-   "3feac09277102c22"
+   "3feac09277102c22",
+   "da6c827addce47a1"
   ]
  },
  {
@@ -19125,7 +19230,7 @@
    "cfcc7acb02e9ca79",
    "c6c361c53bc4ce2d",
    "549a77347d5e1e5f",
-   "951c84561943a913"
+   "6687f7be62c34e4a"
   ]
  },
  {
@@ -19991,9 +20096,9 @@
   "added": "2026-11-19T20:46:23.737138+00:00",
   "related": [
    "6fbb892b6c12f639",
-   "e85847e7b6613d4d",
    "36154cf86ff08e24",
-   "3ea993db7e3c60d1"
+   "3ea993db7e3c60d1",
+   "499976ca057bb90b"
   ]
  },
  {
@@ -21013,9 +21118,9 @@
   "added": "2026-11-19T07:37:34.485867+00:00",
   "related": [
    "cfcc7acb02e9ca79",
-   "951c84561943a913",
    "f26f2a4dfd6b9b95",
-   "e6b37f5da94e2fd1"
+   "e6b37f5da94e2fd1",
+   "01945f6a907c7618"
   ]
  },
  {
@@ -21075,7 +21180,7 @@
    "bf623f2575d90ce5",
    "30d463386b152b16",
    "89ccf4ed8f1ba61e",
-   "e85847e7b6613d4d"
+   "febede2eb69795c6"
   ]
  },
  {
@@ -22455,8 +22560,8 @@
   "related": [
    "cf77ef770c4ca97c",
    "b63023bfb9fc2173",
-   "1a051245aa5e4a68",
-   "a7fb52666c606df9"
+   "a7fb52666c606df9",
+   "5c37c83cea812a23"
   ]
  },
  {
@@ -22905,9 +23010,9 @@
   "added": "2026-11-18T07:45:30.288577+00:00",
   "related": [
    "23a6e8d38fa0e0cc",
-   "1a051245aa5e4a68",
    "a7fb52666c606df9",
-   "03e1ce70f1125e7d"
+   "cdf4593682f9d3d6",
+   "00b1dbe5a0c29055"
   ]
  },
  {
@@ -23321,9 +23426,9 @@
   "added": "2026-11-18T07:42:53.900629+00:00",
   "related": [
    "d0d45b2248dd790b",
-   "ec577d4c46a6d8ce",
    "92c1cc867c014247",
-   "127326b87b53e7a9"
+   "127326b87b53e7a9",
+   "567fa298898a17ca"
   ]
  },
  {
@@ -23615,7 +23720,7 @@
    "cfcc7acb02e9ca79",
    "99b93f3e10984935",
    "549a77347d5e1e5f",
-   "951c84561943a913"
+   "dc85126b0ac71765"
   ]
  },
  {
@@ -23833,9 +23938,9 @@
   "added": "2026-11-18T07:39:41.861365+00:00",
   "related": [
    "eba1ef6c1e98b332",
-   "2522511af4749b44",
    "2424137b9307ca5a",
-   "077753344d38f542"
+   "077753344d38f542",
+   "6717576b9778057c"
   ]
  },
  {
@@ -24318,8 +24423,8 @@
   "related": [
    "d9a047affb028160",
    "d6a5b08e3fa8b3f0",
-   "645e798427f902eb",
-   "0d63fb1e6c01db65"
+   "0d63fb1e6c01db65",
+   "6a7990e1ad10d3b0"
   ]
  },
  {
@@ -24663,9 +24768,7 @@
   "source": "OpenAI",
   "date": "Thu, 12 Nov 2026 00:00:00 GMT",
   "added": "2026-11-17T21:05:41.046823+00:00",
-  "related": [
-   "951c84561943a913"
-  ]
+  "related": []
  },
  {
   "headline": "Introducing OpenAI for Chile",
@@ -25377,9 +25480,9 @@
   "added": "2026-11-17T08:09:21.052554+00:00",
   "related": [
    "57a5ba0acc697998",
+   "bcf32450cab1acca",
    "59c578bf213c6d53",
-   "f76b405a79505b9d",
-   "ad719e8a38ff6ab2"
+   "f76b405a79505b9d"
   ]
  },
  {
@@ -25836,7 +25939,7 @@
    "d9a047affb028160",
    "fa232e2aaf8a1962",
    "996c920e2c06362c",
-   "645e798427f902eb"
+   "aae8c4832e631e5c"
   ]
  },
  {
@@ -25899,9 +26002,9 @@
   "added": "2026-11-17T08:05:57.982137+00:00",
   "related": [
    "d6a5b08e3fa8b3f0",
-   "645e798427f902eb",
    "d9a047affb028160",
-   "620756f297e99f3c"
+   "620756f297e99f3c",
+   "fa232e2aaf8a1962"
   ]
  },
  {
@@ -26374,10 +26477,10 @@
   "date": "2026-11-03T19:00:00.000Z",
   "added": "2026-11-17T08:02:57.564735+00:00",
   "related": [
-   "e85847e7b6613d4d",
    "8656577bc6f00f0e",
    "01995458ab323d07",
-   "24817791f262e8b7"
+   "24817791f262e8b7",
+   "ab328cdaa522dc1f"
   ]
  },
  {
@@ -26541,7 +26644,7 @@
    "5f72fbdc79b9385d",
    "b1c71d07875ac772",
    "cfcc7acb02e9ca79",
-   "951c84561943a913"
+   "6687f7be62c34e4a"
   ]
  },
  {
@@ -28061,7 +28164,7 @@
    "4b0509310e9e561a",
    "0c3b5d46ca21a519",
    "ca38829e73128713",
-   "63e770c56cc1e04e"
+   "f1bffa96e54ae191"
   ]
  },
  {
@@ -28483,8 +28586,8 @@
   "related": [
    "00b1dbe5a0c29055",
    "cf77ef770c4ca97c",
-   "03e1ce70f1125e7d",
-   "23a6e8d38fa0e0cc"
+   "23a6e8d38fa0e0cc",
+   "b63023bfb9fc2173"
   ]
  },
  {
@@ -28831,6 +28934,7 @@
   "related": [
    "7fc61acd4d15604b",
    "7047e076bccaf85c",
+   "bcf32450cab1acca",
    "4584b3d202ced805"
   ]
  },
@@ -29050,9 +29154,7 @@
   "source": "r/MachineLearning",
   "date": "2026-11-15T09:05:22+00:00",
   "added": "2026-11-15T18:57:57.589468+00:00",
-  "related": [
-   "a69f240b4c0f0960"
-  ]
+  "related": []
  },
  {
   "headline": "Critique of Double-Blind Review Systems in Machine Learning Conferences",
@@ -30552,10 +30654,10 @@
   "date": "2026-11-12T17:22:17Z",
   "added": "2026-11-14T18:15:54.050283+00:00",
   "related": [
-   "b82a98db07910b2d",
    "295fba47d8414500",
    "a1bab071a14f561f",
-   "718c87c9a039ea20"
+   "718c87c9a039ea20",
+   "0115555b39344353"
   ]
  },
  {
@@ -30823,9 +30925,9 @@
   "added": "2026-11-14T18:14:06.164818+00:00",
   "related": [
    "8f4728ffc5b95bfc",
-   "ec577d4c46a6d8ce",
    "b0ded74e06b06613",
-   "8b6ac2940fdc0d0e"
+   "8b6ac2940fdc0d0e",
+   "d4ec4820484976f5"
   ]
  },
  {
@@ -30856,876 +30958,5 @@
   "date": "2026-11-14T14:09:25Z",
   "added": "2026-11-14T18:13:54.610079+00:00",
   "related": []
- },
- {
-  "headline": "Two mathematical models of knowledge distillation",
-  "tldr": "The paper proposes and analyzes mathematical models showing that knowledge distillation speeds up optimization rather than improving generalization, with proofs for generalized linear models and rank‑1 matrix approximation, and empirical validation on real data.",
-  "key_points": [
-   "Distillation yields easier-to‑optimize loss landscapes, leading to faster convergence.",
-   "For generalized linear models trained with SGD, distilled students reach performant solutions asymptotically quicker than non‑distilled ones.",
-   "In rank‑1 matrix approximation, gradient descent with distillation converges strictly faster under certain target matrix conditions.",
-   "Theoretical results indicate benefits are in optimization speed, not in improved generalization.",
-   "Experiments on real datasets confirm the predicted speed‑up."
-  ],
-  "why_it_matters": "Understanding why knowledge distillation works clarifies its role in model training pipelines, guiding practitioners to leverage it for faster training without expecting accuracy gains, and informs future research on efficient learning methods.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "knowledge distillation",
-   "optimization",
-   "theoretical ML",
-   "GLM"
-  ],
-  "importance": 3,
-  "id": "cb92888c46cfce85",
-  "url": "https://arxiv.org/abs/2611.17230v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:21:37Z",
-  "added": "2026-11-14T06:45:21.090542+00:00",
-  "related": [
-   "1b3746fc216615b2",
-   "22dd9012d9d3f330",
-   "56f97d3b31580f3f",
-   "984be6e13d67cbe3"
-  ]
- },
- {
-  "headline": "Ballad: Bandit-Based LLM Routing for Automated Heuristic Discovery",
-  "tldr": "Ballad introduces an online bandit algorithm that dynamically selects among multiple LLMs to improve automated heuristic discovery for NP-hard problems, achieving better performance than any single model while cutting API costs up to 65.6%.",
-  "key_points": [
-   "Demonstrates that larger, costlier LLMs do not always yield better heuristics.",
-   "Proposes a bandit-based routing system that adapts model selection during search.",
-   "Uses DAG-based credit propagation and stale observation discounting.",
-   "Outperforms individual LLMs on five NP-hard problems and reduces cost significantly."
-  ],
-  "why_it_matters": "Shows how to efficiently leverage heterogeneous LLM resources, lowering computational expense while maintaining or improving solution quality for complex optimization tasks.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "LLM",
-   "bandit",
-   "heuristic",
-   "optimization"
-  ],
-  "importance": 3,
-  "id": "c31b767205357ad2",
-  "url": "https://arxiv.org/abs/2611.17241v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:28:08Z",
-  "added": "2026-11-14T06:45:08.688228+00:00",
-  "related": [
-   "ed025d4d62d54415",
-   "1b64f5ab40f06384"
-  ]
- },
- {
-  "headline": "Programming Quantum Circuit Parameters with Large Language Models",
-  "tldr": "A frozen general‑purpose LLM can directly generate parameters for variational quantum circuits, performing well on structured Hamiltonians but lagging behind traditional optimization on random ones.",
-  "key_points": [
-   "LLM generates full parameter vectors from symbolic circuit and Hamiltonian descriptions.",
-   "Iterative energy feedback offers limited improvement for random Hamiltonians.",
-   "Structured Hamiltonians enable the LLM to produce low‑energy configurations.",
-   "Direct LLM energy predictions can violate spectral lower bounds, highlighting verification needs."
-  ],
-  "why_it_matters": "Shows how LLMs can assist quantum algorithm design by leveraging problem structure, offering a new route to parameter initialization that could reduce costly quantum optimization loops.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "quantum computing",
-   "large language models",
-   "variational circuits",
-   "parameter inference"
-  ],
-  "importance": 3,
-  "id": "aea9277550c47ad7",
-  "url": "https://arxiv.org/abs/2611.17246v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:34:23Z",
-  "added": "2026-11-14T06:44:56.481420+00:00",
-  "related": [
-   "c9294b80ec1c2553",
-   "9d28b97a9c7b1e93",
-   "46b23216abae332a"
-  ]
- },
- {
-  "headline": "FLEX-LBP: Learning Local Binary Patterns with Exact Binary Inference for Texture Classification",
-  "tldr": "FLEX-LBP introduces a learnable Local Binary Patterns descriptor that optimizes radius, sampling angles, color transforms, and thresholds via backpropagation while keeping exact binary inference, achieving higher texture classification accuracy than classical LBP variants and even frozen ResNet‑50 features.",
-  "key_points": [
-   "Learns LBP parameters (radius, angles, thresholds, color transform) with 90 trainable weights via backpropagation.",
-   "Exact binary codes and hard histogram counts are computed in the forward pass; a straight‑through estimator is used only for gradients.",
-   "Improves nearest‑neighbor accuracy by up to 3.55 points on six color texture benchmarks and reaches 93.8% on a colorectal cancer histology dataset.",
-   "Outperforms five classical LBP descriptors, PCANet, a neural LBP, and frozen ImageNet ResNet‑50 features despite using far fewer parameters.",
-   "Implemented as a drop‑in PyTorch layer, with code publicly released."
-  ],
-  "why_it_matters": "Enabling data‑driven optimization of LBP parameters bridges the gap between classic, lightweight texture descriptors and modern deep learning performance, offering a highly interpretable, low‑cost alternative for resource‑constrained applications such as industrial inspection and medical imaging.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "texture",
-   "local-binary-patterns",
-   "learnable-descriptors",
-   "computer-vision"
-  ],
-  "importance": 2,
-  "id": "8b93cc6cd9378e2a",
-  "url": "https://arxiv.org/abs/2611.17302v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:55:56Z",
-  "added": "2026-11-14T06:44:44.739175+00:00",
-  "related": []
- },
- {
-  "headline": "Towards a Theory of Learnability via Debate",
-  "tldr": "The paper formalizes the debate training protocol as an online learning problem, identifies limitations of adversarial debate, proposes a cooperative version, and analyzes learnability and the impact of judge errors.",
-  "key_points": [
-   "Debate is reframed as an online learning problem rather than just a game.",
-   "A cooperative debate protocol is introduced, with learnability characterized by a combinatorial dimension.",
-   "Even a few judge mistakes can cause large learning errors.",
-   "The study shows cases where optimal learning differs from adversarial debate strategies."
-  ],
-  "why_it_matters": "Understanding the theoretical foundations of debate-based training is crucial for developing scalable, aligned AI systems, especially as models become more capable and human supervision remains limited.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "debate",
-   "learnability",
-   "online learning",
-   "AI alignment"
-  ],
-  "importance": 3,
-  "id": "cca605336e671312",
-  "url": "https://arxiv.org/abs/2611.17303v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:55:58Z",
-  "added": "2026-11-14T06:44:32.675405+00:00",
-  "related": []
- },
- {
-  "headline": "Quantifying structural stability of transparent models for general insurance pricing",
-  "tldr": "The paper introduces functional transparency and a new metric, Mean Squared Shape function distance, to assess structural stability of models used in auto insurance pricing, showing that GLMs are stable and EBMs balance stability with performance.",
-  "key_points": [
-   "Defines functional transparency for models as sums of univariate and bivariate functions.",
-   "Proposes Mean Squared Shape function distance to measure structural stability.",
-   "Benchmark on three auto insurance datasets shows GLMs are stable, EBMs offer a stability‑performance trade‑off.",
-   "Stabilisation strategies like sequential modelling and fixed hyperparameters improve stability for EBMs and XGBoost with little performance loss."
-  ],
-  "why_it_matters": "Stable and transparent models are crucial for insurers to reliably update pricing models amid rapid data shifts, ensuring regulatory compliance and trust while maintaining predictive accuracy.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "insurance",
-   "model_stability",
-   "transparent_models",
-   "actuarial_science"
-  ],
-  "importance": 3,
-  "id": "3b9ad924f3c2ec5f",
-  "url": "https://arxiv.org/abs/2611.17308v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:56:54Z",
-  "added": "2026-11-14T06:44:20.870204+00:00",
-  "related": []
- },
- {
-  "headline": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
-  "tldr": "The CRAM energy-based model solves Sudoku and maze puzzles up to 1,000× faster than looped reasoning models, using far fewer FLOPs and parameters.",
-  "key_points": [
-   "CRAM, a learned Hopfield‑Tank energy, achieves 99.996% accuracy on Sudoku‑Extreme and 100% on Maze‑Unique.",
-   "Training completes in 42 ms (Sudoku) and 132 ms (Maze) on a single GPU, over 1,000× faster than looped models.",
-   "Inference requires 282× fewer FLOPs than the best looped baselines while matching their top accuracy.",
-   "Energy‑based approach offers early stopping, adaptive compute, and interpretable constraint weights."
-  ],
-  "why_it_matters": "Demonstrates that energy‑based models can dramatically accelerate reasoning tasks, challenging the dominance of looped architectures and suggesting a more efficient path for future AI reasoning systems.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "reasoning",
-   "energy_models",
-   "sudoku",
-   "maze"
-  ],
-  "importance": 3,
-  "id": "1a051245aa5e4a68",
-  "url": "https://arxiv.org/abs/2611.17309v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:56:56Z",
-  "added": "2026-11-14T06:44:08.780376+00:00",
-  "related": [
-   "cf77ef770c4ca97c",
-   "23a6e8d38fa0e0cc",
-   "16f0b60da1ddcdc3",
-   "a7fb52666c606df9"
-  ]
- },
- {
-  "headline": "Sketching Language Models for Context Attribution",
-  "tldr": "A new sketching algorithm dramatically reduces the number of model evaluations needed to compute leave-one-out context attribution for language models, with matching theoretical lower bounds.",
-  "key_points": [
-   "Proposes a sketching algorithm that estimates all LOO attribution values with O(√log(1/ε)/ε) model calls under a stability assumption.",
-   "Provides a matching Ω(√log(1/ε)/ε) lower bound, showing the algorithm is optimal in an oracle model.",
-   "Demonstrates empirical coefficient decay and validates the method on a small LM retrieval task.",
-   "Improves over prior forward differentiation sketches, cutting evaluation complexity from ~O(log(n)/ε²) to near-optimal."
-  ],
-  "why_it_matters": "Efficient context attribution enables deeper understanding of how prompts influence model outputs, facilitating debugging, interpretability, and safer deployment of large language models.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "context attribution",
-   "model interpretability",
-   "sketching algorithms",
-   "theoretical bounds"
-  ],
-  "importance": 3,
-  "id": "2db4f217aa28f05a",
-  "url": "https://arxiv.org/abs/2611.17313v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:57:48Z",
-  "added": "2026-11-14T06:43:57.592163+00:00",
-  "related": [
-   "e930ca6c02d4ca5d"
-  ]
- },
- {
-  "headline": "Learning When Diffusion Language Models Should Regenerate",
-  "tldr": "The paper introduces DiVR, a verifier that predicts when a diffusion language model should regenerate parts of its output, boosting accuracy on reasoning tasks without altering the generator.",
-  "key_points": [
-   "Hidden states contain error signals missed by token confidence.",
-   "Remasking isolated errors often reproduces them unless context changes.",
-   "DiVR predicts correctness of partial sequences and decides regeneration blocks.",
-   "Using DiVR improves LLaDA-8B-Base accuracy from 35.3% to 43.4% with modest compute overhead.",
-   "The approach works alongside fine‑tuning, RL, and other generators like Dream."
-  ],
-  "why_it_matters": "Enabling diffusion language models to self‑correct improves reliability on complex reasoning tasks, offering a more efficient alternative to exhaustive search and enhancing downstream applications that rely on accurate text generation.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "diffusion",
-   "language-models",
-   "regeneration",
-   "verification"
-  ],
-  "importance": 3,
-  "id": "03e1ce70f1125e7d",
-  "url": "https://arxiv.org/abs/2611.17320v1",
-  "source": "arXiv",
-  "date": "2026-11-12T18:58:50Z",
-  "added": "2026-11-14T06:43:44.717080+00:00",
-  "related": [
-   "a7fb52666c606df9",
-   "56f97d3b31580f3f",
-   "c42ca8f219e62b8c",
-   "cf77ef770c4ca97c"
-  ]
- },
- {
-  "headline": "Reasoning Supervision and Capability Retention in LoRA Domain Adaptation",
-  "tldr": "The paper studies how different LoRA fine‑tuning strategies affect performance on financial tasks while preserving the general abilities of the Qwen3‑8B model.",
-  "key_points": [
-   "Response‑only LoRA improves in‑domain metrics and keeps general capabilities close to the frozen model.",
-   "Adding teacher reasoning traces (single‑adapter) hurts in‑domain performance but can slightly boost MMLU‑Pro.",
-   "Dual‑adapter training on both traces and labels offers no additional benefit.",
-   "Summarizing teacher traces before training moves calibration toward the response‑only regime."
-  ],
-  "why_it_matters": "Understanding how to fine‑tune large language models on specialized domains like finance without losing their broad knowledge is crucial for deploying reliable AI assistants in high‑risk industries.",
-  "category": "paper",
-  "companies": [
-   "Alibaba"
-  ],
-  "tags": [
-   "LoRA",
-   "domain_adaptation",
-   "financial_NLP",
-   "model_fine_tuning"
-  ],
-  "importance": 3,
-  "id": "306615f6331fb1be",
-  "url": "https://arxiv.org/abs/2611.17072v1",
-  "source": "arXiv",
-  "date": "2026-11-12T16:45:12Z",
-  "added": "2026-11-14T06:43:32.768807+00:00",
-  "related": [
-   "d88c5631b7f06aa6",
-   "fcbadb5e4e74b6f8"
-  ]
- },
- {
-  "headline": "CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts",
-  "tldr": "CapLite defends small language model agents against prompt injection by deriving policies from tool schemas and enforcing write integrity, achieving zero successful attacks across 13,935 episodes with lower token usage than prior defenses.",
-  "key_points": [
-   "Existing defenses require the agent to generate security artifacts, which small models fail to produce reliably.",
-   "CapLite derives policies from tool schemas and only permits writes explicitly mentioned in the user's request.",
-   "In tests on 15 open-weight models, CapLite prevented all attacks in 13,935 AgentDojo episodes.",
-   "CapLite uses 18% of the tokens of the prior best defense (CaMeL) while maintaining comparable utility."
-  ],
-  "why_it_matters": "Prompt injection threatens the reliability of AI agents, especially smaller, open-weight models used in many applications. A lightweight, effective defense like CapLite enables safer deployment of these models without heavy computational overhead.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "prompt-injection",
-   "small-language-models",
-   "security",
-   "agent"
-  ],
-  "importance": 3,
-  "id": "e85847e7b6613d4d",
-  "url": "https://arxiv.org/abs/2611.17115v1",
-  "source": "arXiv",
-  "date": "2026-11-12T17:07:22Z",
-  "added": "2026-11-14T06:43:20.662021+00:00",
-  "related": [
-   "6fbb892b6c12f639",
-   "f00d83341f65cba8",
-   "8656577bc6f00f0e",
-   "b6bef84628be4aee"
-  ]
- },
- {
-  "headline": "ISLA: A Coordinate-Free, Measure-Weighted Transformer for Boundary-Driven PDEs",
-  "tldr": "ISLA introduces an invariant slice-attention transformer that respects geometric symmetries and unit invariance for PDE surrogates, achieving significantly lower errors on aerodynamic benchmarks.",
-  "key_points": [
-   "Uses slice-attention transformer with no learned operation receiving absolute coordinates.",
-   "Achieves equivariance to rigid motions and invariance to unit scaling and mesh refinement.",
-   "Reduces velocity and pressure errors by 3.1‑3.3× versus baselines on the AeroZoo benchmark.",
-   "Outperforms recent models like Transolver and GeoTransolver on AirfRANS."
-  ],
-  "why_it_matters": "Provides a more physically consistent neural surrogate for PDEs, enabling reliable simulations across varying orientations, scales, and mesh resolutions—critical for engineering design and scientific computing.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "transformer",
-   "PDE",
-   "invariant",
-   "aerodynamics"
-  ],
-  "importance": 3,
-  "id": "b23489aeb6f1af79",
-  "url": "https://arxiv.org/abs/2611.17141v1",
-  "source": "arXiv",
-  "date": "2026-11-12T17:30:03Z",
-  "added": "2026-11-14T06:43:08.699462+00:00",
-  "related": [
-   "284d467a0171dbf2"
-  ]
- },
- {
-  "headline": "A frontier machine intelligence for human neuroimaging",
-  "tldr": "Neuro-VL, a vision‑language model trained on ~1 M clinical neuroimaging studies, can interpret full examinations, converse about findings, and generate radiology reports, outperforming existing general‑purpose and specialized medical models.",
-  "key_points": [
-   "Trained on nearly one million routine neuroimaging studies",
-   "Performs diagnosis, localization, description, and report generation",
-   "Handles longitudinal comparisons to track disease progression",
-   "Outperforms frontier models from OpenAI and Google on multiple benchmarks"
-  ],
-  "why_it_matters": "Demonstrates that large‑scale, health‑system data can produce a specialized AI that offers interactive, comprehensive image interpretation, potentially improving diagnostic accuracy and workflow efficiency in neurology and radiology.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "neuroimaging",
-   "vision-language",
-   "medical AI",
-   "radiology"
-  ],
-  "importance": 4,
-  "id": "2522511af4749b44",
-  "url": "https://huggingface.co/papers/2611.15094",
-  "source": "HF Daily Papers",
-  "date": "2026-11-10T19:00:00.000Z",
-  "added": "2026-11-14T06:42:56.951928+00:00",
-  "related": [
-   "279185ff611e2406",
-   "b88c69fd1f65e6b1",
-   "981450b48cdfa502",
-   "606c9eca0385ab92"
-  ]
- },
- {
-  "headline": "EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
-  "tldr": "EgoX introduces a modular transformer framework that learns manipulation policies from mixed human, robot, and simulation demos, boosting performance especially on out-of-distribution tasks.",
-  "key_points": [
-   "Modular Cross-Embodiment Transformer (MXT+) with dedicated tokenizers and experts per modality",
-   "Embodiment Dreaming objective predicts future latent states to align dynamics across embodiments",
-   "Pretraining on 13 task-embodiment pairs raises average task progress from 0.63 to 0.80",
-   "Out-of-distribution performance improves from 0.53 to 0.77",
-   "Ablations confirm benefits of broader pretraining mixtures and modular interfaces"
-  ],
-  "why_it_matters": "Combining heterogeneous demonstrations enables robots to learn more robust and generalizable manipulation skills, reducing the need for extensive task-specific data and improving performance in novel settings.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "egocentric",
-   "cross-embodiment",
-   "manipulation",
-   "transformer"
-  ],
-  "importance": 3,
-  "id": "63e770c56cc1e04e",
-  "url": "https://huggingface.co/papers/2611.16728",
-  "source": "HF Daily Papers",
-  "date": "2026-11-11T19:00:00.000Z",
-  "added": "2026-11-14T06:42:44.862576+00:00",
-  "related": [
-   "7334b8c860093761",
-   "13a6b8013ec3564c",
-   "63dbb81e2a2d11bd",
-   "21d7cc6940b806a8"
-  ]
- },
- {
-  "headline": "Humanized but Still True? Auditing Facts and Detection in AI-Text Humanizers",
-  "tldr": "A study audits AI text humanizers, finding they often alter factual details like numbers, names, and quoted spans, and that detection of humanized text remains challenging.",
-  "key_points": [
-   "All 11 commercial humanizers changed or dropped factual units in 35-65% of documents.",
-   "Open 12B humanizer preserved 97% of numbers/names but rewrote 67-78% of quoted spans.",
-   "Detection model Jev achieved AUROC 0.864, outperforming other detectors on humanized text.",
-   "No clear trade-off between fact retention and detector evasion across tools."
-  ],
-  "why_it_matters": "Understanding how AI text humanizers affect factual integrity is crucial for maintaining trust in AI-generated content and improving detection methods against deceptive rewrites.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "AI-humanizers",
-   "fact-checking",
-   "text detection",
-   "benchmark"
-  ],
-  "importance": 3,
-  "id": "d2bb75b6f2f608f8",
-  "url": "https://huggingface.co/papers/2611.00359",
-  "source": "HF Daily Papers",
-  "date": "2026-10-29T20:00:00.000Z",
-  "added": "2026-11-14T06:42:32.544087+00:00",
-  "related": [
-   "7156825ae33dd830",
-   "029ded4e9a8f172f",
-   "01945f6a907c7618",
-   "3ded89e2e5f95acf"
-  ]
- },
- {
-  "headline": "The Narrative Gap: Can LLMs Help Us Navigate Diverse Narratives Across Languages?",
-  "tldr": "A new benchmark, NarrativeBench, shows that current LLMs struggle to provide diverse, multilingual perspectives on contested topics, highlighting gaps in narrative inclusion and risk of echo chambers.",
-  "key_points": [
-   "Defines six capabilities needed for multilingual narrative navigation.",
-   "Introduces NarrativeBench with 1,333 news articles in 23 languages and 460 Reddit-based queries.",
-   "Evaluation of 14 LLMs across 24 languages reveals poor performance on diversity tasks.",
-   "Findings warn of linguistic filter bubbles and weakened democratic discourse."
-  ],
-  "why_it_matters": "Ensuring access to varied viewpoints across languages is crucial for informed public debate and preventing echo chambers; the benchmark provides a concrete target for improving LLMs in this area.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "multilingual",
-   "benchmark",
-   "narrative diversity",
-   "LLM evaluation"
-  ],
-  "importance": 3,
-  "id": "ba8d8327e32765c2",
-  "url": "https://huggingface.co/papers/2611.12750",
-  "source": "HF Daily Papers",
-  "date": "2026-11-08T19:00:00.000Z",
-  "added": "2026-11-14T06:42:20.581556+00:00",
-  "related": [
-   "16f0b60da1ddcdc3",
-   "cb53a5e3e59bc994",
-   "4582cc8882c12f70",
-   "950ac38f23f2d5a7"
-  ]
- },
- {
-  "headline": "GraphMuon: A Graph-Aware Optimizer for Faster Training of Graph Neural Networks",
-  "tldr": "GraphMuon adapts matrix‑aware updates to the covariance of graph‑propagated features, cutting validation‑loss time‑to‑target by 1.3‑2.4× versus AdamW on large‑scale GNN benchmarks.",
-  "key_points": [
-   "Introduces GraphMuon, a graph‑metric extension of the Muon optimizer.",
-   "Mitigates update amplification caused by graph‑propagated representations.",
-   "Delivers 1.32×‑2.42× faster convergence on three OGB benchmarks across 15 tasks.",
-   "Maintains or improves predictive performance compared to AdamW."
-  ],
-  "why_it_matters": "Efficient training of GNNs is critical for scaling graph‑based AI applications; a optimizer that reduces convergence time can lower compute costs and accelerate research and deployment.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "graph neural networks",
-   "optimizer",
-   "machine learning",
-   "training efficiency"
-  ],
-  "importance": 3,
-  "id": "35a1924a695bfc50",
-  "url": "https://huggingface.co/papers/2611.08379",
-  "source": "HF Daily Papers",
-  "date": "2026-11-04T19:00:00.000Z",
-  "added": "2026-11-14T06:42:08.654084+00:00",
-  "related": [
-   "e5cf168d333e59d3",
-   "29197009af217b58"
-  ]
- },
- {
-  "headline": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution",
-  "tldr": "A new framework uses evidence‑guided task recovery to handle ambiguous tool outcomes and partial execution in AI agents, showing a 36‑point improvement in task completion over baseline advice.",
-  "key_points": [
-   "Introduces evidence‑guided recovery over obligations, provider capabilities, and public evidence.",
-   "Combines observation‑contingent planning with an effect‑history adjudicator.",
-   "In a study, the planning approach completed 30 out of 58 tasks versus 9 for baseline advice (p=0.0078).",
-   "All 116 evaluated trajectories passed independent replay, confirming safety guarantees."
-  ],
-  "why_it_matters": "Handling uncertain tool outcomes is critical for reliable autonomous agents, and the demonstrated performance boost suggests more robust real‑world deployments.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "tool use",
-   "task recovery",
-   "planning",
-   "AI agents"
-  ],
-  "importance": 3,
-  "id": "ea30e210a014694b",
-  "url": "https://huggingface.co/papers/2610.41453",
-  "source": "HF Daily Papers",
-  "date": "2026-10-29T20:00:00.000Z",
-  "added": "2026-11-14T06:41:56.528482+00:00",
-  "related": [
-   "08354571471bdbfb",
-   "a329da690f58fbc4",
-   "27b0129b73da0b19",
-   "e87a4535763a3f27"
-  ]
- },
- {
-  "headline": "Back Propagation [D]",
-  "tldr": "A graduate student asks for visual explanations of how backpropagation adjusts neural network weights.",
-  "key_points": [
-   "User seeks intuitive visualization of backpropagation steps.",
-   "Clarifies understanding of forward propagation vs. weight updates.",
-   "Requests suggestions or resources for better conceptual grasp."
-  ],
-  "why_it_matters": "Understanding backpropagation is fundamental for anyone building or researching neural networks, impacting education and future AI development.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "backpropagation",
-   "neural-networks",
-   "education",
-   "visualization"
-  ],
-  "importance": 1,
-  "id": "e12ed2cf58356194",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvnob6/back_propagation_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T23:52:21+00:00",
-  "added": "2026-11-14T06:41:44.277399+00:00",
-  "related": []
- },
- {
-  "headline": "ICML 2027 Introduces New Two‑Stage Review Process to Curb Submission Explosion",
-  "tldr": "ICML’s 2027 CFP adds a two‑stage review, limits author submission counts, requires reciprocal reviewers, and ties heavy authorship to program‑committee duties.",
-  "key_points": [
-   "Area chairs decide full‑review eligibility; senior chairs must confirm any first‑stage rejections.",
-   "Authors limited to 20 total submissions and only one paper without an eligible reciprocal reviewer.",
-   "Each paper must name a reciprocal reviewer from its author list (max six papers per reviewer).",
-   "Authors with three or more submissions must serve on the program committee; non‑compliant papers are desk‑rejected."
-  ],
-  "why_it_matters": "The changes aim to reduce reviewer overload, improve review quality, and ensure authors contribute to the reviewing workload, addressing a long‑standing bottleneck in top AI conferences.",
-  "category": "policy",
-  "companies": [],
-  "tags": [
-   "conference",
-   "review process",
-   "ICML",
-   "submission policy"
-  ],
-  "importance": 2,
-  "id": "a69f240b4c0f0960",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvkxbj/icml_2027_changes_d/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T21:53:39+00:00",
-  "added": "2026-11-14T06:41:32.638638+00:00",
-  "related": [
-   "8441de704aa54573"
-  ]
- },
- {
-  "headline": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
-  "tldr": "OpenAI adds a wallet feature to its Dots AI agents, allowing ChatGPT Pro users in the US to link credit cards and let agents make purchases on their behalf.",
-  "key_points": [
-   "Wallet rolls out to ChatGPT Pro subscribers in the US, age 18+",
-   "Supports major US‑issued cards (Amex, Chase, Mastercard, Visa)",
-   "Enables Dots agents to execute transactions directly for users",
-   "Requires a US billing address and eligible card"
-  ],
-  "why_it_matters": "By giving AI agents the ability to handle payments, OpenAI expands the practical utility of its agents for e‑commerce and services, while also raising new considerations around security, consent, and financial regulation.",
-  "category": "product",
-  "companies": [
-   "OpenAI"
-  ],
-  "tags": [
-   "ChatGPT",
-   "Dots",
-   "Payments",
-   "AI agents"
-  ],
-  "importance": 3,
-  "id": "951c84561943a913",
-  "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
-  "source": "The Verge AI",
-  "date": "2026-11-13T15:45:10-05:00",
-  "added": "2026-11-14T06:41:20.872652+00:00",
-  "related": [
-   "c6c361c53bc4ce2d",
-   "cfcc7acb02e9ca79",
-   "2600860578f34aa5",
-   "dc85126b0ac71765"
-  ]
- },
- {
-  "headline": "Amazon has a plan to index the world’s online shopping data",
-  "tldr": "Amazon will create a \"World Product Graph\" that catalogs every product sold online, even those not sold on Amazon, and make the data searchable on its site.",
-  "key_points": [
-   "Project named \"World Product Graph\" aims to index all online product listings.",
-   "Includes products Amazon does not sell, creating a comprehensive catalog.",
-   "Data will be accessible through Amazon's own platform to keep shoppers from leaving.",
-   "Announced via Reuters report."
-  ],
-  "why_it_matters": "By aggregating global product data, Amazon can improve search relevance, boost its marketplace dominance, and reduce traffic to competing retail sites, reshaping e‑commerce competition.",
-  "category": "product",
-  "companies": [
-   "Amazon"
-  ],
-  "tags": [
-   "e-commerce",
-   "data",
-   "product-index",
-   "competition"
-  ],
-  "importance": 3,
-  "id": "04367a7d0b10c58a",
-  "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
-  "source": "The Verge AI",
-  "date": "2026-11-13T18:49:11-05:00",
-  "added": "2026-11-14T06:41:08.723214+00:00",
-  "related": [
-   "e1845ee0b548d25f"
-  ]
- },
- {
-  "headline": "AeroZoo: A Benchmark of Well-Posed Flow Problems for Foundation Models of Aerodynamics",
-  "tldr": "Introduces AeroZoo, a large CFD benchmark with 3,815 RANS solutions across diverse geometries and conditions, and evaluates transformer models like ISLA on this dataset.",
-  "key_points": [
-   "AeroZoo provides 3,815 time-mean RANS solutions covering 7 geometry families, 8 enclosure configs, and Reynolds numbers 10^3–10^8.",
-   "The canonical benchmark uses 2,816 stable samples with engineering metrics and 22 frozen splits to test generalization to new shapes and conditions.",
-   "Transformer model ISLA achieves a median velocity error of 5.3% on random splits, significantly better than baseline GeoTransolver.",
-   "Generalization degrades when geometry families, enclosures, or boundary-condition layouts are held out, highlighting challenges for aerodynamic foundation models."
-  ],
-  "why_it_matters": "A standardized, diverse CFD benchmark enables rigorous evaluation and development of foundation models for aerodynamics, accelerating research toward fast, high-fidelity flow predictions for novel designs.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "CFD",
-   "benchmark",
-   "foundation-models",
-   "aerodynamics"
-  ],
-  "importance": 3,
-  "id": "284d467a0171dbf2",
-  "url": "https://arxiv.org/abs/2611.17152v1",
-  "source": "arXiv",
-  "date": "2026-11-12T17:36:09Z",
-  "added": "2026-11-14T06:40:56.567706+00:00",
-  "related": [
-   "b23489aeb6f1af79"
-  ]
- },
- {
-  "headline": "Parsed, Plausible, Wrong: Output Format Controls Silent Errors in Small-Model Semantic Parsing",
-  "tldr": "Fine‑tuning sub‑billion models on different output encodings shows that using ordinary word encodings reduces silent errors and token count versus native s‑expressions, without sacrificing accuracy.",
-  "key_points": [
-   "Two sub‑billion models (Qwen3.5‑0.8B, LFM2.5‑350M) were fine‑tuned with LoRA on six lossless encodings of target parse trees.",
-   "Word‑based encodings achieved the highest exact‑match accuracy (87.5% vs. 85.8%) while using 4.1× fewer tokens.",
-   "Silent error rates dropped 2.3× for Qwen and 1.8× for LFM when using word encodings.",
-   "Models learned to refuse off‑menu inputs (95.9‑99.0% handled) and to self‑correct, though strict refusal reduced successful orders by 2.1‑10.1%.",
-   "Shortening token length alone did not improve performance; the format choice was the critical factor."
-  ],
-  "why_it_matters": "Demonstrates that output format design can dramatically affect reliability of small language models in semantic parsing tasks, guiding developers toward more robust, efficient representations for real‑world applications.",
-  "category": "paper",
-  "companies": [
-   "Qwen",
-   "LFM"
-  ],
-  "tags": [
-   "semantic parsing",
-   "output format",
-   "LoRA",
-   "small models"
-  ],
-  "importance": 3,
-  "id": "25e5844803d38619",
-  "url": "https://arxiv.org/abs/2611.17169v1",
-  "source": "arXiv",
-  "date": "2026-11-12T17:43:44Z",
-  "added": "2026-11-14T06:40:44.884511+00:00",
-  "related": [
-   "850f6865c91bcf15",
-   "ce6471665a22d7ee"
-  ]
- },
- {
-  "headline": "Cortex-FL: Agent-Mediated Collaboration for Federated Learning",
-  "tldr": "Cortex-FL introduces an agent-native system that lets users specify federated learning goals in natural language, automating collaborator discovery, contract negotiation, and training while keeping data and compute under owners' control.",
-  "key_points": [
-   "Agents translate natural‑language objectives into FL tasks and find suitable collaborators.",
-   "Negotiated contracts and blockchain‑based settlement manage incentives and trust.",
-   "Architecture separates coordination from local execution, preserving data ownership.",
-   "Demonstrated end‑to‑end workflow on a four‑node deployment with verified model delivery."
-  ],
-  "why_it_matters": "By lowering the expertise barrier for federated learning, Cortex-FL could accelerate adoption of privacy‑preserving AI across organizations that lack specialized ML teams, while integrating incentive mechanisms via smart contracts.",
-  "category": "paper",
-  "companies": [],
-  "tags": [
-   "federated learning",
-   "agent systems",
-   "blockchain",
-   "privacy"
-  ],
-  "importance": 3,
-  "id": "b82a98db07910b2d",
-  "url": "https://arxiv.org/abs/2611.17186v1",
-  "source": "arXiv",
-  "date": "2026-11-12T17:52:51Z",
-  "added": "2026-11-14T06:40:33.847290+00:00",
-  "related": [
-   "06239ace7a0c3fa4",
-   "8451eda18f3aa606",
-   "887a9d54e326095b"
-  ]
- },
- {
-  "headline": "I have trained a model to predict my blood sugar",
-  "tldr": "A user built a 31k‑parameter encoder‑only transformer, pre‑trained on synthetic CGM data and fine‑tuned with LoRA on personal glucose monitor data, achieving competitive predictions up to 2 hours ahead.",
-  "key_points": [
-   "31,253‑parameter encoder‑only transformer pre‑trained on ~19,200 CGM‑years of synthetic data",
-   "Fine‑tuned with LoRA on 115 days of personal CGM data (80 days train, 35 days test)",
-   "Predicts blood glucose 2 hours ahead, can infill missing traces and backcast",
-   "Uses insulin and carbohydrate inputs with exact and estimated values",
-   "Trained with combined DILATE, MSE, and pinball loss weighted by learned Kendall‑Gal weights"
-  ],
-  "why_it_matters": "Demonstrates that small, personalizable transformer models can effectively predict glucose dynamics, offering a potential low‑cost, privacy‑preserving alternative to commercial diabetes forecasting tools.",
-  "category": "other",
-  "companies": [],
-  "tags": [
-   "blood sugar",
-   "transformer",
-   "LoRA",
-   "CGM"
-  ],
-  "importance": 2,
-  "id": "82f3c56554875b40",
-  "url": "https://www.reddit.com/r/MachineLearning/comments/1xvja5n/i_have_trained_a_model_to_predict_my_blood_sugar_p/",
-  "source": "r/MachineLearning",
-  "date": "2026-11-13T20:48:25+00:00",
-  "added": "2026-11-14T06:40:20.756125+00:00",
-  "related": [
-   "8e485c1c148701e4",
-   "4584b3d202ced805",
-   "5094532b4e2e63d2",
-   "c216fe867cbdf75d"
-  ]
- },
- {
-  "headline": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
-  "tldr": "Nvidia’s AI funding pipeline may shrink after CEO Jensen Huang leaves, prompting concerns of smaller investments and lower valuations for startups.",
-  "key_points": [
-   "Nvidia invested tens of billions in AI startups while Huang was CEO",
-   "Huang's exit raises fears of reduced venture capital checks",
-   "Founders expect lower startup valuations without his backing"
-  ],
-  "why_it_matters": "Nvidia’s funding has been a major catalyst for AI startup growth; a pullback could slow innovation and affect the broader AI ecosystem.",
-  "category": "funding",
-  "companies": [
-   "Nvidia"
-  ],
-  "tags": [
-   "venture capital",
-   "startup funding",
-   "AI ecosystem"
-  ],
-  "importance": 2,
-  "id": "ec577d4c46a6d8ce",
-  "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 22:43:00 +0000",
-  "added": "2026-11-14T06:40:08.393029+00:00",
-  "related": [
-   "9e3d554c6cb56d83",
-   "b7579835e4e7c6dd",
-   "4c525e5e54fa3645",
-   "3feac09277102c22"
-  ]
- },
- {
-  "headline": "AI agent startup LangChain hits $3B valuation",
-  "tldr": "LangChain reaches a $3 billion valuation and reports 7,000 customers for its LangSmith agent management tool.",
-  "key_points": [
-   "Valuation climbs to $3 billion",
-   "7,000 customers for LangSmith",
-   "Model‑ and platform‑agnostic agent management"
-  ],
-  "why_it_matters": "The high valuation signals strong market confidence in AI agent platforms, and the growing customer base shows rapid adoption of LangChain's tooling for building and managing AI agents.",
-  "category": "funding",
-  "companies": [
-   "LangChain"
-  ],
-  "tags": [
-   "valuation",
-   "startup",
-   "AI agents",
-   "LangSmith"
-  ],
-  "importance": 2,
-  "id": "645e798427f902eb",
-  "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
-  "source": "TechCrunch AI",
-  "date": "Fri, 13 Nov 2026 19:37:57 +0000",
-  "added": "2026-11-14T06:39:56.680297+00:00",
-  "related": [
-   "b145ab91c01065c7",
-   "d6a5b08e3fa8b3f0",
-   "aae8c4832e631e5c",
-   "d9a047affb028160"
-  ]
- },
- {
-  "headline": "Shield helps technicians hand off legacy portal work with OpenAI",
-  "tldr": "Shield leverages OpenAI-powered Forge agents to automate navigation of legacy IT portals, letting technicians focus on judgment‑heavy tasks.",
-  "key_points": [
-   "Shield integrates OpenAI's technology into its Forge agents.",
-   "Agents automate routine actions in legacy portals.",
-   "Technicians can delegate repetitive work and concentrate on complex issues."
-  ],
-  "why_it_matters": "",
-  "category": "product",
-  "companies": [
-   "Shield",
-   "OpenAI"
-  ],
-  "tags": [
-   "automation",
-   "IT",
-   "legacy systems",
-   "workflow"
-  ],
-  "importance": 2,
-  "id": "d1318183fe172893",
-  "url": "https://openai.com/business/customer-stories/shield",
-  "source": "OpenAI",
-  "date": "Fri, 13 Nov 2026 08:00:00 GMT",
-  "added": "2026-11-14T06:39:44.568309+00:00",
-  "related": [
-   "b0ded74e06b06613",
-   "4b08ec50268e04a4",
-   "ebd9eb94963902d2",
-   "8b6ac2940fdc0d0e"
-  ]
  }
 ]

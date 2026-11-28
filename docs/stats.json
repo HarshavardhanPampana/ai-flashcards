@@ -1,6 +1,23 @@
 {
  "runs": [
   {
+   "time": "2026-11-28T07:58:56+00:00",
+   "collected": 322,
+   "after_fuzzy": 4,
+   "after_semantic": 3,
+   "fuzzy_removed": 318,
+   "semantic_removed": 1,
+   "summarized": 3,
+   "cards_added": 3,
+   "explored": 0,
+   "followups": 0,
+   "models": [
+    "openai/gpt-oss-120b"
+   ],
+   "seconds": 32,
+   "ml": true
+  },
+  {
    "time": "2026-11-27T21:27:57+00:00",
    "collected": 322,
    "after_fuzzy": 11,
@@ -67,26 +84,32 @@
    "ml": true
   }
  ],
- "updated": "2026-11-27T21:27:57+00:00",
- "cards": 1000,
+ "updated": "2026-11-28T07:58:56+00:00",
+ "cards": 974,
  "mlp": {
   "category": {
-   "accuracy": 0.795,
+   "accuracy": 0.775,
    "baseline_majority": 0.605,
    "n_train": 800,
    "n_test": 200,
    "params": 50441
   },
   "importance": {
-   "accuracy": 0.8,
-   "baseline_majority": 0.655,
+   "accuracy": 0.78,
+   "baseline_majority": 0.65,
    "n_train": 800,
    "n_test": 200,
-   "params": 49796,
-   "within_1_star": 0.99
+   "params": 49925,
+   "within_1_star": 0.995
   }
  },
  "semantic_examples": [
+  {
+   "new": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
+   "matches": "Tidal will start banning AI-generated music next month",
+   "similarity": 0.939,
+   "source": "Ars Technica AI"
+  },
   {
    "new": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
    "matches": "Tidal will start banning AI-generated music next month",
@@ -137,9 +160,9 @@
   }
  ],
  "agreement": {
-  "cards": 73,
-  "category": 0.795,
-  "importance_exact": 0.822,
+  "cards": 76,
+  "category": 0.789,
+  "importance_exact": 0.816,
   "importance_within_1": 1.0
  }
 }
