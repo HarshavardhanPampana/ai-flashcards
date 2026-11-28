@@ -156,6 +156,28 @@ class ML:
         for it, p in zip(items, self.mlp.predict(item_vecs)):
             it["extra"]["mlp"] = p
 
+    def ground(self, card, text, min_text=300):
+        """Check each key point against the article's sentences; drop unsupported ones (keeping at least 2).
+        Adds card["grounding"] = {checked, supported, dropped}. Skipped when there's too little article text."""
+        if not self.on or len(text or "") < min_text or not card.get("key_points"):
+            return None
+        try:
+            from .semantic import split_sentences, support_scores, SUPPORT_MIN
+            pts = card["key_points"]
+            scores = support_scores(self.embed.embed(pts), self.embed.embed(split_sentences(text)))
+            keep = [p for p, sc in zip(pts, scores) if sc >= SUPPORT_MIN]
+            if len(keep) < 2:                                      # never leave a card with fewer than 2 points
+                keep = [p for _, p in sorted(zip(scores, pts), reverse=True)[:max(2, len(keep))]]
+                keep = [p for p in pts if p in keep]               # original order
+            info = {"checked": len(pts), "supported": sum(sc >= SUPPORT_MIN for sc in scores),
+                    "dropped": len(pts) - len(keep)}
+            card["key_points"] = keep
+            card["grounding"] = info
+            return info
+        except Exception as e:
+            print(f"[ground] skipped ({e})")
+            return None
+
     def finish(self, cards):
         """Embed new cards, compute related cards, save vectors. Mutates cards (adds 'related')."""
         if not self.on:
@@ -208,14 +230,27 @@ def main():
           f"summarizing={len(picked)} (exploring {n_explore})")
 
     new_cards, streak, aborted, llm_inputs = [], [], False, []
+    n_full, ground_tot = 0, {"checked": 0, "dropped": 0}
     for i, it in enumerate(picked, 1):
         if use_llm:
-            if len(it["text"]) < 200 and it["source"] == "Hacker News":
+            # give the LLM the full article instead of the short feed snippet (falls back to the snippet)
+            try:
+                full = f.fetch_article_text(it["url"])
+            except Exception:
+                full = ""
+            if not full and len(it["text"]) < 200 and it["source"] == "Hacker News":
                 try:
-                    it["text"] = f.fetch_page_text(it["url"])
+                    full = f.fetch_page_text(it["url"])
                 except Exception:
-                    pass
+                    full = ""
+            if len(full) > len(it["text"]):
+                it["text"] = full
+                n_full += 1
             card = summarize(it)
+            if card:
+                g = ml.ground(card, it["text"])                    # drop key points the article doesn't support
+                if g:
+                    ground_tot["checked"] += g["checked"]; ground_tot["dropped"] += g["dropped"]
             if card:
                 # mark seen after attempting, so one-off failures don't loop forever
                 seen.extend(streak + [it["id"]])
@@ -261,6 +296,7 @@ def main():
         "fuzzy_removed": len(items) - len(fresh), "semantic_removed": len(fresh) - len(fresh_sem),
         "summarized": len(picked), "cards_added": len(new_cards), "explored": n_explore,
         "followups": ml.info.get("followups", 0),
+        "fulltext": n_full, "points_checked": ground_tot["checked"], "points_dropped": ground_tot["dropped"],
         "models": sorted({c.get("model", "") for c in new_cards if c.get("model")}),
         "seconds": round(time.time() - t0),
         "ml": ml.on,

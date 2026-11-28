@@ -101,6 +101,27 @@ def fetch_html_list(name, page_url, link_selector, category="company"):
     return out
 
 
+def fetch_article_text(url, limit=6000, max_bytes=2_000_000):
+    """Download a story's page and extract the main article text (trafilatura).
+
+    Respects robots.txt, stops reading after max_bytes, and returns "" on any problem
+    (paywall, blocked, not HTML), so the caller can fall back to the feed snippet."""
+    if not allowed_by_robots(url):
+        return ""
+    import trafilatura
+    with requests.get(url, headers=HEADERS, timeout=15, stream=True) as r:
+        if r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
+            return ""
+        chunks, size = [], 0
+        for chunk in r.iter_content(64 * 1024):
+            chunks.append(chunk); size += len(chunk)
+            if size >= max_bytes:
+                break
+        html = b"".join(chunks).decode(r.encoding or "utf-8", errors="replace")
+    text = trafilatura.extract(html, include_comments=False, include_tables=False, favor_precision=True) or ""
+    return " ".join(text.split())[:limit]
+
+
 def fetch_page_text(url, limit=3000):
     """For items with no body text (e.g. Hacker News): grab the page's <p> text."""
     if not allowed_by_robots(url):

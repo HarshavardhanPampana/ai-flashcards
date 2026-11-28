@@ -45,6 +45,26 @@ def semantic_dedupe(items, item_vecs, existing_vecs, threshold=DUP_THRESHOLD, ex
     return kept, kv, dropped
 
 
+SUPPORT_MIN = 0.45        # key point counts as supported if an article sentence is this similar. Checked on 16 real
+                          # cards: own-article points median 0.69, unrelated-article points 90th pct 0.31
+
+
+def split_sentences(text, min_len=25, max_n=120):
+    """Rough sentence split for grounding checks (no extra dependencies)."""
+    import re
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])", " ".join((text or "").split()))
+    return [p for p in parts if len(p) >= min_len][:max_n]
+
+
+def support_scores(point_vecs, sent_vecs):
+    """For each key point, the similarity of its closest article sentence (0 if no sentences)."""
+    if len(point_vecs) == 0:
+        return []
+    if len(sent_vecs) == 0:
+        return [0.0] * len(point_vecs)
+    return [round(float(x), 3) for x in (np.asarray(point_vecs) @ np.asarray(sent_vecs).T).max(axis=1)]
+
+
 def related(ids, vecs, k=RELATED_K, min_sim=RELATED_MIN, dup=DUP_THRESHOLD + 0.1):
     """id -> up to k most similar other cards (skipping near-identical ones)."""
     if len(ids) < 2:

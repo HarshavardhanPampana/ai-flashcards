@@ -8,3 +8,4 @@ requests==2.34.2
 fastembed==0.9.1
 numpy==2.5.5
 scikit-learn==1.9.1
+trafilatura==2.4.0

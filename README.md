@@ -29,12 +29,17 @@ weekly: [Local decoders] Qwen 0.5B and 1.5B vs gpt-oss-120b on the same inputs �
 | `update-flashcards` | every 6 h (GitHub runs it ~2×/day in practice) | fetch → ML → LLM → commit |
 | `generate-images` | after each successful update | SD-Turbo images for up to 8 new top cards |
 | `compare-models` | Mondays + on demand | 0.5B and 1.5B local decoders vs API model (15 new stories each per run, results accumulate) |
-| `tests` | every push | 15 unit tests (`pytest`) |
+| `tests` | every push | 17 unit tests (`pytest`) |
 
 **Design choices worth knowing**
 - **Exploration picks:** the MLP ranks stories before the LLM labels them, and is retrained on those labels. On its
   own that is a feedback loop: it would only ever learn from stories it already liked. So each run 4 of the 40
   LLM slots go to random lower-ranked stories (`explore: true` on the card), which gives it labels for its mistakes.
+- **Full article, then a fact check:** for each picked story the full page is fetched and its main text extracted
+  (trafilatura, robots.txt respected, 2 MB cap), so cards are written from the article, not a 1–3 sentence feed
+  snippet. Each key point is then compared with the article's sentences (MiniLM); points below 0.45 similarity are
+  dropped. On 16 real cards, points scored a median 0.69 against their own article and 0.21 against an unrelated one,
+  and an injected made-up point was removed in 14 of 14 cards while all 58 real points were kept.
 - **Follow-ups aren't duplicates:** a story ≥ 0.80 similar to a card older than 36 h is kept as a follow-up
   (`followup_to` on the card) unless it's ≥ 0.92, which really is the same article again.
 - **Keep-alive:** GitHub disables scheduled workflows after 60 days without repo activity, so each update run

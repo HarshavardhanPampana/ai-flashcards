@@ -239,7 +239,7 @@ def _clean(card):
 def summarize(item, retries=2):
     short = len(item["text"]) < 200
     prompt = PROMPT.format(source=item["source"], title=item["title"],
-                           text=item["text"][:2500] or "(none)",
+                           text=item["text"][:6000] or "(none)",
                            title_only_note=TITLE_ONLY_NOTE if short else "")
     title = item["title"][:50]
     for p in _active():

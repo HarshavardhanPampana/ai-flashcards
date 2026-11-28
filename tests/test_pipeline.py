@@ -181,3 +181,35 @@ def test_prerender_bakes_escaped_top_stories_between_markers():
     assert 'property="og:title"' in out
     assert prerender.render(out, cards) == out        # idempotent: re-running changes nothing
 
+
+
+# ---------- full text + grounding ----------
+def test_split_sentences_and_support_scores():
+    sents = semantic.split_sentences("OpenAI released a new model today. It is twice as fast as the old one! ok. The price did not change. Tiny.")
+    assert sents == ["OpenAI released a new model today.", "It is twice as fast as the old one! ok.", "The price did not change."]
+    pts = np.stack([unit([1, 0, 0]), unit([0, 1, 0])])
+    sv = np.stack([unit([0.9, 0.1, 0]), unit([0, 0, 1])])
+    sc = semantic.support_scores(pts, sv)
+    assert sc[0] > 0.9 and sc[1] < 0.2
+    assert semantic.support_scores(pts, np.zeros((0, 3))) == [0.0, 0.0]
+
+
+def test_ground_drops_unsupported_points_but_keeps_two():
+    from scraper.main import ML
+    ml = ML.__new__(ML); ml.on = True; ml.info = {}
+    vec = {"supported claim": [1, 0, 0], "another supported": [0.95, 0.3, 0], "made up": [0, 0, 1]}
+
+    class FakeEmbed:
+        @staticmethod
+        def embed(texts):
+            return np.stack([unit(vec.get(t, [1, 0.05, 0])) for t in texts]) if texts else np.zeros((0, 3))
+    ml.embed = FakeEmbed
+    article = "Sentence about the real claim number one here. " * 10
+    card = {"key_points": ["supported claim", "made up", "another supported"]}
+    info = ml.ground(card, article)
+    assert card["key_points"] == ["supported claim", "another supported"]
+    assert info == {"checked": 3, "supported": 2, "dropped": 1}
+    card2 = {"key_points": ["made up", "supported claim"]}          # never fewer than 2 points
+    ml.ground(card2, article)
+    assert len(card2["key_points"]) == 2
+    assert ml.ground({"key_points": ["x"]}, "too short") is None   # not enough article text to judge

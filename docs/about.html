@@ -52,9 +52,9 @@
           on ~1,000 past cards guesses each story's stars and category <i>before</i> any LLM call, and ranking uses it to
           choose the best 36. Four more are picked at random from the rest, so the network also gets labels for stories
           it underrated, instead of only learning from what it already liked.</p></div></li>
-        <li class="m llm"><span class="step">5</span><div><b>Write the card <em>LLM · decoder</em></b><p>gpt-oss-120b (via Groq)
+        <li class="m llm"><span class="step">5</span><div><b>Write the card <em>LLM · decoder</em></b><p>First the full article is downloaded and its main text extracted (trafilatura), so the LLM reads the story, not just the feed snippet. Then gpt-oss-120b (via Groq)
           writes the headline, TL;DR, key points, why it matters, category and stars as strict JSON. It falls back to other
-          models and Gemini on errors.</p></div></li>
+          models and Gemini on errors. Finally each key point is checked against the article's sentences with the encoder; points the article doesn't support are dropped.</p></div></li>
         <li class="m enc"><span class="step">6</span><div><b>Related cards + search index <em>Encoder</em></b><p>New cards are
           embedded. The 4 nearest neighbours become "Related stories", and the vectors power search by meaning in your
           browser.</p></div></li>
